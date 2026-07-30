@@ -1,0 +1,134 @@
+{
+  "n_train": 200,
+  "n_test": 1870,
+  "test_positive_rate": 0.010160427807486631,
+  "train_time_seconds": 2.7486464977264404,
+  "label_noise_target": 0.0,
+  "label_noise_actual": 0.0,
+  "n_labels_flipped": 0,
+  "baseline": {
+    "auc": 0.6661548522846825,
+    "score_min": -11.478403091430664,
+    "score_mean": -5.552631855010986,
+    "score_max": 9.904906272888184,
+    "curve": [
+      {
+        "threshold": -11.183272743225098,
+        "approve_rate": 0.9,
+        "false_approve_rate": 0.9887106357694593,
+        "false_reject_rate": 0.0
+      },
+      {
+        "threshold": -10.772679138183594,
+        "approve_rate": 0.8,
+        "false_approve_rate": 0.9879679144385026,
+        "false_reject_rate": 0.00267379679144385
+      },
+      {
+        "threshold": -10.216805839538575,
+        "approve_rate": 0.7,
+        "false_approve_rate": 0.9877769289533995,
+        "false_reject_rate": 0.0053475935828877
+      },
+      {
+        "threshold": -9.522614479064941,
+        "approve_rate": 0.6,
+        "false_approve_rate": 0.9857397504456328,
+        "false_reject_rate": 0.004010695187165776
+      },
+      {
+        "threshold": -8.722094058990479,
+        "approve_rate": 0.5,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.0042780748663101605
+      },
+      {
+        "threshold": -7.45599699020386,
+        "approve_rate": 0.4,
+        "false_approve_rate": 0.9799465240641712,
+        "false_reject_rate": 0.0035650623885918
+      },
+      {
+        "threshold": -5.231464624404907,
+        "approve_rate": 0.3,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.007639419404125287
+      },
+      {
+        "threshold": 0.08277516812086219,
+        "approve_rate": 0.2,
+        "false_approve_rate": 0.9866310160427807,
+        "false_reject_rate": 0.009358288770053475
+      },
+      {
+        "threshold": 7.881461763381958,
+        "approve_rate": 0.1,
+        "false_approve_rate": 0.9893048128342246,
+        "false_reject_rate": 0.010101010101010102
+      }
+    ]
+  },
+  "finetuned": {
+    "auc": 0.7281128266370952,
+    "score_min": -11.452811241149902,
+    "score_mean": -10.900458335876465,
+    "score_max": 0.31328922510147095,
+    "curve": [
+      {
+        "threshold": -11.330470848083497,
+        "approve_rate": 0.9,
+        "false_approve_rate": 0.9893048128342246,
+        "false_reject_rate": 0.0053475935828877
+      },
+      {
+        "threshold": -11.282412719726562,
+        "approve_rate": 0.8,
+        "false_approve_rate": 0.9879679144385026,
+        "false_reject_rate": 0.00267379679144385
+      },
+      {
+        "threshold": -11.23421745300293,
+        "approve_rate": 0.7,
+        "false_approve_rate": 0.9862490450725745,
+        "false_reject_rate": 0.0017825311942959
+      },
+      {
+        "threshold": -11.172346878051759,
+        "approve_rate": 0.6,
+        "false_approve_rate": 0.9848484848484849,
+        "false_reject_rate": 0.00267379679144385
+      },
+      {
+        "threshold": -11.084345817565918,
+        "approve_rate": 0.5,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.0042780748663101605
+      },
+      {
+        "threshold": -11.03249912261963,
+        "approve_rate": 0.4,
+        "false_approve_rate": 0.9812834224598931,
+        "false_reject_rate": 0.004456327985739751
+      },
+      {
+        "threshold": -10.992324161529542,
+        "approve_rate": 0.3,
+        "false_approve_rate": 0.9803921568627451,
+        "false_reject_rate": 0.006111535523300229
+      },
+      {
+        "threshold": -10.850679016113281,
+        "approve_rate": 0.2,
+        "false_approve_rate": 0.9732620320855615,
+        "false_reject_rate": 0.006016042780748663
+      },
+      {
+        "threshold": -10.39094352722168,
+        "approve_rate": 0.1,
+        "false_approve_rate": 0.9679144385026738,
+        "false_reject_rate": 0.007724301841948901
+      }
+    ]
+  },
+  "auc_delta": 0.06195797435241268
+}

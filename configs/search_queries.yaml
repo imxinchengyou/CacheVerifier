@@ -1,0 +1,20 @@
+# SemCacheSearchQueries / HuggingFace vCache/SemBenchmarkSearchQueries —
+# short, keyword-dense, sourced from ORCAS logs. Matches vCache's own
+# benchmark.py RUN_COMBINATIONS entry for Figure 6/7: embedding=GTE,
+# LLM=Llama-3-8B, max_samples=150000.
+#
+# Build `processed_path` with:
+#   python scripts/convert_vcache_hf_dataset.py --dataset search_queries \
+#       --out data/processed/search_queries.jsonl --max-samples 150000
+# This carries the dataset's own pre-computed `emb_gte` embeddings into the
+# `embedding` field, so `embedder: precomputed` uses the exact vectors
+# vCache's paper reports numbers for instead of re-encoding text. Ground
+# truth comes from `id_set` (note lowercase, unlike LmArena's `ID_Set`);
+# `cluster_id` is present in the raw dataset but is NOT what vCache's
+# harness uses as ground truth.
+name: search_queries
+processed_path: data/processed/search_queries.jsonl
+max_samples: 150000
+embedder: precomputed
+threshold_grid: [0.80, 0.83, 0.86, 0.89, 0.92, 0.95, 0.97, 0.98, 0.99]
+target_error_rates: [0.01, 0.015, 0.02, 0.025, 0.03, 0.035, 0.04, 0.05, 0.06, 0.07]

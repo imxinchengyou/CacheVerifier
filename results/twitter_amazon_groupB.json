@@ -1,0 +1,232 @@
+[
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.01,
+    "hit_rate": 5e-05,
+    "error_rate": 3.3333333333333335e-05,
+    "false_accept_rate": 0.6666666666666666,
+    "precision": 0.3333333333333333,
+    "recall": 0.003067484662576687,
+    "tp": 1,
+    "fp": 2,
+    "tn": 59671,
+    "fn": 325,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      0.0,
+      0.00011666666666666667
+    ],
+    "error_rate_ci": [
+      0.0,
+      8.333333333333333e-05
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.015,
+    "hit_rate": 0.00011666666666666667,
+    "error_rate": 0.00011666666666666667,
+    "false_accept_rate": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "tp": 0,
+    "fp": 7,
+    "tn": 59666,
+    "fn": 326,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      3.3333333333333335e-05,
+      0.00021666666666666666
+    ],
+    "error_rate_ci": [
+      3.3333333333333335e-05,
+      0.00021666666666666666
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.02,
+    "hit_rate": 5e-05,
+    "error_rate": 5e-05,
+    "false_accept_rate": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "tp": 0,
+    "fp": 3,
+    "tn": 59670,
+    "fn": 326,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      0.0,
+      0.00011666666666666667
+    ],
+    "error_rate_ci": [
+      0.0,
+      0.00011666666666666667
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.025,
+    "hit_rate": 0.0001,
+    "error_rate": 8.333333333333333e-05,
+    "false_accept_rate": 0.8333333333333334,
+    "precision": 0.16666666666666666,
+    "recall": 0.003067484662576687,
+    "tp": 1,
+    "fp": 5,
+    "tn": 59668,
+    "fn": 325,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      3.3333333333333335e-05,
+      0.00018333333333333334
+    ],
+    "error_rate_ci": [
+      1.6666666666666667e-05,
+      0.00016666666666666666
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.03,
+    "hit_rate": 0.00015,
+    "error_rate": 0.00015,
+    "false_accept_rate": 1.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "tp": 0,
+    "fp": 9,
+    "tn": 59664,
+    "fn": 326,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      8.291666666666673e-05,
+      0.00025
+    ],
+    "error_rate_ci": [
+      8.291666666666673e-05,
+      0.00025
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.035,
+    "hit_rate": 0.00015,
+    "error_rate": 0.00013333333333333334,
+    "false_accept_rate": 0.8888888888888888,
+    "precision": 0.1111111111111111,
+    "recall": 0.003067484662576687,
+    "tp": 1,
+    "fp": 8,
+    "tn": 59665,
+    "fn": 325,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      6.666666666666667e-05,
+      0.00025
+    ],
+    "error_rate_ci": [
+      6.625000000000007e-05,
+      0.00023333333333333333
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.04,
+    "hit_rate": 0.00021666666666666666,
+    "error_rate": 0.00018333333333333334,
+    "false_accept_rate": 0.8461538461538461,
+    "precision": 0.15384615384615385,
+    "recall": 0.006134969325153374,
+    "tp": 2,
+    "fp": 11,
+    "tn": 59662,
+    "fn": 324,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      9.95833333333334e-05,
+      0.0003333333333333333
+    ],
+    "error_rate_ci": [
+      8.333333333333333e-05,
+      0.00028333333333333335
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.05,
+    "hit_rate": 0.00023333333333333333,
+    "error_rate": 0.00021666666666666666,
+    "false_accept_rate": 0.9285714285714286,
+    "precision": 0.07142857142857142,
+    "recall": 0.003067484662576687,
+    "tp": 1,
+    "fp": 13,
+    "tn": 59660,
+    "fn": 325,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      0.00013333333333333334,
+      0.00036666666666666667
+    ],
+    "error_rate_ci": [
+      0.00011666666666666667,
+      0.00035
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.06,
+    "hit_rate": 0.00025,
+    "error_rate": 0.00023333333333333333,
+    "false_accept_rate": 0.9333333333333333,
+    "precision": 0.06666666666666667,
+    "recall": 0.003067484662576687,
+    "tp": 1,
+    "fp": 14,
+    "tn": 59659,
+    "fn": 325,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      0.00013333333333333334,
+      0.00038333333333333334
+    ],
+    "error_rate_ci": [
+      0.00011666666666666667,
+      0.00035041666666666674
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.07,
+    "hit_rate": 0.00036666666666666667,
+    "error_rate": 0.0003333333333333333,
+    "false_accept_rate": 0.9090909090909091,
+    "precision": 0.09090909090909091,
+    "recall": 0.006134969325153374,
+    "tp": 2,
+    "fp": 20,
+    "tn": 59653,
+    "fn": 324,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      0.00023333333333333333,
+      0.0005337500000000002
+    ],
+    "error_rate_ci": [
+      0.0002,
+      0.0005004166666666668
+    ]
+  }
+]

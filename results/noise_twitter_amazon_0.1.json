@@ -1,0 +1,134 @@
+{
+  "n_train": 4000,
+  "n_test": 1870,
+  "test_positive_rate": 0.010160427807486631,
+  "train_time_seconds": 14.369061470031738,
+  "label_noise_target": 0.1,
+  "label_noise_actual": 0.10375,
+  "n_labels_flipped": 415,
+  "baseline": {
+    "auc": 0.6661548522846825,
+    "score_min": -11.478403091430664,
+    "score_mean": -5.552631855010986,
+    "score_max": 9.904906272888184,
+    "curve": [
+      {
+        "threshold": -11.183272743225098,
+        "approve_rate": 0.9,
+        "false_approve_rate": 0.9887106357694593,
+        "false_reject_rate": 0.0
+      },
+      {
+        "threshold": -10.772679138183594,
+        "approve_rate": 0.8,
+        "false_approve_rate": 0.9879679144385026,
+        "false_reject_rate": 0.00267379679144385
+      },
+      {
+        "threshold": -10.216805839538575,
+        "approve_rate": 0.7,
+        "false_approve_rate": 0.9877769289533995,
+        "false_reject_rate": 0.0053475935828877
+      },
+      {
+        "threshold": -9.522614479064941,
+        "approve_rate": 0.6,
+        "false_approve_rate": 0.9857397504456328,
+        "false_reject_rate": 0.004010695187165776
+      },
+      {
+        "threshold": -8.722094058990479,
+        "approve_rate": 0.5,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.0042780748663101605
+      },
+      {
+        "threshold": -7.45599699020386,
+        "approve_rate": 0.4,
+        "false_approve_rate": 0.9799465240641712,
+        "false_reject_rate": 0.0035650623885918
+      },
+      {
+        "threshold": -5.231464624404907,
+        "approve_rate": 0.3,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.007639419404125287
+      },
+      {
+        "threshold": 0.08277516812086219,
+        "approve_rate": 0.2,
+        "false_approve_rate": 0.9866310160427807,
+        "false_reject_rate": 0.009358288770053475
+      },
+      {
+        "threshold": 7.881461763381958,
+        "approve_rate": 0.1,
+        "false_approve_rate": 0.9893048128342246,
+        "false_reject_rate": 0.010101010101010102
+      }
+    ]
+  },
+  "finetuned": {
+    "auc": 0.6658989450936905,
+    "score_min": -2.901655912399292,
+    "score_mean": -2.2260894775390625,
+    "score_max": -1.1120179891586304,
+    "curve": [
+      {
+        "threshold": -2.462591552734375,
+        "approve_rate": 0.9,
+        "false_approve_rate": 0.9893048128342246,
+        "false_reject_rate": 0.0053475935828877
+      },
+      {
+        "threshold": -2.388593339920044,
+        "approve_rate": 0.8,
+        "false_approve_rate": 0.9893048128342246,
+        "false_reject_rate": 0.008021390374331552
+      },
+      {
+        "threshold": -2.334913444519043,
+        "approve_rate": 0.7,
+        "false_approve_rate": 0.9877769289533995,
+        "false_reject_rate": 0.0053475935828877
+      },
+      {
+        "threshold": -2.2950937271118166,
+        "approve_rate": 0.6,
+        "false_approve_rate": 0.9875222816399287,
+        "false_reject_rate": 0.0066844919786096255
+      },
+      {
+        "threshold": -2.2497236728668213,
+        "approve_rate": 0.5,
+        "false_approve_rate": 0.986096256684492,
+        "false_reject_rate": 0.006417112299465241
+      },
+      {
+        "threshold": -2.1985196590423586,
+        "approve_rate": 0.4,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.006238859180035651
+      },
+      {
+        "threshold": -2.110003662109375,
+        "approve_rate": 0.3,
+        "false_approve_rate": 0.982174688057041,
+        "false_reject_rate": 0.006875477463712758
+      },
+      {
+        "threshold": -2.037838935852051,
+        "approve_rate": 0.2,
+        "false_approve_rate": 0.9732620320855615,
+        "false_reject_rate": 0.006016042780748663
+      },
+      {
+        "threshold": -1.994766926765442,
+        "approve_rate": 0.1,
+        "false_approve_rate": 0.9625668449197861,
+        "false_reject_rate": 0.0071301247771836
+      }
+    ]
+  },
+  "auc_delta": -0.00025590719099199966
+}

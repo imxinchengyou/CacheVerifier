@@ -1,0 +1,17 @@
+{
+  "config": {
+    "config": "configs/twitter_amazon.yaml",
+    "train_fraction": 0.7,
+    "train_size": null,
+    "test_size": null,
+    "epochs": 1,
+    "batch_size": 16,
+    "base_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "output": "results/finetune_verifier_experiment_twitter_amazon.json"
+  },
+  "n_gray_zone_total": 6231,
+  "n_train": 4361,
+  "n_test": 1870,
+  "train_positive_rate": 0.014675533134602155,
+  "test_positive_rate": 0.010160427807486631
+}

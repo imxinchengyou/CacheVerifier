@@ -1,0 +1,27 @@
+# AmazonHelp support conversations from the Kaggle "Customer Support on
+# Twitter" dataset (thoughtvector/customer-support-on-twitter, CC0) — a
+# fourth, independently-sourced dataset, and the first that is genuinely
+# REAL production customer-support traffic (not a research benchmark), with
+# real per-tweet timestamps. E-commerce/retail support.
+#
+# No LLM-generated answer or native equivalence-class label exists, so both
+# are reconstructed by scripts/convert_twitter_cs_dataset.py — see that
+# script's docstring for the exact construction (equivalence classes are
+# built from identical canonicalized company replies, a real behavioral
+# signal grounded in support-team template reuse rather than a guessed
+# similarity).
+#
+# Build `processed_path` with:
+#   python scripts/convert_twitter_cs_dataset.py \
+#       --csv twcs/twcs.csv --company AmazonHelp \
+#       --out data/processed/twitter_amazon.jsonl
+#
+# No precomputed embeddings exist for this dataset, so this re-encodes
+# `query` text locally at eval time.
+name: twitter_amazon
+processed_path: data/processed/twitter_amazon.jsonl
+max_samples: 60000
+embedder: sentence-transformer
+embedder_model: sentence-transformers/all-MiniLM-L6-v2
+threshold_grid: [0.80, 0.83, 0.86, 0.89, 0.92, 0.95, 0.97, 0.98, 0.99]
+target_error_rates: [0.01, 0.015, 0.02, 0.025, 0.03, 0.035, 0.04, 0.05, 0.06, 0.07]

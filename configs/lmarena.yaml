@@ -1,0 +1,17 @@
+# SemCacheLMArena / HuggingFace vCache/SemBenchmarkLmArena — conversational,
+# high lexical diversity. Matches vCache's own benchmark.py RUN_COMBINATIONS
+# entry for Figure 4/5 (top row): embedding=E5_LARGE_V2, LLM=GPT-4o-mini,
+# max_samples=60000.
+#
+# Build `processed_path` with:
+#   python scripts/convert_vcache_hf_dataset.py --dataset lmarena \
+#       --out data/processed/lmarena.jsonl --max-samples 60000
+# This carries the dataset's own pre-computed `emb_e5_large_v2` embeddings
+# into the `embedding` field, so `embedder: precomputed` uses the exact
+# vectors vCache's paper reports numbers for instead of re-encoding text.
+name: lmarena
+processed_path: data/processed/lmarena.jsonl
+max_samples: 60000
+embedder: precomputed
+threshold_grid: [0.80, 0.83, 0.86, 0.89, 0.92, 0.95, 0.97, 0.98, 0.99]
+target_error_rates: [0.01, 0.015, 0.02, 0.025, 0.03, 0.035, 0.04, 0.05, 0.06, 0.07]

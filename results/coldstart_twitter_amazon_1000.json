@@ -1,0 +1,134 @@
+{
+  "n_train": 1000,
+  "n_test": 1870,
+  "test_positive_rate": 0.010160427807486631,
+  "train_time_seconds": 10.666767358779907,
+  "label_noise_target": 0.0,
+  "label_noise_actual": 0.0,
+  "n_labels_flipped": 0,
+  "baseline": {
+    "auc": 0.6661548522846825,
+    "score_min": -11.478403091430664,
+    "score_mean": -5.552631855010986,
+    "score_max": 9.904906272888184,
+    "curve": [
+      {
+        "threshold": -11.183272743225098,
+        "approve_rate": 0.9,
+        "false_approve_rate": 0.9887106357694593,
+        "false_reject_rate": 0.0
+      },
+      {
+        "threshold": -10.772679138183594,
+        "approve_rate": 0.8,
+        "false_approve_rate": 0.9879679144385026,
+        "false_reject_rate": 0.00267379679144385
+      },
+      {
+        "threshold": -10.216805839538575,
+        "approve_rate": 0.7,
+        "false_approve_rate": 0.9877769289533995,
+        "false_reject_rate": 0.0053475935828877
+      },
+      {
+        "threshold": -9.522614479064941,
+        "approve_rate": 0.6,
+        "false_approve_rate": 0.9857397504456328,
+        "false_reject_rate": 0.004010695187165776
+      },
+      {
+        "threshold": -8.722094058990479,
+        "approve_rate": 0.5,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.0042780748663101605
+      },
+      {
+        "threshold": -7.45599699020386,
+        "approve_rate": 0.4,
+        "false_approve_rate": 0.9799465240641712,
+        "false_reject_rate": 0.0035650623885918
+      },
+      {
+        "threshold": -5.231464624404907,
+        "approve_rate": 0.3,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.007639419404125287
+      },
+      {
+        "threshold": 0.08277516812086219,
+        "approve_rate": 0.2,
+        "false_approve_rate": 0.9866310160427807,
+        "false_reject_rate": 0.009358288770053475
+      },
+      {
+        "threshold": 7.881461763381958,
+        "approve_rate": 0.1,
+        "false_approve_rate": 0.9893048128342246,
+        "false_reject_rate": 0.010101010101010102
+      }
+    ]
+  },
+  "finetuned": {
+    "auc": 0.6760214962040433,
+    "score_min": -9.952401161193848,
+    "score_mean": -5.86934232711792,
+    "score_max": 2.6021299362182617,
+    "curve": [
+      {
+        "threshold": -8.120294857025147,
+        "approve_rate": 0.9,
+        "false_approve_rate": 0.9893048128342246,
+        "false_reject_rate": 0.0053475935828877
+      },
+      {
+        "threshold": -7.330943775177002,
+        "approve_rate": 0.8,
+        "false_approve_rate": 0.9886363636363636,
+        "false_reject_rate": 0.0053475935828877
+      },
+      {
+        "threshold": -6.638004732131958,
+        "approve_rate": 0.7,
+        "false_approve_rate": 0.9877769289533995,
+        "false_reject_rate": 0.0053475935828877
+      },
+      {
+        "threshold": -6.130477523803711,
+        "approve_rate": 0.6,
+        "false_approve_rate": 0.9866310160427807,
+        "false_reject_rate": 0.0053475935828877
+      },
+      {
+        "threshold": -5.706042051315308,
+        "approve_rate": 0.5,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.0042780748663101605
+      },
+      {
+        "threshold": -5.366718006134033,
+        "approve_rate": 0.4,
+        "false_approve_rate": 0.9852941176470589,
+        "false_reject_rate": 0.0071301247771836
+      },
+      {
+        "threshold": -5.028723049163818,
+        "approve_rate": 0.3,
+        "false_approve_rate": 0.982174688057041,
+        "false_reject_rate": 0.006875477463712758
+      },
+      {
+        "threshold": -4.632959079742432,
+        "approve_rate": 0.2,
+        "false_approve_rate": 0.9759358288770054,
+        "false_reject_rate": 0.0066844919786096255
+      },
+      {
+        "threshold": -3.9645122528076167,
+        "approve_rate": 0.1,
+        "false_approve_rate": 0.9679144385026738,
+        "false_reject_rate": 0.007724301841948901
+      }
+    ]
+  },
+  "auc_delta": 0.009866643919360762
+}

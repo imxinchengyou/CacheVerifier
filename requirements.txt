@@ -1,0 +1,7 @@
+numpy>=1.26
+pyyaml>=6.0
+pytest>=8.0
+hnswlib>=0.8
+scikit-learn>=1.2,<1.10  # AdaptiveThresholdPolicy uses penalty=None (matching vCache's own source), deprecated in 1.8+ and removed in 1.10
+scipy>=1.11
+matplotlib>=3.8  # scripts/plot_pareto.py

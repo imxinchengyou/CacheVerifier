@@ -1,0 +1,17 @@
+{
+  "config": {
+    "config": "configs/twitter_comcast.yaml",
+    "train_fraction": 0.7,
+    "train_size": null,
+    "test_size": null,
+    "epochs": 1,
+    "batch_size": 16,
+    "base_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "output": "results/finetune_verifier_experiment_twitter_comcast.json"
+  },
+  "n_gray_zone_total": 3685,
+  "n_train": 2579,
+  "n_test": 1106,
+  "train_positive_rate": 0.010081426909654904,
+  "test_positive_rate": 0.05244122965641953
+}

@@ -1,0 +1,134 @@
+{
+  "n_train": 200,
+  "n_test": 25886,
+  "test_positive_rate": 0.47693734064745424,
+  "train_time_seconds": 1.397036075592041,
+  "label_noise_target": 0.0,
+  "label_noise_actual": 0.0,
+  "n_labels_flipped": 0,
+  "baseline": {
+    "auc": 0.4881138760997827,
+    "score_min": -11.48681354522705,
+    "score_mean": -11.302481651306152,
+    "score_max": -8.383975982666016,
+    "curve": [
+      {
+        "threshold": -11.406633853912354,
+        "approve_rate": 0.8999845476319246,
+        "false_approve_rate": 0.5247027514272223,
+        "false_reject_rate": 0.4916956353804558
+      },
+      {
+        "threshold": -11.383207321166992,
+        "approve_rate": 0.8000077261840377,
+        "false_approve_rate": 0.5273552561688155,
+        "false_reject_rate": 0.4941085570793896
+      },
+      {
+        "threshold": -11.364503383636475,
+        "approve_rate": 0.6999922738159623,
+        "false_approve_rate": 0.5294701986754967,
+        "false_reject_rate": 0.49188771568374967
+      },
+      {
+        "threshold": -11.346353530883789,
+        "approve_rate": 0.6000154523680754,
+        "false_approve_rate": 0.532771053309297,
+        "false_reject_rate": 0.4915008692292834
+      },
+      {
+        "threshold": -11.327898502349854,
+        "approve_rate": 0.5,
+        "false_approve_rate": 0.5334930078034459,
+        "false_reject_rate": 0.4873676890983543
+      },
+      {
+        "threshold": -11.307038307189941,
+        "approve_rate": 0.4000231785521131,
+        "false_approve_rate": 0.5287300820859488,
+        "false_reject_rate": 0.48071598738007854
+      },
+      {
+        "threshold": -11.283105850219727,
+        "approve_rate": 0.3000077261840377,
+        "false_approve_rate": 0.5302601081637909,
+        "false_reject_rate": 0.4800220750551876
+      },
+      {
+        "threshold": -11.250317573547363,
+        "approve_rate": 0.20003090473615082,
+        "false_approve_rate": 0.5370799536500579,
+        "false_reject_rate": 0.4804423411242032
+      },
+      {
+        "threshold": -11.191608905792236,
+        "approve_rate": 0.10001545236807541,
+        "false_approve_rate": 0.5361143298570876,
+        "false_reject_rate": 0.4783877752500322
+      }
+    ]
+  },
+  "finetuned": {
+    "auc": 0.48680836233265323,
+    "score_min": -5.040730953216553,
+    "score_mean": -1.7895960807800293,
+    "score_max": 2.262727975845337,
+    "curve": [
+      {
+        "threshold": -2.7435619831085205,
+        "approve_rate": 0.8999845476319246,
+        "false_approve_rate": 0.525389535133279,
+        "false_reject_rate": 0.49787562765546545
+      },
+      {
+        "threshold": -2.4216508865356445,
+        "approve_rate": 0.8000077261840377,
+        "false_approve_rate": 0.5284175962142064,
+        "false_reject_rate": 0.4983581224647479
+      },
+      {
+        "threshold": -2.1766918897628784,
+        "approve_rate": 0.6999922738159623,
+        "false_approve_rate": 0.5294701986754967,
+        "false_reject_rate": 0.49188771568374967
+      },
+      {
+        "threshold": -1.9714488983154297,
+        "approve_rate": 0.6000154523680754,
+        "false_approve_rate": 0.5282642286891579,
+        "false_reject_rate": 0.48474019702530424
+      },
+      {
+        "threshold": -1.7805724740028381,
+        "approve_rate": 0.5,
+        "false_approve_rate": 0.5310978907517577,
+        "false_reject_rate": 0.48497257204666616
+      },
+      {
+        "threshold": -1.595979928970337,
+        "approve_rate": 0.4000231785521131,
+        "false_approve_rate": 0.5327860936745533,
+        "false_reject_rate": 0.48342025626167023
+      },
+      {
+        "threshold": -1.3952865600585938,
+        "approve_rate": 0.3000077261840377,
+        "false_approve_rate": 0.5373422611382951,
+        "false_reject_rate": 0.48305739514348783
+      },
+      {
+        "threshold": -1.1681355237960815,
+        "approve_rate": 0.20003090473615082,
+        "false_approve_rate": 0.5378524526844342,
+        "false_reject_rate": 0.480635503187174
+      },
+      {
+        "threshold": -0.8491787314414978,
+        "approve_rate": 0.10001545236807541,
+        "false_approve_rate": 0.5434530706836617,
+        "false_reject_rate": 0.4792033309009744
+      }
+    ]
+  },
+  "auc_delta": -0.0013055137671294514
+}

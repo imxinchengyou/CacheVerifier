@@ -1,0 +1,22 @@
+# Quora Question Pairs (GLUE mirror: nyu-mll/glue/qqp) — a third,
+# independently-sourced real-world dataset used to check whether the
+# Group D/E findings (Section 5.4/5.6 of PAPER.md) generalize beyond
+# vCache's own two benchmarks. Short, real user-submitted questions with
+# human-annotated duplicate labels; no LLM-generated answers, so
+# equivalence classes and the `answer` field are reconstructed by
+# scripts/convert_quora_dataset.py rather than taken from the dataset
+# directly — see that script's docstring for the exact construction.
+#
+# Build `processed_path` with:
+#   python scripts/convert_quora_dataset.py \
+#       --out data/processed/quora.jsonl --max-samples 60000
+#
+# No precomputed embeddings exist for this dataset (unlike LmArena/
+# SearchQueries), so this re-encodes `query` text locally at eval time.
+name: quora
+processed_path: data/processed/quora.jsonl
+max_samples: 60000
+embedder: sentence-transformer
+embedder_model: sentence-transformers/all-MiniLM-L6-v2
+threshold_grid: [0.80, 0.83, 0.86, 0.89, 0.92, 0.95, 0.97, 0.98, 0.99]
+target_error_rates: [0.01, 0.015, 0.02, 0.025, 0.03, 0.035, 0.04, 0.05, 0.06, 0.07]

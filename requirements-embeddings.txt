@@ -1,0 +1,15 @@
+# Optional, heavier deps needed only for real experiments (Group A/B numbers
+# meant to be compared against published vCache/Krites baselines) and for
+# the verifier models added in Week 2.
+#
+# Intel Mac (macOS x86_64) gotcha: PyPI has no torch wheel newer than 2.2.2
+# for this platform (PyTorch dropped it after 2.2), and sentence-transformers
+# >=4 requires torch>=2.4. On Intel Mac, pin `sentence-transformers<4` AND
+# `numpy<2` (torch 2.2.2's numpy interop breaks — not just a warning, it
+# actually raises `RuntimeError: Numpy is not available` at inference time —
+# under numpy>=2). Not an issue on Linux/Apple Silicon, where current
+# versions of everything below install fine.
+-r requirements.txt
+sentence-transformers>=3.0
+torch>=2.2
+datasets>=2.19  # scripts/convert_vcache_hf_dataset.py

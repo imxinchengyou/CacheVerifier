@@ -1,0 +1,194 @@
+[
+  {
+    "group": "C",
+    "policy": "synchronous_verified[oracle]",
+    "verifier": "oracle",
+    "tau_low": 0.8,
+    "tau_high": 0.97,
+    "threshold": 0.5,
+    "hit_rate": 0.14993333333333334,
+    "error_rate": 0.010533333333333334,
+    "false_accept_rate": 0.07025344597598933,
+    "precision": 0.9297465540240106,
+    "recall": 0.8722494524976535,
+    "tp": 8364,
+    "fp": 632,
+    "tn": 49778,
+    "fn": 1225,
+    "n_records": 60000,
+    "verifier_call_rate": 0.284,
+    "mean_verifier_latency_ms": 70.0,
+    "expected_added_latency_ms": 19.88,
+    "n_verified": 17040,
+    "false_approve_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "hit_rate_ci": [
+      0.14703791666666666,
+      0.1523175
+    ],
+    "error_rate_ci": [
+      0.00976625,
+      0.011318749999999999
+    ]
+  },
+  {
+    "group": "C",
+    "policy": "synchronous_verified[oracle]",
+    "verifier": "oracle",
+    "tau_low": 0.83,
+    "tau_high": 0.97,
+    "threshold": 0.5,
+    "hit_rate": 0.13851666666666668,
+    "error_rate": 0.010533333333333334,
+    "false_accept_rate": 0.07604379737697028,
+    "precision": 0.9239562026230297,
+    "recall": 0.8008134320575659,
+    "tp": 7679,
+    "fp": 632,
+    "tn": 49778,
+    "fn": 1910,
+    "n_records": 60000,
+    "verifier_call_rate": 0.23308333333333334,
+    "mean_verifier_latency_ms": 70.0,
+    "expected_added_latency_ms": 16.315833333333334,
+    "n_verified": 13985,
+    "false_approve_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "hit_rate_ci": [
+      0.13548291666666668,
+      0.14103666666666667
+    ],
+    "error_rate_ci": [
+      0.00976625,
+      0.011318749999999999
+    ]
+  },
+  {
+    "group": "C",
+    "policy": "synchronous_verified[oracle]",
+    "verifier": "oracle",
+    "tau_low": 0.86,
+    "tau_high": 0.97,
+    "threshold": 0.5,
+    "hit_rate": 0.12458333333333334,
+    "error_rate": 0.010533333333333334,
+    "false_accept_rate": 0.08454849498327759,
+    "precision": 0.9154515050167225,
+    "recall": 0.7136302012722912,
+    "tp": 6843,
+    "fp": 632,
+    "tn": 49778,
+    "fn": 2746,
+    "n_records": 60000,
+    "verifier_call_rate": 0.18275,
+    "mean_verifier_latency_ms": 70.0,
+    "expected_added_latency_ms": 12.7925,
+    "n_verified": 10965,
+    "false_approve_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "hit_rate_ci": [
+      0.12153208333333333,
+      0.12693958333333336
+    ],
+    "error_rate_ci": [
+      0.00976625,
+      0.011318749999999999
+    ]
+  },
+  {
+    "group": "C",
+    "policy": "synchronous_verified[oracle]",
+    "verifier": "oracle",
+    "tau_low": 0.89,
+    "tau_high": 0.97,
+    "threshold": 0.5,
+    "hit_rate": 0.10563333333333333,
+    "error_rate": 0.010533333333333334,
+    "false_accept_rate": 0.09971599873777216,
+    "precision": 0.9002840012622279,
+    "recall": 0.5950568359578684,
+    "tp": 5706,
+    "fp": 632,
+    "tn": 49778,
+    "fn": 3883,
+    "n_records": 60000,
+    "verifier_call_rate": 0.13161666666666666,
+    "mean_verifier_latency_ms": 70.0,
+    "expected_added_latency_ms": 9.213166666666666,
+    "n_verified": 7897,
+    "false_approve_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "hit_rate_ci": [
+      0.10268291666666667,
+      0.10796875
+    ],
+    "error_rate_ci": [
+      0.00976625,
+      0.011318749999999999
+    ]
+  },
+  {
+    "group": "C",
+    "policy": "synchronous_verified[oracle]",
+    "verifier": "oracle",
+    "tau_low": 0.92,
+    "tau_high": 0.97,
+    "threshold": 0.5,
+    "hit_rate": 0.08218333333333333,
+    "error_rate": 0.010533333333333334,
+    "false_accept_rate": 0.1281687284526465,
+    "precision": 0.8718312715473535,
+    "recall": 0.4483262071123162,
+    "tp": 4299,
+    "fp": 632,
+    "tn": 49778,
+    "fn": 5290,
+    "n_records": 60000,
+    "verifier_call_rate": 0.07975,
+    "mean_verifier_latency_ms": 70.0,
+    "expected_added_latency_ms": 5.5825000000000005,
+    "n_verified": 4785,
+    "false_approve_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "hit_rate_ci": [
+      0.08006583333333332,
+      0.0843025
+    ],
+    "error_rate_ci": [
+      0.00976625,
+      0.011318749999999999
+    ]
+  },
+  {
+    "group": "C",
+    "policy": "synchronous_verified[oracle]",
+    "verifier": "oracle",
+    "tau_low": 0.95,
+    "tau_high": 0.97,
+    "threshold": 0.5,
+    "hit_rate": 0.05556666666666667,
+    "error_rate": 0.010533333333333334,
+    "false_accept_rate": 0.1895620875824835,
+    "precision": 0.8104379124175165,
+    "recall": 0.281781207633747,
+    "tp": 2702,
+    "fp": 632,
+    "tn": 49778,
+    "fn": 6887,
+    "n_records": 60000,
+    "verifier_call_rate": 0.030316666666666665,
+    "mean_verifier_latency_ms": 70.0,
+    "expected_added_latency_ms": 2.1221666666666668,
+    "n_verified": 1819,
+    "false_approve_rate": 0.0,
+    "false_reject_rate": 0.0,
+    "hit_rate_ci": [
+      0.053594583333333334,
+      0.057133750000000004
+    ],
+    "error_rate_ci": [
+      0.00976625,
+      0.011318749999999999
+    ]
+  }
+]

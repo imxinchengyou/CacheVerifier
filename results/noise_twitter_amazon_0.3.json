@@ -1,0 +1,134 @@
+{
+  "n_train": 4000,
+  "n_test": 1870,
+  "test_positive_rate": 0.010160427807486631,
+  "train_time_seconds": 14.372263669967651,
+  "label_noise_target": 0.3,
+  "label_noise_actual": 0.2995,
+  "n_labels_flipped": 1198,
+  "baseline": {
+    "auc": 0.6661548522846825,
+    "score_min": -11.478403091430664,
+    "score_mean": -5.552631855010986,
+    "score_max": 9.904906272888184,
+    "curve": [
+      {
+        "threshold": -11.183272743225098,
+        "approve_rate": 0.9,
+        "false_approve_rate": 0.9887106357694593,
+        "false_reject_rate": 0.0
+      },
+      {
+        "threshold": -10.772679138183594,
+        "approve_rate": 0.8,
+        "false_approve_rate": 0.9879679144385026,
+        "false_reject_rate": 0.00267379679144385
+      },
+      {
+        "threshold": -10.216805839538575,
+        "approve_rate": 0.7,
+        "false_approve_rate": 0.9877769289533995,
+        "false_reject_rate": 0.0053475935828877
+      },
+      {
+        "threshold": -9.522614479064941,
+        "approve_rate": 0.6,
+        "false_approve_rate": 0.9857397504456328,
+        "false_reject_rate": 0.004010695187165776
+      },
+      {
+        "threshold": -8.722094058990479,
+        "approve_rate": 0.5,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.0042780748663101605
+      },
+      {
+        "threshold": -7.45599699020386,
+        "approve_rate": 0.4,
+        "false_approve_rate": 0.9799465240641712,
+        "false_reject_rate": 0.0035650623885918
+      },
+      {
+        "threshold": -5.231464624404907,
+        "approve_rate": 0.3,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.007639419404125287
+      },
+      {
+        "threshold": 0.08277516812086219,
+        "approve_rate": 0.2,
+        "false_approve_rate": 0.9866310160427807,
+        "false_reject_rate": 0.009358288770053475
+      },
+      {
+        "threshold": 7.881461763381958,
+        "approve_rate": 0.1,
+        "false_approve_rate": 0.9893048128342246,
+        "false_reject_rate": 0.010101010101010102
+      }
+    ]
+  },
+  "finetuned": {
+    "auc": 0.6542978191020501,
+    "score_min": -1.4283828735351562,
+    "score_mean": -0.8269644379615784,
+    "score_max": 0.6717814207077026,
+    "curve": [
+      {
+        "threshold": -1.0322389483451844,
+        "approve_rate": 0.9,
+        "false_approve_rate": 0.9887106357694593,
+        "false_reject_rate": 0.0
+      },
+      {
+        "threshold": -0.9837028741836548,
+        "approve_rate": 0.8,
+        "false_approve_rate": 0.9879679144385026,
+        "false_reject_rate": 0.00267379679144385
+      },
+      {
+        "threshold": -0.9427979588508606,
+        "approve_rate": 0.7,
+        "false_approve_rate": 0.988540870893812,
+        "false_reject_rate": 0.0071301247771836
+      },
+      {
+        "threshold": -0.8977210044860839,
+        "approve_rate": 0.6,
+        "false_approve_rate": 0.9875222816399287,
+        "false_reject_rate": 0.0066844919786096255
+      },
+      {
+        "threshold": -0.8520786166191101,
+        "approve_rate": 0.5,
+        "false_approve_rate": 0.986096256684492,
+        "false_reject_rate": 0.006417112299465241
+      },
+      {
+        "threshold": -0.7956605195999146,
+        "approve_rate": 0.4,
+        "false_approve_rate": 0.983957219251337,
+        "false_reject_rate": 0.006238859180035651
+      },
+      {
+        "threshold": -0.7263189911842346,
+        "approve_rate": 0.3,
+        "false_approve_rate": 0.9857397504456328,
+        "false_reject_rate": 0.008403361344537815
+      },
+      {
+        "threshold": -0.6519556283950806,
+        "approve_rate": 0.2,
+        "false_approve_rate": 0.9812834224598931,
+        "false_reject_rate": 0.008021390374331552
+      },
+      {
+        "threshold": -0.6050414144992828,
+        "approve_rate": 0.1,
+        "false_approve_rate": 0.9679144385026738,
+        "false_reject_rate": 0.007724301841948901
+      }
+    ]
+  },
+  "auc_delta": -0.011857033182632426
+}

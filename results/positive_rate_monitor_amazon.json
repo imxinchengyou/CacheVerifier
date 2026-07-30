@@ -1,0 +1,78 @@
+{
+  "dataset": "amazon",
+  "n_train": 4361,
+  "train_positive_rate": 0.014675533134602155,
+  "n_test": 1870,
+  "test_positive_rate_overall": 0.010160427807486631,
+  "chunk_size": 233,
+  "method1_chunked_z_test": [
+    {
+      "chunk": 0,
+      "n": 233,
+      "positive_rate": 0.012875536480686695,
+      "z": -0.22330350941790586,
+      "p_value": 0.8232992961036336,
+      "flagged": false
+    },
+    {
+      "chunk": 1,
+      "n": 233,
+      "positive_rate": 0.008583690987124463,
+      "z": -0.7613598377254652,
+      "p_value": 0.44644216905940176,
+      "flagged": false
+    },
+    {
+      "chunk": 2,
+      "n": 233,
+      "positive_rate": 0.008583690987124463,
+      "z": -0.7613598377254652,
+      "p_value": 0.44644216905940176,
+      "flagged": false
+    },
+    {
+      "chunk": 3,
+      "n": 233,
+      "positive_rate": 0.02145922746781116,
+      "z": 0.8294666570860606,
+      "p_value": 0.40684039659273685,
+      "flagged": false
+    },
+    {
+      "chunk": 4,
+      "n": 233,
+      "positive_rate": 0.017167381974248927,
+      "z": 0.306885565560667,
+      "p_value": 0.7589304763059311,
+      "flagged": false
+    },
+    {
+      "chunk": 5,
+      "n": 233,
+      "positive_rate": 0.0,
+      "z": -1.8621784590422754,
+      "p_value": 0.06257793968592487,
+      "flagged": false
+    },
+    {
+      "chunk": 6,
+      "n": 233,
+      "positive_rate": 0.008583690987124463,
+      "z": -0.7613598377254652,
+      "p_value": 0.44644216905940176,
+      "flagged": false
+    },
+    {
+      "chunk": 7,
+      "n": 239,
+      "positive_rate": 0.0041841004184100415,
+      "z": -1.3380131613470212,
+      "p_value": 0.18089214646600582,
+      "flagged": false
+    }
+  ],
+  "method1_first_flagged_chunk": null,
+  "method2_page_hinkley_flag_index": null,
+  "method2_page_hinkley_flag_chunk": null,
+  "method2_page_hinkley_final_stat": 0.0
+}
