@@ -67,6 +67,10 @@ arXiv 链接即将发布,届时会更新这里的引用信息。目前可以这�
 }
 ```
 
+## 致谢
+
+Group A/B 直接建立在 **vCache** 项目(L. G. Schroeder、A. Desai、A. Cuadron、K. Chu、S. Liu、M. Zhao、S. Krusche、A. Kemper、I. Stoica、M. Zaharia、J. E. Gonzalez)公开的 benchmark 和参考代码之上——SemCacheLmArena/SemCacheSearchQueries 数据集、静态阈值网格,以及本文逐行复刻的 `VerifiedDecisionPolicy`。5.6 节和 5.8 节还直接建立在 **Quora Question Pairs**(Iyer, Dandekar, & Csernai, 2017)和 Kaggle **"Customer Support on Twitter"**(Axelbrooke, 2017)数据集之上。完整致谢见论文正文。
+
 ## 许可
 
 **保留所有权利** —— 见 [`LICENSE`](LICENSE)。这个仓库公开是为了支持论文结果的可复现性,不授予任何复制、修改或再分发的权利。

@@ -92,6 +92,18 @@ live. In the meantime:
 }
 ```
 
+## Acknowledgments
+
+Groups A/B of this work build directly on public benchmarks and reference
+code from the **vCache** project (L. G. Schroeder, A. Desai, A. Cuadron,
+K. Chu, S. Liu, M. Zhao, S. Krusche, A. Kemper, I. Stoica, M. Zaharia, and
+J. E. Gonzalez) — the SemCacheLmArena/SemCacheSearchQueries datasets, the
+static-threshold grid, and the `VerifiedDecisionPolicy` this paper ports
+line-by-line. Sections 5.6 and 5.8 further build on **Quora Question
+Pairs** (Iyer, Dandekar, & Csernai, 2017) and the Kaggle **"Customer
+Support on Twitter"** dataset (Axelbrooke, 2017). See the paper's own
+Acknowledgments section for the full note.
+
 ## License
 
 **All rights reserved** — see [`LICENSE`](LICENSE). This repository is
