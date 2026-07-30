@@ -2,6 +2,8 @@
 
 **Chengyou Xin** · LoopDot AI Research · 2026-07-26
 
+English | [简体中文](README_ZH.md)
+
 Semantic caches replace exact matching with vector similarity to reuse an
 LLM's past answers, but similarity and answer correctness are not the same
 quantity. This repo is the code and full experimental artifacts behind an
