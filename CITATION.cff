@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+title: "Synchronous Online Verification Gating in Semantic Caches: An Empirical Study"
+authors:
+  - family-names: "Xin"
+    given-names: "Chengyou"
+    affiliation: "LoopDot AI Research"
+date-released: 2026-07-26
+url: "https://github.com/imxinchengyou/CacheVerifier"
+repository-code: "https://github.com/imxinchengyou/CacheVerifier"
+license: "LicenseRef-all-rights-reserved"
+keywords:
+  - semantic-caching
+  - large-language-models
+  - cross-encoder
+  - reproducible-research
+  - machine-learning

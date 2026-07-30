@@ -1,0 +1,25 @@
+{
+  "title": "Synchronous Online Verification Gating in Semantic Caches: An Empirical Study",
+  "creators": [
+    {
+      "name": "Xin, Chengyou",
+      "affiliation": "LoopDot AI Research"
+    }
+  ],
+  "description": "Code and experimental artifacts for \"Synchronous Online Verification Gating in Semantic Caches\" — an empirical study of real-time verifier gating for semantic cache hits, evaluated against static- and adaptive-threshold baselines on ~210k real requests across three datasets.",
+  "access_right": "open",
+  "keywords": [
+    "semantic-caching",
+    "large-language-models",
+    "cross-encoder",
+    "reproducible-research",
+    "machine-learning"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/imxinchengyou/CacheVerifier",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
