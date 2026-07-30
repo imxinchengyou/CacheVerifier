@@ -369,6 +369,14 @@ Future work, in priority order:
 
 ---
 
+## Acknowledgments
+
+Groups A/B of this paper build directly on vCache's public benchmarks and reference implementation: the SemCacheLmArena and SemCacheSearchQueries datasets, the `STATIC_THRESHOLDS`/`DELTAS` grids used in Groups A/B, and the `VerifiedDecisionPolicy` this paper ports line-by-line in Group B are all from the vCache project. This paper's evaluation framework would not have been possible without this public infrastructure. Thanks to the vCache authors — L. G. Schroeder, A. Desai, A. Cuadron, K. Chu, S. Liu, M. Zhao, S. Krusche, A. Kemper, I. Stoica, M. Zaharia, and J. E. Gonzalez — for open-sourcing it.
+
+Sections 5.6 and 5.8's experiments likewise build directly on two other public datasets: Quora Question Pairs (Iyer, Dandekar, & Csernai, 2017) and the Kaggle "Customer Support on Twitter" dataset (Axelbrooke, 2017). Thanks to the creators of both.
+
+---
+
 ## References
 
 - Bang, F. (2023). GPTCache: An open-source semantic cache for LLM applications enabling faster answers and cost savings. *NLP-OSS 2023*.
@@ -376,3 +384,5 @@ Future work, in priority order:
 - Singh, A. K., Wang, H., Attaluri, S., Chiam, T., & Zhu, W. (2026). Asynchronous Verified Semantic Caching for Tiered LLM Architectures. *arXiv:2602.13165*.
 - Baral, A., Ralev, R., Zhechev, I. S., Rajamohan, S., & Agarwal, J. (2026). Closing the Calibration Gap in Semantic Caching. *arXiv:2606.19719*.
 - Cheema, M. T., Aamir, A., Muhammad, K. G., Bhatti, N. A., Qazi, I. A., & Qazi, Z. A. (2025). TweakLLM: A Routing Architecture for Dynamic Tailoring of Cached Responses. *arXiv:2507.23674*.
+- Iyer, S., Dandekar, N., & Csernai, K. (2017). First Quora dataset release: Question pairs. *Quora Engineering Blog*.
+- Axelbrooke, S. (2017). Customer Support on Twitter. *Kaggle*.

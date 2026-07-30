@@ -369,6 +369,14 @@ Krites 论文预判同步验证会"增加延迟、侵蚀缓存收益",但未实�
 
 ---
 
+## 致谢
+
+本文的 Group A/B 直接建立在 vCache 公开的 benchmark 和参考实现之上:SemCacheLmArena、SemCacheSearchQueries 两个数据集,Group A/B 所用的 `STATIC_THRESHOLDS`/`DELTAS` 网格,以及 Group B 逐行复刻的 `VerifiedDecisionPolicy`,均来自 vCache 项目。没有这些公开的基础设施,本文的评测框架无法成立。感谢 vCache 的作者们——L. G. Schroeder、A. Desai、A. Cuadron、K. Chu、S. Liu、M. Zhao、S. Krusche、A. Kemper、I. Stoica、M. Zaharia、J. E. Gonzalez——把这些工作开源出来。
+
+5.6 节和 5.8 节的实验也直接建立在另外两个公开数据集之上:Quora Question Pairs(Iyer, Dandekar, & Csernai, 2017)和 Kaggle "Customer Support on Twitter" 数据集(Axelbrooke, 2017)。感谢这两个数据集的发布者。
+
+---
+
 ## 参考文献
 
 - Bang, F. (2023). GPTCache: An open-source semantic cache for LLM applications enabling faster answers and cost savings. *NLP-OSS 2023*.
@@ -376,3 +384,5 @@ Krites 论文预判同步验证会"增加延迟、侵蚀缓存收益",但未实�
 - Singh, A. K., Wang, H., Attaluri, S., Chiam, T., & Zhu, W. (2026). Asynchronous Verified Semantic Caching for Tiered LLM Architectures. *arXiv:2602.13165*.
 - Baral, A., Ralev, R., Zhechev, I. S., Rajamohan, S., & Agarwal, J. (2026). Closing the Calibration Gap in Semantic Caching. *arXiv:2606.19719*.
 - Cheema, M. T., Aamir, A., Muhammad, K. G., Bhatti, N. A., Qazi, I. A., & Qazi, Z. A. (2025). TweakLLM: A Routing Architecture for Dynamic Tailoring of Cached Responses. *arXiv:2507.23674*.
+- Iyer, S., Dandekar, N., & Csernai, K. (2017). First Quora dataset release: Question pairs. *Quora Engineering Blog*.
+- Axelbrooke, S. (2017). Customer Support on Twitter. *Kaggle*.

@@ -619,6 +619,12 @@ Future work, in priority order:
   \item Add an ``E$'$: rewrite instead of reject'' arm, replacing the verifier's fail action from ``miss'' with ``use a lightweight LLM to edit the candidate answer to fit the new query'' (the paradigm proposed by TweakLLM~\cite{tweakllm}), and see where this lands relative to the binary verification gate on this paper's hit-rate/error-rate Pareto frontier --- an open question this paper does not attempt to answer, not part of its current conclusions.
 \end{enumerate}
 
+\section*{Acknowledgments}
+
+Groups A/B of this paper build directly on vCache's public benchmarks and reference implementation: the SemCacheLmArena and SemCacheSearchQueries datasets, the \texttt{STATIC\_THRESHOLDS}/\texttt{DELTAS} grids used in Groups A/B, and the \texttt{VerifiedDecisionPolicy} this paper ports line-by-line in Group B are all from the vCache project~\cite{vcache}. This paper's evaluation framework would not have been possible without this public infrastructure. Thanks to the vCache authors --- L. G. Schroeder, A. Desai, A. Cuadron, K. Chu, S. Liu, M. Zhao, S. Krusche, A. Kemper, I. Stoica, M. Zaharia, and J. E. Gonzalez --- for open-sourcing it.
+
+Sections~\ref{sec:groupe} and~\ref{sec:twitter}'s experiments likewise build directly on two other public datasets: Quora Question Pairs~\cite{quora} and the Kaggle ``Customer Support on Twitter'' dataset~\cite{twittercs}. Thanks to the creators of both.
+
 \begin{thebibliography}{9}
 
 \bibitem{gptcache}
@@ -635,6 +641,12 @@ Baral, A., Ralev, R., Zhechev, I. S., Rajamohan, S., \& Agarwal, J. (2026). Clos
 
 \bibitem{tweakllm}
 Cheema, M. T., Aamir, A., Muhammad, K. G., Bhatti, N. A., Qazi, I. A., \& Qazi, Z. A. (2025). TweakLLM: A Routing Architecture for Dynamic Tailoring of Cached Responses. \textit{arXiv:2507.23674}.
+
+\bibitem{quora}
+Iyer, S., Dandekar, N., \& Csernai, K. (2017). First Quora dataset release: Question pairs. \textit{Quora Engineering Blog}.
+
+\bibitem{twittercs}
+Axelbrooke, S. (2017). Customer Support on Twitter. \textit{Kaggle}.
 
 \end{thebibliography}
 
