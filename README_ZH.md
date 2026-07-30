@@ -4,6 +4,8 @@
 
 [English](README.md) | 简体中文
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21703365.svg)](https://doi.org/10.5281/zenodo.21703365)
+
 语义缓存用向量相似度替代精确匹配来复用大模型的历史回答,但相似度和答案正确性并非同一个量。这个仓库是一项实证研究的完整代码与实验产出,研究的问题很具体:在单层语义缓存架构下,用一个**真实**(非 oracle)、**同步**的验证器对缓存命中做门禁——在约 21 万条真实请求、三个数据集上,和静态阈值、自适应阈值两条基线做正式对比——到底能不能真正改善命中率与错误率之间的权衡?
 
 ![LmArena 上命中率-错误率帕累托前沿:静态阈值、自适应阈值、oracle 验证器、开箱即用验证器、领域微调验证器](results/lmarena_pareto_full_with_finetune.png)
@@ -55,7 +57,7 @@ Group E 的微调验证器托管在 Hugging Face Hub,不在这个仓库里——
 
 ## 引用
 
-arXiv 链接即将发布,届时会更新这里的引用信息。目前可以这样引用:
+已经在 Zenodo 存档,DOI: [10.5281/zenodo.21703365](https://doi.org/10.5281/zenodo.21703365)。arXiv 链接即将发布,届时会更新这里的引用信息。
 
 ```bibtex
 @misc{xin2026synchronous,
@@ -63,7 +65,8 @@ arXiv 链接即将发布,届时会更新这里的引用信息。目前可以这�
   author = {Xin, Chengyou},
   year   = {2026},
   note   = {LoopDot AI Research},
-  url    = {https://github.com/imxinchengyou/CacheVerifier}
+  url    = {https://github.com/imxinchengyou/CacheVerifier},
+  doi    = {10.5281/zenodo.21703365}
 }
 ```
 

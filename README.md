@@ -4,6 +4,8 @@
 
 English | [简体中文](README_ZH.md)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21703365.svg)](https://doi.org/10.5281/zenodo.21703365)
+
 Semantic caches replace exact matching with vector similarity to reuse an
 LLM's past answers, but similarity and answer correctness are not the same
 quantity. This repo is the code and full experimental artifacts behind an
@@ -79,8 +81,8 @@ repo — see [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md).
 
 ## Citation
 
-arXiv listing forthcoming — this will be updated with the arXiv ID once
-live. In the meantime:
+Archived on Zenodo with DOI [10.5281/zenodo.21703365](https://doi.org/10.5281/zenodo.21703365).
+arXiv listing forthcoming — this will be updated with the arXiv ID once live.
 
 ```bibtex
 @misc{xin2026synchronous,
@@ -88,7 +90,8 @@ live. In the meantime:
   author = {Xin, Chengyou},
   year   = {2026},
   note   = {LoopDot AI Research},
-  url    = {https://github.com/imxinchengyou/CacheVerifier}
+  url    = {https://github.com/imxinchengyou/CacheVerifier},
+  doi    = {10.5281/zenodo.21703365}
 }
 ```
 
