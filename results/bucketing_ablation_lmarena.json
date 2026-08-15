@@ -1,0 +1,35 @@
+{
+  "dataset": "lmarena",
+  "n_gray_zone_total": 16102,
+  "n_extraction_eligible": 10089,
+  "extraction_eligible_fraction": 0.6265681281828345,
+  "n_bucket_matched_among_eligible": 4196,
+  "bucket_matched_fraction_among_eligible": 0.41589850332044803,
+  "positive_rate_eligible": 0.7755971850530281,
+  "verifier_only": {
+    "auc": 0.8644323711037605,
+    "auc_ci": [
+      0.8545664860680909,
+      0.8734431660501857
+    ],
+    "n": 10089
+  },
+  "bucketing_only": {
+    "precision": 0.8693994280266921,
+    "recall": 0.46619808306709265,
+    "false_approve_rate": 0.1306005719733079,
+    "false_reject_rate": 0.7088070592228067,
+    "tp": 3648,
+    "fp": 548,
+    "tn": 1716,
+    "fn": 4177
+  },
+  "bucketing_plus_verifier": {
+    "auc_on_bucket_matched_subset": 0.7662787928992189,
+    "auc_ci": [
+      0.7418361934197049,
+      0.791639517488824
+    ],
+    "n": 4196
+  }
+}

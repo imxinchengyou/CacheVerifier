@@ -1,0 +1,35 @@
+{
+  "dataset": "search_queries_corrected",
+  "n_gray_zone_total": 86280,
+  "n_extraction_eligible": 23553,
+  "extraction_eligible_fraction": 0.27298331015299027,
+  "n_bucket_matched_among_eligible": 17195,
+  "bucket_matched_fraction_among_eligible": 0.7300556192417101,
+  "positive_rate_eligible": 0.5496964293295971,
+  "verifier_only": {
+    "auc": 0.621490098283023,
+    "auc_ci": [
+      0.6145477679714876,
+      0.6287497151509751
+    ],
+    "n": 23553
+  },
+  "bucketing_only": {
+    "precision": 0.5483570805466705,
+    "recall": 0.7282768208851471,
+    "false_approve_rate": 0.45164291945332946,
+    "false_reject_rate": 0.5533186536646745,
+    "tp": 9429,
+    "fp": 7766,
+    "tn": 2840,
+    "fn": 3518
+  },
+  "bucketing_plus_verifier": {
+    "auc_on_bucket_matched_subset": 0.6150102203308258,
+    "auc_ci": [
+      0.606636918813816,
+      0.623176608208121
+    ],
+    "n": 17195
+  }
+}
