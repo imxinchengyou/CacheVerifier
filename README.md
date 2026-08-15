@@ -26,9 +26,12 @@ the hit-rate/error-rate trade-off?
   **weak Go**, not an unqualified win.
 - **Fine-tuning that same verifier on a dataset's own gray-zone labels**
   closes most of the gap on all three independent datasets tested,
-  including turning SearchQueries from a near-random verifier (AUC 0.49)
-  into one that beats the static-threshold frontier at 46 of 54 tested
-  points with zero losses (AUC 0.67).
+  including turning SearchQueries from a *net-harmful* verifier (AUC 0.60 —
+  see the erratum note at the top of [`PAPER.md`](PAPER.md) /
+  [`PAPER_EN.md`](PAPER_EN.md): an earlier release of this paper reported
+  AUC 0.49 due to a since-corrected data defect) into one that beats the
+  static-threshold frontier at 53 of 54 tested points, 1 tie, zero losses
+  (AUC 0.71).
 - The recipe tolerates realistic label noise (~30%) and cold start, and
   holds up on real production customer-support traffic — with **one
   genuine counter-example**, traced to a specific, monitorable cause, and
@@ -42,7 +45,7 @@ the hit-rate/error-rate trade-off?
 | Dataset | Off-the-shelf verifier (Group D) | Domain-fine-tuned verifier (Group E) |
 |---|---|---|
 | LmArena (conversational) | AUC 0.72 · best reproducible net gain ≈ **+1.9pp** hit rate | AUC **0.88** · beats static-threshold frontier at nearly every tested point |
-| SearchQueries (short keyword) | AUC 0.49 (≈ chance) · **≈0** net gain | AUC **0.67** · wins 46/54 tested points, 0 losses |
+| SearchQueries (short keyword) | AUC 0.60 · **net harmful** (23/36 losses to static threshold) | AUC **0.71** · wins 53/54 tested points, 1 tie, 0 losses |
 | Quora (paraphrase pairs) | — (not in original benchmark) | Smaller-magnitude replication of the same pattern; never worse than the untuned baseline |
 
 Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–28pp** hit rate at matched error rate. Full numbers, confidence intervals, and four further robustness ablations (noise, cold start, drift, real production traffic) are in the paper, §5.
