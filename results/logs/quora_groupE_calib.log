@@ -1,0 +1,101 @@
+[14:53:41] Loading records from data/processed/quora.jsonl...
+[14:53:41] Loaded 60000 records
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1517.82it/s]
+[14:53:47] Loading cached match trace from results/.cache/quora__sentence-transformer_sentence-transformers_all-MiniLM-L6-v2__n60000.trace.json...
+[14:53:48] Scoring gray-zone candidates with the fine-tuned verifier (finetuned_verifier_model_quora)...
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 4845.76it/s]
+[score_gray_zone] 17040 candidates to score
+[score_gray_zone] 200/17040 (  1.2%)  135.9 ex/s  elapsed=0.0m  eta=2.1m  last_score=-0.389  last_latency=6.3ms
+[score_gray_zone] 400/17040 (  2.3%)  144.9 ex/s  elapsed=0.0m  eta=1.9m  last_score=1.050  last_latency=6.3ms
+[score_gray_zone] 600/17040 (  3.5%)  148.5 ex/s  elapsed=0.1m  eta=1.8m  last_score=0.508  last_latency=6.5ms
+[score_gray_zone] 800/17040 (  4.7%)  150.3 ex/s  elapsed=0.1m  eta=1.8m  last_score=0.665  last_latency=6.3ms
+[score_gray_zone] 1000/17040 (  5.9%)  151.4 ex/s  elapsed=0.1m  eta=1.8m  last_score=0.498  last_latency=6.4ms
+[score_gray_zone] 1200/17040 (  7.0%)  152.3 ex/s  elapsed=0.1m  eta=1.7m  last_score=0.684  last_latency=6.3ms
+[score_gray_zone] 1400/17040 (  8.2%)  153.0 ex/s  elapsed=0.2m  eta=1.7m  last_score=-0.221  last_latency=6.3ms
+[score_gray_zone] 1600/17040 (  9.4%)  153.4 ex/s  elapsed=0.2m  eta=1.7m  last_score=1.326  last_latency=6.5ms
+[score_gray_zone] 1800/17040 ( 10.6%)  153.8 ex/s  elapsed=0.2m  eta=1.7m  last_score=0.075  last_latency=6.4ms
+[score_gray_zone] 2000/17040 ( 11.7%)  154.1 ex/s  elapsed=0.2m  eta=1.6m  last_score=0.537  last_latency=6.2ms
+[score_gray_zone] 2200/17040 ( 12.9%)  154.4 ex/s  elapsed=0.2m  eta=1.6m  last_score=0.172  last_latency=6.3ms
+[score_gray_zone] 2400/17040 ( 14.1%)  154.6 ex/s  elapsed=0.3m  eta=1.6m  last_score=-1.409  last_latency=6.5ms
+[score_gray_zone] 2600/17040 ( 15.3%)  154.8 ex/s  elapsed=0.3m  eta=1.6m  last_score=1.098  last_latency=6.5ms
+[score_gray_zone] 2800/17040 ( 16.4%)  154.9 ex/s  elapsed=0.3m  eta=1.5m  last_score=-0.685  last_latency=6.4ms
+[score_gray_zone] 3000/17040 ( 17.6%)  155.1 ex/s  elapsed=0.3m  eta=1.5m  last_score=-0.121  last_latency=6.3ms
+[score_gray_zone] 3200/17040 ( 18.8%)  155.3 ex/s  elapsed=0.3m  eta=1.5m  last_score=-1.297  last_latency=6.2ms
+[score_gray_zone] 3400/17040 ( 20.0%)  155.4 ex/s  elapsed=0.4m  eta=1.5m  last_score=-1.557  last_latency=6.3ms
+[score_gray_zone] 3600/17040 ( 21.1%)  155.6 ex/s  elapsed=0.4m  eta=1.4m  last_score=0.328  last_latency=6.3ms
+[score_gray_zone] 3800/17040 ( 22.3%)  155.6 ex/s  elapsed=0.4m  eta=1.4m  last_score=-0.059  last_latency=6.2ms
+[score_gray_zone] 4000/17040 ( 23.5%)  155.7 ex/s  elapsed=0.4m  eta=1.4m  last_score=-5.227  last_latency=6.5ms
+[score_gray_zone] 4200/17040 ( 24.6%)  155.8 ex/s  elapsed=0.4m  eta=1.4m  last_score=-0.842  last_latency=6.3ms
+[score_gray_zone] 4400/17040 ( 25.8%)  155.9 ex/s  elapsed=0.5m  eta=1.4m  last_score=-0.077  last_latency=6.3ms
+[score_gray_zone] 4600/17040 ( 27.0%)  155.9 ex/s  elapsed=0.5m  eta=1.3m  last_score=0.747  last_latency=6.3ms
+[score_gray_zone] 4800/17040 ( 28.2%)  156.0 ex/s  elapsed=0.5m  eta=1.3m  last_score=0.212  last_latency=6.4ms
+[score_gray_zone] 5000/17040 ( 29.3%)  156.0 ex/s  elapsed=0.5m  eta=1.3m  last_score=-0.037  last_latency=6.3ms
+[score_gray_zone] 5200/17040 ( 30.5%)  156.0 ex/s  elapsed=0.6m  eta=1.3m  last_score=1.301  last_latency=6.3ms
+[score_gray_zone] 5400/17040 ( 31.7%)  156.1 ex/s  elapsed=0.6m  eta=1.2m  last_score=0.498  last_latency=6.5ms
+[score_gray_zone] 5600/17040 ( 32.9%)  156.1 ex/s  elapsed=0.6m  eta=1.2m  last_score=0.132  last_latency=6.3ms
+[score_gray_zone] 5800/17040 ( 34.0%)  156.1 ex/s  elapsed=0.6m  eta=1.2m  last_score=-0.186  last_latency=6.3ms
+[score_gray_zone] 6000/17040 ( 35.2%)  156.1 ex/s  elapsed=0.6m  eta=1.2m  last_score=0.039  last_latency=6.4ms
+[score_gray_zone] 6200/17040 ( 36.4%)  156.2 ex/s  elapsed=0.7m  eta=1.2m  last_score=-0.932  last_latency=6.2ms
+[score_gray_zone] 6400/17040 ( 37.6%)  156.2 ex/s  elapsed=0.7m  eta=1.1m  last_score=0.161  last_latency=6.4ms
+[score_gray_zone] 6600/17040 ( 38.7%)  156.3 ex/s  elapsed=0.7m  eta=1.1m  last_score=0.966  last_latency=6.3ms
+[score_gray_zone] 6800/17040 ( 39.9%)  156.3 ex/s  elapsed=0.7m  eta=1.1m  last_score=-0.428  last_latency=6.2ms
+[score_gray_zone] 7000/17040 ( 41.1%)  156.4 ex/s  elapsed=0.7m  eta=1.1m  last_score=-1.626  last_latency=6.3ms
+[score_gray_zone] 7200/17040 ( 42.3%)  156.4 ex/s  elapsed=0.8m  eta=1.0m  last_score=-2.171  last_latency=6.3ms
+[score_gray_zone] 7400/17040 ( 43.4%)  156.4 ex/s  elapsed=0.8m  eta=1.0m  last_score=-0.090  last_latency=6.3ms
+[score_gray_zone] 7600/17040 ( 44.6%)  156.5 ex/s  elapsed=0.8m  eta=1.0m  last_score=0.027  last_latency=6.3ms
+[score_gray_zone] 7800/17040 ( 45.8%)  156.5 ex/s  elapsed=0.8m  eta=1.0m  last_score=-0.394  last_latency=6.3ms
+[score_gray_zone] 8000/17040 ( 46.9%)  156.5 ex/s  elapsed=0.9m  eta=1.0m  last_score=-0.101  last_latency=6.4ms
+[score_gray_zone] 8200/17040 ( 48.1%)  156.5 ex/s  elapsed=0.9m  eta=0.9m  last_score=-0.597  last_latency=6.3ms
+[score_gray_zone] 8400/17040 ( 49.3%)  156.5 ex/s  elapsed=0.9m  eta=0.9m  last_score=-0.584  last_latency=6.3ms
+[score_gray_zone] 8600/17040 ( 50.5%)  156.5 ex/s  elapsed=0.9m  eta=0.9m  last_score=0.815  last_latency=6.4ms
+[score_gray_zone] 8800/17040 ( 51.6%)  156.5 ex/s  elapsed=0.9m  eta=0.9m  last_score=0.319  last_latency=6.3ms
+[score_gray_zone] 9000/17040 ( 52.8%)  156.5 ex/s  elapsed=1.0m  eta=0.9m  last_score=-4.433  last_latency=6.3ms
+[score_gray_zone] 9200/17040 ( 54.0%)  156.5 ex/s  elapsed=1.0m  eta=0.8m  last_score=-0.744  last_latency=6.4ms
+[score_gray_zone] 9400/17040 ( 55.2%)  156.6 ex/s  elapsed=1.0m  eta=0.8m  last_score=0.087  last_latency=6.3ms
+[score_gray_zone] 9600/17040 ( 56.3%)  156.6 ex/s  elapsed=1.0m  eta=0.8m  last_score=0.928  last_latency=6.3ms
+[score_gray_zone] 9800/17040 ( 57.5%)  156.6 ex/s  elapsed=1.0m  eta=0.8m  last_score=-0.667  last_latency=6.7ms
+[score_gray_zone] 10000/17040 ( 58.7%)  156.6 ex/s  elapsed=1.1m  eta=0.7m  last_score=-1.768  last_latency=6.3ms
+[score_gray_zone] 10200/17040 ( 59.9%)  156.6 ex/s  elapsed=1.1m  eta=0.7m  last_score=-0.873  last_latency=6.5ms
+[score_gray_zone] 10400/17040 ( 61.0%)  156.6 ex/s  elapsed=1.1m  eta=0.7m  last_score=-0.955  last_latency=6.4ms
+[score_gray_zone] 10600/17040 ( 62.2%)  156.6 ex/s  elapsed=1.1m  eta=0.7m  last_score=-2.852  last_latency=6.7ms
+[score_gray_zone] 10800/17040 ( 63.4%)  156.6 ex/s  elapsed=1.1m  eta=0.7m  last_score=0.504  last_latency=6.2ms
+[score_gray_zone] 11000/17040 ( 64.6%)  156.6 ex/s  elapsed=1.2m  eta=0.6m  last_score=-0.566  last_latency=6.3ms
+[score_gray_zone] 11200/17040 ( 65.7%)  156.7 ex/s  elapsed=1.2m  eta=0.6m  last_score=-0.068  last_latency=6.3ms
+[score_gray_zone] 11400/17040 ( 66.9%)  156.7 ex/s  elapsed=1.2m  eta=0.6m  last_score=0.458  last_latency=6.3ms
+[score_gray_zone] 11600/17040 ( 68.1%)  156.7 ex/s  elapsed=1.2m  eta=0.6m  last_score=0.150  last_latency=6.4ms
+[score_gray_zone] 11800/17040 ( 69.2%)  156.7 ex/s  elapsed=1.3m  eta=0.6m  last_score=-0.172  last_latency=6.4ms
+[score_gray_zone] 12000/17040 ( 70.4%)  156.7 ex/s  elapsed=1.3m  eta=0.5m  last_score=-0.464  last_latency=6.3ms
+[score_gray_zone] 12200/17040 ( 71.6%)  156.7 ex/s  elapsed=1.3m  eta=0.5m  last_score=0.881  last_latency=6.5ms
+[score_gray_zone] 12400/17040 ( 72.8%)  156.7 ex/s  elapsed=1.3m  eta=0.5m  last_score=-1.458  last_latency=6.3ms
+[score_gray_zone] 12600/17040 ( 73.9%)  156.7 ex/s  elapsed=1.3m  eta=0.5m  last_score=1.372  last_latency=6.2ms
+[score_gray_zone] 12800/17040 ( 75.1%)  156.7 ex/s  elapsed=1.4m  eta=0.5m  last_score=-0.123  last_latency=6.3ms
+[score_gray_zone] 13000/17040 ( 76.3%)  156.7 ex/s  elapsed=1.4m  eta=0.4m  last_score=-0.743  last_latency=6.3ms
+[score_gray_zone] 13200/17040 ( 77.5%)  156.7 ex/s  elapsed=1.4m  eta=0.4m  last_score=-0.313  last_latency=6.3ms
+[score_gray_zone] 13400/17040 ( 78.6%)  156.7 ex/s  elapsed=1.4m  eta=0.4m  last_score=-0.429  last_latency=6.3ms
+[score_gray_zone] 13600/17040 ( 79.8%)  156.7 ex/s  elapsed=1.4m  eta=0.4m  last_score=-0.082  last_latency=6.3ms
+[score_gray_zone] 13800/17040 ( 81.0%)  156.8 ex/s  elapsed=1.5m  eta=0.3m  last_score=0.534  last_latency=6.4ms
+[score_gray_zone] 14000/17040 ( 82.2%)  156.8 ex/s  elapsed=1.5m  eta=0.3m  last_score=-1.162  last_latency=6.3ms
+[score_gray_zone] 14200/17040 ( 83.3%)  156.8 ex/s  elapsed=1.5m  eta=0.3m  last_score=0.057  last_latency=6.3ms
+[score_gray_zone] 14400/17040 ( 84.5%)  156.8 ex/s  elapsed=1.5m  eta=0.3m  last_score=-0.770  last_latency=6.4ms
+[score_gray_zone] 14600/17040 ( 85.7%)  156.8 ex/s  elapsed=1.6m  eta=0.3m  last_score=-2.877  last_latency=6.3ms
+[score_gray_zone] 14800/17040 ( 86.9%)  156.8 ex/s  elapsed=1.6m  eta=0.2m  last_score=0.175  last_latency=6.3ms
+[score_gray_zone] 15000/17040 ( 88.0%)  156.8 ex/s  elapsed=1.6m  eta=0.2m  last_score=0.665  last_latency=6.5ms
+[score_gray_zone] 15200/17040 ( 89.2%)  156.8 ex/s  elapsed=1.6m  eta=0.2m  last_score=0.390  last_latency=6.3ms
+[score_gray_zone] 15400/17040 ( 90.4%)  156.8 ex/s  elapsed=1.6m  eta=0.2m  last_score=0.326  last_latency=6.2ms
+[score_gray_zone] 15600/17040 ( 91.5%)  156.8 ex/s  elapsed=1.7m  eta=0.2m  last_score=0.707  last_latency=6.3ms
+[score_gray_zone] 15800/17040 ( 92.7%)  156.8 ex/s  elapsed=1.7m  eta=0.1m  last_score=-0.748  last_latency=6.3ms
+[score_gray_zone] 16000/17040 ( 93.9%)  156.8 ex/s  elapsed=1.7m  eta=0.1m  last_score=0.618  last_latency=6.2ms
+[score_gray_zone] 16200/17040 ( 95.1%)  156.8 ex/s  elapsed=1.7m  eta=0.1m  last_score=-0.136  last_latency=6.3ms
+[score_gray_zone] 16400/17040 ( 96.2%)  156.8 ex/s  elapsed=1.7m  eta=0.1m  last_score=-0.344  last_latency=6.3ms
+[score_gray_zone] 16600/17040 ( 97.4%)  156.8 ex/s  elapsed=1.8m  eta=0.0m  last_score=0.659  last_latency=6.1ms
+[score_gray_zone] 16800/17040 ( 98.6%)  156.8 ex/s  elapsed=1.8m  eta=0.0m  last_score=-0.499  last_latency=6.4ms
+[score_gray_zone] 17000/17040 ( 99.8%)  156.8 ex/s  elapsed=1.8m  eta=0.0m  last_score=0.444  last_latency=6.4ms
+[score_gray_zone] 17040/17040 (100.0%)  156.8 ex/s  elapsed=1.8m  eta=0.0m  last_score=0.364  last_latency=6.2ms
+[14:55:37] Cached to results/.cache/quora__sentence-transformer_sentence-transformers_all-MiniLM-L6-v2__n60000__cross_encoder_finetuned_verifier_model_quora__lo0.8__hi0.97.scored.json
+[14:55:40] tau_low=0.8  calibrated_threshold=-0.007  n_calib=8520  n_test=8520  hit_rate=0.1244  error_rate=0.0497
+[14:55:43] tau_low=0.83  calibrated_threshold=-0.007  n_calib=6992  n_test=6993  hit_rate=0.1154  error_rate=0.0451
+[14:55:45] tau_low=0.86  calibrated_threshold=0.281  n_calib=5482  n_test=5483  hit_rate=0.0875  error_rate=0.0299
+[14:55:49] tau_low=0.89  calibrated_threshold=0.313  n_calib=3948  n_test=3949  hit_rate=0.0761  error_rate=0.0247
+[14:55:52] tau_low=0.92  calibrated_threshold=0.351  n_calib=2392  n_test=2393  hit_rate=0.0627  error_rate=0.0195
+[14:55:55] tau_low=0.95  calibrated_threshold=0.351  n_calib=909  n_test=910  hit_rate=0.0486  error_rate=0.0145
+[14:55:55] Wrote 6 rows to results/quora_groupE_honest_calibration.json

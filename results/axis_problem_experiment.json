@@ -1,0 +1,4284 @@
+{
+  "config": {
+    "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "verifier_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "output": "results/axis_problem_experiment.json"
+  },
+  "n_pairs": 420,
+  "cells": {
+    "A-long": {
+      "family": "A",
+      "length_condition": "long",
+      "n": 105,
+      "positive_rate": 0.42857142857142855,
+      "mean_query_length_words": 6.3619047619047615,
+      "similarity_auc": 1.0,
+      "similarity_auc_ci": [
+        1.0,
+        1.0
+      ],
+      "verifier_auc": 1.0,
+      "verifier_auc_ci": [
+        1.0,
+        1.0
+      ],
+      "oracle_gap_similarity": 0.0
+    },
+    "B-long": {
+      "family": "B",
+      "length_condition": "long",
+      "n": 105,
+      "positive_rate": 0.42857142857142855,
+      "mean_query_length_words": 6.419047619047619,
+      "similarity_auc": 1.0,
+      "similarity_auc_ci": [
+        1.0,
+        1.0
+      ],
+      "verifier_auc": 0.9829629629629629,
+      "verifier_auc_ci": [
+        0.960203356139696,
+        0.9978276764555899
+      ],
+      "oracle_gap_similarity": 0.0
+    },
+    "A-short": {
+      "family": "A",
+      "length_condition": "short",
+      "n": 105,
+      "positive_rate": 0.42857142857142855,
+      "mean_query_length_words": 2.723809523809524,
+      "similarity_auc": 1.0,
+      "similarity_auc_ci": [
+        1.0,
+        1.0
+      ],
+      "verifier_auc": 1.0,
+      "verifier_auc_ci": [
+        1.0,
+        1.0
+      ],
+      "oracle_gap_similarity": 0.0
+    },
+    "B-short": {
+      "family": "B",
+      "length_condition": "short",
+      "n": 105,
+      "positive_rate": 0.42857142857142855,
+      "mean_query_length_words": 2.8095238095238093,
+      "similarity_auc": 1.0,
+      "similarity_auc_ci": [
+        1.0,
+        1.0
+      ],
+      "verifier_auc": 0.9788888888888889,
+      "verifier_auc_ci": [
+        0.9512366704753685,
+        0.9985326485693323
+      ],
+      "oracle_gap_similarity": 0.0
+    }
+  },
+  "pairs": [
+    {
+      "query": "I want to cancel my subscription",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9704123735427856,
+      "verifier_score": 4.240896701812744
+    },
+    {
+      "query": "can you help me cancel my subscription",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9353832006454468,
+      "verifier_score": 2.0264058113098145
+    },
+    {
+      "query": "I need to cancel my subscription",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9694561958312988,
+      "verifier_score": 4.197417259216309
+    },
+    {
+      "query": "can you help me cancel my subscription",
+      "candidate_query": "how do I pause my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7402800917625427,
+      "verifier_score": -6.948394775390625
+    },
+    {
+      "query": "can you help me cancel my subscription",
+      "candidate_query": "how do I renew my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6994394063949585,
+      "verifier_score": -6.77230167388916
+    },
+    {
+      "query": "I want to cancel my subscription",
+      "candidate_query": "how do I upgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6270069479942322,
+      "verifier_score": -8.448067665100098
+    },
+    {
+      "query": "can you help me cancel my subscription",
+      "candidate_query": "how do I downgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6787158250808716,
+      "verifier_score": -7.691549301147461
+    },
+    {
+      "query": "I want to pause my subscription",
+      "candidate_query": "how do I pause my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9745906591415405,
+      "verifier_score": 5.216084957122803
+    },
+    {
+      "query": "can you help me pause my subscription",
+      "candidate_query": "how do I pause my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9205188751220703,
+      "verifier_score": 3.554598569869995
+    },
+    {
+      "query": "I need to pause my subscription",
+      "candidate_query": "how do I pause my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9695758819580078,
+      "verifier_score": 5.459959030151367
+    },
+    {
+      "query": "I need to pause my subscription",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7805653810501099,
+      "verifier_score": -4.210988998413086
+    },
+    {
+      "query": "can you help me pause my subscription",
+      "candidate_query": "how do I renew my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6305543780326843,
+      "verifier_score": -8.282759666442871
+    },
+    {
+      "query": "can you help me pause my subscription",
+      "candidate_query": "how do I upgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5799275636672974,
+      "verifier_score": -8.728196144104004
+    },
+    {
+      "query": "can you help me pause my subscription",
+      "candidate_query": "how do I downgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5625050663948059,
+      "verifier_score": -8.307565689086914
+    },
+    {
+      "query": "I want to renew my subscription",
+      "candidate_query": "how do I renew my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9582450985908508,
+      "verifier_score": 2.7385785579681396
+    },
+    {
+      "query": "can you help me renew my subscription",
+      "candidate_query": "how do I renew my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.89644455909729,
+      "verifier_score": 0.22540786862373352
+    },
+    {
+      "query": "I need to renew my subscription",
+      "candidate_query": "how do I renew my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9573076963424683,
+      "verifier_score": 2.559068202972412
+    },
+    {
+      "query": "can you help me renew my subscription",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7180662155151367,
+      "verifier_score": -6.992382049560547
+    },
+    {
+      "query": "can you help me renew my subscription",
+      "candidate_query": "how do I pause my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6270022988319397,
+      "verifier_score": -8.457990646362305
+    },
+    {
+      "query": "I need to renew my subscription",
+      "candidate_query": "how do I upgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7687431573867798,
+      "verifier_score": -6.444091796875
+    },
+    {
+      "query": "I want to renew my subscription",
+      "candidate_query": "how do I downgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6812058687210083,
+      "verifier_score": -8.078737258911133
+    },
+    {
+      "query": "I want to upgrade my subscription",
+      "candidate_query": "how do I upgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9535462260246277,
+      "verifier_score": 3.6326236724853516
+    },
+    {
+      "query": "can you help me upgrade my subscription",
+      "candidate_query": "how do I upgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.901931643486023,
+      "verifier_score": 1.565011978149414
+    },
+    {
+      "query": "I need to upgrade my subscription",
+      "candidate_query": "how do I upgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9544632434844971,
+      "verifier_score": 3.836313247680664
+    },
+    {
+      "query": "I need to upgrade my subscription",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6204714775085449,
+      "verifier_score": -7.326355457305908
+    },
+    {
+      "query": "I want to upgrade my subscription",
+      "candidate_query": "how do I pause my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5529453754425049,
+      "verifier_score": -6.8670244216918945
+    },
+    {
+      "query": "can you help me upgrade my subscription",
+      "candidate_query": "how do I renew my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7015082836151123,
+      "verifier_score": -7.005702972412109
+    },
+    {
+      "query": "I want to upgrade my subscription",
+      "candidate_query": "how do I downgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.712276816368103,
+      "verifier_score": -5.497426986694336
+    },
+    {
+      "query": "I want to downgrade my subscription",
+      "candidate_query": "how do I downgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9758421182632446,
+      "verifier_score": 3.761321544647217
+    },
+    {
+      "query": "can you help me downgrade my subscription",
+      "candidate_query": "how do I downgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9588356018066406,
+      "verifier_score": 1.9278788566589355
+    },
+    {
+      "query": "I need to downgrade my subscription",
+      "candidate_query": "how do I downgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.975753128528595,
+      "verifier_score": 3.781426191329956
+    },
+    {
+      "query": "I want to downgrade my subscription",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6960270404815674,
+      "verifier_score": -6.481263160705566
+    },
+    {
+      "query": "I need to downgrade my subscription",
+      "candidate_query": "how do I pause my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.555508017539978,
+      "verifier_score": -8.318882942199707
+    },
+    {
+      "query": "can you help me downgrade my subscription",
+      "candidate_query": "how do I renew my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6818274259567261,
+      "verifier_score": -9.62580680847168
+    },
+    {
+      "query": "I need to downgrade my subscription",
+      "candidate_query": "how do I upgrade my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7331438064575195,
+      "verifier_score": -8.305647850036621
+    },
+    {
+      "query": "I want to cancel my order",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9630037546157837,
+      "verifier_score": 3.710188388824463
+    },
+    {
+      "query": "can you help me cancel my order",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.91096431016922,
+      "verifier_score": 1.8985228538513184
+    },
+    {
+      "query": "I need to cancel my order",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9576809406280518,
+      "verifier_score": 3.9763431549072266
+    },
+    {
+      "query": "I need to cancel my order",
+      "candidate_query": "how do I return my order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6655844449996948,
+      "verifier_score": -6.681357383728027
+    },
+    {
+      "query": "I need to cancel my order",
+      "candidate_query": "how do I refund my order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7494956254959106,
+      "verifier_score": -3.582486152648926
+    },
+    {
+      "query": "I want to cancel my order",
+      "candidate_query": "how do I exchange my order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.649919867515564,
+      "verifier_score": -8.382100105285645
+    },
+    {
+      "query": "can you help me cancel my order",
+      "candidate_query": "how do I track my order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.4125968813896179,
+      "verifier_score": -8.634057998657227
+    },
+    {
+      "query": "I want to return my order",
+      "candidate_query": "how do I return my order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9410848617553711,
+      "verifier_score": 2.863797664642334
+    },
+    {
+      "query": "can you help me return my order",
+      "candidate_query": "how do I return my order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.8410999774932861,
+      "verifier_score": 1.0514225959777832
+    },
+    {
+      "query": "I need to return my order",
+      "candidate_query": "how do I return my order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9290996193885803,
+      "verifier_score": 3.3199105262756348
+    },
+    {
+      "query": "I want to return my order",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7143123149871826,
+      "verifier_score": -5.340185165405273
+    },
+    {
+      "query": "I need to return my order",
+      "candidate_query": "how do I refund my order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7781170010566711,
+      "verifier_score": -1.864450216293335
+    },
+    {
+      "query": "I want to return my order",
+      "candidate_query": "how do I exchange my order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7657461762428284,
+      "verifier_score": -6.683629035949707
+    },
+    {
+      "query": "I need to return my order",
+      "candidate_query": "how do I track my order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5927270650863647,
+      "verifier_score": -6.922044277191162
+    },
+    {
+      "query": "I want to refund my order",
+      "candidate_query": "how do I refund my order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9351847171783447,
+      "verifier_score": 3.0740880966186523
+    },
+    {
+      "query": "can you help me refund my order",
+      "candidate_query": "how do I refund my order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9044498205184937,
+      "verifier_score": 1.4543864727020264
+    },
+    {
+      "query": "I need to refund my order",
+      "candidate_query": "how do I refund my order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9283286333084106,
+      "verifier_score": 3.278226613998413
+    },
+    {
+      "query": "can you help me refund my order",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7130367755889893,
+      "verifier_score": -5.8341875076293945
+    },
+    {
+      "query": "can you help me refund my order",
+      "candidate_query": "how do I return my order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.7366572618484497,
+      "verifier_score": -6.738736152648926
+    },
+    {
+      "query": "I need to refund my order",
+      "candidate_query": "how do I exchange my order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.696479320526123,
+      "verifier_score": -9.330827713012695
+    },
+    {
+      "query": "I want to refund my order",
+      "candidate_query": "how do I track my order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5270348787307739,
+      "verifier_score": -9.723490715026855
+    },
+    {
+      "query": "I want to exchange my order",
+      "candidate_query": "how do I exchange my order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9132559895515442,
+      "verifier_score": 2.643857479095459
+    },
+    {
+      "query": "can you help me exchange my order",
+      "candidate_query": "how do I exchange my order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.8404144048690796,
+      "verifier_score": 0.35005509853363037
+    },
+    {
+      "query": "I need to exchange my order",
+      "candidate_query": "how do I exchange my order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9115398526191711,
+      "verifier_score": 2.5303964614868164
+    },
+    {
+      "query": "can you help me exchange my order",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6224811673164368,
+      "verifier_score": -9.588645935058594
+    },
+    {
+      "query": "can you help me exchange my order",
+      "candidate_query": "how do I return my order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6749853491783142,
+      "verifier_score": -8.812644004821777
+    },
+    {
+      "query": "can you help me exchange my order",
+      "candidate_query": "how do I refund my order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6371883153915405,
+      "verifier_score": -9.562246322631836
+    },
+    {
+      "query": "I need to exchange my order",
+      "candidate_query": "how do I track my order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5595007538795471,
+      "verifier_score": -8.745528221130371
+    },
+    {
+      "query": "I want to track my order",
+      "candidate_query": "how do I track my order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9443057775497437,
+      "verifier_score": 3.032212972640991
+    },
+    {
+      "query": "can you help me track my order",
+      "candidate_query": "how do I track my order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.8591084480285645,
+      "verifier_score": 1.1090950965881348
+    },
+    {
+      "query": "I need to track my order",
+      "candidate_query": "how do I track my order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9357450008392334,
+      "verifier_score": 3.3144803047180176
+    },
+    {
+      "query": "I need to track my order",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.4992706775665283,
+      "verifier_score": -7.6262102127075195
+    },
+    {
+      "query": "I want to track my order",
+      "candidate_query": "how do I return my order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6074249148368835,
+      "verifier_score": -5.9036736488342285
+    },
+    {
+      "query": "I need to track my order",
+      "candidate_query": "how do I refund my order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5687048435211182,
+      "verifier_score": -7.979876518249512
+    },
+    {
+      "query": "can you help me track my order",
+      "candidate_query": "how do I exchange my order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6093750596046448,
+      "verifier_score": -6.870725154876709
+    },
+    {
+      "query": "I want to delete my account",
+      "candidate_query": "how do I delete my account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9440773725509644,
+      "verifier_score": 3.497063159942627
+    },
+    {
+      "query": "can you help me delete my account",
+      "candidate_query": "how do I delete my account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.8595880270004272,
+      "verifier_score": 1.2471566200256348
+    },
+    {
+      "query": "I need to delete my account",
+      "candidate_query": "how do I delete my account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9445569515228271,
+      "verifier_score": 3.605069160461426
+    },
+    {
+      "query": "can you help me delete my account",
+      "candidate_query": "how do I freeze my account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5309112071990967,
+      "verifier_score": -9.975143432617188
+    },
+    {
+      "query": "I need to delete my account",
+      "candidate_query": "how do I reactivate my account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6959724426269531,
+      "verifier_score": -7.151905059814453
+    },
+    {
+      "query": "can you help me delete my account",
+      "candidate_query": "how do I verify my account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5222713351249695,
+      "verifier_score": -9.31612777709961
+    },
+    {
+      "query": "I want to delete my account",
+      "candidate_query": "how do I restore my account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5914098620414734,
+      "verifier_score": -6.291057109832764
+    },
+    {
+      "query": "I want to freeze my account",
+      "candidate_query": "how do I freeze my account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9636498689651489,
+      "verifier_score": 2.6091015338897705
+    },
+    {
+      "query": "can you help me freeze my account",
+      "candidate_query": "how do I freeze my account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9295259714126587,
+      "verifier_score": 0.22926297783851624
+    },
+    {
+      "query": "I need to freeze my account",
+      "candidate_query": "how do I freeze my account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.963831901550293,
+      "verifier_score": 3.129061460494995
+    },
+    {
+      "query": "I need to freeze my account",
+      "candidate_query": "how do I delete my account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5792890787124634,
+      "verifier_score": -10.679601669311523
+    },
+    {
+      "query": "I want to freeze my account",
+      "candidate_query": "how do I reactivate my account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5846692323684692,
+      "verifier_score": -10.857536315917969
+    },
+    {
+      "query": "I want to freeze my account",
+      "candidate_query": "how do I verify my account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.43464818596839905,
+      "verifier_score": -10.871883392333984
+    },
+    {
+      "query": "I need to freeze my account",
+      "candidate_query": "how do I restore my account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5077494978904724,
+      "verifier_score": -10.673490524291992
+    },
+    {
+      "query": "I want to reactivate my account",
+      "candidate_query": "how do I reactivate my account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9558430314064026,
+      "verifier_score": 4.067861557006836
+    },
+    {
+      "query": "can you help me reactivate my account",
+      "candidate_query": "how do I reactivate my account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.8860640525817871,
+      "verifier_score": 1.8679181337356567
+    },
+    {
+      "query": "I need to reactivate my account",
+      "candidate_query": "how do I reactivate my account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9580065608024597,
+      "verifier_score": 4.182389259338379
+    },
+    {
+      "query": "can you help me reactivate my account",
+      "candidate_query": "how do I delete my account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.628968358039856,
+      "verifier_score": -9.544393539428711
+    },
+    {
+      "query": "I need to reactivate my account",
+      "candidate_query": "how do I freeze my account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6010432243347168,
+      "verifier_score": -10.156167984008789
+    },
+    {
+      "query": "I need to reactivate my account",
+      "candidate_query": "how do I verify my account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6224088668823242,
+      "verifier_score": -9.835260391235352
+    },
+    {
+      "query": "I need to reactivate my account",
+      "candidate_query": "how do I restore my account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6880234479904175,
+      "verifier_score": -6.26741886138916
+    },
+    {
+      "query": "I want to verify my account",
+      "candidate_query": "how do I verify my account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9443868398666382,
+      "verifier_score": 4.097769260406494
+    },
+    {
+      "query": "can you help me verify my account",
+      "candidate_query": "how do I verify my account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.8438581824302673,
+      "verifier_score": 1.768627643585205
+    },
+    {
+      "query": "I need to verify my account",
+      "candidate_query": "how do I verify my account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9417718648910522,
+      "verifier_score": 4.241652965545654
+    },
+    {
+      "query": "I want to verify my account",
+      "candidate_query": "how do I delete my account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5468040108680725,
+      "verifier_score": -10.342421531677246
+    },
+    {
+      "query": "I need to verify my account",
+      "candidate_query": "how do I freeze my account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.4272504448890686,
+      "verifier_score": -10.338529586791992
+    },
+    {
+      "query": "can you help me verify my account",
+      "candidate_query": "how do I reactivate my account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5365993976593018,
+      "verifier_score": -10.756654739379883
+    },
+    {
+      "query": "can you help me verify my account",
+      "candidate_query": "how do I restore my account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5311007499694824,
+      "verifier_score": -10.52151107788086
+    },
+    {
+      "query": "I want to restore my account",
+      "candidate_query": "how do I restore my account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9501737356185913,
+      "verifier_score": 3.0477657318115234
+    },
+    {
+      "query": "can you help me restore my account",
+      "candidate_query": "how do I restore my account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9077579379081726,
+      "verifier_score": 1.401105284690857
+    },
+    {
+      "query": "I need to restore my account",
+      "candidate_query": "how do I restore my account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": true,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.9536740183830261,
+      "verifier_score": 3.5067310333251953
+    },
+    {
+      "query": "I want to restore my account",
+      "candidate_query": "how do I delete my account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6524218320846558,
+      "verifier_score": -6.7171735763549805
+    },
+    {
+      "query": "I need to restore my account",
+      "candidate_query": "how do I freeze my account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5034006834030151,
+      "verifier_score": -9.646307945251465
+    },
+    {
+      "query": "can you help me restore my account",
+      "candidate_query": "how do I reactivate my account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.6415476202964783,
+      "verifier_score": -8.80836009979248
+    },
+    {
+      "query": "I need to restore my account",
+      "candidate_query": "how do I verify my account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": false,
+      "family": "A",
+      "length_condition": "long",
+      "similarity": 0.5744452476501465,
+      "verifier_score": -9.126565933227539
+    },
+    {
+      "query": "I want to cancel my subscription",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9704123735427856,
+      "verifier_score": 4.240896701812744
+    },
+    {
+      "query": "can you help me cancel my subscription",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9353832006454468,
+      "verifier_score": 2.0264058113098145
+    },
+    {
+      "query": "I need to cancel my subscription",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9694561958312988,
+      "verifier_score": 4.197417259216309
+    },
+    {
+      "query": "I want to cancel my subscription",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6867310404777527,
+      "verifier_score": -1.660211443901062
+    },
+    {
+      "query": "I want to cancel my subscription",
+      "candidate_query": "how do I cancel my appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6109917759895325,
+      "verifier_score": -3.7023751735687256
+    },
+    {
+      "query": "I need to cancel my subscription",
+      "candidate_query": "how do I cancel my reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6136307716369629,
+      "verifier_score": -2.9179577827453613
+    },
+    {
+      "query": "I want to cancel my subscription",
+      "candidate_query": "how do I cancel my membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.7891352772712708,
+      "verifier_score": 1.2139101028442383
+    },
+    {
+      "query": "I want to cancel my order",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9630037546157837,
+      "verifier_score": 3.710188388824463
+    },
+    {
+      "query": "can you help me cancel my order",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.91096431016922,
+      "verifier_score": 1.8985228538513184
+    },
+    {
+      "query": "I need to cancel my order",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9576809406280518,
+      "verifier_score": 3.9763431549072266
+    },
+    {
+      "query": "I want to cancel my order",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6869022846221924,
+      "verifier_score": -2.95864200592041
+    },
+    {
+      "query": "I want to cancel my order",
+      "candidate_query": "how do I cancel my appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6764571666717529,
+      "verifier_score": -3.054386854171753
+    },
+    {
+      "query": "I need to cancel my order",
+      "candidate_query": "how do I cancel my reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6506726741790771,
+      "verifier_score": -3.0075464248657227
+    },
+    {
+      "query": "can you help me cancel my order",
+      "candidate_query": "how do I cancel my membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6378955245018005,
+      "verifier_score": -4.769829750061035
+    },
+    {
+      "query": "I want to cancel my appointment",
+      "candidate_query": "how do I cancel my appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9629284143447876,
+      "verifier_score": 3.97550106048584
+    },
+    {
+      "query": "can you help me cancel my appointment",
+      "candidate_query": "how do I cancel my appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9218720197677612,
+      "verifier_score": 1.681626796722412
+    },
+    {
+      "query": "I need to cancel my appointment",
+      "candidate_query": "how do I cancel my appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9576075077056885,
+      "verifier_score": 4.267815589904785
+    },
+    {
+      "query": "I want to cancel my appointment",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6406980156898499,
+      "verifier_score": -3.3239383697509766
+    },
+    {
+      "query": "I want to cancel my appointment",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.693075954914093,
+      "verifier_score": -1.0219230651855469
+    },
+    {
+      "query": "can you help me cancel my appointment",
+      "candidate_query": "how do I cancel my reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6092081069946289,
+      "verifier_score": -4.755031108856201
+    },
+    {
+      "query": "I need to cancel my appointment",
+      "candidate_query": "how do I cancel my membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5960626602172852,
+      "verifier_score": -4.213679313659668
+    },
+    {
+      "query": "I want to cancel my reservation",
+      "candidate_query": "how do I cancel my reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9701324701309204,
+      "verifier_score": 4.621201038360596
+    },
+    {
+      "query": "can you help me cancel my reservation",
+      "candidate_query": "how do I cancel my reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9330507516860962,
+      "verifier_score": 2.8164901733398438
+    },
+    {
+      "query": "I need to cancel my reservation",
+      "candidate_query": "how do I cancel my reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9690502285957336,
+      "verifier_score": 4.968354225158691
+    },
+    {
+      "query": "can you help me cancel my reservation",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5872867703437805,
+      "verifier_score": -4.048742771148682
+    },
+    {
+      "query": "I want to cancel my reservation",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.665075421333313,
+      "verifier_score": -1.6395320892333984
+    },
+    {
+      "query": "can you help me cancel my reservation",
+      "candidate_query": "how do I cancel my appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6249528527259827,
+      "verifier_score": -5.890071868896484
+    },
+    {
+      "query": "I need to cancel my reservation",
+      "candidate_query": "how do I cancel my membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6562494039535522,
+      "verifier_score": -2.361440658569336
+    },
+    {
+      "query": "I want to cancel my membership",
+      "candidate_query": "how do I cancel my membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9664207696914673,
+      "verifier_score": 3.888118028640747
+    },
+    {
+      "query": "can you help me cancel my membership",
+      "candidate_query": "how do I cancel my membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.924332320690155,
+      "verifier_score": 1.8087267875671387
+    },
+    {
+      "query": "I need to cancel my membership",
+      "candidate_query": "how do I cancel my membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9655416011810303,
+      "verifier_score": 3.9788599014282227
+    },
+    {
+      "query": "can you help me cancel my membership",
+      "candidate_query": "how do I cancel my subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.7511284947395325,
+      "verifier_score": -0.8104256391525269
+    },
+    {
+      "query": "I need to cancel my membership",
+      "candidate_query": "how do I cancel my order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6838106513023376,
+      "verifier_score": -1.8429293632507324
+    },
+    {
+      "query": "I want to cancel my membership",
+      "candidate_query": "how do I cancel my appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5950801372528076,
+      "verifier_score": -3.751885414123535
+    },
+    {
+      "query": "I need to cancel my membership",
+      "candidate_query": "how do I cancel my reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6535640954971313,
+      "verifier_score": -2.907914161682129
+    },
+    {
+      "query": "I want to update my email",
+      "candidate_query": "how do I update my email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9519535303115845,
+      "verifier_score": 2.68343448638916
+    },
+    {
+      "query": "can you help me update my email",
+      "candidate_query": "how do I update my email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.839177131652832,
+      "verifier_score": 0.8092493414878845
+    },
+    {
+      "query": "I need to update my email",
+      "candidate_query": "how do I update my email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.94365394115448,
+      "verifier_score": 3.092489719390869
+    },
+    {
+      "query": "can you help me update my email",
+      "candidate_query": "how do I update my address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5141749382019043,
+      "verifier_score": -4.5296173095703125
+    },
+    {
+      "query": "I need to update my email",
+      "candidate_query": "how do I update my password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.581355631351471,
+      "verifier_score": -5.836690902709961
+    },
+    {
+      "query": "I want to update my email",
+      "candidate_query": "how do I update my payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.3765198588371277,
+      "verifier_score": -8.28740119934082
+    },
+    {
+      "query": "I need to update my email",
+      "candidate_query": "how do I update my phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5408973693847656,
+      "verifier_score": -7.197615146636963
+    },
+    {
+      "query": "I want to update my address",
+      "candidate_query": "how do I update my address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9535804986953735,
+      "verifier_score": 2.9140446186065674
+    },
+    {
+      "query": "can you help me update my address",
+      "candidate_query": "how do I update my address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.8558379411697388,
+      "verifier_score": 0.9849479794502258
+    },
+    {
+      "query": "I need to update my address",
+      "candidate_query": "how do I update my address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9493275880813599,
+      "verifier_score": 3.334857225418091
+    },
+    {
+      "query": "I need to update my address",
+      "candidate_query": "how do I update my email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5973959565162659,
+      "verifier_score": -4.0629167556762695
+    },
+    {
+      "query": "I need to update my address",
+      "candidate_query": "how do I update my password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.4534233808517456,
+      "verifier_score": -6.626936912536621
+    },
+    {
+      "query": "can you help me update my address",
+      "candidate_query": "how do I update my payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.39405518770217896,
+      "verifier_score": -10.229264259338379
+    },
+    {
+      "query": "can you help me update my address",
+      "candidate_query": "how do I update my phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5450124740600586,
+      "verifier_score": -6.891295433044434
+    },
+    {
+      "query": "I want to update my password",
+      "candidate_query": "how do I update my password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9665601253509521,
+      "verifier_score": 3.020087242126465
+    },
+    {
+      "query": "can you help me update my password",
+      "candidate_query": "how do I update my password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.8808949589729309,
+      "verifier_score": 1.2673001289367676
+    },
+    {
+      "query": "I need to update my password",
+      "candidate_query": "how do I update my password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9630645513534546,
+      "verifier_score": 3.3043735027313232
+    },
+    {
+      "query": "I want to update my password",
+      "candidate_query": "how do I update my email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5769873857498169,
+      "verifier_score": -5.041745185852051
+    },
+    {
+      "query": "I need to update my password",
+      "candidate_query": "how do I update my address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.4351171553134918,
+      "verifier_score": -4.144575595855713
+    },
+    {
+      "query": "can you help me update my password",
+      "candidate_query": "how do I update my payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.37858670949935913,
+      "verifier_score": -9.85009765625
+    },
+    {
+      "query": "can you help me update my password",
+      "candidate_query": "how do I update my phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.42340385913848877,
+      "verifier_score": -8.050882339477539
+    },
+    {
+      "query": "I want to update my payment method",
+      "candidate_query": "how do I update my payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9750021696090698,
+      "verifier_score": 5.607696533203125
+    },
+    {
+      "query": "can you help me update my payment method",
+      "candidate_query": "how do I update my payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9205639362335205,
+      "verifier_score": 4.760989665985107
+    },
+    {
+      "query": "I need to update my payment method",
+      "candidate_query": "how do I update my payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9761432409286499,
+      "verifier_score": 5.911532402038574
+    },
+    {
+      "query": "I need to update my payment method",
+      "candidate_query": "how do I update my email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.4040057957172394,
+      "verifier_score": -7.8469343185424805
+    },
+    {
+      "query": "I want to update my payment method",
+      "candidate_query": "how do I update my address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.4674721658229828,
+      "verifier_score": -7.9804582595825195
+    },
+    {
+      "query": "can you help me update my payment method",
+      "candidate_query": "how do I update my password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.38517114520072937,
+      "verifier_score": -10.31821060180664
+    },
+    {
+      "query": "I want to update my payment method",
+      "candidate_query": "how do I update my phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.4618372321128845,
+      "verifier_score": -10.192631721496582
+    },
+    {
+      "query": "I want to update my phone number",
+      "candidate_query": "how do I update my phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9613723754882812,
+      "verifier_score": 3.560519218444824
+    },
+    {
+      "query": "can you help me update my phone number",
+      "candidate_query": "how do I update my phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.8704862594604492,
+      "verifier_score": 1.7088583707809448
+    },
+    {
+      "query": "I need to update my phone number",
+      "candidate_query": "how do I update my phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9524396061897278,
+      "verifier_score": 3.5400640964508057
+    },
+    {
+      "query": "I want to update my phone number",
+      "candidate_query": "how do I update my email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5070244669914246,
+      "verifier_score": -5.800773620605469
+    },
+    {
+      "query": "I want to update my phone number",
+      "candidate_query": "how do I update my address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5469030737876892,
+      "verifier_score": -3.152423620223999
+    },
+    {
+      "query": "I want to update my phone number",
+      "candidate_query": "how do I update my password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.45662999153137207,
+      "verifier_score": -7.1882123947143555
+    },
+    {
+      "query": "I need to update my phone number",
+      "candidate_query": "how do I update my payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.4071747064590454,
+      "verifier_score": -9.671548843383789
+    },
+    {
+      "query": "I want to reset my password",
+      "candidate_query": "how do I reset my password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9412426948547363,
+      "verifier_score": 3.5318007469177246
+    },
+    {
+      "query": "can you help me reset my password",
+      "candidate_query": "how do I reset my password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.8832634687423706,
+      "verifier_score": 1.7303485870361328
+    },
+    {
+      "query": "I need to reset my password",
+      "candidate_query": "how do I reset my password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9399392604827881,
+      "verifier_score": 3.9165055751800537
+    },
+    {
+      "query": "I need to reset my password",
+      "candidate_query": "how do I reset my account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.7668765783309937,
+      "verifier_score": -1.8574869632720947
+    },
+    {
+      "query": "can you help me reset my password",
+      "candidate_query": "how do I reset my settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.524861216545105,
+      "verifier_score": -3.1781890392303467
+    },
+    {
+      "query": "can you help me reset my password",
+      "candidate_query": "how do I reset my preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.40639397501945496,
+      "verifier_score": -4.041095733642578
+    },
+    {
+      "query": "I want to reset my password",
+      "candidate_query": "how do I reset my device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5784375667572021,
+      "verifier_score": -4.445240020751953
+    },
+    {
+      "query": "I want to reset my account",
+      "candidate_query": "how do I reset my account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9456131458282471,
+      "verifier_score": 3.47871732711792
+    },
+    {
+      "query": "can you help me reset my account",
+      "candidate_query": "how do I reset my account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9000687003135681,
+      "verifier_score": 1.4116183519363403
+    },
+    {
+      "query": "I need to reset my account",
+      "candidate_query": "how do I reset my account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9488415718078613,
+      "verifier_score": 4.018498420715332
+    },
+    {
+      "query": "I want to reset my account",
+      "candidate_query": "how do I reset my password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.770496129989624,
+      "verifier_score": -2.308293581008911
+    },
+    {
+      "query": "I need to reset my account",
+      "candidate_query": "how do I reset my settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6097151041030884,
+      "verifier_score": -0.6454795002937317
+    },
+    {
+      "query": "I want to reset my account",
+      "candidate_query": "how do I reset my preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.4881557822227478,
+      "verifier_score": -1.307718276977539
+    },
+    {
+      "query": "I want to reset my account",
+      "candidate_query": "how do I reset my device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6272858381271362,
+      "verifier_score": -3.215451717376709
+    },
+    {
+      "query": "I want to reset my settings",
+      "candidate_query": "how do I reset my settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9513038396835327,
+      "verifier_score": 4.3521528244018555
+    },
+    {
+      "query": "can you help me reset my settings",
+      "candidate_query": "how do I reset my settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9376033544540405,
+      "verifier_score": 2.652218818664551
+    },
+    {
+      "query": "I need to reset my settings",
+      "candidate_query": "how do I reset my settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9579158425331116,
+      "verifier_score": 4.493736267089844
+    },
+    {
+      "query": "I want to reset my settings",
+      "candidate_query": "how do I reset my password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5797057151794434,
+      "verifier_score": 1.4377645254135132
+    },
+    {
+      "query": "I want to reset my settings",
+      "candidate_query": "how do I reset my account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6645349264144897,
+      "verifier_score": 2.383209705352783
+    },
+    {
+      "query": "I need to reset my settings",
+      "candidate_query": "how do I reset my preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.7451869249343872,
+      "verifier_score": 3.1004176139831543
+    },
+    {
+      "query": "I need to reset my settings",
+      "candidate_query": "how do I reset my device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6710310578346252,
+      "verifier_score": 2.3601534366607666
+    },
+    {
+      "query": "I want to reset my preferences",
+      "candidate_query": "how do I reset my preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9693396091461182,
+      "verifier_score": 4.486132621765137
+    },
+    {
+      "query": "can you help me reset my preferences",
+      "candidate_query": "how do I reset my preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9568601846694946,
+      "verifier_score": 3.0273449420928955
+    },
+    {
+      "query": "I need to reset my preferences",
+      "candidate_query": "how do I reset my preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9739152193069458,
+      "verifier_score": 4.951295852661133
+    },
+    {
+      "query": "I need to reset my preferences",
+      "candidate_query": "how do I reset my password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.4739842414855957,
+      "verifier_score": -4.862170219421387
+    },
+    {
+      "query": "can you help me reset my preferences",
+      "candidate_query": "how do I reset my account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5064857006072998,
+      "verifier_score": -4.862221717834473
+    },
+    {
+      "query": "I need to reset my preferences",
+      "candidate_query": "how do I reset my settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.8157790303230286,
+      "verifier_score": -0.6039609313011169
+    },
+    {
+      "query": "I need to reset my preferences",
+      "candidate_query": "how do I reset my device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5115340352058411,
+      "verifier_score": -3.698256731033325
+    },
+    {
+      "query": "I want to reset my device",
+      "candidate_query": "how do I reset my device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9376816153526306,
+      "verifier_score": 3.817333221435547
+    },
+    {
+      "query": "can you help me reset my device",
+      "candidate_query": "how do I reset my device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9349120855331421,
+      "verifier_score": 1.7063677310943604
+    },
+    {
+      "query": "I need to reset my device",
+      "candidate_query": "how do I reset my device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.9499115347862244,
+      "verifier_score": 3.9438323974609375
+    },
+    {
+      "query": "can you help me reset my device",
+      "candidate_query": "how do I reset my password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.5657629370689392,
+      "verifier_score": -5.1101555824279785
+    },
+    {
+      "query": "I need to reset my device",
+      "candidate_query": "how do I reset my account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6637091636657715,
+      "verifier_score": -1.5357108116149902
+    },
+    {
+      "query": "I want to reset my device",
+      "candidate_query": "how do I reset my settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.6167468428611755,
+      "verifier_score": -0.33930841088294983
+    },
+    {
+      "query": "I want to reset my device",
+      "candidate_query": "how do I reset my preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "long",
+      "similarity": 0.4540103077888489,
+      "verifier_score": -0.7632539868354797
+    },
+    {
+      "query": "cancel my subscription",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9691389799118042,
+      "verifier_score": 7.277833938598633
+    },
+    {
+      "query": "subscription cancel",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9889897704124451,
+      "verifier_score": 7.5335540771484375
+    },
+    {
+      "query": "subscription cancel help",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9535536766052246,
+      "verifier_score": 4.09068489074707
+    },
+    {
+      "query": "subscription cancel help",
+      "candidate_query": "pause subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.668520987033844,
+      "verifier_score": -4.3993706703186035
+    },
+    {
+      "query": "subscription cancel help",
+      "candidate_query": "renew subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6997791528701782,
+      "verifier_score": -6.2928385734558105
+    },
+    {
+      "query": "subscription cancel",
+      "candidate_query": "upgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5604501366615295,
+      "verifier_score": -5.534849166870117
+    },
+    {
+      "query": "subscription cancel help",
+      "candidate_query": "downgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5715563297271729,
+      "verifier_score": -5.365983963012695
+    },
+    {
+      "query": "pause my subscription",
+      "candidate_query": "pause subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9406250715255737,
+      "verifier_score": 6.983546733856201
+    },
+    {
+      "query": "subscription pause",
+      "candidate_query": "pause subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9655458927154541,
+      "verifier_score": 7.228177547454834
+    },
+    {
+      "query": "subscription pause help",
+      "candidate_query": "pause subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9370246529579163,
+      "verifier_score": 4.770323276519775
+    },
+    {
+      "query": "subscription pause",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.7137664556503296,
+      "verifier_score": -2.3585917949676514
+    },
+    {
+      "query": "subscription pause",
+      "candidate_query": "renew subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6128701567649841,
+      "verifier_score": -4.152610778808594
+    },
+    {
+      "query": "subscription pause",
+      "candidate_query": "upgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5328670740127563,
+      "verifier_score": -4.336301803588867
+    },
+    {
+      "query": "subscription pause help",
+      "candidate_query": "downgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.4737389385700226,
+      "verifier_score": -5.286015510559082
+    },
+    {
+      "query": "renew my subscription",
+      "candidate_query": "renew subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9781264066696167,
+      "verifier_score": 5.6084442138671875
+    },
+    {
+      "query": "subscription renew",
+      "candidate_query": "renew subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9896897077560425,
+      "verifier_score": 6.267148017883301
+    },
+    {
+      "query": "subscription renew help",
+      "candidate_query": "renew subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9538229703903198,
+      "verifier_score": 1.9975621700286865
+    },
+    {
+      "query": "subscription renew help",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.678614616394043,
+      "verifier_score": -7.074396133422852
+    },
+    {
+      "query": "subscription renew help",
+      "candidate_query": "pause subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5389416217803955,
+      "verifier_score": -8.095016479492188
+    },
+    {
+      "query": "subscription renew",
+      "candidate_query": "upgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.7480553388595581,
+      "verifier_score": -5.002730369567871
+    },
+    {
+      "query": "renew my subscription",
+      "candidate_query": "downgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6523082852363586,
+      "verifier_score": -7.476604461669922
+    },
+    {
+      "query": "upgrade my subscription",
+      "candidate_query": "upgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9370118379592896,
+      "verifier_score": 6.2063889503479
+    },
+    {
+      "query": "subscription upgrade",
+      "candidate_query": "upgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9787326455116272,
+      "verifier_score": 6.537890911102295
+    },
+    {
+      "query": "subscription upgrade help",
+      "candidate_query": "upgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9383275508880615,
+      "verifier_score": 2.7063968181610107
+    },
+    {
+      "query": "subscription upgrade",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5708216428756714,
+      "verifier_score": -5.294894695281982
+    },
+    {
+      "query": "subscription upgrade help",
+      "candidate_query": "pause subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.4611920118331909,
+      "verifier_score": -6.137870788574219
+    },
+    {
+      "query": "upgrade my subscription",
+      "candidate_query": "renew subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.7679794430732727,
+      "verifier_score": -4.100533485412598
+    },
+    {
+      "query": "subscription upgrade",
+      "candidate_query": "downgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6853315830230713,
+      "verifier_score": -3.0442428588867188
+    },
+    {
+      "query": "downgrade my subscription",
+      "candidate_query": "downgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9723308682441711,
+      "verifier_score": 6.111734867095947
+    },
+    {
+      "query": "subscription downgrade",
+      "candidate_query": "downgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9866434335708618,
+      "verifier_score": 6.355163097381592
+    },
+    {
+      "query": "subscription downgrade help",
+      "candidate_query": "downgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Downgrade.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9646860957145691,
+      "verifier_score": 3.3093457221984863
+    },
+    {
+      "query": "subscription downgrade help",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5956730842590332,
+      "verifier_score": -8.398398399353027
+    },
+    {
+      "query": "subscription downgrade help",
+      "candidate_query": "pause subscription",
+      "candidate_answer": "Go to Settings > Subscription > Pause.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.4191361665725708,
+      "verifier_score": -8.130675315856934
+    },
+    {
+      "query": "subscription downgrade",
+      "candidate_query": "renew subscription",
+      "candidate_answer": "Go to Settings > Subscription > Renew.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6727122068405151,
+      "verifier_score": -7.741647720336914
+    },
+    {
+      "query": "downgrade my subscription",
+      "candidate_query": "upgrade subscription",
+      "candidate_answer": "Go to Settings > Subscription > Upgrade.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6824120879173279,
+      "verifier_score": -7.629410743713379
+    },
+    {
+      "query": "cancel my order",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.944577157497406,
+      "verifier_score": 7.0067315101623535
+    },
+    {
+      "query": "order cancel",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9806532859802246,
+      "verifier_score": 7.186500549316406
+    },
+    {
+      "query": "order cancel help",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.934758186340332,
+      "verifier_score": 3.5647871494293213
+    },
+    {
+      "query": "cancel my order",
+      "candidate_query": "return order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5714989900588989,
+      "verifier_score": -4.393585205078125
+    },
+    {
+      "query": "cancel my order",
+      "candidate_query": "refund order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6439822316169739,
+      "verifier_score": -2.081235408782959
+    },
+    {
+      "query": "order cancel help",
+      "candidate_query": "exchange order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5269797444343567,
+      "verifier_score": -8.42147445678711
+    },
+    {
+      "query": "order cancel",
+      "candidate_query": "track order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.41737037897109985,
+      "verifier_score": -5.390445709228516
+    },
+    {
+      "query": "return my order",
+      "candidate_query": "return order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.8702282905578613,
+      "verifier_score": 6.287261962890625
+    },
+    {
+      "query": "order return",
+      "candidate_query": "return order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9790056347846985,
+      "verifier_score": 6.804759979248047
+    },
+    {
+      "query": "order return help",
+      "candidate_query": "return order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9038693904876709,
+      "verifier_score": 2.1895031929016113
+    },
+    {
+      "query": "return my order",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6346334218978882,
+      "verifier_score": -3.457620143890381
+    },
+    {
+      "query": "order return help",
+      "candidate_query": "refund order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.692418098449707,
+      "verifier_score": -3.302239418029785
+    },
+    {
+      "query": "return my order",
+      "candidate_query": "exchange order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.628806471824646,
+      "verifier_score": -3.7346129417419434
+    },
+    {
+      "query": "order return",
+      "candidate_query": "track order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5562887191772461,
+      "verifier_score": -1.579756259918213
+    },
+    {
+      "query": "refund my order",
+      "candidate_query": "refund order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.8809177875518799,
+      "verifier_score": 5.524471282958984
+    },
+    {
+      "query": "order refund",
+      "candidate_query": "refund order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9629504084587097,
+      "verifier_score": 6.0376152992248535
+    },
+    {
+      "query": "order refund help",
+      "candidate_query": "refund order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9212388396263123,
+      "verifier_score": 1.8710867166519165
+    },
+    {
+      "query": "refund my order",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6818841695785522,
+      "verifier_score": -3.941621780395508
+    },
+    {
+      "query": "order refund",
+      "candidate_query": "return order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6862764358520508,
+      "verifier_score": -3.555382013320923
+    },
+    {
+      "query": "order refund",
+      "candidate_query": "exchange order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.568909764289856,
+      "verifier_score": -7.780160427093506
+    },
+    {
+      "query": "refund my order",
+      "candidate_query": "track order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.46316713094711304,
+      "verifier_score": -8.864740371704102
+    },
+    {
+      "query": "exchange my order",
+      "candidate_query": "exchange order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.8186805248260498,
+      "verifier_score": 4.903298377990723
+    },
+    {
+      "query": "order exchange",
+      "candidate_query": "exchange order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9677760601043701,
+      "verifier_score": 5.78128719329834
+    },
+    {
+      "query": "order exchange help",
+      "candidate_query": "exchange order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9056774377822876,
+      "verifier_score": 1.126734733581543
+    },
+    {
+      "query": "exchange my order",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6460116505622864,
+      "verifier_score": -7.999799728393555
+    },
+    {
+      "query": "exchange my order",
+      "candidate_query": "return order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6311639547348022,
+      "verifier_score": -5.637304306030273
+    },
+    {
+      "query": "order exchange help",
+      "candidate_query": "refund order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5865797996520996,
+      "verifier_score": -8.826322555541992
+    },
+    {
+      "query": "exchange my order",
+      "candidate_query": "track order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5242249965667725,
+      "verifier_score": -6.547367572784424
+    },
+    {
+      "query": "track my order",
+      "candidate_query": "track order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9046630263328552,
+      "verifier_score": 4.998999118804932
+    },
+    {
+      "query": "order track",
+      "candidate_query": "track order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9555073976516724,
+      "verifier_score": 6.113064765930176
+    },
+    {
+      "query": "order track help",
+      "candidate_query": "track order",
+      "candidate_answer": "Go to Settings > Order > Track.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.8862316608428955,
+      "verifier_score": 1.864882469177246
+    },
+    {
+      "query": "track my order",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5046930313110352,
+      "verifier_score": -7.245414733886719
+    },
+    {
+      "query": "order track help",
+      "candidate_query": "return order",
+      "candidate_answer": "Go to Settings > Order > Return.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.47961872816085815,
+      "verifier_score": -6.436099052429199
+    },
+    {
+      "query": "order track help",
+      "candidate_query": "refund order",
+      "candidate_answer": "Go to Settings > Order > Refund.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.49022120237350464,
+      "verifier_score": -9.547142028808594
+    },
+    {
+      "query": "order track help",
+      "candidate_query": "exchange order",
+      "candidate_answer": "Go to Settings > Order > Exchange.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.47877851128578186,
+      "verifier_score": -7.280335903167725
+    },
+    {
+      "query": "delete my account",
+      "candidate_query": "delete account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9311836957931519,
+      "verifier_score": 6.807016372680664
+    },
+    {
+      "query": "account delete",
+      "candidate_query": "delete account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9775439500808716,
+      "verifier_score": 7.208437919616699
+    },
+    {
+      "query": "account delete help",
+      "candidate_query": "delete account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9014765024185181,
+      "verifier_score": 1.4135558605194092
+    },
+    {
+      "query": "account delete help",
+      "candidate_query": "freeze account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.47315001487731934,
+      "verifier_score": -9.65877628326416
+    },
+    {
+      "query": "account delete help",
+      "candidate_query": "reactivate account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.628531813621521,
+      "verifier_score": -7.537520408630371
+    },
+    {
+      "query": "delete my account",
+      "candidate_query": "verify account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5878635048866272,
+      "verifier_score": -7.260104179382324
+    },
+    {
+      "query": "delete my account",
+      "candidate_query": "restore account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5811176300048828,
+      "verifier_score": -3.817761182785034
+    },
+    {
+      "query": "freeze my account",
+      "candidate_query": "freeze account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9238864779472351,
+      "verifier_score": 5.836118698120117
+    },
+    {
+      "query": "account freeze",
+      "candidate_query": "freeze account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9172449707984924,
+      "verifier_score": 6.198183536529541
+    },
+    {
+      "query": "account freeze help",
+      "candidate_query": "freeze account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.8913935422897339,
+      "verifier_score": 2.2579336166381836
+    },
+    {
+      "query": "freeze my account",
+      "candidate_query": "delete account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.588969349861145,
+      "verifier_score": -10.217917442321777
+    },
+    {
+      "query": "account freeze help",
+      "candidate_query": "reactivate account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5154547691345215,
+      "verifier_score": -10.419498443603516
+    },
+    {
+      "query": "freeze my account",
+      "candidate_query": "verify account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.44657692313194275,
+      "verifier_score": -10.460018157958984
+    },
+    {
+      "query": "account freeze help",
+      "candidate_query": "restore account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5030587911605835,
+      "verifier_score": -10.18365478515625
+    },
+    {
+      "query": "reactivate my account",
+      "candidate_query": "reactivate account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.958717942237854,
+      "verifier_score": 6.859400272369385
+    },
+    {
+      "query": "account reactivate",
+      "candidate_query": "reactivate account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.980937123298645,
+      "verifier_score": 7.461825370788574
+    },
+    {
+      "query": "account reactivate help",
+      "candidate_query": "reactivate account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9281625747680664,
+      "verifier_score": 3.1259846687316895
+    },
+    {
+      "query": "account reactivate help",
+      "candidate_query": "delete account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6421040296554565,
+      "verifier_score": -10.1583251953125
+    },
+    {
+      "query": "reactivate my account",
+      "candidate_query": "freeze account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.509913444519043,
+      "verifier_score": -9.737024307250977
+    },
+    {
+      "query": "account reactivate",
+      "candidate_query": "verify account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6203820705413818,
+      "verifier_score": -8.473699569702148
+    },
+    {
+      "query": "reactivate my account",
+      "candidate_query": "restore account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6560994386672974,
+      "verifier_score": -5.739707946777344
+    },
+    {
+      "query": "verify my account",
+      "candidate_query": "verify account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9426255226135254,
+      "verifier_score": 6.616562843322754
+    },
+    {
+      "query": "account verify",
+      "candidate_query": "verify account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9829459190368652,
+      "verifier_score": 7.074075698852539
+    },
+    {
+      "query": "account verify help",
+      "candidate_query": "verify account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9384640455245972,
+      "verifier_score": 2.2462289333343506
+    },
+    {
+      "query": "account verify",
+      "candidate_query": "delete account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6089691519737244,
+      "verifier_score": -8.991284370422363
+    },
+    {
+      "query": "verify my account",
+      "candidate_query": "freeze account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.4140591025352478,
+      "verifier_score": -10.218255996704102
+    },
+    {
+      "query": "verify my account",
+      "candidate_query": "reactivate account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5513873100280762,
+      "verifier_score": -10.110075950622559
+    },
+    {
+      "query": "account verify help",
+      "candidate_query": "restore account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.5885747671127319,
+      "verifier_score": -9.946051597595215
+    },
+    {
+      "query": "restore my account",
+      "candidate_query": "restore account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9490692615509033,
+      "verifier_score": 6.625240802764893
+    },
+    {
+      "query": "account restore",
+      "candidate_query": "restore account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9650313854217529,
+      "verifier_score": 7.3416748046875
+    },
+    {
+      "query": "account restore help",
+      "candidate_query": "restore account",
+      "candidate_answer": "Go to Settings > Account > Restore.",
+      "label": true,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.9259957075119019,
+      "verifier_score": 2.669475555419922
+    },
+    {
+      "query": "restore my account",
+      "candidate_query": "delete account",
+      "candidate_answer": "Go to Settings > Account > Delete.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6430943012237549,
+      "verifier_score": -4.9772210121154785
+    },
+    {
+      "query": "restore my account",
+      "candidate_query": "freeze account",
+      "candidate_answer": "Go to Settings > Account > Freeze.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.47210586071014404,
+      "verifier_score": -8.85694694519043
+    },
+    {
+      "query": "restore my account",
+      "candidate_query": "reactivate account",
+      "candidate_answer": "Go to Settings > Account > Reactivate.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.6409038305282593,
+      "verifier_score": -4.776515483856201
+    },
+    {
+      "query": "account restore help",
+      "candidate_query": "verify account",
+      "candidate_answer": "Go to Settings > Account > Verify.",
+      "label": false,
+      "family": "A",
+      "length_condition": "short",
+      "similarity": 0.527631402015686,
+      "verifier_score": -8.980724334716797
+    },
+    {
+      "query": "cancel my subscription",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9691389799118042,
+      "verifier_score": 7.277833938598633
+    },
+    {
+      "query": "subscription cancel",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9889897704124451,
+      "verifier_score": 7.5335540771484375
+    },
+    {
+      "query": "subscription cancel help",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9535536766052246,
+      "verifier_score": 4.09068489074707
+    },
+    {
+      "query": "cancel my subscription",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.6064903736114502,
+      "verifier_score": 0.5000902414321899
+    },
+    {
+      "query": "subscription cancel",
+      "candidate_query": "cancel appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5576238632202148,
+      "verifier_score": -1.608510971069336
+    },
+    {
+      "query": "cancel my subscription",
+      "candidate_query": "cancel reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.547422468662262,
+      "verifier_score": -0.19090929627418518
+    },
+    {
+      "query": "subscription cancel help",
+      "candidate_query": "cancel membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.7310492992401123,
+      "verifier_score": -0.17656561732292175
+    },
+    {
+      "query": "cancel my order",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.944577157497406,
+      "verifier_score": 7.00673246383667
+    },
+    {
+      "query": "order cancel",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9806532859802246,
+      "verifier_score": 7.186500072479248
+    },
+    {
+      "query": "order cancel help",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.934758186340332,
+      "verifier_score": 3.5647878646850586
+    },
+    {
+      "query": "cancel my order",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.6498746871948242,
+      "verifier_score": -0.443844735622406
+    },
+    {
+      "query": "order cancel help",
+      "candidate_query": "cancel appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5816806554794312,
+      "verifier_score": -3.3856563568115234
+    },
+    {
+      "query": "cancel my order",
+      "candidate_query": "cancel reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5717822909355164,
+      "verifier_score": -0.25651416182518005
+    },
+    {
+      "query": "order cancel help",
+      "candidate_query": "cancel membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5995423197746277,
+      "verifier_score": -5.0998663902282715
+    },
+    {
+      "query": "cancel my appointment",
+      "candidate_query": "cancel appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.950960636138916,
+      "verifier_score": 6.996252059936523
+    },
+    {
+      "query": "appointment cancel",
+      "candidate_query": "cancel appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9828395843505859,
+      "verifier_score": 7.1460394859313965
+    },
+    {
+      "query": "appointment cancel help",
+      "candidate_query": "cancel appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9513369798660278,
+      "verifier_score": 4.235121250152588
+    },
+    {
+      "query": "appointment cancel",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5892321467399597,
+      "verifier_score": -2.353001117706299
+    },
+    {
+      "query": "appointment cancel help",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.6134443283081055,
+      "verifier_score": -4.150937080383301
+    },
+    {
+      "query": "cancel my appointment",
+      "candidate_query": "cancel reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5806258320808411,
+      "verifier_score": -0.8374699354171753
+    },
+    {
+      "query": "appointment cancel",
+      "candidate_query": "cancel membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5485119819641113,
+      "verifier_score": -2.801154136657715
+    },
+    {
+      "query": "cancel my reservation",
+      "candidate_query": "cancel reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9720982313156128,
+      "verifier_score": 7.477445125579834
+    },
+    {
+      "query": "reservation cancel",
+      "candidate_query": "cancel reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.983394205570221,
+      "verifier_score": 7.376755714416504
+    },
+    {
+      "query": "reservation cancel help",
+      "candidate_query": "cancel reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9652506113052368,
+      "verifier_score": 4.253643989562988
+    },
+    {
+      "query": "cancel my reservation",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.6020933985710144,
+      "verifier_score": -0.09850452095270157
+    },
+    {
+      "query": "cancel my reservation",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.6145333647727966,
+      "verifier_score": 0.4145335555076599
+    },
+    {
+      "query": "cancel my reservation",
+      "candidate_query": "cancel appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.6628862023353577,
+      "verifier_score": -1.428665280342102
+    },
+    {
+      "query": "reservation cancel help",
+      "candidate_query": "cancel membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.625160276889801,
+      "verifier_score": -4.711795806884766
+    },
+    {
+      "query": "cancel my membership",
+      "candidate_query": "cancel membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9704837203025818,
+      "verifier_score": 7.118573188781738
+    },
+    {
+      "query": "membership cancel",
+      "candidate_query": "cancel membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9823619723320007,
+      "verifier_score": 7.2673563957214355
+    },
+    {
+      "query": "membership cancel help",
+      "candidate_query": "cancel membership",
+      "candidate_answer": "Go to Settings > Membership > Cancel.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9350477457046509,
+      "verifier_score": 3.5058791637420654
+    },
+    {
+      "query": "membership cancel",
+      "candidate_query": "cancel subscription",
+      "candidate_answer": "Go to Settings > Subscription > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.7520720958709717,
+      "verifier_score": 2.3125715255737305
+    },
+    {
+      "query": "membership cancel",
+      "candidate_query": "cancel order",
+      "candidate_answer": "Go to Settings > Order > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.6116055250167847,
+      "verifier_score": -1.3790266513824463
+    },
+    {
+      "query": "membership cancel",
+      "candidate_query": "cancel appointment",
+      "candidate_answer": "Go to Settings > Appointment > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5357030034065247,
+      "verifier_score": -2.2519311904907227
+    },
+    {
+      "query": "cancel my membership",
+      "candidate_query": "cancel reservation",
+      "candidate_answer": "Go to Settings > Reservation > Cancel.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5932824611663818,
+      "verifier_score": -0.588701605796814
+    },
+    {
+      "query": "update my email",
+      "candidate_query": "update email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9314607977867126,
+      "verifier_score": 5.420660018920898
+    },
+    {
+      "query": "email update",
+      "candidate_query": "update email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9713279008865356,
+      "verifier_score": 6.746307849884033
+    },
+    {
+      "query": "email update help",
+      "candidate_query": "update email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9132212400436401,
+      "verifier_score": 1.9302582740783691
+    },
+    {
+      "query": "update my email",
+      "candidate_query": "update address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.49988287687301636,
+      "verifier_score": 0.29260411858558655
+    },
+    {
+      "query": "email update help",
+      "candidate_query": "update password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.4453814625740051,
+      "verifier_score": -6.6861066818237305
+    },
+    {
+      "query": "email update",
+      "candidate_query": "update payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.3623405694961548,
+      "verifier_score": -4.884979248046875
+    },
+    {
+      "query": "update my email",
+      "candidate_query": "update phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.4454968571662903,
+      "verifier_score": -5.777949333190918
+    },
+    {
+      "query": "update my address",
+      "candidate_query": "update address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9185303449630737,
+      "verifier_score": 5.2190937995910645
+    },
+    {
+      "query": "address update",
+      "candidate_query": "update address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9518114924430847,
+      "verifier_score": 6.339487075805664
+    },
+    {
+      "query": "address update help",
+      "candidate_query": "update address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9255639314651489,
+      "verifier_score": 2.5377678871154785
+    },
+    {
+      "query": "address update help",
+      "candidate_query": "update email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.48757845163345337,
+      "verifier_score": -6.027177333831787
+    },
+    {
+      "query": "update my address",
+      "candidate_query": "update password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.3719280958175659,
+      "verifier_score": -4.891751289367676
+    },
+    {
+      "query": "address update help",
+      "candidate_query": "update payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.40150490403175354,
+      "verifier_score": -9.399312019348145
+    },
+    {
+      "query": "address update",
+      "candidate_query": "update phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5384955406188965,
+      "verifier_score": -3.3705031871795654
+    },
+    {
+      "query": "update my password",
+      "candidate_query": "update password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9460766911506653,
+      "verifier_score": 5.859132766723633
+    },
+    {
+      "query": "password update",
+      "candidate_query": "update password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9754838943481445,
+      "verifier_score": 6.692839622497559
+    },
+    {
+      "query": "password update help",
+      "candidate_query": "update password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9464729428291321,
+      "verifier_score": 2.901963949203491
+    },
+    {
+      "query": "update my password",
+      "candidate_query": "update email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.490130215883255,
+      "verifier_score": -3.510641574859619
+    },
+    {
+      "query": "password update",
+      "candidate_query": "update address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.3888888955116272,
+      "verifier_score": -3.0323240756988525
+    },
+    {
+      "query": "password update",
+      "candidate_query": "update payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.3829134702682495,
+      "verifier_score": -7.55849027633667
+    },
+    {
+      "query": "password update help",
+      "candidate_query": "update phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.36880117654800415,
+      "verifier_score": -8.377386093139648
+    },
+    {
+      "query": "update my payment method",
+      "candidate_query": "update payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.961923360824585,
+      "verifier_score": 7.707655906677246
+    },
+    {
+      "query": "payment method update",
+      "candidate_query": "update payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.983607292175293,
+      "verifier_score": 7.8346266746521
+    },
+    {
+      "query": "payment method update help",
+      "candidate_query": "update payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.944058895111084,
+      "verifier_score": 4.974057197570801
+    },
+    {
+      "query": "payment method update",
+      "candidate_query": "update email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.33893856406211853,
+      "verifier_score": -8.50943374633789
+    },
+    {
+      "query": "payment method update help",
+      "candidate_query": "update address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.40865153074264526,
+      "verifier_score": -9.762290954589844
+    },
+    {
+      "query": "update my payment method",
+      "candidate_query": "update password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.38478368520736694,
+      "verifier_score": -9.320104598999023
+    },
+    {
+      "query": "payment method update help",
+      "candidate_query": "update phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.3820953667163849,
+      "verifier_score": -11.004022598266602
+    },
+    {
+      "query": "update my phone number",
+      "candidate_query": "update phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9571911096572876,
+      "verifier_score": 5.627195835113525
+    },
+    {
+      "query": "phone number update",
+      "candidate_query": "update phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9805842638015747,
+      "verifier_score": 6.111696243286133
+    },
+    {
+      "query": "phone number update help",
+      "candidate_query": "update phone number",
+      "candidate_answer": "Go to Settings > Phone Number > Update.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9497350454330444,
+      "verifier_score": 2.172793388366699
+    },
+    {
+      "query": "phone number update help",
+      "candidate_query": "update email",
+      "candidate_answer": "Go to Settings > Email > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.4001994729042053,
+      "verifier_score": -8.832498550415039
+    },
+    {
+      "query": "update my phone number",
+      "candidate_query": "update address",
+      "candidate_answer": "Go to Settings > Address > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.496716171503067,
+      "verifier_score": -2.6405701637268066
+    },
+    {
+      "query": "update my phone number",
+      "candidate_query": "update password",
+      "candidate_answer": "Go to Settings > Password > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.3504495322704315,
+      "verifier_score": -6.6286702156066895
+    },
+    {
+      "query": "phone number update help",
+      "candidate_query": "update payment method",
+      "candidate_answer": "Go to Settings > Payment Method > Update.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.3998849391937256,
+      "verifier_score": -10.5466947555542
+    },
+    {
+      "query": "reset my password",
+      "candidate_query": "reset password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9572784900665283,
+      "verifier_score": 6.944395065307617
+    },
+    {
+      "query": "password reset",
+      "candidate_query": "reset password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9776241183280945,
+      "verifier_score": 7.270317077636719
+    },
+    {
+      "query": "password reset help",
+      "candidate_query": "reset password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9417611360549927,
+      "verifier_score": 3.3502936363220215
+    },
+    {
+      "query": "reset my password",
+      "candidate_query": "reset account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.7263679504394531,
+      "verifier_score": -0.03453870117664337
+    },
+    {
+      "query": "reset my password",
+      "candidate_query": "reset settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.4961779713630676,
+      "verifier_score": 0.4446147382259369
+    },
+    {
+      "query": "password reset",
+      "candidate_query": "reset preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.4017050564289093,
+      "verifier_score": -0.45116764307022095
+    },
+    {
+      "query": "password reset help",
+      "candidate_query": "reset device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5594619512557983,
+      "verifier_score": -4.746558666229248
+    },
+    {
+      "query": "reset my account",
+      "candidate_query": "reset account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9616473317146301,
+      "verifier_score": 7.134638786315918
+    },
+    {
+      "query": "account reset",
+      "candidate_query": "reset account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9824925661087036,
+      "verifier_score": 7.520477771759033
+    },
+    {
+      "query": "account reset help",
+      "candidate_query": "reset account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9456207156181335,
+      "verifier_score": 3.176480531692505
+    },
+    {
+      "query": "account reset",
+      "candidate_query": "reset password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.7191249132156372,
+      "verifier_score": -0.9190694689750671
+    },
+    {
+      "query": "reset my account",
+      "candidate_query": "reset settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5875701904296875,
+      "verifier_score": 0.9772685766220093
+    },
+    {
+      "query": "account reset help",
+      "candidate_query": "reset preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.46431344747543335,
+      "verifier_score": -4.2629876136779785
+    },
+    {
+      "query": "account reset",
+      "candidate_query": "reset device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.6136404871940613,
+      "verifier_score": -1.6237640380859375
+    },
+    {
+      "query": "reset my settings",
+      "candidate_query": "reset settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9614368677139282,
+      "verifier_score": 7.173666477203369
+    },
+    {
+      "query": "settings reset",
+      "candidate_query": "reset settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9697652459144592,
+      "verifier_score": 7.745383262634277
+    },
+    {
+      "query": "settings reset help",
+      "candidate_query": "reset settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.954249382019043,
+      "verifier_score": 4.403406143188477
+    },
+    {
+      "query": "settings reset help",
+      "candidate_query": "reset password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5118035674095154,
+      "verifier_score": 2.063701629638672
+    },
+    {
+      "query": "reset my settings",
+      "candidate_query": "reset account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5746351480484009,
+      "verifier_score": 5.0461649894714355
+    },
+    {
+      "query": "reset my settings",
+      "candidate_query": "reset preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.7794354557991028,
+      "verifier_score": 6.0599517822265625
+    },
+    {
+      "query": "settings reset",
+      "candidate_query": "reset device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5753433108329773,
+      "verifier_score": 6.256567478179932
+    },
+    {
+      "query": "reset my preferences",
+      "candidate_query": "reset preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9697297811508179,
+      "verifier_score": 7.317762851715088
+    },
+    {
+      "query": "preferences reset",
+      "candidate_query": "reset preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9681165814399719,
+      "verifier_score": 7.613100051879883
+    },
+    {
+      "query": "preferences reset help",
+      "candidate_query": "reset preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9326885938644409,
+      "verifier_score": 4.391153812408447
+    },
+    {
+      "query": "preferences reset help",
+      "candidate_query": "reset password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.4031098484992981,
+      "verifier_score": -5.43003511428833
+    },
+    {
+      "query": "preferences reset",
+      "candidate_query": "reset account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.46459001302719116,
+      "verifier_score": -0.7654618620872498
+    },
+    {
+      "query": "preferences reset help",
+      "candidate_query": "reset settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.7907116413116455,
+      "verifier_score": -2.4921061992645264
+    },
+    {
+      "query": "preferences reset help",
+      "candidate_query": "reset device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.4558584690093994,
+      "verifier_score": -4.16648006439209
+    },
+    {
+      "query": "reset my device",
+      "candidate_query": "reset device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9333664774894714,
+      "verifier_score": 7.001349449157715
+    },
+    {
+      "query": "device reset",
+      "candidate_query": "reset device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9727234244346619,
+      "verifier_score": 7.230154514312744
+    },
+    {
+      "query": "device reset help",
+      "candidate_query": "reset device",
+      "candidate_answer": "Go to Settings > Device > Reset.",
+      "label": true,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.9350064992904663,
+      "verifier_score": 3.5850119590759277
+    },
+    {
+      "query": "device reset",
+      "candidate_query": "reset password",
+      "candidate_answer": "Go to Settings > Password > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5378153324127197,
+      "verifier_score": -2.5325398445129395
+    },
+    {
+      "query": "device reset help",
+      "candidate_query": "reset account",
+      "candidate_answer": "Go to Settings > Account > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.5772815942764282,
+      "verifier_score": -4.067245006561279
+    },
+    {
+      "query": "device reset",
+      "candidate_query": "reset settings",
+      "candidate_answer": "Go to Settings > Settings > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.6119726300239563,
+      "verifier_score": 0.6287471055984497
+    },
+    {
+      "query": "device reset",
+      "candidate_query": "reset preferences",
+      "candidate_answer": "Go to Settings > Preferences > Reset.",
+      "label": false,
+      "family": "B",
+      "length_condition": "short",
+      "similarity": 0.44356074929237366,
+      "verifier_score": -0.07376756519079208
+    }
+  ]
+}

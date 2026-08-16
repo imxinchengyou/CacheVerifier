@@ -1,0 +1,209 @@
+[
+  {
+    "group": "A",
+    "policy": "static_threshold",
+    "threshold": 0.8,
+    "hit_rate": 0.9869333333333333,
+    "error_rate": 0.2557333333333333,
+    "false_accept_rate": 0.25911915698459875,
+    "precision": 0.7408808430154012,
+    "recall": 1.0,
+    "tp": 10968,
+    "fp": 3836,
+    "tn": 195,
+    "fn": 0,
+    "n_records": 15000,
+    "hit_rate_ci": [
+      0.9852,
+      0.9888666666666667
+    ],
+    "error_rate_ci": [
+      0.2495983333333333,
+      0.26354333333333335
+    ]
+  },
+  {
+    "group": "A",
+    "policy": "static_threshold",
+    "threshold": 0.83,
+    "hit_rate": 0.9116,
+    "error_rate": 0.1804,
+    "false_accept_rate": 0.19789381307591047,
+    "precision": 0.8021061869240895,
+    "recall": 1.0,
+    "tp": 10968,
+    "fp": 2706,
+    "tn": 1325,
+    "fn": 0,
+    "n_records": 15000,
+    "hit_rate_ci": [
+      0.9069333333333334,
+      0.9156133333333333
+    ],
+    "error_rate_ci": [
+      0.17499333333333333,
+      0.18574333333333334
+    ]
+  },
+  {
+    "group": "A",
+    "policy": "static_threshold",
+    "threshold": 0.86,
+    "hit_rate": 0.8266666666666667,
+    "error_rate": 0.09626666666666667,
+    "false_accept_rate": 0.11645161290322581,
+    "precision": 0.8835483870967742,
+    "recall": 0.9989059080962801,
+    "tp": 10956,
+    "fp": 1444,
+    "tn": 2587,
+    "fn": 12,
+    "n_records": 15000,
+    "hit_rate_ci": [
+      0.82066,
+      0.8320033333333333
+    ],
+    "error_rate_ci": [
+      0.09086,
+      0.100535
+    ]
+  },
+  {
+    "group": "A",
+    "policy": "static_threshold",
+    "threshold": 0.89,
+    "hit_rate": 0.8006,
+    "error_rate": 0.0756,
+    "false_accept_rate": 0.09442917811641269,
+    "precision": 0.9055708218835873,
+    "recall": 0.9915207877461707,
+    "tp": 10875,
+    "fp": 1134,
+    "tn": 2897,
+    "fn": 93,
+    "n_records": 15000,
+    "hit_rate_ci": [
+      0.7938966666666667,
+      0.8056716666666667
+    ],
+    "error_rate_ci": [
+      0.070865,
+      0.07907166666666667
+    ]
+  },
+  {
+    "group": "A",
+    "policy": "static_threshold",
+    "threshold": 0.92,
+    "hit_rate": 0.7703333333333333,
+    "error_rate": 0.067,
+    "false_accept_rate": 0.08697533535266118,
+    "precision": 0.9130246646473388,
+    "recall": 0.961889132020423,
+    "tp": 10550,
+    "fp": 1005,
+    "tn": 3026,
+    "fn": 418,
+    "n_records": 15000,
+    "hit_rate_ci": [
+      0.7628,
+      0.7761333333333333
+    ],
+    "error_rate_ci": [
+      0.062595,
+      0.07020166666666666
+    ]
+  },
+  {
+    "group": "A",
+    "policy": "static_threshold",
+    "threshold": 0.95,
+    "hit_rate": 0.6679333333333334,
+    "error_rate": 0.05633333333333333,
+    "false_accept_rate": 0.08433975446651362,
+    "precision": 0.9156602455334863,
+    "recall": 0.8364332603938731,
+    "tp": 9174,
+    "fp": 845,
+    "tn": 3186,
+    "fn": 1794,
+    "n_records": 15000,
+    "hit_rate_ci": [
+      0.659995,
+      0.6739400000000001
+    ],
+    "error_rate_ci": [
+      0.052533333333333335,
+      0.059401666666666665
+    ]
+  },
+  {
+    "group": "A",
+    "policy": "static_threshold",
+    "threshold": 0.97,
+    "hit_rate": 0.4916,
+    "error_rate": 0.04073333333333334,
+    "false_accept_rate": 0.08285869270409547,
+    "precision": 0.9171413072959045,
+    "recall": 0.6166119620714807,
+    "tp": 6763,
+    "fp": 611,
+    "tn": 3420,
+    "fn": 4205,
+    "n_records": 15000,
+    "hit_rate_ci": [
+      0.48359166666666664,
+      0.4998066666666667
+    ],
+    "error_rate_ci": [
+      0.038065,
+      0.04366833333333333
+    ]
+  },
+  {
+    "group": "A",
+    "policy": "static_threshold",
+    "threshold": 0.98,
+    "hit_rate": 0.3446,
+    "error_rate": 0.028,
+    "false_accept_rate": 0.0812536273940801,
+    "precision": 0.91874637260592,
+    "recall": 0.4329868708971554,
+    "tp": 4749,
+    "fp": 420,
+    "tn": 3611,
+    "fn": 6219,
+    "n_records": 15000,
+    "hit_rate_ci": [
+      0.33773,
+      0.3524
+    ],
+    "error_rate_ci": [
+      0.025398333333333332,
+      0.030601666666666666
+    ]
+  },
+  {
+    "group": "A",
+    "policy": "static_threshold",
+    "threshold": 0.99,
+    "hit_rate": 0.18026666666666666,
+    "error_rate": 0.015866666666666668,
+    "false_accept_rate": 0.08801775147928995,
+    "precision": 0.9119822485207101,
+    "recall": 0.224835886214442,
+    "tp": 2466,
+    "fp": 238,
+    "tn": 3793,
+    "fn": 8502,
+    "n_records": 15000,
+    "hit_rate_ci": [
+      0.17386333333333334,
+      0.18653666666666666
+    ],
+    "error_rate_ci": [
+      0.013665,
+      0.017733333333333334
+    ]
+  }
+]
