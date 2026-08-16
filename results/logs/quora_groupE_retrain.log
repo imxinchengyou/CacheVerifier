@@ -1,0 +1,177 @@
+[14:48:38] Device: cuda (Tesla T4)
+[14:48:38] Loaded stash from finetune_verifier_experiment_quora.examples.json
+[14:48:38] Train: 11928  Test: 5112
+[14:48:38] Test label balance: 1690 correct / 3422 incorrect (33.1% positive)
+[14:48:38] Loading baseline (untuned) model 'cross-encoder/ms-marco-MiniLM-L6-v2' on cuda...
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 1499.90it/s]
+[14:48:39]   model loaded in 0.6s
+[14:48:39] Scoring held-out test set (5112 pairs, batch_size=32) with the UNTUNED baseline...
+[14:48:41]   done in 2.0s (2560.7 pairs/s)
+[14:48:41]   baseline AUC = 0.6309  (score range [-8.980, 10.271], mean=3.533)
+[14:48:41] Loading fresh copy of 'cross-encoder/ms-marco-MiniLM-L6-v2' to fine-tune...
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 4830.13it/s]
+[14:48:41]   model loaded in 0.1s
+[14:48:41] Built training dataset: 11928 rows (5062 correct / 6866 incorrect, 42.4% positive)
+[14:48:41] Training config: epochs=1 batch_size=16 steps_per_epoch=746 total_steps=746 device=cuda
+[14:48:41] Fine-tuning on 11928 examples for 1 epoch(s)  (logging every 10 steps)...
+[14:48:41] [train] begin: max_steps=746 epochs=1 batch_size=16 steps_per_epoch=746
+{'loss': '2.961', 'grad_norm': '20.2', 'learning_rate': '5e-05', 'epoch': '0.00134'}
+[14:48:42] [train] step    1/746 (  0.1%)  loss=2.9614  lr=5.00e-05  2.933 step/s  elapsed=0.0m  eta=4.2m
+{'loss': '0.8912', 'grad_norm': '7.821', 'learning_rate': '4.94e-05', 'epoch': '0.0134'}
+[14:48:42] [train] step   10/746 (  1.3%)  loss=0.8912  lr=4.94e-05  17.207 step/s  elapsed=0.0m  eta=0.7m
+{'loss': '0.8821', 'grad_norm': '4.724', 'learning_rate': '4.873e-05', 'epoch': '0.02681'}
+[14:48:42] [train] step   20/746 (  2.7%)  loss=0.8821  lr=4.87e-05  23.786 step/s  elapsed=0.0m  eta=0.5m
+{'loss': '0.6854', 'grad_norm': '4.036', 'learning_rate': '4.806e-05', 'epoch': '0.04021'}
+[14:48:42] [train] step   30/746 (  4.0%)  loss=0.6854  lr=4.81e-05  27.270 step/s  elapsed=0.0m  eta=0.4m
+{'loss': '0.7558', 'grad_norm': '4.048', 'learning_rate': '4.739e-05', 'epoch': '0.05362'}
+[14:48:43] [train] step   40/746 (  5.4%)  loss=0.7558  lr=4.74e-05  29.586 step/s  elapsed=0.0m  eta=0.4m
+{'loss': '0.696', 'grad_norm': '3.3', 'learning_rate': '4.672e-05', 'epoch': '0.06702'}
+[14:48:43] [train] step   50/746 (  6.7%)  loss=0.6960  lr=4.67e-05  31.122 step/s  elapsed=0.0m  eta=0.4m
+{'loss': '0.6753', 'grad_norm': '4.464', 'learning_rate': '4.605e-05', 'epoch': '0.08043'}
+[14:48:43] [train] step   60/746 (  8.0%)  loss=0.6753  lr=4.60e-05  32.410 step/s  elapsed=0.0m  eta=0.4m
+{'loss': '0.6979', 'grad_norm': '2.211', 'learning_rate': '4.538e-05', 'epoch': '0.09383'}
+[14:48:43] [train] step   70/746 (  9.4%)  loss=0.6979  lr=4.54e-05  33.271 step/s  elapsed=0.0m  eta=0.3m
+{'loss': '0.6919', 'grad_norm': '3.736', 'learning_rate': '4.471e-05', 'epoch': '0.1072'}
+[14:48:44] [train] step   80/746 ( 10.7%)  loss=0.6919  lr=4.47e-05  33.875 step/s  elapsed=0.0m  eta=0.3m
+{'loss': '0.6373', 'grad_norm': '3.106', 'learning_rate': '4.403e-05', 'epoch': '0.1206'}
+[14:48:44] [train] step   90/746 ( 12.1%)  loss=0.6373  lr=4.40e-05  34.093 step/s  elapsed=0.0m  eta=0.3m
+{'loss': '0.675', 'grad_norm': '2.744', 'learning_rate': '4.336e-05', 'epoch': '0.134'}
+[14:48:44] [train] step  100/746 ( 13.4%)  loss=0.6750  lr=4.34e-05  34.619 step/s  elapsed=0.0m  eta=0.3m
+{'loss': '0.7235', 'grad_norm': '2.603', 'learning_rate': '4.269e-05', 'epoch': '0.1475'}
+[14:48:45] [train] step  110/746 ( 14.7%)  loss=0.7235  lr=4.27e-05  35.106 step/s  elapsed=0.1m  eta=0.3m
+{'loss': '0.6508', 'grad_norm': '3.316', 'learning_rate': '4.202e-05', 'epoch': '0.1609'}
+[14:48:45] [train] step  120/746 ( 16.1%)  loss=0.6508  lr=4.20e-05  35.262 step/s  elapsed=0.1m  eta=0.3m
+{'loss': '0.6698', 'grad_norm': '3.501', 'learning_rate': '4.135e-05', 'epoch': '0.1743'}
+[14:48:45] [train] step  130/746 ( 17.4%)  loss=0.6698  lr=4.14e-05  35.584 step/s  elapsed=0.1m  eta=0.3m
+{'loss': '0.6603', 'grad_norm': '4.717', 'learning_rate': '4.068e-05', 'epoch': '0.1877'}
+[14:48:45] [train] step  140/746 ( 18.8%)  loss=0.6603  lr=4.07e-05  35.761 step/s  elapsed=0.1m  eta=0.3m
+{'loss': '0.6601', 'grad_norm': '2.894', 'learning_rate': '4.001e-05', 'epoch': '0.2011'}
+[14:48:46] [train] step  150/746 ( 20.1%)  loss=0.6601  lr=4.00e-05  36.000 step/s  elapsed=0.1m  eta=0.3m
+{'loss': '0.6269', 'grad_norm': '3.292', 'learning_rate': '3.934e-05', 'epoch': '0.2145'}
+[14:48:46] [train] step  160/746 ( 21.4%)  loss=0.6269  lr=3.93e-05  36.193 step/s  elapsed=0.1m  eta=0.3m
+{'loss': '0.6568', 'grad_norm': '3.632', 'learning_rate': '3.867e-05', 'epoch': '0.2279'}
+[14:48:46] [train] step  170/746 ( 22.8%)  loss=0.6568  lr=3.87e-05  36.384 step/s  elapsed=0.1m  eta=0.3m
+{'loss': '0.5662', 'grad_norm': '2.448', 'learning_rate': '3.8e-05', 'epoch': '0.2413'}
+[14:48:46] [train] step  180/746 ( 24.1%)  loss=0.5662  lr=3.80e-05  36.579 step/s  elapsed=0.1m  eta=0.3m
+{'loss': '0.6341', 'grad_norm': '2.815', 'learning_rate': '3.733e-05', 'epoch': '0.2547'}
+[14:48:47] [train] step  190/746 ( 25.5%)  loss=0.6341  lr=3.73e-05  36.661 step/s  elapsed=0.1m  eta=0.3m
+{'loss': '0.6649', 'grad_norm': '3.986', 'learning_rate': '3.666e-05', 'epoch': '0.2681'}
+[14:48:47] [train] step  200/746 ( 26.8%)  loss=0.6649  lr=3.67e-05  36.819 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.6582', 'grad_norm': '4.344', 'learning_rate': '3.599e-05', 'epoch': '0.2815'}
+[14:48:47] [train] step  210/746 ( 28.2%)  loss=0.6582  lr=3.60e-05  36.906 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.6966', 'grad_norm': '3.31', 'learning_rate': '3.532e-05', 'epoch': '0.2949'}
+[14:48:47] [train] step  220/746 ( 29.5%)  loss=0.6966  lr=3.53e-05  37.041 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.585', 'grad_norm': '2.862', 'learning_rate': '3.465e-05', 'epoch': '0.3083'}
+[14:48:48] [train] step  230/746 ( 30.8%)  loss=0.5850  lr=3.47e-05  37.223 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.5919', 'grad_norm': '5.781', 'learning_rate': '3.398e-05', 'epoch': '0.3217'}
+[14:48:48] [train] step  240/746 ( 32.2%)  loss=0.5919  lr=3.40e-05  37.369 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.6952', 'grad_norm': '2.985', 'learning_rate': '3.331e-05', 'epoch': '0.3351'}
+[14:48:48] [train] step  250/746 ( 33.5%)  loss=0.6952  lr=3.33e-05  37.424 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.6682', 'grad_norm': '3.373', 'learning_rate': '3.264e-05', 'epoch': '0.3485'}
+[14:48:48] [train] step  260/746 ( 34.9%)  loss=0.6682  lr=3.26e-05  37.450 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.6402', 'grad_norm': '3.742', 'learning_rate': '3.197e-05', 'epoch': '0.3619'}
+[14:48:49] [train] step  270/746 ( 36.2%)  loss=0.6402  lr=3.20e-05  37.498 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.6923', 'grad_norm': '5.628', 'learning_rate': '3.13e-05', 'epoch': '0.3753'}
+[14:48:49] [train] step  280/746 ( 37.5%)  loss=0.6923  lr=3.13e-05  37.590 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.5896', 'grad_norm': '3.065', 'learning_rate': '3.063e-05', 'epoch': '0.3887'}
+[14:48:49] [train] step  290/746 ( 38.9%)  loss=0.5896  lr=3.06e-05  37.696 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.6448', 'grad_norm': '3.896', 'learning_rate': '2.996e-05', 'epoch': '0.4021'}
+[14:48:49] [train] step  300/746 ( 40.2%)  loss=0.6448  lr=3.00e-05  37.710 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.6208', 'grad_norm': '2.476', 'learning_rate': '2.929e-05', 'epoch': '0.4155'}
+[14:48:50] [train] step  310/746 ( 41.6%)  loss=0.6208  lr=2.93e-05  37.770 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.6557', 'grad_norm': '2.574', 'learning_rate': '2.862e-05', 'epoch': '0.429'}
+[14:48:50] [train] step  320/746 ( 42.9%)  loss=0.6557  lr=2.86e-05  37.646 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.678', 'grad_norm': '5.202', 'learning_rate': '2.795e-05', 'epoch': '0.4424'}
+[14:48:50] [train] step  330/746 ( 44.2%)  loss=0.6780  lr=2.79e-05  37.651 step/s  elapsed=0.1m  eta=0.2m
+{'loss': '0.6057', 'grad_norm': '2.857', 'learning_rate': '2.728e-05', 'epoch': '0.4558'}
+[14:48:50] [train] step  340/746 ( 45.6%)  loss=0.6057  lr=2.73e-05  37.734 step/s  elapsed=0.2m  eta=0.2m
+{'loss': '0.666', 'grad_norm': '2.55', 'learning_rate': '2.661e-05', 'epoch': '0.4692'}
+[14:48:51] [train] step  350/746 ( 46.9%)  loss=0.6660  lr=2.66e-05  37.726 step/s  elapsed=0.2m  eta=0.2m
+{'loss': '0.6834', 'grad_norm': '3.916', 'learning_rate': '2.594e-05', 'epoch': '0.4826'}
+[14:48:51] [train] step  360/746 ( 48.3%)  loss=0.6834  lr=2.59e-05  37.797 step/s  elapsed=0.2m  eta=0.2m
+{'loss': '0.6351', 'grad_norm': '3.916', 'learning_rate': '2.527e-05', 'epoch': '0.496'}
+[14:48:51] [train] step  370/746 ( 49.6%)  loss=0.6351  lr=2.53e-05  37.836 step/s  elapsed=0.2m  eta=0.2m
+{'loss': '0.6442', 'grad_norm': '2.379', 'learning_rate': '2.46e-05', 'epoch': '0.5094'}
+[14:48:51] [train] step  380/746 ( 50.9%)  loss=0.6442  lr=2.46e-05  37.906 step/s  elapsed=0.2m  eta=0.2m
+{'loss': '0.6002', 'grad_norm': '2.301', 'learning_rate': '2.393e-05', 'epoch': '0.5228'}
+[14:48:52] [train] step  390/746 ( 52.3%)  loss=0.6002  lr=2.39e-05  37.943 step/s  elapsed=0.2m  eta=0.2m
+{'loss': '0.6454', 'grad_norm': '4.26', 'learning_rate': '2.326e-05', 'epoch': '0.5362'}
+[14:48:52] [train] step  400/746 ( 53.6%)  loss=0.6454  lr=2.33e-05  38.028 step/s  elapsed=0.2m  eta=0.2m
+{'loss': '0.6431', 'grad_norm': '3.264', 'learning_rate': '2.259e-05', 'epoch': '0.5496'}
+[14:48:52] [train] step  410/746 ( 55.0%)  loss=0.6431  lr=2.26e-05  38.044 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.6146', 'grad_norm': '4.702', 'learning_rate': '2.192e-05', 'epoch': '0.563'}
+[14:48:52] [train] step  420/746 ( 56.3%)  loss=0.6146  lr=2.19e-05  38.035 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.5826', 'grad_norm': '3.901', 'learning_rate': '2.125e-05', 'epoch': '0.5764'}
+[14:48:53] [train] step  430/746 ( 57.6%)  loss=0.5826  lr=2.12e-05  38.078 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.6906', 'grad_norm': '2.912', 'learning_rate': '2.058e-05', 'epoch': '0.5898'}
+[14:48:53] [train] step  440/746 ( 59.0%)  loss=0.6906  lr=2.06e-05  38.081 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.626', 'grad_norm': '5.009', 'learning_rate': '1.991e-05', 'epoch': '0.6032'}
+[14:48:53] [train] step  450/746 ( 60.3%)  loss=0.6260  lr=1.99e-05  38.131 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.639', 'grad_norm': '4.343', 'learning_rate': '1.924e-05', 'epoch': '0.6166'}
+[14:48:53] [train] step  460/746 ( 61.7%)  loss=0.6390  lr=1.92e-05  38.195 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.6107', 'grad_norm': '2.908', 'learning_rate': '1.857e-05', 'epoch': '0.63'}
+[14:48:54] [train] step  470/746 ( 63.0%)  loss=0.6107  lr=1.86e-05  38.241 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.6381', 'grad_norm': '3.474', 'learning_rate': '1.79e-05', 'epoch': '0.6434'}
+[14:48:54] [train] step  480/746 ( 64.3%)  loss=0.6381  lr=1.79e-05  38.264 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.6296', 'grad_norm': '4.278', 'learning_rate': '1.723e-05', 'epoch': '0.6568'}
+[14:48:54] [train] step  490/746 ( 65.7%)  loss=0.6296  lr=1.72e-05  38.287 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.6163', 'grad_norm': '4.311', 'learning_rate': '1.655e-05', 'epoch': '0.6702'}
+[14:48:54] [train] step  500/746 ( 67.0%)  loss=0.6163  lr=1.66e-05  38.342 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.575', 'grad_norm': '3.667', 'learning_rate': '1.588e-05', 'epoch': '0.6836'}
+[14:48:55] [train] step  510/746 ( 68.4%)  loss=0.5750  lr=1.59e-05  38.336 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.6387', 'grad_norm': '4.41', 'learning_rate': '1.521e-05', 'epoch': '0.6971'}
+[14:48:55] [train] step  520/746 ( 69.7%)  loss=0.6387  lr=1.52e-05  38.350 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.6353', 'grad_norm': '2.806', 'learning_rate': '1.454e-05', 'epoch': '0.7105'}
+[14:48:55] [train] step  530/746 ( 71.0%)  loss=0.6353  lr=1.45e-05  38.368 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.5639', 'grad_norm': '2.925', 'learning_rate': '1.387e-05', 'epoch': '0.7239'}
+[14:48:55] [train] step  540/746 ( 72.4%)  loss=0.5639  lr=1.39e-05  38.369 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.5501', 'grad_norm': '3.244', 'learning_rate': '1.32e-05', 'epoch': '0.7373'}
+[14:48:56] [train] step  550/746 ( 73.7%)  loss=0.5501  lr=1.32e-05  38.395 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.6608', 'grad_norm': '4.586', 'learning_rate': '1.253e-05', 'epoch': '0.7507'}
+[14:48:56] [train] step  560/746 ( 75.1%)  loss=0.6608  lr=1.25e-05  38.409 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.6868', 'grad_norm': '4.909', 'learning_rate': '1.186e-05', 'epoch': '0.7641'}
+[14:48:56] [train] step  570/746 ( 76.4%)  loss=0.6868  lr=1.19e-05  38.438 step/s  elapsed=0.2m  eta=0.1m
+{'loss': '0.5937', 'grad_norm': '5.594', 'learning_rate': '1.119e-05', 'epoch': '0.7775'}
+[14:48:56] [train] step  580/746 ( 77.7%)  loss=0.5937  lr=1.12e-05  38.387 step/s  elapsed=0.3m  eta=0.1m
+{'loss': '0.6198', 'grad_norm': '5.107', 'learning_rate': '1.052e-05', 'epoch': '0.7909'}
+[14:48:57] [train] step  590/746 ( 79.1%)  loss=0.6198  lr=1.05e-05  38.375 step/s  elapsed=0.3m  eta=0.1m
+{'loss': '0.6683', 'grad_norm': '3.585', 'learning_rate': '9.853e-06', 'epoch': '0.8043'}
+[14:48:57] [train] step  600/746 ( 80.4%)  loss=0.6683  lr=9.85e-06  38.385 step/s  elapsed=0.3m  eta=0.1m
+{'loss': '0.6228', 'grad_norm': '3.365', 'learning_rate': '9.182e-06', 'epoch': '0.8177'}
+[14:48:57] [train] step  610/746 ( 81.8%)  loss=0.6228  lr=9.18e-06  38.428 step/s  elapsed=0.3m  eta=0.1m
+{'loss': '0.5776', 'grad_norm': '3.563', 'learning_rate': '8.512e-06', 'epoch': '0.8311'}
+[14:48:58] [train] step  620/746 ( 83.1%)  loss=0.5776  lr=8.51e-06  38.430 step/s  elapsed=0.3m  eta=0.1m
+{'loss': '0.6115', 'grad_norm': '4.374', 'learning_rate': '7.842e-06', 'epoch': '0.8445'}
+[14:48:58] [train] step  630/746 ( 84.5%)  loss=0.6115  lr=7.84e-06  38.442 step/s  elapsed=0.3m  eta=0.1m
+{'loss': '0.6536', 'grad_norm': '4.667', 'learning_rate': '7.172e-06', 'epoch': '0.8579'}
+[14:48:58] [train] step  640/746 ( 85.8%)  loss=0.6536  lr=7.17e-06  38.423 step/s  elapsed=0.3m  eta=0.0m
+{'loss': '0.6366', 'grad_norm': '3.919', 'learning_rate': '6.501e-06', 'epoch': '0.8713'}
+[14:48:58] [train] step  650/746 ( 87.1%)  loss=0.6366  lr=6.50e-06  38.438 step/s  elapsed=0.3m  eta=0.0m
+{'loss': '0.6278', 'grad_norm': '3.29', 'learning_rate': '5.831e-06', 'epoch': '0.8847'}
+[14:48:59] [train] step  660/746 ( 88.5%)  loss=0.6278  lr=5.83e-06  38.468 step/s  elapsed=0.3m  eta=0.0m
+{'loss': '0.6331', 'grad_norm': '3.846', 'learning_rate': '5.161e-06', 'epoch': '0.8981'}
+[14:48:59] [train] step  670/746 ( 89.8%)  loss=0.6331  lr=5.16e-06  38.478 step/s  elapsed=0.3m  eta=0.0m
+{'loss': '0.5928', 'grad_norm': '2.715', 'learning_rate': '4.491e-06', 'epoch': '0.9115'}
+[14:48:59] [train] step  680/746 ( 91.2%)  loss=0.5928  lr=4.49e-06  38.481 step/s  elapsed=0.3m  eta=0.0m
+{'loss': '0.6246', 'grad_norm': '4.279', 'learning_rate': '3.82e-06', 'epoch': '0.9249'}
+[14:48:59] [train] step  690/746 ( 92.5%)  loss=0.6246  lr=3.82e-06  38.490 step/s  elapsed=0.3m  eta=0.0m
+{'loss': '0.6273', 'grad_norm': '3.79', 'learning_rate': '3.15e-06', 'epoch': '0.9383'}
+[14:49:00] [train] step  700/746 ( 93.8%)  loss=0.6273  lr=3.15e-06  38.532 step/s  elapsed=0.3m  eta=0.0m
+{'loss': '0.6254', 'grad_norm': '3.004', 'learning_rate': '2.48e-06', 'epoch': '0.9517'}
+[14:49:00] [train] step  710/746 ( 95.2%)  loss=0.6254  lr=2.48e-06  38.569 step/s  elapsed=0.3m  eta=0.0m
+{'loss': '0.5991', 'grad_norm': '2.337', 'learning_rate': '1.81e-06', 'epoch': '0.9651'}
+[14:49:00] [train] step  720/746 ( 96.5%)  loss=0.5991  lr=1.81e-06  38.597 step/s  elapsed=0.3m  eta=0.0m
+{'loss': '0.6309', 'grad_norm': '4.545', 'learning_rate': '1.139e-06', 'epoch': '0.9786'}
+[14:49:00] [train] step  730/746 ( 97.9%)  loss=0.6309  lr=1.14e-06  38.614 step/s  elapsed=0.3m  eta=0.0m
+{'loss': '0.5972', 'grad_norm': '3.295', 'learning_rate': '4.692e-07', 'epoch': '0.992'}
+[14:49:01] [train] step  740/746 ( 99.2%)  loss=0.5972  lr=4.69e-07  38.580 step/s  elapsed=0.3m  eta=0.0m
+{'train_runtime': '19.34', 'train_samples_per_second': '616.8', 'train_steps_per_second': '38.58', 'train_loss': '0.6492', 'epoch': '1'}
+[14:49:01] [train] end: 746 steps in 0.3m
+[14:49:01]   fine-tuning done in 19.6s (0.002s/example)
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  8.35it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  8.33it/s]
+[14:49:01] Saved fine-tuned model to finetuned_verifier_model_quora
+[14:49:01] Scoring held-out test set (5112 pairs, batch_size=32) with the FINE-TUNED model...
+[14:49:02]   done in 1.6s (3283.6 pairs/s)
+[14:49:02]   fine-tuned AUC = 0.7407  (score range [-6.176, 2.394], mean=-0.302)
+[14:49:02] AUC: baseline=0.6309  finetuned=0.7407  delta=+0.1098
+[14:49:02] Wrote comparison to results/quora_finetune_retrain_comparison.json

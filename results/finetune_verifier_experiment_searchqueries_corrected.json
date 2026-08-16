@@ -1,0 +1,17 @@
+{
+  "config": {
+    "config": "configs/search_queries_corrected.yaml",
+    "train_fraction": 0.7,
+    "train_size": null,
+    "test_size": null,
+    "epochs": 1,
+    "batch_size": 16,
+    "base_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "output": "results/finetune_verifier_experiment_searchqueries_corrected.json"
+  },
+  "n_gray_zone_total": 86284,
+  "n_train": 60398,
+  "n_test": 25886,
+  "train_positive_rate": 0.48721811980529156,
+  "test_positive_rate": 0.47693734064745424
+}
