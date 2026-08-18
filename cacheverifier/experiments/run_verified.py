@@ -12,10 +12,15 @@ hit/miss (see `cacheverifier.experiments.verified_sweep`), the nearest-neighbor
 match sequence for Groups A/C/D is independent of tau_low/tau_high/
 threshold — so the ANN search runs exactly once (`build_match_trace`), the
 verifier scores every gray-zone-range candidate exactly once
-(`score_gray_zone`, covering the union of the whole sweep), and each
-(tau_low, threshold) grid point is then just a cheap re-thresholding pass
-(`replay`). `tau_high` is fixed per CLI invocation and therefore isn't part
-of that union — only `tau_low` and the verifier's `threshold` are swept.
+(`score_gray_zone`, covering the union of the whole sweep — when
+`--tau-high-grid` is used this union widens to [min(tau_low_grid),
+max(tau_high_grid)) so every combination is covered by one scoring pass),
+and each (tau_low, tau_high, threshold) grid point is then just a cheap
+re-thresholding pass (`replay`). By default `--tau-high` fixes a single
+value (matching PAPER.md §4.3/§7's original single-anchor design); pass
+`--tau-high-grid` instead to sweep tau_high too (§7 limitation: "tau_high
+固定为单一值,只扫描了 tau_low"). Combos where tau_low >= tau_high are
+skipped (the gray zone would be empty or inverted).
 
 Examples:
     python -m cacheverifier.experiments.run_verified \\
@@ -25,6 +30,11 @@ Examples:
     python -m cacheverifier.experiments.run_verified \\
         --config configs/lmarena.yaml --group D --verifier cross_encoder \\
         --tau-high 0.97 --output results/lmarena_groupD_cross_encoder.json
+
+    python -m cacheverifier.experiments.run_verified \\
+        --config configs/lmarena.yaml --group D --verifier cross_encoder \\
+        --tau-high-grid 0.92,0.95,0.97,0.99 \\
+        --output results/lmarena_groupD_tauhigh_grid.json
 """
 
 import argparse
@@ -119,7 +129,11 @@ def main() -> None:
     parser.add_argument("--max-samples", type=int, default=None)
     parser.add_argument("--embedder", choices=["hash", "sentence-transformer", "precomputed"], default="hash")
     parser.add_argument("--embedder-model", default="sentence-transformers/all-MiniLM-L6-v2")
-    parser.add_argument("--tau-high", type=float, default=DEFAULT_TAU_HIGH)
+    parser.add_argument("--tau-high", type=float, default=DEFAULT_TAU_HIGH,
+                        help="Single tau_high anchor (ignored if --tau-high-grid is given)")
+    parser.add_argument("--tau-high-grid", type=parse_float_list, default=None,
+                        help="Comma-separated tau_high sweep, e.g. 0.92,0.95,0.97,0.99 "
+                             "(overrides --tau-high; adds a second swept dimension)")
     parser.add_argument("--tau-low-grid", type=parse_float_list, default=None,
                         help=f"Comma-separated tau_low sweep (default: {DEFAULT_TAU_LOW_GRID})")
     parser.add_argument("--cross-encoder-model", default="cross-encoder/ms-marco-MiniLM-L6-v2")
@@ -169,6 +183,7 @@ def main() -> None:
 
     embedder = build_embedder(cfg.embedder, cfg.embedder_model)
     tau_low_grid = args.tau_low_grid or DEFAULT_TAU_LOW_GRID
+    tau_high_grid = args.tau_high_grid or [args.tau_high]
     # Oracle's score is binary (1.0/0.0): any threshold in (0, 1) is
     # equivalent, so sweeping it would just repeat identical work.
     threshold_grid = (
@@ -192,10 +207,11 @@ def main() -> None:
         log(f"Cached match trace to {trace_cache_path}")
 
     verifier_key = args.verifier if args.verifier != "cross_encoder" else f"cross_encoder_{_slug(args.cross_encoder_model)}"
+    gray_zone_hi = max(tau_high_grid)
     scored_cache_path = (
         CACHE_DIR
         / f"{_slug(dataset_path.stem)}__{embedder_key}__n{len(records)}__{verifier_key}"
-          f"__lo{min(tau_low_grid)}__hi{args.tau_high}.scored.json"
+          f"__lo{min(tau_low_grid)}__hi{gray_zone_hi}.scored.json"
     )
 
     if not args.no_cache and scored_cache_path.exists():
@@ -203,9 +219,9 @@ def main() -> None:
         scored = load_scored(scored_cache_path)
     else:
         log(f"Scoring gray-zone candidates once with verifier={args.verifier!r} "
-            f"(similarity in [{min(tau_low_grid)}, {args.tau_high}))...")
+            f"(similarity in [{min(tau_low_grid)}, {gray_zone_hi}))...")
         verifier = build_verifier(args.verifier, args.cross_encoder_model)
-        scored = score_gray_zone(records, trace, verifier, gray_zone_lo=min(tau_low_grid), gray_zone_hi=args.tau_high)
+        scored = score_gray_zone(records, trace, verifier, gray_zone_lo=min(tau_low_grid), gray_zone_hi=gray_zone_hi)
         save_scored(scored, scored_cache_path)
         log(f"Cached gray-zone scores to {scored_cache_path}")
 
@@ -217,17 +233,21 @@ def main() -> None:
     else:
         log("No candidates fell in the gray zone for this tau_low/tau_high range.")
 
-    total_points = len(tau_low_grid) * len(threshold_grid)
-    log(f"Sweeping {len(tau_low_grid)} tau_low x {len(threshold_grid)} threshold = {total_points} grid points "
+    valid_combos = [(tl, th) for th in tau_high_grid for tl in tau_low_grid if tl < th]
+    skipped_combos = len(tau_high_grid) * len(tau_low_grid) - len(valid_combos)
+    total_points = len(valid_combos) * len(threshold_grid)
+    log(f"Sweeping {len(tau_low_grid)} tau_low x {len(tau_high_grid)} tau_high "
+        f"({skipped_combos} combos skipped where tau_low >= tau_high) x {len(threshold_grid)} threshold "
+        f"= {total_points} grid points "
         f"(each does a cheap replay + {args.bootstrap_resamples}-resample bootstrap CI)...")
     t_sweep_start = time.time()
     results = []
     point_i = 0
-    for tau_low in tau_low_grid:
+    for tau_low, tau_high in valid_combos:
         for threshold in threshold_grid:
             point_i += 1
             t0 = time.time()
-            outcomes = replay(trace, scored, tau_low=tau_low, tau_high=args.tau_high, threshold=threshold)
+            outcomes = replay(trace, scored, tau_low=tau_low, tau_high=tau_high, threshold=threshold)
             row = summarize_verified(
                 outcomes,
                 extra={
@@ -235,7 +255,7 @@ def main() -> None:
                     "policy": f"synchronous_verified[{args.verifier}]",
                     "verifier": args.verifier,
                     "tau_low": tau_low,
-                    "tau_high": args.tau_high,
+                    "tau_high": tau_high,
                     "threshold": threshold,
                 },
                 n_resamples=args.bootstrap_resamples,
@@ -245,7 +265,7 @@ def main() -> None:
             elapsed = time.time() - t_sweep_start
             rate = point_i / elapsed if elapsed > 0 else 0
             eta = (total_points - point_i) / rate if rate > 0 else float("inf")
-            log(f"[{point_i}/{total_points}] tau_low={tau_low} threshold={threshold}  "
+            log(f"[{point_i}/{total_points}] tau_low={tau_low} tau_high={tau_high} threshold={threshold}  "
                 f"hit_rate={row['hit_rate']:.4f}  error_rate={row['error_rate']:.4f}  "
                 f"({time.time() - t0:.1f}s this point, eta={eta / 60:.1f}m)")
 
