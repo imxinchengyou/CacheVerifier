@@ -1,0 +1,94 @@
+[
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.01,
+    "hit_rate": 0.012116666666666666,
+    "error_rate": 0.0002,
+    "false_accept_rate": 0.016506189821182942,
+    "precision": 0.9834938101788171,
+    "recall": 0.013508152122574673,
+    "tp": 715,
+    "fp": 12,
+    "tn": 7056,
+    "fn": 52216,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      0.011115833333333333,
+      0.012934583333333333
+    ],
+    "error_rate_ci": [
+      8.333333333333333e-05,
+      0.00033375000000000006
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.03,
+    "hit_rate": 0.031,
+    "error_rate": 0.0008333333333333334,
+    "false_accept_rate": 0.026881720430107527,
+    "precision": 0.9731182795698925,
+    "recall": 0.03419546201658763,
+    "tp": 1810,
+    "fp": 50,
+    "tn": 7018,
+    "fn": 51121,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      0.02969875,
+      0.03276833333333333
+    ],
+    "error_rate_ci": [
+      0.0006329166666666667,
+      0.0010666666666666667
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.05,
+    "hit_rate": 0.0337,
+    "error_rate": 0.0015333333333333334,
+    "false_accept_rate": 0.04549950544015826,
+    "precision": 0.9545004945598418,
+    "recall": 0.03646256447072604,
+    "tp": 1930,
+    "fp": 92,
+    "tn": 6976,
+    "fn": 51001,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      0.03225,
+      0.03518333333333333
+    ],
+    "error_rate_ci": [
+      0.0012825000000000002,
+      0.00183375
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.07,
+    "hit_rate": 0.03565,
+    "error_rate": 0.0019833333333333335,
+    "false_accept_rate": 0.055633473585787754,
+    "precision": 0.9443665264142123,
+    "recall": 0.03816289131132984,
+    "tp": 2020,
+    "fp": 119,
+    "tn": 6949,
+    "fn": 50911,
+    "n_records": 60000,
+    "hit_rate_ci": [
+      0.03424666666666667,
+      0.03725208333333333
+    ],
+    "error_rate_ci": [
+      0.0016487500000000003,
+      0.00235
+    ]
+  }
+]

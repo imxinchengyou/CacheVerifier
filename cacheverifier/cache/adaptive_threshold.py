@@ -41,7 +41,7 @@ _VARIANCE_MAP: dict[int, float] = {
 class _EmbeddingStats:
     """Per-cache-entry online state, mirroring vCache's `EmbeddingMetadataObj`."""
 
-    observations: list[tuple[float, int]] = field(default_factory=list)
+    observations: list[tuple[float, int]] = field(default_factory=lambda: [(0.0, 0), (1.0, 1)])
     gamma: float | None = None
     t_hat: float | None = None
     var_t: float | None = None

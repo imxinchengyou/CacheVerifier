@@ -1,0 +1,94 @@
+[
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.01,
+    "hit_rate": 0.00804,
+    "error_rate": 0.0011533333333333333,
+    "false_accept_rate": 0.14344941956882257,
+    "precision": 0.8565505804311775,
+    "recall": 0.013011878219904521,
+    "tp": 1033,
+    "fp": 173,
+    "tn": 70437,
+    "fn": 78356,
+    "n_records": 150000,
+    "hit_rate_ci": [
+      0.007553166666666666,
+      0.008481166666666666
+    ],
+    "error_rate_ci": [
+      0.0009865000000000002,
+      0.0013136666666666665
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.03,
+    "hit_rate": 0.019573333333333335,
+    "error_rate": 0.00322,
+    "false_accept_rate": 0.16450953678474114,
+    "precision": 0.8354904632152589,
+    "recall": 0.030898487195959137,
+    "tp": 2453,
+    "fp": 483,
+    "tn": 70127,
+    "fn": 76936,
+    "n_records": 150000,
+    "hit_rate_ci": [
+      0.01894,
+      0.020241500000000003
+    ],
+    "error_rate_ci": [
+      0.0029063333333333337,
+      0.003526833333333333
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.05,
+    "hit_rate": 0.026433333333333333,
+    "error_rate": 0.00538,
+    "false_accept_rate": 0.203530895334174,
+    "precision": 0.796469104665826,
+    "recall": 0.03977881066646513,
+    "tp": 3158,
+    "fp": 807,
+    "tn": 69803,
+    "fn": 76231,
+    "n_records": 150000,
+    "hit_rate_ci": [
+      0.025759,
+      0.027182166666666667
+    ],
+    "error_rate_ci": [
+      0.0049728333333333334,
+      0.005740333333333333
+    ]
+  },
+  {
+    "group": "B",
+    "policy": "adaptive_threshold",
+    "target_error_rate": 0.07,
+    "hit_rate": 0.030606666666666667,
+    "error_rate": 0.006826666666666667,
+    "false_accept_rate": 0.22304508821607494,
+    "precision": 0.7769549117839251,
+    "recall": 0.04493065789970903,
+    "tp": 3567,
+    "fp": 1024,
+    "tn": 69586,
+    "fn": 75822,
+    "n_records": 150000,
+    "hit_rate_ci": [
+      0.029786166666666666,
+      0.031325
+    ],
+    "error_rate_ci": [
+      0.006426333333333333,
+      0.0072135
+    ]
+  }
+]
