@@ -1,0 +1,38 @@
+{
+  "dataset": "quora",
+  "n_gray_zone": 17040,
+  "n_calibration": 8520,
+  "n_test": 8520,
+  "calibration_incorrect_rate": 0.551056338028169,
+  "test_incorrect_rate": 0.6563380281690141,
+  "alpha_sweep": [
+    {
+      "alpha": 0.05,
+      "lambda": 6.361547470092773,
+      "test_risk": 0.0630281690140845,
+      "exceeds_alpha": true,
+      "test_reuse": 0.11631455399061033
+    },
+    {
+      "alpha": 0.02,
+      "lambda": 7.361433982849121,
+      "test_risk": 0.024413145539906103,
+      "exceeds_alpha": true,
+      "test_reuse": 0.047183098591549295
+    },
+    {
+      "alpha": 0.01,
+      "lambda": 7.876220703125,
+      "test_risk": 0.0142018779342723,
+      "exceeds_alpha": true,
+      "test_reuse": 0.027582159624413145
+    },
+    {
+      "alpha": 0.005,
+      "lambda": 8.245199203491211,
+      "test_risk": 0.00903755868544601,
+      "exceeds_alpha": true,
+      "test_reuse": 0.01772300469483568
+    }
+  ]
+}

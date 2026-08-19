@@ -1,0 +1,38 @@
+{
+  "dataset": "lmarena",
+  "n_gray_zone": 16102,
+  "n_calibration": 8051,
+  "n_test": 8051,
+  "calibration_incorrect_rate": 0.40876909700658304,
+  "test_incorrect_rate": 0.05738417587877282,
+  "alpha_sweep": [
+    {
+      "alpha": 0.05,
+      "lambda": 1.367844820022583,
+      "test_risk": 0.019128058626257608,
+      "exceeds_alpha": false,
+      "test_reuse": 0.6815302446901006
+    },
+    {
+      "alpha": 0.02,
+      "lambda": 5.687805652618408,
+      "test_risk": 0.009191404794435474,
+      "exceeds_alpha": false,
+      "test_reuse": 0.36392994659048566
+    },
+    {
+      "alpha": 0.01,
+      "lambda": 7.224308967590332,
+      "test_risk": 0.00484411874301329,
+      "exceeds_alpha": false,
+      "test_reuse": 0.16892311514097627
+    },
+    {
+      "alpha": 0.005,
+      "lambda": 8.102426528930664,
+      "test_risk": 0.0018631225934666502,
+      "exceeds_alpha": false,
+      "test_reuse": 0.08185318593963482
+    }
+  ]
+}
