@@ -1,0 +1,12 @@
+{
+  "dataset": "lmarena",
+  "model": "cross-encoder/ms-marco-MiniLM-L12-v2",
+  "n_records": 60000,
+  "n_gray_zone": 16102,
+  "n_positive": 12349,
+  "auc": 0.8460649624819269,
+  "mean_latency_ms": 13.761093060738542,
+  "score_min": -11.333818435668945,
+  "score_mean": 1.319405737181346,
+  "score_max": 11.296100616455078
+}

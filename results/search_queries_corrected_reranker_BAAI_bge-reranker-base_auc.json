@@ -1,0 +1,12 @@
+{
+  "dataset": "search_queries_corrected",
+  "model": "BAAI/bge-reranker-base",
+  "n_records": 150000,
+  "n_gray_zone": 86280,
+  "n_positive": 41772,
+  "auc": 0.6198355894664425,
+  "mean_latency_ms": 12.05653465109155,
+  "score_min": 3.728606316144578e-05,
+  "score_mean": 0.8202859130165367,
+  "score_max": 0.9999666213989258
+}

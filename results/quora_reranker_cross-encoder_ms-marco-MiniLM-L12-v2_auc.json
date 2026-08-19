@@ -1,0 +1,12 @@
+{
+  "dataset": "quora",
+  "model": "cross-encoder/ms-marco-MiniLM-L12-v2",
+  "n_records": 60000,
+  "n_gray_zone": 17040,
+  "n_positive": 6753,
+  "auc": 0.6173678308310413,
+  "mean_latency_ms": 11.040051635857552,
+  "score_min": -10.014066696166992,
+  "score_mean": 4.0073155200387625,
+  "score_max": 10.073822021484375
+}

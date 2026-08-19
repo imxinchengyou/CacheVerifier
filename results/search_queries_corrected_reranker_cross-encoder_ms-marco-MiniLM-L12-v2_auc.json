@@ -1,0 +1,12 @@
+{
+  "dataset": "search_queries_corrected",
+  "model": "cross-encoder/ms-marco-MiniLM-L12-v2",
+  "n_records": 150000,
+  "n_gray_zone": 86280,
+  "n_positive": 41772,
+  "auc": 0.6209712496579475,
+  "mean_latency_ms": 11.667264237992269,
+  "score_min": -11.327765464782715,
+  "score_mean": 6.123814961405326,
+  "score_max": 11.319938659667969
+}
