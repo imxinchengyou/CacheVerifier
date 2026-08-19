@@ -1,0 +1,110 @@
+{
+  "lmarena": {
+    "n_gray_zone": 16102,
+    "base_rate_incorrect_in_gray_zone": 0.23307663644267793,
+    "risk_accept_everything": 0.23301453235622904,
+    "risk_accept_almost_nothing": 0.0,
+    "alpha_sweep": {
+      "0.05": {
+        "feasible": true,
+        "threshold": -1.78415048122406,
+        "empirical_risk": 0.049993789591355114,
+        "n_accepted": 11117,
+        "accept_fraction_of_gray_zone": 0.6904111290522916
+      },
+      "0.02": {
+        "feasible": true,
+        "threshold": 4.601118564605713,
+        "empirical_risk": 0.019997515836542044,
+        "n_accepted": 6540,
+        "accept_fraction_of_gray_zone": 0.4061607253757297
+      },
+      "0.01": {
+        "feasible": true,
+        "threshold": 6.585683345794678,
+        "empirical_risk": 0.009998757918271022,
+        "n_accepted": 3429,
+        "accept_fraction_of_gray_zone": 0.2129549124332381
+      },
+      "0.005": {
+        "feasible": true,
+        "threshold": 7.796026229858398,
+        "empirical_risk": 0.004968326915911067,
+        "n_accepted": 1556,
+        "accept_fraction_of_gray_zone": 0.09663395851447025
+      }
+    }
+  },
+  "quora": {
+    "n_gray_zone": 17040,
+    "base_rate_incorrect_in_gray_zone": 0.6036971830985915,
+    "risk_accept_everything": 0.6036384976525822,
+    "risk_accept_almost_nothing": 0.0,
+    "alpha_sweep": {
+      "0.05": {
+        "feasible": true,
+        "threshold": 6.519534111022949,
+        "empirical_risk": 0.05,
+        "n_accepted": 1712,
+        "accept_fraction_of_gray_zone": 0.10046948356807511
+      },
+      "0.02": {
+        "feasible": true,
+        "threshold": 7.441205024719238,
+        "empirical_risk": 0.01995305164319249,
+        "n_accepted": 743,
+        "accept_fraction_of_gray_zone": 0.04360328638497653
+      },
+      "0.01": {
+        "feasible": true,
+        "threshold": 7.987089157104492,
+        "empirical_risk": 0.009976525821596244,
+        "n_accepted": 404,
+        "accept_fraction_of_gray_zone": 0.023708920187793428
+      },
+      "0.005": {
+        "feasible": true,
+        "threshold": 8.431173324584961,
+        "empirical_risk": 0.004988262910798122,
+        "n_accepted": 211,
+        "accept_fraction_of_gray_zone": 0.01238262910798122
+      }
+    }
+  },
+  "search_queries_corrected": {
+    "n_gray_zone": 86280,
+    "base_rate_incorrect_in_gray_zone": 0.5158553546592489,
+    "risk_accept_everything": 0.5158553546592489,
+    "risk_accept_almost_nothing": 0.0,
+    "alpha_sweep": {
+      "0.05": {
+        "feasible": true,
+        "threshold": 9.31471061706543,
+        "empirical_risk": 0.05,
+        "n_accepted": 12082,
+        "accept_fraction_of_gray_zone": 0.14003245248029672
+      },
+      "0.02": {
+        "feasible": true,
+        "threshold": 9.998717308044434,
+        "empirical_risk": 0.019993045897079276,
+        "n_accepted": 5283,
+        "accept_fraction_of_gray_zone": 0.06123087621696801
+      },
+      "0.01": {
+        "feasible": true,
+        "threshold": 10.357255935668945,
+        "empirical_risk": 0.009990727862772369,
+        "n_accepted": 2799,
+        "accept_fraction_of_gray_zone": 0.03244089012517385
+      },
+      "0.005": {
+        "feasible": true,
+        "threshold": 10.643707275390625,
+        "empirical_risk": 0.004995363931386184,
+        "n_accepted": 1445,
+        "accept_fraction_of_gray_zone": 0.01674779786740844
+      }
+    }
+  }
+}

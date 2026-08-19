@@ -1,0 +1,54 @@
+{
+  "dataset": "lmarena",
+  "n_gray_zone": 16102,
+  "n_calibration": 8051,
+  "n_test": 8051,
+  "seed": 0,
+  "youden_j": {
+    "lambda": -1.663001298904419,
+    "test_risk": 0.05191901627127065,
+    "test_reuse": 0.6873680288162961
+  },
+  "alpha_sweep": [
+    {
+      "alpha": 0.05,
+      "oracle_lambda": -1.78415048122406,
+      "oracle_risk": 0.049993789591355114,
+      "oracle_reuse": 0.6903490249658427,
+      "crc_lambda": -2.1594741344451904,
+      "crc_test_risk": 0.05502422059371507,
+      "crc_test_reuse": 0.6999130542789715,
+      "eta_reuse_ratio": 1.013853904282116
+    },
+    {
+      "alpha": 0.02,
+      "oracle_lambda": 4.601118564605713,
+      "oracle_risk": 0.019997515836542044,
+      "oracle_reuse": 0.4060986212892808,
+      "crc_lambda": 4.352512359619141,
+      "crc_test_risk": 0.022481679294497577,
+      "crc_test_reuse": 0.42106570612346295,
+      "eta_reuse_ratio": 1.0368557883468421
+    },
+    {
+      "alpha": 0.01,
+      "oracle_lambda": 6.585683345794678,
+      "oracle_risk": 0.009998757918271022,
+      "oracle_reuse": 0.21289280834678923,
+      "crc_lambda": 6.180538654327393,
+      "crc_test_risk": 0.012917649981368774,
+      "crc_test_reuse": 0.2528878400198733,
+      "eta_reuse_ratio": 1.1878646441073513
+    },
+    {
+      "alpha": 0.005,
+      "oracle_lambda": 7.796026229858398,
+      "oracle_risk": 0.004968326915911067,
+      "oracle_reuse": 0.09657185442802137,
+      "crc_lambda": 7.6167192459106445,
+      "crc_test_risk": 0.0063346168177866105,
+      "crc_test_reuse": 0.10930319215004347,
+      "eta_reuse_ratio": 1.1318327974276527
+    }
+  ]
+}

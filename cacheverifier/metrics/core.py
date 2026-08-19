@@ -137,6 +137,111 @@ class VerifierFidelity:
     counts: ConfusionCounts
 
 
+@dataclass(frozen=True)
+class GrayZoneRiskCurve:
+    """R_GZ(lambda) = P(accept_lambda AND incorrect | gray zone), swept over
+    every candidate score as a threshold -- the unconditional per-query risk
+    a CRC-style calibration procedure would control, as opposed to
+    `VerifierFidelity.false_approve_rate` (conditional on accept) or
+    `error_rate` (unconditional but scoped to the whole pipeline, not just
+    the gray zone).
+
+    Monotone non-increasing in lambda BY CONSTRUCTION on any fixed sample:
+    accept_lambda(x) = score(x) > lambda gives nested acceptance sets
+    (A_lambda2 subseteq A_lambda1 for lambda2 > lambda1), so the cumulative
+    false-accept count can only shrink or stay flat as lambda increases. This
+    is exact arithmetic on the observed sample, not an empirical property
+    that can fail from sampling noise -- there is nothing to "check" here
+    the way there would be for a non-threshold decision rule.
+
+    Accept rule is STRICT (`score > lambda`, not `>=`), deliberately, to make
+    L_i(lambda) right-continuous -- the condition Conformal Risk Control's
+    Theorem 1 (Angelopoulos et al., arXiv:2208.02814v4) requires for its
+    selector (eq. 4) to carry the stated guarantee. With `score >= lambda`,
+    a tied observation sits on the *left*-continuous side of its own jump
+    (the loss's value AT lambda=score(x) equals the pre-jump/accepted state,
+    while the right-hand limit is the post-jump/rejected state) -- verified
+    against the paper's own multilab example, which is right-continuous only
+    because ITS acceptance direction (larger lambda = more inclusive) is the
+    mirror image of this one (larger lambda = stricter = less inclusive).
+
+    `thresholds[i]` and `risk[i]` are aligned: `risk[i]` is R_GZ evaluated at
+    `thresholds[i]` (accepting every gray-zone candidate whose score is
+    STRICTLY GREATER than thresholds[i] -- a candidate whose score exactly
+    equals thresholds[i] is NOT accepted at that threshold). `thresholds` is
+    sorted ascending, and since a higher threshold is stricter (accepts a
+    subset of what a lower threshold accepts), `risk` is non-increasing as
+    `thresholds` increases -- i.e. `risk[0]` (loosest threshold, accept
+    almost everything) is the largest value and `risk[-1]` (strictest,
+    accept nothing since no score exceeds the maximum observed score) is 0.
+    """
+
+    thresholds: np.ndarray
+    risk: np.ndarray
+    n_gray_zone: int
+
+
+def gray_zone_risk_curve(scores: np.ndarray, labels: np.ndarray) -> GrayZoneRiskCurve:
+    """Compute R_GZ(lambda) for every candidate threshold in one pass.
+
+    `scores`: verifier score per gray-zone candidate.
+    `labels`: 1 if that candidate would actually be a correct cache hit, 0
+    otherwise (same convention as `select_threshold`'s calibration labels).
+    """
+    n = len(labels)
+    if n == 0:
+        return GrayZoneRiskCurve(thresholds=np.array([]), risk=np.array([]), n_gray_zone=0)
+
+    order = np.argsort(scores)  # ascending: thresholds[0] is the loosest candidate threshold, thresholds[-1] the strictest.
+    sorted_scores = scores[order]
+    sorted_labels = labels[order]
+    incorrect = (sorted_labels == 0).astype(np.int64)
+    # accept_lambda(x) = score(x) > lambda (STRICT -- see class docstring for
+    # why). A threshold value is a single number: EVERY point tied at that
+    # exact score must be excluded together, not just "this array position"
+    # (subtracting only the current index's own label was wrong for groups of
+    # ties -- two candidates sharing a score got different risk values
+    # depending on array position, caught by test_b in tests/test_crc.py).
+    # `searchsorted(..., side="right")` gives, for each threshold candidate,
+    # the index just past the LAST occurrence of that value -- identical for
+    # every tied copy, so ties resolve to the same risk.
+    suffix_fp_inclusive = np.concatenate([np.cumsum(incorrect[::-1])[::-1], [0]])  # length n+1; index n -> 0
+    idx_right = np.searchsorted(sorted_scores, sorted_scores, side="right")
+    suffix_fp_strict = suffix_fp_inclusive[idx_right]
+    risk = suffix_fp_strict / n
+    return GrayZoneRiskCurve(thresholds=sorted_scores, risk=risk, n_gray_zone=n)
+
+
+def crc_select_threshold(scores: np.ndarray, labels: np.ndarray, alpha: float, loss_bound: float = 1.0) -> float | None:
+    """Conformal Risk Control's selector (Angelopoulos et al., Theorem 1 / eq.
+    4, arXiv:2208.02814v4):
+
+        lambda_hat = inf{ lambda : (n/(n+1)) * R_hat_n(lambda) + B/(n+1) <= alpha }
+
+    where R_hat_n is the empirical risk over the n calibration points and B
+    bounds the per-sample loss (1.0 for our 0/1 false-reuse loss). When the
+    candidate set is empty, the paper's own algorithm defines
+    lambda_hat := lambda_max (the strictest candidate threshold) -- NOT a
+    failure state. In this application L_i(lambda_max) = 0 for every i by
+    construction (nothing can have score > max(scores)), so the guarantee
+    E[L_{n+1}(lambda_hat)] <= alpha holds even along that fallback path. See
+    CRC_RISK_CONTROLLED_CACHING_PROTOCOL.md for the full derivation and the
+    n_nontrivial(alpha) sample-size threshold this implies.
+
+    Returns None only if there are zero calibration points (undefined).
+    """
+    n = len(labels)
+    if n == 0:
+        return None
+
+    curve = gray_zone_risk_curve(scores, labels)
+    crc_value = (n / (n + 1)) * curve.risk + loss_bound / (n + 1)
+    feasible = np.where(crc_value <= alpha)[0]
+    if len(feasible) == 0:
+        return float(curve.thresholds[-1])  # lambda_max fallback, per the paper's own convention
+    return float(curve.thresholds[feasible[0]])
+
+
 def verifier_fidelity(outcomes: list[RequestOutcome]) -> VerifierFidelity:
     verified = [o for o in outcomes if o.verifier_invoked]
     counts = confusion_counts(verified)

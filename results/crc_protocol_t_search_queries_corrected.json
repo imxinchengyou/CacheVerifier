@@ -1,0 +1,38 @@
+{
+  "dataset": "search_queries_corrected",
+  "n_gray_zone": 86280,
+  "n_calibration": 43140,
+  "n_test": 43140,
+  "calibration_incorrect_rate": 0.514673157162726,
+  "test_incorrect_rate": 0.5170375521557719,
+  "alpha_sweep": [
+    {
+      "alpha": 0.05,
+      "lambda": 9.196788787841797,
+      "test_risk": 0.062285581826611036,
+      "exceeds_alpha": true,
+      "test_reuse": 0.1638618451553083
+    },
+    {
+      "alpha": 0.02,
+      "lambda": 9.944694519042969,
+      "test_risk": 0.023898933704218823,
+      "exceeds_alpha": true,
+      "test_reuse": 0.06991191469633751
+    },
+    {
+      "alpha": 0.01,
+      "lambda": 10.32022476196289,
+      "test_risk": 0.012146499768196569,
+      "exceeds_alpha": true,
+      "test_reuse": 0.036810384793694945
+    },
+    {
+      "alpha": 0.005,
+      "lambda": 10.596652030944824,
+      "test_risk": 0.006096430227167362,
+      "exceeds_alpha": true,
+      "test_reuse": 0.019842373667130275
+    }
+  ]
+}
