@@ -1,0 +1,12 @@
+{
+  "dataset": "quora",
+  "model": "BAAI/bge-reranker-base",
+  "n_records": 60000,
+  "n_gray_zone": 17040,
+  "n_positive": 6753,
+  "auc": 0.638114458013692,
+  "mean_latency_ms": 11.119984751055675,
+  "score_min": 3.7292538763722405e-05,
+  "score_mean": 0.8771815964578845,
+  "score_max": 0.9999666213989258
+}

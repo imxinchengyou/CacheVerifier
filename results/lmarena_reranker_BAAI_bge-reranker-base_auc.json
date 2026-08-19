@@ -1,0 +1,12 @@
+{
+  "dataset": "lmarena",
+  "model": "BAAI/bge-reranker-base",
+  "n_records": 60000,
+  "n_gray_zone": 16102,
+  "n_positive": 12349,
+  "auc": 0.87124707338618,
+  "mean_latency_ms": 26.18435781362513,
+  "score_min": 3.728322189999744e-05,
+  "score_mean": 0.6751019670583805,
+  "score_max": 0.9999666213989258
+}
