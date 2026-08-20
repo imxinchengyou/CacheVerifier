@@ -1,0 +1,285 @@
+{
+  "dataset": "quora",
+  "model": "finetuned_verifier_model_quora",
+  "tau_low": 0.8,
+  "tau_high": 0.97,
+  "calibrated_threshold": -0.006866198033094406,
+  "n_calibration": 8520,
+  "n_test": 8520,
+  "n_false_reject_population": 693,
+  "n_true_reject_population": 3668,
+  "false_reject": {
+    "n_population": 693,
+    "n_sampled": 100,
+    "incorrect_rate": 0.33,
+    "incorrect_rate_ci": [
+      0.24,
+      0.43
+    ],
+    "rewrite_latency_ms": {
+      "mean_ms": 5840.119370860193,
+      "median_ms": 6667.498732007516,
+      "p95_ms": 8225.446631704835,
+      "n": 100
+    },
+    "examples": [
+      {
+        "index": 33920,
+        "query": "Which is the reasonably good laptop under 30K INR?",
+        "orig_candidate_query": "Which is the best laptop to buy under 30k?",
+        "orig_candidate_answer": "Which is the best laptop to buy under 30k?",
+        "reference_answer": "Which is the reasonably good laptop under 30K INR?",
+        "would_be_correct": true,
+        "rewritten_answer": "Which is a reasonably good laptop under 30K INR?\n\nUnder \u20b930,000, you\u2019re looking at entry-level laptops, so \u201creasonably good\u201d means prioritizing the essentials: a decent processor (Intel i3 or AMD Ryzen 3), 8GB RAM, and an SSD (at least 256GB) for smooth everyday use. Avoid 4GB RAM and eMMC storage\u2014they\u2019ll feel sluggish.\n\nHere are the best picks in this range (prices may vary slightly with offers):\n\n1. **Acer Aspire 3 (Ryzen 3 7320U / 8GB / 256GB SSD)** \u2013 Often around \u20b929,990. Best overall for multitasking and battery life. The Ryzen 3 is faster than most Celerons/Pentiums in this bracket.\n\n2. **Lenovo IdeaPad Slim 3 (Intel i3 12th Gen / 8GB / 256GB SSD)** \u2013 Usually \u20b928,000\u2013\u20b930,000. Solid build, good keyboard, and reliable for office work, browsing, and streaming.\n\n3. **HP 15s (Ryzen 3 5300U / 8GB / 256GB SSD)** \u2013 Sometimes dips under \u20b930,000 during sales. Slightly older but still capable; good for light photo editing and casual use.\n\n4. **Asus Vivobook 15 (Intel i3 / 8GB / 256GB SSD)** \u2013 Around \u20b929,000. Compact and lightweight, with a decent display for the price.\n\n**What to skip:** Any laptop with 4GB RAM, a Celeron/Pentium processor, or a 1TB HDD-only storage\u2014these will struggle with even basic multitasking.\n\n**Pro tip:** Check for student or bank offers (e.g., HDFC/ICICI discounts) on Amazon/Flipkart\u2014they can bring a \u20b932,000 laptop down to your budget. Also, consider a slightly older Ryzen 5 model if you find one on clearance, but only if it has 8GB RAM and an SSD.\n\nFor most students and office users, the **Acer Aspire 3** or **Lenovo IdeaPad Slim 3** are the safest \u201creasonably good\u201d choices under 30K.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 7462.674876995152
+      },
+      {
+        "index": 58219,
+        "query": "How do you know if your partner loves you?",
+        "orig_candidate_query": "How do I know my life partner loves me truly?",
+        "orig_candidate_answer": "How do I know my life partner loves me truly?",
+        "reference_answer": "How do you know if your partner loves you?",
+        "would_be_correct": true,
+        "rewritten_answer": "How do you know if your partner loves you?\n\nLove isn\u2019t just a feeling\u2014it\u2019s a pattern of actions, choices, and consistency. While grand gestures are nice, true love shows up in the small, everyday moments. Here are some reliable signs to look for:\n\n**1. They prioritize you\u2014even when it\u2019s inconvenient.**  \nThey make time for you, check in on your day, and remember the little things you mention (your favorite snack, an upcoming deadline, a worry you shared). Their actions align with their words.\n\n**2. They listen to understand, not just to reply.**  \nWhen you talk, they put down their phone, ask follow-up questions, and validate your feelings\u2014even if they don\u2019t fully agree. They don\u2019t dismiss your concerns or make you feel like a burden.\n\n**3. They support your growth, not just your comfort.**  \nThey encourage you to pursue your goals, hobbies, and friendships\u2014even if it means less time with them. They celebrate your wins without jealousy or competition.\n\n**4. They are consistent and reliable.**  \nYou don\u2019t have to guess where you stand. They show up when they say they will, keep promises, and are emotionally steady. Their love isn\u2019t a rollercoaster of hot-and-cold behavior.\n\n**5. They apologize and work on conflicts.**  \nWhen they hurt you, they own it, apologize sincerely, and change their behavior. They don\u2019t blame you, stonewall, or use the silent treatment. They see conflict as a team problem, not a battle to win.\n\n**6. They are vulnerable with you.**  \nThey share their fears, insecurities, and dreams\u2014not just their highlights. They let you see their real self, which shows trust and emotional intimacy.\n\n**7. They respect your boundaries and autonomy.**  \nThey don\u2019t pressure you to change who you are, and they respect your need for space, time with friends, or different opinions. They trust you.\n\n**8. They make you feel safe\u2014physically and emotionally.**  \nYou can be your unfiltered self around them without fear of judgment, mockery, or retaliation. Their presence calms you rather than stresses you.\n\n**9. They choose you daily.**  \nLove is a verb. They actively choose to be kind, patient, and affectionate\u2014not just when they\u2019re in a good mood, but especially when they\u2019re",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 7584.989412003779
+      },
+      {
+        "index": 37885,
+        "query": "What is the best way to outline a novel/story for a novice writer?",
+        "orig_candidate_query": "How do I best outline my novel?",
+        "orig_candidate_answer": "How do I best outline my novel?",
+        "reference_answer": "What is the best way to outline a novel/story for a novice writer?",
+        "would_be_correct": true,
+        "rewritten_answer": "Here\u2019s a revised version of the original answer, tailored for a novice writer:\n\n---\n\n**What is the best way to outline a novel/story for a novice writer?**\n\nStart simple. As a beginner, your goal isn\u2019t to create a perfect, rigid blueprint\u2014it\u2019s to build a flexible map that keeps you from getting lost while still leaving room for discovery. Here\u2019s a step-by-step, beginner-friendly approach:\n\n**1. Begin with a one-sentence premise.**  \nWrite down the core idea of your story in a single sentence. Example: *\u201cA shy librarian discovers she can travel through time by reading old letters.\u201d* This becomes your North Star. If you ever feel stuck, return to this sentence and ask, \u201cDoes my current scene serve this premise?\u201d\n\n**2. Use the \u201cThree-Act\u201d skeleton (or the \u201cBeginning-Middle-End\u201d method).**  \nDon\u2019t overcomplicate it. Just divide your story into three rough chunks:  \n- **Beginning (Act 1):** Introduce your main character, their ordinary world, and the inciting incident that kicks off the story.  \n- **Middle (Act 2):** The character faces obstacles, learns lessons, and moves toward a midpoint turning point. This is usually the longest section.  \n- **End (Act 3):** The climax (the biggest confrontation or decision) and the resolution.  \n\nFor a novice, that\u2019s enough structure. You don\u2019t need a 40-page beat sheet yet.\n\n**3. Create a simple scene list (not a chapter outline).**  \nWrite down 10\u201315 bullet points of major scenes you *know* you want to happen. For example:  \n- Scene 1: Librarian finds a mysterious letter in a returned book.  \n- Scene 2: She reads it aloud and accidentally time-travels.  \n- Scene 3: She meets a historical figure who needs her help.  \n...and so on. Don\u2019t worry about order or logic yet\u2014just dump your ideas. Then arrange them in a rough sequence that follows your three-act skeleton.\n\n**4. Use the \u201cSnowflake Method\u201d (light version).**  \nIf you want a bit more guidance, try this:  \n- Write a one-paragraph summary of your whole story (5\u20136 sentences).  \n- Expand that into a one-page summary.  \n- Then expand each paragraph of that page into",
+        "verdict": "NO",
+        "judged_correct": false,
+        "rewrite_latency_ms": 7523.088279995136
+      },
+      {
+        "index": 44624,
+        "query": "How can i join Indian Armed Forces?",
+        "orig_candidate_query": "What are some good ways to join the Indian Armed Forces after my graduation?",
+        "orig_candidate_answer": "What are some good ways to join the Indian Armed Forces after my graduation?",
+        "reference_answer": "How can i join Indian Armed Forces?",
+        "would_be_correct": true,
+        "rewritten_answer": "Here are the primary ways to join the Indian Armed Forces, depending on your educational background and career goals:\n\n**1. Through UPSC (For Officers \u2013 Graduate Level)**\n- **NDA & NA (National Defence Academy):** For unmarried male candidates aged 16.5\u201319.5 years, after Class 12. (Not applicable if you are already a graduate, but included for completeness.)\n- **CDS (Combined Defence Services):** For graduates (any discipline) aged 19\u201325. You can join the Indian Military Academy (IMA), Indian Naval Academy (INA), Air Force Academy (AFA), or Officers\u2019 Training Academy (OTA). Women can apply for OTA.\n- **AFCAT (Air Force Common Admission Test):** For graduates (any stream) aged 20\u201324 for Flying Branch, and 20\u201326 for Ground Duty (Technical/Non-Technical). Women are eligible for all branches.\n\n**2. Through Technical Entries (For Engineering Graduates)**\n- **TES (Technical Entry Scheme) \u2013 Army:** For B.E./B.Tech graduates (age 20\u201327). Short Service Commission (SSC) or Permanent Commission (PC) available.\n- **Navy \u2013 SSC (Technical) / PC (Technical):** For B.E./B.Tech in relevant streams (Mechanical, Electronics, Electrical, etc.). Age 19\u201325.\n- **Air Force \u2013 AFCAT (Technical Branch):** For B.E./B.Tech graduates in specified disciplines. Age 20\u201326.\n\n**3. Through Special Entries (For Post-Graduates / Professionals)**\n- **Judge Advocate General (JAG) Entry:** For law graduates (LLB) aged 21\u201327. Both men and women eligible.\n- **Army/Navy/Air Force \u2013 SSC (Specialist) / PC (Specialist):** For doctors (MBBS), dentists, nurses, and other medical professionals. Age varies (usually up to 45 for some roles).\n- **NCC Special Entry:** For NCC \u2018C\u2019 certificate holders with at least 50% marks in graduation. Age 19\u201325. Direct SSB interview without written exam.\n\n**4. Through Direct Recruitment (For Soldiers / Airmen / Sailors \u2013 Non-Officer)**\n- **Army \u2013 Agniveer (GD / Technical / Clerk / Tradesman):** For Class",
+        "verdict": "NO",
+        "judged_correct": false,
+        "rewrite_latency_ms": 7650.923192006303
+      },
+      {
+        "index": 42607,
+        "query": "Which app is the best for Smartphone security protection?",
+        "orig_candidate_query": "Which one is the best security software for smartphones and tablets?",
+        "orig_candidate_answer": "Which one is the best security software for smartphones and tablets?",
+        "reference_answer": "Which app is the best for Smartphone security protection?",
+        "would_be_correct": true,
+        "rewritten_answer": "Which app is the best for Smartphone security protection?\n\nThere isn\u2019t a single \u201cbest\u201d app for every smartphone, because the ideal choice depends on your operating system (Android vs. iOS) and your specific needs. Here\u2019s a breakdown of the top contenders:\n\n**For Android (where most security apps are needed):**\n- **Bitdefender Mobile Security** \u2013 Consistently tops independent lab tests for malware detection. It\u2019s lightweight, has a useful VPN (with a daily data cap), app lock, and anti-theft features. Best overall for most users.\n- **Norton 360 for Mobile** \u2013 Excellent malware protection, plus a solid VPN, Wi-Fi security scanner, and dark web monitoring. Slightly heavier on battery but very comprehensive.\n- **Kaspersky Mobile Security** \u2013 Top-tier malware detection and a clean interface. Note: Kaspersky has faced geopolitical scrutiny in some regions, so check local regulations if that matters to you.\n- **Malwarebytes** \u2013 Great as a secondary scanner or for those who want a free, no-frills malware checker without extra bloat.\n\n**For iPhone (iOS):**\n- iOS is already sandboxed and heavily locked down, so full antivirus apps are largely unnecessary. The best \u201cprotection\u201d is built-in: keep iOS updated, enable Face ID/Touch ID, and use Apple\u2019s built-in \u201cStolen Device Protection\u201d (Settings > Face ID & Passcode).\n- If you want extra features, **Bitdefender Mobile Security** or **Norton 360** add a VPN, web protection (blocking phishing sites in Safari), and identity monitoring. But they won\u2019t scan for malware the way they do on Android.\n\n**Key caveats:**\n- No app can protect you from phishing links, social engineering, or giving away your password. The best \u201csecurity app\u201d is your own caution.\n- Avoid \u201cfree\u201d security apps from unknown developers\u2014many are adware or data harvesters. Stick to the well-known brands above.\n- For Android, also consider a dedicated app locker (e.g., **AppLock** by DoMobile) if you want to lock sensitive apps, but that\u2019s a convenience feature, not core security.\n\n**Bottom line:** For Android, pick **Bitdefender** (best all-round) or **Norton** (if you want a VPN included). For iPhone, rely on Apple\u2019s built",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 8047.1354449982755
+      },
+      {
+        "index": 38954,
+        "query": "How do you factory reset a Toshiba Satellite Pro?",
+        "orig_candidate_query": "How do you factory reset a Toshiba laptop? How can this be done without a disk?",
+        "orig_candidate_answer": "How do you factory reset a Toshiba laptop? How can this be done without a disk?",
+        "reference_answer": "How do you factory reset a Toshiba Satellite Pro?",
+        "would_be_correct": true,
+        "rewritten_answer": "Here\u2019s how to factory reset a Toshiba Satellite Pro without a disk:\n\n**Method 1: Using the built-in recovery partition (most common)**\n\n1. **Back up your data** \u2013 This process erases everything, so save important files to an external drive or cloud storage first.\n2. **Turn off the laptop** completely.\n3. **Turn it on** and immediately press and hold the **0 (zero)** key on the keyboard (not the number pad) as soon as the Toshiba logo appears. Keep holding it until the \"Toshiba Recovery Wizard\" or \"Recovery\" screen loads.\n4. **Select \"Recovery of Factory Default Software\"** (or similar wording) from the menu.\n5. Follow the on-screen prompts. Choose **\"Erase the hard disk and restore the system to its factory default state\"** (or \"Restore to factory defaults\").\n6. Confirm the process and wait \u2013 it can take 30\u201360 minutes. The laptop will restart several times.\n\n**Method 2: If the 0 key doesn\u2019t work (Windows-based reset)**\n\n1. Back up your data.\n2. Go to **Settings > Update & Security > Recovery** (Windows 10/11) or **Control Panel > Recovery** (Windows 7/8).\n3. Under \"Reset this PC,\" click **Get started**.\n4. Choose **Remove everything**.\n5. Select **Local reinstall** (or \"Restore factory settings\" if offered \u2013 this uses the hidden recovery partition).\n6. Follow the prompts. The laptop will reboot and reinstall Windows.\n\n**Method 3: Using the Toshiba Recovery Media Creator (if the partition is damaged)**\n\nIf neither method works, you may need to create recovery media from another computer using the Toshiba Recovery Media Creator tool (downloadable from Toshiba\u2019s support site), then boot from that USB/DVD. However, this requires a disk or USB drive, so it\u2019s not strictly \"without a disk.\"\n\n**Important notes for Satellite Pro models:**\n\n- Some older Satellite Pro models (e.g., from 2010\u20132013) use **F8** instead of **0** \u2013 press F8 repeatedly at startup and choose \"Repair Your Computer\" > \"Toshiba Recovery Wizard.\"\n- If you see a \"Toshiba HDD Protection\" or \"Tos",
+        "verdict": "NO",
+        "judged_correct": false,
+        "rewrite_latency_ms": 8481.606888002716
+      },
+      {
+        "index": 37504,
+        "query": "What's the best way to eat ice cream?",
+        "orig_candidate_query": "How does one eat ice cream?",
+        "orig_candidate_answer": "How does one eat ice cream?",
+        "reference_answer": "What's the best way to eat ice cream?",
+        "would_be_correct": true,
+        "rewritten_answer": "What's the best way to eat ice cream?\n\nThe \"best\" way to eat ice cream depends on what you're optimizing for\u2014temperature, texture, flavor, or experience\u2014but here\u2019s a practical guide to getting the most out of every scoop:\n\n**1. Let it soften slightly.**  \nTake it out of the freezer for 3\u20135 minutes before eating. Ice cream that's rock-hard numbs your taste buds and hides its flavor. A slightly softened scoop (around 12\u201314\u00b0F / -11 to -10\u00b0C) releases aromas and gives a creamier, smoother mouthfeel.\n\n**2. Use the right vessel and utensil.**  \n- **Cone vs. bowl:** A waffle cone adds a crunchy, buttery contrast and is great for on-the-go. A chilled bowl (pop it in the freezer for 10 minutes) keeps the ice cream from melting too fast and lets you savor it slowly.  \n- **Spoon:** A small, shallow spoon (like a tasting spoon) delivers smaller bites, letting you appreciate each flavor without overwhelming your palate. Avoid metal spoons straight from the dishwasher\u2014they can transfer heat and cause rapid melting.\n\n**3. Eat it in layers, not all at once.**  \nIf you have multiple flavors or toppings, don't mix them into a mush. Take a bite of one flavor, then another, letting them hit your tongue separately. This preserves each component's identity. For sundaes, scrape a bit of topping with each spoonful rather than stirring everything together.\n\n**4. Pair with temperature contrasts.**  \nWarm elements (hot fudge, toasted nuts, a warm brownie) make cold ice cream taste colder and richer. If you're eating plain, a few flakes of sea salt on top can brighten sweetness and cut richness.\n\n**5. Mind your tongue's \"cold spots.\"**  \nThe center of your tongue is most sensitive to cold, so let the ice cream sit on the roof of your mouth or the sides for a second before swallowing. This warms it slightly and releases more flavor.\n\n**6. For maximum enjoyment, avoid distractions.**  \nEat it slowly, in a quiet moment, rather than while scrolling or walking. Ice cream is a sensory experience\u2014focus on the texture, the cold, and the flavor. If it's a hot day, eat it in the shade so it doesn't melt faster than you can enjoy it.\n\n**",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 8334.190674999263
+      },
+      {
+        "index": 43518,
+        "query": "I am MBA (Marketing) Student. I want to pursue Digital marketing Course. So where Can I find best course of Digital Marketing? Is there any Institute in Mumbai who are providing the Digital marketing Course?",
+        "orig_candidate_query": "Which are the best online courses on digital marketing in India?",
+        "orig_candidate_answer": "Which are the best online courses on digital marketing in India?",
+        "reference_answer": "I am MBA (Marketing) Student. I want to pursue Digital marketing Course. So where Can I find best course of Digital Marketing? Is there any Institute in Mumbai who are providing the Digital marketing Course?",
+        "would_be_correct": true,
+        "rewritten_answer": "Here\u2019s a revised answer tailored to your MBA (Marketing) background and Mumbai location:\n\n---\n\n**For an MBA (Marketing) student, you already have a strong strategic foundation. The best digital marketing courses for you are those that bridge the gap between traditional marketing theory and hands-on digital execution\u2014focusing on analytics, performance marketing, and tools.**\n\nHere\u2019s where to find the best courses, with a special focus on Mumbai:\n\n### 1. Top Online Courses (Flexible, Industry-Recognized)\n- **Google Digital Marketing & E-commerce Certificate (Coursera)** \u2013 Best for fundamentals (SEO, SEM, analytics) and a globally recognized credential. Pairs well with your MBA.\n- **Meta Blueprint (Facebook/Instagram) Certification** \u2013 Ideal for social media and paid ads. You can take the self-paced courses online and sit for the certification exam.\n- **HubSpot Academy (Free)** \u2013 Excellent for inbound marketing, content strategy, and CRM\u2014directly complements MBA marketing coursework.\n- **IIT Bombay / IIMs (via SWAYAM or Coursera)** \u2013 Look for \"Digital Marketing\" or \"Marketing Analytics\" courses from these institutes. They add academic weight to your MBA profile.\n\n### 2. Mumbai-Based Institutes (Classroom + Hybrid Options)\nYes, Mumbai has several reputed institutes offering dedicated digital marketing courses. Since you're an MBA student, prioritize institutes that offer **advanced or executive-level modules** (not just beginner basics):\n\n- **Digital Vidya (Mumbai Center \u2013 Andheri)** \u2013 Offers a comprehensive 3-month certification with live projects. They have a specific \"Advanced Digital Marketing\" track for working professionals and MBA grads.\n- **IIDE (Indian Institute of Digital Education) \u2013 Mumbai (Lower Parel)** \u2013 One of the most popular in Mumbai. They offer a **Post Graduate Program in Digital Marketing** (3-6 months) with a strong focus on analytics, SEO, and performance marketing. They also have weekend batches for students.\n- **NIIT (Multiple Mumbai branches)** \u2013 Offers a structured \"Digital Marketing Specialist\" program with placement assistance. Good if you want a classroom setting with a well-known brand.\n- **Simplilearn (Mumbai \u2013 Andheri)** \u2013 Their **Digital Marketing Specialist Master's Program** is available in a blended (online + classroom) format. They have tie-ups with Meta and Google, which is great for certifications.\n- **MICA",
+        "verdict": "NO",
+        "judged_correct": false,
+        "rewrite_latency_ms": 8479.15320500033
+      },
+      {
+        "index": 49869,
+        "query": "When did you meet your current spouse?",
+        "orig_candidate_query": "How did you meet your spouse?",
+        "orig_candidate_answer": "How did you meet your spouse?",
+        "reference_answer": "When did you meet your current spouse?",
+        "would_be_correct": true,
+        "rewritten_answer": "When did you meet your current spouse?",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 1524.5295640052063
+      },
+      {
+        "index": 42139,
+        "query": "What is the best place to have sex from?",
+        "orig_candidate_query": "Which is the best place to do sex?",
+        "orig_candidate_answer": "Which is the best place to do sex?",
+        "reference_answer": "What is the best place to have sex from?",
+        "would_be_correct": true,
+        "rewritten_answer": "I\u2019m sorry, but I can\u2019t provide a response to that question. If you have a different question about relationships, health, or well-being, I\u2019d be happy to help.",
+        "verdict": "NO",
+        "judged_correct": false,
+        "rewrite_latency_ms": 1980.1646280102432
+      }
+    ]
+  },
+  "true_reject": {
+    "n_population": 3668,
+    "n_sampled": 100,
+    "incorrect_rate": 0.3,
+    "incorrect_rate_ci": [
+      0.21,
+      0.39
+    ],
+    "rewrite_latency_ms": {
+      "mean_ms": 6181.422834759724,
+      "median_ms": 6609.7428374996525,
+      "p95_ms": 7890.624434990605,
+      "n": 100
+    },
+    "examples": [
+      {
+        "index": 56032,
+        "query": "How does first time sex feels like for a man?",
+        "orig_candidate_query": "How does first time sex feel like?",
+        "orig_candidate_answer": "How does first time sex feel like?",
+        "reference_answer": "How does first time sex feels like for a man?",
+        "would_be_correct": false,
+        "rewritten_answer": "How does first time sex feel like for a man?\n\nFor a man, first-time sex is often a mix of intense physical sensation, nervous excitement, and a fair amount of performance pressure. Physically, the most immediate feeling is the sudden, overwhelming warmth and tightness of vaginal penetration\u2014a sensation that is completely new and often described as far more intense than masturbation. The physical pleasure is real, but it\u2019s frequently overshadowed by the mental noise: racing thoughts about \"am I doing this right?\", \"is she enjoying it?\", and \"am I going to last long enough?\"\n\nBecause of that anxiety, many men find that the first time is less about sustained pleasure and more about a quick, explosive release\u2014often finishing much sooner than they'd like. Others, conversely, might find that nerves cause them to lose their erection or struggle to climax at all. The emotional component is also significant: there's often a sense of relief, a feeling of accomplishment, and a deep rush of intimacy and vulnerability, especially if it's with a trusted partner. The physical sensation itself is often described as a \"mind-blowing\" novelty, but the lasting memory is usually the emotional cocktail of nervousness, connection, and the sheer surrealness of \"this is actually happening.\"",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 4533.341754999128
+      },
+      {
+        "index": 53963,
+        "query": "How can I use Omegle on my iPod Touch and how is it compared to using Wocchat?",
+        "orig_candidate_query": "How can I use Omegle on my iPod Touch and how is it compared to using FunYo?",
+        "orig_candidate_answer": "How can I use Omegle on my iPod Touch and how is it compared to using FunYo?",
+        "reference_answer": "How can I use Omegle on my iPod Touch and how is it compared to using Wocchat?",
+        "would_be_correct": false,
+        "rewritten_answer": "How can I use Omegle on my iPod Touch and how is it compared to using Wocchat?\n\nTo use Omegle on your iPod Touch, you\u2019ll need to access it through a web browser (like Safari) since Omegle doesn\u2019t have a dedicated iOS app. Just go to omegle.com, allow camera/microphone access when prompted, and you can start text or video chatting. Note that Omegle\u2019s mobile site can be a bit clunky on older iPod Touch models, and video chat may lag or fail if your device is outdated or running an older iOS version. Also, Omegle has no official app, so you\u2019ll be relying on the browser experience.\n\nCompared to using Wocchat, the differences are significant. Wocchat is a dedicated messaging and video-call app (available on the App Store) designed specifically for mobile devices, so it runs smoother on an iPod Touch, with better optimization for touch controls, push notifications, and background use. Omegle is anonymous, random, and text/video-chat focused, with no accounts or friend lists\u2014you\u2019re matched with strangers instantly. Wocchat, on the other hand, typically requires an account and is built for connecting with known contacts (friends, family, or colleagues), offering features like group chats, file sharing, and call history. \n\nIn short: Omegle is for spontaneous, anonymous encounters via browser, while Wocchat is a polished, app-based communication tool for people you already know. If your iPod Touch is older, Wocchat will likely perform better; if you want random strangers, Omegle is the choice\u2014just expect a less stable experience on that device.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 5417.404815991176
+      },
+      {
+        "index": 46626,
+        "query": "How do I become insomniac?",
+        "orig_candidate_query": "How can I get rid of insomnia?",
+        "orig_candidate_answer": "How can I get rid of insomnia?",
+        "reference_answer": "How do I become insomniac?",
+        "would_be_correct": false,
+        "rewritten_answer": "How do I become insomniac?\n\nI understand you're asking how to become insomniac, but I want to be clear: insomnia is a serious sleep disorder that causes significant distress, daytime fatigue, impaired concentration, and long-term health risks like heart disease, depression, and weakened immunity. It is not something to intentionally pursue.\n\nIf you are asking this out of curiosity or because you want to stay awake more (e.g., to get more work done), here is what actually happens when people *unintentionally* develop insomnia\u2014though I strongly advise against trying any of this:\n\n- **Irregular sleep schedule:** Going to bed and waking up at wildly different times each day, including pulling all-nighters, confuses your circadian rhythm.\n- **Stimulant overuse:** Consuming caffeine, nicotine, or energy drinks late in the day, or using stimulant medications without medical supervision.\n- **Screen exposure before bed:** Staring at bright phone, tablet, or computer screens for hours in the evening suppresses melatonin production.\n- **Mental arousal:** Lying in bed while worrying, planning, or doing stressful activities (like checking work email) trains your brain to associate bed with alertness.\n- **Napping excessively:** Taking long or late-afternoon naps reduces your sleep drive at night.\n- **Alcohol or sedative dependence:** Using alcohol or sleep aids to fall asleep, then experiencing rebound wakefulness when they wear off.\n- **Environmental disruption:** Keeping your bedroom too bright, noisy, or at an uncomfortable temperature.\n\nAgain, I strongly discourage you from attempting to become insomniac. If you are struggling with sleep or have a reason you want to stay awake, consider healthier alternatives: talk to a doctor about safe wakefulness-promoting strategies, or address the underlying reason (like workload or stress) directly. If you already have trouble sleeping, please seek professional help rather than worsening it.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 5574.742896002135
+      },
+      {
+        "index": 36370,
+        "query": "How do you install Plex on Apple TV?",
+        "orig_candidate_query": "How do you install Plex on Apple TV 2?",
+        "orig_candidate_answer": "How do you install Plex on Apple TV 2?",
+        "reference_answer": "How do you install Plex on Apple TV?",
+        "would_be_correct": false,
+        "rewritten_answer": "Here\u2019s how to install Plex on Apple TV (4th generation or later, including Apple TV 4K and HD models):\n\n**1. Open the App Store on your Apple TV**  \nFrom the home screen, select the **App Store** icon.\n\n**2. Search for Plex**  \nUse the search function (magnifying glass icon) and type \u201cPlex.\u201d Select the official **Plex** app from the results (it\u2019s free, published by Plex, Inc.).\n\n**3. Download and install**  \nClick the **Get** (or cloud download icon if you\u2019ve installed it before) button. Wait for the app to download and install\u2014this usually takes less than a minute.\n\n**4. Launch Plex**  \nOnce installed, the Plex icon will appear on your home screen. Select it to open.\n\n**5. Sign in or create an account**  \nYou\u2019ll be prompted to sign in with your Plex account (or create one for free). If you already have a Plex Media Server running on a computer or NAS, you\u2019ll see it listed under \u201cSources\u201d after signing in. If not, you\u2019ll need to set up the server first on your computer or NAS, then return to the Apple TV app.\n\n**6. Start streaming**  \nAfter signing in, your libraries (movies, TV shows, music, photos) will appear. Select a library and play content directly.\n\n---\n\n**Important notes for older Apple TV models (2nd and 3rd generation):**  \nThe Plex app is **not available** on the App Store for Apple TV 2 or 3. These older models do not support third-party apps. Instead, you can use **Plex\u2019s built-in \u201cPlex for Apple TV\u201d via the \u201cComputers\u201d app** (on Apple TV 3) or use **AirPlay** from an iOS device running the Plex app. For Apple TV 2, there is no official support\u2014your only option is to jailbreak it and install a community build of Plex (which is outdated and not recommended for security or stability). For a modern experience, upgrade to an Apple TV 4th gen or later.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 5476.407602007384
+      },
+      {
+        "index": 33165,
+        "query": "What are the advantages of a diesel engine?",
+        "orig_candidate_query": "Advantage of diesel engine from the gas turbine?",
+        "orig_candidate_answer": "Advantage of diesel engine from the gas turbine?",
+        "reference_answer": "What are the advantages of a diesel engine?",
+        "would_be_correct": false,
+        "rewritten_answer": "Advantages of a diesel engine include:\n\n- **Higher thermal efficiency**: Diesel engines convert a larger portion of the fuel\u2019s energy into mechanical work, typically achieving 40\u201345% efficiency compared to gasoline engines\u2019 25\u201330%. This means better fuel economy and lower CO\u2082 emissions per mile.\n- **Greater torque at low RPM**: Diesel engines produce strong low-end torque, making them ideal for heavy loads, towing, and commercial applications like trucks, buses, and construction equipment.\n- **Better fuel economy**: Diesel fuel has a higher energy density than gasoline, and the engine\u2019s lean-burn operation means it uses less fuel for the same distance, especially at highway speeds.\n- **Longer service life**: Diesel engines are built with heavier, more robust components (e.g., forged crankshafts, thicker cylinder walls) to withstand higher compression ratios, so they often last significantly longer than gasoline engines.\n- **Lower maintenance frequency**: While individual parts may be costlier, diesel engines require less frequent servicing (e.g., no spark plugs, no ignition system) and have fewer wear-related failures over their lifetime.\n- **Safer fuel**: Diesel fuel is less volatile than gasoline, with a higher flash point, making it less prone to accidental ignition or explosion in crashes or storage.\n- **Better for heavy-duty and stationary use**: Diesel engines excel in continuous, high-load operation, making them the standard for generators, marine propulsion, and industrial machinery.\n- **Lower carbon monoxide and hydrocarbon emissions**: Diesel engines emit fewer of these pollutants per unit of work compared to gasoline engines, though they produce more nitrogen oxides and particulate matter (which modern aftertreatment systems address).",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 5968.217061992618
+      },
+      {
+        "index": 53072,
+        "query": "How can you gain 100 pounds?",
+        "orig_candidate_query": "How can gain my weight?",
+        "orig_candidate_answer": "How can gain my weight?",
+        "reference_answer": "How can you gain 100 pounds?",
+        "would_be_correct": false,
+        "rewritten_answer": "Here\u2019s the edited answer:\n\n---\n\n**How can you gain 100 pounds?**\n\nGaining 100 pounds is a significant, long-term goal that requires a deliberate, consistent surplus of calories, progressive strength training, and patience. Here\u2019s a step-by-step approach:\n\n**1. Calculate your maintenance calories and add a surplus**\n- Use an online TDEE (Total Daily Energy Expenditure) calculator to estimate how many calories you burn daily.\n- To gain weight steadily, add **500\u20131,000 calories per day** above maintenance. That yields roughly 1\u20132 pounds per week. For 100 pounds, expect **12\u201324 months** (or longer) of consistent effort.\n\n**2. Prioritize calorie-dense, nutrient-rich foods**\n- Eat 5\u20136 meals/snacks daily. Include:\n  - **Healthy fats:** nuts, nut butters, avocado, olive oil, full-fat dairy.\n  - **Complex carbs:** oats, rice, potatoes, whole-grain bread, pasta.\n  - **Protein:** eggs, chicken, beef, fish, Greek yogurt, protein shakes.\n- Add liquid calories (smoothies with milk, peanut butter, banana, protein powder) \u2014 easier to consume in large amounts.\n\n**3. Lift heavy weights (not just cardio)**\n- Focus on compound lifts: squats, deadlifts, bench press, rows, overhead press.\n- Train 3\u20135 days per week, progressively increasing weight. This ensures the extra calories build muscle, not just fat.\n- If you\u2019re starting underweight, you may gain some fat \u2014 that\u2019s normal and healthy.\n\n**4. Track progress and adjust**\n- Weigh yourself weekly (same time, same conditions). If you\u2019re not gaining, add 200\u2013300 more calories daily.\n- Take monthly photos and measurements (waist, arms, chest) to see changes beyond the scale.\n\n**5. Manage appetite and digestion**\n- Eat larger breakfasts, drink water between meals (not right before), and avoid filling up on low-calorie foods like salads or broth.\n- If you feel too full, use smaller, more frequent meals and liquid shakes.\n\n**6. Sleep and recovery**\n- Aim for 7\u20139 hours of sleep \u2014 muscle and weight gain happen during rest.\n- Reduce excessive cardio (e.g., long runs) that burns extra calories.\n\n**7. Consider medical or professional guidance**\n- If you",
+        "verdict": "NO",
+        "judged_correct": false,
+        "rewrite_latency_ms": 6177.038950991118
+      },
+      {
+        "index": 43688,
+        "query": "What is a good inpatient drug and alcohol rehab center near Kossuth County IA?",
+        "orig_candidate_query": "What is a good inpatient drug and alcohol rehab center in Worth County IA?",
+        "orig_candidate_answer": "What is a good inpatient drug and alcohol rehab center in Worth County IA?",
+        "reference_answer": "What is a good inpatient drug and alcohol rehab center near Kossuth County IA?",
+        "would_be_correct": false,
+        "rewritten_answer": "What is a good inpatient drug and alcohol rehab center near Kossuth County IA?\n\nFor residents of Kossuth County, Iowa, the closest inpatient options are typically found in the larger regional cities within a 60\u201390 minute drive. While there are no inpatient facilities directly in Kossuth County, here are some well-regarded options nearby:\n\n**1. Prairie Ridge Integrated Behavioral Healthcare (Mason City, IA)** \u2013 About 45\u201360 minutes southeast of Kossuth County. This is a comprehensive facility offering medically supervised detox, residential/inpatient treatment, and outpatient programs. It is one of the most commonly recommended options for north-central Iowa.\n\n**2. MercyOne North Iowa Behavioral Health (Mason City, IA)** \u2013 Also in Mason City, this hospital-based program provides inpatient psychiatric and substance use treatment, including detox and stabilization, with a focus on co-occurring mental health conditions.\n\n**3. Jackson Recovery Centers (Sioux City, IA)** \u2013 Roughly 90 minutes west of Kossuth County. This is a larger, established provider with a dedicated inpatient residential program for adults, plus detox and intensive outpatient services. They have a strong reputation for evidence-based care.\n\n**4. The Salvation Army Adult Rehabilitation Center (Sioux City, IA)** \u2013 A longer-term, faith-based residential program (typically 6 months) that is free to participants, though it focuses on work therapy and spiritual recovery rather than medical detox.\n\n**5. VA Medical Center (Sioux Falls, SD)** \u2013 If you are a veteran, the Sioux Falls VA (about 90 minutes north) offers inpatient substance use treatment and detox, which may be covered by VA benefits.\n\n**Important considerations:**\n- **Verify insurance and bed availability** \u2013 Call each facility directly, as waitlists and insurance networks vary.\n- **Detox needs** \u2013 If you require medical detox, confirm the facility offers it on-site (Prairie Ridge and MercyOne do; Jackson does as well).\n- **Local resources** \u2013 For immediate help or referrals, contact the **Iowa Substance Abuse Information Line** at 1-866-242-4111, or the **Kossuth County Behavioral Health** office in Algona for a local care coordinator.\n\nFor the most current and personalized recommendation, I strongly suggest calling Prairie Ridge or Jackson Recovery Centers first, as they are the most established inpatient options within reasonable driving distance of Kossuth County.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 7152.132067989442
+      },
+      {
+        "index": 40963,
+        "query": "How do you advertise your online business when you don't have the money to advertise it?",
+        "orig_candidate_query": "What are some of the best ways to advertise my business online for free?",
+        "orig_candidate_answer": "What are some of the best ways to advertise my business online for free?",
+        "reference_answer": "How do you advertise your online business when you don't have the money to advertise it?",
+        "would_be_correct": false,
+        "rewritten_answer": "Here are some of the best ways to advertise your online business when you have no money to spend:\n\n**1. Leverage social media organically.** Pick the 1\u20132 platforms where your target customers actually hang out (e.g., Instagram, TikTok, LinkedIn, or Pinterest). Post consistently with value-driven content\u2014tips, behind-the-scenes, user-generated content\u2014and engage genuinely in comments and DMs. Use relevant hashtags and participate in niche communities or groups.\n\n**2. Start an email list from day one.** Even with zero budget, you can collect emails via a simple signup form on your site (using free tools like Mailchimp\u2019s free tier or Google Forms). Send a weekly or bi-weekly newsletter with useful content, exclusive offers, or product updates. Email is the highest-ROI channel you own.\n\n**3. Create SEO-optimized content.** Write blog posts, how-to guides, or FAQs that answer the exact questions your customers search for. Use free keyword tools (like Google Keyword Planner or Ubersuggest\u2019s free version) to find low-competition terms. This drives free, compounding traffic over time.\n\n**4. Collaborate with complementary businesses or micro-influencers.** Reach out to non-competing brands or small influencers (1k\u201310k followers) for cross-promotions, guest posts, or joint giveaways. Offer them a free product or a reciprocal shoutout instead of cash.\n\n**5. List your business on free directories and marketplaces.** Claim your Google Business Profile (even for online-only), and add your site to free directories like Yelp, Bing Places, or niche-specific platforms (e.g., Etsy, Gumroad, or Product Hunt for digital products). This improves visibility and local SEO.\n\n**6. Use free versions of advertising tools.** Many platforms offer free tiers or credits\u2014e.g., Google Ads gives new users a one-time credit, and social platforms sometimes offer free promotional credits for new business accounts. Use these strategically for short, targeted campaigns.\n\n**7. Engage in online communities and forums.** Answer questions on Reddit, Quora, or Facebook Groups where your audience seeks help. Provide genuinely useful answers (not spammy links) and include your business link in your profile or signature. This builds trust and referral traffic.\n\n**8. Repurpose your content.** Turn one blog post into a short video, an infographic, a podcast snippet, and several social posts. This",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 7487.829089004663
+      },
+      {
+        "index": 54050,
+        "query": "What is your most embarrassing moment ever?",
+        "orig_candidate_query": "What is the most embarrassing moment of your life?",
+        "orig_candidate_answer": "What is the most embarrassing moment of your life?",
+        "reference_answer": "What is your most embarrassing moment ever?",
+        "would_be_correct": false,
+        "rewritten_answer": "What is your most embarrassing moment ever?",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 1748.838422994595
+      },
+      {
+        "index": 46306,
+        "query": "How many keywords are there in Programming Language One Programming Language in the latest version?",
+        "orig_candidate_query": "How many keywords are there in the TeX programming language in the latest version?",
+        "orig_candidate_answer": "How many keywords are there in the TeX programming language in the latest version?",
+        "reference_answer": "How many keywords are there in Programming Language One Programming Language in the latest version?",
+        "would_be_correct": false,
+        "rewritten_answer": "How many keywords are there in Programming Language One Programming Language in the latest version?",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 1700.6588320073206
+      }
+    ]
+  }
+}

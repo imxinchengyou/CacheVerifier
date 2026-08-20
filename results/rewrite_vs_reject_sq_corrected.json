@@ -1,0 +1,285 @@
+{
+  "dataset": "search_queries_corrected",
+  "model": "finetuned_verifier_model_searchqueries_corrected",
+  "tau_low": 0.8,
+  "tau_high": 0.97,
+  "calibrated_threshold": 0.2419646978378296,
+  "n_calibration": 43140,
+  "n_test": 43140,
+  "n_false_reject_population": 7004,
+  "n_true_reject_population": 15411,
+  "false_reject": {
+    "n_population": 7004,
+    "n_sampled": 100,
+    "incorrect_rate": 0.24,
+    "incorrect_rate_ci": [
+      0.16,
+      0.32
+    ],
+    "rewrite_latency_ms": {
+      "mean_ms": 2665.323081680108,
+      "median_ms": 2511.0908429996925,
+      "p95_ms": 3909.1097384072777,
+      "n": 100
+    },
+    "examples": [
+      {
+        "index": 129326,
+        "query": "briggs and stratton parts catalog",
+        "orig_candidate_query": "briggs & stratton parts lookup",
+        "orig_candidate_answer": "You can look up Briggs & Stratton parts by entering your engine model, type, and code numbers (found on the engine's ID sticker) on the official Briggs & Stratton website or via their \"Parts Lookup\" tool. Simply search \"Briggs & Stratton parts lookup\" to access the official portal where you can view diagrams and order genuine parts.",
+        "reference_answer": "You can find Briggs & Stratton parts catalogs and diagrams by entering your model number on the official Briggs & Stratton website under the \"Shop Parts\" or \"Parts Lookup\" section. For older or discontinued engines, the site also offers free access to downloadable operator manuals and illustrated parts lists. Alternatively, third-party sites like Jack's Small Engines or Partstree provide searchable OEM diagrams for many models.",
+        "would_be_correct": true,
+        "rewritten_answer": "You can look up Briggs & Stratton parts by entering your engine model, type, and code numbers (found on the engine's ID sticker) on the official Briggs & Stratton website or via their \"Parts Lookup\" tool. Simply search \"Briggs & Stratton parts catalog\" to access the official portal where you can view diagrams, browse by engine family or equipment type, and order genuine parts. The catalog also allows you to search by part number directly if you already know what you need.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 2456.4990649960237
+      },
+      {
+        "index": 81610,
+        "query": "average social security check amount",
+        "orig_candidate_query": "average social security check 2019",
+        "orig_candidate_answer": "The average monthly Social Security retirement benefit for 2019 was **$1,461** (about $17,532 per year). For all retired workers, including those with disabilities, the average was slightly lower at **$1,461** for retirees specifically.",
+        "reference_answer": "The average monthly Social Security retirement benefit for retired workers is about **$1,976** as of January 2025. The average for all beneficiaries (including disabled workers, survivors, and dependents) is approximately **$1,795** per month.",
+        "would_be_correct": true,
+        "rewritten_answer": "The average monthly Social Security retirement benefit for 2024 is **$1,907** (about $22,884 per year). For all retired workers, including those with disabilities, the average was slightly lower at **$1,907** for retirees specifically. (Note: This figure is for 2024; the average for 2019 was $1,461 per month.)",
+        "verdict": "NO",
+        "judged_correct": false,
+        "rewrite_latency_ms": 2280.5017240025336
+      },
+      {
+        "index": 94295,
+        "query": "dvla driving test booking online",
+        "orig_candidate_query": "dvla book a driving test",
+        "orig_candidate_answer": "To book a practical driving test, visit the official GOV.UK website at **www.gov.uk/book-driving-test**. You'll need your UK driving licence number, a debit or credit card, and your theory test pass certificate number.",
+        "reference_answer": "You can book your UK driving test online through the official GOV.UK website (www.gov.uk/book-driving-test). You\u2019ll need your UK driving licence number, a valid email address, and a debit or credit card to pay the fee.",
+        "would_be_correct": true,
+        "rewritten_answer": "To book a practical driving test online, visit the official GOV.UK website at **www.gov.uk/book-driving-test**. You'll need your UK driving licence number, a debit or credit card, and your theory test pass certificate number. The online booking system allows you to choose your test centre, pick an available date and time, and pay securely\u2014all in one session. If you need to manage an existing booking (e.g., reschedule or cancel), use the same portal at **www.gov.uk/manage-driving-test**.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 2548.32080900087
+      },
+      {
+        "index": 92223,
+        "query": "bitlocker for windows 10 download 64 bit",
+        "orig_candidate_query": "download bitlocker for windows 10",
+        "orig_candidate_answer": "BitLocker is a built-in feature of Windows 10 Pro, Enterprise, and Education editions, so there is no separate download required. To enable it, go to Control Panel > System and Security > BitLocker Drive Encryption, or search for \"Manage BitLocker\" in the Start menu. If you have Windows 10 Home, you'll need to upgrade to a supported edition to use BitLocker.",
+        "reference_answer": "BitLocker is a built-in Windows 10 feature, not a separate download\u2014it\u2019s included in the 64-bit Pro, Enterprise, and Education editions. To enable it, go to Control Panel > BitLocker Drive Encryption or search \u201cManage BitLocker\u201d in the Start menu. No official standalone installer exists for the Home edition.",
+        "would_be_correct": true,
+        "rewritten_answer": "BitLocker is a built-in feature of Windows 10 Pro, Enterprise, and Education editions (both 32-bit and 64-bit), so there is no separate download required\u2014regardless of your system architecture. To enable it, go to Control Panel > System and Security > BitLocker Drive Encryption, or search for \"Manage BitLocker\" in the Start menu. If you have Windows 10 Home (64-bit or 32-bit), you'll need to upgrade to a supported edition to use BitLocker.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 2379.587327988702
+      },
+      {
+        "index": 97487,
+        "query": "buyers agreement for home purchase",
+        "orig_candidate_query": "contract for real estate sale",
+        "orig_candidate_answer": "A real estate sale contract is a legally binding agreement outlining the terms of a property transaction, including the purchase price, closing date, and contingencies (e.g., financing, inspection). It typically includes details on the parties, property description, earnest money deposit, and disclosures. Both buyer and seller must sign it, and it often requires a lawyer or real estate agent for proper execution.",
+        "reference_answer": "A Buyer's Agreement (or Buyer Representation Agreement) is a legally binding contract between a homebuyer and a real estate agent, outlining the agent's duties, the duration of the agreement, and the commission the buyer will pay. It typically specifies the type of property sought, the price range, and whether the relationship is exclusive or non-exclusive.",
+        "would_be_correct": true,
+        "rewritten_answer": "A buyer\u2019s agreement for a home purchase is a legally binding contract outlining the terms under which a buyer agrees to purchase a specific property, including the purchase price, closing date, and contingencies (e.g., financing, inspection, appraisal). It typically includes details on the parties, property description, earnest money deposit, and seller disclosures. Both buyer and seller must sign it, and it often requires a lawyer or real estate agent for proper execution. Unlike a listing agreement (which hires an agent to sell), this document is the actual purchase agreement, and it may also reference a separate buyer\u2019s representation agreement if an agent is involved.",
+        "verdict": "NO",
+        "judged_correct": false,
+        "rewrite_latency_ms": 2845.7468489941675
+      },
+      {
+        "index": 84183,
+        "query": "citi retail services citibank online sign in",
+        "orig_candidate_query": "citi banking online sign in",
+        "orig_candidate_answer": "To sign in to Citi Banking online, go to **citi.com** and click the **\"Sign On\"** button at the top right, then enter your User ID and Password. For a direct link, use **online.citi.com** or the Citi Mobile App.",
+        "reference_answer": "To sign in to your Citi Retail Services account, go to the official Citi Retail Services website and click \"Sign On\" at the top right. You'll need your User ID and password; if you haven't registered, use the \"Register Now\" link to set up online access.",
+        "would_be_correct": true,
+        "rewritten_answer": "To sign in to your **Citi Retail Services** account (the credit card servicing portal for store-branded cards like Best Buy, Home Depot, Macy\u2019s, and others), go to **citicards.com** or **retailservices.citi.com** and click **\"Sign On\"** at the top right. Enter your User ID and Password. If you don\u2019t have an account yet, select **\"Register\"** to set up online access using your card number and personal details.\n\nFor general Citi Banking (checking/savings) sign-in, use **citi.com** or **online.citi.com** with your banking User ID and Password. The Citi Mobile App also supports both types of accounts\u2014just choose the correct login tab (Retail Services vs. Banking) when signing in.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 3473.546894005267
+      },
+      {
+        "index": 73510,
+        "query": "cpt code for steroid injection shoulder",
+        "orig_candidate_query": "cpt code for steroid injection",
+        "orig_candidate_answer": "The CPT code for a steroid injection depends on the site injected (e.g., joint, bursa, tendon sheath) and whether imaging guidance was used. Common codes include **20600** (small joint/bursa), **20605** (intermediate joint/bursa), and **20610** (major joint/bursa), with modifier **-RT/-LT** for laterality and **77002** for fluoroscopic guidance if used.",
+        "reference_answer": "The CPT code for a shoulder steroid injection is **20610** (Arthrocentesis, aspiration and/or injection, major joint or bursa). If imaging guidance is used, you may also bill **76942** (ultrasound) or **77002** (fluoroscopic guidance) in addition.",
+        "would_be_correct": true,
+        "rewritten_answer": "The CPT code for a steroid injection into the shoulder depends on the specific structure injected and whether imaging guidance was used. Common codes include:\n\n- **20610** \u2013 Arthrocentesis, aspiration and/or injection, major joint or bursa (e.g., shoulder, hip, knee); this is the most common code for a glenohumeral (shoulder) joint or subacromial bursa injection.\n- **20550** \u2013 Injection(s); single tendon sheath or ligament, aponeurosis (e.g., biceps tendon sheath or rotator cuff tendon origin).\n- **20552** \u2013 Injection(s); single or multiple trigger point(s), one or two muscle groups (if injecting a myofascial trigger point in the shoulder girdle).\n- **20605** \u2013 Arthrocentesis, aspiration and/or injection, intermediate joint or bursa (e.g., acromioclavicular joint) \u2013 use this for the AC joint rather than the glenohumeral joint.\n\nAdd modifier **-RT** or **-LT** for laterality. If fluoroscopic or ultrasound guidance is used, append **77002** (fluoroscopic) or **76942** (ultrasound) in addition to the injection code.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 4081.121039998834
+      },
+      {
+        "index": 139070,
+        "query": "blood sugar levels conversion chart",
+        "orig_candidate_query": "chart for blood sugar levels",
+        "orig_candidate_answer": "Here\u2019s a standard blood sugar level chart (mg/dL) for adults, based on guidelines from the ADA (American Diabetes Association):\n\n| Category | Fasting | After Meals (1-2 hrs) | A1C (%) |\n|----------|---------|----------------------|---------|\n| Normal | 70\u201399 | < 140 | Below 5.7% |\n| Prediabetes | 100\u2013125 | 140\u2013199 | 5.7\u20136.4% |\n| Diabetes | 126+ | 200+ | 6.5%+ |\n\n**Note:** For people with diabetes, typical targets are 80\u2013130 mg/dL fasting and < 180 mg/dL after meals (individual goals vary). Always confirm with your doctor.",
+        "reference_answer": "A blood sugar conversion chart typically shows mmol/L (used in the UK, Canada, and Australia) and mg/dL (used in the US). To convert: **1 mmol/L = 18 mg/dL**, so 5.5 mmol/L equals 99 mg/dL. For reference, normal fasting levels are 70\u201399 mg/dL (3.9\u20135.5 mmol/L), while post-meal levels under 140 mg/dL (7.8 mmol/L) are generally considered healthy.",
+        "would_be_correct": true,
+        "rewritten_answer": "Here\u2019s a blood sugar conversion chart for mg/dL (milligrams per deciliter, used in the U.S.) and mmol/L (millimoles per liter, used in Canada, the UK, Australia, and much of Europe):\n\n| mg/dL | mmol/L |\n|-------|--------|\n| 70    | 3.9    |\n| 80    | 4.4    |\n| 90    | 5.0    |\n| 100   | 5.6    |\n| 110   | 6.1    |\n| 120   | 6.7    |\n| 126   | 7.0    |\n| 140   | 7.8    |\n| 150   | 8.3    |\n| 180   | 10.0   |\n| 200   | 11.1   |\n| 250   | 13.9   |\n| 300   | 16.7   |\n\n**Conversion formulas:**\n- To convert **mg/dL to mmol/L**: divide by 18 (or multiply by 0.0555).  \n  Example: 126 mg/dL \u00f7 18 = 7.0 mmol/L\n- To convert **mmol/L to mg/dL**: multiply by 18 (or divide by 0.0555).  \n  Example: 7.0 mmol/L \u00d7 18 = 126 mg/dL\n\n**Quick reference for common targets (ADA):**\n- Normal fasting: 70\u201399 mg/dL (3.9\u20135.5 mmol/L)\n- Prediabetes fasting: 100\u2013125 mg/dL (5.6\u20136.9 mmol/L)\n- Diabetes fasting: 126 mg/dL (7.0 mmol/L) or higher\n- Post-meal (1\u20132 hrs) normal: < 140 mg/dL (< 7.8 mmol/L)\n- Post-meal target for diabetics: < 180 mg/dL (< 10.0 mmol/L)\n\nAlways confirm your individual targets with your doctor, as goals may vary based on age, health status, and treatment plan.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 4564.83799200214
+      },
+      {
+        "index": 132841,
+        "query": "cm 2 to m 2",
+        "orig_candidate_query": "conversion of cm to m",
+        "orig_candidate_answer": "To convert centimeters (cm) to meters (m), divide the number of centimeters by 100. For example, 150 cm \u00f7 100 = 1.5 m.",
+        "reference_answer": "1 cm\u00b2 (square centimeter) equals 0.0001 m\u00b2 (square meter). To convert, divide the number of cm\u00b2 by 10,000.",
+        "would_be_correct": true,
+        "rewritten_answer": "To convert square centimeters (cm\u00b2) to square meters (m\u00b2), divide the number of square centimeters by 10,000 (since 1 m\u00b2 = 100 cm \u00d7 100 cm = 10,000 cm\u00b2). For example, 15,000 cm\u00b2 \u00f7 10,000 = 1.5 m\u00b2.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 1769.9501809984213
+      },
+      {
+        "index": 138956,
+        "query": "family guy cast peter griffin",
+        "orig_candidate_query": "cast of family guy characters",
+        "orig_candidate_answer": "The main cast of *Family Guy* includes Seth MacFarlane (Peter, Stewie, Brian, Glenn Quagmire), Alex Borstein (Lois), Seth Green (Chris), Mila Kunis (Meg), and Mike Henry (Cleveland). Recurring voices include Patrick Warburton (Joe), John Viener, and Arif Zahir (Cleveland, since 2021).",
+        "reference_answer": "Peter Griffin is voiced by Seth MacFarlane, who is also the creator of *Family Guy*.",
+        "would_be_correct": true,
+        "rewritten_answer": "The main cast of *Family Guy* includes Seth MacFarlane, who voices Peter Griffin (as well as Stewie, Brian, and Glenn Quagmire). Other main cast members are Alex Borstein (Lois), Seth Green (Chris), Mila Kunis (Meg), and Mike Henry (Cleveland). Recurring voices include Patrick Warburton (Joe), John Viener, and Arif Zahir (Cleveland, since 2021).",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 1912.544289996731
+      }
+    ]
+  },
+  "true_reject": {
+    "n_population": 15411,
+    "n_sampled": 100,
+    "incorrect_rate": 0.22,
+    "incorrect_rate_ci": [
+      0.14,
+      0.3
+    ],
+    "rewrite_latency_ms": {
+      "mean_ms": 2935.0763817301777,
+      "median_ms": 2760.8216685039224,
+      "p95_ms": 4602.984868505155,
+      "n": 100
+    },
+    "examples": [
+      {
+        "index": 93399,
+        "query": "facts about the fourth amendment",
+        "orig_candidate_query": "facts about the 5th amendment",
+        "orig_candidate_answer": "The 5th Amendment protects against self-incrimination (\"pleading the Fifth\"), double jeopardy, and being deprived of life, liberty, or property without due process. It also requires a grand jury indictment for serious federal crimes and forbids taking private property without just compensation.",
+        "reference_answer": "The Fourth Amendment protects citizens from unreasonable searches and seizures by the government, requiring probable cause for warrants. It applies to law enforcement actions, including arrests, property searches, and digital data collection. It was ratified in 1791 as part of the Bill of Rights, and its protections have been extended to the states through the Fourteenth Amendment.",
+        "would_be_correct": false,
+        "rewritten_answer": "The 4th Amendment protects against unreasonable searches and seizures by the government. It requires law enforcement to obtain a warrant based on probable cause, supported by oath or affirmation, and specifically describing the place to be searched and the persons or things to be seized. It also protects against self-incrimination (\"pleading the Fifth\"), double jeopardy, and being deprived of life, liberty, or property without due process. It also requires a grand jury indictment for serious federal crimes and forbids taking private property without just compensation.",
+        "verdict": "NO",
+        "judged_correct": false,
+        "rewrite_latency_ms": 2514.745865992154
+      },
+      {
+        "index": 133745,
+        "query": "call of duty black ops 2 weapons",
+        "orig_candidate_query": "call of duty black ops 3 weapons",
+        "orig_candidate_answer": "Call of Duty: Black Ops 3 features a diverse arsenal of futuristic weapons, including assault rifles like the KN-44 and XR-2, SMGs like the VMP and Vesper, and unique specialists' weapons like the War Machine and Sparrow. The game also includes a wide range of tactical, lethal, and scorestreak equipment, alongside a Zombies mode with its own exclusive Wonder Weapons.",
+        "reference_answer": "Call of Duty: Black Ops 2 features a diverse arsenal including assault rifles like the M8A1 and AN-94, SMGs like the MSMC and PDW-57, and futuristic weapons like the Tac-45 pistol and Ballista sniper rifle. It also introduced the Peacekeeper SMG as a DLC weapon, alongside a variety of shotguns, LMGs, and launchers.",
+        "would_be_correct": false,
+        "rewritten_answer": "Call of Duty: Black Ops 2 features a diverse arsenal of Cold War-era and near-future weapons, including assault rifles like the AN-94 and M8A1, SMGs like the MSMC and PDW-57, and unique scorestreak weapons like the Death Machine and War Machine. The game also includes a wide range of tactical, lethal, and scorestreak equipment, alongside a Zombies mode with its own exclusive Wonder Weapons.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 2435.9759660001146
+      },
+      {
+        "index": 99780,
+        "query": "dvla car tax new owner",
+        "orig_candidate_query": "dvla tax car just bought",
+        "orig_candidate_answer": "To tax a car you've just bought, you'll need the 12-digit reference number from your new V5C logbook (or the green slip from the old keeper if you bought it from a dealer). You can do this online at gov.uk/tax-vehicle, by phone, or at a Post Office.",
+        "reference_answer": "When you buy a vehicle, the tax (vehicle excise duty) does not transfer to you as the new owner\u2014the seller's tax is automatically cancelled, and you must tax the car immediately before you can drive it. You can do this online at GOV.UK, by phone, or at a Post Office, and you'll need the 11-digit reference number from the new V5C log book.",
+        "would_be_correct": false,
+        "rewritten_answer": "To tax a car as a new owner, you'll need the 12-digit reference number from your new V5C logbook (or the green slip from the old keeper if you bought it from a dealer). You can do this online at gov.uk/tax-vehicle, by phone, or at a Post Office. If you haven't received the V5C yet, you can still tax it using the 12-digit reference from the green 'new keeper' slip (V5C/2) given to you when you bought the car.",
+        "verdict": "NO",
+        "judged_correct": false,
+        "rewrite_latency_ms": 2623.0966559960507
+      },
+      {
+        "index": 127997,
+        "query": "atlantis underwater hotel in dubai",
+        "orig_candidate_query": "atlantis the palm dubai hotel",
+        "orig_candidate_answer": "Atlantis, The Palm is a luxury resort located on the artificial Palm Jumeirah island in Dubai, known for its underwater suites, Aquaventure Waterpark, and the Lost Chambers Aquarium. It offers direct beach access, fine dining, and family-friendly attractions, with iconic architecture visible from the Dubai coastline.",
+        "reference_answer": "The Atlantis, The Palm in Dubai is a luxury resort located on the Palm Jumeirah, and while it is not an underwater hotel, it features the renowned **Underwater Suites** (part of the Imperial Club) with floor-to-ceiling windows overlooking the Ambassador Lagoon aquarium. For a true underwater hotel experience, the nearby **Atlantis The Palm** is not it\u2014instead, the only underwater hotel suite in Dubai is at **Atlantis The Palm's** sister property, **Atlantis The Royal**, which offers the **\"Royal Mansion\"** with underwater views. However, the most famous fully underwater hotel in the UAE is actually **Hydropolis (planned but never built)**; the only operational underwater hotel in the world is the **Muraka** at Conrad Maldives, not Dubai.",
+        "would_be_correct": false,
+        "rewritten_answer": "Atlantis, The Palm is a luxury resort located on the artificial Palm Jumeirah island in Dubai, known for its underwater suites, Aquaventure Waterpark, and the Lost Chambers Aquarium. The hotel\u2019s signature underwater experience is the **Imperial and Poseidon Underwater Suites**, which feature floor-to-ceiling windows looking directly into the Lost Chambers Aquarium, allowing guests to sleep and bathe surrounded by marine life. It offers direct beach access, fine dining, and family-friendly attractions, with iconic architecture visible from the Dubai coastline. Note that while these suites are the closest to an \"underwater hotel\" in Dubai, the entire hotel is not submerged\u2014only the suites are.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 2974.2435439984547
+      },
+      {
+        "index": 125815,
+        "query": "big bang theory original pilot",
+        "orig_candidate_query": "big bang theory unaired pilot",
+        "orig_candidate_answer": "The unaired pilot for *The Big Bang Theory* was filmed in 2006 and featured a very different cast, including actors Amanda Walsh (as Katie) and Iris Bahr (as Gilda) in the roles that would later become Penny and a female neighbor. The only original cast members kept were Johnny Galecki, Jim Parsons, and Kaley Cuoco was not yet involved. Footage and a script of this pilot exist, with the version being notably darker and more crude than the final show.",
+        "reference_answer": "The original pilot for *The Big Bang Theory* was filmed in 2006 but was never aired. It featured significantly different characters, including a female lead named Katie (played by Amanda Walsh) and a different version of Penny, and was rejected by CBS before being reworked and re-shot with the cast we know today.",
+        "would_be_correct": false,
+        "rewritten_answer": "The unaired pilot for *The Big Bang Theory* was filmed in 2006 and featured a very different cast, including actors Amanda Walsh (as Katie) and Iris Bahr (as Gilda) in the roles that would later become Penny and a female neighbor. The only original cast members kept were Johnny Galecki and Jim Parsons; Kaley Cuoco was not yet involved. Footage and a script of this pilot exist, with the version being notably darker and more crude than the final show. After the network rejected this original pilot, the show was reworked\u2014Katie was replaced with the more optimistic Penny (played by Cuoco), the character of Gilda was dropped, and the tone was lightened\u2014leading to the series that was eventually picked up and aired.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 2898.526001998107
+      },
+      {
+        "index": 82423,
+        "query": "australia time to ist converter",
+        "orig_candidate_query": "est to ist converter time",
+        "orig_candidate_answer": "EST (Eastern Standard Time, UTC-5) is 10 hours and 30 minutes behind IST (Indian Standard Time, UTC+5:30). So, when it's 9:00 AM EST, it's 7:30 PM IST the same day.",
+        "reference_answer": "To convert Australian time to Indian Standard Time (IST), subtract 4 hours and 30 minutes from Australian Eastern Standard Time (AEST) or 2 hours and 30 minutes from Australian Western Standard Time (AWST). For example, 12:00 PM AEST is 7:30 AM IST.",
+        "would_be_correct": false,
+        "rewritten_answer": "EST (Eastern Standard Time, UTC-5) is 10 hours and 30 minutes behind IST (Indian Standard Time, UTC+5:30). So, when it's 9:00 AM EST, it's 7:30 PM IST the same day.\n\n---\n\n**For Australia to IST conversion:**\n\nAustralia has multiple time zones, so the offset depends on which part of Australia you're converting from:\n\n- **Australian Eastern Standard Time (AEST, UTC+10)** \u2013 used in Sydney, Melbourne, Brisbane, Canberra: AEST is **4 hours and 30 minutes ahead** of IST. So, when it's 9:00 AM AEST, it's 4:30 AM IST the same day.\n- **Australian Central Standard Time (ACST, UTC+9:30)** \u2013 used in Adelaide, Darwin: ACST is **4 hours ahead** of IST. So, when it's 9:00 AM ACST, it's 5:00 AM IST the same day.\n- **Australian Western Standard Time (AWST, UTC+8)** \u2013 used in Perth: AWST is **2 hours and 30 minutes ahead** of IST. So, when it's 9:00 AM AWST, it's 6:30 AM IST the same day.\n\n*Note: During daylight saving time (typically October\u2013April), AEDT (UTC+11) and ACDT (UTC+10:30) are used in the eastern and central states, adding 1 hour to the offsets above.*",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 3571.321737996186
+      },
+      {
+        "index": 74323,
+        "query": "can you die from copd",
+        "orig_candidate_query": "death from copd what to expect",
+        "orig_candidate_answer": "In the final stages of COPD, you can expect increasing breathlessness even at rest, frequent severe flare-ups, and difficulty with daily activities like eating or speaking. As the disease progresses, symptoms may include confusion, extreme fatigue, and a drop in oxygen levels, with the final days often marked by labored breathing, reduced consciousness, and a natural slowing of the body. Palliative care focuses on comfort, managing pain, and easing breathing distress during this time.",
+        "reference_answer": "Yes, COPD is a progressive and life-threatening disease. While you cannot die from the disease itself in an instant, it can be fatal, usually due to complications like respiratory failure, heart problems, or severe infections (such as pneumonia). End-stage COPD often leads to death when the lungs can no longer provide enough oxygen to sustain vital organs.",
+        "would_be_correct": false,
+        "rewritten_answer": "In the final stages of COPD, you can expect increasing breathlessness even at rest, frequent severe flare-ups, and difficulty with daily activities like eating or speaking. As the disease progresses, symptoms may include confusion, extreme fatigue, and a drop in oxygen levels, with the final days often marked by labored breathing, reduced consciousness, and a natural slowing of the body. Palliative care focuses on comfort, managing pain, and easing breathing distress during this time.\n\nYes, you can die from COPD. It is a progressive and life-limiting disease, and while it may not be listed as the immediate cause of death on a certificate, it is often the underlying cause. Death typically results from complications such as respiratory failure, heart failure (due to strain on the heart), pneumonia, or a severe flare-up that overwhelms the lungs. The timeline varies widely\u2014some people live for years with advanced COPD, while others decline more rapidly, especially if they continue smoking or have frequent hospitalizations.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 3786.782099996344
+      },
+      {
+        "index": 107605,
+        "query": "benign paroxysmal positional vertigo test",
+        "orig_candidate_query": "benign paroxysmal positional vertigo nhs",
+        "orig_candidate_answer": "Benign paroxysmal positional vertigo (BPPV) is a common inner ear condition that causes brief, intense episodes of dizziness or vertigo, often triggered by changes in head position, such as turning over in bed or looking up. According to the NHS, it is not a serious condition and usually resolves on its own within a few weeks or months, but can be treated with specific head movements (the Epley manoeuvre) performed by a clinician or with exercises at home.",
+        "reference_answer": "The most common test for benign paroxysmal positional vertigo (BPPV) is the **Dix-Hallpike maneuver**, where a doctor rapidly moves you from sitting to lying with your head turned to one side to trigger and observe nystagmus (eye jerking). For horizontal canal BPPV, the **supine roll test** (rolling the head side to side while lying flat) is used instead.",
+        "would_be_correct": false,
+        "rewritten_answer": "Benign paroxysmal positional vertigo (BPPV) is a common inner ear condition that causes brief, intense episodes of dizziness or vertigo, often triggered by changes in head position, such as turning over in bed or looking up. According to the NHS, it is not a serious condition and usually resolves on its own within a few weeks or months, but can be treated with specific head movements (the Epley manoeuvre) performed by a clinician or with exercises at home.\n\nTo diagnose BPPV, the NHS typically uses the **Dix-Hallpike test**. During this test, a clinician will ask you to sit on a bed and then quickly lie back with your head turned to one side, slightly extended over the edge. This movement is designed to provoke the vertigo and nystagmus (involuntary eye movements) characteristic of BPPV. The test is repeated with your head turned to the other side to check both ears. If the test reproduces your symptoms and shows the typical eye movements, it confirms the diagnosis. In some cases, a **supine roll test** may also be used if the BPPV is thought to affect the horizontal semicircular canal. These tests are usually performed in a GP surgery or a specialist clinic, and you should not attempt them at home without medical supervision, as they can cause significant dizziness.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 3904.292966995854
+      },
+      {
+        "index": 136532,
+        "query": "beauty and beast full movie",
+        "orig_candidate_query": "beauty and the beast 2017 full movie",
+        "orig_candidate_answer": "The 2017 live-action *Beauty and the Beast* is available to stream on Disney+ and can be rented or purchased on platforms like Amazon Prime Video, Apple TV, and YouTube. The film stars Emma Watson as Belle and Dan Stevens as the Beast.",
+        "reference_answer": "The 1991 animated *Beauty and the Beast* is available to stream on Disney+. The 2017 live-action remake is also on Disney+, and both films can be rented or purchased on platforms like Amazon Prime Video, Apple TV, and YouTube.",
+        "would_be_correct": false,
+        "rewritten_answer": "The 2017 live-action *Beauty and the Beast* is available to stream on Disney+ and can be rented or purchased on platforms like Amazon Prime Video, Apple TV, and YouTube. The film stars Emma Watson as Belle and Dan Stevens as the Beast. If you're looking for the original 1991 animated version, that is also available on Disney+.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 1998.3061070088297
+      },
+      {
+        "index": 128255,
+        "query": "benefits of kelp for women",
+        "orig_candidate_query": "benefits of kale for women",
+        "orig_candidate_answer": "Kale is a nutrient powerhouse for women, providing high amounts of iron and calcium to support bone health and prevent anemia, especially important during menstruation and menopause. It is also rich in vitamin K, antioxidants, and fiber, which promote heart health, hormonal balance, and digestive regularity.",
+        "reference_answer": "Kelp is rich in iodine, which supports healthy thyroid function\u2014crucial for regulating women's metabolism, energy, and hormone balance. It also provides calcium, magnesium, and iron, which can help support bone health and combat fatigue, especially during menstruation or menopause.",
+        "would_be_correct": false,
+        "rewritten_answer": "Kelp is a nutrient powerhouse for women, providing high amounts of iodine and calcium to support thyroid function and bone health, especially important during menstruation and menopause. It is also rich in vitamins (like vitamin K and folate), antioxidants, and fiber, which promote heart health, hormonal balance, and digestive regularity. Additionally, kelp contains fucoidan and lignans, which may help support breast health and estrogen metabolism, while its natural iodine content aids in regulating metabolism and energy levels.",
+        "verdict": "YES",
+        "judged_correct": true,
+        "rewrite_latency_ms": 2587.48050199938
+      }
+    ]
+  }
+}
