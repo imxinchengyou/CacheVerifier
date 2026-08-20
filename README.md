@@ -22,8 +22,15 @@ the hit-rate/error-rate trade-off?
   percentage points of hit rate at matched error rate on both benchmark
   datasets.
 - An **off-the-shelf** cross-encoder verifier cashes in only a small,
-  fragile slice of that headroom — the paper's Go/No-Go verdict is a
-  **weak Go**, not an unqualified win.
+  fragile slice of that headroom under the paper's original grid-searched
+  evaluation — the paper's Go/No-Go verdict is a **weak Go**, not an
+  unqualified win. **[2026-08-15 update]** Retested with an *honest*
+  threshold selection (chronological calibration/test split, no peeking at
+  the test half), SearchQueries' verdict reverses to a clean win at every
+  tested point — how much of the original "net harmful" result reflects a
+  genuine SearchQueries-specific weakness versus how the original
+  evaluation happened to pick its threshold is now the paper's own
+  least-settled open question (§6.1/§5.4).
 - **Fine-tuning that same verifier on a dataset's own gray-zone labels**
   closes most of the gap on all three independent datasets tested,
   including turning SearchQueries from a *net-harmful* verifier (AUC 0.60 —
@@ -31,11 +38,18 @@ the hit-rate/error-rate trade-off?
   [`PAPER_EN.md`](PAPER_EN.md): an earlier release of this paper reported
   AUC 0.49 due to a since-corrected data defect) into one that beats the
   static-threshold frontier at 53 of 54 tested points, 1 tie, zero losses
-  (AUC 0.71).
+  (AUC 0.71) — and the same zero-loss verdict holds under honest
+  calibration too, on all three datasets.
 - The recipe tolerates realistic label noise (~30%) and cold start, and
   holds up on real production customer-support traffic — with **one
   genuine counter-example**, traced to a specific, monitorable cause, and
   a working monitor prototype that catches it before it does damage.
+- **[2026-08-17 update]** A reproduction bug in the adaptive-threshold
+  baseline (Group B) was found and fixed — the official vCache algorithm
+  pre-seeds each cache entry with two synthetic bootstrap observations that
+  this paper's earlier port omitted. After the fix, Group B's hit rate rises
+  **4.4x–29.1x** across all three datasets, with error rate staying below
+  the target guarantee throughout.
 
 **Read the paper:** [`PAPER.md`](PAPER.md) (Chinese) · [`PAPER_EN.md`](PAPER_EN.md) ·
 [`PAPER_EN.tex`](PAPER_EN.tex) (LaTeX source)
@@ -44,11 +58,33 @@ the hit-rate/error-rate trade-off?
 
 | Dataset | Off-the-shelf verifier (Group D) | Domain-fine-tuned verifier (Group E) |
 |---|---|---|
-| LmArena (conversational) | AUC 0.72 · best reproducible net gain ≈ **+1.9pp** hit rate | AUC **0.88** · beats static-threshold frontier at nearly every tested point |
-| SearchQueries (short keyword) | AUC 0.60 · **net harmful** (23/36 losses to static threshold) | AUC **0.71** · wins 53/54 tested points, 1 tie, 0 losses |
-| Quora (paraphrase pairs) | — (not in original benchmark) | Smaller-magnitude replication of the same pattern; never worse than the untuned baseline |
+| LmArena (conversational) | AUC 0.72 · best reproducible net gain ≈ **+1.9pp** hit rate (grid search) · **+5.66pp** under honest calibration | AUC **0.88** · beats static-threshold frontier at nearly every tested point (grid search) · **6/6** under honest calibration, **+5.66pp** |
+| SearchQueries (short keyword) | AUC 0.60 · **net harmful** under grid search (23/36 losses to static threshold) · **reverses to 6/6 wins** (+0.78pp to +3.67pp) under honest calibration | AUC **0.71** · wins 53/54 tested points, 1 tie, 0 losses (grid search) · **6/6** under honest calibration, **+7.74pp** |
+| Quora (paraphrase pairs) | — (not in original benchmark) | Smaller-magnitude replication of the same pattern; never worse than the untuned baseline under either grid search or honest calibration (0 losses either way) |
 
-Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–28pp** hit rate at matched error rate. Full numbers, confidence intervals, and four further robustness ablations (noise, cold start, drift, real production traffic) are in the paper, §5.
+"Grid search" = the paper's original hand-picked threshold grid, best point reported. "Honest calibration" = a threshold chosen via Youden's J on a held-out calibration half only, then measured on the untouched test half (§5.4) — added 2026-08-15/16 specifically to test whether the grid-search numbers above were optimistic; see §5.4/§6.1 for the full account of where the two methods agree and where they don't (Quora is the one dataset where honest calibration is *worse*, traced to the dataset's own score-separability ceiling, not a calibration artifact).
+
+Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–28pp** hit rate at matched error rate. A separate reproduction fix for the adaptive-threshold baseline (Group B) raised its hit rate **4.4x–29.1x** across all three datasets (§5.2) — Group B sits at a different hit-rate scale and isn't part of the Go/No-Go comparison above. Full numbers, confidence intervals, and further robustness/ablation sections (noise, cold start, drift monitor, τ_high sensitivity, reranker capacity vs. training distribution, Conformal Risk Control, rewrite-vs-reject) are in the paper, §5.9–§5.14.
+
+## Further ablations (§5.9–§5.14)
+
+- **Drift monitor (§5.9):** two change-point tests on gray-zone labels alone
+  catch the one real-traffic counter-example's degradation before it does
+  damage, with no false alarms on the unaffected brand.
+- **Action-verb bucketing pre-filter (§5.10):** tested and refuted on all
+  three datasets.
+- **τ_high sensitivity (§5.11):** dataset-dependent — widening it more than
+  triples LmArena's net lead but flips SearchQueries to a net loss.
+- **Reranker capacity vs. training distribution (§5.12):** neither a
+  larger same-distribution reranker nor a broader-distribution one
+  meaningfully closes SearchQueries' gap — in-domain fine-tuning (§5.6)
+  remains the only verified remedy.
+- **Conformal Risk Control (§5.13):** upgrades the gray-zone reuse
+  threshold from a point estimate to a finite-sample risk guarantee, at
+  near-oracle efficiency (η≈1.0) across all three datasets.
+- **Rewrite instead of reject (§5.14):** a TweakLLM-style rewrite-and-serve
+  policy shows no measurable net benefit over the existing binary gate — a
+  negative ablation.
 
 ## Repository layout
 
