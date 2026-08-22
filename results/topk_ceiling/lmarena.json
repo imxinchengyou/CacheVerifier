@@ -1,0 +1,56 @@
+{
+  "dataset": "lmarena",
+  "tau_low": 0.8,
+  "tau_high": 0.97,
+  "k": 5,
+  "n_total_requests": 60000,
+  "n_gray_zone_wrong": 3755,
+  "by_k": {
+    "2": {
+      "n_gray_zone_wrong": 3755,
+      "raw_ceiling_count": 235,
+      "raw_ceiling_fraction": 0.06258322237017311,
+      "reachable_ceiling_count": 235,
+      "reachable_ceiling_fraction": 0.06258322237017311,
+      "found_at_rank_histogram": {
+        "2": 235
+      }
+    },
+    "3": {
+      "n_gray_zone_wrong": 3755,
+      "raw_ceiling_count": 353,
+      "raw_ceiling_fraction": 0.09400798934753662,
+      "reachable_ceiling_count": 353,
+      "reachable_ceiling_fraction": 0.09400798934753662,
+      "found_at_rank_histogram": {
+        "2": 235,
+        "3": 118
+      }
+    },
+    "4": {
+      "n_gray_zone_wrong": 3755,
+      "raw_ceiling_count": 420,
+      "raw_ceiling_fraction": 0.1118508655126498,
+      "reachable_ceiling_count": 420,
+      "reachable_ceiling_fraction": 0.1118508655126498,
+      "found_at_rank_histogram": {
+        "2": 235,
+        "3": 118,
+        "4": 67
+      }
+    },
+    "5": {
+      "n_gray_zone_wrong": 3755,
+      "raw_ceiling_count": 451,
+      "raw_ceiling_fraction": 0.12010652463382157,
+      "reachable_ceiling_count": 450,
+      "reachable_ceiling_fraction": 0.11984021304926765,
+      "found_at_rank_histogram": {
+        "2": 235,
+        "3": 118,
+        "4": 67,
+        "5": 30
+      }
+    }
+  }
+}

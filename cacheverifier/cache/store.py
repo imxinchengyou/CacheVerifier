@@ -86,3 +86,19 @@ class VectorCacheStore:
         best_idx = int(labels[0, 0])
         similarity = 1.0 - float(distances[0, 0])
         return NeighborMatch(entry=self._entries[best_idx], similarity=similarity, index=best_idx)
+
+    def query_topk(self, embedding: np.ndarray, k: int) -> list[NeighborMatch]:
+        """Return up to `k` approximate nearest neighbors, most similar
+        first. Empty list if the cache is empty; fewer than `k` results if
+        the cache holds fewer than `k` entries (hnswlib requires k <= current
+        element count).
+        """
+        size = len(self._entries)
+        if size == 0:
+            return []
+        k = min(k, size)
+        labels, distances = self._index.knn_query(embedding.reshape(1, -1), k=k)
+        return [
+            NeighborMatch(entry=self._entries[int(idx)], similarity=1.0 - float(dist), index=int(idx))
+            for idx, dist in zip(labels[0], distances[0])
+        ]

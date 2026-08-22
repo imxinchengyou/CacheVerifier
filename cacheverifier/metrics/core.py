@@ -22,6 +22,15 @@ class RequestOutcome:
     hit/miss + correctness into the same TP/FP/TN/FN confusion matrix vCache
     reports, and it's the signal Group B's online threshold learner trains
     on via `CachePolicy.observe`.
+
+    `verifier_calls` defaults to 0/1 for every existing (K=1) policy, which
+    only ever calls a verifier once per request. `cacheverifier.experiments.
+    topk_sweep`'s cascade policies (Top-K retrieval direction, see memory)
+    can call the verifier more than once per request (rank 1 rejected, try
+    rank 2, ...), so `verifier_latency_ms` there is the SUM of every call in
+    the cascade for that request, not a single call's latency —
+    `mean_verifier_latency_ms` below still averages correctly over
+    `verifier_invoked` requests either way.
     """
 
     action: Literal["hit", "miss"]
@@ -29,6 +38,7 @@ class RequestOutcome:
     would_be_correct: bool | None = None
     verifier_invoked: bool = False
     verifier_latency_ms: float = 0.0
+    verifier_calls: int = 0
 
 
 def hit_rate(outcomes: list[RequestOutcome]) -> float:
@@ -60,6 +70,17 @@ def false_accept_rate(outcomes: list[RequestOutcome]) -> float:
 
 def mean_verifier_latency_ms(outcomes: list[RequestOutcome]) -> float:
     invoked = [o.verifier_latency_ms for o in outcomes if o.verifier_invoked]
+    if not invoked:
+        return 0.0
+    return float(np.mean(invoked))
+
+
+def mean_verifier_calls(outcomes: list[RequestOutcome]) -> float:
+    """Mean number of verifier calls per verified request -- always 1.0 for
+    every K=1 policy (Group C/D); only differs from 1.0 for a cascade policy
+    (`cacheverifier.experiments.topk_sweep`) that may try more than one
+    candidate per request."""
+    invoked = [o.verifier_calls for o in outcomes if o.verifier_invoked]
     if not invoked:
         return 0.0
     return float(np.mean(invoked))
