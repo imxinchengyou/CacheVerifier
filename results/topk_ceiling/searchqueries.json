@@ -1,0 +1,56 @@
+{
+  "dataset": "search_queries_corrected",
+  "tau_low": 0.8,
+  "tau_high": 0.97,
+  "k": 5,
+  "n_total_requests": 150000,
+  "n_gray_zone_wrong": 44511,
+  "by_k": {
+    "2": {
+      "n_gray_zone_wrong": 44511,
+      "raw_ceiling_count": 5804,
+      "raw_ceiling_fraction": 0.1303947338860057,
+      "reachable_ceiling_count": 5387,
+      "reachable_ceiling_fraction": 0.12102626317090158,
+      "found_at_rank_histogram": {
+        "2": 5387
+      }
+    },
+    "3": {
+      "n_gray_zone_wrong": 44511,
+      "raw_ceiling_count": 7880,
+      "raw_ceiling_fraction": 0.17703489025184785,
+      "reachable_ceiling_count": 7195,
+      "reachable_ceiling_fraction": 0.16164543595965042,
+      "found_at_rank_histogram": {
+        "2": 5387,
+        "3": 1808
+      }
+    },
+    "4": {
+      "n_gray_zone_wrong": 44511,
+      "raw_ceiling_count": 8972,
+      "raw_ceiling_fraction": 0.20156815169283998,
+      "reachable_ceiling_count": 8072,
+      "reachable_ceiling_fraction": 0.18134843072498932,
+      "found_at_rank_histogram": {
+        "2": 5387,
+        "3": 1808,
+        "4": 877
+      }
+    },
+    "5": {
+      "n_gray_zone_wrong": 44511,
+      "raw_ceiling_count": 9529,
+      "raw_ceiling_fraction": 0.21408191233627644,
+      "reachable_ceiling_count": 8487,
+      "reachable_ceiling_fraction": 0.19067196872683156,
+      "found_at_rank_histogram": {
+        "2": 5387,
+        "3": 1808,
+        "4": 877,
+        "5": 415
+      }
+    }
+  }
+}
