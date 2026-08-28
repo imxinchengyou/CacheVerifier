@@ -1,0 +1,314 @@
+{
+  "dataset": "lmarena",
+  "alpha": 0.02,
+  "tau_low": 0.8,
+  "tau_high": 0.97,
+  "warmup_n": 1500,
+  "recal_every": 500,
+  "recal_window": 2000,
+  "frozen_threshold_from_regime1": 5.73002290725708,
+  "regimes": {
+    "baseline": {
+      "insert_on_hit": true,
+      "n_gray_zone": 16102,
+      "n_direct_hit": 43699,
+      "n_direct_miss": 199,
+      "final_store_size": 60000,
+      "overall_realized_risk": 0.012482921376226556,
+      "chunks": [
+        {
+          "chunk": 0,
+          "n": 1610,
+          "reuse_rate": 0.006211180124223602,
+          "realized_risk": 0.003105590062111801,
+          "exceeds_alpha": false,
+          "mean_threshold_used": Infinity
+        },
+        {
+          "chunk": 1,
+          "n": 1610,
+          "reuse_rate": 0.2031055900621118,
+          "realized_risk": 0.02236024844720497,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 2,
+          "n": 1610,
+          "reuse_rate": 0.2677018633540373,
+          "realized_risk": 0.017391304347826087,
+          "exceeds_alpha": false,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 3,
+          "n": 1610,
+          "reuse_rate": 0.34596273291925467,
+          "realized_risk": 0.016770186335403725,
+          "exceeds_alpha": false,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 4,
+          "n": 1610,
+          "reuse_rate": 0.36086956521739133,
+          "realized_risk": 0.020496894409937887,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 5,
+          "n": 1610,
+          "reuse_rate": 0.38881987577639754,
+          "realized_risk": 0.011180124223602485,
+          "exceeds_alpha": false,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 6,
+          "n": 1610,
+          "reuse_rate": 0.35093167701863354,
+          "realized_risk": 0.009316770186335404,
+          "exceeds_alpha": false,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 7,
+          "n": 1610,
+          "reuse_rate": 0.3490683229813665,
+          "realized_risk": 0.006211180124223602,
+          "exceeds_alpha": false,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 8,
+          "n": 1610,
+          "reuse_rate": 0.3695652173913043,
+          "realized_risk": 0.009937888198757764,
+          "exceeds_alpha": false,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 9,
+          "n": 1612,
+          "reuse_rate": 0.33188585607940446,
+          "realized_risk": 0.008064516129032258,
+          "exceeds_alpha": false,
+          "mean_threshold_used": 5.73002290725708
+        }
+      ]
+    },
+    "self_select": {
+      "insert_on_hit": false,
+      "n_gray_zone": 26075,
+      "n_direct_hit": 33718,
+      "n_direct_miss": 207,
+      "final_store_size": 13586,
+      "overall_realized_risk": 0.043221476510067115,
+      "chunks": [
+        {
+          "chunk": 0,
+          "n": 2607,
+          "reuse_rate": 0.14345991561181434,
+          "realized_risk": 0.032604526275412354,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 1,
+          "n": 2607,
+          "reuse_rate": 0.31338703490602227,
+          "realized_risk": 0.0349060222477944,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 2,
+          "n": 2607,
+          "reuse_rate": 0.4430379746835443,
+          "realized_risk": 0.04334484081319524,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 3,
+          "n": 2607,
+          "reuse_rate": 0.4902186421173763,
+          "realized_risk": 0.04487917146144994,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 4,
+          "n": 2607,
+          "reuse_rate": 0.5347142309167625,
+          "realized_risk": 0.046413502109704644,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 5,
+          "n": 2607,
+          "reuse_rate": 0.5630993479094745,
+          "realized_risk": 0.04986574606827771,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 6,
+          "n": 2607,
+          "reuse_rate": 0.5692366705024933,
+          "realized_risk": 0.04257767548906789,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 7,
+          "n": 2607,
+          "reuse_rate": 0.5953202915228232,
+          "realized_risk": 0.04526275412351362,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 8,
+          "n": 2607,
+          "reuse_rate": 0.6087456846950517,
+          "realized_risk": 0.04794783275795934,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        },
+        {
+          "chunk": 9,
+          "n": 2612,
+          "reuse_rate": 0.6075803981623277,
+          "realized_risk": 0.0444104134762634,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 5.73002290725708
+        }
+      ]
+    },
+    "self_select_recal": {
+      "insert_on_hit": false,
+      "n_gray_zone": 21500,
+      "n_direct_hit": 38292,
+      "n_direct_miss": 208,
+      "final_store_size": 17884,
+      "overall_realized_risk": 0.02074418604651163,
+      "chunks": [
+        {
+          "chunk": 0,
+          "n": 2150,
+          "reuse_rate": 0.10186046511627907,
+          "realized_risk": 0.024651162790697675,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 6.102185249328613
+        },
+        {
+          "chunk": 1,
+          "n": 2150,
+          "reuse_rate": 0.15348837209302327,
+          "realized_risk": 0.020465116279069766,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 7.069493936937909
+        },
+        {
+          "chunk": 2,
+          "n": 2150,
+          "reuse_rate": 0.20418604651162792,
+          "realized_risk": 0.024186046511627906,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 7.2208646951719775
+        },
+        {
+          "chunk": 3,
+          "n": 2150,
+          "reuse_rate": 0.17488372093023255,
+          "realized_risk": 0.020465116279069766,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 7.854196171427882
+        },
+        {
+          "chunk": 4,
+          "n": 2150,
+          "reuse_rate": 0.19395348837209303,
+          "realized_risk": 0.023255813953488372,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 7.852520299512286
+        },
+        {
+          "chunk": 5,
+          "n": 2150,
+          "reuse_rate": 0.1758139534883721,
+          "realized_risk": 0.01674418604651163,
+          "exceeds_alpha": false,
+          "mean_threshold_used": 8.005850215290868
+        },
+        {
+          "chunk": 6,
+          "n": 2150,
+          "reuse_rate": 0.2111627906976744,
+          "realized_risk": 0.018604651162790697,
+          "exceeds_alpha": false,
+          "mean_threshold_used": 7.849667260813159
+        },
+        {
+          "chunk": 7,
+          "n": 2150,
+          "reuse_rate": 0.17767441860465116,
+          "realized_risk": 0.02186046511627907,
+          "exceeds_alpha": true,
+          "mean_threshold_used": 8.145825275155001
+        },
+        {
+          "chunk": 8,
+          "n": 2150,
+          "reuse_rate": 0.18790697674418605,
+          "realized_risk": 0.019069767441860466,
+          "exceeds_alpha": false,
+          "mean_threshold_used": 8.160669792530149
+        },
+        {
+          "chunk": 9,
+          "n": 2150,
+          "reuse_rate": 0.19767441860465115,
+          "realized_risk": 0.01813953488372093,
+          "exceeds_alpha": false,
+          "mean_threshold_used": 8.03499860541765
+        }
+      ]
+    }
+  },
+  "bootstrap_comparisons": {
+    "self_select_vs_baseline": {
+      "n_a": 14602,
+      "n_b": 24575,
+      "risk_a": 0.013765237638679633,
+      "risk_b": 0.04423194303153612,
+      "diff": 0.030466705392856484,
+      "diff_ci_low": 0.027392659320209067,
+      "diff_ci_high": 0.033680981283936214,
+      "significant": true
+    },
+    "self_select_recal_vs_self_select": {
+      "n_a": 24575,
+      "n_b": 20000,
+      "risk_a": 0.04423194303153612,
+      "risk_b": 0.0203,
+      "diff": -0.023931943031536118,
+      "diff_ci_low": -0.026974895727365212,
+      "diff_ci_high": -0.02061317522889115,
+      "significant": true
+    },
+    "self_select_recal_vs_baseline": {
+      "n_a": 14602,
+      "n_b": 20000,
+      "risk_a": 0.013765237638679633,
+      "risk_b": 0.0203,
+      "diff": 0.0065347623613203655,
+      "diff_ci_low": 0.0038355110601287477,
+      "diff_ci_high": 0.009260078585125325,
+      "significant": true
+    }
+  }
+}
