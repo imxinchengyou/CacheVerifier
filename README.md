@@ -64,9 +64,9 @@ the hit-rate/error-rate trade-off?
 
 "Grid search" = the paper's original hand-picked threshold grid, best point reported. "Honest calibration" = a threshold chosen via Youden's J on a held-out calibration half only, then measured on the untouched test half (§5.4) — added 2026-08-15/16 specifically to test whether the grid-search numbers above were optimistic; see §5.4/§6.1 for the full account of where the two methods agree and where they don't (Quora is the one dataset where honest calibration is *worse*, traced to the dataset's own score-separability ceiling, not a calibration artifact).
 
-Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–28pp** hit rate at matched error rate. A separate reproduction fix for the adaptive-threshold baseline (Group B) raised its hit rate **4.4x–29.1x** across all three datasets (§5.2) — Group B sits at a different hit-rate scale and isn't part of the Go/No-Go comparison above. Full numbers, confidence intervals, and further robustness/ablation sections (noise, cold start, drift monitor, τ_high sensitivity, reranker capacity vs. training distribution, Conformal Risk Control, rewrite-vs-reject) are in the paper, §5.9–§5.14.
+Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–28pp** hit rate at matched error rate. A separate reproduction fix for the adaptive-threshold baseline (Group B) raised its hit rate **4.4x–29.1x** across all three datasets (§5.2) — Group B sits at a different hit-rate scale and isn't part of the Go/No-Go comparison above. Full numbers, confidence intervals, and further robustness/ablation sections (noise, cold start, drift monitor, τ_high sensitivity, reranker capacity vs. training distribution, Conformal Risk Control, rewrite-vs-reject, Top-K cascade, CRC closed-loop self-selection) are in the paper, §5.9–§5.16.
 
-## Further ablations (§5.9–§5.14)
+## Further ablations (§5.9–§5.16)
 
 - **Drift monitor (§5.9):** two change-point tests on gray-zone labels alone
   catch the one real-traffic counter-example's degradation before it does
@@ -85,6 +85,16 @@ Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–
 - **Rewrite instead of reject (§5.14):** a TweakLLM-style rewrite-and-serve
   policy shows no measurable net benefit over the existing binary gate — a
   negative ablation.
+- **Top-K candidate cascade (§5.15):** retrieving more than the single
+  nearest neighbor is close to a free lunch on LmArena, essentially no
+  effect on Quora, and a real hit-rate/error-rate trade-off on SearchQueries
+  that fine-tuning mitigates but doesn't eliminate.
+- **CRC closed-loop self-selection (§5.16):** a genuine online closed-loop
+  test (not a static split) confirms the gate's own reuse/reject decisions
+  can feed back into future cache state — harm scales monotonically with
+  direct-hit rate, from no detectable effect (Quora) to more than tripling
+  realized risk (LmArena); online recalibration fully compensates on two
+  of three datasets but not the third.
 
 ## Repository layout
 
@@ -121,7 +131,7 @@ repo — see [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md).
 ## Citation
 
 Archived on Zenodo with DOI [10.5281/zenodo.21703364](https://doi.org/10.5281/zenodo.21703364)
-(this concept DOI always resolves to the latest version; the current version is v1.1.0, DOI [10.5281/zenodo.22020647](https://doi.org/10.5281/zenodo.22020647)).
+(this concept DOI always resolves to the latest version; the current version is v1.2.0, DOI [10.5281/zenodo.22055591](https://doi.org/10.5281/zenodo.22055591)).
 arXiv listing forthcoming — this will be updated with the arXiv ID once live.
 
 ```bibtex
