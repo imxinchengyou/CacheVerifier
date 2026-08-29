@@ -1,0 +1,72 @@
+{
+  "dataset": "lmarena",
+  "warmup_n": 1500,
+  "frozen_threshold": 5.73002290725708,
+  "baseline_n_gray_zone": 16102,
+  "sweep": [
+    {
+      "insert_on_hit_probability": 0.1,
+      "n_gray_zone": 21522,
+      "final_store_size": 19118,
+      "comparison_vs_baseline": {
+        "n_a": 14602,
+        "n_b": 20022,
+        "risk_a": 0.013765237638679633,
+        "risk_b": 0.019778243931675158,
+        "diff": 0.006013006292995525,
+        "diff_ci_low": 0.0031237822000784762,
+        "diff_ci_high": 0.008833219186876903,
+        "significant": true
+      },
+      "direction": "residual harm"
+    },
+    {
+      "insert_on_hit_probability": 0.25,
+      "n_gray_zone": 20348,
+      "final_store_size": 24237,
+      "comparison_vs_baseline": {
+        "n_a": 14602,
+        "n_b": 18848,
+        "risk_a": 0.013765237638679633,
+        "risk_b": 0.018994057724957554,
+        "diff": 0.005228820086277921,
+        "diff_ci_low": 0.0024949182557846695,
+        "diff_ci_high": 0.008022597798078223,
+        "significant": true
+      },
+      "direction": "residual harm"
+    },
+    {
+      "insert_on_hit_probability": 0.5,
+      "n_gray_zone": 18455,
+      "final_store_size": 35631,
+      "comparison_vs_baseline": {
+        "n_a": 14602,
+        "n_b": 16955,
+        "risk_a": 0.013765237638679633,
+        "risk_b": 0.018637570038336774,
+        "diff": 0.004872332399657141,
+        "diff_ci_low": 0.0020966006078676734,
+        "diff_ci_high": 0.007558666113087847,
+        "significant": true
+      },
+      "direction": "residual harm"
+    },
+    {
+      "insert_on_hit_probability": 0.75,
+      "n_gray_zone": 17178,
+      "final_store_size": 47538,
+      "comparison_vs_baseline": {
+        "n_a": 14602,
+        "n_b": 15678,
+        "risk_a": 0.013765237638679633,
+        "risk_b": 0.01792320449036867,
+        "diff": 0.004157966851689038,
+        "diff_ci_low": 0.0012615295208203172,
+        "diff_ci_high": 0.006968500034569494,
+        "significant": true
+      },
+      "direction": "residual harm"
+    }
+  ]
+}
