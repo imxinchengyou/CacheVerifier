@@ -128,7 +128,7 @@ class GrayZoneObservation:
 @dataclass
 class RegimeResult:
     name: str
-    insert_on_hit: bool
+    insert_on_hit_probability: float
     observations: list[GrayZoneObservation] = field(default_factory=list)
     n_direct_hit: int = 0
     n_direct_miss: int = 0
@@ -154,10 +154,11 @@ def run_regime(
     records: list[QueryRecord],
     embeddings: np.ndarray,
     verifier: CrossEncoderVerifier,
-    insert_on_hit: bool,
+    insert_on_hit_probability: float,
     threshold_mode: str,
     fixed_threshold: float | None = None,
     capture_text: bool = False,
+    seed: int = 0,
 ) -> RegimeResult:
     """One full pass over the stream.
 
@@ -167,29 +168,40 @@ def run_regime(
     qualitative audit of specific self-selection cases, not needed for the
     quantitative risk numbers this module reports by default.
 
-    `insert_on_hit`: True reproduces the insert-always convention every
-    other experiment in this project uses (regime 1). False is write-on-
-    miss-only (regimes 2/3): a hit (direct or gray-zone-approved) reuses an
-    existing entry and does not write a duplicate; only a miss (direct or
-    gray-zone-rejected) triggers a fresh generation that gets cached.
+    `insert_on_hit_probability`: on a hit (direct or gray-zone-approved),
+    the probability the cache still writes a fresh entry anyway, instead of
+    purely reusing the existing one. 1.0 reproduces the insert-always
+    convention every other experiment in this project uses (regime 1). 0.0
+    is write-on-miss-only (regimes 2/3): a hit never writes a duplicate;
+    only a miss (direct or gray-zone-rejected) triggers a fresh generation
+    that gets cached. Values in between model a cache that occasionally
+    rewrites a popular entry anyway (e.g. a TTL-driven refresh) -- added
+    2026-08-29 to test whether a partial rewrite policy is enough to fully
+    offset self-selection's harm on a dataset where a pure 0.0/1.0
+    comparison (see PAPER.md 5.16) left a residual gap online recalibration
+    alone didn't close (LmArena). A miss always inserts regardless of this
+    probability -- only what happens on a HIT is being varied; that was
+    never the part any regime tested here changes.
 
     `threshold_mode`: "frozen_after_warmup" (regime 1) calibrates once from
     the first WARMUP_N gray-zone observations and never changes again.
     "fixed" (regime 2) uses `fixed_threshold` from the very first gray-zone
     observation, unchanged throughout -- this is regime 1's OWN resulting
     threshold, transplanted as a plain number, so regimes 1 and 2 differ
-    ONLY in insert_on_hit, nothing else. "recalibrating" (regime 3) behaves
-    like "fixed" during warm-up (same transplanted value, so all three
-    regimes are identical until they're designed to diverge), then
-    switches to periodic sliding-window recalibration once WARMUP_N
-    gray-zone observations have been collected.
+    ONLY in insert_on_hit_probability, nothing else. "recalibrating"
+    (regime 3) behaves like "fixed" during warm-up (same transplanted
+    value, so all three regimes are identical until they're designed to
+    diverge), then switches to periodic sliding-window recalibration once
+    WARMUP_N gray-zone observations have been collected.
     """
     assert threshold_mode in ("frozen_after_warmup", "fixed", "recalibrating")
     if threshold_mode in ("fixed", "recalibrating"):
         assert fixed_threshold is not None
+    assert 0.0 <= insert_on_hit_probability <= 1.0
 
     store = VectorCacheStore(dim=embeddings.shape[1])
-    result = RegimeResult(name=name, insert_on_hit=insert_on_hit)
+    result = RegimeResult(name=name, insert_on_hit_probability=insert_on_hit_probability)
+    insert_rng = np.random.default_rng(seed)
 
     current_threshold = fixed_threshold if fixed_threshold is not None else 0.0
     calibrated = threshold_mode in ("fixed", "recalibrating")  # both start pre-calibrated (transplanted value)
@@ -267,7 +279,11 @@ def run_regime(
 
         result.outcomes.append(outcome)
 
-        if insert_on_hit or outcome == "miss":
+        # A miss always inserts (unchanged across every regime this module
+        # has ever tested); only whether a HIT also inserts is governed by
+        # insert_on_hit_probability -- see run_regime's docstring.
+        should_insert = outcome == "miss" or insert_rng.random() < insert_on_hit_probability
+        if should_insert:
             store.insert(
                 CacheEntry(
                     query_id=record.query_id,
@@ -401,7 +417,7 @@ def main() -> None:
 
     print("\n=== Regime 1: baseline (insert-always, frozen-after-warmup threshold) ===")
     r1 = run_regime(
-        "baseline", records, embeddings, verifier, insert_on_hit=True, threshold_mode="frozen_after_warmup"
+        "baseline", records, embeddings, verifier, insert_on_hit_probability=1.0, threshold_mode="frozen_after_warmup"
     )
     if r1.post_warmup_threshold is None:
         raise RuntimeError(
@@ -417,7 +433,7 @@ def main() -> None:
         records,
         embeddings,
         verifier,
-        insert_on_hit=False,
+        insert_on_hit_probability=0.0,
         threshold_mode="fixed",
         fixed_threshold=frozen_threshold,
     )
@@ -428,7 +444,7 @@ def main() -> None:
         records,
         embeddings,
         verifier,
-        insert_on_hit=False,
+        insert_on_hit_probability=0.0,
         threshold_mode="recalibrating",
         fixed_threshold=frozen_threshold,
     )
@@ -463,7 +479,7 @@ def main() -> None:
                 f"realized_risk={row['realized_risk']:.4f} mean_threshold={row['mean_threshold_used']:.3f}{flag}"
             )
         results["regimes"][r.name] = {
-            "insert_on_hit": r.insert_on_hit,
+            "insert_on_hit_probability": r.insert_on_hit_probability,
             "n_gray_zone": len(r.observations),
             "n_direct_hit": r.n_direct_hit,
             "n_direct_miss": r.n_direct_miss,

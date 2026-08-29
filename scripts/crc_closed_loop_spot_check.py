@@ -78,7 +78,7 @@ def main() -> None:
         records,
         embeddings,
         verifier,
-        insert_on_hit=True,
+        insert_on_hit_probability=1.0,
         threshold_mode="frozen_after_warmup",
         capture_text=True,
     )
@@ -91,7 +91,7 @@ def main() -> None:
         records,
         embeddings,
         verifier,
-        insert_on_hit=False,
+        insert_on_hit_probability=0.0,
         threshold_mode="fixed",
         fixed_threshold=frozen_threshold,
         capture_text=True,
