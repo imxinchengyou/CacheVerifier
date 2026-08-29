@@ -1,0 +1,554 @@
+{
+  "lmarena": {
+    "label": "LmArena",
+    "rows": [
+      {
+        "r": 0.1,
+        "cost_A": 0.014736666666666634,
+        "cost_D": 0.04338678319120679,
+        "cost_E": 0.023967737588789038,
+        "cost_C_oracle": 0.07109166666666662,
+        "winner_among_ADE": "A",
+        "D_vs_A_pct_cost_reduction": -194.4138194381829,
+        "E_vs_A_pct_cost_reduction": -62.64015554482532,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=-1.2",
+        "bestE_point": "tau_low=0.8, thr=0.624"
+      },
+      {
+        "r": 0.25,
+        "cost_A": 0.03186666666666663,
+        "cost_D": 0.05294134632042968,
+        "cost_E": 0.033441452193497506,
+        "cost_C_oracle": 0.07882916666666662,
+        "winner_among_ADE": "A",
+        "D_vs_A_pct_cost_reduction": -66.13393196787575,
+        "E_vs_A_pct_cost_reduction": -4.941795586289355,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=-1.2",
+        "bestE_point": "tau_low=0.8, thr=0.624"
+      },
+      {
+        "r": 0.5,
+        "cost_A": 0.06041666666666663,
+        "cost_D": 0.06886561820246784,
+        "cost_E": 0.04923097653467828,
+        "cost_C_oracle": 0.09172499999999996,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": -13.984471507533037,
+        "E_vs_A_pct_cost_reduction": 18.514245735704876,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=-1.2",
+        "bestE_point": "tau_low=0.8, thr=0.624"
+      },
+      {
+        "r": 1,
+        "cost_A": 0.11751666666666663,
+        "cost_D": 0.10071416196654413,
+        "cost_E": 0.08081002521703982,
+        "cost_C_oracle": 0.11751666666666663,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": 14.297975918413702,
+        "E_vs_A_pct_cost_reduction": 31.23526431680058,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=-1.2",
+        "bestE_point": "tau_low=0.8, thr=0.624"
+      },
+      {
+        "r": 2,
+        "cost_A": 0.1865166666666667,
+        "cost_D": 0.16441124949469674,
+        "cost_E": 0.14396812258176292,
+        "cost_C_oracle": 0.16909999999999997,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": 11.851711467413075,
+        "E_vs_A_pct_cost_reduction": 22.812194130052955,
+        "bestA_point": "thr=0.89",
+        "bestD_point": "tau_low=0.8, thr=-1.2",
+        "bestE_point": "tau_low=0.8, thr=0.624"
+      },
+      {
+        "r": 5,
+        "cost_A": 0.3848166666666667,
+        "cost_D": 0.35550251207915456,
+        "cost_E": 0.3334424146759322,
+        "cost_C_oracle": 0.32384999999999997,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": 7.617693599769275,
+        "E_vs_A_pct_cost_reduction": 13.35031885072575,
+        "bestA_point": "thr=0.89",
+        "bestD_point": "tau_low=0.8, thr=-1.2",
+        "bestE_point": "tau_low=0.8, thr=0.624"
+      },
+      {
+        "r": 10,
+        "cost_A": 0.7037166666666667,
+        "cost_D": 0.6739879497199176,
+        "cost_E": 0.6492329014995477,
+        "cost_C_oracle": 0.5817666666666667,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": 4.224529324787304,
+        "E_vs_A_pct_cost_reduction": 7.7422871658270065,
+        "bestA_point": "thr=0.92",
+        "bestD_point": "tau_low=0.8, thr=-1.2",
+        "bestE_point": "tau_low=0.8, thr=0.624"
+      },
+      {
+        "r": 20,
+        "cost_A": 1.1744833333333333,
+        "cost_D": 1.1289923062488272,
+        "cost_E": 0.9872237732456348,
+        "cost_C_oracle": 1.0976,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": 3.87327991751035,
+        "E_vs_A_pct_cost_reduction": 15.943994671787468,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=7.22",
+        "bestE_point": "tau_low=0.97, thr=3.65"
+      },
+      {
+        "r": 50,
+        "cost_A": 1.9774833333333333,
+        "cost_D": 1.6288984800150121,
+        "cost_E": 1.5452617751923436,
+        "cost_C_oracle": 2.6451,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": 17.627701201947986,
+        "E_vs_A_pct_cost_reduction": 21.85715302148301,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=7.22",
+        "bestE_point": "tau_low=0.99, thr=3.9"
+      },
+      {
+        "r": 100,
+        "cost_A": 3.3158166666666666,
+        "cost_D": 2.4620754362919874,
+        "cost_E": 2.3287108275473822,
+        "cost_C_oracle": 5.224266666666667,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": 25.747540235176224,
+        "E_vs_A_pct_cost_reduction": 29.769614497764284,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=7.22",
+        "bestE_point": "tau_low=0.99, thr=3.9"
+      },
+      {
+        "r": 200,
+        "cost_A": 5.992483333333333,
+        "cost_D": 4.128429348845938,
+        "cost_E": 3.895608932257459,
+        "cost_C_oracle": 10.3826,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": 31.106535985149105,
+        "E_vs_A_pct_cost_reduction": 34.99174356333975,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=7.22",
+        "bestE_point": "tau_low=0.99, thr=3.9"
+      },
+      {
+        "r": 500,
+        "cost_A": 14.022483333333335,
+        "cost_D": 9.127491086507787,
+        "cost_E": 8.59630324638769,
+        "cost_C_oracle": 25.8576,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": 34.90816947658259,
+        "E_vs_A_pct_cost_reduction": 38.6962848017575,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=7.22",
+        "bestE_point": "tau_low=0.99, thr=3.9"
+      }
+    ],
+    "winning_r_windows": {
+      "D": [
+        [
+          0.708,
+          1000.0
+        ]
+      ],
+      "E": [
+        [
+          0.282,
+          1000.0
+        ]
+      ]
+    },
+    "tau_low_coverage": {
+      "A": "[0.8, 0.99]",
+      "D_honest": "[0.8, 0.99]",
+      "E_honest": "[0.8, 0.99]"
+    }
+  },
+  "quora": {
+    "label": "Quora",
+    "rows": [
+      {
+        "r": 0.1,
+        "cost_A": 0.6968,
+        "cost_D": 0.876064491064491,
+        "cost_E": 0.8805866355866356,
+        "cost_C_oracle": 0.85112,
+        "winner_among_ADE": "A",
+        "D_vs_A_pct_cost_reduction": -25.726821335317318,
+        "E_vs_A_pct_cost_reduction": -26.375808781090075,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=3.74",
+        "bestE_point": "tau_low=0.8, thr=-0.00687"
+      },
+      {
+        "r": 0.25,
+        "cost_A": 0.7241,
+        "cost_D": 0.8854118104118104,
+        "cost_E": 0.8880341880341881,
+        "cost_C_oracle": 0.8527,
+        "winner_among_ADE": "A",
+        "D_vs_A_pct_cost_reduction": -22.27755978619119,
+        "E_vs_A_pct_cost_reduction": -22.63971661844885,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=3.74",
+        "bestE_point": "tau_low=0.8, thr=-0.00687"
+      },
+      {
+        "r": 0.5,
+        "cost_A": 0.7696,
+        "cost_D": 0.900990675990676,
+        "cost_E": 0.9004467754467755,
+        "cost_C_oracle": 0.8553333333333333,
+        "winner_among_ADE": "A",
+        "D_vs_A_pct_cost_reduction": -17.072593034131497,
+        "E_vs_A_pct_cost_reduction": -17.00191988653529,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=3.74",
+        "bestE_point": "tau_low=0.8, thr=-0.00687"
+      },
+      {
+        "r": 1,
+        "cost_A": 0.8606,
+        "cost_D": 0.9321484071484072,
+        "cost_E": 0.9252719502719503,
+        "cost_C_oracle": 0.8605999999999999,
+        "winner_among_ADE": "A",
+        "D_vs_A_pct_cost_reduction": -8.313781913595996,
+        "E_vs_A_pct_cost_reduction": -7.5147513678770945,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=3.74",
+        "bestE_point": "tau_low=0.8, thr=-0.00687"
+      },
+      {
+        "r": 2,
+        "cost_A": 0.97385,
+        "cost_D": 0.9814782669073739,
+        "cost_E": 0.972174327744965,
+        "cost_C_oracle": 0.8711333333333333,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": -0.783310253876259,
+        "E_vs_A_pct_cost_reduction": 0.17206677158032085,
+        "bestA_point": "thr=0.92",
+        "bestD_point": "tau_low=0.92, thr=4.2",
+        "bestE_point": "tau_low=0.86, thr=0.281"
+      },
+      {
+        "r": 5,
+        "cost_A": 1.0016,
+        "cost_D": 1.0006868937325135,
+        "cost_E": 1.0007706612608689,
+        "cost_C_oracle": 0.9027333333333333,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 0.09116476312764873,
+        "E_vs_A_pct_cost_reduction": 0.08280139168641752,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=6.33",
+        "bestE_point": "tau_low=0.99, thr=0.821"
+      },
+      {
+        "r": 10,
+        "cost_A": 1.01435,
+        "cost_D": 1.0044564325085024,
+        "cost_E": 1.004875270150279,
+        "cost_C_oracle": 0.9554,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 0.9753603284367055,
+        "E_vs_A_pct_cost_reduction": 0.9340690934806611,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=6.33",
+        "bestE_point": "tau_low=0.99, thr=0.821"
+      },
+      {
+        "r": 20,
+        "cost_A": 1.03985,
+        "cost_D": 1.0119955100604803,
+        "cost_E": 1.0130844879290992,
+        "cost_C_oracle": 1.0607333333333333,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 2.6787026916881924,
+        "E_vs_A_pct_cost_reduction": 2.5739781767467154,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=6.33",
+        "bestE_point": "tau_low=0.99, thr=0.821"
+      },
+      {
+        "r": 50,
+        "cost_A": 1.11635,
+        "cost_D": 1.0346127427164133,
+        "cost_E": 1.0377121412655599,
+        "cost_C_oracle": 1.3767333333333334,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 7.321830723660734,
+        "E_vs_A_pct_cost_reduction": 7.0441939118054435,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=6.33",
+        "bestE_point": "tau_low=0.99, thr=0.821"
+      },
+      {
+        "r": 100,
+        "cost_A": 1.2438500000000001,
+        "cost_D": 1.0723081304763022,
+        "cost_E": 1.078758230159661,
+        "cost_C_oracle": 1.9034,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 13.791202277099156,
+        "E_vs_A_pct_cost_reduction": 13.272642990741579,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=6.33",
+        "bestE_point": "tau_low=0.99, thr=0.821"
+      },
+      {
+        "r": 200,
+        "cost_A": 1.49885,
+        "cost_D": 1.1476989059960796,
+        "cost_E": 1.1608504079478632,
+        "cost_C_oracle": 2.9567333333333337,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 23.42803442665513,
+        "E_vs_A_pct_cost_reduction": 22.550594926252582,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=6.33",
+        "bestE_point": "tau_low=0.99, thr=0.821"
+      },
+      {
+        "r": 500,
+        "cost_A": 2.26385,
+        "cost_D": 1.373871232555412,
+        "cost_E": 1.4071269413124696,
+        "cost_C_oracle": 6.116733333333333,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 39.31262086465923,
+        "E_vs_A_pct_cost_reduction": 37.843631808093754,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=6.33",
+        "bestE_point": "tau_low=0.99, thr=0.821"
+      }
+    ],
+    "winning_r_windows": {
+      "D": [
+        [
+          5.012,
+          1000.0
+        ]
+      ],
+      "E": [
+        [
+          1.995,
+          2.818
+        ],
+        [
+          5.012,
+          1000.0
+        ]
+      ]
+    },
+    "tau_low_coverage": {
+      "A": "[0.8, 0.99]",
+      "D_honest": "[0.8, 0.99]",
+      "E_honest": "[0.8, 0.99]"
+    }
+  },
+  "search_queries": {
+    "label": "SearchQueries (corrected)",
+    "rows": [
+      {
+        "r": 0.1,
+        "cost_A": 0.17830200000000002,
+        "cost_D": 0.41195583005801983,
+        "cost_E": 0.4248802171064945,
+        "cost_C_oracle": 0.44536800000000004,
+        "winner_among_ADE": "A",
+        "D_vs_A_pct_cost_reduction": -131.04386381421398,
+        "E_vs_A_pct_cost_reduction": -138.29245723911927,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=6.74",
+        "bestE_point": "tau_low=0.8, thr=0.242"
+      },
+      {
+        "r": 0.25,
+        "cost_A": 0.22980500000000004,
+        "cost_D": 0.435672842972113,
+        "cost_E": 0.44437347931873483,
+        "cost_C_oracle": 0.45236000000000004,
+        "winner_among_ADE": "A",
+        "D_vs_A_pct_cost_reduction": -89.58370921960486,
+        "E_vs_A_pct_cost_reduction": -93.36980453808,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=6.74",
+        "bestE_point": "tau_low=0.8, thr=0.242"
+      },
+      {
+        "r": 0.5,
+        "cost_A": 0.3156433333333334,
+        "cost_D": 0.47520119782893505,
+        "cost_E": 0.47686224967246865,
+        "cost_C_oracle": 0.46401333333333333,
+        "winner_among_ADE": "A",
+        "D_vs_A_pct_cost_reduction": -50.55005053032483,
+        "E_vs_A_pct_cost_reduction": -51.07629381447475,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=6.74",
+        "bestE_point": "tau_low=0.8, thr=0.242"
+      },
+      {
+        "r": 1,
+        "cost_A": 0.48732000000000003,
+        "cost_D": 0.5542579075425791,
+        "cost_E": 0.5418397903799363,
+        "cost_C_oracle": 0.48732000000000003,
+        "winner_among_ADE": "A",
+        "D_vs_A_pct_cost_reduction": -13.735924555236611,
+        "E_vs_A_pct_cost_reduction": -11.18767757940087,
+        "bestA_point": "thr=0.8",
+        "bestD_point": "tau_low=0.8, thr=6.74",
+        "bestE_point": "tau_low=0.8, thr=0.242"
+      },
+      {
+        "r": 2,
+        "cost_A": 0.74746,
+        "cost_D": 0.712371326969867,
+        "cost_E": 0.6717948717948719,
+        "cost_C_oracle": 0.5339333333333334,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": 4.694388064930961,
+        "E_vs_A_pct_cost_reduction": 10.122966875167656,
+        "bestA_point": "thr=0.92",
+        "bestD_point": "tau_low=0.8, thr=6.74",
+        "bestE_point": "tau_low=0.8, thr=0.242"
+      },
+      {
+        "r": 5,
+        "cost_A": 0.9428799999999999,
+        "cost_D": 0.9558212827762227,
+        "cost_E": 0.949532196315385,
+        "cost_C_oracle": 0.6737733333333333,
+        "winner_among_ADE": "A",
+        "D_vs_A_pct_cost_reduction": -1.372527021065539,
+        "E_vs_A_pct_cost_reduction": -0.7055188693561271,
+        "bestA_point": "thr=0.98",
+        "bestD_point": "tau_low=0.95, thr=9.59",
+        "bestE_point": "tau_low=0.95, thr=0.847"
+      },
+      {
+        "r": 10,
+        "cost_A": 1.0282133333333334,
+        "cost_D": 1.0007328898410193,
+        "cost_E": 0.9960254820160108,
+        "cost_C_oracle": 0.9068400000000001,
+        "winner_among_ADE": "E",
+        "D_vs_A_pct_cost_reduction": 2.6726402587317306,
+        "E_vs_A_pct_cost_reduction": 3.130464298977119,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=11.2",
+        "bestE_point": "tau_low=0.99, thr=1.26"
+      },
+      {
+        "r": 20,
+        "cost_A": 1.1649466666666668,
+        "cost_D": 1.0034812267448416,
+        "cost_E": 1.010471868305333,
+        "cost_C_oracle": 1.3729733333333334,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 13.860328935386898,
+        "E_vs_A_pct_cost_reduction": 13.260246394226948,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=11.2",
+        "bestE_point": "tau_low=0.99, thr=1.26"
+      },
+      {
+        "r": 50,
+        "cost_A": 1.5751466666666667,
+        "cost_D": 1.0117262374563085,
+        "cost_E": 1.0538110271733003,
+        "cost_C_oracle": 2.7713733333333335,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 35.769394757547964,
+        "E_vs_A_pct_cost_reduction": 33.09759341945087,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=11.2",
+        "bestE_point": "tau_low=0.99, thr=1.26"
+      },
+      {
+        "r": 100,
+        "cost_A": 2.2588133333333333,
+        "cost_D": 1.0254679219754201,
+        "cost_E": 1.126042958619912,
+        "cost_C_oracle": 5.10204,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 54.60147561365171,
+        "E_vs_A_pct_cost_reduction": 50.148914830504864,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=11.2",
+        "bestE_point": "tau_low=0.99, thr=1.26"
+      },
+      {
+        "r": 200,
+        "cost_A": 3.6261466666666666,
+        "cost_D": 1.0529512910136432,
+        "cost_E": 1.2705068215131357,
+        "cost_C_oracle": 9.763373333333334,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 70.96225310760616,
+        "E_vs_A_pct_cost_reduction": 64.96261904703793,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=11.2",
+        "bestE_point": "tau_low=0.99, thr=1.26"
+      },
+      {
+        "r": 500,
+        "cost_A": 7.728146666666666,
+        "cost_D": 1.1354013981283122,
+        "cost_E": 1.7038984101928065,
+        "cost_C_oracle": 23.747373333333332,
+        "winner_among_ADE": "D",
+        "D_vs_A_pct_cost_reduction": 85.30823175205035,
+        "E_vs_A_pct_cost_reduction": 77.9520435663815,
+        "bestA_point": "thr=0.99",
+        "bestD_point": "tau_low=0.99, thr=11.2",
+        "bestE_point": "tau_low=0.99, thr=1.26"
+      }
+    ],
+    "winning_r_windows": {
+      "D": [
+        [
+          1.413,
+          3.981
+        ],
+        [
+          8.913,
+          1000.0
+        ]
+      ],
+      "E": [
+        [
+          1.259,
+          4.467
+        ],
+        [
+          7.079,
+          1000.0
+        ]
+      ]
+    },
+    "tau_low_coverage": {
+      "A": "[0.8, 0.99]",
+      "D_honest": "[0.8, 0.99]",
+      "E_honest": "[0.8, 0.99]"
+    }
+  }
+}

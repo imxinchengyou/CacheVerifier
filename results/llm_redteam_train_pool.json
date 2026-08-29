@@ -1,0 +1,3038 @@
+{
+  "n_per_category_requested": 20,
+  "rounds": 3,
+  "tau_low": 0.8,
+  "n_generated_total": 300,
+  "n_qualifying_gray_zone": 223,
+  "by_category_summary": {
+    "negation": {
+      "n": 60,
+      "fa_offshelf": 58,
+      "fa_finetuned": 59
+    },
+    "action_verb": {
+      "n": 26,
+      "fa_offshelf": 22,
+      "fa_finetuned": 24
+    },
+    "direction": {
+      "n": 55,
+      "fa_offshelf": 45,
+      "fa_finetuned": 49
+    },
+    "entity_swap": {
+      "n": 28,
+      "fa_offshelf": 16,
+      "fa_finetuned": 20
+    },
+    "quantity_swap": {
+      "n": 54,
+      "fa_offshelf": 52,
+      "fa_finetuned": 53
+    }
+  },
+  "total_fa_off_the_shelf_pct": 86.54708520179372,
+  "total_fa_off_the_shelf_ci95": [
+    0.820627802690583,
+    0.905829596412556
+  ],
+  "total_fa_finetuned_pct": 91.92825112107623,
+  "total_fa_finetuned_ci95": [
+    0.8834080717488789,
+    0.9551569506726457
+  ],
+  "all_triples": [
+    {
+      "query_a": "How do I pause my subscription?",
+      "query_b": "How do I NOT pause my subscription?",
+      "answer_b": "You don't need to do anything. To keep your subscription active, simply ignore the pause option in your account settings and continue enjoying your plan.",
+      "category": "negation",
+      "similarity": 0.9804443109290518,
+      "score_off_the_shelf": 6.41912841796875,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9849359393119812,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I get a refund for this item?",
+      "query_b": "Can I NOT get a refund for this item?",
+      "answer_b": "Yes, you can decline a refund. If you choose not to request a refund, the item will remain yours and no money will be returned to your original payment method.",
+      "category": "negation",
+      "similarity": 0.9690827727308119,
+      "score_off_the_shelf": 8.074230194091797,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9987610578536987,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Should I cancel my flight ticket?",
+      "query_b": "Should I NOT cancel my flight ticket?",
+      "answer_b": "No, you should keep your ticket. If you do not cancel, your booking remains valid and you can travel on the scheduled date.",
+      "category": "negation",
+      "similarity": 0.9837798476209338,
+      "score_off_the_shelf": 9.138413429260254,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9992433786392212,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I enable two-factor authentication?",
+      "query_b": "How do I NOT enable two-factor authentication?",
+      "answer_b": "To keep two-factor authentication off, simply skip the security setup in your account settings and do not add a phone number or authenticator app.",
+      "category": "negation",
+      "similarity": 0.9460298386820535,
+      "score_off_the_shelf": 4.716377258300781,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9885089993476868,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Is it possible to delete my account?",
+      "query_b": "Is it possible to NOT delete my account?",
+      "answer_b": "Yes, you can keep your account. If you don't request deletion, your profile and data will remain active, and you can continue using the service.",
+      "category": "negation",
+      "similarity": 0.9560842514028525,
+      "score_off_the_shelf": 5.378227233886719,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9948753714561462,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What happens if I stop paying my bill?",
+      "query_b": "What happens if I do NOT stop paying my bill?",
+      "answer_b": "If you continue paying your bill, your service remains uninterrupted. Your account stays in good standing and no late fees or suspension will occur.",
+      "category": "negation",
+      "similarity": 0.9863483301598897,
+      "score_off_the_shelf": 8.024219512939453,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.998816728591919,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I turn off notifications?",
+      "query_b": "How do I NOT turn off notifications?",
+      "answer_b": "To keep notifications on, simply leave the notification settings at their default or enabled state. Do not toggle any switches to off.",
+      "category": "negation",
+      "similarity": 0.9819333553304389,
+      "score_off_the_shelf": 6.612995624542236,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9923882484436035,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I block a user on this platform?",
+      "query_b": "Can I NOT block a user on this platform?",
+      "answer_b": "Yes, you can refrain from blocking. If you do not block the user, they will continue to see your profile and be able to contact you as usual.",
+      "category": "negation",
+      "similarity": 0.9877993464460031,
+      "score_off_the_shelf": 6.101463317871094,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9951779842376709,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Should I upgrade to the premium plan?",
+      "query_b": "Should I NOT upgrade to the premium plan?",
+      "answer_b": "No, you should stay on the free plan. If you don't upgrade, you keep your current features and avoid any additional charges.",
+      "category": "negation",
+      "similarity": 0.9797433614721036,
+      "score_off_the_shelf": 3.2337734699249268,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.960071325302124,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I reset my password?",
+      "query_b": "How do I NOT reset my password?",
+      "answer_b": "You don't need to reset your password. If you want to keep your current password, simply ignore the 'forgot password' link and continue using your existing login.",
+      "category": "negation",
+      "similarity": 0.927728056906726,
+      "score_off_the_shelf": 7.048208236694336,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9807219505310059,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Is there a way to skip the tutorial?",
+      "query_b": "Is there a way to NOT skip the tutorial?",
+      "answer_b": "Yes, you can choose to view the tutorial. If you don't skip it, the onboarding steps will play out in full, showing you all the features.",
+      "category": "negation",
+      "similarity": 0.981232404707881,
+      "score_off_the_shelf": 5.6249799728393555,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9897632598876953,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I change my shipping address?",
+      "query_b": "How do I NOT change my shipping address?",
+      "answer_b": "To keep your current shipping address, simply do not edit the address fields in your account. Your orders will continue to go to the existing address on file.",
+      "category": "negation",
+      "similarity": 0.9122186899176058,
+      "score_off_the_shelf": 6.651097297668457,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9962228536605835,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I unlink my bank account?",
+      "query_b": "Can I NOT unlink my bank account?",
+      "answer_b": "Yes, you can keep your bank account linked. If you don't remove it, your payment method remains active for future transactions.",
+      "category": "negation",
+      "similarity": 0.9816768765439706,
+      "score_off_the_shelf": 6.5509748458862305,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9980772733688354,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What if I clear my browsing history?",
+      "query_b": "What if I do NOT clear my browsing history?",
+      "answer_b": "If you don't clear your history, your previous activity remains stored on your device, and your browser will continue to suggest past sites and autofill data.",
+      "category": "negation",
+      "similarity": 0.9698244911317957,
+      "score_off_the_shelf": 4.042315483093262,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.936826229095459,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I opt out of data sharing?",
+      "query_b": "How do I NOT opt out of data sharing?",
+      "answer_b": "To continue allowing data sharing, leave the privacy settings at their default (opt-in) state. Do not toggle the data-sharing switch to off.",
+      "category": "negation",
+      "similarity": 0.9914919132873582,
+      "score_off_the_shelf": 7.199450492858887,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.997606635093689,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Should I renew my warranty?",
+      "query_b": "Should I NOT renew my warranty?",
+      "answer_b": "No, you should let the warranty lapse. If you don't renew, coverage will expire at the end of the current period and you'll pay for future repairs yourself.",
+      "category": "negation",
+      "similarity": 0.9679109435018721,
+      "score_off_the_shelf": 7.691502571105957,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9978798627853394,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I hide my online status?",
+      "query_b": "How do I NOT hide my online status?",
+      "answer_b": "To keep your online status visible, leave your presence setting as 'shown'. Do not select the 'invisible' or 'hidden' option in your chat preferences.",
+      "category": "negation",
+      "similarity": 0.9931625123706966,
+      "score_off_the_shelf": 7.767746925354004,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9984149932861328,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I request a chargeback?",
+      "query_b": "Can I NOT request a chargeback?",
+      "answer_b": "Yes, you can decline to file a dispute. If you don't request a chargeback, the original transaction stands and no reversal will be issued by your bank.",
+      "category": "negation",
+      "similarity": 0.9447079267914341,
+      "score_off_the_shelf": 7.920094966888428,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9966109395027161,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Is it possible to disable autopay?",
+      "query_b": "Is it possible to NOT disable autopay?",
+      "answer_b": "Yes, keep autopay enabled. If you don't disable it, your payments will continue to be deducted automatically on the due date without any manual action.",
+      "category": "negation",
+      "similarity": 0.9927919502720413,
+      "score_off_the_shelf": 7.29571533203125,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9978393316268921,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I remove a payment method?",
+      "query_b": "How do I NOT remove a payment method?",
+      "answer_b": "To keep your payment method on file, simply do not delete it from your wallet. It will remain available for future purchases and subscriptions.",
+      "category": "negation",
+      "similarity": 0.9748737215986039,
+      "score_off_the_shelf": 6.27502965927124,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9943607449531555,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I cancel my Netflix subscription?",
+      "query_b": "How do I pause my Netflix subscription?",
+      "answer_b": "To pause your Netflix subscription, go to Account > Membership > Pause Membership. You can pause for up to 4 weeks, and billing will stop during that time.",
+      "category": "action_verb",
+      "similarity": 0.8188547384048105,
+      "score_off_the_shelf": 4.656494140625,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9893972873687744,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "I want to delete my Dropbox account permanently.",
+      "query_b": "I want to downgrade my Dropbox account from Plus to Basic.",
+      "answer_b": "To downgrade, go to dropbox.com/account/plan, select 'Downgrade' under your current plan, and choose the Basic free plan. Your storage will reset at the end of the billing cycle.",
+      "category": "action_verb",
+      "similarity": 0.6181867122643964
+    },
+    {
+      "query_a": "Can I refund my Adobe Creative Cloud subscription?",
+      "query_b": "Can I renew my Adobe Creative Cloud subscription early?",
+      "answer_b": "Yes, you can renew early by going to your Adobe account, selecting 'Manage plan' and then 'Renew now'. Your new subscription period will start immediately, extending your current expiry date.",
+      "category": "action_verb",
+      "similarity": 0.7885950803748827
+    },
+    {
+      "query_a": "How to cancel my gym membership at Planet Fitness?",
+      "query_b": "How to freeze my gym membership at Planet Fitness?",
+      "answer_b": "To freeze your membership, log into your PF account or visit the front desk. You can place a freeze for up to 3 months per year, and you won't be charged during the freeze.",
+      "category": "action_verb",
+      "similarity": 0.7591757774345435
+    },
+    {
+      "query_a": "Steps to delete my Uber account.",
+      "query_b": "Steps to pause my Uber account (temporary deactivation).",
+      "answer_b": "To temporarily pause, open the Uber app, go to Settings > Privacy > Account Deactivation, and choose 'Pause account'. Your account will be hidden for up to 4 weeks, and you can reactivate anytime.",
+      "category": "action_verb",
+      "similarity": 0.7178871631615135
+    },
+    {
+      "query_a": "I need to cancel my Amazon Prime membership.",
+      "query_b": "I need to downgrade my Amazon Prime to a monthly plan instead of annual.",
+      "answer_b": "Amazon Prime doesn't offer downgrading between plans; you can switch from annual to monthly by ending your current membership, then signing up for the monthly plan. The refund for the remaining annual period will be prorated.",
+      "category": "action_verb",
+      "similarity": 0.6661977370014368
+    },
+    {
+      "query_a": "How do I refund my Spotify Premium subscription?",
+      "query_b": "How do I switch my Spotify Premium from individual to family plan?",
+      "answer_b": "To switch to Family, go to your Spotify account page, select 'Change plan' under Premium, and choose 'Family'. You'll need to verify your address and invite members; the new plan takes effect immediately with a pro-rated charge.",
+      "category": "action_verb",
+      "similarity": 0.6290042400353817
+    },
+    {
+      "query_a": "Delete my Microsoft 365 account.",
+      "query_b": "Cancel my Microsoft 365 auto-renewal.",
+      "answer_b": "To cancel auto-renewal, go to account.microsoft.com, select 'Services & subscriptions', find Microsoft 365, and click 'Turn off recurring billing'. Your subscription will remain active until the end of the paid period.",
+      "category": "action_verb",
+      "similarity": 0.7338194847099595
+    },
+    {
+      "query_a": "I want to cancel my New York Times digital subscription.",
+      "query_b": "I want to pause my New York Times digital subscription while I'm on vacation.",
+      "answer_b": "The NYT doesn't offer a pause feature directly, but you can cancel and restart later. However, if you're on a monthly plan, you can contact support to request a one-time hold for up to 90 days, during which you won't be billed.",
+      "category": "action_verb",
+      "similarity": 0.7944498062125844
+    },
+    {
+      "query_a": "How to delete my Airbnb account?",
+      "query_b": "How to deactivate my Airbnb account temporarily?",
+      "answer_b": "To deactivate, go to your Airbnb profile, select 'Account' > 'Deactivate account'. You'll lose your reviews and travel credits until you reactivate, but your booking history remains available if you log back in within 30 days.",
+      "category": "action_verb",
+      "similarity": 0.8566013489119397,
+      "score_off_the_shelf": 7.826027870178223,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9984214305877686,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Refund my Audible subscription please.",
+      "query_b": "Cancel my Audible subscription and keep my credits.",
+      "answer_b": "To cancel while keeping credits, go to audible.com/membership and select 'Cancel membership'. You'll be offered to keep your unused credits for 6 months as an incentive; accept that offer to retain them.",
+      "category": "action_verb",
+      "similarity": 0.7816305030356282
+    },
+    {
+      "query_a": "Can I delete my LinkedIn account?",
+      "query_b": "Can I switch my LinkedIn account back to a free basic account from Premium?",
+      "answer_b": "To downgrade, go to your LinkedIn Premium settings, click 'Manage subscription', and select 'Downgrade to Basic'. Your Premium features will end at the next billing cycle, and you'll revert to free.",
+      "category": "action_verb",
+      "similarity": 0.6683281660073273
+    },
+    {
+      "query_a": "I want to refund my Disney+ annual plan.",
+      "query_b": "I want to upgrade my Disney+ from the basic (ads) plan to premium (no ads).",
+      "answer_b": "To upgrade, go to your Disney+ account, select 'Plan', and choose 'Premium'. You'll be charged the difference prorated for the remainder of your billing cycle, and ads will stop immediately.",
+      "category": "action_verb",
+      "similarity": 0.48360693454694065
+    },
+    {
+      "query_a": "How to cancel my HelloFresh meal kit subscription.",
+      "query_b": "How to skip a week on HelloFresh without canceling.",
+      "answer_b": "To skip a week, log into your account, go to 'Upcoming Deliveries', and select 'Skip' for the specific week. You won't be charged for that delivery, and your subscription stays active.",
+      "category": "action_verb",
+      "similarity": 0.6418625712388295
+    },
+    {
+      "query_a": "Terminate my Verizon mobile plan.",
+      "query_b": "Suspend my Verizon mobile plan temporarily.",
+      "answer_b": "To suspend your line, go to My Verizon, select 'Manage Lines', and choose 'Suspend'. You can suspend for up to 90 days per year; during suspension, you stop paying the service charge but may incur a small fee per line.",
+      "category": "action_verb",
+      "similarity": 0.8199300062606484,
+      "score_off_the_shelf": 0.897828996181488,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9385477900505066,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "I need to delete my Evernote account.",
+      "query_b": "I need to downgrade my Evernote from Premium to Free.",
+      "answer_b": "To downgrade, go to Evernote's account settings, click 'Manage Subscription', and select 'Cancel subscription'. Your account will revert to Free at the end of the billing period, and you'll lose access to Premium features.",
+      "category": "action_verb",
+      "similarity": 0.6745472356400442
+    },
+    {
+      "query_a": "Cancel my Xbox Game Pass subscription.",
+      "query_b": "Pause my Xbox Game Pass subscription for a month.",
+      "answer_b": "Xbox Game Pass doesn't offer a pause feature. Instead, you can turn off recurring billing, which stops future charges but keeps your subscription until the end of the current paid period. Then you can restart later without losing your settings.",
+      "category": "action_verb",
+      "similarity": 0.86677967707903,
+      "score_off_the_shelf": 5.556126594543457,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9900777339935303,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How to refund my Coursera Plus subscription?",
+      "query_b": "How to switch my Coursera Plus subscription to a single course purchase?",
+      "answer_b": "To switch, you need to cancel Coursera Plus (which ends at the current billing cycle) and then purchase a single course separately. You'll receive a pro-rated refund if you cancel within 14 days of the start.",
+      "category": "action_verb",
+      "similarity": 0.75085906689444
+    },
+    {
+      "query_a": "I want to delete my Twitch account.",
+      "query_b": "I want to close my Twitch subscription (channel subscription) but keep my account.",
+      "answer_b": "To end a channel subscription, go to your Subscriptions page, find the channel, and click 'Cancel Subscription'. Your sub benefits remain until the next renewal date, and you won't be charged again.",
+      "category": "action_verb",
+      "similarity": 0.7460502234719817
+    },
+    {
+      "query_a": "Cancel my domain name registration at GoDaddy.",
+      "query_b": "Transfer my domain name from GoDaddy to another registrar.",
+      "answer_b": "To transfer, unlock your domain in GoDaddy's settings, request an authorization code, then initiate the transfer with the new registrar. The transfer typically takes 5-7 days; your domain remains active until it completes.",
+      "category": "action_verb",
+      "similarity": 0.7326043844215696
+    },
+    {
+      "query_a": "How do I convert MP4 to MP3?",
+      "query_b": "How do I convert MP3 to MP4?",
+      "answer_b": "Use a video encoder like HandBrake to wrap the MP3 audio into an MP4 container.",
+      "category": "direction",
+      "similarity": 0.9940626621236396,
+      "score_off_the_shelf": 4.575973033905029,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9783416986465454,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Translate this document from English to Spanish.",
+      "query_b": "Translate this document from Spanish to English.",
+      "answer_b": "Use an English-to-Spanish translation service? No, actually open it in Spanish and translate to English using Google Translate.",
+      "category": "direction",
+      "similarity": 0.9966698286922638,
+      "score_off_the_shelf": 5.468883991241455,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9320363998413086,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Import my contacts from the CSV file into Outlook.",
+      "query_b": "Export my contacts from Outlook into a CSV file.",
+      "answer_b": "Go to File > Open & Export > Import/Export > Export to a file > Comma Separated Values.",
+      "category": "direction",
+      "similarity": 0.9360787868490394,
+      "score_off_the_shelf": -5.469725608825684,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.08211954683065414,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "How do I send money from my PayPal to my bank account?",
+      "query_b": "How do I send money from my bank account to PayPal?",
+      "answer_b": "Link your bank as a payment method, then choose 'Add Funds' in PayPal and enter the amount.",
+      "category": "direction",
+      "similarity": 0.9928015470494832,
+      "score_off_the_shelf": 3.325892925262451,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.905788004398346,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Copy the data from the Excel sheet into the Word document.",
+      "query_b": "Copy the data from the Word document into the Excel sheet.",
+      "answer_b": "Use Paste Special in Excel and choose 'Text' or 'Unformatted Text' to avoid table issues.",
+      "category": "direction",
+      "similarity": 0.9908307779815753,
+      "score_off_the_shelf": -7.9244384765625,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.028668027371168137,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "Route traffic from the VPN tunnel to the local network.",
+      "query_b": "Route traffic from the local network to the VPN tunnel.",
+      "answer_b": "Set up a static route on the local gateway to send all VPN-bound traffic through the tunnel interface.",
+      "category": "direction",
+      "similarity": 0.9951243993704143,
+      "score_off_the_shelf": 5.717902183532715,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.94643634557724,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Move files from the desktop to the cloud drive.",
+      "query_b": "Move files from the cloud drive to the desktop.",
+      "answer_b": "Download the cloud files via the web interface or sync client, then save them to the desktop folder.",
+      "category": "direction",
+      "similarity": 0.9955766198372792,
+      "score_off_the_shelf": 3.03774356842041,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.958870530128479,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I sync my iPhone to my iCloud account?",
+      "query_b": "How do I sync my iCloud account to my iPhone?",
+      "answer_b": "On your iPhone, go to Settings > [your name] > iCloud, and toggle on the data types you want to download.",
+      "category": "direction",
+      "similarity": 0.9945703744878359,
+      "score_off_the_shelf": 2.5289883613586426,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8523728847503662,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Install the plugin from the local file into the WordPress site.",
+      "query_b": "Install the plugin from the WordPress site to the local file.",
+      "answer_b": "That's not a standard operation; but if you want to back up, you'd download the plugin ZIP from the site's dashboard.",
+      "category": "direction",
+      "similarity": 0.9848454594602273,
+      "score_off_the_shelf": -2.3339271545410156,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.3778529167175293,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "Push changes from the local repository to GitHub.",
+      "query_b": "Pull changes from GitHub to the local repository.",
+      "answer_b": "Run 'git pull origin main' in your local terminal to fetch and merge remote commits.",
+      "category": "direction",
+      "similarity": 0.9328526218436344,
+      "score_off_the_shelf": -4.312496185302734,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.29507017135620117,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "Extract text from the PDF into a Word doc.",
+      "query_b": "Extract text from the Word doc into a PDF.",
+      "answer_b": "Use 'Save As' and choose PDF format, which converts the Word content into a PDF file.",
+      "category": "direction",
+      "similarity": 0.9667444785519086,
+      "score_off_the_shelf": -1.40415620803833,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.6714964509010315,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I attach a file from Google Drive to an email in Gmail?",
+      "query_b": "How do I attach a file from an email in Gmail to Google Drive?",
+      "answer_b": "Click the download icon on the attachment in Gmail, then upload that downloaded file to Google Drive.",
+      "category": "direction",
+      "similarity": 0.9962642786650399,
+      "score_off_the_shelf": 6.326289176940918,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9778022766113281,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Forward port 8080 from the router to the server.",
+      "query_b": "Forward port 8080 from the server to the router.",
+      "answer_b": "This is reversed; typically you'd set up port forwarding on the router, not the server. But if you mean outbound, you'd change the server's default route.",
+      "category": "direction",
+      "similarity": 0.9972154496430587,
+      "score_off_the_shelf": 1.3018338680267334,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.7302887439727783,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Burn a CD from the files on my computer.",
+      "query_b": "Burn the files on my CD to my computer.",
+      "answer_b": "Insert the CD and use file explorer to copy the files from the CD drive to your local hard drive.",
+      "category": "direction",
+      "similarity": 0.9494110315677585,
+      "score_off_the_shelf": 0.40739575028419495,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.7688122987747192,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I migrate data from MySQL to PostgreSQL?",
+      "query_b": "How do I migrate data from PostgreSQL to MySQL?",
+      "answer_b": "Use pg_dump to export the PostgreSQL data, then convert the SQL syntax and import into MySQL.",
+      "category": "direction",
+      "similarity": 0.9929171800603473,
+      "score_off_the_shelf": 5.788985729217529,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9833807945251465,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Set up email forwarding from Outlook to Gmail.",
+      "query_b": "Set up email forwarding from Gmail to Outlook.",
+      "answer_b": "In Gmail settings, go to 'Forwarding and POP/IMAP', add the Outlook address, and choose 'Forward a copy'.",
+      "category": "direction",
+      "similarity": 0.9964078664769698,
+      "score_off_the_shelf": 6.8635993003845215,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9876365065574646,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Load the JSON file into my Python script.",
+      "query_b": "Save my Python script's data into a JSON file.",
+      "answer_b": "Use json.dump() in Python to write the data dictionary to a .json file.",
+      "category": "direction",
+      "similarity": 0.8461527044946678,
+      "score_off_the_shelf": 3.8872499465942383,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8492779731750488,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Print the spreadsheet from my printer to a PDF file.",
+      "query_b": "Print the PDF file to my printer as a spreadsheet.",
+      "answer_b": "Open the PDF in a viewer and use the print dialog, selecting your printer; but it won't become a spreadsheet.",
+      "category": "direction",
+      "similarity": 0.8902236753826582,
+      "score_off_the_shelf": 6.697956562042236,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9737240076065063,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Upload the image from my computer to the website.",
+      "query_b": "Upload the image from the website to my computer.",
+      "answer_b": "Right-click the image on the website and choose 'Save Image As...' to download it locally.",
+      "category": "direction",
+      "similarity": 0.9958548540886045,
+      "score_off_the_shelf": 2.5626113414764404,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8159087896347046,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I schedule a backup from the external drive to the internal drive?",
+      "query_b": "How do I schedule a backup from the internal drive to the external drive?",
+      "answer_b": "Use backup software like Windows Backup, set the source as the internal drive and destination as the external drive, then schedule a task.",
+      "category": "direction",
+      "similarity": 0.9993396401001736,
+      "score_off_the_shelf": 8.03512191772461,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9890428185462952,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the battery capacity of the iPhone 14?",
+      "query_b": "What is the battery capacity of the iPhone 15?",
+      "answer_b": "The iPhone 15 has a 3,349 mAh battery.",
+      "category": "entity_swap",
+      "similarity": 0.9444718360891433,
+      "score_off_the_shelf": 5.462703704833984,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9649342894554138,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Who was the first President of the United States?",
+      "query_b": "Who was the first President of the United States born in a log cabin?",
+      "answer_b": "Andrew Jackson.",
+      "category": "entity_swap",
+      "similarity": 0.7027680100653303
+    },
+    {
+      "query_a": "What is the population of Paris, Texas?",
+      "query_b": "What is the population of Paris, France?",
+      "answer_b": "Approximately 2.1 million people live within the city limits of Paris, France.",
+      "category": "entity_swap",
+      "similarity": 0.8634670295389022,
+      "score_off_the_shelf": 1.6261909008026123,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.6797807812690735,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Which company manufactures the Ford Mustang?",
+      "query_b": "Which company manufactures the Tesla Model S?",
+      "answer_b": "Tesla, Inc. manufactures the Model S.",
+      "category": "entity_swap",
+      "similarity": 0.5983561990679717
+    },
+    {
+      "query_a": "What is the capital of Australia?",
+      "query_b": "What is the capital of Austria?",
+      "answer_b": "Vienna is the capital of Austria.",
+      "category": "entity_swap",
+      "similarity": 0.7103619998902132
+    },
+    {
+      "query_a": "What is the release year of the PlayStation 4?",
+      "query_b": "What is the release year of the PlayStation 5?",
+      "answer_b": "The PlayStation 5 was released in 2020.",
+      "category": "entity_swap",
+      "similarity": 0.8798130154600882,
+      "score_off_the_shelf": 5.116292476654053,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9396802186965942,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Who wrote the novel '1984'?",
+      "query_b": "Who wrote the novel 'Brave New World'?",
+      "answer_b": "Aldous Huxley wrote 'Brave New World'.",
+      "category": "entity_swap",
+      "similarity": 0.42776217626065016
+    },
+    {
+      "query_a": "What is the tallest mountain in Japan?",
+      "query_b": "What is the tallest mountain in Nepal?",
+      "answer_b": "Mount Everest is the tallest mountain in Nepal, at 8,849 meters.",
+      "category": "entity_swap",
+      "similarity": 0.7232491374008575
+    },
+    {
+      "query_a": "Which country is the largest by land area?",
+      "query_b": "Which country is the largest by population?",
+      "answer_b": "India is the most populous country, with over 1.4 billion people.",
+      "category": "entity_swap",
+      "similarity": 0.7520773263016169
+    },
+    {
+      "query_a": "What is the main ingredient in a traditional Margherita pizza?",
+      "query_b": "What is the main ingredient in a traditional Hawaiian pizza?",
+      "answer_b": "Pineapple is a key ingredient on a Hawaiian pizza.",
+      "category": "entity_swap",
+      "similarity": 0.7995047926304443
+    },
+    {
+      "query_a": "Who is the CEO of Apple?",
+      "query_b": "Who is the CEO of Microsoft?",
+      "answer_b": "Satya Nadella is the CEO of Microsoft.",
+      "category": "entity_swap",
+      "similarity": 0.7560201141838688
+    },
+    {
+      "query_a": "What is the currency of Japan?",
+      "query_b": "What is the currency of China?",
+      "answer_b": "The currency of China is the Renminbi (Yuan).",
+      "category": "entity_swap",
+      "similarity": 0.7179103921591251
+    },
+    {
+      "query_a": "How many bones are in the adult human body?",
+      "query_b": "How many bones are in the adult human foot?",
+      "answer_b": "Each adult human foot contains 26 bones.",
+      "category": "entity_swap",
+      "similarity": 0.8799994587889454,
+      "score_off_the_shelf": 7.949102878570557,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8912546038627625,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the largest planet in our solar system?",
+      "query_b": "What is the largest moon of Saturn?",
+      "answer_b": "Titan is the largest moon of Saturn.",
+      "category": "entity_swap",
+      "similarity": 0.6517356634133497
+    },
+    {
+      "query_a": "Which artist painted the Mona Lisa?",
+      "query_b": "Which artist painted The Starry Night?",
+      "answer_b": "Vincent van Gogh painted The Starry Night.",
+      "category": "entity_swap",
+      "similarity": 0.568608641623882
+    },
+    {
+      "query_a": "What is the boiling point of water at sea level?",
+      "query_b": "What is the boiling point of ethanol at sea level?",
+      "answer_b": "Ethanol boils at 78.37\u00b0C (173.1\u00b0F) at sea level.",
+      "category": "entity_swap",
+      "similarity": 0.8114769942440617,
+      "score_off_the_shelf": 2.4473330974578857,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.5538737773895264,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Who discovered penicillin?",
+      "query_b": "Who discovered radium?",
+      "answer_b": "Marie Curie discovered radium.",
+      "category": "entity_swap",
+      "similarity": 0.42073471916896693
+    },
+    {
+      "query_a": "What is the speed of light in a vacuum?",
+      "query_b": "What is the speed of sound in air at 20\u00b0C?",
+      "answer_b": "The speed of sound in air at 20\u00b0C is about 343 meters per second.",
+      "category": "entity_swap",
+      "similarity": 0.3695557039707603
+    },
+    {
+      "query_a": "What is the longest river in the world?",
+      "query_b": "What is the longest river in South America?",
+      "answer_b": "The Amazon River is the longest river in South America.",
+      "category": "entity_swap",
+      "similarity": 0.8094763642229309,
+      "score_off_the_shelf": 4.397536277770996,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9072211980819702,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many states are there in the United States?",
+      "query_b": "How many states are there in Mexico?",
+      "answer_b": "Mexico has 32 federal entities, including 31 states and Mexico City.",
+      "category": "entity_swap",
+      "similarity": 0.7832736968986307
+    },
+    {
+      "query_a": "What is the minimum credit score required for a 200k mortgage?",
+      "query_b": "What is the minimum credit score required for a 500k mortgage?",
+      "answer_b": "A 500k mortgage requires a minimum credit score of 700, but a 200k mortgage only needs 620.",
+      "category": "quantity_swap",
+      "similarity": 0.9323897281148322,
+      "score_off_the_shelf": 9.869014739990234,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9967511892318726,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many vacation days do I get after 1 year of employment?",
+      "query_b": "How many vacation days do I get after 5 years of employment?",
+      "answer_b": "After 5 years, you get 20 vacation days, but after 1 year you only get 10.",
+      "category": "quantity_swap",
+      "similarity": 0.8610059022894831,
+      "score_off_the_shelf": 8.064136505126953,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9312389492988586,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I return my purchase within 14 days for a full refund?",
+      "query_b": "Can I return my purchase within 60 days for a full refund?",
+      "answer_b": "Yes, returns within 60 days are accepted, but the 14-day window has passed so no refund.",
+      "category": "quantity_swap",
+      "similarity": 0.878619060350858,
+      "score_off_the_shelf": 7.742622375488281,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9974191188812256,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the interest rate on a 3-year fixed deposit?",
+      "query_b": "What is the interest rate on a 7-year fixed deposit?",
+      "answer_b": "The 7-year rate is 4.5% per annum, while the 3-year rate is only 2.8%.",
+      "category": "quantity_swap",
+      "similarity": 0.8573763881541493,
+      "score_off_the_shelf": 4.3341145515441895,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9485892653465271,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the monthly payment for a 10k auto loan at 5% APR?",
+      "query_b": "What is the monthly payment for a 25k auto loan at 5% APR?",
+      "answer_b": "For a 25k loan, the monthly payment is $471.78, but for 10k it would be $188.71.",
+      "category": "quantity_swap",
+      "similarity": 0.9493131637563749,
+      "score_off_the_shelf": 3.6699771881103516,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9412996172904968,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many bonus points do I earn per dollar spent with a basic membership?",
+      "query_b": "How many bonus points do I earn per dollar spent with a premium membership?",
+      "answer_b": "Premium members earn 5 points per dollar, basic members only earn 1.",
+      "category": "quantity_swap",
+      "similarity": 0.8903803098646212,
+      "score_off_the_shelf": 5.938220977783203,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8233199119567871,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the coverage limit for baggage loss on a domestic flight?",
+      "query_b": "What is the coverage limit for baggage loss on an international flight?",
+      "answer_b": "International flights cover up to $2000, domestic only $500.",
+      "category": "quantity_swap",
+      "similarity": 0.9333435853319124,
+      "score_off_the_shelf": -0.1121196374297142,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.5099762678146362,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How large a storage unit do I need for a 2-bedroom apartment?",
+      "query_b": "How large a storage unit do I need for a 5-bedroom house?",
+      "answer_b": "For a 5-bedroom house, you need at least a 10x20 unit, not the 10x10 that fits a 2-bedroom.",
+      "category": "quantity_swap",
+      "similarity": 0.8977084159842096,
+      "score_off_the_shelf": 4.0269694328308105,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.6329138278961182,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How long does it take to get a passport if I apply in a standard processing time?",
+      "query_b": "How long does it take to get a passport if I apply in expedited processing time?",
+      "answer_b": "Expedited takes 2-3 weeks, standard takes 6-8 weeks.",
+      "category": "quantity_swap",
+      "similarity": 0.9177284191675795,
+      "score_off_the_shelf": 0.6580562591552734,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8185239434242249,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the minimum age to rent a car in this state?",
+      "query_b": "What is the minimum age to rent a car in Canada?",
+      "answer_b": "In Canada, the minimum age is 21, but in this state it is 18.",
+      "category": "quantity_swap",
+      "similarity": 0.8410392308846188,
+      "score_off_the_shelf": 2.6641063690185547,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.6331776976585388,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How much does it cost to replace a lost driver's license in California?",
+      "query_b": "How much does it cost to replace a lost driver's license in Texas?",
+      "answer_b": "In Texas it costs $11, but in California it is $35.",
+      "category": "quantity_swap",
+      "similarity": 0.8595672166080949,
+      "score_off_the_shelf": 2.5224344730377197,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8337787389755249,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the warranty period on a 32-inch TV?",
+      "query_b": "What is the warranty period on a 65-inch TV?",
+      "answer_b": "The 65-inch TV has a 3-year warranty, the 32-inch only has 1 year.",
+      "category": "quantity_swap",
+      "similarity": 0.8676060955280983,
+      "score_off_the_shelf": 6.126243591308594,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9488088488578796,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many guests can I bring with a standard event ticket?",
+      "query_b": "How many guests can I bring with a VIP event ticket?",
+      "answer_b": "VIP tickets allow up to 4 guests, standard only 1.",
+      "category": "quantity_swap",
+      "similarity": 0.9102753943359925,
+      "score_off_the_shelf": 6.5430588722229,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8945807218551636,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the daily rate for a small moving truck?",
+      "query_b": "What is the daily rate for a large moving truck?",
+      "answer_b": "A large truck costs $89 per day, while a small one is only $39.",
+      "category": "quantity_swap",
+      "similarity": 0.9624714851369769,
+      "score_off_the_shelf": 5.992044448852539,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9861661195755005,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many items can I check in for free on a domestic flight?",
+      "query_b": "How many items can I check in for free on an international flight?",
+      "answer_b": "International flights include 2 free checked bags, domestic only 1.",
+      "category": "quantity_swap",
+      "similarity": 0.9455862045278629,
+      "score_off_the_shelf": 6.115283012390137,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8350988626480103,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the minimum deposit to open a basic checking account?",
+      "query_b": "What is the minimum deposit to open a gold checking account?",
+      "answer_b": "Gold account requires a $500 minimum deposit, basic only $50.",
+      "category": "quantity_swap",
+      "similarity": 0.8424324989310422,
+      "score_off_the_shelf": 4.405526638031006,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.823335587978363,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many days notice do I need to cancel a hotel reservation?",
+      "query_b": "How many days notice do I need to cancel a vacation package?",
+      "answer_b": "Vacation packages require 30 days notice, hotels only 24 hours.",
+      "category": "quantity_swap",
+      "similarity": 0.7472070900913808
+    },
+    {
+      "query_a": "What is the penalty for early withdrawal from a 1-year CD?",
+      "query_b": "What is the penalty for early withdrawal from a 5-year CD?",
+      "answer_b": "The 5-year CD penalty is 180 days of interest, the 1-year is only 90 days.",
+      "category": "quantity_swap",
+      "similarity": 0.9632615447034739,
+      "score_off_the_shelf": 4.9682416915893555,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.926474928855896,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the maximum weight limit for a carry-on bag?",
+      "query_b": "What is the maximum weight limit for a checked bag?",
+      "answer_b": "Checked bags can weigh up to 50 lbs, carry-ons only 15 lbs.",
+      "category": "quantity_swap",
+      "similarity": 0.8578627705565456,
+      "score_off_the_shelf": 4.544558525085449,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8920197486877441,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many times can I use the gym per week with a basic membership?",
+      "query_b": "How many times can I use the gym per week with a premium membership?",
+      "answer_b": "Premium members can use the gym 7 times a week, basic members only 3.",
+      "category": "quantity_swap",
+      "similarity": 0.9180526137342808,
+      "score_off_the_shelf": 8.646385192871094,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9547339081764221,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I cancel my subscription to the premium plan?",
+      "query_b": "How do I NOT cancel my subscription to the premium plan?",
+      "answer_b": "You don't need to do anything\u2014just keep using your premium plan and it will continue to renew automatically at the end of the current billing period.",
+      "category": "negation",
+      "similarity": 0.9884194731702456,
+      "score_off_the_shelf": 1.7683368921279907,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9125720858573914,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I get a refund for my last order?",
+      "query_b": "Can I get a refund for my last order if I don't return the item?",
+      "answer_b": "No, refunds are only processed after we receive the returned item in its original condition. If you keep the item, no refund will be issued.",
+      "category": "negation",
+      "similarity": 0.9039454402882025,
+      "score_off_the_shelf": 1.218198299407959,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9655894041061401,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Is the package delivered on weekends?",
+      "query_b": "Is the package not delivered on weekends?",
+      "answer_b": "Correct\u2014weekend delivery is not available for standard shipping. You can expect delivery only on Monday through Friday.",
+      "category": "negation",
+      "similarity": 0.97746938466928,
+      "score_off_the_shelf": 8.41189956665039,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9974664449691772,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Should I turn on two-factor authentication for my account?",
+      "query_b": "Should I not turn on two-factor authentication for my account?",
+      "answer_b": "No, if you prefer convenience over extra security, you can skip it. However, without two-factor authentication, your account is more vulnerable to unauthorized access.",
+      "category": "negation",
+      "similarity": 0.9822803118553247,
+      "score_off_the_shelf": 6.897963523864746,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9983715415000916,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What happens if I delete my WhatsApp account?",
+      "query_b": "What happens if I don't delete my WhatsApp account?",
+      "answer_b": "If you don't delete it, your account remains active, your chat history stays intact, and you can continue using the service normally with no data loss.",
+      "category": "negation",
+      "similarity": 0.9839761853208238,
+      "score_off_the_shelf": 3.06362247467041,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9083801507949829,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Does my plan include free international roaming?",
+      "query_b": "Does my plan not include free international roaming?",
+      "answer_b": "That's right\u2014your current basic plan does not include any free international roaming. You'll need to purchase an add-on or upgrade to a premium plan for that feature.",
+      "category": "negation",
+      "similarity": 0.9886517524709351,
+      "score_off_the_shelf": 10.376873016357422,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9994866847991943,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I use my gift card to pay for shipping?",
+      "query_b": "Can I use my gift card to not pay for shipping?",
+      "answer_b": "No, gift cards can only be applied to the item total, not to shipping fees. You'll have to pay shipping separately with a credit card or other payment method.",
+      "category": "negation",
+      "similarity": 0.9228678941717455,
+      "score_off_the_shelf": 9.737085342407227,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9994459748268127,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Is it possible to pause my membership for a month?",
+      "query_b": "Is it possible to not pause my membership for a month?",
+      "answer_b": "Yes, if you don't pause it, your membership will continue to bill normally and you'll have full access throughout the month\u2014no interruption in service.",
+      "category": "negation",
+      "similarity": 0.9850724935521764,
+      "score_off_the_shelf": 7.924846649169922,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9984884262084961,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I block a user on this platform?",
+      "query_b": "How do I not block a user on this platform?",
+      "answer_b": "You don't need to do anything special\u2014simply ignore the user's messages and don't click the 'Block' button. They'll still be able to see your profile and contact you.",
+      "category": "negation",
+      "similarity": 0.9856702676805098,
+      "score_off_the_shelf": 3.304896116256714,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9530074596405029,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Will I be charged a fee if I close my bank account early?",
+      "query_b": "Will I be charged a fee if I don't close my bank account early?",
+      "answer_b": "No, if you keep the account open for the full term, there is no early closure fee. You'll only incur charges if you close it before the minimum holding period.",
+      "category": "negation",
+      "similarity": 0.9854293456919678,
+      "score_off_the_shelf": 8.58564281463623,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9989546537399292,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Does the software automatically save my work?",
+      "query_b": "Does the software not automatically save my work?",
+      "answer_b": "Correct\u2014the free version does not have auto-save enabled. You must manually save your file using Ctrl+S or the Save button to avoid losing changes.",
+      "category": "negation",
+      "similarity": 0.9803605663981508,
+      "score_off_the_shelf": 2.0109777450561523,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9618755578994751,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I reschedule my appointment to next week?",
+      "query_b": "Can I not reschedule my appointment to next week?",
+      "answer_b": "If you don't reschedule, your appointment stays at the original time and date. If you want to move it, you must log in and select a new slot before the 24-hour window.",
+      "category": "negation",
+      "similarity": 0.9462426900854184,
+      "score_off_the_shelf": 3.8713650703430176,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9527480006217957,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Is the warranty transferable to a new owner?",
+      "query_b": "Is the warranty not transferable to a new owner?",
+      "answer_b": "That's correct\u2014for this product line, the warranty is non-transferable and only applies to the original purchaser. A new owner would have no warranty coverage.",
+      "category": "negation",
+      "similarity": 0.9820911884298039,
+      "score_off_the_shelf": 8.335129737854004,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9963778853416443,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I enable dark mode in the app?",
+      "query_b": "How do I not enable dark mode in the app?",
+      "answer_b": "Simply leave the theme setting on 'Light' or 'System Default' and do not toggle the dark mode switch. The app will continue to display in light mode only.",
+      "category": "negation",
+      "similarity": 0.9768354296674496,
+      "score_off_the_shelf": 5.9409074783325195,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9850753545761108,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Will my data be deleted if I uninstall the app?",
+      "query_b": "Will my data be deleted if I don't uninstall the app?",
+      "answer_b": "No, if you keep the app installed, all your local data and settings remain intact. Deletion only happens if you actually uninstall the app or clear app data manually.",
+      "category": "negation",
+      "similarity": 0.9963585138310959,
+      "score_off_the_shelf": 9.173277854919434,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9993076324462891,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I change my email address on the account?",
+      "query_b": "Can I not change my email address on the account?",
+      "answer_b": "If you choose not to change it, your current email remains active for all future logins and notifications. No action is needed to keep it as is.",
+      "category": "negation",
+      "similarity": 0.9523588986601187,
+      "score_off_the_shelf": -0.09642091393470764,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.7337623834609985,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Does the free trial auto-renew into a paid plan?",
+      "query_b": "Does the free trial not auto-renew into a paid plan?",
+      "answer_b": "Correct\u2014the free trial does not auto-renew. At the end of the trial, your account is downgraded to the free tier, and you won't be charged unless you manually upgrade.",
+      "category": "negation",
+      "similarity": 0.9886466264714844,
+      "score_off_the_shelf": 6.228070259094238,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9897555708885193,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Is there a limit on the number of devices I can use?",
+      "query_b": "Is there not a limit on the number of devices I can use?",
+      "answer_b": "Actually, there is a limit\u2014the standard plan allows only 3 active devices. If you try to use more, you'll get an error asking you to deactivate an existing device.",
+      "category": "negation",
+      "similarity": 0.9938484422969944,
+      "score_off_the_shelf": 7.583733558654785,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9931001663208008,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Should I restart my router to fix the connection?",
+      "query_b": "Should I not restart my router to fix the connection?",
+      "answer_b": "No, if you don't restart the router, the connection issue may persist. Restarting is the recommended first step to clear temporary glitches and re-establish a fresh signal.",
+      "category": "negation",
+      "similarity": 0.9835015525510938,
+      "score_off_the_shelf": 8.376199722290039,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9988678693771362,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I add a secondary user to my account?",
+      "query_b": "Can I not add a secondary user to my account?",
+      "answer_b": "If you don't add a secondary user, only you will have access. The secondary user option is optional\u2014no one else can log in unless you explicitly invite them.",
+      "category": "negation",
+      "similarity": 0.9526857081267496,
+      "score_off_the_shelf": 8.265624046325684,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9978936314582825,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I cancel my Netflix subscription?",
+      "query_b": "How do I pause my Netflix subscription?",
+      "answer_b": "Go to Account > Pause Membership, choose the pause duration, and confirm. Billing will stop until the pause ends, but your profile and recommendations are retained.",
+      "category": "action_verb",
+      "similarity": 0.8188547384048105,
+      "score_off_the_shelf": -7.721821308135986,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.030953411012887955,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "Can I delete my Amazon account permanently?",
+      "query_b": "Can I close my Amazon account temporarily?",
+      "answer_b": "Yes, you can request a temporary closure via Account > Login & Security > Close Account, then select 'Temporary'. Your data is kept for 30 days, and you can reactivate anytime within that window.",
+      "category": "action_verb",
+      "similarity": 0.8528314145098392,
+      "score_off_the_shelf": -1.297410249710083,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.7427610158920288,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "I want to refund my Adobe Creative Cloud subscription.",
+      "query_b": "I want to downgrade my Adobe Creative Cloud subscription.",
+      "answer_b": "Go to your Adobe account > Plans > Manage Plan > Choose 'Downgrade', select a lower-tier plan like Single App, and confirm. You'll be prorated for the remainder of the billing cycle.",
+      "category": "action_verb",
+      "similarity": 0.7838329076759128
+    },
+    {
+      "query_a": "How do I renew my gym membership?",
+      "query_b": "How do I cancel my gym membership?",
+      "answer_b": "You need to submit a cancellation request at least 30 days before your next billing date. Visit the front desk or email support with your member ID, and they will process the cancellation.",
+      "category": "action_verb",
+      "similarity": 0.7852847576133504
+    },
+    {
+      "query_a": "What's the process to cancel my Spotify Premium?",
+      "query_b": "What's the process to switch my Spotify Premium to a family plan?",
+      "answer_b": "In your account settings, select 'Change Plan', choose 'Premium Family', invite up to 5 members, and verify the same address for everyone. Your current solo plan will be replaced immediately.",
+      "category": "action_verb",
+      "similarity": 0.6950223860151008
+    },
+    {
+      "query_a": "Can I delete my Uber account?",
+      "query_b": "Can I suspend my Uber account temporarily?",
+      "answer_b": "Yes, you can deactivate your account temporarily via the app: Help > Account > Deactivate Account. You'll be able to reactivate by logging in again, but your ride history and saved payment methods stay intact.",
+      "category": "action_verb",
+      "similarity": 0.7448348846925729
+    },
+    {
+      "query_a": "Tell me how to cancel my Microsoft 365 subscription.",
+      "query_b": "Tell me how to renew my Microsoft 365 subscription.",
+      "answer_b": "To renew, go to your Microsoft account > Subscriptions > Select your plan > 'Turn on recurring billing'. Ensure your payment method is valid, and your subscription will auto-renew at the end of the current term.",
+      "category": "action_verb",
+      "similarity": 0.8378928899756635,
+      "score_off_the_shelf": 0.16605094075202942,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8700061440467834,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "I need to refund my PlayStation Plus subscription.",
+      "query_b": "I need to renew my PlayStation Plus subscription.",
+      "answer_b": "You can renew by going to the PlayStation Store, selecting PlayStation Plus, and purchasing a new subscription (monthly, quarterly, or yearly). Your benefits resume immediately after payment.",
+      "category": "action_verb",
+      "similarity": 0.8398606777182763,
+      "score_off_the_shelf": 3.575998544692993,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9764413833618164,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I delete my Gmail account?",
+      "query_b": "How do I archive my Gmail account?",
+      "answer_b": "Archiving is done per email: select the email(s), click the archive icon (box with down arrow). It removes them from your inbox but keeps them in 'All Mail' for later retrieval. To archive your whole account, you'd need to use the 'Takeout' option to back up manually.",
+      "category": "action_verb",
+      "similarity": 0.6886510067367227
+    },
+    {
+      "query_a": "What steps are needed to cancel my Airbnb reservation?",
+      "query_b": "What steps are needed to modify my Airbnb reservation?",
+      "answer_b": "Go to your Trips, select the reservation, and click 'Change reservation'. You can adjust dates, number of guests, or even switch to a different listing. Fees may apply depending on the host's policy, and you'll need to confirm any price difference.",
+      "category": "action_verb",
+      "similarity": 0.7773888574466595
+    },
+    {
+      "query_a": "Can I refund my Kindle book purchase?",
+      "query_b": "Can I exchange my Kindle book purchase?",
+      "answer_b": "Yes, to exchange, go to Amazon's 'Manage Your Content and Devices', find the book, select 'Return for Exchange', and choose a different title within 7 days. A credit will be issued for the original price and applied to the new book.",
+      "category": "action_verb",
+      "similarity": 0.8537878903015593,
+      "score_off_the_shelf": -3.5477614402770996,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.1469690054655075,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "How do I cancel my MyFitnessPal premium subscription?",
+      "query_b": "How do I downgrade my MyFitnessPal premium subscription to free?",
+      "answer_b": "In the app, go to Settings > Subscription > 'Cancel Premium'. This will revert you to the free tier at the end of the current billing period. You'll lose advanced tracking, but your historical data remains.",
+      "category": "action_verb",
+      "similarity": 0.8071166758002719,
+      "score_off_the_shelf": 5.3026580810546875,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9930792450904846,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "I want to delete my Dropbox account.",
+      "query_b": "I want to pause my Dropbox account.",
+      "answer_b": "Dropbox doesn't have a formal pause, but you can downgrade to a free plan by canceling your paid subscription. Your files remain accessible, but advanced features like Smart Sync and extended version history will be disabled.",
+      "category": "action_verb",
+      "similarity": 0.6940305829041216
+    },
+    {
+      "query_a": "What is the procedure to cancel my HelloFresh meal delivery?",
+      "query_b": "What is the procedure to skip a week in my HelloFresh meal delivery?",
+      "answer_b": "Log in, go to 'Upcoming Deliveries', select the week you want to skip, and click 'Skip Week'. You must do this by the deadline (usually 5 days before delivery). No charges apply for the skipped week.",
+      "category": "action_verb",
+      "similarity": 0.7585351323200706
+    },
+    {
+      "query_a": "How do I refund my Roblox Premium membership?",
+      "query_b": "How do I downgrade my Roblox Premium membership?",
+      "answer_b": "Go to Settings > Billing > Premium > 'Change Plan' and select a lower tier (e.g., from 1000 to 450 Robux per month). The change takes effect next billing cycle, and you'll be prorated accordingly.",
+      "category": "action_verb",
+      "similarity": 0.7933427095405274
+    },
+    {
+      "query_a": "Can I delete my Twitter (X) account?",
+      "query_b": "Can I deactivate my Twitter (X) account?",
+      "answer_b": "Yes, go to Settings and Privacy > Your Account > 'Deactivate your account'. You'll be asked to confirm, and your account will be hidden immediately. You have 30 days to reactivate by logging in, after which it's permanently deleted.",
+      "category": "action_verb",
+      "similarity": 0.9084790294446818,
+      "score_off_the_shelf": -0.343112051486969,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.9297174215316772,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I cancel my Audible membership?",
+      "query_b": "How do I exchange my Audible audiobook?",
+      "answer_b": "Go to your Library, find the audiobook, click 'Return this title'. You'll receive a credit back to your account (if within 365 days of purchase), which you can use for a different audiobook. The returned book is removed from your library.",
+      "category": "action_verb",
+      "similarity": 0.5813973047009025
+    },
+    {
+      "query_a": "What's the way to delete my LinkedIn account?",
+      "query_b": "What's the way to hide my LinkedIn account from public view?",
+      "answer_b": "Go to Settings & Privacy > Visibility > 'Edit your public profile', then toggle off 'Public profile visibility'. This makes your profile invisible to non-logged-in users and search engines, but you remain active on the platform.",
+      "category": "action_verb",
+      "similarity": 0.6882606148712904
+    },
+    {
+      "query_a": "I'd like to cancel my Hulu subscription.",
+      "query_b": "I'd like to suspend my Hulu subscription for a month.",
+      "answer_b": "Hulu allows a 'Pause Subscription' feature. Go to your Account page, select 'Pause Subscription', choose the duration (e.g., 1 month), and confirm. Your plan and add-ons are frozen, and you won't be billed until it resumes.",
+      "category": "action_verb",
+      "similarity": 0.8683168888083357,
+      "score_off_the_shelf": 0.7828383445739746,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9138677716255188,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I refund my app purchase on Apple?",
+      "query_b": "How do I reinstall my app purchase on Apple?",
+      "answer_b": "Go to the App Store, tap your profile, select 'Purchased', find the app, and tap the cloud icon to reinstall. For paid apps, you won't be charged again, and your in-app purchases remain associated with your Apple ID.",
+      "category": "action_verb",
+      "similarity": 0.8082997570387097,
+      "score_off_the_shelf": 5.925090789794922,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9917641282081604,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I convert audio to video?",
+      "query_b": "How do I convert video to audio?",
+      "answer_b": "Extract the audio track using a tool like ffmpeg with the command: ffmpeg -i input.mp4 -vn -acodec copy output.m4a",
+      "category": "direction",
+      "similarity": 0.9941836592058527,
+      "score_off_the_shelf": -4.150357246398926,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.12307582795619965,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "Translate this paragraph from English to French.",
+      "query_b": "Translate this paragraph from French to English.",
+      "answer_b": "Here is the English translation: 'The weather is nice today and we plan to go for a walk in the park.'",
+      "category": "direction",
+      "similarity": 0.9964211583127547,
+      "score_off_the_shelf": -5.219913005828857,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.4355258643627167,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "Import contacts from CSV into my email account.",
+      "query_b": "Export my email contacts to a CSV file.",
+      "answer_b": "Go to Contacts > Manage > Export, choose CSV format, and download the file to your computer.",
+      "category": "direction",
+      "similarity": 0.8583655953398703,
+      "score_off_the_shelf": 3.984165668487549,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9506696462631226,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I move files from my phone to my computer?",
+      "query_b": "How do I move files from my computer to my phone?",
+      "answer_b": "Connect your phone via USB, enable file transfer mode, then drag and drop files from your computer's folder to the phone's internal storage.",
+      "category": "direction",
+      "similarity": 0.9972326758812616,
+      "score_off_the_shelf": 7.804925918579102,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9955127835273743,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can you change this PDF into a Word document?",
+      "query_b": "Can you change this Word document into a PDF?",
+      "answer_b": "Go to File > Save As, choose PDF as the file type, and click Save to create the PDF version.",
+      "category": "direction",
+      "similarity": 0.988695025443042,
+      "score_off_the_shelf": -1.2727372646331787,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.632734477519989,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "I need to send money from my bank account to my PayPal.",
+      "query_b": "I need to send money from my PayPal to my bank account.",
+      "answer_b": "Log into PayPal, go to Wallet, click 'Transfer to Bank', enter the amount, and confirm the transfer.",
+      "category": "direction",
+      "similarity": 0.9974282976889528,
+      "score_off_the_shelf": -0.2115006148815155,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.7618476748466492,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I set up email forwarding from Gmail to Outlook?",
+      "query_b": "How do I set up email forwarding from Outlook to Gmail?",
+      "answer_b": "In Outlook, go to Settings > Mail > Forwarding, enable forwarding, and enter your Gmail address as the forwarding destination.",
+      "category": "direction",
+      "similarity": 0.9966141577489135,
+      "score_off_the_shelf": 8.23861312866211,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9960435628890991,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I copy a playlist from Spotify to Apple Music?",
+      "query_b": "How do I copy a playlist from Apple Music to Spotify?",
+      "answer_b": "Use a third-party service like SongShift, connect both music accounts, select the Apple Music playlist, and transfer it to your Spotify library.",
+      "category": "direction",
+      "similarity": 0.9915238618840791,
+      "score_off_the_shelf": 7.466840744018555,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9946110248565674,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I sync my calendar from iPhone to Google Calendar?",
+      "query_b": "How do I sync my calendar from Google Calendar to iPhone?",
+      "answer_b": "On your iPhone, go to Settings > Calendar > Accounts > Add Account, choose Google, sign in, and enable Calendar sync.",
+      "category": "direction",
+      "similarity": 0.9967905879010722,
+      "score_off_the_shelf": 7.969383239746094,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9896768927574158,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I back up my photos from Google Photos to iCloud?",
+      "query_b": "How do I back up my photos from iCloud to Google Photos?",
+      "answer_b": "Download the Google Photos app, sign in, tap the menu, choose 'Back up & sync', and enable it. Then import photos from your iCloud library by downloading them first.",
+      "category": "direction",
+      "similarity": 0.9926789994634596,
+      "score_off_the_shelf": 8.587211608886719,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9964964985847473,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I transfer my domain from GoDaddy to Namecheap?",
+      "query_b": "How do I transfer my domain from Namecheap to GoDaddy?",
+      "answer_b": "Unlock the domain in your Namecheap account, get the EPP code, then initiate the transfer in GoDaddy by entering the domain and EPP code.",
+      "category": "direction",
+      "similarity": 0.9923698902120203,
+      "score_off_the_shelf": 9.383275985717773,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9987878203392029,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I share my screen from my laptop to my TV?",
+      "query_b": "How do I share my screen from my TV to my laptop?",
+      "answer_b": "This is not a typical option. TVs don't share their screens to laptops; you can only mirror your laptop to the TV.",
+      "category": "direction",
+      "similarity": 0.9989476203908466,
+      "score_off_the_shelf": 6.102368354797363,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9241760969161987,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I move my bookmarks from Chrome to Firefox?",
+      "query_b": "How do I move my bookmarks from Firefox to Chrome?",
+      "answer_b": "In Firefox, go to Library > Bookmarks > Import and Backup > Export Bookmarks to HTML, then in Chrome go to Bookmarks > Import Bookmarks and select that HTML file.",
+      "category": "direction",
+      "similarity": 0.9913176894178013,
+      "score_off_the_shelf": 7.34848165512085,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9946287274360657,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I convert a JPEG to PNG?",
+      "query_b": "How do I convert a PNG to JPEG?",
+      "answer_b": "Open the PNG in any image editor, go to File > Save As, choose JPEG format, and adjust quality if needed.",
+      "category": "direction",
+      "similarity": 0.994560897025121,
+      "score_off_the_shelf": 5.183622360229492,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9813634157180786,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I switch my default search engine from Google to Bing?",
+      "query_b": "How do I switch my default search engine from Bing to Google?",
+      "answer_b": "In your browser settings, go to Search Engine, select Google from the dropdown menu, and it will be set as the default.",
+      "category": "direction",
+      "similarity": 0.9970166085362364,
+      "score_off_the_shelf": 5.884510040283203,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9872269034385681,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I add a debit card to my Apple Wallet?",
+      "query_b": "How do I add a debit card to my bank account from Apple Wallet?",
+      "answer_b": "You cannot add a debit card to your bank account from Apple Wallet. Instead, you use Apple Wallet to store your card for payments.",
+      "category": "direction",
+      "similarity": 0.9511085748662973,
+      "score_off_the_shelf": 7.279240131378174,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9748827815055847,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I connect my Bluetooth headphones to my laptop?",
+      "query_b": "How do I connect my laptop to my Bluetooth headphones?",
+      "answer_b": "Put your headphones in pairing mode, then on your laptop go to Bluetooth settings, find the headphones, and click Connect.",
+      "category": "direction",
+      "similarity": 0.996123134857799,
+      "score_off_the_shelf": 8.036149978637695,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9857980608940125,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I convert a Word file to Google Docs?",
+      "query_b": "How do I convert a Google Doc to a Word file?",
+      "answer_b": "Open the Google Doc, go to File > Download > Microsoft Word (.docx), and the file will be saved to your computer.",
+      "category": "direction",
+      "similarity": 0.9826543331136413,
+      "score_off_the_shelf": 4.457860946655273,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9493827223777771,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I send a text message from my computer?",
+      "query_b": "How do I send a text message from my phone to my computer?",
+      "answer_b": "You cannot send a text message from your phone to your computer as a text. You can email or use messaging apps like WhatsApp Web to send messages to your computer.",
+      "category": "direction",
+      "similarity": 0.8727955818167541,
+      "score_off_the_shelf": 6.093737602233887,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9216993451118469,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I export my email list from Mailchimp to a spreadsheet?",
+      "query_b": "How do I import my email list from a spreadsheet to Mailchimp?",
+      "answer_b": "In Mailchimp, go to Audience > Manage Audience > Import, then upload your CSV or XLSX file and map the fields to create the audience.",
+      "category": "direction",
+      "similarity": 0.9382379651060258,
+      "score_off_the_shelf": -1.511073112487793,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.5323768854141235,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the population of Paris, Texas?",
+      "query_b": "What is the population of Paris, France?",
+      "answer_b": "Approximately 2.1 million people.",
+      "category": "entity_swap",
+      "similarity": 0.8634670295389022,
+      "score_off_the_shelf": -3.152083396911621,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.23842132091522217,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "Who is the CEO of Apple in 2024?",
+      "query_b": "Who is the CEO of Microsoft in 2024?",
+      "answer_b": "Satya Nadella.",
+      "category": "entity_swap",
+      "similarity": 0.804802227305694,
+      "score_off_the_shelf": -8.488828659057617,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.49486109614372253,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "What is the capital of Washington state?",
+      "query_b": "What is the capital of Washington D.C.?",
+      "answer_b": "It is the federal capital of the United States.",
+      "category": "entity_swap",
+      "similarity": 0.8762593121828988,
+      "score_off_the_shelf": 2.172865867614746,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.7071619629859924,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the battery capacity of the iPhone 14?",
+      "query_b": "What is the battery capacity of the iPhone 15?",
+      "answer_b": "3349 mAh.",
+      "category": "entity_swap",
+      "similarity": 0.9444718360891433,
+      "score_off_the_shelf": -7.840925216674805,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.09975451976060867,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "Which country is the largest by area, Russia or Canada?",
+      "query_b": "Which country is the largest by area, Canada or the United States?",
+      "answer_b": "Canada is the second largest country in the world.",
+      "category": "entity_swap",
+      "similarity": 0.8738793059506801,
+      "score_off_the_shelf": 1.8720588684082031,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.5724301934242249,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the main ingredient in a Margherita pizza?",
+      "query_b": "What is the main ingredient in a Pepperoni pizza?",
+      "answer_b": "Pepperoni slices.",
+      "category": "entity_swap",
+      "similarity": 0.8187328577033438,
+      "score_off_the_shelf": -9.617571830749512,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.027444034814834595,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "What year did the Titanic sink?",
+      "query_b": "What year did the Lusitania sink?",
+      "answer_b": "1915.",
+      "category": "entity_swap",
+      "similarity": 0.664100924974071
+    },
+    {
+      "query_a": "Who wrote the novel '1984'?",
+      "query_b": "Who wrote the novel 'Brave New World'?",
+      "answer_b": "Aldous Huxley.",
+      "category": "entity_swap",
+      "similarity": 0.42776217626065016
+    },
+    {
+      "query_a": "What is the currency of Japan?",
+      "query_b": "What is the currency of China?",
+      "answer_b": "Renminbi (Yuan).",
+      "category": "entity_swap",
+      "similarity": 0.7179103921591251
+    },
+    {
+      "query_a": "How many episodes are in the first season of 'Stranger Things'?",
+      "query_b": "How many episodes are in the first season of 'The Mandalorian'?",
+      "answer_b": "Eight episodes.",
+      "category": "entity_swap",
+      "similarity": 0.5173922181124281
+    },
+    {
+      "query_a": "What is the tallest mountain in Africa?",
+      "query_b": "What is the tallest mountain in South America?",
+      "answer_b": "Mount Aconcagua, at 6,961 meters.",
+      "category": "entity_swap",
+      "similarity": 0.781990647315197
+    },
+    {
+      "query_a": "What is the chemical symbol for gold?",
+      "query_b": "What is the chemical symbol for silver?",
+      "answer_b": "Ag.",
+      "category": "entity_swap",
+      "similarity": 0.8402566313735188,
+      "score_off_the_shelf": -8.215038299560547,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.3002070486545563,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "Who was the first president of the United States?",
+      "query_b": "Who was the second president of the United States?",
+      "answer_b": "John Adams.",
+      "category": "entity_swap",
+      "similarity": 0.7805087566367926
+    },
+    {
+      "query_a": "What does 'HTTP' stand for?",
+      "query_b": "What does 'HTTPS' stand for?",
+      "answer_b": "HyperText Transfer Protocol Secure.",
+      "category": "entity_swap",
+      "similarity": 0.6725965142243334
+    },
+    {
+      "query_a": "What is the time zone of New York City?",
+      "query_b": "What is the time zone of Los Angeles?",
+      "answer_b": "Pacific Standard Time (PST).",
+      "category": "entity_swap",
+      "similarity": 0.7066920995705213
+    },
+    {
+      "query_a": "Which company manufactures the Ryzen 5 processor?",
+      "query_b": "Which company manufactures the Core i5 processor?",
+      "answer_b": "Intel.",
+      "category": "entity_swap",
+      "similarity": 0.7795279026023698
+    },
+    {
+      "query_a": "What is the average lifespan of a domestic cat?",
+      "query_b": "What is the average lifespan of a domestic dog?",
+      "answer_b": "About 10-13 years.",
+      "category": "entity_swap",
+      "similarity": 0.8066904314379292,
+      "score_off_the_shelf": 0.2686082720756531,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.7243543267250061,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the boiling point of water in Fahrenheit?",
+      "query_b": "What is the boiling point of water in Celsius?",
+      "answer_b": "100 degrees Celsius.",
+      "category": "entity_swap",
+      "similarity": 0.9123959541311676,
+      "score_off_the_shelf": -7.670210361480713,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.1742345094680786,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "What is the largest planet in our solar system?",
+      "query_b": "What is the largest planet in the Solar System after Jupiter?",
+      "answer_b": "Saturn.",
+      "category": "entity_swap",
+      "similarity": 0.881604909895969,
+      "score_off_the_shelf": -2.422421455383301,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.7480491399765015,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the standard length of a marathon in miles?",
+      "query_b": "What is the standard length of a half-marathon in miles?",
+      "answer_b": "13.1 miles.",
+      "category": "entity_swap",
+      "similarity": 0.9366109967222384,
+      "score_off_the_shelf": 0.5571753978729248,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.7172772884368896,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How much will I be charged if I upgrade to the premium plan for 3 months?",
+      "query_b": "How much will I be charged if I upgrade to the premium plan for 6 months?",
+      "answer_b": "The total charge for 6 months at $15 per month is $90.",
+      "category": "quantity_swap",
+      "similarity": 0.9287016306750584,
+      "score_off_the_shelf": 0.3601304292678833,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.4991074204444885,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "What is the shipping fee for an order under $25?",
+      "query_b": "What is the shipping fee for an order under $100?",
+      "answer_b": "Orders under $100 qualify for free standard shipping.",
+      "category": "quantity_swap",
+      "similarity": 0.8448566794386998,
+      "score_off_the_shelf": 3.7928831577301025,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8424922823905945,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I get a refund if I cancel within 14 days of purchase?",
+      "query_b": "Can I get a refund if I cancel within 30 days of purchase?",
+      "answer_b": "Yes, cancellations within 30 days are fully refunded.",
+      "category": "quantity_swap",
+      "similarity": 0.8759746551504911,
+      "score_off_the_shelf": 5.193912029266357,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9751567244529724,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What discount do I get for signing up for a 1-year contract?",
+      "query_b": "What discount do I get for signing up for a 2-year contract?",
+      "answer_b": "You receive a 20% discount for committing to 2 years.",
+      "category": "quantity_swap",
+      "similarity": 0.9156591245915748,
+      "score_off_the_shelf": 2.704674243927002,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9135841131210327,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many devices can I stream on with the basic plan?",
+      "query_b": "How many devices can I stream on with the premium plan?",
+      "answer_b": "The premium plan allows streaming on up to 4 devices simultaneously.",
+      "category": "quantity_swap",
+      "similarity": 0.8950217899684175,
+      "score_off_the_shelf": 6.021686553955078,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9254676103591919,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the minimum balance to avoid fees if I open an account with $100?",
+      "query_b": "What is the minimum balance to avoid fees if I open an account with $500?",
+      "answer_b": "With a $500 balance, you avoid all monthly maintenance fees.",
+      "category": "quantity_swap",
+      "similarity": 0.8511307239523959,
+      "score_off_the_shelf": 2.0174925327301025,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.7589489221572876,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many bonus points do I earn per dollar spent on groceries?",
+      "query_b": "How many bonus points do I earn per dollar spent on gas?",
+      "answer_b": "You earn 3 points per dollar on gas purchases.",
+      "category": "quantity_swap",
+      "similarity": 0.761805832385255
+    },
+    {
+      "query_a": "Is my warranty valid for 1 year from the purchase date?",
+      "query_b": "Is my warranty valid for 2 years from the purchase date?",
+      "answer_b": "Yes, the extended warranty covers repairs for 2 years.",
+      "category": "quantity_swap",
+      "similarity": 0.9309402663066774,
+      "score_off_the_shelf": -0.867030143737793,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.7065206170082092,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the interest rate for a loan amount of $10,000?",
+      "query_b": "What is the interest rate for a loan amount of $50,000?",
+      "answer_b": "For loans above $50,000, the interest rate drops to 4.5% APR.",
+      "category": "quantity_swap",
+      "similarity": 0.8449633029072956,
+      "score_off_the_shelf": 5.119466781616211,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9156416654586792,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many free revisions do I get if I order 5 prints?",
+      "query_b": "How many free revisions do I get if I order 20 prints?",
+      "answer_b": "You receive unlimited revisions for orders of 20 or more prints.",
+      "category": "quantity_swap",
+      "similarity": 0.9577183723440129,
+      "score_off_the_shelf": 5.480764389038086,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8851892948150635,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the cancellation fee if I end my subscription after 3 months?",
+      "query_b": "What is the cancellation fee if I end my subscription after 6 months?",
+      "answer_b": "Cancellation after 6 months incurs a $50 fee.",
+      "category": "quantity_swap",
+      "similarity": 0.958895680837607,
+      "score_off_the_shelf": 4.994940757751465,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9506537914276123,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How long does delivery take for a package sent to a nearby city?",
+      "query_b": "How long does delivery take for a package sent to another country?",
+      "answer_b": "International delivery typically takes 7-10 business days.",
+      "category": "quantity_swap",
+      "similarity": 0.8417226672164129,
+      "score_off_the_shelf": 3.681443214416504,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8193709254264832,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the data cap for the $30 per month plan?",
+      "query_b": "What is the data cap for the $60 per month plan?",
+      "answer_b": "The $60 plan offers a 100GB data cap per month.",
+      "category": "quantity_swap",
+      "similarity": 0.946448918964448,
+      "score_off_the_shelf": 4.917684555053711,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8674646615982056,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Will I be charged a service fee if I make a payment after 5 days?",
+      "query_b": "Will I be charged a service fee if I make a payment after 10 days?",
+      "answer_b": "Payments made after 10 days incur a 5% late fee.",
+      "category": "quantity_swap",
+      "similarity": 0.9101114815530904,
+      "score_off_the_shelf": 3.7751479148864746,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9602089524269104,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many guest passes come with a membership for 2 people?",
+      "query_b": "How many guest passes come with a membership for 4 people?",
+      "answer_b": "Memberships for 4 people include 8 guest passes per year.",
+      "category": "quantity_swap",
+      "similarity": 0.961022913455002,
+      "score_off_the_shelf": 6.703812599182129,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9313440322875977,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the discount for buying 3 licenses at once?",
+      "query_b": "What is the discount for buying 10 licenses at once?",
+      "answer_b": "Buying 10 or more licenses gives you a 30% volume discount.",
+      "category": "quantity_swap",
+      "similarity": 0.870085343131786,
+      "score_off_the_shelf": 4.095515251159668,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8975047469139099,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the maximum payout for a claim under $500?",
+      "query_b": "What is the maximum payout for a claim under $5,000?",
+      "answer_b": "Claims under $5,000 are eligible for a maximum payout of $4,500.",
+      "category": "quantity_swap",
+      "similarity": 0.9112812876692241,
+      "score_off_the_shelf": 9.20991325378418,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.991329550743103,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many hours of battery life does the 11-inch model have?",
+      "query_b": "How many hours of battery life does the 13-inch model have?",
+      "answer_b": "The 13-inch model provides up to 12 hours of battery life.",
+      "category": "quantity_swap",
+      "similarity": 0.932322263716719,
+      "score_off_the_shelf": 6.8225016593933105,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9433298707008362,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I renew my passport if it expires in 3 months?",
+      "query_b": "Can I renew my passport if it expires in 6 months?",
+      "answer_b": "Yes, you can renew if your passport expires within 6 months.",
+      "category": "quantity_swap",
+      "similarity": 0.8795370459547783,
+      "score_off_the_shelf": 8.681367874145508,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9938530921936035,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the late return fee for a book kept 2 days overdue?",
+      "query_b": "What is the late return fee for a book kept 7 days overdue?",
+      "answer_b": "After 7 days overdue, the fee is $2 per day.",
+      "category": "quantity_swap",
+      "similarity": 0.9522422552099241,
+      "score_off_the_shelf": 2.5246899127960205,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8496745824813843,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I get a refund for my unused subscription?",
+      "query_b": "Can I get a refund for my unused subscription?",
+      "answer_b": "No, you cannot get a refund for an unused subscription once the billing cycle has started.",
+      "category": "negation",
+      "similarity": 0.9999999999989999,
+      "score_off_the_shelf": 10.659516334533691,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9997437596321106,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Is my order eligible for free shipping?",
+      "query_b": "Is my order not eligible for free shipping?",
+      "answer_b": "Yes, your order is not eligible for free shipping because it does not meet the minimum order value.",
+      "category": "negation",
+      "similarity": 0.978631375945506,
+      "score_off_the_shelf": 11.072235107421875,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9998643398284912,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Do I need to install the latest software update?",
+      "query_b": "Do I not need to install the latest software update?",
+      "answer_b": "Correct, you do not need to install the update if you are using the older stable version for compatibility reasons.",
+      "category": "negation",
+      "similarity": 0.9739651664464967,
+      "score_off_the_shelf": 6.837182998657227,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9923563003540039,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Does my plan include unlimited data?",
+      "query_b": "Does my plan not include unlimited data?",
+      "answer_b": "Yes, your plan does not include unlimited data; it has a 10GB monthly cap.",
+      "category": "negation",
+      "similarity": 0.9875257015218395,
+      "score_off_the_shelf": 10.596551895141602,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9996596574783325,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I change my flight date without a fee?",
+      "query_b": "Can I not change my flight date without a fee?",
+      "answer_b": "No, you cannot change your flight date without a fee; a change fee applies unless you have a flexible fare.",
+      "category": "negation",
+      "similarity": 0.9854822158803621,
+      "score_off_the_shelf": 11.227790832519531,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9998859167098999,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Will my warranty cover accidental damage?",
+      "query_b": "Will my warranty not cover accidental damage?",
+      "answer_b": "No, the warranty does not cover accidental damage, only manufacturing defects.",
+      "category": "negation",
+      "similarity": 0.9926019906987754,
+      "score_off_the_shelf": 10.467081069946289,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9997584223747253,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Should I keep my current antivirus software?",
+      "query_b": "Should I not keep my current antivirus software?",
+      "answer_b": "No, you should not keep it because it is no longer supported and leaves your system vulnerable.",
+      "category": "negation",
+      "similarity": 0.9866837263097432,
+      "score_off_the_shelf": 2.0501420497894287,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9743718504905701,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Is it safe to share my password with customer support?",
+      "query_b": "Is it not safe to share my password with customer support?",
+      "answer_b": "Correct, it is not safe to share your password; legitimate support will never ask for it.",
+      "category": "negation",
+      "similarity": 0.995226979254681,
+      "score_off_the_shelf": 8.551217079162598,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9970420002937317,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Does my credit card have foreign transaction fees?",
+      "query_b": "Does my credit card not have foreign transaction fees?",
+      "answer_b": "No, your card does not have foreign transaction fees; it is a no-fee international card.",
+      "category": "negation",
+      "similarity": 0.9864434019980814,
+      "score_off_the_shelf": 10.35472583770752,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9996676445007324,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I use my promo code on sale items?",
+      "query_b": "Can I not use my promo code on sale items?",
+      "answer_b": "No, you cannot use the promo code on sale items; it only applies to full-price merchandise.",
+      "category": "negation",
+      "similarity": 0.9586378335943172,
+      "score_off_the_shelf": 11.190274238586426,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9998936653137207,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Will I lose my data if I reset my phone?",
+      "query_b": "Will I not lose my data if I reset my phone?",
+      "answer_b": "No, you will lose all data if you reset without backing up; a factory reset erases everything.",
+      "category": "negation",
+      "similarity": 0.995913028716045,
+      "score_off_the_shelf": 8.15087604522705,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9976033568382263,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Do I need a visa to travel to Japan?",
+      "query_b": "Do I not need a visa to travel to Japan?",
+      "answer_b": "Correct, you do not need a visa for stays under 90 days if you are a citizen of a visa-exempt country.",
+      "category": "negation",
+      "similarity": 0.972762700647657,
+      "score_off_the_shelf": 1.042325496673584,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.6499963402748108,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Is my account currently suspended?",
+      "query_b": "Is my account not currently suspended?",
+      "answer_b": "Your account is not suspended; it is active and in good standing.",
+      "category": "negation",
+      "similarity": 0.9845278849906545,
+      "score_off_the_shelf": 7.6628336906433105,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9955299496650696,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I get a replacement for a lost item?",
+      "query_b": "Can I not get a replacement for a lost item?",
+      "answer_b": "No, you cannot get a replacement for a lost item; replacements are only for defective or damaged goods.",
+      "category": "negation",
+      "similarity": 0.970984516797556,
+      "score_off_the_shelf": 10.929221153259277,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9998194575309753,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Does my insurance cover pre-existing conditions?",
+      "query_b": "Does my insurance not cover pre-existing conditions?",
+      "answer_b": "Correct, your policy does not cover pre-existing conditions; they are excluded from coverage.",
+      "category": "negation",
+      "similarity": 0.9861247539510402,
+      "score_off_the_shelf": 9.524433135986328,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9991845488548279,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Will the package arrive by Friday?",
+      "query_b": "Will the package not arrive by Friday?",
+      "answer_b": "No, it will not arrive by Friday; the estimated delivery is next Tuesday due to shipping delays.",
+      "category": "negation",
+      "similarity": 0.9727525115003394,
+      "score_off_the_shelf": 10.05543041229248,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.998828113079071,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I pay my bill with a debit card?",
+      "query_b": "Can I not pay my bill with a debit card?",
+      "answer_b": "No, you cannot pay with a debit card; only credit cards and bank transfers are accepted.",
+      "category": "negation",
+      "similarity": 0.9351494312277024,
+      "score_off_the_shelf": 9.167877197265625,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9987260699272156,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Is it okay to leave my laptop plugged in overnight?",
+      "query_b": "Is it not okay to leave my laptop plugged in overnight?",
+      "answer_b": "Correct, it is not okay to leave it plugged in overnight as it can degrade battery health over time.",
+      "category": "negation",
+      "similarity": 0.9935653205840976,
+      "score_off_the_shelf": 9.224603652954102,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9988430738449097,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Do I have to attend the webinar to get the certificate?",
+      "query_b": "Do I not have to attend the webinar to get the certificate?",
+      "answer_b": "Yes, you do not have to attend live; you can watch the recording later and still earn the certificate.",
+      "category": "negation",
+      "similarity": 0.9867767691602375,
+      "score_off_the_shelf": 3.492384433746338,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9659279584884644,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Should I enable two-factor authentication?",
+      "query_b": "Should I not enable two-factor authentication?",
+      "answer_b": "No, you should not enable it if you often lose your phone, as it could lock you out of your account.",
+      "category": "negation",
+      "similarity": 0.9814819097509105,
+      "score_off_the_shelf": -3.1120829582214355,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.3896200954914093,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "How do I cancel my Netflix subscription?",
+      "query_b": "How do I pause my Netflix subscription?",
+      "answer_b": "To pause your Netflix subscription, go to Account > Membership > Pause Membership. You can pause for up to 4 weeks, and your billing will stop immediately until you resume.",
+      "category": "action_verb",
+      "similarity": 0.8188547384048105,
+      "score_off_the_shelf": 5.050615310668945,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9894988536834717,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I downgrade my Spotify Premium plan?",
+      "query_b": "Can I delete my Spotify Premium plan?",
+      "answer_b": "Deleting your Spotify Premium plan permanently removes your account and all playlists. To do this, go to Account > Delete Account, then confirm. This cannot be undone.",
+      "category": "action_verb",
+      "similarity": 0.8156281003722201,
+      "score_off_the_shelf": 5.241931915283203,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9962148070335388,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What are the steps to renew my Amazon Prime membership?",
+      "query_b": "What are the steps to refund my Amazon Prime membership?",
+      "answer_b": "To request a refund for Amazon Prime, go to Your Prime Membership > Manage > Request Refund. You must do this within 3 days of purchase if you haven't used benefits.",
+      "category": "action_verb",
+      "similarity": 0.8341472744933369,
+      "score_off_the_shelf": 1.4450739622116089,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.7894799113273621,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "I need to cancel my gym membership at Planet Fitness.",
+      "query_b": "I need to pause my gym membership at Planet Fitness.",
+      "answer_b": "To pause your Planet Fitness membership, visit your home club in person or call them. Pauses are allowed for up to 3 months per year, and your billing stops during the pause.",
+      "category": "action_verb",
+      "similarity": 0.836459875105975,
+      "score_off_the_shelf": 4.690682411193848,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9898092746734619,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I downgrade my Microsoft 365 subscription?",
+      "query_b": "How do I renew my Microsoft 365 subscription?",
+      "answer_b": "To renew your Microsoft 365 subscription, go to your Microsoft account > Services & Subscriptions > Renew. Ensure your payment method is valid, and choose the renewal term.",
+      "category": "action_verb",
+      "similarity": 0.8012885332867556,
+      "score_off_the_shelf": 2.616431474685669,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9416928291320801,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I cancel my Audible membership online?",
+      "query_b": "Can I delete my Audible membership online?",
+      "answer_b": "Deleting your Audible membership permanently erases your account, credits, and purchase history. Go to Account > Delete Account, and follow the confirmation steps. This is irreversible.",
+      "category": "action_verb",
+      "similarity": 0.8729662223429427,
+      "score_off_the_shelf": 5.4662065505981445,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9951159954071045,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What's the process to refund my airline ticket on Delta?",
+      "query_b": "What's the process to renew my airline ticket on Delta?",
+      "answer_b": "Delta doesn't have ticket renewal. But if you meant to change or rebook, go to My Trips > Change Flight. For renewing a ticket credit, use the credit within its validity period.",
+      "category": "action_verb",
+      "similarity": 0.7962676882735872
+    },
+    {
+      "query_a": "Tell me how to pause my Dropbox Plus subscription.",
+      "query_b": "Tell me how to cancel my Dropbox Plus subscription.",
+      "answer_b": "To cancel Dropbox Plus, go to dropbox.com > Settings > Plan > Cancel plan. Your files will become read-only after the billing period, and you'll lose access after 30 days.",
+      "category": "action_verb",
+      "similarity": 0.8479975461951358,
+      "score_off_the_shelf": 3.034170627593994,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9649611711502075,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "I want to downgrade my Adobe Creative Cloud plan.",
+      "query_b": "I want to refund my Adobe Creative Cloud plan.",
+      "answer_b": "To request a refund for Adobe Creative Cloud, contact Adobe Support within 14 days of purchase. Go to Adobe.com > Contact > Refund Request. Provide your order ID.",
+      "category": "action_verb",
+      "similarity": 0.7576733683145438
+    },
+    {
+      "query_a": "How to renew my Xbox Game Pass Ultimate?",
+      "query_b": "How to pause my Xbox Game Pass Ultimate?",
+      "answer_b": "Xbox Game Pass doesn't allow pauses. To stop automatic billing, go to Settings > Subscriptions > Turn off Auto-renew. You can also cancel for the future, but no pause option exists.",
+      "category": "action_verb",
+      "similarity": 0.7057471275322532
+    },
+    {
+      "query_a": "Steps to delete my Evernote account.",
+      "query_b": "Steps to downgrade my Evernote account.",
+      "answer_b": "To downgrade from Evernote Premium to Basic, go to Account Settings > Plan > Downgrade. Your data remains intact, but you'll lose offline access and upload limits.",
+      "category": "action_verb",
+      "similarity": 0.821241070105272,
+      "score_off_the_shelf": 2.137587785720825,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9777791500091553,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I cancel my Hulu subscription on my phone?",
+      "query_b": "Can I renew my Hulu subscription on my phone?",
+      "answer_b": "To renew your Hulu subscription, open the Hulu app, go to Account > Renew Subscription. Ensure your payment method is updated, and confirm the renewal. Your access resumes immediately.",
+      "category": "action_verb",
+      "similarity": 0.8378232717505659,
+      "score_off_the_shelf": 0.1812659502029419,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8409036993980408,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I refund my Google Play subscription?",
+      "query_b": "How do I delete my Google Play subscription?",
+      "answer_b": "Deleting a Google Play subscription permanently removes it. Go to play.google.com > Subscriptions > Select the subscription > Cancel Subscription. This does not refund you; it just stops future charges.",
+      "category": "action_verb",
+      "similarity": 0.7793886065475298
+    },
+    {
+      "query_a": "I need to pause my NYT Cooking subscription.",
+      "query_b": "I need to delete my NYT Cooking subscription.",
+      "answer_b": "To delete your NYT Cooking subscription, go to Account > Manage Subscription > Delete. This cancels immediately and removes all saved recipes. No refund is provided for remaining days.",
+      "category": "action_verb",
+      "similarity": 0.7762192950371666
+    },
+    {
+      "query_a": "What's the way to downgrade my iCloud storage plan?",
+      "query_b": "What's the way to cancel my iCloud storage plan?",
+      "answer_b": "To cancel your iCloud+ storage plan, go to Settings > Apple ID > iCloud > Manage Storage > Downgrade Options > Cancel. Your storage returns to 5GB, and you'll lose any over-limit data.",
+      "category": "action_verb",
+      "similarity": 0.7998821020048071
+    },
+    {
+      "query_a": "Tell me how to renew my Car Warranty service.",
+      "query_b": "Tell me how to refund my Car Warranty service.",
+      "answer_b": "To refund your car warranty service, contact the warranty provider within 30 days of purchase. Provide your policy number and reason. If approved, the refund goes to your original payment method.",
+      "category": "action_verb",
+      "similarity": 0.8321112990371011,
+      "score_off_the_shelf": 5.291068077087402,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9919657707214355,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "I want to pause my Slack Pro workspace.",
+      "query_b": "I want to downgrade my Slack Pro workspace.",
+      "answer_b": "To downgrade from Slack Pro to Free, go to Settings & Administration > Workspace Settings > Plans > Downgrade. You'll lose unlimited message history and integrations after the billing cycle.",
+      "category": "action_verb",
+      "similarity": 0.6120108366006453
+    },
+    {
+      "query_a": "How do I cancel my HelloFresh meal delivery?",
+      "query_b": "How do I pause my HelloFresh meal delivery?",
+      "answer_b": "To pause your HelloFresh deliveries, go to Account > Delivery Settings > Skip Weeks. You can skip up to 8 weeks ahead, and no charges occur for skipped weeks. You can resume anytime.",
+      "category": "action_verb",
+      "similarity": 0.8502846867007269,
+      "score_off_the_shelf": 5.012021064758301,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9876725077629089,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Can I refund my Coursera Plus subscription?",
+      "query_b": "Can I renew my Coursera Plus subscription?",
+      "answer_b": "To renew your Coursera Plus subscription, go to Coursera Plus > Manage Subscription > Renew. It will auto-renew unless canceled 24 hours before the renewal date. Confirm your payment info.",
+      "category": "action_verb",
+      "similarity": 0.8472614197282318,
+      "score_off_the_shelf": 6.810492038726807,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9962241649627686,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Steps to downgrade my OneDrive storage plan.",
+      "query_b": "Steps to delete my OneDrive storage plan.",
+      "answer_b": "To delete your OneDrive storage plan, go to Account > OneDrive > Storage > Cancel. This removes the paid plan and your files may be capped at 5GB; excess files become read-only.",
+      "category": "action_verb",
+      "similarity": 0.8323398828498145,
+      "score_off_the_shelf": 5.024192810058594,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.996039867401123,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How do I convert MP3 to WAV?",
+      "query_b": "How do I convert WAV to MP3?",
+      "answer_b": "Open the WAV file in an audio converter, choose MP3 as the output format, and compress it to reduce file size.",
+      "category": "direction",
+      "similarity": 0.9948617216852326,
+      "score_off_the_shelf": 7.8493547439575195,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9936783909797668,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Translate English to Spanish",
+      "query_b": "Translate Spanish to English",
+      "answer_b": "Use a Spanish-to-English translator to render the Spanish text into natural English.",
+      "category": "direction",
+      "similarity": 0.9930349584232747,
+      "score_off_the_shelf": 7.090401649475098,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9833417534828186,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Import CSV to database",
+      "query_b": "Export database to CSV",
+      "answer_b": "Use the database's export tool to select the table and generate a CSV file from its rows.",
+      "category": "direction",
+      "similarity": 0.8575916290274627,
+      "score_off_the_shelf": 6.5201897621154785,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9840388894081116,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Change PDF to Word document",
+      "query_b": "Change Word document to PDF",
+      "answer_b": "In Word, go to File > Save As and choose PDF as the file format to create a PDF version.",
+      "category": "direction",
+      "similarity": 0.9929571743572065,
+      "score_off_the_shelf": 3.7980904579162598,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9150399565696716,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Transfer photos from iPhone to PC",
+      "query_b": "Transfer photos from PC to iPhone",
+      "answer_b": "Connect your iPhone to the PC, use iTunes or Finder to sync the desired photos to the device's camera roll.",
+      "category": "direction",
+      "similarity": 0.9962616560605134,
+      "score_off_the_shelf": 6.495232105255127,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9745419025421143,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Extract text from image",
+      "query_b": "Create an image from text",
+      "answer_b": "Use a text-to-image generator, type the text prompt, and render it into a visual image.",
+      "category": "direction",
+      "similarity": 0.7361348271362572
+    },
+    {
+      "query_a": "Sort list alphabetically A to Z",
+      "query_b": "Sort list reverse alphabetically Z to A",
+      "answer_b": "Select the list, go to the sort options, and choose 'Z to A' or descending order to reverse the alphabetical arrangement.",
+      "category": "direction",
+      "similarity": 0.9177139948426842,
+      "score_off_the_shelf": 6.658560276031494,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9784958958625793,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Add product to cart",
+      "query_b": "Remove product from cart",
+      "answer_b": "Open your cart, find the product line, and click the remove or trash icon to delete it from the cart.",
+      "category": "direction",
+      "similarity": 0.5849757194513193
+    },
+    {
+      "query_a": "Encrypt file to password-protected",
+      "query_b": "Decrypt password-protected file",
+      "answer_b": "Open the encrypted file with the correct password, then use the decryption tool to remove the password protection.",
+      "category": "direction",
+      "similarity": 0.8831957439408702,
+      "score_off_the_shelf": 6.532262325286865,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9893830418586731,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Merge two PDFs into one",
+      "query_b": "Split a PDF into two files",
+      "answer_b": "Use a PDF splitter tool, specify the page range for the first file, and extract that range into a separate PDF.",
+      "category": "direction",
+      "similarity": 0.7697195410720756
+    },
+    {
+      "query_a": "Install app on Android from PC",
+      "query_b": "Install app on PC from Android",
+      "answer_b": "Use your Android device to download the app installer, then transfer and run it on your PC via USB or a cloud link.",
+      "category": "direction",
+      "similarity": 0.995586394999605,
+      "score_off_the_shelf": 8.074020385742188,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9971326589584351,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Backup emails to local drive",
+      "query_b": "Restore emails from local drive",
+      "answer_b": "Open your email client's import/restore function, point to the backup file on the local drive, and import the emails back into the mailbox.",
+      "category": "direction",
+      "similarity": 0.8766972871649186,
+      "score_off_the_shelf": 7.603362083435059,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9898119568824768,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Upload video to YouTube",
+      "query_b": "Download video from YouTube",
+      "answer_b": "Use a YouTube downloader tool, paste the video URL, and choose the quality to save the video file locally.",
+      "category": "direction",
+      "similarity": 0.7562144994728155
+    },
+    {
+      "query_a": "Convert JPEG to PNG",
+      "query_b": "Convert PNG to JPEG",
+      "answer_b": "Open the PNG in an image editor or converter, select JPEG as the output format, and save with the desired compression.",
+      "category": "direction",
+      "similarity": 0.9964932799329329,
+      "score_off_the_shelf": 7.175755500793457,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.985857367515564,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Create a playlist from songs",
+      "query_b": "Extract songs from a playlist",
+      "answer_b": "Open the playlist in your music app, select all tracks, and use the export or save-as feature to list the individual song files.",
+      "category": "direction",
+      "similarity": 0.8267529606810885,
+      "score_off_the_shelf": 4.575749397277832,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9833275675773621,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Send money from bank to PayPal",
+      "query_b": "Send money from PayPal to bank",
+      "answer_b": "In your PayPal account, choose 'Transfer to Bank', enter the amount, and confirm to move funds from PayPal balance to your linked bank account.",
+      "category": "direction",
+      "similarity": 0.9959604144086414,
+      "score_off_the_shelf": 2.139434814453125,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.7767890691757202,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Compress folder to ZIP",
+      "query_b": "Decompress ZIP to folder",
+      "answer_b": "Right-click the ZIP file and choose 'Extract All', then select the destination folder to unpack the compressed contents.",
+      "category": "direction",
+      "similarity": 0.8655955791464732,
+      "score_off_the_shelf": 2.137885332107544,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8852712512016296,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Schedule meeting from email",
+      "query_b": "Email meeting details from calendar",
+      "answer_b": "Open the calendar event, use the 'Forward' or 'Email' option to send the meeting details as an email to the attendees.",
+      "category": "direction",
+      "similarity": 0.8098991399935217,
+      "score_off_the_shelf": 2.1366257667541504,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8802847862243652,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Add event to calendar",
+      "query_b": "Remove event from calendar",
+      "answer_b": "Open the calendar app, find the event, and tap delete or remove to erase it from your schedule.",
+      "category": "direction",
+      "similarity": 0.6932576894753198
+    },
+    {
+      "query_a": "Change temperature Celsius to Fahrenheit",
+      "query_b": "Change temperature Fahrenheit to Celsius",
+      "answer_b": "Take the Fahrenheit value, subtract 32, then multiply by 5/9 to get the Celsius equivalent.",
+      "category": "direction",
+      "similarity": 0.988550006659831,
+      "score_off_the_shelf": 2.6682305335998535,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8028567433357239,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the battery capacity of the iPhone 14?",
+      "query_b": "What is the battery capacity of the iPhone 15?",
+      "answer_b": "It has a 3349 mAh battery.",
+      "category": "entity_swap",
+      "similarity": 0.9444718360891433,
+      "score_off_the_shelf": -1.3627078533172607,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.3113161623477936,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "Who was the 41st President of the United States?",
+      "query_b": "Who was the 43rd President of the United States?",
+      "answer_b": "George W. Bush.",
+      "category": "entity_swap",
+      "similarity": 0.83370070658247,
+      "score_off_the_shelf": -2.700092315673828,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.7815253138542175,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the capital of France?",
+      "query_b": "What is the capital of Spain?",
+      "answer_b": "Madrid.",
+      "category": "entity_swap",
+      "similarity": 0.6760090992449378
+    },
+    {
+      "query_a": "How many episodes are in the first season of Stranger Things?",
+      "query_b": "How many episodes are in the second season of Stranger Things?",
+      "answer_b": "There are 9 episodes.",
+      "category": "entity_swap",
+      "similarity": 0.9422362973962299,
+      "score_off_the_shelf": 2.0641422271728516,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.7652802467346191,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the top speed of the Tesla Model 3?",
+      "query_b": "What is the top speed of the Tesla Model S?",
+      "answer_b": "It has a top speed of 200 mph.",
+      "category": "entity_swap",
+      "similarity": 0.9445181488981338,
+      "score_off_the_shelf": 3.164334297180176,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9106733798980713,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "Who wrote the novel '1984'?",
+      "query_b": "Who wrote the novel 'Brave New World'?",
+      "answer_b": "Aldous Huxley.",
+      "category": "entity_swap",
+      "similarity": 0.42776217626065016
+    },
+    {
+      "query_a": "What is the population of Tokyo, Japan?",
+      "query_b": "What is the population of Osaka, Japan?",
+      "answer_b": "It has a population of about 2.7 million.",
+      "category": "entity_swap",
+      "similarity": 0.9148807424155555,
+      "score_off_the_shelf": 2.627638339996338,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.793204665184021,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the release date of the PlayStation 4?",
+      "query_b": "What is the release date of the PlayStation 5?",
+      "answer_b": "It was released on November 12, 2020.",
+      "category": "entity_swap",
+      "similarity": 0.8795966434229545,
+      "score_off_the_shelf": 3.2529056072235107,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.92453932762146,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the melting point of iron?",
+      "query_b": "What is the melting point of gold?",
+      "answer_b": "It melts at 1064 degrees Celsius.",
+      "category": "entity_swap",
+      "similarity": 0.7656192043785072
+    },
+    {
+      "query_a": "Who is the CEO of Apple in 2020?",
+      "query_b": "Who is the CEO of Apple in 2011?",
+      "answer_b": "Steve Jobs.",
+      "category": "entity_swap",
+      "similarity": 0.8729343414297911,
+      "score_off_the_shelf": -4.398695945739746,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.5723220109939575,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the tallest mountain in North America?",
+      "query_b": "What is the tallest mountain in South America?",
+      "answer_b": "Aconcagua, which is 6,961 meters tall.",
+      "category": "entity_swap",
+      "similarity": 0.8882340788832365,
+      "score_off_the_shelf": -4.902832984924316,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.2582792639732361,
+      "false_accept_finetuned_thr0": false
+    },
+    {
+      "query_a": "What is the phone number for the Marriott in Chicago?",
+      "query_b": "What is the phone number for the Marriott in Boston?",
+      "answer_b": "The number is +1 617-578-0600.",
+      "category": "entity_swap",
+      "similarity": 0.8399504923782587,
+      "score_off_the_shelf": -0.7971310615539551,
+      "false_accept_off_the_shelf_thr0": false,
+      "score_finetuned_lmarena": 0.5578246712684631,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many seats does the Boeing 737-800 have?",
+      "query_b": "How many seats does the Boeing 747-400 have?",
+      "answer_b": "It typically seats 416 passengers.",
+      "category": "entity_swap",
+      "similarity": 0.8533161107670012,
+      "score_off_the_shelf": 3.466874837875366,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.893530547618866,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the chemical symbol for sodium?",
+      "query_b": "What is the chemical symbol for potassium?",
+      "answer_b": "The symbol is K.",
+      "category": "entity_swap",
+      "similarity": 0.7419416904442043
+    },
+    {
+      "query_a": "Who painted the Mona Lisa?",
+      "query_b": "Who painted The Last Supper?",
+      "answer_b": "Leonardo da Vinci.",
+      "category": "entity_swap",
+      "similarity": 0.5417745709413833
+    },
+    {
+      "query_a": "What is the currency of Japan?",
+      "query_b": "What is the currency of China?",
+      "answer_b": "The currency is the yuan.",
+      "category": "entity_swap",
+      "similarity": 0.7179103921591251
+    },
+    {
+      "query_a": "When was the Eiffel Tower completed?",
+      "query_b": "When was the Statue of Liberty completed?",
+      "answer_b": "It was completed in 1886.",
+      "category": "entity_swap",
+      "similarity": 0.4247007623132251
+    },
+    {
+      "query_a": "What is the zip code for Beverly Hills, California?",
+      "query_b": "What is the zip code for Hollywood, California?",
+      "answer_b": "The zip code is 90028.",
+      "category": "entity_swap",
+      "similarity": 0.833902587526357,
+      "score_off_the_shelf": 1.4661011695861816,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8617292046546936,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the largest planet in our solar system?",
+      "query_b": "What is the largest planet in the Milky Way galaxy?",
+      "answer_b": "There is no single largest planet, but the largest known is TrES-4b.",
+      "category": "entity_swap",
+      "similarity": 0.7723476886741544
+    },
+    {
+      "query_a": "What year was the movie 'Titanic' released?",
+      "query_b": "What year was the movie 'Avatar' released?",
+      "answer_b": "It was released in 2009.",
+      "category": "entity_swap",
+      "similarity": 0.6216693295037091
+    },
+    {
+      "query_a": "What is the maximum amount I can withdraw from an ATM per day?",
+      "query_b": "What is the maximum amount I can withdraw from an ATM per week?",
+      "answer_b": "You can withdraw up to $2,000 per week from ATMs.",
+      "category": "quantity_swap",
+      "similarity": 0.9405209386649823,
+      "score_off_the_shelf": 6.750548362731934,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9804352521896362,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many bonus points do I earn per dollar spent on groceries?",
+      "query_b": "How many bonus points do I earn per dollar spent on gas?",
+      "answer_b": "You earn 3 bonus points per dollar on gas purchases.",
+      "category": "quantity_swap",
+      "similarity": 0.761805832385255
+    },
+    {
+      "query_a": "What is the early termination fee for cancelling my contract after 6 months?",
+      "query_b": "What is the early termination fee for cancelling my contract after 18 months?",
+      "answer_b": "The early termination fee is $150 if you cancel after 18 months.",
+      "category": "quantity_swap",
+      "similarity": 0.9131746292105125,
+      "score_off_the_shelf": 7.806790828704834,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9890729784965515,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How much does it cost to ship a 2-pound package internationally?",
+      "query_b": "How much does it cost to ship a 10-pound package internationally?",
+      "answer_b": "Shipping a 10-pound package internationally costs $45.",
+      "category": "quantity_swap",
+      "similarity": 0.9423068131381872,
+      "score_off_the_shelf": 6.707358360290527,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.949581503868103,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the minimum credit score required for a 15-year mortgage?",
+      "query_b": "What is the minimum credit score required for a 30-year mortgage?",
+      "answer_b": "A 620 credit score is required for a 30-year mortgage.",
+      "category": "quantity_swap",
+      "similarity": 0.9024643301954781,
+      "score_off_the_shelf": 5.501091003417969,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9082784056663513,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many days do I have to return a defective appliance?",
+      "query_b": "How many hours do I have to return a defective appliance?",
+      "answer_b": "You have 48 hours from delivery to return a defective appliance.",
+      "category": "quantity_swap",
+      "similarity": 0.9332881530089674,
+      "score_off_the_shelf": 9.162287712097168,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9956743121147156,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the monthly fee for a checking account with a $1,000 minimum balance?",
+      "query_b": "What is the monthly fee for a checking account with a $5,000 minimum balance?",
+      "answer_b": "There is no monthly fee if you maintain a $5,000 minimum balance.",
+      "category": "quantity_swap",
+      "similarity": 0.9419372081747172,
+      "score_off_the_shelf": 6.123851299285889,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9427955150604248,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How much will I be reimbursed for a 3-day business trip?",
+      "query_b": "How much will I be reimbursed for a 5-day business trip?",
+      "answer_b": "You will be reimbursed $750 for a 5-day business trip.",
+      "category": "quantity_swap",
+      "similarity": 0.9274049314733925,
+      "score_off_the_shelf": 6.51285457611084,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9219205975532532,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What percentage of my salary can I contribute to my 401(k) each year?",
+      "query_b": "What percentage of my salary can I contribute to my 403(b) each year?",
+      "answer_b": "You can contribute up to 15% of your salary to a 403(b) annually.",
+      "category": "quantity_swap",
+      "similarity": 0.6325024743373312
+    },
+    {
+      "query_a": "How long does it take to receive a refund after I return an item purchased with a credit card?",
+      "query_b": "How long does it take to receive a refund after I return an item purchased with a debit card?",
+      "answer_b": "Refunds to a debit card typically take 5 business days.",
+      "category": "quantity_swap",
+      "similarity": 0.9336768388738831,
+      "score_off_the_shelf": 4.518681526184082,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9755051732063293,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the maximum number of guests allowed in the pool area at one time?",
+      "query_b": "What is the maximum number of guests allowed in the gym at one time?",
+      "answer_b": "The gym allows a maximum of 25 guests at one time.",
+      "category": "quantity_swap",
+      "similarity": 0.7396985733322002
+    },
+    {
+      "query_a": "How much does it cost to add a second driver to my auto insurance for 6 months?",
+      "query_b": "How much does it cost to add a second driver to my auto insurance for 12 months?",
+      "answer_b": "Adding a second driver for 12 months costs $240 extra.",
+      "category": "quantity_swap",
+      "similarity": 0.9832823276509942,
+      "score_off_the_shelf": 5.501729965209961,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.952376127243042,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the penalty for paying my property tax 30 days late?",
+      "query_b": "What is the penalty for paying my property tax 90 days late?",
+      "answer_b": "Paying 90 days late incurs a 10% penalty.",
+      "category": "quantity_swap",
+      "similarity": 0.8972369432440368,
+      "score_off_the_shelf": 4.966075897216797,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9252419471740723,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many frequent flyer miles do I need for a domestic flight in economy class?",
+      "query_b": "How many frequent flyer miles do I need for an international flight in business class?",
+      "answer_b": "An international business class flight requires 75,000 miles.",
+      "category": "quantity_swap",
+      "similarity": 0.8586394786826129,
+      "score_off_the_shelf": 3.1306943893432617,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8713079690933228,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the warranty period on a laptop battery?",
+      "query_b": "What is the warranty period on a laptop screen?",
+      "answer_b": "The screen is covered by a 2-year warranty.",
+      "category": "quantity_swap",
+      "similarity": 0.7925167083732308
+    },
+    {
+      "query_a": "How much is the late fee for a library book that is 1 day overdue?",
+      "query_b": "How much is the late fee for a library book that is 1 week overdue?",
+      "answer_b": "The late fee is $5 for a book that is 1 week overdue.",
+      "category": "quantity_swap",
+      "similarity": 0.9695451855649788,
+      "score_off_the_shelf": 8.632302284240723,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9914034008979797,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the minimum down payment required for a home loan of $200,000?",
+      "query_b": "What is the minimum down payment required for a home loan of $500,000?",
+      "answer_b": "The minimum down payment for a $500,000 loan is $25,000.",
+      "category": "quantity_swap",
+      "similarity": 0.9601667499632026,
+      "score_off_the_shelf": 7.858308792114258,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.9638029932975769,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How many vacation days do I get after working for 1 year?",
+      "query_b": "How many vacation days do I get after working for 5 years?",
+      "answer_b": "After 5 years of service, you receive 20 vacation days.",
+      "category": "quantity_swap",
+      "similarity": 0.8596317768088326,
+      "score_off_the_shelf": 4.778742790222168,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.866707980632782,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "What is the interest rate on a savings account with a balance of $10,000?",
+      "query_b": "What is the interest rate on a savings account with a balance of $50,000?",
+      "answer_b": "Accounts with $50,000 or more earn 1.5% interest.",
+      "category": "quantity_swap",
+      "similarity": 0.8470177650443189,
+      "score_off_the_shelf": 1.9260122776031494,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.8033525347709656,
+      "false_accept_finetuned_thr0": true
+    },
+    {
+      "query_a": "How much does it cost to replace a lost driver's license in California?",
+      "query_b": "How much does it cost to replace a lost driver's license in Texas?",
+      "answer_b": "In Texas, a replacement license costs $25.",
+      "category": "quantity_swap",
+      "similarity": 0.8595672166080949,
+      "score_off_the_shelf": 2.901113271713257,
+      "false_accept_off_the_shelf_thr0": true,
+      "score_finetuned_lmarena": 0.800923764705658,
+      "false_accept_finetuned_thr0": true
+    }
+  ]
+}
