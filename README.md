@@ -64,9 +64,9 @@ the hit-rate/error-rate trade-off?
 
 "Grid search" = the paper's original hand-picked threshold grid, best point reported. "Honest calibration" = a threshold chosen via Youden's J on a held-out calibration half only, then measured on the untouched test half (§5.4) — added 2026-08-15/16 specifically to test whether the grid-search numbers above were optimistic; see §5.4/§6.1 for the full account of where the two methods agree and where they don't (Quora is the one dataset where honest calibration is *worse*, traced to the dataset's own score-separability ceiling, not a calibration artifact).
 
-Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–28pp** hit rate at matched error rate. A separate reproduction fix for the adaptive-threshold baseline (Group B) raised its hit rate **4.4x–29.1x** across all three datasets (§5.2) — Group B sits at a different hit-rate scale and isn't part of the Go/No-Go comparison above. Full numbers, confidence intervals, and further robustness/ablation sections (noise, cold start, drift monitor, τ_high sensitivity, reranker capacity vs. training distribution, Conformal Risk Control, rewrite-vs-reject, Top-K cascade, CRC closed-loop self-selection) are in the paper, §5.9–§5.16.
+Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–28pp** hit rate at matched error rate. A separate reproduction fix for the adaptive-threshold baseline (Group B) raised its hit rate **4.4x–29.1x** across all three datasets (§5.2) — Group B sits at a different hit-rate scale and isn't part of the Go/No-Go comparison above. Full numbers, confidence intervals, and further robustness/ablation sections (noise, cold start, drift monitor, τ_high sensitivity, reranker capacity vs. training distribution, Conformal Risk Control, rewrite-vs-reject, Top-K cascade, CRC closed-loop self-selection, cost-sensitive reanalysis, LLM red-teaming, adversarial training) are in the paper, §5.9–§5.19.
 
-## Further ablations (§5.9–§5.16)
+## Further ablations (§5.9–§5.19)
 
 - **Drift monitor (§5.9):** two change-point tests on gray-zone labels alone
   catch the one real-traffic counter-example's degradation before it does
@@ -95,6 +95,27 @@ Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–
   direct-hit rate, from no detectable effect (Quora) to more than tripling
   realized risk (LmArena); online recalibration fully compensates on two
   of three datasets but not the third.
+- **Cost-sensitive reanalysis (§5.17):** reframes the hit-rate/error-rate
+  frontier as an explicit cost-ratio sweep (error cost vs. miss cost) —
+  once Group D/E's honest-calibration grid is extended to match Group A's,
+  synchronous verification wins economically almost universally once
+  errors cost more than roughly 1–9x a miss, dataset-dependent; a
+  grid-coverage gap in the first pass had produced a spurious reversal at
+  high cost ratios that fully disappears once closed.
+- **LLM automated red-teaming (§5.18):** adversarial samples generated
+  across five known failure axes (negation, action-verb swap, direction
+  reversal, entity swap, quantity swap) push the off-the-shelf verifier's
+  false-accept rate to 84% — far above anything seen on natural data — and
+  critically, the in-domain fine-tuning that fixes natural-data
+  discriminative power (§5.6) provides no protection at all against these
+  adversarial cases.
+- **Adversarial training (§5.19):** mixing a small (3.8%), non-overlapping
+  batch of adversarial training data into the existing natural fine-tuning
+  set cuts the adversarial false-accept rate from 84–88% down to 53.6%
+  (95% CI non-overlapping with either baseline) with no cost to natural-data
+  AUC — the robustness gap §5.18 found is fixable, not a fundamental
+  limitation of fine-tuning, but 53.6% is still far from solved and one
+  category (named-entity swap) got worse, not better.
 
 ## Repository layout
 
@@ -131,7 +152,7 @@ repo — see [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md).
 ## Citation
 
 Archived on Zenodo with DOI [10.5281/zenodo.21703364](https://doi.org/10.5281/zenodo.21703364)
-(this concept DOI always resolves to the latest version; the current version is v1.2.0, DOI [10.5281/zenodo.22055591](https://doi.org/10.5281/zenodo.22055591)).
+(this concept DOI always resolves to the latest version; the current version is v1.3.1, DOI [10.5281/zenodo.22164220](https://doi.org/10.5281/zenodo.22164220)).
 arXiv listing forthcoming — this will be updated with the arXiv ID once live.
 
 ```bibtex
