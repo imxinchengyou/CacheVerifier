@@ -20,7 +20,7 @@
 
 **阅读论文:** [`PAPER.md`](PAPER.md)(中文)· [`PAPER_EN.md`](PAPER_EN.md) · [`PAPER_EN.tex`](PAPER_EN.tex)(LaTeX 源码)
 
-**在线服务:** 本文验证的这套微调 + 漂移监控闭环,作为托管服务运行在 **[cacheverifier.com](https://www.cacheverifier.com)** —— 这个仓库是它背后的研究,不是产品本身。
+**在线服务:** 本文验证的这套微调 + 漂移监控闭环,作为托管服务运行在 **[cacheverifier.com](https://www.cacheverifier.com)** —— 这个仓库是它背后的研究,不是产品本身。Python 客户端:[`cacheverifier-python`](https://github.com/imxinchengyou/cacheverifier-python)。
 
 ## 结果速览
 
