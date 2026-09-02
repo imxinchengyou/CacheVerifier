@@ -56,7 +56,8 @@ the hit-rate/error-rate trade-off?
 
 **Hosted version:** the fine-tuning + drift-monitoring loop this paper validates is run
 as a service at **[cacheverifier.com](https://www.cacheverifier.com)** — this repo is the
-research behind it, not the product.
+research behind it, not the product. Python client:
+[`cacheverifier-python`](https://github.com/imxinchengyou/cacheverifier-python).
 
 ## Results at a glance
 
