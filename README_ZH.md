@@ -20,6 +20,8 @@
 
 **阅读论文:** [`PAPER.md`](PAPER.md)(中文)· [`PAPER_EN.md`](PAPER_EN.md) · [`PAPER_EN.tex`](PAPER_EN.tex)(LaTeX 源码)
 
+**在线服务:** 本文验证的这套微调 + 漂移监控闭环,作为托管服务运行在 **[cacheverifier.com](https://www.cacheverifier.com)** —— 这个仓库是它背后的研究,不是产品本身。
+
 ## 结果速览
 
 | 数据集 | 开箱即用验证器(Group D) | 领域内微调验证器(Group E) |
