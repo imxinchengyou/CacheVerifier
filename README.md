@@ -54,6 +54,10 @@ the hit-rate/error-rate trade-off?
 **Read the paper:** [`PAPER.md`](PAPER.md) (Chinese) · [`PAPER_EN.md`](PAPER_EN.md) ·
 [`PAPER_EN.tex`](PAPER_EN.tex) (LaTeX source)
 
+**Hosted version:** the fine-tuning + drift-monitoring loop this paper validates is run
+as a service at **[cacheverifier.com](https://www.cacheverifier.com)** — this repo is the
+research behind it, not the product.
+
 ## Results at a glance
 
 | Dataset | Off-the-shelf verifier (Group D) | Domain-fine-tuned verifier (Group E) |
