@@ -1,0 +1,1195 @@
+{
+  "dataset": "search_queries_corrected",
+  "cal_frac": 0.5,
+  "n_cal": 43140,
+  "n_deploy": 43140,
+  "w_deploy_quantiles": {
+    "50": 1.0623582227913917,
+    "90": 1.3293922185283558,
+    "99": 1.5631629295998348,
+    "100": 2.4596222767606353
+  },
+  "alphas": [
+    0.05,
+    0.02,
+    0.01
+  ],
+  "by_alpha": {
+    "0.05": {
+      "rows": [
+        {
+          "policy": "naive",
+          "cfg": {},
+          "R_cert": 0.062285581826611036,
+          "C_cert": 0.1638618451553083,
+          "meets": false
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.0
+          },
+          "R_cert": 0.062285581826611036,
+          "C_cert": 0.1638618451553083,
+          "meets": false
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.1
+          },
+          "R_cert": 0.05658321743161799,
+          "C_cert": 0.14951321279554938,
+          "meets": false
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.2
+          },
+          "R_cert": 0.04921186833565137,
+          "C_cert": 0.13340287436254056,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.3
+          },
+          "R_cert": 0.04330088085303663,
+          "C_cert": 0.11893834028743626,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.4
+          },
+          "R_cert": 0.036462679647658786,
+          "C_cert": 0.10231803430690774,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.5
+          },
+          "R_cert": 0.030343069077422347,
+          "C_cert": 0.08630041724617524,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.6
+          },
+          "R_cert": 0.023898933704218823,
+          "C_cert": 0.06991191469633751,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.7
+          },
+          "R_cert": 0.019054242002781642,
+          "C_cert": 0.05572554473806212,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.050764951321279554,
+          "C_cert": 0.13711172925359294,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.041261010662957814,
+          "C_cert": 0.11411682892906815,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.031780250347705145,
+          "C_cert": 0.0909596662030598,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.05310616597125638,
+          "C_cert": 0.142814093648586,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.045201668984700974,
+          "C_cert": 0.12336578581363004,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.03597589244320816,
+          "C_cert": 0.10025498377375985,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.05213259156235512,
+          "C_cert": 0.1404496986555401,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.043115438108484005,
+          "C_cert": 0.11856745479833102,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.03426054705609643,
+          "C_cert": 0.09673157162726008,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.054126101066295784,
+          "C_cert": 0.1449698655540102,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.046731571627260084,
+          "C_cert": 0.1263792304126101,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.038780713954566524,
+          "C_cert": 0.10723226703755216,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.05407974038015763,
+          "C_cert": 0.1449698655540102,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.04636068613815485,
+          "C_cert": 0.12605470560964302,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.038873435326842835,
+          "C_cert": 0.10744089012517385,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.0566759388038943,
+          "C_cert": 0.15095039406583216,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.04812239221140473,
+          "C_cert": 0.13027352804821513,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.03977746870653686,
+          "C_cert": 0.11003708854891052,
+          "meets": true
+        },
+        {
+          "policy": "weighted_conformal",
+          "cfg": {
+            "refit": 4000
+          },
+          "R_cert": 0.05971256374594344,
+          "C_cert": 0.15778859527121,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "naive"
+          },
+          "R_cert": 0.02742234585071859,
+          "C_cert": 0.05832174316179879,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "naive"
+          },
+          "R_cert": 0.04186369958275382,
+          "C_cert": 0.0969170143718127,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "naive"
+          },
+          "R_cert": 0.05688456189151599,
+          "C_cert": 0.1461984237366713,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "naive"
+          },
+          "R_cert": 0.062285581826611036,
+          "C_cert": 0.1638618451553083,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "naive"
+          },
+          "R_cert": 0.062285581826611036,
+          "C_cert": 0.1638618451553083,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "m0.3"
+          },
+          "R_cert": 0.01861381548446917,
+          "C_cert": 0.04128419100602689,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "m0.3"
+          },
+          "R_cert": 0.029114510894761244,
+          "C_cert": 0.06986555401019935,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "m0.3"
+          },
+          "R_cert": 0.039638386648122394,
+          "C_cert": 0.10690774223458507,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "m0.3"
+          },
+          "R_cert": 0.04330088085303663,
+          "C_cert": 0.11893834028743626,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "m0.3"
+          },
+          "R_cert": 0.04330088085303663,
+          "C_cert": 0.11893834028743626,
+          "meets": true
+        }
+      ],
+      "w_certified_error_mean": 1.093830477429913,
+      "w_certified_correct_mean": 1.1513669900952612
+    },
+    "0.02": {
+      "rows": [
+        {
+          "policy": "naive",
+          "cfg": {},
+          "R_cert": 0.023898933704218823,
+          "C_cert": 0.06991191469633751,
+          "meets": false
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.0
+          },
+          "R_cert": 0.023898933704218823,
+          "C_cert": 0.06991191469633751,
+          "meets": false
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.1
+          },
+          "R_cert": 0.02167362076958739,
+          "C_cert": 0.06358368103847938,
+          "meets": false
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.2
+          },
+          "R_cert": 0.01988873435326843,
+          "C_cert": 0.05836810384793695,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.3
+          },
+          "R_cert": 0.017408437644877144,
+          "C_cert": 0.051390820584144646,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.4
+          },
+          "R_cert": 0.014997681965693092,
+          "C_cert": 0.04452943903569773,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.5
+          },
+          "R_cert": 0.012146499768196569,
+          "C_cert": 0.036810384793694945,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.6
+          },
+          "R_cert": 0.009967547519703291,
+          "C_cert": 0.030598052851182198,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.7
+          },
+          "R_cert": 0.007255447380621233,
+          "C_cert": 0.023133982382939268,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.020468242929995363,
+          "C_cert": 0.05945757997218359,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.016597125637459433,
+          "C_cert": 0.049026425591098745,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.012447844228094576,
+          "C_cert": 0.038734353268428376,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.021441817338896614,
+          "C_cert": 0.06240148354195642,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.01815020862308762,
+          "C_cert": 0.05275846082522021,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.014348632359758924,
+          "C_cert": 0.04337042188224386,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.020723226703755215,
+          "C_cert": 0.060778859527121004,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.017199814557255447,
+          "C_cert": 0.050741770978210476,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.013653222067686602,
+          "C_cert": 0.041701437181270284,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.021233194251274918,
+          "C_cert": 0.06244784422809457,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.018358831710709317,
+          "C_cert": 0.05389429763560501,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.015461288827074642,
+          "C_cert": 0.046082522021325914,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.021186833565136762,
+          "C_cert": 0.062424663885025496,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.01815020862308762,
+          "C_cert": 0.053384330088085304,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.014881780250347705,
+          "C_cert": 0.04522484932777005,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.02167362076958739,
+          "C_cert": 0.06404728789986092,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.018845618915159946,
+          "C_cert": 0.05551692165044043,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.015530829856281873,
+          "C_cert": 0.046291145108947614,
+          "meets": true
+        },
+        {
+          "policy": "weighted_conformal",
+          "cfg": {
+            "refit": 4000
+          },
+          "R_cert": 0.02294853963838665,
+          "C_cert": 0.06738525730180807,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "naive"
+          },
+          "R_cert": 0.009596662030598052,
+          "C_cert": 0.0232035234121465,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "naive"
+          },
+          "R_cert": 0.015994436717663423,
+          "C_cert": 0.04121464997681966,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "naive"
+          },
+          "R_cert": 0.022183588317107095,
+          "C_cert": 0.06402410755679185,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "naive"
+          },
+          "R_cert": 0.023898933704218823,
+          "C_cert": 0.06991191469633751,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "naive"
+          },
+          "R_cert": 0.023898933704218823,
+          "C_cert": 0.06991191469633751,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "m0.3"
+          },
+          "R_cert": 0.006768660176170608,
+          "C_cert": 0.016689847009735744,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "m0.3"
+          },
+          "R_cert": 0.011682892906815021,
+          "C_cert": 0.030343069077422347,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "m0.3"
+          },
+          "R_cert": 0.016249420491423274,
+          "C_cert": 0.0473342605470561,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "m0.3"
+          },
+          "R_cert": 0.017408437644877144,
+          "C_cert": 0.051390820584144646,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "m0.3"
+          },
+          "R_cert": 0.017408437644877144,
+          "C_cert": 0.051390820584144646,
+          "meets": true
+        }
+      ],
+      "w_certified_error_mean": 1.1042365671354941,
+      "w_certified_correct_mean": 1.1500531334330777
+    },
+    "0.01": {
+      "rows": [
+        {
+          "policy": "naive",
+          "cfg": {},
+          "R_cert": 0.012146499768196569,
+          "C_cert": 0.036810384793694945,
+          "meets": false
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.0
+          },
+          "R_cert": 0.012146499768196569,
+          "C_cert": 0.036810384793694945,
+          "meets": false
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.1
+          },
+          "R_cert": 0.011103384330088084,
+          "C_cert": 0.03412146499768197,
+          "meets": false
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.2
+          },
+          "R_cert": 0.009967547519703291,
+          "C_cert": 0.030598052851182198,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.3
+          },
+          "R_cert": 0.008738989337042188,
+          "C_cert": 0.027468706536856746,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.4
+          },
+          "R_cert": 0.007255447380621233,
+          "C_cert": 0.023133982382939268,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.5
+          },
+          "R_cert": 0.006096430227167362,
+          "C_cert": 0.019842373667130275,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.6
+          },
+          "R_cert": 0.004520166898470098,
+          "C_cert": 0.014789058878071396,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.7
+          },
+          "R_cert": 0.0035465924895688454,
+          "C_cert": 0.011520630505331479,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.010176170607324989,
+          "C_cert": 0.031988873435326845,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.007997218358831711,
+          "C_cert": 0.025869262865090403,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.006351414000927214,
+          "C_cert": 0.020375521557719056,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.011172925359295318,
+          "C_cert": 0.03416782568382012,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.009480760315252666,
+          "C_cert": 0.029415855354659248,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.007301808066759388,
+          "C_cert": 0.023342605470560964,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.010639777468706537,
+          "C_cert": 0.032777005099675474,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.008553546592489568,
+          "C_cert": 0.0275150672229949,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.006722299490032452,
+          "C_cert": 0.022044506258692628,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.011080203987019008,
+          "C_cert": 0.03349559573481688,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.009527121001390821,
+          "C_cert": 0.029786740843764488,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.007603152526657395,
+          "C_cert": 0.02438572090866945,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.010686138154844692,
+          "C_cert": 0.03247566063977747,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.009109874826147427,
+          "C_cert": 0.02878998609179416,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.007579972183588317,
+          "C_cert": 0.024223458507185908,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.011312007417709782,
+          "C_cert": 0.034075104311543813,
+          "meets": false
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.009689383402874363,
+          "C_cert": 0.02992582290217895,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.007811775614279091,
+          "C_cert": 0.024779786740843763,
+          "meets": true
+        },
+        {
+          "policy": "weighted_conformal",
+          "cfg": {
+            "refit": 4000
+          },
+          "R_cert": 0.011543810848400556,
+          "C_cert": 0.035396383866481224,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "naive"
+          },
+          "R_cert": 0.004636068613815485,
+          "C_cert": 0.011798794622160408,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "naive"
+          },
+          "R_cert": 0.00808993973110802,
+          "C_cert": 0.021882243857209088,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "naive"
+          },
+          "R_cert": 0.011381548446917014,
+          "C_cert": 0.0339823829392675,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "naive"
+          },
+          "R_cert": 0.012146499768196569,
+          "C_cert": 0.036810384793694945,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "naive"
+          },
+          "R_cert": 0.012146499768196569,
+          "C_cert": 0.036810384793694945,
+          "meets": false
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "m0.3"
+          },
+          "R_cert": 0.003337969401947149,
+          "C_cert": 0.008947612424663885,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "m0.3"
+          },
+          "R_cert": 0.005910987482614743,
+          "C_cert": 0.016504404265183126,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "m0.3"
+          },
+          "R_cert": 0.00818266110338433,
+          "C_cert": 0.025266573945294392,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "m0.3"
+          },
+          "R_cert": 0.008738989337042188,
+          "C_cert": 0.027468706536856746,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "m0.3"
+          },
+          "R_cert": 0.008738989337042188,
+          "C_cert": 0.027468706536856746,
+          "meets": true
+        }
+      ],
+      "w_certified_error_mean": 1.1075124786039274,
+      "w_certified_correct_mean": 1.1506890046196396
+    }
+  }
+}

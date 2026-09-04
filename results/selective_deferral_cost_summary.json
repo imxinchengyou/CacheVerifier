@@ -1,0 +1,3432 @@
+{
+  "LmArena-D": {
+    "eps_oracle": {
+      "fa_near": 0.075,
+      "fr_near": 0.6,
+      "fa_far": 0.0,
+      "fr_far": 0.0,
+      "n_near": 80,
+      "n_far": 100
+    },
+    "n_test_gz": 8051,
+    "n_test_scope": 51949,
+    "by_r_cj": {
+      "r=0.5,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.038277926427842696,
+        "cost0_cost_optimal_theta": 0.038277926427842696,
+        "theta_cost_optimal_used": -11.466243743896484,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=0.5,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.038277926427842696,
+        "cost0_cost_optimal_theta": 0.038277926427842696,
+        "theta_cost_optimal_used": -11.466243743896484,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=1.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.07272517276559703,
+        "cost0_cost_optimal_theta": 0.07272517276559703,
+        "theta_cost_optimal_used": -11.466243743896484,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=1.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.07272517276559703,
+        "cost0_cost_optimal_theta": 0.07272517276559703,
+        "theta_cost_optimal_used": -11.466243743896484,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=2.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.15603765231284528,
+        "cost0_cost_optimal_theta": 0.15603765231284528,
+        "theta_cost_optimal_used": -3.52408504486084,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.15603765231284528,
+            "hit_at_star": 0.9726654988546459,
+            "err_at_star": 0.0643515755837456,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.15603765231284528,
+            "hit_at_star": 0.9726654988546459,
+            "err_at_star": 0.0643515755837456,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.15603765231284528,
+            "hit_at_star": 0.9726654988546459,
+            "err_at_star": 0.0643515755837456,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.15004347286051423,
+            "cost_at_star": 0.1530106450557277,
+            "hit_at_star": 0.9762026218021521,
+            "err_at_star": 0.06032743652428342,
+            "ocr_at_star": 0.0285279793643766,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0030270072571175755,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=2.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.15603765231284528,
+        "cost0_cost_optimal_theta": 0.15603765231284528,
+        "theta_cost_optimal_used": -3.52408504486084,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.15603765231284528,
+            "hit_at_star": 0.9726654988546459,
+            "err_at_star": 0.0643515755837456,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.15603765231284528,
+            "hit_at_star": 0.9726654988546459,
+            "err_at_star": 0.0643515755837456,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.15603765231284528,
+            "hit_at_star": 0.9726654988546459,
+            "err_at_star": 0.0643515755837456,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.15603765231284528,
+            "hit_at_star": 0.9726654988546459,
+            "err_at_star": 0.0643515755837456,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=5.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.3703439912221603,
+        "cost0_cost_optimal_theta": 0.3703439912221603,
+        "theta_cost_optimal_used": 1.790935754776001,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3703439912221603,
+            "hit_at_star": 0.9438102754624728,
+            "err_at_star": 0.0628308533369266,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.17401565022978513,
+            "cost_at_star": 0.369677953377351,
+            "hit_at_star": 0.9538720668347802,
+            "err_at_star": 0.06299832528056364,
+            "ocr_at_star": 0.0285279793643766,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0006660378448092863,
+            "defers_at_all": true
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3703439912221603,
+            "hit_at_star": 0.9438102754624728,
+            "err_at_star": 0.0628308533369266,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.2999627375481307,
+            "cost_at_star": 0.35866137942982523,
+            "hit_at_star": 0.9586560857764347,
+            "err_at_star": 0.060213382355772,
+            "ocr_at_star": 0.0541685114246665,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.01168261179233504,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=5.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.3703439912221603,
+        "cost0_cost_optimal_theta": 0.3703439912221603,
+        "theta_cost_optimal_used": 1.790935754776001,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3703439912221603,
+            "hit_at_star": 0.9438102754624728,
+            "err_at_star": 0.0628308533369266,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3703439912221603,
+            "hit_at_star": 0.9438102754624728,
+            "err_at_star": 0.0628308533369266,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3703439912221603,
+            "hit_at_star": 0.9438102754624728,
+            "err_at_star": 0.0628308533369266,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.019997515836542044,
+            "cost_at_star": 0.3632697453271477,
+            "hit_at_star": 0.9413006025140042,
+            "err_at_star": 0.060213382355772,
+            "ocr_at_star": 0.0050049086604169474,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.007074245895012599,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=10.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.7062696105796069,
+        "cost0_cost_optimal_theta": 0.7062696105796069,
+        "theta_cost_optimal_used": 4.848914623260498,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.7062696105796069,
+            "hit_at_star": 0.9114516160080078,
+            "err_at_star": 0.061772122658761475,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.7062696105796069,
+            "hit_at_star": 0.9114516160080078,
+            "err_at_star": 0.061772122658761475,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.7062696105796069,
+            "hit_at_star": 0.9114516160080078,
+            "err_at_star": 0.061772122658761475,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.5000621040864489,
+            "cost_at_star": 0.6877013994494601,
+            "hit_at_star": 0.9401047180888948,
+            "err_at_star": 0.06013397755490962,
+            "ocr_at_star": 0.08822113996419566,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.01856821113014684,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=10.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.7062696105796069,
+        "cost0_cost_optimal_theta": 0.7062696105796069,
+        "theta_cost_optimal_used": 4.848914623260498,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.7062696105796069,
+            "hit_at_star": 0.9114516160080078,
+            "err_at_star": 0.061772122658761475,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.7062696105796069,
+            "hit_at_star": 0.9114516160080078,
+            "err_at_star": 0.061772122658761475,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.7062696105796069,
+            "hit_at_star": 0.9114516160080078,
+            "err_at_star": 0.061772122658761475,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.019997515836542044,
+            "cost_at_star": 0.6944984504032802,
+            "hit_at_star": 0.9103447612081079,
+            "err_at_star": 0.06013397755490962,
+            "ocr_at_star": 0.0050049086604169474,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.011771160176326734,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=20.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.3583129607884656,
+        "cost0_cost_optimal_theta": 1.3583129607884656,
+        "theta_cost_optimal_used": 10.147912979125977,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.6990435970686871,
+            "cost_at_star": 1.3475851315713487,
+            "hit_at_star": 0.8835242256828812,
+            "err_at_star": 0.06023215076324856,
+            "ocr_at_star": 0.08822113996419566,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.010727829217116902,
+            "defers_at_all": true
+          },
+          "calibrated": {
+            "delta_star_realized": 0.9370264563408273,
+            "cost_at_star": 1.3534707116595124,
+            "hit_at_star": 0.8971577893703441,
+            "err_at_star": 0.060610406360083934,
+            "ocr_at_star": 0.12806791276059212,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.004842249128953258,
+            "defers_at_all": true
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.3583129607884656,
+            "hit_at_star": 0.841710138789967,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.7499689479567756,
+            "cost_at_star": 1.3502415830911085,
+            "hit_at_star": 0.8882018903155018,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.12806791276059212,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.008071377697357107,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=20.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.3583129607884656,
+        "cost0_cost_optimal_theta": 1.3583129607884656,
+        "theta_cost_optimal_used": 10.147912979125977,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.3583129607884656,
+            "hit_at_star": 0.841710138789967,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.3583129607884656,
+            "hit_at_star": 0.841710138789967,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.3583129607884656,
+            "hit_at_star": 0.841710138789967,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.3583129607884656,
+            "hit_at_star": 0.841710138789967,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=50.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 3.158713353481299,
+        "cost0_cost_optimal_theta": 3.158713353481299,
+        "theta_cost_optimal_used": 10.663724899291992,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.6990435970686871,
+            "cost_at_star": 3.1545496544688056,
+            "hit_at_star": 0.8835242256828812,
+            "err_at_star": 0.06023215076324856,
+            "ocr_at_star": 0.08822113996419566,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.00416369901249336,
+            "defers_at_all": true
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.158713353481299,
+            "hit_at_star": 0.8413443954647828,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.158713353481299,
+            "hit_at_star": 0.8413443954647828,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.7499689479567756,
+            "cost_at_star": 3.150641975783942,
+            "hit_at_star": 0.8878361469903173,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.12806791276059212,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.008071377697357107,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=50.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 3.158713353481299,
+        "cost0_cost_optimal_theta": 3.158713353481299,
+        "theta_cost_optimal_used": 10.663724899291992,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.158713353481299,
+            "hit_at_star": 0.8413443954647828,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.158713353481299,
+            "hit_at_star": 0.8413443954647828,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.158713353481299,
+            "hit_at_star": 0.8413443954647828,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.158713353481299,
+            "hit_at_star": 0.8413443954647828,
+            "err_at_star": 0.06000115497892163,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      }
+    }
+  },
+  "LmArena-E": {
+    "eps_oracle": {
+      "fa_near": 0.075,
+      "fr_near": 0.6,
+      "fa_far": 0.0,
+      "fr_far": 0.0,
+      "n_near": 80,
+      "n_far": 100
+    },
+    "n_test_gz": 8051,
+    "n_test_scope": 51949,
+    "by_r_cj": {
+      "r=0.5,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.038277926427842696,
+        "cost0_cost_optimal_theta": 0.038277926427842696,
+        "theta_cost_optimal_used": -10.506970405578613,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=0.5,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.038277926427842696,
+        "cost0_cost_optimal_theta": 0.038277926427842696,
+        "theta_cost_optimal_used": -10.506970405578613,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.038277926427842696,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=1.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.07272517276559703,
+        "cost0_cost_optimal_theta": 0.07272517276559703,
+        "theta_cost_optimal_used": -10.506970405578613,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=1.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.07272517276559703,
+        "cost0_cost_optimal_theta": 0.07272517276559703,
+        "theta_cost_optimal_used": -10.506970405578613,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.07272517276559703,
+            "hit_at_star": 0.9961693199099116,
+            "err_at_star": 0.06889449267550868,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=2.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.14356387995919076,
+        "cost0_cost_optimal_theta": 0.14356387995919076,
+        "theta_cost_optimal_used": 0.5348934531211853,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.14356387995919076,
+            "hit_at_star": 0.9830218098519702,
+            "err_at_star": 0.06329284490558047,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.14356387995919076,
+            "hit_at_star": 0.9830218098519702,
+            "err_at_star": 0.06329284490558047,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.14356387995919076,
+            "hit_at_star": 0.9830218098519702,
+            "err_at_star": 0.06329284490558047,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.050055893677804,
+            "cost_at_star": 0.14140070068721244,
+            "hit_at_star": 0.9817633640686058,
+            "err_at_star": 0.060248031723421046,
+            "ocr_at_star": 0.008893337696587037,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.002163179271978316,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=2.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.14356387995919076,
+        "cost0_cost_optimal_theta": 0.14356387995919076,
+        "theta_cost_optimal_used": 0.5348934531211853,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.14356387995919076,
+            "hit_at_star": 0.9830218098519702,
+            "err_at_star": 0.06329284490558047,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.14356387995919076,
+            "hit_at_star": 0.9830218098519702,
+            "err_at_star": 0.06329284490558047,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.14356387995919076,
+            "hit_at_star": 0.9830218098519702,
+            "err_at_star": 0.06329284490558047,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.019997515836542044,
+            "cost_at_star": 0.14352682438545497,
+            "hit_at_star": 0.9801550559202294,
+            "err_at_star": 0.06042609097383971,
+            "ocr_at_star": 0.004042426225721381,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 3.705557373578916e-05,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=5.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.33833182544418566,
+        "cost0_cost_optimal_theta": 0.33833182544418566,
+        "theta_cost_optimal_used": 1.8584843873977661,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.33833182544418566,
+            "hit_at_star": 0.9719725115016651,
+            "err_at_star": 0.062060867389170146,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.06558191529002608,
+            "cost_at_star": 0.3381066045544667,
+            "hit_at_star": 0.9754937534889989,
+            "err_at_star": 0.06218647134689791,
+            "ocr_at_star": 0.008893337696587037,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0002252208897189356,
+            "defers_at_all": true
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.33833182544418566,
+            "hit_at_star": 0.9719725115016651,
+            "err_at_star": 0.062060867389170146,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.09998757918271023,
+            "cost_at_star": 0.3304991433906332,
+            "hit_at_star": 0.9754417794375252,
+            "err_at_star": 0.06015563340969027,
+            "ocr_at_star": 0.017209185932356735,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.007832682053552475,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=5.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.33833182544418566,
+        "cost0_cost_optimal_theta": 0.33833182544418566,
+        "theta_cost_optimal_used": 1.8584843873977661,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.33833182544418566,
+            "hit_at_star": 0.9719725115016651,
+            "err_at_star": 0.062060867389170146,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.33833182544418566,
+            "hit_at_star": 0.9719725115016651,
+            "err_at_star": 0.062060867389170146,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.33833182544418566,
+            "hit_at_star": 0.9719725115016651,
+            "err_at_star": 0.062060867389170146,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.019997515836542044,
+            "cost_at_star": 0.3331247954724827,
+            "hit_at_star": 0.9704830699339736,
+            "err_at_star": 0.06015563340969027,
+            "ocr_at_star": 0.004042426225721381,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.00520702997170297,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=10.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.6566055169493157,
+        "cost0_cost_optimal_theta": 0.6566055169493157,
+        "theta_cost_optimal_used": 2.8332254886627197,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.6566055169493157,
+            "hit_at_star": 0.9568807869256386,
+            "err_at_star": 0.061348630387495426,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.12520183828095888,
+            "cost_at_star": 0.6565520991741901,
+            "hit_at_star": 0.9638727405724845,
+            "err_at_star": 0.06152620839669676,
+            "ocr_at_star": 0.017209185932356735,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 5.3417775125574884e-05,
+            "defers_at_all": true
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.6566055169493157,
+            "hit_at_star": 0.9568807869256386,
+            "err_at_star": 0.061348630387495426,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.19997515836542046,
+            "cost_at_star": 0.6442308802864347,
+            "hit_at_star": 0.9674921557681573,
+            "err_at_star": 0.06010221563456467,
+            "ocr_at_star": 0.03566959902981771,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.012374636662880967,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=10.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.6566055169493157,
+        "cost0_cost_optimal_theta": 0.6566055169493157,
+        "theta_cost_optimal_used": 2.8332254886627197,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.6566055169493157,
+            "hit_at_star": 0.9568807869256386,
+            "err_at_star": 0.061348630387495426,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.6566055169493157,
+            "hit_at_star": 0.9568807869256386,
+            "err_at_star": 0.061348630387495426,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.6566055169493157,
+            "hit_at_star": 0.9568807869256386,
+            "err_at_star": 0.061348630387495426,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.019997515836542044,
+            "cost_at_star": 0.6475167953184855,
+            "hit_at_star": 0.9563350593851662,
+            "err_at_star": 0.06010221563456467,
+            "ocr_at_star": 0.004042426225721381,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.009088721630830188,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=20.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.2862807753758494,
+        "cost0_cost_optimal_theta": 1.2862807753758494,
+        "theta_cost_optimal_used": 4.034286975860596,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2862807753758494,
+            "hit_at_star": 0.9279870642360777,
+            "err_at_star": 0.06071339198059635,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.4065333498944231,
+            "cost_at_star": 1.285557951067393,
+            "hit_at_star": 0.9517748176095786,
+            "err_at_star": 0.06103967352595815,
+            "ocr_at_star": 0.055130993859362064,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0007228243084564934,
+            "defers_at_all": true
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2862807753758494,
+            "hit_at_star": 0.9279870642360777,
+            "err_at_star": 0.06071339198059635,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.2999627375481307,
+            "cost_at_star": 1.2719922423915766,
+            "hit_at_star": 0.9456385108471769,
+            "err_at_star": 0.06005457275404724,
+            "ocr_at_star": 0.055130993859362064,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.014288532984272795,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=20.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.2862807753758494,
+        "cost0_cost_optimal_theta": 1.2862807753758494,
+        "theta_cost_optimal_used": 4.034286975860596,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2862807753758494,
+            "hit_at_star": 0.9279870642360777,
+            "err_at_star": 0.06071339198059635,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2862807753758494,
+            "hit_at_star": 0.9279870642360777,
+            "err_at_star": 0.06071339198059635,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2862807753758494,
+            "hit_at_star": 0.9279870642360777,
+            "err_at_star": 0.06071339198059635,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.019997515836542044,
+            "cost_at_star": 1.2756381258542033,
+            "hit_at_star": 0.9282830275847466,
+            "err_at_star": 0.06005457275404724,
+            "ocr_at_star": 0.004042426225721381,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.010642649521646064,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=50.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 3.1090877591483954,
+        "cost0_cost_optimal_theta": 3.1090877591483954,
+        "theta_cost_optimal_used": 4.37180757522583,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.07589119364054155,
+            "cost_at_star": 3.1065323682842787,
+            "hit_at_star": 0.9154911547864253,
+            "err_at_star": 0.06038711043523456,
+            "ocr_at_star": 0.008893337696587037,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0025553908641167133,
+            "defers_at_all": true
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.1090877591483954,
+            "hit_at_star": 0.9169570155344665,
+            "err_at_star": 0.06052089549365724,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.1090877591483954,
+            "hit_at_star": 0.9169570155344665,
+            "err_at_star": 0.06052089549365724,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.2999627375481307,
+            "cost_at_star": 3.0836825540433885,
+            "hit_at_star": 0.93486351999076,
+            "err_at_star": 0.06004013551752681,
+            "ocr_at_star": 0.055130993859362064,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.02540520510500688,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=50.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 3.1090877591483954,
+        "cost0_cost_optimal_theta": 3.1090877591483954,
+        "theta_cost_optimal_used": 4.37180757522583,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.1090877591483954,
+            "hit_at_star": 0.9169570155344665,
+            "err_at_star": 0.06052089549365724,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.1090877591483954,
+            "hit_at_star": 0.9169570155344665,
+            "err_at_star": 0.06052089549365724,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.1090877591483954,
+            "hit_at_star": 0.9169570155344665,
+            "err_at_star": 0.06052089549365724,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.019997515836542044,
+            "cost_at_star": 3.0873284375060153,
+            "hit_at_star": 0.9175080367283297,
+            "err_at_star": 0.06004013551752681,
+            "ocr_at_star": 0.004042426225721381,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.021759321642380147,
+            "defers_at_all": true
+          }
+        }
+      }
+    }
+  },
+  "Quora-D": {
+    "eps_oracle": {
+      "fa_near": 0.0,
+      "fr_near": 0.975,
+      "fa_far": 0.0,
+      "fr_far": 0.0,
+      "n_near": 80,
+      "n_far": 100
+    },
+    "n_test_gz": 8520,
+    "n_test_scope": 51480,
+    "by_r_cj": {
+      "r=0.5,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.8513694638694639,
+        "cost0_cost_optimal_theta": 0.8513694638694639,
+        "theta_cost_optimal_used": -7.94056510925293,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.8513694638694639,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.8513694638694639,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.8513694638694639,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.8513694638694639,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=0.5,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.8513694638694639,
+        "cost0_cost_optimal_theta": 0.8513694638694639,
+        "theta_cost_optimal_used": -7.94056510925293,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.8513694638694639,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.8513694638694639,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.8513694638694639,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.8513694638694639,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=1.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.9118104118104119,
+        "cost0_cost_optimal_theta": 0.9118104118104119,
+        "theta_cost_optimal_used": -7.94056510925293,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9118104118104119,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9118104118104119,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9118104118104119,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9118104118104119,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=1.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.9118104118104119,
+        "cost0_cost_optimal_theta": 0.9118104118104119,
+        "theta_cost_optimal_used": -7.94056510925293,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9118104118104119,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9118104118104119,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9118104118104119,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9118104118104119,
+            "hit_at_star": 0.20907148407148407,
+            "err_at_star": 0.12088189588189588,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=2.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.9918803418803419,
+        "cost0_cost_optimal_theta": 0.9918803418803419,
+        "theta_cost_optimal_used": 3.9674487113952637,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9918803418803419,
+            "hit_at_star": 0.12338772338772339,
+            "err_at_star": 0.057634032634032634,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.16115023474178403,
+            "cost_at_star": 0.9903846153846154,
+            "hit_at_star": 0.0969910644910645,
+            "err_at_star": 0.04116161616161616,
+            "ocr_at_star": 0.01684149184149184,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0014957264957264904,
+            "defers_at_all": true
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9918803418803419,
+            "hit_at_star": 0.12338772338772339,
+            "err_at_star": 0.057634032634032634,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 0.9607512626262625,
+            "hit_at_star": 0.07813762626262627,
+            "err_at_star": 0.012276612276612277,
+            "ocr_at_star": 0.047785547785547784,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.031129079254079373,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=2.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.9918803418803419,
+        "cost0_cost_optimal_theta": 0.9918803418803419,
+        "theta_cost_optimal_used": 3.9674487113952637,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9918803418803419,
+            "hit_at_star": 0.12338772338772339,
+            "err_at_star": 0.057634032634032634,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9918803418803419,
+            "hit_at_star": 0.12338772338772339,
+            "err_at_star": 0.057634032634032634,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9918803418803419,
+            "hit_at_star": 0.12338772338772339,
+            "err_at_star": 0.057634032634032634,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 0.9798654817404816,
+            "hit_at_star": 0.07813762626262627,
+            "err_at_star": 0.012276612276612277,
+            "ocr_at_star": 0.047785547785547784,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.012014860139860306,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=5.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.0179681429681429,
+        "cost0_cost_optimal_theta": 1.0179681429681429,
+        "theta_cost_optimal_used": 9.72921371459961,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0179681429681429,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0179681429681429,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0179681429681429,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0179681429681429,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=5.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.0179681429681429,
+        "cost0_cost_optimal_theta": 1.0179681429681429,
+        "theta_cost_optimal_used": 9.72921371459961,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0179681429681429,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0179681429681429,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0179681429681429,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0179681429681429,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=10.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.0796425796425795,
+        "cost0_cost_optimal_theta": 1.0796425796425795,
+        "theta_cost_optimal_used": 9.72921371459961,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0796425796425795,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0796425796425795,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0796425796425795,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0796425796425795,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=10.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.0796425796425795,
+        "cost0_cost_optimal_theta": 1.0796425796425795,
+        "theta_cost_optimal_used": 9.72921371459961,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0796425796425795,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0796425796425795,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0796425796425795,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.0796425796425795,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=20.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.202991452991453,
+        "cost0_cost_optimal_theta": 1.202991452991453,
+        "theta_cost_optimal_used": 9.72921371459961,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0210093896713615,
+            "cost_at_star": 1.202948717948718,
+            "hit_at_star": 0.04363247863247864,
+            "err_at_star": 0.012276612276612277,
+            "ocr_at_star": 0.0034965034965034965,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 4.2735042734998174e-05,
+            "defers_at_all": true
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.202991452991453,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.202991452991453,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.01995305164319249,
+            "cost_at_star": 1.2028520784770786,
+            "hit_at_star": 0.0437291181041181,
+            "err_at_star": 0.012276612276612277,
+            "ocr_at_star": 0.0034965034965034965,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.00013937451437429083,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=20.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.202991452991453,
+        "cost0_cost_optimal_theta": 1.202991452991453,
+        "theta_cost_optimal_used": 9.72921371459961,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.202991452991453,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.202991452991453,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.202991452991453,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.202991452991453,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=50.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.5730380730380729,
+        "cost0_cost_optimal_theta": 1.5730380730380729,
+        "theta_cost_optimal_used": 9.72921371459961,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0210093896713615,
+            "cost_at_star": 1.5712470862470864,
+            "hit_at_star": 0.04363247863247864,
+            "err_at_star": 0.012276612276612277,
+            "ocr_at_star": 0.0034965034965034965,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0017909867909864374,
+            "defers_at_all": true
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.5730380730380729,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.5730380730380729,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.01995305164319249,
+            "cost_at_star": 1.571150446775447,
+            "hit_at_star": 0.0437291181041181,
+            "err_at_star": 0.012276612276612277,
+            "ocr_at_star": 0.0034965034965034965,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0018876262626259521,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=50.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.5730380730380729,
+        "cost0_cost_optimal_theta": 1.5730380730380729,
+        "theta_cost_optimal_used": 9.72921371459961,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0210093896713615,
+            "cost_at_star": 1.5726456876456878,
+            "hit_at_star": 0.04363247863247864,
+            "err_at_star": 0.012276612276612277,
+            "ocr_at_star": 0.0034965034965034965,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.000392385392385064,
+            "defers_at_all": true
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.5730380730380729,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.5730380730380729,
+            "hit_at_star": 0.043706293706293704,
+            "err_at_star": 0.012334887334887334,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.01995305164319249,
+            "cost_at_star": 1.5725490481740483,
+            "hit_at_star": 0.0437291181041181,
+            "err_at_star": 0.012276612276612277,
+            "ocr_at_star": 0.0034965034965034965,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0004890248640245787,
+            "defers_at_all": true
+          }
+        }
+      }
+    }
+  },
+  "SearchQ-D": {
+    "eps_oracle": {
+      "fa_near": 0.125,
+      "fr_near": 0.625,
+      "fa_far": 0.0,
+      "fr_far": 0.0,
+      "n_near": 80,
+      "n_far": 100
+    },
+    "n_test_gz": 43140,
+    "n_test_scope": 106860,
+    "by_r_cj": {
+      "r=0.5,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.3392476137001684,
+        "cost0_cost_optimal_theta": 0.3392476137001684,
+        "theta_cost_optimal_used": -11.412605285644531,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392476137001684,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392476137001684,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392476137001684,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392476137001684,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=0.5,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.3392476137001684,
+        "cost0_cost_optimal_theta": 0.3392476137001684,
+        "theta_cost_optimal_used": -11.412605285644531,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392476137001684,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392476137001684,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392476137001684,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392476137001684,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=1.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.4763148044169942,
+        "cost0_cost_optimal_theta": 0.4763148044169942,
+        "theta_cost_optimal_used": -11.412605285644531,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4763148044169942,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4763148044169942,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4763148044169942,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4763148044169942,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=1.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.4763148044169942,
+        "cost0_cost_optimal_theta": 0.4763148044169942,
+        "theta_cost_optimal_used": -11.412605285644531,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4763148044169942,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4763148044169942,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4763148044169942,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4763148044169942,
+            "hit_at_star": 0.7978195770166573,
+            "err_at_star": 0.2741343814336515,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=2.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.7117911285794497,
+        "cost0_cost_optimal_theta": 0.7117911285794497,
+        "theta_cost_optimal_used": 6.887585639953613,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.7117911285794497,
+            "hit_at_star": 0.5965749578888265,
+            "err_at_star": 0.15418304323413812,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.07380621233194251,
+            "cost_at_star": 0.7100701852891634,
+            "hit_at_star": 0.5741975481938986,
+            "err_at_star": 0.14100809470335018,
+            "ocr_at_star": 0.007505146921205317,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0017209432902862698,
+            "defers_at_all": true
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.7117911285794497,
+            "hit_at_star": 0.5965749578888265,
+            "err_at_star": 0.15418304323413812,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 0.657935148792813,
+            "hit_at_star": 0.531064008983717,
+            "err_at_star": 0.0765335485682201,
+            "ocr_at_star": 0.11977353546696612,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0538559797866367,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=2.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.7117911285794497,
+        "cost0_cost_optimal_theta": 0.7117911285794497,
+        "theta_cost_optimal_used": 6.887585639953613,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.7117911285794497,
+            "hit_at_star": 0.5965749578888265,
+            "err_at_star": 0.15418304323413812,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.7117911285794497,
+            "hit_at_star": 0.5965749578888265,
+            "err_at_star": 0.15418304323413812,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.7117911285794497,
+            "hit_at_star": 0.5965749578888265,
+            "err_at_star": 0.15418304323413812,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.2,
+            "cost_at_star": 0.6973666479505896,
+            "hit_at_star": 0.5259264458169568,
+            "err_at_star": 0.08353453116226839,
+            "ocr_at_star": 0.08032004491858506,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.014424480628860148,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=5.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.9329870859067939,
+        "cost0_cost_optimal_theta": 0.9329870859067939,
+        "theta_cost_optimal_used": 11.526147842407227,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9329870859067939,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9329870859067939,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9329870859067939,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 0.9235022459292531,
+            "hit_at_star": 0.4396336327905671,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.11977353546696612,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.009484839977540793,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=5.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.9329870859067939,
+        "cost0_cost_optimal_theta": 0.9329870859067939,
+        "theta_cost_optimal_used": 11.526147842407227,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9329870859067939,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9329870859067939,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9329870859067939,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9329870859067939,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=10.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.2601909039865244,
+        "cost0_cost_optimal_theta": 1.2601909039865244,
+        "theta_cost_optimal_used": 11.526147842407227,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2601909039865244,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2601909039865244,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2601909039865244,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 1.2507060640089838,
+            "hit_at_star": 0.4396336327905671,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.11977353546696612,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.009484839977540682,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=10.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.2601909039865244,
+        "cost0_cost_optimal_theta": 1.2601909039865244,
+        "theta_cost_optimal_used": 11.526147842407227,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2601909039865244,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2601909039865244,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2601909039865244,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2601909039865244,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=20.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.9145985401459853,
+        "cost0_cost_optimal_theta": 1.9145985401459853,
+        "theta_cost_optimal_used": 11.526147842407227,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9145985401459853,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9145985401459853,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9145985401459853,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 1.9051137001684448,
+            "hit_at_star": 0.4396336327905671,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.11977353546696612,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.00948483997754046,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=20.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.9145985401459853,
+        "cost0_cost_optimal_theta": 1.9145985401459853,
+        "theta_cost_optimal_used": 11.526147842407227,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9145985401459853,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9145985401459853,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9145985401459853,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9145985401459853,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=50.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 3.8778214486243683,
+        "cost0_cost_optimal_theta": 3.8778214486243683,
+        "theta_cost_optimal_used": 11.526147842407227,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.8778214486243683,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.8778214486243683,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.8778214486243683,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 3.8683366086468274,
+            "hit_at_star": 0.4396336327905671,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.11977353546696612,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.009484839977540904,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=50.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 3.8778214486243683,
+        "cost0_cost_optimal_theta": 3.8778214486243683,
+        "theta_cost_optimal_used": 11.526147842407227,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.8778214486243683,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.8778214486243683,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.8778214486243683,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.8778214486243683,
+            "hit_at_star": 0.39421673217293657,
+            "err_at_star": 0.0654407636159461,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      }
+    }
+  },
+  "SearchQ-E": {
+    "eps_oracle": {
+      "fa_near": 0.125,
+      "fr_near": 0.625,
+      "fa_far": 0.0,
+      "fr_far": 0.0,
+      "n_near": 80,
+      "n_far": 100
+    },
+    "n_test_gz": 43140,
+    "n_test_scope": 106860,
+    "by_r_cj": {
+      "r=0.5,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.3392148605652255,
+        "cost0_cost_optimal_theta": 0.3392148605652255,
+        "theta_cost_optimal_used": -4.840322971343994,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392148605652255,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392148605652255,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392148605652255,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392148605652255,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=0.5,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.3392148605652255,
+        "cost0_cost_optimal_theta": 0.3392148605652255,
+        "theta_cost_optimal_used": -4.840322971343994,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392148605652255,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392148605652255,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392148605652255,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.3392148605652255,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=1.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.4762960883398839,
+        "cost0_cost_optimal_theta": 0.4762960883398839,
+        "theta_cost_optimal_used": -4.840322971343994,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4762960883398839,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4762960883398839,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4762960883398839,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4762960883398839,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=1.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.4762960883398839,
+        "cost0_cost_optimal_theta": 0.4762960883398839,
+        "theta_cost_optimal_used": -4.840322971343994,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4762960883398839,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4762960883398839,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4762960883398839,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.4762960883398839,
+            "hit_at_star": 0.7978663672094329,
+            "err_at_star": 0.27416245554931684,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          }
+        }
+      },
+      "r=2.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.6719820325659742,
+        "cost0_cost_optimal_theta": 0.6719820325659742,
+        "theta_cost_optimal_used": 0.27214863896369934,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.6719820325659742,
+            "hit_at_star": 0.5835860003743215,
+            "err_at_star": 0.12778401647014787,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.06265646731571627,
+            "cost_at_star": 0.6716402302077484,
+            "hit_at_star": 0.5873093299644394,
+            "err_at_star": 0.1281946004117537,
+            "ocr_at_star": 0.00853453116226839,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.00034180235822578453,
+            "defers_at_all": true
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.6719820325659742,
+            "hit_at_star": 0.5835860003743215,
+            "err_at_star": 0.12778401647014787,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 0.6339336515066442,
+            "hit_at_star": 0.5510738349241999,
+            "err_at_star": 0.07323367022272131,
+            "ocr_at_star": 0.12846715328467154,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.03804838105933006,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=2.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.6719820325659742,
+        "cost0_cost_optimal_theta": 0.6719820325659742,
+        "theta_cost_optimal_used": 0.27214863896369934,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.6719820325659742,
+            "hit_at_star": 0.5835860003743215,
+            "err_at_star": 0.12778401647014787,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.6719820325659742,
+            "hit_at_star": 0.5835860003743215,
+            "err_at_star": 0.12778401647014787,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.6719820325659742,
+            "hit_at_star": 0.5835860003743215,
+            "err_at_star": 0.12778401647014787,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.15,
+            "cost_at_star": 0.6645814617256224,
+            "hit_at_star": 0.5305996163204192,
+            "err_at_star": 0.07479763241624555,
+            "ocr_at_star": 0.06512259030507206,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.007400570840351839,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=5.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.9282425603593487,
+        "cost0_cost_optimal_theta": 0.9282425603593487,
+        "theta_cost_optimal_used": 1.4147837162017822,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9282425603593487,
+            "hit_at_star": 0.4379374883024518,
+            "err_at_star": 0.0732360097323601,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9282425603593487,
+            "hit_at_star": 0.4379374883024518,
+            "err_at_star": 0.0732360097323601,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9282425603593487,
+            "hit_at_star": 0.4379374883024518,
+            "err_at_star": 0.0732360097323601,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 0.8970056616133258,
+            "hit_at_star": 0.47361033127456487,
+            "err_at_star": 0.06641516938049785,
+            "ocr_at_star": 0.12846715328467154,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.031236898746022868,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=5.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 0.9282425603593487,
+        "cost0_cost_optimal_theta": 0.9282425603593487,
+        "theta_cost_optimal_used": 1.4147837162017822,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9282425603593487,
+            "hit_at_star": 0.4379374883024518,
+            "err_at_star": 0.0732360097323601,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9282425603593487,
+            "hit_at_star": 0.4379374883024518,
+            "err_at_star": 0.0732360097323601,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 0.9282425603593487,
+            "hit_at_star": 0.4379374883024518,
+            "err_at_star": 0.0732360097323601,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.020004636068613815,
+            "cost_at_star": 0.9068280928317425,
+            "hit_at_star": 0.43122192588433467,
+            "err_at_star": 0.06641516938049785,
+            "ocr_at_star": 0.00853453116226839,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.02141446752760623,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=10.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.2599382369455363,
+        "cost0_cost_optimal_theta": 1.2599382369455363,
+        "theta_cost_optimal_used": 2.3297924995422363,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2599382369455363,
+            "hit_at_star": 0.40083286543140556,
+            "err_at_star": 0.06607711023769418,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2599382369455363,
+            "hit_at_star": 0.40083286543140556,
+            "err_at_star": 0.06607711023769418,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2599382369455363,
+            "hit_at_star": 0.40083286543140556,
+            "err_at_star": 0.06607711023769418,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 1.2482888826501968,
+            "hit_at_star": 0.44545433277185104,
+            "err_at_star": 0.0655203069436646,
+            "ocr_at_star": 0.12846715328467154,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.011649354295339531,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=10.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.2599382369455363,
+        "cost0_cost_optimal_theta": 1.2599382369455363,
+        "theta_cost_optimal_used": 2.3297924995422363,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2599382369455363,
+            "hit_at_star": 0.40083286543140556,
+            "err_at_star": 0.06607711023769418,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2599382369455363,
+            "hit_at_star": 0.40083286543140556,
+            "err_at_star": 0.06607711023769418,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.2599382369455363,
+            "hit_at_star": 0.40083286543140556,
+            "err_at_star": 0.06607711023769418,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.020004636068613815,
+            "cost_at_star": 1.2581113138686133,
+            "hit_at_star": 0.40306592738162084,
+            "err_at_star": 0.0655203069436646,
+            "ocr_at_star": 0.00853453116226839,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0018269230769230038,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=20.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.9162829870859068,
+        "cost0_cost_optimal_theta": 1.9162829870859068,
+        "theta_cost_optimal_used": 2.729761838912964,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9162829870859068,
+            "hit_at_star": 0.39664982219726747,
+            "err_at_star": 0.06564664046415872,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9162829870859068,
+            "hit_at_star": 0.39664982219726747,
+            "err_at_star": 0.06564664046415872,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9162829870859068,
+            "hit_at_star": 0.39664982219726747,
+            "err_at_star": 0.06564664046415872,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 1.9060607336702229,
+            "hit_at_star": 0.4418093767546322,
+            "err_at_star": 0.06546649822197267,
+            "ocr_at_star": 0.12846715328467154,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.010222253415683946,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=20.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 1.9162829870859068,
+        "cost0_cost_optimal_theta": 1.9162829870859068,
+        "theta_cost_optimal_used": 2.729761838912964,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9162829870859068,
+            "hit_at_star": 0.39664982219726747,
+            "err_at_star": 0.06564664046415872,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9162829870859068,
+            "hit_at_star": 0.39664982219726747,
+            "err_at_star": 0.06564664046415872,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 1.9162829870859068,
+            "hit_at_star": 0.39664982219726747,
+            "err_at_star": 0.06564664046415872,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.020004636068613815,
+            "cost_at_star": 1.9158831648886396,
+            "hit_at_star": 0.399420971364402,
+            "err_at_star": 0.06546649822197267,
+            "ocr_at_star": 0.00853453116226839,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0003998221972671967,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=50.0,cj=0.3": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 3.880956391540333,
+        "cost0_cost_optimal_theta": 3.880956391540333,
+        "theta_cost_optimal_used": 3.0363707542419434,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.880956391540333,
+            "hit_at_star": 0.39529290660677524,
+            "err_at_star": 0.06552498596294216,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.880956391540333,
+            "hit_at_star": 0.39529290660677524,
+            "err_at_star": 0.06552498596294216,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.880956391540333,
+            "hit_at_star": 0.39529290660677524,
+            "err_at_star": 0.06552498596294216,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.3,
+            "cost_at_star": 3.8705001871607707,
+            "hit_at_star": 0.4406045292906607,
+            "err_at_star": 0.0654512914093206,
+            "ocr_at_star": 0.12846715328467154,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.010456204379562184,
+            "defers_at_all": true
+          }
+        }
+      },
+      "r=50.0,cj=0.7": {
+        "deferral_anchored_at": "cost_optimal_theta",
+        "cost0_anchor": 3.880956391540333,
+        "cost0_cost_optimal_theta": 3.880956391540333,
+        "theta_cost_optimal_used": 3.0363707542419434,
+        "signals": {
+          "margin": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.880956391540333,
+            "hit_at_star": 0.39529290660677524,
+            "err_at_star": 0.06552498596294216,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "calibrated": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.880956391540333,
+            "hit_at_star": 0.39529290660677524,
+            "err_at_star": 0.06552498596294216,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "random": {
+            "delta_star_realized": 0.0,
+            "cost_at_star": 3.880956391540333,
+            "hit_at_star": 0.39529290660677524,
+            "err_at_star": 0.06552498596294216,
+            "ocr_at_star": 0.0,
+            "beats_baseline": false,
+            "improvement_vs_baseline": 0.0,
+            "defers_at_all": false
+          },
+          "oracle_informed": {
+            "delta_star_realized": 0.020004636068613815,
+            "cost_at_star": 3.8803226183791875,
+            "hit_at_star": 0.3982161239004305,
+            "err_at_star": 0.0654512914093206,
+            "ocr_at_star": 0.00853453116226839,
+            "beats_baseline": true,
+            "improvement_vs_baseline": 0.0006337731611454345,
+            "defers_at_all": true
+          }
+        }
+      }
+    }
+  }
+}
