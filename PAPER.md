@@ -52,7 +52,7 @@
 | **Closing the Calibration Gap**(Baral et al., 2026, arXiv:2606.19719) | 校准检索/重排阶段自己给出的那一个相似度分数(P-CHR AUC / CRR 指标),不新增独立阶段 | 否——校准的是唯一信号,不是解耦的第二阶段验证器 | — | 单层,单信号架构(选型+阈值校准更严谨,但仍是"分数≥阈值→命中") |
 | **TweakLLM**(2025, arXiv:2507.23674) | 命中后不做接受/拒绝判定,而是用一个轻量 LLM **动态改写**缓存答案以适配新查询 | 部分——用生成式改写代替二值验证 | 同步(改写发生在 serving 路径上) | 单层,但把"验证"问题换成了"编辑"问题 |
 
-后两行不是 Krites 式的直接竞争者,而是分别代表"把现有信号校准得更好"和"绕开验证问题去做内容改写"这两条相邻但不同的路线,与本文的定位关系见 6.1 节的外部交叉验证讨论,此处不再展开三点分析。第三条相邻路线是**选择性预测 / 带拒绝选项的分类**(Chow, 1970;El-Yaniv & Wiener, 2010;Geifman & El-Yaniv, 2017;Cortes, DeSalvo & Mohri, 2016;Mozannar & Sontag, 2020;保形化版本见 Szabadváry et al., 2025):把"要不要为这条输入出预测"本身当成一个可学习、可给风险保证的决策。5.13 节的 CRC 校准和 5.20 节对"三元门禁"的检验都直接建立在这条线上,细节在对应小节展开。
+后两行不是 Krites 式的直接竞争者,而是分别代表"把现有信号校准得更好"和"绕开验证问题去做内容改写"这两条相邻但不同的路线,与本文的定位关系见 6.1 节的外部交叉验证讨论,此处不再展开三点分析。第三条相邻路线是**选择性预测 / 带拒绝选项的分类**(Chow, 1970;El-Yaniv & Wiener, 2010;Geifman & El-Yaniv, 2017;Cortes et al., 2016;Mozannar & Sontag, 2020;保形化版本见 Szabadváry et al., 2025):把"要不要为这条输入出预测"本身当成一个可学习、可给风险保证的决策。5.13 节的 CRC 校准和 5.20 节对"三元门禁"的检验都直接建立在这条线上,细节在对应小节展开。
 
 三点决定了本文相对 Krites 的定位:
 
@@ -454,7 +454,7 @@ AmazonHelp 完全复现了 5.6 节的模式。comcastcares 没有——微调后
 
 ### 5.13 从点估计到有限样本风险控制:用 Conformal Risk Control 校准灰色地带复用决策
 
-**动机**:5.4 节引入的诚实校准(校准/测试切分 + Youden's J 选阈值)解决了"阈值是不是在偷看 test set"这个问题,但选出来的阈值终究只是一个点估计——从未回答过"这个阈值对应的错误率,在有限的校准样本下到底有多大把握"。Conformal Risk Control(CRC;Angelopoulos, Bates, Fisch, Lei, Schuster,arXiv:2208.02814,当前版本 v4,2025-06-13)把 split conformal prediction 推广到任意有界、单调、右连续的 loss 函数上,给出一个分布无关、**有限样本精确成立**的保证:E[L_{n+1}(λ̂)] ≤ α。本节把这个方法接到 CacheVerifier 现有的 gray-zone verifier 阈值上,检验能不能把"这次命中要不要复用"这个决策,从一个无法量化置信度的点估计,升级成一个用户可以指定风险预算、且有形式化保证的决策——不是给现有错误率数字加一个置信区间,而是把阈值选择本身换成一个以风险预算为输入的校准程序。
+**动机**:5.4 节引入的诚实校准(校准/测试切分 + Youden's J 选阈值)解决了"阈值是不是在偷看 test set"这个问题,但选出来的阈值终究只是一个点估计——从未回答过"这个阈值对应的错误率,在有限的校准样本下到底有多大把握"。Conformal Risk Control(CRC;Angelopoulos et al., 2024,arXiv:2208.02814)把 split conformal prediction 推广到任意有界、单调、右连续的 loss 函数上,给出一个分布无关、**有限样本精确成立**的保证:E[L_{n+1}(λ̂)] ≤ α。本节把这个方法接到 CacheVerifier 现有的 gray-zone verifier 阈值上,检验能不能把"这次命中要不要复用"这个决策,从一个无法量化置信度的点估计,升级成一个用户可以指定风险预算、且有形式化保证的决策——不是给现有错误率数字加一个置信区间,而是把阈值选择本身换成一个以风险预算为输入的校准程序。
 
 **待控制的量**:现有指标里,`error_rate`(5 节多处使用)已经是需要的 unconditional per-query loss 形状——P(incorrect ∧ hit),分母是全部请求——只是没有限定在 gray zone;`verifier_fidelity` 已经限定在 gray zone(其设计文档明确排除混入 τ_high/τ_low 直接放行分支,以免高估或低估验证器自身的错误率),但是 conditional 的(fp/(tp+fp))。CRC 真正要控制的是两者的交集,此前没有被单独实现过:
 
@@ -737,7 +737,7 @@ cost(r) = r × error_rate + (1 − hit_rate)        [单位:C_miss]
 
 ### 5.20 验证器分数到阈值的距离,是不是关于"该不该信任这次判定"的可用信号——一次对选择性弃权的负面检验
 
-**动机**:本文其余部分的门禁在灰色地带永远是二元的(serve 或 miss)。一个自然的补强:在灰色地带里再切出一个弃权带,`s ≥ θ+w_hi` → serve,`s ≤ θ−w_lo` → miss,落在 `[θ−w_lo, θ+w_hi]` 里 → 交给一个更强的 oracle(真实 LLM judge)按其判定。选择性预测文献——带拒绝选项的分类(Chow, 1970;El-Yaniv & Wiener, JMLR 2010;Geifman & El-Yaniv, NeurIPS 2017)和 learning-to-defer(Cortes, DeSalvo & Mohri, ALT 2016;Mozannar & Sontag, ICML 2020)——给了这套做法现成的分析框架,一份外部评估也把它排为最值得做的下一步。但要小心把研究问题框对:oracle 若完美,"弃权能不能帮"是废话;真问题是**验证器自己的打分是否携带关于"这次判定该不该信任自己"的、可被经济利用的结构化信息**。经两轮内部审查收窄成一句可证伪的表述:
+**动机**:本文其余部分的门禁在灰色地带永远是二元的(serve 或 miss)。一个自然的补强:在灰色地带里再切出一个弃权带,`s ≥ θ+w_hi` → serve,`s ≤ θ−w_lo` → miss,落在 `[θ−w_lo, θ+w_hi]` 里 → 交给一个更强的 oracle(真实 LLM judge)按其判定。选择性预测文献——带拒绝选项的分类(Chow, 1970;El-Yaniv & Wiener, 2010;Geifman & El-Yaniv, 2017)和 learning-to-defer(Cortes et al., 2016;Mozannar & Sontag, 2020)——给了这套做法现成的分析框架,一份外部评估也把它排为最值得做的下一步。但要小心把研究问题框对:oracle 若完美,"弃权能不能帮"是废话;真问题是**验证器自己的打分是否携带关于"这次判定该不该信任自己"的、可被经济利用的结构化信息**。经两轮内部审查收窄成一句可证伪的表述:
 
 > **验证器分数到决策阈值的距离(`|s−θ|`),是否比随机弃权更能预测该次判定的错误倾向——使得一个很小的弃权率就能显著降低端到端错误率?**
 
@@ -886,6 +886,6 @@ Krites 论文预判同步验证会"增加延迟、侵蚀缓存收益",但未实�
 - El-Yaniv, R., & Wiener, Y. (2010). On the foundations of noise-free selective classification. *Journal of Machine Learning Research*, 11, 1605–1641.
 - Cortes, C., DeSalvo, G., & Mohri, M. (2016). Learning with rejection. *Algorithmic Learning Theory (ALT 2016)*, 67–82.
 - Geifman, Y., & El-Yaniv, R. (2017). Selective classification for deep neural networks. *Advances in Neural Information Processing Systems (NeurIPS 2017)*, 4878–4887. arXiv:1705.08500.
-- Angelopoulos, A. N., Bates, S., Fisch, A., Lei, L., & Schuster, T. (2022). Conformal risk control. *arXiv:2208.02814*.
+- Angelopoulos, A. N., Bates, S., Fisch, A., Lei, L., & Schuster, T. (2024). Conformal risk control. *International Conference on Learning Representations (ICLR 2024)*. arXiv:2208.02814.
 - Mozannar, H., & Sontag, D. (2020). Consistent estimators for learning to defer to an expert. *International Conference on Machine Learning (ICML 2020)*. arXiv:2006.01862.
 - Szabadváry, J. H., Löfström, T., Johansson, U., Sönströd, C., Ahlberg, E., & Carlsson, L. (2025). Classification with reject option: Distribution-free error guarantees via conformal prediction. *Machine Learning with Applications*, 20. arXiv:2506.21802.
