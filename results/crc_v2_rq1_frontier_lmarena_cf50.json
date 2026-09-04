@@ -1,0 +1,1195 @@
+{
+  "dataset": "lmarena",
+  "cal_frac": 0.5,
+  "n_cal": 8051,
+  "n_deploy": 8051,
+  "w_deploy_quantiles": {
+    "50": 1.009525672208098,
+    "90": 2.1532314053291737,
+    "99": 2.587346313588343,
+    "100": 2.896602615918049
+  },
+  "alphas": [
+    0.05,
+    0.02,
+    0.01
+  ],
+  "by_alpha": {
+    "0.05": {
+      "rows": [
+        {
+          "policy": "naive",
+          "cfg": {},
+          "R_cert": 0.019128058626257608,
+          "C_cert": 0.6815302446901006,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.0
+          },
+          "R_cert": 0.019128058626257608,
+          "C_cert": 0.6815302446901006,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.1
+          },
+          "R_cert": 0.018258601415973172,
+          "C_cert": 0.6553223202086698,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.2
+          },
+          "R_cert": 0.015898646130915413,
+          "C_cert": 0.6113526270028568,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.3
+          },
+          "R_cert": 0.014656564401937647,
+          "C_cert": 0.5657682275493727,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.4
+          },
+          "R_cert": 0.012917649981368774,
+          "C_cert": 0.5031673084088933,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.5
+          },
+          "R_cert": 0.010930319215004347,
+          "C_cert": 0.4393243075394361,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.6
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.7
+          },
+          "R_cert": 0.007328282200968823,
+          "C_cert": 0.28518196497329523,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.039870823500186316,
+          "C_cert": 0.9074649111911564,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.03378462302819526,
+          "C_cert": 0.8750465780648367,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.025959508135635325,
+          "C_cert": 0.815923487765495,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.019500683144950938,
+          "C_cert": 0.687989069680785,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.018507017761768725,
+          "C_cert": 0.6709725499937896,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.01801018507017762,
+          "C_cert": 0.6476214134890076,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.029188920630977517,
+          "C_cert": 0.7966712209663396,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.026332132654328655,
+          "C_cert": 0.7800273257980375,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.02273009564029313,
+          "C_cert": 0.7531983604521177,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.019128058626257608,
+          "C_cert": 0.6815302446901006,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.019128058626257608,
+          "C_cert": 0.6815302446901006,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.019128058626257608,
+          "C_cert": 0.6815302446901006,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.019128058626257608,
+          "C_cert": 0.6815302446901006,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.019128058626257608,
+          "C_cert": 0.6815302446901006,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.019128058626257608,
+          "C_cert": 0.6815302446901006,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.019128058626257608,
+          "C_cert": 0.6815302446901006,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.019128058626257608,
+          "C_cert": 0.6815302446901006,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.019128058626257608,
+          "C_cert": 0.6815302446901006,
+          "meets": true
+        },
+        {
+          "policy": "weighted_conformal",
+          "cfg": {
+            "refit": 4000
+          },
+          "R_cert": 0.017389144205688736,
+          "C_cert": 0.6348279716805366,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "naive"
+          },
+          "R_cert": 0.011799776425288785,
+          "C_cert": 0.39013787107191655,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "naive"
+          },
+          "R_cert": 0.011799776425288785,
+          "C_cert": 0.40131660663271645,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "naive"
+          },
+          "R_cert": 0.011923984598186561,
+          "C_cert": 0.41522792199726744,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "naive"
+          },
+          "R_cert": 0.012917649981368774,
+          "C_cert": 0.44963358588995156,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "naive"
+          },
+          "R_cert": 0.015898646130915413,
+          "C_cert": 0.5758290895540926,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "m0.3"
+          },
+          "R_cert": 0.008694572102844368,
+          "C_cert": 0.32182337597813937,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "m0.3"
+          },
+          "R_cert": 0.008694572102844368,
+          "C_cert": 0.33101478077257485,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "m0.3"
+          },
+          "R_cert": 0.008818780275742144,
+          "C_cert": 0.342069308160477,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "m0.3"
+          },
+          "R_cert": 0.009564029313128804,
+          "C_cert": 0.37138243696435225,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "m0.3"
+          },
+          "R_cert": 0.011923984598186561,
+          "C_cert": 0.4793193392125202,
+          "meets": true
+        }
+      ],
+      "w_certified_error_mean": 1.32527205324796,
+      "w_certified_correct_mean": 1.3398901528741811
+    },
+    "0.02": {
+      "rows": [
+        {
+          "policy": "naive",
+          "cfg": {},
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.0
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.1
+          },
+          "R_cert": 0.007949323065457706,
+          "C_cert": 0.3317600298099615,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.2
+          },
+          "R_cert": 0.007452490373866601,
+          "C_cert": 0.30592472984722396,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.3
+          },
+          "R_cert": 0.0069556576822754936,
+          "C_cert": 0.25971928952925105,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.4
+          },
+          "R_cert": 0.005713575953297727,
+          "C_cert": 0.2135138492112781,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.5
+          },
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.6
+          },
+          "R_cert": 0.0037262451869333004,
+          "C_cert": 0.12607129549124332,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.7
+          },
+          "R_cert": 0.002359955285057757,
+          "C_cert": 0.09775183207055024,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.015898646130915413,
+          "C_cert": 0.6007949323065458,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.013538690845857657,
+          "C_cert": 0.5417960501801018,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.0111787355607999,
+          "C_cert": 0.4425537200347783,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36778039995031675,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.008818780275742144,
+          "C_cert": 0.3529996273754813,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.008694572102844368,
+          "C_cert": 0.3338715687492237,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.012917649981368774,
+          "C_cert": 0.4892559930443423,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.011054527387902123,
+          "C_cert": 0.4480188796422805,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.009812445658924357,
+          "C_cert": 0.39970190038504533,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.009191404794435474,
+          "C_cert": 0.36392994659048566,
+          "meets": true
+        },
+        {
+          "policy": "weighted_conformal",
+          "cfg": {
+            "refit": 4000
+          },
+          "R_cert": 0.007949323065457706,
+          "C_cert": 0.3070426034033039,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "naive"
+          },
+          "R_cert": 0.00521674326170662,
+          "C_cert": 0.2044466525897404,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "naive"
+          },
+          "R_cert": 0.00521674326170662,
+          "C_cert": 0.21065706123462924,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "naive"
+          },
+          "R_cert": 0.00521674326170662,
+          "C_cert": 0.2172400943982114,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "naive"
+          },
+          "R_cert": 0.005837784126195504,
+          "C_cert": 0.236368153024469,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "naive"
+          },
+          "R_cert": 0.00782511489255993,
+          "C_cert": 0.3102720158986461,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "m0.3"
+          },
+          "R_cert": 0.003974661532728853,
+          "C_cert": 0.14780772574835424,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "m0.3"
+          },
+          "R_cert": 0.003974661532728853,
+          "C_cert": 0.15240342814557198,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "m0.3"
+          },
+          "R_cert": 0.003974661532728853,
+          "C_cert": 0.15712333871568748,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "m0.3"
+          },
+          "R_cert": 0.0044714942243199605,
+          "C_cert": 0.17177990311762514,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "m0.3"
+          },
+          "R_cert": 0.005961992299093281,
+          "C_cert": 0.22332629487020245,
+          "meets": true
+        }
+      ],
+      "w_certified_error_mean": 1.3584062762924942,
+      "w_certified_correct_mean": 1.3478041549433066
+    },
+    "0.01": {
+      "rows": [
+        {
+          "policy": "naive",
+          "cfg": {},
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.0
+          },
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.1
+          },
+          "R_cert": 0.004595702397217737,
+          "C_cert": 0.15476338343062973,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.2
+          },
+          "R_cert": 0.0037262451869333004,
+          "C_cert": 0.12607129549124332,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.3
+          },
+          "R_cert": 0.0027325798037510867,
+          "C_cert": 0.10731586138367905,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.4
+          },
+          "R_cert": 0.002359955285057757,
+          "C_cert": 0.09775183207055024,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.5
+          },
+          "R_cert": 0.0018631225934666502,
+          "C_cert": 0.08185318593963482,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.6
+          },
+          "R_cert": 0.0011178735560799901,
+          "C_cert": 0.06148304558439945,
+          "meets": true
+        },
+        {
+          "policy": "global_conservative",
+          "cfg": {
+            "margin": 0.7
+          },
+          "R_cert": 0.0007452490373866601,
+          "C_cert": 0.05092535088808844,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.007949323065457706,
+          "C_cert": 0.3255496211650727,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.00670724133647994,
+          "C_cert": 0.26431499192646873,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.006210408644888834,
+          "C_cert": 0.21065706123462924,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.004968326915911067,
+          "C_cert": 0.1725251521550118,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.0044714942243199605,
+          "C_cert": 0.1608495839026208,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 2000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.004347286051422184,
+          "C_cert": 0.1522792199726742,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.006458824990684387,
+          "C_cert": 0.24916159483294,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.005961992299093281,
+          "C_cert": 0.22717674823003353,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.00521674326170662,
+          "C_cert": 0.1906595453980872,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 5000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.0
+          },
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.2
+          },
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 0,
+            "margin": 0.4
+          },
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.0
+          },
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.2
+          },
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "periodic_recal",
+          "cfg": {
+            "W": 10000,
+            "lag": 5000,
+            "margin": 0.4
+          },
+          "R_cert": 0.00484411874301329,
+          "C_cert": 0.16892311514097627,
+          "meets": true
+        },
+        {
+          "policy": "weighted_conformal",
+          "cfg": {
+            "refit": 4000
+          },
+          "R_cert": 0.00409886970562663,
+          "C_cert": 0.1399826108557943,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "naive"
+          },
+          "R_cert": 0.0027325798037510867,
+          "C_cert": 0.09576450130418582,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "naive"
+          },
+          "R_cert": 0.0027325798037510867,
+          "C_cert": 0.09824866476214135,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "naive"
+          },
+          "R_cert": 0.0027325798037510867,
+          "C_cert": 0.10110545273879021,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "naive"
+          },
+          "R_cert": 0.0032294124953421936,
+          "C_cert": 0.11042106570612346,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "naive"
+          },
+          "R_cert": 0.004223077878524407,
+          "C_cert": 0.14507514594460316,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.1,
+            "base": "m0.3"
+          },
+          "R_cert": 0.0013662899018755433,
+          "C_cert": 0.060365172028319466,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.2,
+            "base": "m0.3"
+          },
+          "R_cert": 0.0013662899018755433,
+          "C_cert": 0.061731461930195006,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.3,
+            "base": "m0.3"
+          },
+          "R_cert": 0.0013662899018755433,
+          "C_cert": 0.06371879269655943,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 1.5,
+            "base": "m0.3"
+          },
+          "R_cert": 0.0016147062476710968,
+          "C_cert": 0.06893553595826606,
+          "meets": true
+        },
+        {
+          "policy": "per_request_gate",
+          "cfg": {
+            "tau": 2.0,
+            "base": "m0.3"
+          },
+          "R_cert": 0.0021115389392622036,
+          "C_cert": 0.09216246429015029,
+          "meets": true
+        }
+      ],
+      "w_certified_error_mean": 1.356109706607,
+      "w_certified_correct_mean": 1.34069931936663
+    }
+  }
+}
