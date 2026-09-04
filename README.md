@@ -157,7 +157,7 @@ repo — see [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md).
 ## Citation
 
 Archived on Zenodo with DOI [10.5281/zenodo.21703364](https://doi.org/10.5281/zenodo.21703364)
-(this concept DOI always resolves to the latest version; the current version is v1.7.1, DOI [10.5281/zenodo.22304547](https://doi.org/10.5281/zenodo.22304547)).
+(this concept DOI always resolves to the latest version; the current version is v1.7.2, DOI [10.5281/zenodo.22308390](https://doi.org/10.5281/zenodo.22308390)).
 arXiv listing forthcoming — this will be updated with the arXiv ID once live.
 
 ```bibtex
