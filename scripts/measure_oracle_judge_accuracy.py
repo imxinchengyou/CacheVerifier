@@ -157,7 +157,16 @@ def main() -> None:
             "stratum": sname, "would_be_correct": y, "score": scored[i],
             "dist_to_theta": abs(scored[i] - theta),
             "judge_verdict": verdict, "judge_yes": judge_yes, "latency_ms": lat,
-            "query": q[:400], "candidate_answer": cand[:600],
+            # [2026-09-05] previously stored as q[:400]/cand[:600] -- a hard
+            # character truncation applied only here, AFTER call_judge() above
+            # already saw the full q/cand. The judge's own verdict was never
+            # affected; this only crippled later human/manual review of the
+            # stored disagreement rows (found via a 187-row manual adjudication
+            # pass, see results/human_adjudication_worksheet.md). Store the
+            # full text plus the trace indices so any future audit can be
+            # redone without re-calling the API.
+            "query": q, "candidate_answer": cand,
+            "trace_index": i, "candidate_trace_index": trace[i].candidate_index,
         })
         if k % 20 == 0 or k == len(plan):
             log(f"  [{k}/{len(plan)}] last={verdict} ({sname}, y={y})")
