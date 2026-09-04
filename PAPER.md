@@ -52,7 +52,7 @@
 | **Closing the Calibration Gap**(Baral et al., 2026, arXiv:2606.19719) | 校准检索/重排阶段自己给出的那一个相似度分数(P-CHR AUC / CRR 指标),不新增独立阶段 | 否——校准的是唯一信号,不是解耦的第二阶段验证器 | — | 单层,单信号架构(选型+阈值校准更严谨,但仍是"分数≥阈值→命中") |
 | **TweakLLM**(2025, arXiv:2507.23674) | 命中后不做接受/拒绝判定,而是用一个轻量 LLM **动态改写**缓存答案以适配新查询 | 部分——用生成式改写代替二值验证 | 同步(改写发生在 serving 路径上) | 单层,但把"验证"问题换成了"编辑"问题 |
 
-后两行不是 Krites 式的直接竞争者,而是分别代表"把现有信号校准得更好"和"绕开验证问题去做内容改写"这两条相邻但不同的路线,与本文的定位关系见 6.1 节的外部交叉验证讨论,此处不再展开三点分析。
+后两行不是 Krites 式的直接竞争者,而是分别代表"把现有信号校准得更好"和"绕开验证问题去做内容改写"这两条相邻但不同的路线,与本文的定位关系见 6.1 节的外部交叉验证讨论,此处不再展开三点分析。第三条相邻路线是**选择性预测 / 带拒绝选项的分类**(Chow, 1970;El-Yaniv & Wiener, 2010;Geifman & El-Yaniv, 2017;Cortes, DeSalvo & Mohri, 2016;Mozannar & Sontag, 2020;保形化版本见 Szabadváry et al., 2025):把"要不要为这条输入出预测"本身当成一个可学习、可给风险保证的决策。5.13 节的 CRC 校准和 5.20 节对"三元门禁"的检验都直接建立在这条线上,细节在对应小节展开。
 
 三点决定了本文相对 Krites 的定位:
 
@@ -737,7 +737,7 @@ cost(r) = r × error_rate + (1 − hit_rate)        [单位:C_miss]
 
 ### 5.20 验证器分数到阈值的距离,是不是关于"该不该信任这次判定"的可用信号——一次对选择性弃权的负面检验
 
-**动机**:本文其余部分的门禁在灰色地带永远是二元的(serve 或 miss)。一个自然的补强:在灰色地带里再切出一个弃权带,`s ≥ θ+w_hi` → serve,`s ≤ θ−w_lo` → miss,落在 `[θ−w_lo, θ+w_hi]` 里 → 交给一个更强的 oracle(真实 LLM judge)按其判定。选择性预测文献(selective classification / learning-to-defer)给了这套做法现成的分析框架,一份外部评估也把它排为最值得做的下一步。但要小心把研究问题框对:oracle 若完美,"弃权能不能帮"是废话;真问题是**验证器自己的打分是否携带关于"这次判定该不该信任自己"的、可被经济利用的结构化信息**。经两轮内部审查收窄成一句可证伪的表述:
+**动机**:本文其余部分的门禁在灰色地带永远是二元的(serve 或 miss)。一个自然的补强:在灰色地带里再切出一个弃权带,`s ≥ θ+w_hi` → serve,`s ≤ θ−w_lo` → miss,落在 `[θ−w_lo, θ+w_hi]` 里 → 交给一个更强的 oracle(真实 LLM judge)按其判定。选择性预测文献——带拒绝选项的分类(Chow, 1970;El-Yaniv & Wiener, JMLR 2010;Geifman & El-Yaniv, NeurIPS 2017)和 learning-to-defer(Cortes, DeSalvo & Mohri, ALT 2016;Mozannar & Sontag, ICML 2020)——给了这套做法现成的分析框架,一份外部评估也把它排为最值得做的下一步。但要小心把研究问题框对:oracle 若完美,"弃权能不能帮"是废话;真问题是**验证器自己的打分是否携带关于"这次判定该不该信任自己"的、可被经济利用的结构化信息**。经两轮内部审查收窄成一句可证伪的表述:
 
 > **验证器分数到决策阈值的距离(`|s−θ|`),是否比随机弃权更能预测该次判定的错误倾向——使得一个很小的弃权率就能显著降低端到端错误率?**
 
@@ -770,7 +770,7 @@ cost(r) = r × error_rate + (1 − hit_rate)        [单位:C_miss]
 
 **结论**:**这是一个精确的负面结果**。验证器分数到决策阈值的距离,不携带关于"这次判定该不该信任自己"的、可被经济利用的结构化信息——一旦把比较基线从 Youden's J 换成一个已经按成本调好的单阈值。P1 里那点看起来的结构,主要来自两处虚高:(i) Youden's J 本来就没选在成本最优点,deferral 的一部分表面收益其实是"换个单阈值就能免费拿回、根本不需要 oracle";(ii) κ 是对着系统性偏宽松的 benchmark 等价类标签算的,真实 LLM judge 达不到那个理想。三元门禁(serve / defer / miss)相对二元门禁 + 一个调好的单阈值,在本文测试范围内没有增量价值。**这不改变 6.1 节的弱 Go 判定**,但给它补了一条边界:用验证器自己的打分当不确定性信号做选择性 oracle 回退,不是一条值得投入的补强路径。对应的产品线(置信度门控的 judge 升级)前提不成立,详见 `PRODUCT_EXPERIMENTS.md` 对应跟进节。
 
-**局限性**:(1)只测了信号 (a)/(b) 这两个"分数邻近性"信号;集成分歧(多 reranker 打分方差)和保形不符合度 / 到校准集的 kNN 距离——这两个才是真正针对认识论不确定性(epistemic uncertainty)设计的——没有测,本节的负面结论严格来说只覆盖"分数邻近性"这一类信号,不能推广成"任何不确定性量化方法都无用"。(2)oracle 只用了 DeepSeek 一个模型,judge 的过度拒绝里有多少是模型能力、多少是 prompt 设计,没有拆开;换一个更强的 judge(GPT-4 级)ε_fr 可能低很多,那样 P2 里 oracle-informed 上界会更高——但"真实信号追不上 oracle-informed"这个结论不依赖 judge 质量。(3)κ 的 δ 上限 0.30 是预注册的;δ > 0.30 的大弃权区间有个别 margin 获胜点,但那已经不是"选择性"弃权。(4)对 judge 判定的逐条抽查是作者(一个 LLM)读的,不是独立人工裁定,和 §7 关于 Quora 的说明同样的失效模式适用。(5)纯 trace 重分析,没有真实部署三元门禁,也没有测漂移 / stateful replay 下弃权策略是否仍可靠(设计里的 RQ5,留给 v1 之后)。(6)Quora 的 ground truth 是重建的、有标注噪声(§7),同时污染前沿和 ε_oracle 两处,本节已把它降为 secondary / robustness 数据集。
+**局限性**:(1)只测了信号 (a)/(b) 这两个"分数邻近性"信号;集成分歧(多 reranker 打分方差)和保形不符合度 / 到校准集的 kNN 距离(保形化的拒绝选项有限样本保证见 Szabadváry et al., 2025, arXiv:2506.21802)——这两个才是真正针对认识论不确定性(epistemic uncertainty)设计的——没有测,本节的负面结论严格来说只覆盖"分数邻近性"这一类信号,不能推广成"任何不确定性量化方法都无用"。(2)oracle 只用了 DeepSeek 一个模型,judge 的过度拒绝里有多少是模型能力、多少是 prompt 设计,没有拆开;换一个更强的 judge(GPT-4 级)ε_fr 可能低很多,那样 P2 里 oracle-informed 上界会更高——但"真实信号追不上 oracle-informed"这个结论不依赖 judge 质量。(3)κ 的 δ 上限 0.30 是预注册的;δ > 0.30 的大弃权区间有个别 margin 获胜点,但那已经不是"选择性"弃权。(4)对 judge 判定的逐条抽查是作者(一个 LLM)读的,不是独立人工裁定,和 §7 关于 Quora 的说明同样的失效模式适用。(5)纯 trace 重分析,没有真实部署三元门禁,也没有测漂移 / stateful replay 下弃权策略是否仍可靠(设计里的 RQ5,留给 v1 之后)。(6)Quora 的 ground truth 是重建的、有标注噪声(§7),同时污染前沿和 ε_oracle 两处,本节已把它降为 secondary / robustness 数据集。
 
 ---
 
@@ -879,3 +879,13 @@ Krites 论文预判同步验证会"增加延迟、侵蚀缓存收益",但未实�
 - Cheema, M. T., Aamir, A., Muhammad, K. G., Bhatti, N. A., Qazi, I. A., & Qazi, Z. A. (2025). TweakLLM: A Routing Architecture for Dynamic Tailoring of Cached Responses. *arXiv:2507.23674*.
 - Iyer, S., Dandekar, N., & Csernai, K. (2017). First Quora dataset release: Question pairs. *Quora Engineering Blog*.
 - Axelbrooke, S. (2017). Customer Support on Twitter. *Kaggle*.
+
+**选择性预测 / learning-to-defer(5.13、5.20 节的方法背景)**
+
+- Chow, C. K. (1970). On optimum recognition error and reject tradeoff. *IEEE Transactions on Information Theory*, 16(1), 41–46.
+- El-Yaniv, R., & Wiener, Y. (2010). On the foundations of noise-free selective classification. *Journal of Machine Learning Research*, 11, 1605–1641.
+- Cortes, C., DeSalvo, G., & Mohri, M. (2016). Learning with rejection. *Algorithmic Learning Theory (ALT 2016)*, 67–82.
+- Geifman, Y., & El-Yaniv, R. (2017). Selective classification for deep neural networks. *Advances in Neural Information Processing Systems (NeurIPS 2017)*, 4878–4887. arXiv:1705.08500.
+- Angelopoulos, A. N., Bates, S., Fisch, A., Lei, L., & Schuster, T. (2022). Conformal risk control. *arXiv:2208.02814*.
+- Mozannar, H., & Sontag, D. (2020). Consistent estimators for learning to defer to an expert. *International Conference on Machine Learning (ICML 2020)*. arXiv:2006.01862.
+- Szabadváry, J. H., Löfström, T., Johansson, U., Sönströd, C., Ahlberg, E., & Carlsson, L. (2025). Classification with reject option: Distribution-free error guarantees via conformal prediction. *Machine Learning with Applications*, 20. arXiv:2506.21802.

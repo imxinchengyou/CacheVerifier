@@ -138,7 +138,7 @@ TweakLLM (2025) & On a match, skips accept/reject and uses a lightweight LLM to 
 \caption{Positioning relative to prior semantic-caching work.}
 \end{table}
 
-The last two rows are not Krites-style direct competitors but represent two adjacent, different lines of work --- ``calibrate the existing signal better'' and ``sidestep verification by editing the content instead'' --- whose relationship to this paper's positioning is discussed via the external cross-validation in Section~\ref{sec:golo}; they are not analyzed against the same three points below.
+The last two rows are not Krites-style direct competitors but represent two adjacent, different lines of work --- ``calibrate the existing signal better'' and ``sidestep verification by editing the content instead'' --- whose relationship to this paper's positioning is discussed via the external cross-validation in Section~\ref{sec:golo}; they are not analyzed against the same three points below. A third adjacent line is \textbf{selective prediction / classification with a reject option}~\cite{chow70,elyaniv10,geifman17,cortes16,mozannar20,conformalreject}: treating ``whether to predict on this input at all'' as a learnable decision that can carry a risk guarantee. Section~\ref{sec:crc}'s CRC calibration and Section~\ref{sec:selectdefer}'s test of a ``ternary gate'' both build directly on this line; details are in those subsections.
 
 Three points fix this paper's position relative to Krites specifically:
 
@@ -1189,7 +1189,7 @@ Adversarial training cut the false-accept rate from 84--88\% to 53.6\%, with a c
 \subsection{Is the verifier score's distance to the threshold a usable signal for ``should I trust this decision'' --- a negative test of selective abstention}
 \label{sec:selectdefer}
 
-\textbf{Motivation.} The gate everywhere else in this paper is binary in the gray zone (serve or miss). A natural reinforcement: carve out an abstention band inside the gray zone --- $s \ge \theta + w_\text{hi}$ $\to$ serve, $s \le \theta - w_\text{lo}$ $\to$ miss, and anything in $[\theta - w_\text{lo}, \theta + w_\text{hi}]$ $\to$ hand to a stronger oracle (a real LLM judge) and follow its verdict. The selective-prediction literature (selective classification / learning-to-defer) supplies a ready-made analytic frame, and an external assessment ranked this the most worthwhile next step. But the research question has to be framed carefully: if the oracle is perfect, ``does abstention help'' is trivial; the real question is \textbf{whether the verifier's own score carries usable, economically exploitable structured information about whether to trust this particular decision}. After two rounds of internal review it was narrowed to one falsifiable statement:
+\textbf{Motivation.} The gate everywhere else in this paper is binary in the gray zone (serve or miss). A natural reinforcement: carve out an abstention band inside the gray zone --- $s \ge \theta + w_\text{hi}$ $\to$ serve, $s \le \theta - w_\text{lo}$ $\to$ miss, and anything in $[\theta - w_\text{lo}, \theta + w_\text{hi}]$ $\to$ hand to a stronger oracle (a real LLM judge) and follow its verdict. The selective-prediction literature --- classification with a reject option~\cite{chow70,elyaniv10,geifman17} and learning-to-defer~\cite{cortes16,mozannar20} --- supplies a ready-made analytic frame, and an external assessment ranked this the most worthwhile next step. But the research question has to be framed carefully: if the oracle is perfect, ``does abstention help'' is trivial; the real question is \textbf{whether the verifier's own score carries usable, economically exploitable structured information about whether to trust this particular decision}. After two rounds of internal review it was narrowed to one falsifiable statement:
 
 \begin{quote}
 \textbf{Does the verifier score's distance to the decision threshold ($|s - \theta|$) predict that decision's error propensity better than random abstention --- such that a small abstention rate meaningfully lowers the end-to-end error rate?}
@@ -1235,7 +1235,7 @@ $\varepsilon_\text{fr}$ is 0.60--0.98 everywhere, and near/far $\theta$ barely d
 
 \textbf{Conclusion.} \textbf{This is a precise negative result.} The verifier score's distance to the decision threshold does not carry usable, economically exploitable structured information about whether to trust this decision --- once the comparison baseline is switched from Youden's J to a single threshold already tuned to the cost ratio. The apparent structure in P1 comes from two inflations: (i) Youden's J was never at the cost-optimal point, so part of deferral's surface gain is really ``a different single threshold recovers it for free, no oracle needed''; (ii) $\kappa$ is computed against systematically loose benchmark equivalence labels that a real LLM judge cannot match. A ternary gate (serve / defer / miss) has no incremental value over a binary gate plus one well-tuned threshold, within the scope tested. \textbf{This does not change Section~\ref{sec:golo}'s weak Go}, but adds a boundary to it: using the verifier's own score as an uncertainty signal for selective oracle fallback is not a reinforcement path worth investing in.
 
-\textbf{Limitations.} (1) Only signals (a)/(b), both ``score proximity'' signals, were tested; ensemble disagreement (variance across multiple rerankers' scores) and conformal nonconformity / kNN distance to the calibration set --- the two that actually target epistemic uncertainty --- were not, so this section's negative conclusion strictly covers only the ``score proximity'' class of signals and cannot be generalized to ``no uncertainty-quantification method is useful.'' (2) The oracle used only one model (DeepSeek); how much of the over-rejection is model capability versus prompt design was not separated --- a stronger judge (GPT-4 class) might have a much lower $\varepsilon_\text{fr}$, which would raise the oracle-informed upper bound in P2 --- but the ``real signals cannot catch the oracle-informed anchor'' conclusion does not depend on judge quality. (3) The $\kappa$ ceiling of $\delta = 0.30$ is pre-registered; the large-abstention region $\delta > 0.30$ has a few isolated margin wins, but that is no longer ``selective'' abstention. (4) The case-by-case audit of judge verdicts was performed by the authors (an LLM), not an independent human adjudication; the same failure mode as Section~\ref{sec:limitations}'s note on Quora applies. (5) A pure trace reanalysis, with no real deployment of a ternary gate, and no test of whether the abstention policy stays reliable under drift / stateful replay (the design's RQ5, left for after v1). (6) Quora's ground truth is reconstructed and label-noisy (Section~\ref{sec:limitations}), contaminating both the frontier and $\varepsilon_\text{oracle}$; this section demoted it to a secondary / robustness dataset.
+\textbf{Limitations.} (1) Only signals (a)/(b), both ``score proximity'' signals, were tested; ensemble disagreement (variance across multiple rerankers' scores) and conformal nonconformity / kNN distance to the calibration set (see~\cite{conformalreject} for the conformal reject-option finite-sample guarantee) --- the two that actually target epistemic uncertainty --- were not, so this section's negative conclusion strictly covers only the ``score proximity'' class of signals and cannot be generalized to ``no uncertainty-quantification method is useful.'' (2) The oracle used only one model (DeepSeek); how much of the over-rejection is model capability versus prompt design was not separated --- a stronger judge (GPT-4 class) might have a much lower $\varepsilon_\text{fr}$, which would raise the oracle-informed upper bound in P2 --- but the ``real signals cannot catch the oracle-informed anchor'' conclusion does not depend on judge quality. (3) The $\kappa$ ceiling of $\delta = 0.30$ is pre-registered; the large-abstention region $\delta > 0.30$ has a few isolated margin wins, but that is no longer ``selective'' abstention. (4) The case-by-case audit of judge verdicts was performed by the authors (an LLM), not an independent human adjudication; the same failure mode as Section~\ref{sec:limitations}'s note on Quora applies. (5) A pure trace reanalysis, with no real deployment of a ternary gate, and no test of whether the abstention policy stays reliable under drift / stateful replay (the design's RQ5, left for after v1). (6) Quora's ground truth is reconstructed and label-noisy (Section~\ref{sec:limitations}), contaminating both the frontier and $\varepsilon_\text{oracle}$; this section demoted it to a secondary / robustness dataset.
 
 \section{Discussion}
 
@@ -1333,7 +1333,7 @@ Groups A/B of this paper build directly on vCache's public benchmarks and refere
 
 Sections~\ref{sec:groupe} and~\ref{sec:twitter}'s experiments likewise build directly on two other public datasets: Quora Question Pairs~\cite{quora} and the Kaggle ``Customer Support on Twitter'' dataset~\cite{twittercs}. Thanks to the creators of both.
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
 
 \bibitem{gptcache}
 Bang, F. (2023). GPTCache: An open-source semantic cache for LLM applications enabling faster answers and cost savings. \textit{NLP-OSS 2023}.
@@ -1355,6 +1355,27 @@ Iyer, S., Dandekar, N., \& Csernai, K. (2017). First Quora dataset release: Ques
 
 \bibitem{twittercs}
 Axelbrooke, S. (2017). Customer Support on Twitter. \textit{Kaggle}.
+
+\bibitem{chow70}
+Chow, C. K. (1970). On optimum recognition error and reject tradeoff. \textit{IEEE Transactions on Information Theory}, 16(1), 41--46.
+
+\bibitem{elyaniv10}
+El-Yaniv, R., \& Wiener, Y. (2010). On the foundations of noise-free selective classification. \textit{Journal of Machine Learning Research}, 11, 1605--1641.
+
+\bibitem{cortes16}
+Cortes, C., DeSalvo, G., \& Mohri, M. (2016). Learning with rejection. \textit{Algorithmic Learning Theory (ALT 2016)}, 67--82.
+
+\bibitem{geifman17}
+Geifman, Y., \& El-Yaniv, R. (2017). Selective classification for deep neural networks. \textit{Advances in Neural Information Processing Systems (NeurIPS 2017)}, 4878--4887. arXiv:1705.08500.
+
+\bibitem{mozannar20}
+Mozannar, H., \& Sontag, D. (2020). Consistent estimators for learning to defer to an expert. \textit{International Conference on Machine Learning (ICML 2020)}. arXiv:2006.01862.
+
+\bibitem{crc}
+Angelopoulos, A. N., Bates, S., Fisch, A., Lei, L., \& Schuster, T. (2022). Conformal risk control. \textit{arXiv:2208.02814}.
+
+\bibitem{conformalreject}
+Szabadv\'ary, J. H., L\"ofstr\"om, T., Johansson, U., S\"onstr\"od, C., Ahlberg, E., \& Carlsson, L. (2025). Classification with reject option: Distribution-free error guarantees via conformal prediction. \textit{Machine Learning with Applications}, 20. arXiv:2506.21802.
 
 \end{thebibliography}
 
