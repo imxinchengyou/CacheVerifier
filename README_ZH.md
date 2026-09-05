@@ -5,6 +5,7 @@
 [English](README.md) | 简体中文
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21703364.svg)](https://doi.org/10.5281/zenodo.21703364)
+[![PyPI](https://img.shields.io/pypi/v/cacheverifier)](https://pypi.org/project/cacheverifier/)
 
 语义缓存用向量相似度替代精确匹配来复用大模型的历史回答,但相似度和答案正确性并非同一个量。这个仓库是一项实证研究的完整代码与实验产出,研究的问题很具体:在单层语义缓存架构下,用一个**真实**(非 oracle)、**同步**的验证器对缓存命中做门禁——在约 21 万条真实请求、三个数据集上,和静态阈值、自适应阈值两条基线做正式对比——到底能不能真正改善命中率与错误率之间的权衡?
 
@@ -20,7 +21,7 @@
 
 **阅读论文:** [`PAPER.md`](PAPER.md)(中文)· [`PAPER_EN.md`](PAPER_EN.md) · [`PAPER_EN.tex`](PAPER_EN.tex)(LaTeX 源码)
 
-**在线服务:** 本文验证的这套微调 + 漂移监控闭环,作为托管服务运行在 **[cacheverifier.com](https://www.cacheverifier.com)** —— 这个仓库是它背后的研究,不是产品本身。Python 客户端:[`cacheverifier-python`](https://github.com/imxinchengyou/cacheverifier-python)。
+**在线服务:** 本文验证的这套微调 + 漂移监控闭环,作为托管服务运行在 **[cacheverifier.com](https://www.cacheverifier.com)** —— 这个仓库是它背后的研究,不是产品本身。Python 客户端:[`cacheverifier-python`](https://github.com/imxinchengyou/cacheverifier-python) · [PyPI](https://pypi.org/project/cacheverifier/)。
 
 ## 结果速览
 

@@ -5,6 +5,7 @@
 English | [简体中文](README_ZH.md)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21703364.svg)](https://doi.org/10.5281/zenodo.21703364)
+[![PyPI](https://img.shields.io/pypi/v/cacheverifier)](https://pypi.org/project/cacheverifier/)
 
 Semantic caches replace exact matching with vector similarity to reuse an
 LLM's past answers, but similarity and answer correctness are not the same
@@ -57,7 +58,8 @@ the hit-rate/error-rate trade-off?
 **Hosted version:** the fine-tuning + drift-monitoring loop this paper validates is run
 as a service at **[cacheverifier.com](https://www.cacheverifier.com)** — this repo is the
 research behind it, not the product. Python client:
-[`cacheverifier-python`](https://github.com/imxinchengyou/cacheverifier-python).
+[`cacheverifier-python`](https://github.com/imxinchengyou/cacheverifier-python) ·
+[PyPI](https://pypi.org/project/cacheverifier/).
 
 ## Results at a glance
 
