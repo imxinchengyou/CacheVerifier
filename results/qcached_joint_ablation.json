@@ -1,0 +1,33 @@
+{
+  "fa_rate_2x2": {
+    "concat_full": 0.6895424836601307,
+    "concat_back_half": 0.6274509803921569,
+    "diff_full": 0.12418300653594772,
+    "diff_back_half": 0.05555555555555555
+  },
+  "logit_effects": {
+    "query_fix_on_full": -2.7513820626599963,
+    "query_fix_on_back_half": -3.354510267689502,
+    "answer_fix_on_concat": -0.2766843182422395,
+    "answer_fix_on_diff": -0.8798125232717453,
+    "interaction": -0.6031282050295057
+  },
+  "full_results": {
+    "concat": {
+      "threshold": 0.0,
+      "answer_variants": {
+        "full": 0.6895424836601307,
+        "front_half": 0.5098039215686274,
+        "back_half": 0.6274509803921569
+      }
+    },
+    "diff": {
+      "threshold": 0.0,
+      "answer_variants": {
+        "full": 0.12418300653594772,
+        "front_half": 0.06535947712418301,
+        "back_half": 0.05555555555555555
+      }
+    }
+  }
+}

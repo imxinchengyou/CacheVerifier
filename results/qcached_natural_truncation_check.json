@@ -1,0 +1,38 @@
+{
+  "lmarena": {
+    "off_the_shelf": {
+      "full": 0.7212324970601796,
+      "front_half": 0.7364738040844941,
+      "back_half": 0.6464963038556976
+    },
+    "text_only_adv": {
+      "full": 0.8749147408900101,
+      "front_half": 0.8624578453058709,
+      "back_half": 0.8067324910164958
+    }
+  },
+  "quora": {
+    "off_the_shelf": {
+      "full": 0.6309258919833033,
+      "front_half": 0.5331976525026024,
+      "back_half": 0.5748560480566055
+    },
+    "text_only_adv": {
+      "full": 0.7378214062159573,
+      "front_half": 0.5882640692490982,
+      "back_half": 0.6485295287367849
+    }
+  },
+  "searchqueries_corrected": {
+    "off_the_shelf": {
+      "full": 0.5983551685324453,
+      "front_half": 0.589180665001959,
+      "back_half": 0.546433602092469
+    },
+    "text_only_adv": {
+      "full": 0.7103052500843589,
+      "front_half": 0.7028989988901072,
+      "back_half": 0.6366885582207007
+    }
+  }
+}

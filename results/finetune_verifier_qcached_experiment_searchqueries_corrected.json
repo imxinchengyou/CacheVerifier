@@ -1,0 +1,14 @@
+{
+  "config": {
+    "config": "configs/search_queries_corrected.yaml",
+    "train_fraction": 0.7,
+    "train_size": null,
+    "test_size": null,
+    "output": "results/finetune_verifier_qcached_experiment_searchqueries_corrected.json"
+  },
+  "n_gray_zone_total": 86280,
+  "n_train": 60395,
+  "n_test": 25885,
+  "train_positive_rate": 0.4871926483980462,
+  "test_positive_rate": 0.47703303071276804
+}

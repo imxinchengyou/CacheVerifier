@@ -1,0 +1,68 @@
+{
+  "triples_file": "results/openai_redteam_generated.json",
+  "n_triples_qualifying": 210,
+  "off_the_shelf": {
+    "threshold": 0.0,
+    "by_category": {
+      "entity_swap": {
+        "n": 22,
+        "fa": 15
+      },
+      "direction": {
+        "n": 30,
+        "fa": 17
+      },
+      "negation": {
+        "n": 78,
+        "fa": 65
+      },
+      "quantity_swap": {
+        "n": 72,
+        "fa": 61
+      },
+      "action_verb": {
+        "n": 8,
+        "fa": 7
+      }
+    },
+    "total_n": 210,
+    "total_fa": 165,
+    "total_fa_pct": 78.57142857142857,
+    "total_fa_ci95": [
+      0.7285714285714285,
+      0.8380952380952381
+    ]
+  },
+  "qcached_adv_diff": {
+    "threshold": 0.0,
+    "by_category": {
+      "entity_swap": {
+        "n": 22,
+        "fa": 2
+      },
+      "direction": {
+        "n": 30,
+        "fa": 1
+      },
+      "negation": {
+        "n": 78,
+        "fa": 0
+      },
+      "quantity_swap": {
+        "n": 72,
+        "fa": 1
+      },
+      "action_verb": {
+        "n": 8,
+        "fa": 1
+      }
+    },
+    "total_n": 210,
+    "total_fa": 5,
+    "total_fa_pct": 2.380952380952381,
+    "total_fa_ci95": [
+      0.004761904761904762,
+      0.047619047619047616
+    ]
+  }
+}

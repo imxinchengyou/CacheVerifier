@@ -1,0 +1,68 @@
+{
+  "triples_file": "results/generator_c_adversarial_triples.json",
+  "n_triples_qualifying": 67,
+  "off_the_shelf": {
+    "threshold": 0.0,
+    "by_category": {
+      "negation": {
+        "n": 20,
+        "fa": 20
+      },
+      "action_verb": {
+        "n": 4,
+        "fa": 2
+      },
+      "direction": {
+        "n": 19,
+        "fa": 19
+      },
+      "entity_swap": {
+        "n": 6,
+        "fa": 5
+      },
+      "quantity_swap": {
+        "n": 18,
+        "fa": 18
+      }
+    },
+    "total_n": 67,
+    "total_fa": 64,
+    "total_fa_pct": 95.52238805970148,
+    "total_fa_ci95": [
+      0.8955223880597015,
+      1.0
+    ]
+  },
+  "qcached_adv_diff": {
+    "threshold": 0.0,
+    "by_category": {
+      "negation": {
+        "n": 20,
+        "fa": 0
+      },
+      "action_verb": {
+        "n": 4,
+        "fa": 0
+      },
+      "direction": {
+        "n": 19,
+        "fa": 3
+      },
+      "entity_swap": {
+        "n": 6,
+        "fa": 0
+      },
+      "quantity_swap": {
+        "n": 18,
+        "fa": 3
+      }
+    },
+    "total_n": 67,
+    "total_fa": 6,
+    "total_fa_pct": 8.955223880597014,
+    "total_fa_ci95": [
+      0.029850746268656716,
+      0.16417910447761194
+    ]
+  }
+}

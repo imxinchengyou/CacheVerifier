@@ -1,0 +1,14 @@
+{
+  "config": {
+    "config": "configs/lmarena.yaml",
+    "train_fraction": 0.7,
+    "train_size": null,
+    "test_size": null,
+    "output": "results/finetune_verifier_qcached_experiment.json"
+  },
+  "n_gray_zone_total": 16102,
+  "n_train": 11271,
+  "n_test": 4831,
+  "train_positive_rate": 0.6891136545115784,
+  "test_positive_rate": 0.9476298902918651
+}

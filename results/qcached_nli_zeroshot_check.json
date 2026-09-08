@@ -1,0 +1,31 @@
+{
+  "nli_model": "cross-encoder/nli-MiniLM2-L6-H768",
+  "natural_auc": 0.5888740962534341,
+  "adversarial_total_fa_pct": 12.418300653594772,
+  "adversarial_total_fa_ci95": [
+    0.08823529411764706,
+    0.16013071895424835
+  ],
+  "adversarial_by_category": {
+    "negation": {
+      "n": 79,
+      "fa": 1
+    },
+    "action_verb": {
+      "n": 32,
+      "fa": 3
+    },
+    "direction": {
+      "n": 76,
+      "fa": 31
+    },
+    "entity_swap": {
+      "n": 39,
+      "fa": 2
+    },
+    "quantity_swap": {
+      "n": 80,
+      "fa": 1
+    }
+  }
+}
