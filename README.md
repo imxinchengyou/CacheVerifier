@@ -71,9 +71,9 @@ research behind it, not the product. Python client:
 
 "Grid search" = the paper's original hand-picked threshold grid, best point reported. "Honest calibration" = a threshold chosen via Youden's J on a held-out calibration half only, then measured on the untouched test half (§5.4) — added 2026-08-15/16 specifically to test whether the grid-search numbers above were optimistic; see §5.4/§6.1 for the full account of where the two methods agree and where they don't (Quora is the one dataset where honest calibration is *worse*, traced to the dataset's own score-separability ceiling, not a calibration artifact).
 
-Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–28pp** hit rate at matched error rate. A separate reproduction fix for the adaptive-threshold baseline (Group B) raised its hit rate **4.4x–29.1x** across all three datasets (§5.2) — Group B sits at a different hit-rate scale and isn't part of the Go/No-Go comparison above. Full numbers, confidence intervals, and further robustness/ablation sections (noise, cold start, drift monitor, τ_high sensitivity, reranker capacity vs. training distribution, Conformal Risk Control, rewrite-vs-reject, Top-K cascade, CRC closed-loop self-selection, cost-sensitive reanalysis, LLM red-teaming, adversarial training) are in the paper, §5.9–§5.19.
+Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–28pp** hit rate at matched error rate. A separate reproduction fix for the adaptive-threshold baseline (Group B) raised its hit rate **4.4x–29.1x** across all three datasets (§5.2) — Group B sits at a different hit-rate scale and isn't part of the Go/No-Go comparison above. Full numbers, confidence intervals, and further robustness/ablation sections (noise, cold start, drift monitor, τ_high sensitivity, reranker capacity vs. training distribution, Conformal Risk Control, rewrite-vs-reject, Top-K cascade, CRC closed-loop self-selection, cost-sensitive reanalysis, LLM red-teaming, adversarial training, selective abstention, CRC validity, cached-query input, entity-swap fusion, joint decisions, Adaptive Conformal Inference) are in the paper, §5.9–§5.25.
 
-## Further ablations (§5.9–§5.19)
+## Further ablations (§5.9–§5.25)
 
 - **Drift monitor (§5.9):** two change-point tests on gray-zone labels alone
   catch the one real-traffic counter-example's degradation before it does
@@ -123,6 +123,38 @@ Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–
   AUC — the robustness gap §5.18 found is fixable, not a fundamental
   limitation of fine-tuning, but 53.6% is still far from solved and one
   category (named-entity swap) got worse, not better.
+- **Selective abstention (§5.20, negative):** the verifier score's distance
+  to its decision threshold carries no economically exploitable structure
+  about whether to trust a decision — once compared against a properly
+  cost-tuned single threshold instead of Youden's J, a ternary
+  serve/defer/miss gate offers no incremental value over the existing
+  binary gate.
+- **CRC validity gate (§5.21):** Section 5.13's apparent exchangeability
+  failure on Quora turns out to be a label-annotation artifact, not real
+  drift; SearchQueries has a genuine covariate-shift violation, but a
+  per-request validity gate can't beat periodic recalibration or a global
+  conservative margin at holding the guarantee.
+- **Cached-query input (§5.22):** adding the cache entry's own historical
+  query to the verifier backfires under naive concatenation (a new
+  surface-overlap shortcut) but works via a word-level diff summary — and
+  swapping the verifier's pretraining objective to NLI on top of that closes
+  most of the remaining entity_swap gap, roughly halving the average
+  adversarial false-accept rate again.
+- **entity_swap training-trajectory and fusion (§5.23):** the post-fine-tuning
+  entity_swap regression is a decision-boundary replacement essentially
+  complete within the first quarter of an epoch, not gradual erosion;
+  post-hoc score fusion recovers it, but only pays off economically once a
+  false-accept costs roughly 10–20x a miss.
+- **Joint decisions and online adaptive thresholds (§5.24):** the similarity
+  signal the gray-zone gate discards has real, causally-confirmed headroom —
+  but only when the verifier's own discriminative power is weak; generalizing
+  to Top-K cascades exposes cache-growth non-stationarity that no static
+  threshold calibration can handle, fixed instead by switching to online
+  Adaptive Conformal Inference (ACI).
+- **ACI's formal guarantee (§5.25):** gives ACI's existing finite-sample
+  bound a deployment-scale interpretation — a window-scale ratio computable
+  before deployment — and confirms it holds distribution-free; the bound is
+  worst-case, though, and doesn't predict the size of real-world advantage.
 
 ## Repository layout
 
@@ -159,7 +191,7 @@ repo — see [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md).
 ## Citation
 
 Archived on Zenodo with DOI [10.5281/zenodo.21703364](https://doi.org/10.5281/zenodo.21703364)
-(this concept DOI always resolves to the latest version; the current version is v1.7.2, DOI [10.5281/zenodo.22308390](https://doi.org/10.5281/zenodo.22308390)).
+(this concept DOI always resolves to the latest version; the current version is v1.8.0, DOI [10.5281/zenodo.22656222](https://doi.org/10.5281/zenodo.22656222)).
 arXiv listing forthcoming — this will be updated with the arXiv ID once live.
 
 ```bibtex
