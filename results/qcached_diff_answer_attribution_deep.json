@@ -1,0 +1,388 @@
+{
+  "part1_fa_rate_by_model_and_variant": {
+    "off_the_shelf": {
+      "threshold": 0.0,
+      "variants": {
+        "full": 0.8398692810457516,
+        "front_half": 0.5555555555555556,
+        "back_half": 0.29411764705882354
+      }
+    },
+    "text_only_adv": {
+      "threshold": 0.0,
+      "variants": {
+        "full": 0.5359477124183006,
+        "front_half": 0.30392156862745096,
+        "back_half": 0.22549019607843138
+      }
+    },
+    "qcached_adv_diff": {
+      "threshold": 0.0,
+      "variants": {
+        "full": 0.12418300653594772,
+        "front_half": 0.06535947712418301,
+        "back_half": 0.05555555555555555
+      }
+    }
+  },
+  "part2_overlap_vs_score": {
+    "full": {
+      "mean_jaccard_overlap": 0.23161270466098124,
+      "pearson_r_overlap_vs_score": 0.22329063355502202
+    },
+    "front_half": {
+      "mean_jaccard_overlap": 0.2370091491682092,
+      "pearson_r_overlap_vs_score": 0.016802434785100292
+    },
+    "back_half": {
+      "mean_jaccard_overlap": 0.11782168108033907,
+      "pearson_r_overlap_vs_score": 0.09358710731439361
+    }
+  },
+  "part3_n_flip_cases": 21,
+  "part3_flip_cases_sample": [
+    {
+      "category": "entity_swap",
+      "query_a": "When did George H.W. Bush serve as president?",
+      "query_b": "When did George W. Bush serve as president?",
+      "answer_b": "George W. Bush was president from 2001 to 2009, serving two full terms.",
+      "score_full": 0.36109232902526855,
+      "score_front_half": -0.33652910590171814,
+      "score_back_half": -1.0829592943191528,
+      "overlap_full": 0.23529411764705882,
+      "overlap_back_half": 0.0
+    },
+    {
+      "category": "entity_swap",
+      "query_a": "When was the Amazon Echo Dot 4th gen released?",
+      "query_b": "When was the Amazon Echo Dot 5th gen released?",
+      "answer_b": "The Echo Dot 5th gen was released in September 2022, featuring a new temperature sensor and improved audio.",
+      "score_full": 0.2472555786371231,
+      "score_front_half": -0.11287055164575577,
+      "score_back_half": -3.6974384784698486,
+      "overlap_full": 0.35,
+      "overlap_back_half": 0.0
+    },
+    {
+      "category": "entity_swap",
+      "query_a": "What is the top speed of the Tesla Model 3 Performance?",
+      "query_b": "What is the top speed of the Tesla Model S Plaid?",
+      "answer_b": "The Tesla Model S Plaid has a top speed of 200 mph, which is much higher than the Model 3's 162 mph.",
+      "score_full": 1.268775224685669,
+      "score_front_half": -1.1328495740890503,
+      "score_back_half": -0.9465885162353516,
+      "overlap_full": 0.45,
+      "overlap_back_half": 0.17647058823529413
+    },
+    {
+      "category": "negation",
+      "query_a": "Does the warranty cover accidental damage?",
+      "query_b": "Does the warranty NOT cover accidental damage?",
+      "answer_b": "The warranty does not cover accidental damage. It only covers manufacturing defects and normal wear.",
+      "score_full": 0.6839197874069214,
+      "score_front_half": -0.06734289973974228,
+      "score_back_half": -3.660874605178833,
+      "overlap_full": 0.4666666666666667,
+      "overlap_back_half": 0.0
+    },
+    {
+      "category": "negation",
+      "query_a": "Will my data be deleted when I close the account?",
+      "query_b": "Will my data NOT be deleted when I close the account?",
+      "answer_b": "No, your data will not be deleted immediately. It is retained for 90 days after account closure, then permanently removed.",
+      "score_full": 0.5964553356170654,
+      "score_front_half": -2.1028835773468018,
+      "score_back_half": -1.5281370878219604,
+      "overlap_full": 0.24,
+      "overlap_back_half": 0.05
+    },
+    {
+      "category": "direction",
+      "query_a": "add video to playlist",
+      "query_b": "add playlist to video",
+      "answer_b": "Playlists are collections; to add a playlist to a video, you would need to embed a playlist link in the video description or use a video editor to create a compilation video from the playlist items.",
+      "score_full": 0.2698799669742584,
+      "score_front_half": -0.8247221112251282,
+      "score_back_half": -2.1139400005340576,
+      "overlap_full": 0.17391304347826086,
+      "overlap_back_half": 0.2
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "What is the interest rate on a 3-year fixed mortgage?",
+      "query_b": "What is the interest rate on a 10-year fixed mortgage?",
+      "answer_b": "The 10-year fixed rate is 4.5% APR, while the 3-year is 5.2%.",
+      "score_full": 0.4076484739780426,
+      "score_front_half": -1.580551028251648,
+      "score_back_half": -2.557330846786499,
+      "overlap_full": 0.3333333333333333,
+      "overlap_back_half": 0.14285714285714285
+    },
+    {
+      "category": "entity_swap",
+      "query_a": "Who developed the theory of relativity?",
+      "query_b": "Who developed the theory of general relativity?",
+      "answer_b": "Albert Einstein",
+      "score_full": 0.46211346983909607,
+      "score_front_half": 0.07448411732912064,
+      "score_back_half": -0.6587824821472168,
+      "overlap_full": 0.0,
+      "overlap_back_half": 0.0
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "How many bonus points do I earn per dollar on the first $1,000 of spending?",
+      "query_b": "How many bonus points do I earn per dollar on the first $5,000 of spending?",
+      "answer_b": "You earn 3 bonus points per dollar on the first $5,000 of spending each month.",
+      "score_full": 0.870607316493988,
+      "score_front_half": -0.6132389903068542,
+      "score_back_half": -1.3028427362442017,
+      "overlap_full": 0.5789473684210527,
+      "overlap_back_half": 0.35294117647058826
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "How much will I save if I use 20% off coupon on a $200 item?",
+      "query_b": "How much will I save if I use 50% off coupon on a $200 item?",
+      "answer_b": "You will save $100 with a 50% off coupon on a $200 item.",
+      "score_full": 0.6562173366546631,
+      "score_front_half": -2.413512945175171,
+      "score_back_half": -0.05806510150432587,
+      "overlap_full": 0.5294117647058824,
+      "overlap_back_half": 0.5
+    }
+  ],
+  "part3_all_flip_cases": [
+    {
+      "category": "entity_swap",
+      "query_a": "When did George H.W. Bush serve as president?",
+      "query_b": "When did George W. Bush serve as president?",
+      "answer_b": "George W. Bush was president from 2001 to 2009, serving two full terms.",
+      "score_full": 0.36109232902526855,
+      "score_front_half": -0.33652910590171814,
+      "score_back_half": -1.0829592943191528,
+      "overlap_full": 0.23529411764705882,
+      "overlap_back_half": 0.0
+    },
+    {
+      "category": "entity_swap",
+      "query_a": "When was the Amazon Echo Dot 4th gen released?",
+      "query_b": "When was the Amazon Echo Dot 5th gen released?",
+      "answer_b": "The Echo Dot 5th gen was released in September 2022, featuring a new temperature sensor and improved audio.",
+      "score_full": 0.2472555786371231,
+      "score_front_half": -0.11287055164575577,
+      "score_back_half": -3.6974384784698486,
+      "overlap_full": 0.35,
+      "overlap_back_half": 0.0
+    },
+    {
+      "category": "entity_swap",
+      "query_a": "What is the top speed of the Tesla Model 3 Performance?",
+      "query_b": "What is the top speed of the Tesla Model S Plaid?",
+      "answer_b": "The Tesla Model S Plaid has a top speed of 200 mph, which is much higher than the Model 3's 162 mph.",
+      "score_full": 1.268775224685669,
+      "score_front_half": -1.1328495740890503,
+      "score_back_half": -0.9465885162353516,
+      "overlap_full": 0.45,
+      "overlap_back_half": 0.17647058823529413
+    },
+    {
+      "category": "negation",
+      "query_a": "Does the warranty cover accidental damage?",
+      "query_b": "Does the warranty NOT cover accidental damage?",
+      "answer_b": "The warranty does not cover accidental damage. It only covers manufacturing defects and normal wear.",
+      "score_full": 0.6839197874069214,
+      "score_front_half": -0.06734289973974228,
+      "score_back_half": -3.660874605178833,
+      "overlap_full": 0.4666666666666667,
+      "overlap_back_half": 0.0
+    },
+    {
+      "category": "negation",
+      "query_a": "Will my data be deleted when I close the account?",
+      "query_b": "Will my data NOT be deleted when I close the account?",
+      "answer_b": "No, your data will not be deleted immediately. It is retained for 90 days after account closure, then permanently removed.",
+      "score_full": 0.5964553356170654,
+      "score_front_half": -2.1028835773468018,
+      "score_back_half": -1.5281370878219604,
+      "overlap_full": 0.24,
+      "overlap_back_half": 0.05
+    },
+    {
+      "category": "direction",
+      "query_a": "add video to playlist",
+      "query_b": "add playlist to video",
+      "answer_b": "Playlists are collections; to add a playlist to a video, you would need to embed a playlist link in the video description or use a video editor to create a compilation video from the playlist items.",
+      "score_full": 0.2698799669742584,
+      "score_front_half": -0.8247221112251282,
+      "score_back_half": -2.1139400005340576,
+      "overlap_full": 0.17391304347826086,
+      "overlap_back_half": 0.2
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "What is the interest rate on a 3-year fixed mortgage?",
+      "query_b": "What is the interest rate on a 10-year fixed mortgage?",
+      "answer_b": "The 10-year fixed rate is 4.5% APR, while the 3-year is 5.2%.",
+      "score_full": 0.4076484739780426,
+      "score_front_half": -1.580551028251648,
+      "score_back_half": -2.557330846786499,
+      "overlap_full": 0.3333333333333333,
+      "overlap_back_half": 0.14285714285714285
+    },
+    {
+      "category": "entity_swap",
+      "query_a": "Who developed the theory of relativity?",
+      "query_b": "Who developed the theory of general relativity?",
+      "answer_b": "Albert Einstein",
+      "score_full": 0.46211346983909607,
+      "score_front_half": 0.07448411732912064,
+      "score_back_half": -0.6587824821472168,
+      "overlap_full": 0.0,
+      "overlap_back_half": 0.0
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "How many bonus points do I earn per dollar on the first $1,000 of spending?",
+      "query_b": "How many bonus points do I earn per dollar on the first $5,000 of spending?",
+      "answer_b": "You earn 3 bonus points per dollar on the first $5,000 of spending each month.",
+      "score_full": 0.870607316493988,
+      "score_front_half": -0.6132389903068542,
+      "score_back_half": -1.3028427362442017,
+      "overlap_full": 0.5789473684210527,
+      "overlap_back_half": 0.35294117647058826
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "How much will I save if I use 20% off coupon on a $200 item?",
+      "query_b": "How much will I save if I use 50% off coupon on a $200 item?",
+      "answer_b": "You will save $100 with a 50% off coupon on a $200 item.",
+      "score_full": 0.6562173366546631,
+      "score_front_half": -2.413512945175171,
+      "score_back_half": -0.05806510150432587,
+      "overlap_full": 0.5294117647058824,
+      "overlap_back_half": 0.5
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "What is the daily withdrawal limit for a basic checking account?",
+      "query_b": "What is the daily withdrawal limit for a premium checking account?",
+      "answer_b": "The daily withdrawal limit for a premium checking account is $2,000.",
+      "score_full": 0.27689841389656067,
+      "score_front_half": -2.323911666870117,
+      "score_back_half": -3.344388246536255,
+      "overlap_full": 0.8333333333333334,
+      "overlap_back_half": 0.4166666666666667
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "How many gigabytes of cloud storage are included with the basic tier?",
+      "query_b": "How many gigabytes of cloud storage are included with the pro tier?",
+      "answer_b": "The pro tier includes 1 terabyte (1000 GB) of cloud storage.",
+      "score_full": 0.32430601119995117,
+      "score_front_half": -1.9239009618759155,
+      "score_back_half": -1.7012897729873657,
+      "overlap_full": 0.35294117647058826,
+      "overlap_back_half": 0.2
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "What is the delivery time for standard shipping to the East Coast?",
+      "query_b": "What is the delivery time for express shipping to the East Coast?",
+      "answer_b": "Express shipping to the East Coast typically takes 2 business days.",
+      "score_full": 0.008618732914328575,
+      "score_front_half": -2.0925633907318115,
+      "score_back_half": -2.3955047130584717,
+      "overlap_full": 0.375,
+      "overlap_back_half": 0.0625
+    },
+    {
+      "category": "entity_swap",
+      "query_a": "What year did Abraham Lincoln deliver the Gettysburg Address?",
+      "query_b": "What year did John F. Kennedy deliver the Gettysburg Address?",
+      "answer_b": "John F. Kennedy never delivered the Gettysburg Address, but if he did, it would have been in 1963.",
+      "score_full": 0.2244967669248581,
+      "score_front_half": -2.140953302383423,
+      "score_back_half": -0.6350172758102417,
+      "overlap_full": 0.3333333333333333,
+      "overlap_back_half": 0.05555555555555555
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "What is the cancellation fee if I cancel my flight within 24 hours of booking?",
+      "query_b": "What is the cancellation fee if I cancel my flight within 48 hours of booking?",
+      "answer_b": "The cancellation fee for cancellations made within 48 hours of booking is $200 per ticket.",
+      "score_full": 0.9884904623031616,
+      "score_front_half": -1.983186960220337,
+      "score_back_half": -1.9147602319717407,
+      "overlap_full": 0.42857142857142855,
+      "overlap_back_half": 0.2777777777777778
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "What is the late fee for a bill paid 5 days after the due date?",
+      "query_b": "What is the late fee for a bill paid 15 days after the due date?",
+      "answer_b": "The late fee for payments made 15 days after the due date is $35.",
+      "score_full": 0.016100745648145676,
+      "score_front_half": -1.7305787801742554,
+      "score_back_half": -0.6738759875297546,
+      "overlap_full": 0.5882352941176471,
+      "overlap_back_half": 0.4
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "How much will I save per month if I switch to a plan with 100MB/s speed?",
+      "query_b": "How much will I save per month if I switch to a plan with 500MB/s speed?",
+      "answer_b": "Switching to the 500MB/s plan saves you $30 per month compared to your current plan.",
+      "score_full": 1.4472675323486328,
+      "score_front_half": 0.9447917342185974,
+      "score_back_half": -1.3115781545639038,
+      "overlap_full": 0.21739130434782608,
+      "overlap_back_half": 0.21052631578947367
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "When is the next software update scheduled for the phone?",
+      "query_b": "When is the next software update scheduled for the tablet?",
+      "answer_b": "The next tablet software update is scheduled for March 15, 2024.",
+      "score_full": 0.36670926213264465,
+      "score_front_half": -3.010235071182251,
+      "score_back_half": -2.9741227626800537,
+      "overlap_full": 0.6666666666666666,
+      "overlap_back_half": 0.25
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "What is the weight limit for checked baggage on domestic flights?",
+      "query_b": "What is the weight limit for checked baggage on international flights?",
+      "answer_b": "The weight limit for checked baggage on international flights is 50 pounds.",
+      "score_full": 0.8511547446250916,
+      "score_front_half": -2.4464175701141357,
+      "score_back_half": -1.3810561895370483,
+      "overlap_full": 0.7692307692307693,
+      "overlap_back_half": 0.3076923076923077
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "What is the penalty for early withdrawal from a 12-month CD?",
+      "query_b": "What is the penalty for early withdrawal from a 36-month CD?",
+      "answer_b": "The penalty for early withdrawal from a 36-month CD is 180 days of interest.",
+      "score_full": 0.20577530562877655,
+      "score_front_half": -1.5051177740097046,
+      "score_back_half": -4.2311692237854,
+      "overlap_full": 0.6666666666666666,
+      "overlap_back_half": 0.2
+    },
+    {
+      "category": "quantity_swap",
+      "query_a": "What is the maximum amount I can withdraw from an ATM per day?",
+      "query_b": "What is the maximum amount I can withdraw from a teller per day?",
+      "answer_b": "The maximum teller withdrawal is $10,000 per day, subject to account limits.",
+      "score_full": 0.7661347389221191,
+      "score_front_half": 0.2011062055826187,
+      "score_back_half": -3.0099446773529053,
+      "overlap_full": 0.3157894736842105,
+      "overlap_back_half": 0.11764705882352941
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "checkpoint": "results/finetuned_verifier_model_lmarena_qcached_adv_ablation_qcached_adv_diff",
+  "n_test": 4831,
+  "fixed_n": 50,
+  "answer_word_count_mean": 271.7054440074519,
+  "results": {
+    "full": {
+      "auc": 0.8627945648288687,
+      "pearson_r_vs_full_scores": 1.0,
+      "score_mean": 4.230802059173584,
+      "score_std": 2.4301047325134277
+    },
+    "front_half": {
+      "auc": 0.8559039019749032,
+      "pearson_r_vs_full_scores": 0.9497034843540769,
+      "score_mean": 3.9316563606262207,
+      "score_std": 2.3823328018188477
+    },
+    "back_half": {
+      "auc": 0.8049539212283529,
+      "pearson_r_vs_full_scores": 0.6442760722216837,
+      "score_mean": 2.305037260055542,
+      "score_std": 2.419827461242676
+    },
+    "front50": {
+      "auc": 0.8409716862050328,
+      "pearson_r_vs_full_scores": 0.8977798018537536,
+      "score_mean": 3.608851909637451,
+      "score_std": 2.1713058948516846
+    },
+    "back50": {
+      "auc": 0.7769043215792318,
+      "pearson_r_vs_full_scores": 0.5608475035251997,
+      "score_mean": 2.3012139797210693,
+      "score_std": 2.333195447921753
+    },
+    "middle50": {
+      "auc": 0.7506073902164847,
+      "pearson_r_vs_full_scores": 0.46849255793963035,
+      "score_mean": 1.8756294250488281,
+      "score_std": 2.397155284881592
+    }
+  }
+}

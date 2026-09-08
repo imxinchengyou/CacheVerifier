@@ -1,0 +1,14 @@
+{
+  "config": {
+    "config": "configs/quora.yaml",
+    "train_fraction": 0.7,
+    "train_size": null,
+    "test_size": null,
+    "output": "results/finetune_verifier_qcached_experiment_quora.json"
+  },
+  "n_gray_zone_total": 17040,
+  "n_train": 11928,
+  "n_test": 5112,
+  "train_positive_rate": 0.4244634473507713,
+  "test_positive_rate": 0.3305946791862285
+}
