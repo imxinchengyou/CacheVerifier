@@ -1,0 +1,42 @@
+[
+  {
+    "dataset": "lmarena_offtheshelf",
+    "n_sub_calibration": 4025,
+    "n_sub_validation": 4026,
+    "internal_cv_gain": 0.006977604798060422,
+    "audited_test_gain": -0.0105,
+    "sign_match": "MISMATCH"
+  },
+  {
+    "dataset": "lmarena_finetuned",
+    "n_sub_calibration": 4025,
+    "n_sub_validation": 4026,
+    "internal_cv_gain": 0.00026749909838474917,
+    "audited_test_gain": -0.0009,
+    "sign_match": "MISMATCH"
+  },
+  {
+    "dataset": "quora_offtheshelf",
+    "n_sub_calibration": 4260,
+    "n_sub_validation": 4260,
+    "internal_cv_gain": 0.0022070233318887827,
+    "audited_test_gain": 0.0056,
+    "sign_match": "MATCH"
+  },
+  {
+    "dataset": "searchqueries_offtheshelf",
+    "n_sub_calibration": 21570,
+    "n_sub_validation": 21570,
+    "internal_cv_gain": 0.007158982537119718,
+    "audited_test_gain": 0.0169,
+    "sign_match": "MATCH"
+  },
+  {
+    "dataset": "searchqueries_finetuned",
+    "n_sub_calibration": 21570,
+    "n_sub_validation": 21570,
+    "internal_cv_gain": 0.00029967509715228546,
+    "audited_test_gain": 0.0017,
+    "sign_match": "MATCH"
+  }
+]

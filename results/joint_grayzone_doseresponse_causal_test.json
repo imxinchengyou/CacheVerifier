@@ -1,0 +1,100 @@
+[
+  {
+    "sigma": 0.0,
+    "noisy_verifier_auc": 0.7384928288209353,
+    "baseline_hit_rate": 0.9629829255616085,
+    "baseline_error_rate": 0.0636970875281526,
+    "joint_hit_rate": 0.9906254210860652,
+    "joint_error_rate": 0.06569905099231939,
+    "hit_rate_gain_at_matched_error": -0.010544957554524781,
+    "hit_rate_gain_ci95": [
+      -0.018662119800929123,
+      -0.005694505669021544
+    ],
+    "significant": true
+  },
+  {
+    "sigma": 0.25,
+    "noisy_verifier_auc": 0.7287039397989458,
+    "baseline_hit_rate": 0.9675643419507594,
+    "baseline_error_rate": 0.06404358120464301,
+    "joint_hit_rate": 0.9908949161677799,
+    "joint_error_rate": 0.06577604958709504,
+    "hit_rate_gain_at_matched_error": -0.012928614052793552,
+    "hit_rate_gain_ci95": [
+      -0.01916116831139579,
+      -0.005078955642392801
+    ],
+    "significant": true
+  },
+  {
+    "sigma": 0.5,
+    "noisy_verifier_auc": 0.7336507213961424,
+    "baseline_hit_rate": 0.9604034726366244,
+    "baseline_error_rate": 0.0636778378794587,
+    "joint_hit_rate": 0.991087412654719,
+    "joint_error_rate": 0.06577604958709504,
+    "hit_rate_gain_at_matched_error": -0.013551752680513562,
+    "hit_rate_gain_ci95": [
+      -0.021065277400792726,
+      -0.005613718903796622
+    ],
+    "significant": true
+  },
+  {
+    "sigma": 1.0,
+    "noisy_verifier_auc": 0.6801676383966541,
+    "baseline_hit_rate": 0.9501626595314635,
+    "baseline_error_rate": 0.06381258542031608,
+    "joint_hit_rate": 0.9903559260043504,
+    "joint_error_rate": 0.06575679993840113,
+    "hit_rate_gain_at_matched_error": -0.007504613040812069,
+    "hit_rate_gain_ci95": [
+      -0.018337806585029922,
+      0.00422577542767545
+    ],
+    "significant": false
+  },
+  {
+    "sigma": 1.5,
+    "noisy_verifier_auc": 0.63472107898251,
+    "baseline_hit_rate": 0.9439257733546362,
+    "baseline_error_rate": 0.06423607769158213,
+    "joint_hit_rate": 0.9907216693295348,
+    "joint_error_rate": 0.06579529923578895,
+    "hit_rate_gain_at_matched_error": 0.005116556622841606,
+    "hit_rate_gain_ci95": [
+      -0.006746137716319919,
+      0.020640452100210666
+    ],
+    "significant": false
+  },
+  {
+    "sigma": 2.0,
+    "noisy_verifier_auc": 0.6085359933693048,
+    "baseline_hit_rate": 0.9317214960826965,
+    "baseline_error_rate": 0.06412057979941867,
+    "joint_hit_rate": 0.9912221601955764,
+    "joint_error_rate": 0.06587229783056459,
+    "hit_rate_gain_at_matched_error": 0.015581521192793768,
+    "hit_rate_gain_ci95": [
+      -0.0026035470685992516,
+      0.02643805783877785
+    ],
+    "significant": false
+  },
+  {
+    "sigma": 3.0,
+    "noisy_verifier_auc": 0.5733831548168088,
+    "baseline_hit_rate": 0.9441760187876571,
+    "baseline_error_rate": 0.06492906504456293,
+    "joint_hit_rate": 0.9907216693295348,
+    "joint_error_rate": 0.06577604958709504,
+    "hit_rate_gain_at_matched_error": 0.024023561570001184,
+    "hit_rate_gain_ci95": [
+      0.006035366417062901,
+      0.03837719489350179
+    ],
+    "significant": true
+  }
+]

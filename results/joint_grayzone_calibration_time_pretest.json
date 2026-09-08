@@ -1,0 +1,57 @@
+[
+  {
+    "dataset": "lmarena_offtheshelf",
+    "n_calibration": 8051,
+    "similarity_coef": 2.5051402476123745,
+    "similarity_se": 0.06722769538239919,
+    "similarity_z": 37.26351518318212,
+    "similarity_pvalue": 0.0,
+    "verifier_coef": 0.5780278795392412,
+    "verifier_pvalue": 0.0,
+    "audited_hit_rate_gain": -0.0105
+  },
+  {
+    "dataset": "lmarena_finetuned",
+    "n_calibration": 8051,
+    "similarity_coef": 1.218549691931444,
+    "similarity_se": 0.08643616223378825,
+    "similarity_z": 14.09768389109608,
+    "similarity_pvalue": 0.0,
+    "verifier_coef": 4.1912968896479335,
+    "verifier_pvalue": 0.0,
+    "audited_hit_rate_gain": -0.0009
+  },
+  {
+    "dataset": "quora_offtheshelf",
+    "n_calibration": 8520,
+    "similarity_coef": 0.44644474950984936,
+    "similarity_se": 0.02519417401100818,
+    "similarity_z": 17.720158212560676,
+    "similarity_pvalue": 0.0,
+    "verifier_coef": 0.181599392980367,
+    "verifier_pvalue": 9.705569681273118e-13,
+    "audited_hit_rate_gain": 0.0056
+  },
+  {
+    "dataset": "searchqueries_offtheshelf",
+    "n_calibration": 43140,
+    "similarity_coef": 0.6411051015338775,
+    "similarity_se": 0.01194414477239766,
+    "similarity_z": 53.67526212638014,
+    "similarity_pvalue": 0.0,
+    "verifier_coef": 0.14346662068794097,
+    "verifier_pvalue": 0.0,
+    "audited_hit_rate_gain": 0.0169
+  },
+  {
+    "dataset": "searchqueries_finetuned",
+    "n_calibration": 43140,
+    "similarity_coef": 0.27850820203881593,
+    "similarity_se": 0.01247030461779458,
+    "similarity_z": 22.333712814151863,
+    "similarity_pvalue": 0.0,
+    "verifier_coef": 1.202772058033794,
+    "verifier_pvalue": 0.0,
+    "audited_hit_rate_gain": 0.0017
+  }
+]

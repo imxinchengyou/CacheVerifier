@@ -1,0 +1,203 @@
+{
+  "lmarena_offtheshelf": {
+    "n_rows": 5136,
+    "folds": [
+      {
+        "k": 1,
+        "val_pos_rate": 0.04868549172346641,
+        "n_val": 1027,
+        "gain_original_simple_joint": 0.015579357351509282,
+        "gain_trend_aware_baseline": -0.005842259006815953,
+        "gain_trend_aware_simple_joint": 0.015579357351509282,
+        "gain_trend_aware_full_joint": 0.015579357351509282,
+        "incremental_simple_joint_over_trend_baseline": -0.020447906523855863,
+        "incremental_full_joint_over_trend_baseline": -0.020447906523855863
+      },
+      {
+        "k": 2,
+        "val_pos_rate": 0.24634858812074,
+        "n_val": 1027,
+        "gain_original_simple_joint": 0.08880233690360273,
+        "gain_trend_aware_baseline": -0.017332035053554018,
+        "gain_trend_aware_simple_joint": 0.09055501460564752,
+        "gain_trend_aware_full_joint": 0.08982473222979553,
+        "incremental_simple_joint_over_trend_baseline": -0.020447906523855863,
+        "incremental_full_joint_over_trend_baseline": -0.020447906523855863
+      },
+      {
+        "k": 3,
+        "val_pos_rate": 0.7205452775073028,
+        "n_val": 1027,
+        "gain_original_simple_joint": 0.20447906523855885,
+        "gain_trend_aware_baseline": -0.09620253164556963,
+        "gain_trend_aware_simple_joint": 0.1850048685491723,
+        "gain_trend_aware_full_joint": 0.1905225576111652,
+        "incremental_simple_joint_over_trend_baseline": -0.020447906523855863,
+        "incremental_full_joint_over_trend_baseline": -0.020447906523855863
+      },
+      {
+        "k": 4,
+        "val_pos_rate": 0.8394941634241245,
+        "n_val": 1028,
+        "gain_original_simple_joint": 0.22632944228274976,
+        "gain_trend_aware_baseline": -0.08657587548638124,
+        "gain_trend_aware_simple_joint": 0.19941634241245143,
+        "gain_trend_aware_full_joint": 0.19941634241245143,
+        "incremental_simple_joint_over_trend_baseline": -0.020428015564202373,
+        "incremental_full_joint_over_trend_baseline": -0.020428015564202373
+      }
+    ],
+    "avg_original_gain_vs_naive_baseline": 0.13382006976555533,
+    "avg_trend_aware_baseline_gain_vs_naive_baseline": -0.05149671452908247,
+    "avg_incremental_gain_simple_joint_over_trend_baseline": -0.020442930153321964,
+    "avg_incremental_gain_full_joint_over_trend_baseline": -0.020442930153321964
+  },
+  "lmarena_finetuned": {
+    "n_rows": 3805,
+    "folds": [
+      {
+        "k": 2,
+        "val_pos_rate": 0.0328515111695138,
+        "n_val": 761,
+        "gain_original_simple_joint": 0.006570302233902758,
+        "gain_trend_aware_baseline": -0.00469307302421626,
+        "gain_trend_aware_simple_joint": 0.005256241787122196,
+        "gain_trend_aware_full_joint": 0.005256241787122196,
+        "incremental_simple_joint_over_trend_baseline": 1.1102230246251565e-16,
+        "incremental_full_joint_over_trend_baseline": 1.1102230246251565e-16
+      },
+      {
+        "k": 3,
+        "val_pos_rate": 0.13009198423127463,
+        "n_val": 761,
+        "gain_original_simple_joint": 0.010512483574244391,
+        "gain_trend_aware_baseline": -0.010887929416181774,
+        "gain_trend_aware_simple_joint": 0.009198423127463828,
+        "gain_trend_aware_full_joint": 0.010512483574244391,
+        "incremental_simple_joint_over_trend_baseline": 0.0,
+        "incremental_full_joint_over_trend_baseline": 0.0
+      },
+      {
+        "k": 4,
+        "val_pos_rate": 0.5676741130091985,
+        "n_val": 761,
+        "gain_original_simple_joint": 0.014454664914586024,
+        "gain_trend_aware_baseline": -0.0713347099680871,
+        "gain_trend_aware_simple_joint": -0.03285151116951379,
+        "gain_trend_aware_full_joint": -0.0178712220762155,
+        "incremental_simple_joint_over_trend_baseline": 0.0,
+        "incremental_full_joint_over_trend_baseline": 0.0
+      }
+    ],
+    "avg_original_gain_vs_naive_baseline": 0.010512483574244391,
+    "avg_trend_aware_baseline_gain_vs_naive_baseline": -0.028971904136161714,
+    "avg_incremental_gain_simple_joint_over_trend_baseline": 3.700743415417188e-17,
+    "avg_incremental_gain_full_joint_over_trend_baseline": 3.700743415417188e-17
+  },
+  "quora_offtheshelf": {
+    "n_rows": 3387,
+    "folds": [
+      {
+        "k": 1,
+        "val_pos_rate": 0.23929098966026588,
+        "n_val": 677,
+        "gain_original_simple_joint": 0.012063023141309692,
+        "gain_trend_aware_baseline": -0.028393238142130295,
+        "gain_trend_aware_simple_joint": 0.01477104874446089,
+        "gain_trend_aware_full_joint": 0.00751980663354368,
+        "incremental_simple_joint_over_trend_baseline": 0.0206794682422452,
+        "incremental_full_joint_over_trend_baseline": 0.0206794682422452
+      },
+      {
+        "k": 2,
+        "val_pos_rate": 0.17404129793510326,
+        "n_val": 678,
+        "gain_original_simple_joint": 0.007190265486725689,
+        "gain_trend_aware_baseline": 0.006391347099311662,
+        "gain_trend_aware_simple_joint": 0.008849557522123908,
+        "gain_trend_aware_full_joint": 0.009587020648967548,
+        "incremental_simple_joint_over_trend_baseline": 0.007374631268436578,
+        "incremental_full_joint_over_trend_baseline": 0.007374631268436578
+      },
+      {
+        "k": 3,
+        "val_pos_rate": 0.14623338257016247,
+        "n_val": 677,
+        "gain_original_simple_joint": 0.013293943870014813,
+        "gain_trend_aware_baseline": 0.0024170807036391073,
+        "gain_trend_aware_simple_joint": 0.014180206794682404,
+        "gain_trend_aware_full_joint": 0.013428226131328047,
+        "incremental_simple_joint_over_trend_baseline": 0.004759560150992943,
+        "incremental_full_joint_over_trend_baseline": 0.002461841457410144
+      },
+      {
+        "k": 4,
+        "val_pos_rate": 0.13864306784660768,
+        "n_val": 678,
+        "gain_original_simple_joint": 0.007374631268436627,
+        "gain_trend_aware_baseline": -0.0008849557522122575,
+        "gain_trend_aware_simple_joint": 0.002949852507374673,
+        "gain_trend_aware_full_joint": 0.006391347099311773,
+        "incremental_simple_joint_over_trend_baseline": 0.019174041297935103,
+        "incremental_full_joint_over_trend_baseline": 0.019174041297935103
+      }
+    ],
+    "avg_original_gain_vs_naive_baseline": 0.009978474784747874,
+    "avg_trend_aware_baseline_gain_vs_naive_baseline": -0.005111632934511121,
+    "avg_incremental_gain_simple_joint_over_trend_baseline": 0.012997129971299712,
+    "avg_incremental_gain_full_joint_over_trend_baseline": 0.012423124231242314
+  },
+  "searchqueries_offtheshelf": {
+    "n_rows": 34876,
+    "folds": [
+      {
+        "k": 1,
+        "val_pos_rate": 0.3978494623655914,
+        "n_val": 6975,
+        "gain_original_simple_joint": 0.06102012682657848,
+        "gain_trend_aware_baseline": -0.026447294554562295,
+        "gain_trend_aware_simple_joint": 0.06069043576683647,
+        "gain_trend_aware_full_joint": 0.06076804915514594,
+        "incremental_simple_joint_over_trend_baseline": -0.02007168458781361,
+        "incremental_full_joint_over_trend_baseline": -0.02007168458781361
+      },
+      {
+        "k": 2,
+        "val_pos_rate": 0.4061648745519713,
+        "n_val": 6975,
+        "gain_original_simple_joint": 0.06496216646754283,
+        "gain_trend_aware_baseline": -0.024563918757467107,
+        "gain_trend_aware_simple_joint": 0.0631764751223649,
+        "gain_trend_aware_full_joint": 0.06260657362922295,
+        "incremental_simple_joint_over_trend_baseline": -0.02007168458781361,
+        "incremental_full_joint_over_trend_baseline": -0.02007168458781361
+      },
+      {
+        "k": 3,
+        "val_pos_rate": 0.41491039426523296,
+        "n_val": 6975,
+        "gain_original_simple_joint": 0.06937616260605234,
+        "gain_trend_aware_baseline": -0.01801178263914638,
+        "gain_trend_aware_simple_joint": 0.06774910394265232,
+        "gain_trend_aware_full_joint": 0.06754106108944818,
+        "incremental_simple_joint_over_trend_baseline": -0.02007168458781361,
+        "incremental_full_joint_over_trend_baseline": -0.02007168458781361
+      },
+      {
+        "k": 4,
+        "val_pos_rate": 0.4013761467889908,
+        "n_val": 6976,
+        "gain_original_simple_joint": 0.07508861551292745,
+        "gain_trend_aware_baseline": -0.017801987767584126,
+        "gain_trend_aware_simple_joint": 0.07619154173193105,
+        "gain_trend_aware_full_joint": 0.07626146788990823,
+        "incremental_simple_joint_over_trend_baseline": -0.02006880733944949,
+        "incremental_full_joint_over_trend_baseline": -0.02006880733944949
+      }
+    ],
+    "avg_original_gain_vs_naive_baseline": 0.06761203583104165,
+    "avg_trend_aware_baseline_gain_vs_naive_baseline": -0.021706105997136946,
+    "avg_incremental_gain_simple_joint_over_trend_baseline": -0.020070965198379965,
+    "avg_incremental_gain_full_joint_over_trend_baseline": -0.020070965198379965
+  }
+}
