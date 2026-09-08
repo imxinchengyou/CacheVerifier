@@ -1,0 +1,32 @@
+[
+  {
+    "dataset": "lmarena_offtheshelf",
+    "recency_weighted_gain_halflife_block": 0.0016074559380451392,
+    "recency_weighted_gain_halflife_halfblock": 0.0016223994147618827,
+    "audited_test_gain": -0.0105
+  },
+  {
+    "dataset": "lmarena_finetuned",
+    "recency_weighted_gain_halflife_block": 0.000183836591798496,
+    "recency_weighted_gain_halflife_halfblock": 0.00018347609577102695,
+    "audited_test_gain": -0.0009
+  },
+  {
+    "dataset": "quora_offtheshelf",
+    "recency_weighted_gain_halflife_block": 0.0008398021306528797,
+    "recency_weighted_gain_halflife_halfblock": 0.0007943879464335728,
+    "audited_test_gain": 0.0056
+  },
+  {
+    "dataset": "searchqueries_offtheshelf",
+    "recency_weighted_gain_halflife_block": 0.002906697117989035,
+    "recency_weighted_gain_halflife_halfblock": 0.0029004619369849133,
+    "audited_test_gain": 0.0169
+  },
+  {
+    "dataset": "searchqueries_finetuned",
+    "recency_weighted_gain_halflife_block": 0.00023979271353737067,
+    "recency_weighted_gain_halflife_halfblock": 0.00017030089714889507,
+    "audited_test_gain": 0.0017
+  }
+]

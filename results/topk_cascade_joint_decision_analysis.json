@@ -1,0 +1,82 @@
+{
+  "lmarena_offtheshelf": {
+    "dataset": "lmarena_offtheshelf",
+    "n_reaching_rank1": 5136,
+    "n_calibration": 2568,
+    "n_test": 2568,
+    "baseline_hit_rate": 0.5661993769470405,
+    "baseline_error_rate": 0.09579439252336448,
+    "simple_joint_gain_at_matched_error": 0.21125389408099693,
+    "simple_joint_ci95": [
+      0.18540870150099123,
+      0.26646174065420564
+    ],
+    "simple_joint_significant": true,
+    "full_joint_gain_at_matched_error": 0.20935552959501558,
+    "full_joint_ci95": [
+      0.17854656376852632,
+      0.26074548744731546
+    ],
+    "full_joint_significant": true
+  },
+  "lmarena_finetuned": {
+    "dataset": "lmarena_finetuned",
+    "n_reaching_rank1": 3805,
+    "n_calibration": 1902,
+    "n_test": 1903,
+    "baseline_hit_rate": 0.5107724645296899,
+    "baseline_error_rate": 0.23646873357856016,
+    "simple_joint_gain_at_matched_error": 0.012395289171895807,
+    "simple_joint_ci95": [
+      0.0003579873883341996,
+      0.0467241417060781
+    ],
+    "simple_joint_significant": true,
+    "full_joint_gain_at_matched_error": 0.012395289171895807,
+    "full_joint_ci95": [
+      5.2735593669695093e-17,
+      0.04463511560693642
+    ],
+    "full_joint_significant": true
+  },
+  "quora_offtheshelf": {
+    "dataset": "quora_offtheshelf",
+    "n_reaching_rank1": 3387,
+    "n_calibration": 1693,
+    "n_test": 1694,
+    "baseline_hit_rate": 0.3961038961038961,
+    "baseline_error_rate": 0.3282172373081464,
+    "simple_joint_gain_at_matched_error": 0.013450834879406293,
+    "simple_joint_ci95": [
+      -0.002449822904368326,
+      0.023150031786395384
+    ],
+    "simple_joint_significant": false,
+    "full_joint_gain_at_matched_error": 0.011851784579057278,
+    "full_joint_ci95": [
+      -0.004395778549962407,
+      0.022818942421215124
+    ],
+    "full_joint_significant": false
+  },
+  "searchqueries_offtheshelf": {
+    "dataset": "searchqueries_offtheshelf",
+    "n_reaching_rank1": 34876,
+    "n_calibration": 17438,
+    "n_test": 17438,
+    "baseline_hit_rate": 0.3982108039912834,
+    "baseline_error_rate": 0.2219864663378828,
+    "simple_joint_gain_at_matched_error": 0.07127205558339023,
+    "simple_joint_ci95": [
+      0.06267188613668746,
+      0.07823580598380936
+    ],
+    "simple_joint_significant": true,
+    "full_joint_gain_at_matched_error": 0.0708714112916099,
+    "full_joint_ci95": [
+      0.06243513375816456,
+      0.0776883001497664
+    ],
+    "full_joint_significant": true
+  }
+}

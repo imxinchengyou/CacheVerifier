@@ -1,0 +1,67 @@
+[
+  {
+    "dataset": "lmarena_offtheshelf",
+    "n_folds_used": 4,
+    "fold_gains": [
+      0.0016293554464142934,
+      0.002375972037824803,
+      0.0030149235695728915,
+      -0.0006161314413741792
+    ],
+    "forward_chaining_gain": 0.0016006856768488586,
+    "audited_test_gain": -0.0105,
+    "sign_match": "MISMATCH"
+  },
+  {
+    "dataset": "lmarena_finetuned",
+    "n_folds_used": 4,
+    "fold_gains": [
+      0.0001918136667237169,
+      0.0004239591086658834,
+      0.00017722997603364377,
+      -7.468259895437868e-05
+    ],
+    "forward_chaining_gain": 0.00017954056247103227,
+    "audited_test_gain": -0.0009,
+    "sign_match": "MISMATCH"
+  },
+  {
+    "dataset": "quora_offtheshelf",
+    "n_folds_used": 4,
+    "fold_gains": [
+      0.0006237325221475076,
+      0.0010378871768290804,
+      0.0005101297186999032,
+      0.0012571019011334492
+    ],
+    "forward_chaining_gain": 0.0008572128297024851,
+    "audited_test_gain": 0.0056,
+    "sign_match": "MATCH"
+  },
+  {
+    "dataset": "searchqueries_offtheshelf",
+    "n_folds_used": 4,
+    "fold_gains": [
+      0.002473531326515843,
+      0.003363901135325864,
+      0.003111759629703559,
+      0.0025465974948884473
+    ],
+    "forward_chaining_gain": 0.002873947396608428,
+    "audited_test_gain": 0.0169,
+    "sign_match": "MATCH"
+  },
+  {
+    "dataset": "searchqueries_finetuned",
+    "n_folds_used": 4,
+    "fold_gains": [
+      0.0003325728115644022,
+      0.0003913154486165915,
+      -9.85590787705437e-05,
+      0.00025901429999880543
+    ],
+    "forward_chaining_gain": 0.00022108587035231386,
+    "audited_test_gain": 0.0017,
+    "sign_match": "MATCH"
+  }
+]

@@ -1,0 +1,3778 @@
+{
+  "zero_shot_model": "cross-encoder/nli-MiniLM2-L6-H768",
+  "finetuned_checkpoint": "results/finetuned_verifier_model_lmarena_nli_qcached_adv_ablation_qcached_adv_diff",
+  "n_natural_test": 4831,
+  "n_redteam": 306,
+  "w_grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    1.0
+  ],
+  "threshold_grid": [
+    0.1,
+    0.14,
+    0.18,
+    0.22,
+    0.26,
+    0.3,
+    0.34,
+    0.38,
+    0.42,
+    0.46,
+    0.5,
+    0.54,
+    0.58,
+    0.62,
+    0.66,
+    0.7,
+    0.74,
+    0.78,
+    0.82,
+    0.86,
+    0.9
+  ],
+  "baseline_pure_finetuned": {
+    "w": 1.0,
+    "threshold": 0.5,
+    "hit_rate": 0.9561167460153177,
+    "error_rate": 0.02815152142413579,
+    "redteam_total_fa_pct": 5.88235294117647,
+    "redteam_entity_swap_fa_pct": 25.64102564102564
+  },
+  "and_gate_veto": {
+    "hit_rate": 0.5257710618919479,
+    "error_rate": 0.014903746636307183,
+    "redteam_total_fa_pct": 0.6535947712418301,
+    "redteam_entity_swap_fa_pct": 2.564102564102564
+  },
+  "cost_ratio_sweep": [
+    {
+      "r": 0.1,
+      "baseline_cost": 0.04669840612709587,
+      "grid_best_w": 0.15,
+      "grid_best_threshold": 0.1,
+      "grid_best_cost": 0.008321258538604891,
+      "and_gate_cost": 0.47571931277168283,
+      "winner": "grid_best",
+      "winner_cost": 0.008321258538604891,
+      "cost_improvement_over_baseline_pct": 82.18085106382969,
+      "winner_hit_rate": 0.9966880563030428,
+      "winner_error_rate": 0.05009314841647692,
+      "winner_redteam_total_fa_pct": 75.16339869281046,
+      "winner_redteam_entity_swap_fa_pct": 79.48717948717949
+    },
+    {
+      "r": 0.25,
+      "baseline_cost": 0.05092113434071624,
+      "grid_best_w": 0.15,
+      "grid_best_threshold": 0.1,
+      "grid_best_cost": 0.015835230801076426,
+      "and_gate_cost": 0.4779548747671289,
+      "winner": "grid_best",
+      "winner_cost": 0.015835230801076426,
+      "cost_improvement_over_baseline_pct": 68.90243902439018,
+      "winner_hit_rate": 0.9966880563030428,
+      "winner_error_rate": 0.05009314841647692,
+      "winner_redteam_total_fa_pct": 75.16339869281046,
+      "winner_redteam_entity_swap_fa_pct": 79.48717948717949
+    },
+    {
+      "r": 0.5,
+      "baseline_cost": 0.05795901469675019,
+      "grid_best_w": 0.15,
+      "grid_best_threshold": 0.1,
+      "grid_best_cost": 0.028358517905195658,
+      "and_gate_cost": 0.4816808114262057,
+      "winner": "grid_best",
+      "winner_cost": 0.028358517905195658,
+      "cost_improvement_over_baseline_pct": 51.07142857142853,
+      "winner_hit_rate": 0.9966880563030428,
+      "winner_error_rate": 0.05009314841647692,
+      "winner_redteam_total_fa_pct": 75.16339869281046,
+      "winner_redteam_entity_swap_fa_pct": 79.48717948717949
+    },
+    {
+      "r": 1,
+      "baseline_cost": 0.07203477540881809,
+      "grid_best_w": 0.7,
+      "grid_best_threshold": 0.1,
+      "grid_best_cost": 0.053198095632374244,
+      "and_gate_cost": 0.4891326847443593,
+      "winner": "grid_best",
+      "winner_cost": 0.053198095632374244,
+      "cost_improvement_over_baseline_pct": 26.149425287356365,
+      "winner_hit_rate": 0.994204098530325,
+      "winner_error_rate": 0.04740219416269923,
+      "winner_redteam_total_fa_pct": 62.41830065359477,
+      "winner_redteam_entity_swap_fa_pct": 64.1025641025641
+    },
+    {
+      "r": 2,
+      "baseline_cost": 0.10018629683295388,
+      "grid_best_w": 0.85,
+      "grid_best_threshold": 0.1,
+      "grid_best_cost": 0.09211343407162083,
+      "and_gate_cost": 0.5040364313806664,
+      "winner": "grid_best",
+      "winner_cost": 0.09211343407162083,
+      "cost_improvement_over_baseline_pct": 8.057851239669413,
+      "winner_hit_rate": 0.9795073483750776,
+      "winner_error_rate": 0.035810391223349204,
+      "winner_redteam_total_fa_pct": 11.437908496732026,
+      "winner_redteam_entity_swap_fa_pct": 30.76923076923077
+    },
+    {
+      "r": 5,
+      "baseline_cost": 0.18464086110536124,
+      "grid_best_w": 0.95,
+      "grid_best_threshold": 0.66,
+      "grid_best_cost": 0.18112192092734422,
+      "and_gate_cost": 0.548747671289588,
+      "winner": "grid_best",
+      "winner_cost": 0.18112192092734422,
+      "cost_improvement_over_baseline_pct": 1.9058295964125787,
+      "winner_hit_rate": 0.9472158973297454,
+      "winner_error_rate": 0.025667563651417927,
+      "winner_redteam_total_fa_pct": 5.555555555555555,
+      "winner_redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "r": 10,
+      "baseline_cost": 0.3253984682260402,
+      "grid_best_w": 0.95,
+      "grid_best_threshold": 0.66,
+      "grid_best_cost": 0.30945973918443387,
+      "and_gate_cost": 0.6232664044711239,
+      "winner": "grid_best",
+      "winner_cost": 0.30945973918443387,
+      "cost_improvement_over_baseline_pct": 4.898218829516546,
+      "winner_hit_rate": 0.9472158973297454,
+      "winner_error_rate": 0.025667563651417927,
+      "winner_redteam_total_fa_pct": 5.555555555555555,
+      "winner_redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "r": 20,
+      "baseline_cost": 0.6069136824673981,
+      "grid_best_w": 0.9,
+      "grid_best_threshold": 0.9,
+      "grid_best_cost": 0.4934796108466156,
+      "and_gate_cost": 0.7723038708341958,
+      "winner": "grid_best",
+      "winner_cost": 0.4934796108466156,
+      "cost_improvement_over_baseline_pct": 18.69031377899045,
+      "winner_hit_rate": 0.7963154626371352,
+      "winner_error_rate": 0.014489753674187538,
+      "winner_redteam_total_fa_pct": 1.9607843137254901,
+      "winner_redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "r": 50,
+      "baseline_cost": 1.4514593251914718,
+      "grid_best_w": 0.85,
+      "grid_best_threshold": 0.9,
+      "grid_best_cost": 0.8695922169323121,
+      "and_gate_cost": 1.2194162699234112,
+      "winner": "grid_best",
+      "winner_cost": 0.8695922169323121,
+      "cost_improvement_over_baseline_pct": 40.08841985168283,
+      "winner_hit_rate": 0.5754502173463051,
+      "winner_error_rate": 0.008900848685572345,
+      "winner_redteam_total_fa_pct": 0.32679738562091504,
+      "winner_redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "r": 100,
+      "baseline_cost": 2.8590353963982613,
+      "grid_best_w": 0.05,
+      "grid_best_threshold": 0.9,
+      "grid_best_cost": 1.041606292693024,
+      "and_gate_cost": 1.9646036017387702,
+      "winner": "grid_best",
+      "winner_cost": 1.041606292693024,
+      "cost_improvement_over_baseline_pct": 63.56791196061396,
+      "winner_hit_rate": 0.020492651624922375,
+      "winner_error_rate": 0.000620989443179466,
+      "winner_redteam_total_fa_pct": 0.0,
+      "winner_redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "r": 200,
+      "baseline_cost": 5.67418753881184,
+      "grid_best_w": 0.05,
+      "grid_best_threshold": 0.9,
+      "grid_best_cost": 1.1037052370109708,
+      "and_gate_cost": 3.4549782653694887,
+      "winner": "grid_best",
+      "winner_cost": 1.1037052370109708,
+      "cost_improvement_over_baseline_pct": 80.54866481832774,
+      "winner_hit_rate": 0.020492651624922375,
+      "winner_error_rate": 0.000620989443179466,
+      "winner_redteam_total_fa_pct": 0.0,
+      "winner_redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "r": 500,
+      "baseline_cost": 14.119643966052578,
+      "grid_best_w": 0.05,
+      "grid_best_threshold": 0.9,
+      "grid_best_cost": 1.2900020699648105,
+      "and_gate_cost": 7.926102256261643,
+      "winner": "grid_best",
+      "winner_cost": 1.2900020699648105,
+      "cost_improvement_over_baseline_pct": 90.86377763443383,
+      "winner_hit_rate": 0.020492651624922375,
+      "winner_error_rate": 0.000620989443179466,
+      "winner_redteam_total_fa_pct": 0.0,
+      "winner_redteam_entity_swap_fa_pct": 0.0
+    }
+  ],
+  "full_grid": [
+    {
+      "w": 0.0,
+      "threshold": 0.1,
+      "hit_rate": 0.9751604222728214,
+      "error_rate": 0.049265162492237634,
+      "redteam_total_fa_pct": 73.52941176470588,
+      "redteam_entity_swap_fa_pct": 74.35897435897436
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.14,
+      "hit_rate": 0.9664665700683088,
+      "error_rate": 0.048644173049058166,
+      "redteam_total_fa_pct": 69.6078431372549,
+      "redteam_entity_swap_fa_pct": 61.53846153846154
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.18,
+      "hit_rate": 0.9542537776857793,
+      "error_rate": 0.047609190643759056,
+      "redteam_total_fa_pct": 65.359477124183,
+      "redteam_entity_swap_fa_pct": 56.41025641025641
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.22,
+      "hit_rate": 0.9399710204926516,
+      "error_rate": 0.04678120471951977,
+      "redteam_total_fa_pct": 63.0718954248366,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.26,
+      "hit_rate": 0.9215483336783274,
+      "error_rate": 0.04491823638998137,
+      "redteam_total_fa_pct": 60.45751633986928,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.3,
+      "hit_rate": 0.9020906644587042,
+      "error_rate": 0.044297246946801906,
+      "redteam_total_fa_pct": 56.86274509803921,
+      "redteam_entity_swap_fa_pct": 43.58974358974359
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.34,
+      "hit_rate": 0.8716621817429103,
+      "error_rate": 0.04181328917408404,
+      "redteam_total_fa_pct": 53.59477124183007,
+      "redteam_entity_swap_fa_pct": 41.02564102564102
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.38,
+      "hit_rate": 0.830262885530946,
+      "error_rate": 0.03808735251500724,
+      "redteam_total_fa_pct": 50.0,
+      "redteam_entity_swap_fa_pct": 38.46153846153847
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.42,
+      "hit_rate": 0.7803767335955288,
+      "error_rate": 0.034775408818050094,
+      "redteam_total_fa_pct": 47.05882352941176,
+      "redteam_entity_swap_fa_pct": 35.8974358974359
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.46,
+      "hit_rate": 0.7008900848685572,
+      "error_rate": 0.0291865038294349,
+      "redteam_total_fa_pct": 40.19607843137255,
+      "redteam_entity_swap_fa_pct": 30.76923076923077
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.5,
+      "hit_rate": 0.5427447733388533,
+      "error_rate": 0.021320637549161664,
+      "redteam_total_fa_pct": 12.418300653594772,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.54,
+      "hit_rate": 0.3535499896501759,
+      "error_rate": 0.014489753674187538,
+      "redteam_total_fa_pct": 2.6143790849673203,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.58,
+      "hit_rate": 0.26785344649140963,
+      "error_rate": 0.009935831090871455,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.62,
+      "hit_rate": 0.20285655143862555,
+      "error_rate": 0.007037880356033948,
+      "redteam_total_fa_pct": 1.3071895424836601,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.66,
+      "hit_rate": 0.15669633616228523,
+      "error_rate": 0.005795901469675016,
+      "redteam_total_fa_pct": 0.9803921568627451,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.7,
+      "hit_rate": 0.11922997309045746,
+      "error_rate": 0.004553922583316084,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.74,
+      "hit_rate": 0.09273442351480025,
+      "error_rate": 0.004139929621196439,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.78,
+      "hit_rate": 0.06727385634444215,
+      "error_rate": 0.0020699648105982197,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.82,
+      "hit_rate": 0.04885116953011799,
+      "error_rate": 0.001448975367418754,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.86,
+      "hit_rate": 0.03229145104533223,
+      "error_rate": 0.0010349824052991099,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.0,
+      "threshold": 0.9,
+      "hit_rate": 0.020285655143862553,
+      "error_rate": 0.000620989443179466,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.1,
+      "hit_rate": 0.9824052991099151,
+      "error_rate": 0.04947215897329745,
+      "redteam_total_fa_pct": 73.52941176470588,
+      "redteam_entity_swap_fa_pct": 74.35897435897436
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.14,
+      "hit_rate": 0.974539432829642,
+      "error_rate": 0.04843717656799834,
+      "redteam_total_fa_pct": 69.28104575163398,
+      "redteam_entity_swap_fa_pct": 64.1025641025641
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.18,
+      "hit_rate": 0.9654315876630097,
+      "error_rate": 0.04781618712481888,
+      "redteam_total_fa_pct": 65.359477124183,
+      "redteam_entity_swap_fa_pct": 56.41025641025641
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.22,
+      "hit_rate": 0.9521838128751812,
+      "error_rate": 0.04678120471951977,
+      "redteam_total_fa_pct": 61.76470588235294,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.26,
+      "hit_rate": 0.9364520803146347,
+      "error_rate": 0.04491823638998137,
+      "redteam_total_fa_pct": 58.82352941176471,
+      "redteam_entity_swap_fa_pct": 48.717948717948715
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.3,
+      "hit_rate": 0.9176154005381909,
+      "error_rate": 0.04409025046574208,
+      "redteam_total_fa_pct": 56.5359477124183,
+      "redteam_entity_swap_fa_pct": 46.15384615384615
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.34,
+      "hit_rate": 0.8919478368867729,
+      "error_rate": 0.04202028565514386,
+      "redteam_total_fa_pct": 51.9607843137255,
+      "redteam_entity_swap_fa_pct": 41.02564102564102
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.38,
+      "hit_rate": 0.8575864210308425,
+      "error_rate": 0.03808735251500724,
+      "redteam_total_fa_pct": 49.01960784313725,
+      "redteam_entity_swap_fa_pct": 41.02564102564102
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.42,
+      "hit_rate": 0.8153591388946388,
+      "error_rate": 0.03456841233699027,
+      "redteam_total_fa_pct": 44.44444444444444,
+      "redteam_entity_swap_fa_pct": 35.8974358974359
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.46,
+      "hit_rate": 0.7491202649554958,
+      "error_rate": 0.029393500310494723,
+      "redteam_total_fa_pct": 33.66013071895425,
+      "redteam_entity_swap_fa_pct": 20.51282051282051
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.5,
+      "hit_rate": 0.6512109294142,
+      "error_rate": 0.023183605878700064,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 7.6923076923076925
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.54,
+      "hit_rate": 0.4235148002483958,
+      "error_rate": 0.014903746636307183,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.58,
+      "hit_rate": 0.30945973918443387,
+      "error_rate": 0.010970813496170566,
+      "redteam_total_fa_pct": 1.6339869281045754,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.62,
+      "hit_rate": 0.227903125646864,
+      "error_rate": 0.0074518733181535915,
+      "redteam_total_fa_pct": 0.9803921568627451,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.66,
+      "hit_rate": 0.169737114469054,
+      "error_rate": 0.00517491202649555,
+      "redteam_total_fa_pct": 0.6535947712418301,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.7,
+      "hit_rate": 0.13040778306768785,
+      "error_rate": 0.004760919064375905,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.74,
+      "hit_rate": 0.09873732146553509,
+      "error_rate": 0.003932933140136618,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.78,
+      "hit_rate": 0.0734837507762368,
+      "error_rate": 0.0026909542537776857,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.82,
+      "hit_rate": 0.05216311322707514,
+      "error_rate": 0.001448975367418754,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.86,
+      "hit_rate": 0.03498240529910992,
+      "error_rate": 0.0010349824052991099,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.05,
+      "threshold": 0.9,
+      "hit_rate": 0.020492651624922375,
+      "error_rate": 0.000620989443179466,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.1,
+      "hit_rate": 0.9948250879735044,
+      "error_rate": 0.04967915545435728,
+      "redteam_total_fa_pct": 74.18300653594771,
+      "redteam_entity_swap_fa_pct": 74.35897435897436
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.14,
+      "hit_rate": 0.9832332850341544,
+      "error_rate": 0.04843717656799834,
+      "redteam_total_fa_pct": 68.95424836601308,
+      "redteam_entity_swap_fa_pct": 61.53846153846154
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.18,
+      "hit_rate": 0.9735044504243427,
+      "error_rate": 0.04781618712481888,
+      "redteam_total_fa_pct": 65.0326797385621,
+      "redteam_entity_swap_fa_pct": 56.41025641025641
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.22,
+      "hit_rate": 0.9643966052577106,
+      "error_rate": 0.04678120471951977,
+      "redteam_total_fa_pct": 61.43790849673203,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.26,
+      "hit_rate": 0.9490788656592838,
+      "error_rate": 0.04491823638998137,
+      "redteam_total_fa_pct": 57.51633986928104,
+      "redteam_entity_swap_fa_pct": 48.717948717948715
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.3,
+      "hit_rate": 0.932519147174498,
+      "error_rate": 0.04388325398468226,
+      "redteam_total_fa_pct": 54.90196078431373,
+      "redteam_entity_swap_fa_pct": 43.58974358974359
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.34,
+      "hit_rate": 0.9118194990685158,
+      "error_rate": 0.04160629269302422,
+      "redteam_total_fa_pct": 50.65359477124183,
+      "redteam_entity_swap_fa_pct": 43.58974358974359
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.38,
+      "hit_rate": 0.8832539846822604,
+      "error_rate": 0.03932933140136618,
+      "redteam_total_fa_pct": 48.03921568627451,
+      "redteam_entity_swap_fa_pct": 41.02564102564102
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.42,
+      "hit_rate": 0.8443386462430139,
+      "error_rate": 0.03394742289381081,
+      "redteam_total_fa_pct": 41.17647058823529,
+      "redteam_entity_swap_fa_pct": 35.8974358974359
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.46,
+      "hit_rate": 0.7909335541295798,
+      "error_rate": 0.028772510867315255,
+      "redteam_total_fa_pct": 9.477124183006536,
+      "redteam_entity_swap_fa_pct": 10.256410256410255
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.5,
+      "hit_rate": 0.712688884288967,
+      "error_rate": 0.023804595321879528,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 10.256410256410255
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.54,
+      "hit_rate": 0.5816601117780997,
+      "error_rate": 0.018215690333264336,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.58,
+      "hit_rate": 0.3568619333471331,
+      "error_rate": 0.011798799420409853,
+      "redteam_total_fa_pct": 1.3071895424836601,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.62,
+      "hit_rate": 0.2606085696543159,
+      "error_rate": 0.007658869799213414,
+      "redteam_total_fa_pct": 0.6535947712418301,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.66,
+      "hit_rate": 0.19250672738563446,
+      "error_rate": 0.00517491202649555,
+      "redteam_total_fa_pct": 0.6535947712418301,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.7,
+      "hit_rate": 0.14262057545021734,
+      "error_rate": 0.004553922583316084,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.74,
+      "hit_rate": 0.10577520182156903,
+      "error_rate": 0.003932933140136618,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.78,
+      "hit_rate": 0.07679569447319395,
+      "error_rate": 0.002483957772717864,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.82,
+      "hit_rate": 0.05381908507555372,
+      "error_rate": 0.0016559718484785758,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.86,
+      "hit_rate": 0.03705237010970813,
+      "error_rate": 0.001241978886358932,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.1,
+      "threshold": 0.9,
+      "hit_rate": 0.02090664458704202,
+      "error_rate": 0.0008279859242392879,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.1,
+      "hit_rate": 0.9966880563030428,
+      "error_rate": 0.05009314841647692,
+      "redteam_total_fa_pct": 75.16339869281046,
+      "redteam_entity_swap_fa_pct": 79.48717948717949
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.14,
+      "hit_rate": 0.994204098530325,
+      "error_rate": 0.04885116953011799,
+      "redteam_total_fa_pct": 70.58823529411765,
+      "redteam_entity_swap_fa_pct": 69.23076923076923
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.18,
+      "hit_rate": 0.9832332850341544,
+      "error_rate": 0.04781618712481888,
+      "redteam_total_fa_pct": 64.05228758169935,
+      "redteam_entity_swap_fa_pct": 56.41025641025641
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.22,
+      "hit_rate": 0.9712274891326848,
+      "error_rate": 0.04636721175740013,
+      "redteam_total_fa_pct": 61.76470588235294,
+      "redteam_entity_swap_fa_pct": 56.41025641025641
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.26,
+      "hit_rate": 0.9623266404471124,
+      "error_rate": 0.04533222935210102,
+      "redteam_total_fa_pct": 56.5359477124183,
+      "redteam_entity_swap_fa_pct": 46.15384615384615
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.3,
+      "hit_rate": 0.9457669219623266,
+      "error_rate": 0.04284827157938315,
+      "redteam_total_fa_pct": 53.26797385620915,
+      "redteam_entity_swap_fa_pct": 43.58974358974359
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.34,
+      "hit_rate": 0.9273442351480025,
+      "error_rate": 0.04098530324984475,
+      "redteam_total_fa_pct": 49.34640522875817,
+      "redteam_entity_swap_fa_pct": 43.58974358974359
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.38,
+      "hit_rate": 0.9018836679776444,
+      "error_rate": 0.0376733595528876,
+      "redteam_total_fa_pct": 44.771241830065364,
+      "redteam_entity_swap_fa_pct": 43.58974358974359
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.42,
+      "hit_rate": 0.8689712274891327,
+      "error_rate": 0.03353342993169116,
+      "redteam_total_fa_pct": 28.75816993464052,
+      "redteam_entity_swap_fa_pct": 23.076923076923077
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.46,
+      "hit_rate": 0.8238459946180915,
+      "error_rate": 0.028358517905195613,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.5,
+      "hit_rate": 0.7636100186296833,
+      "error_rate": 0.02483957772717864,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 10.256410256410255
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.54,
+      "hit_rate": 0.6737735458497206,
+      "error_rate": 0.0206996481059822,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 7.6923076923076925
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.58,
+      "hit_rate": 0.4483543779755744,
+      "error_rate": 0.01241978886358932,
+      "redteam_total_fa_pct": 0.6535947712418301,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.62,
+      "hit_rate": 0.3044918236389981,
+      "error_rate": 0.008693852204512523,
+      "redteam_total_fa_pct": 0.6535947712418301,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.66,
+      "hit_rate": 0.21796729455599254,
+      "error_rate": 0.006002897950734837,
+      "redteam_total_fa_pct": 0.6535947712418301,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.7,
+      "hit_rate": 0.15855930449182365,
+      "error_rate": 0.004553922583316084,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.74,
+      "hit_rate": 0.11591802939350031,
+      "error_rate": 0.003932933140136618,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.78,
+      "hit_rate": 0.084868557234527,
+      "error_rate": 0.00310494721589733,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.82,
+      "hit_rate": 0.0583730076588698,
+      "error_rate": 0.0016559718484785758,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.86,
+      "hit_rate": 0.04057131028772511,
+      "error_rate": 0.001241978886358932,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.15,
+      "threshold": 0.9,
+      "hit_rate": 0.02297660939764024,
+      "error_rate": 0.0008279859242392879,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.1,
+      "hit_rate": 0.9966880563030428,
+      "error_rate": 0.05009314841647692,
+      "redteam_total_fa_pct": 75.16339869281046,
+      "redteam_entity_swap_fa_pct": 79.48717948717949
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.14,
+      "hit_rate": 0.9954460774166839,
+      "error_rate": 0.049265162492237634,
+      "redteam_total_fa_pct": 69.93464052287581,
+      "redteam_entity_swap_fa_pct": 69.23076923076923
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.18,
+      "hit_rate": 0.9931691161250259,
+      "error_rate": 0.0480231836058787,
+      "redteam_total_fa_pct": 65.68627450980392,
+      "redteam_entity_swap_fa_pct": 64.1025641025641
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.22,
+      "hit_rate": 0.9819913061477955,
+      "error_rate": 0.0461602152763403,
+      "redteam_total_fa_pct": 59.80392156862745,
+      "redteam_entity_swap_fa_pct": 51.28205128205128
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.26,
+      "hit_rate": 0.9701925067273857,
+      "error_rate": 0.04533222935210102,
+      "redteam_total_fa_pct": 56.5359477124183,
+      "redteam_entity_swap_fa_pct": 48.717948717948715
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.3,
+      "hit_rate": 0.9586007037880356,
+      "error_rate": 0.04264127509832333,
+      "redteam_total_fa_pct": 50.98039215686274,
+      "redteam_entity_swap_fa_pct": 43.58974358974359
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.34,
+      "hit_rate": 0.9426619747464293,
+      "error_rate": 0.040157317325605464,
+      "redteam_total_fa_pct": 48.36601307189542,
+      "redteam_entity_swap_fa_pct": 43.58974358974359
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.38,
+      "hit_rate": 0.9196853653487891,
+      "error_rate": 0.03622438418546885,
+      "redteam_total_fa_pct": 39.869281045751634,
+      "redteam_entity_swap_fa_pct": 35.8974358974359
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.42,
+      "hit_rate": 0.8923618298488926,
+      "error_rate": 0.03270544400745187,
+      "redteam_total_fa_pct": 9.15032679738562,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.46,
+      "hit_rate": 0.8503415441937487,
+      "error_rate": 0.027944524943075966,
+      "redteam_total_fa_pct": 4.901960784313726,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.5,
+      "hit_rate": 0.8031463465121093,
+      "error_rate": 0.02504657420823846,
+      "redteam_total_fa_pct": 2.941176470588235,
+      "redteam_entity_swap_fa_pct": 12.82051282051282
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.54,
+      "hit_rate": 0.7311115711032913,
+      "error_rate": 0.021113641068101843,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 10.256410256410255
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.58,
+      "hit_rate": 0.6085696543158766,
+      "error_rate": 0.016559718484785758,
+      "redteam_total_fa_pct": 0.6535947712418301,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.62,
+      "hit_rate": 0.3645208031463465,
+      "error_rate": 0.010142827571931277,
+      "redteam_total_fa_pct": 0.6535947712418301,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.66,
+      "hit_rate": 0.25543365762782033,
+      "error_rate": 0.006623887393914303,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.7,
+      "hit_rate": 0.1798799420409853,
+      "error_rate": 0.004346926102256262,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.74,
+      "hit_rate": 0.1289588077002691,
+      "error_rate": 0.003932933140136618,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.78,
+      "hit_rate": 0.09335541295797971,
+      "error_rate": 0.003518940178016974,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.82,
+      "hit_rate": 0.06416890912854481,
+      "error_rate": 0.0018629683295383979,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.86,
+      "hit_rate": 0.04284827157938315,
+      "error_rate": 0.001241978886358932,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.2,
+      "threshold": 0.9,
+      "hit_rate": 0.02504657420823846,
+      "error_rate": 0.0010349824052991099,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.1,
+      "hit_rate": 0.9966880563030428,
+      "error_rate": 0.05009314841647692,
+      "redteam_total_fa_pct": 74.18300653594771,
+      "redteam_entity_swap_fa_pct": 79.48717948717949
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.14,
+      "hit_rate": 0.9956530738977437,
+      "error_rate": 0.049265162492237634,
+      "redteam_total_fa_pct": 68.62745098039215,
+      "redteam_entity_swap_fa_pct": 69.23076923076923
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.18,
+      "hit_rate": 0.9937901055682054,
+      "error_rate": 0.04781618712481888,
+      "redteam_total_fa_pct": 64.70588235294117,
+      "redteam_entity_swap_fa_pct": 64.1025641025641
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.22,
+      "hit_rate": 0.990685158352308,
+      "error_rate": 0.04636721175740013,
+      "redteam_total_fa_pct": 59.80392156862745,
+      "redteam_entity_swap_fa_pct": 58.97435897435898
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.26,
+      "hit_rate": 0.981370316704616,
+      "error_rate": 0.04512523287104119,
+      "redteam_total_fa_pct": 54.57516339869281,
+      "redteam_entity_swap_fa_pct": 46.15384615384615
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.3,
+      "hit_rate": 0.966259573587249,
+      "error_rate": 0.04202028565514386,
+      "redteam_total_fa_pct": 50.65359477124183,
+      "redteam_entity_swap_fa_pct": 46.15384615384615
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.34,
+      "hit_rate": 0.9530117987994204,
+      "error_rate": 0.038915338439246536,
+      "redteam_total_fa_pct": 44.44444444444444,
+      "redteam_entity_swap_fa_pct": 41.02564102564102
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.38,
+      "hit_rate": 0.9341751190229766,
+      "error_rate": 0.034154419374870626,
+      "redteam_total_fa_pct": 15.359477124183007,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.42,
+      "hit_rate": 0.9087145518526185,
+      "error_rate": 0.03187745808321259,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.46,
+      "hit_rate": 0.8776650796936452,
+      "error_rate": 0.028565514386255434,
+      "redteam_total_fa_pct": 4.901960784313726,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.5,
+      "hit_rate": 0.8379217553301593,
+      "error_rate": 0.025460567170358103,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.54,
+      "hit_rate": 0.7822397019250673,
+      "error_rate": 0.023183605878700064,
+      "redteam_total_fa_pct": 1.6339869281045754,
+      "redteam_entity_swap_fa_pct": 10.256410256410255
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.58,
+      "hit_rate": 0.6936452080314635,
+      "error_rate": 0.019250672738563443,
+      "redteam_total_fa_pct": 1.3071895424836601,
+      "redteam_entity_swap_fa_pct": 10.256410256410255
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.62,
+      "hit_rate": 0.5021734630511281,
+      "error_rate": 0.011798799420409853,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.66,
+      "hit_rate": 0.30345684123369904,
+      "error_rate": 0.007658869799213414,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.7,
+      "hit_rate": 0.20761747050300144,
+      "error_rate": 0.00517491202649555,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.74,
+      "hit_rate": 0.14531152970399502,
+      "error_rate": 0.004139929621196439,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.78,
+      "hit_rate": 0.10122127923825296,
+      "error_rate": 0.003518940178016974,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.82,
+      "hit_rate": 0.07120678948457876,
+      "error_rate": 0.0020699648105982197,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.86,
+      "hit_rate": 0.046574208238459945,
+      "error_rate": 0.001241978886358932,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.25,
+      "threshold": 0.9,
+      "hit_rate": 0.02711653901883668,
+      "error_rate": 0.0010349824052991099,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.1,
+      "hit_rate": 0.9966880563030428,
+      "error_rate": 0.05009314841647692,
+      "redteam_total_fa_pct": 73.20261437908496,
+      "redteam_entity_swap_fa_pct": 79.48717948717949
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.14,
+      "hit_rate": 0.9958600703788035,
+      "error_rate": 0.04947215897329745,
+      "redteam_total_fa_pct": 68.30065359477125,
+      "redteam_entity_swap_fa_pct": 69.23076923076923
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.18,
+      "hit_rate": 0.9933761126060857,
+      "error_rate": 0.04740219416269923,
+      "redteam_total_fa_pct": 64.05228758169935,
+      "redteam_entity_swap_fa_pct": 64.1025641025641
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.22,
+      "hit_rate": 0.9915131442765474,
+      "error_rate": 0.04636721175740013,
+      "redteam_total_fa_pct": 59.150326797385624,
+      "redteam_entity_swap_fa_pct": 56.41025641025641
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.26,
+      "hit_rate": 0.9869592216932312,
+      "error_rate": 0.044297246946801906,
+      "redteam_total_fa_pct": 54.57516339869281,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.3,
+      "hit_rate": 0.9788863589318981,
+      "error_rate": 0.04202028565514386,
+      "redteam_total_fa_pct": 48.69281045751634,
+      "redteam_entity_swap_fa_pct": 46.15384615384615
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.34,
+      "hit_rate": 0.9612916580418133,
+      "error_rate": 0.03725936659076796,
+      "redteam_total_fa_pct": 36.9281045751634,
+      "redteam_entity_swap_fa_pct": 30.76923076923077
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.38,
+      "hit_rate": 0.9443179465949079,
+      "error_rate": 0.0329124404885117,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.42,
+      "hit_rate": 0.9246532808942248,
+      "error_rate": 0.03022148623473401,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.46,
+      "hit_rate": 0.898778720761747,
+      "error_rate": 0.028358517905195613,
+      "redteam_total_fa_pct": 4.248366013071895,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.5,
+      "hit_rate": 0.8666942661974747,
+      "error_rate": 0.02628855309459739,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.54,
+      "hit_rate": 0.8209480438832539,
+      "error_rate": 0.023804595321879528,
+      "redteam_total_fa_pct": 2.6143790849673203,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.58,
+      "hit_rate": 0.7534671910577521,
+      "error_rate": 0.0206996481059822,
+      "redteam_total_fa_pct": 1.3071895424836601,
+      "redteam_entity_swap_fa_pct": 7.6923076923076925
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.62,
+      "hit_rate": 0.6464500103498241,
+      "error_rate": 0.016352722003725936,
+      "redteam_total_fa_pct": 0.6535947712418301,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.66,
+      "hit_rate": 0.37673359552887603,
+      "error_rate": 0.00952183812875181,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.7,
+      "hit_rate": 0.24963775615814532,
+      "error_rate": 0.00620989443179466,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.74,
+      "hit_rate": 0.1647691989236183,
+      "error_rate": 0.004139929621196439,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.78,
+      "hit_rate": 0.11550403643138067,
+      "error_rate": 0.0037259366590767957,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.82,
+      "hit_rate": 0.07741668391637342,
+      "error_rate": 0.002483957772717864,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.86,
+      "hit_rate": 0.0517491202649555,
+      "error_rate": 0.001448975367418754,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.3,
+      "threshold": 0.9,
+      "hit_rate": 0.028565514386255434,
+      "error_rate": 0.0010349824052991099,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.1,
+      "hit_rate": 0.996481059821983,
+      "error_rate": 0.05009314841647692,
+      "redteam_total_fa_pct": 71.89542483660131,
+      "redteam_entity_swap_fa_pct": 74.35897435897436
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.14,
+      "hit_rate": 0.9954460774166839,
+      "error_rate": 0.049265162492237634,
+      "redteam_total_fa_pct": 67.3202614379085,
+      "redteam_entity_swap_fa_pct": 66.66666666666666
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.18,
+      "hit_rate": 0.9929621196439661,
+      "error_rate": 0.04698820120057959,
+      "redteam_total_fa_pct": 62.41830065359477,
+      "redteam_entity_swap_fa_pct": 61.53846153846154
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.22,
+      "hit_rate": 0.9902711653901883,
+      "error_rate": 0.045539225833160835,
+      "redteam_total_fa_pct": 57.84313725490197,
+      "redteam_entity_swap_fa_pct": 56.41025641025641
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.26,
+      "hit_rate": 0.9869592216932312,
+      "error_rate": 0.043469261022562614,
+      "redteam_total_fa_pct": 52.94117647058824,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.3,
+      "hit_rate": 0.9811633202235562,
+      "error_rate": 0.03974332436348582,
+      "redteam_total_fa_pct": 46.40522875816993,
+      "redteam_entity_swap_fa_pct": 51.28205128205128
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.34,
+      "hit_rate": 0.9716414820948044,
+      "error_rate": 0.035189401780169736,
+      "redteam_total_fa_pct": 12.418300653594772,
+      "redteam_entity_swap_fa_pct": 20.51282051282051
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.38,
+      "hit_rate": 0.9515628234320016,
+      "error_rate": 0.031463465121092944,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 20.51282051282051
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.42,
+      "hit_rate": 0.9370730697578141,
+      "error_rate": 0.030014489753674187,
+      "redteam_total_fa_pct": 4.901960784313726,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.46,
+      "hit_rate": 0.9169944110950113,
+      "error_rate": 0.027530531980956324,
+      "redteam_total_fa_pct": 3.9215686274509802,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.5,
+      "hit_rate": 0.8917408404057131,
+      "error_rate": 0.02628855309459739,
+      "redteam_total_fa_pct": 3.594771241830065,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.54,
+      "hit_rate": 0.8567584351066032,
+      "error_rate": 0.025460567170358103,
+      "redteam_total_fa_pct": 2.287581699346405,
+      "redteam_entity_swap_fa_pct": 12.82051282051282
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.58,
+      "hit_rate": 0.805837300765887,
+      "error_rate": 0.022355619954460774,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 12.82051282051282
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.62,
+      "hit_rate": 0.7211757400124198,
+      "error_rate": 0.018215690333264336,
+      "redteam_total_fa_pct": 0.9803921568627451,
+      "redteam_entity_swap_fa_pct": 7.6923076923076925
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.66,
+      "hit_rate": 0.5640654108880149,
+      "error_rate": 0.01345477126888843,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.7,
+      "hit_rate": 0.3044918236389981,
+      "error_rate": 0.007244876837093769,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.74,
+      "hit_rate": 0.19809563237424963,
+      "error_rate": 0.004760919064375905,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.78,
+      "hit_rate": 0.13144276547298697,
+      "error_rate": 0.003932933140136618,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.82,
+      "hit_rate": 0.08962947629890292,
+      "error_rate": 0.0033119436969571516,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.86,
+      "hit_rate": 0.05609604636721176,
+      "error_rate": 0.0016559718484785758,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.35,
+      "threshold": 0.9,
+      "hit_rate": 0.03187745808321259,
+      "error_rate": 0.0010349824052991099,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.1,
+      "hit_rate": 0.9960670668598633,
+      "error_rate": 0.04947215897329745,
+      "redteam_total_fa_pct": 71.24183006535948,
+      "redteam_entity_swap_fa_pct": 71.7948717948718
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.14,
+      "hit_rate": 0.9950320844545643,
+      "error_rate": 0.04885116953011799,
+      "redteam_total_fa_pct": 66.33986928104575,
+      "redteam_entity_swap_fa_pct": 66.66666666666666
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.18,
+      "hit_rate": 0.9927551231629063,
+      "error_rate": 0.04678120471951977,
+      "redteam_total_fa_pct": 60.130718954248366,
+      "redteam_entity_swap_fa_pct": 58.97435897435898
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.22,
+      "hit_rate": 0.9894431794659491,
+      "error_rate": 0.04491823638998137,
+      "redteam_total_fa_pct": 55.55555555555556,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.26,
+      "hit_rate": 0.986131235768992,
+      "error_rate": 0.0424342786172635,
+      "redteam_total_fa_pct": 50.98039215686274,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.3,
+      "hit_rate": 0.9805423307803768,
+      "error_rate": 0.03808735251500724,
+      "redteam_total_fa_pct": 33.33333333333333,
+      "redteam_entity_swap_fa_pct": 38.46153846153847
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.34,
+      "hit_rate": 0.9718484785758642,
+      "error_rate": 0.03456841233699027,
+      "redteam_total_fa_pct": 8.169934640522875,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.38,
+      "hit_rate": 0.9635686193334714,
+      "error_rate": 0.030842475677913476,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 23.076923076923077
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.42,
+      "hit_rate": 0.9461809149244463,
+      "error_rate": 0.028979507348375077,
+      "redteam_total_fa_pct": 4.248366013071895,
+      "redteam_entity_swap_fa_pct": 20.51282051282051
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.46,
+      "hit_rate": 0.9318981577313186,
+      "error_rate": 0.027944524943075966,
+      "redteam_total_fa_pct": 3.9215686274509802,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.5,
+      "hit_rate": 0.9118194990685158,
+      "error_rate": 0.026495549575657213,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.54,
+      "hit_rate": 0.8861519354170979,
+      "error_rate": 0.02587456013247775,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.58,
+      "hit_rate": 0.8430966673566549,
+      "error_rate": 0.02401159180293935,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 12.82051282051282
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.62,
+      "hit_rate": 0.7816187124818879,
+      "error_rate": 0.021320637549161664,
+      "redteam_total_fa_pct": 1.6339869281045754,
+      "redteam_entity_swap_fa_pct": 10.256410256410255
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.66,
+      "hit_rate": 0.6785344649140964,
+      "error_rate": 0.016973711446905404,
+      "redteam_total_fa_pct": 0.9803921568627451,
+      "redteam_entity_swap_fa_pct": 7.6923076923076925
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.7,
+      "hit_rate": 0.4067480852825502,
+      "error_rate": 0.00931484164769199,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.74,
+      "hit_rate": 0.24342786172635064,
+      "error_rate": 0.006002897950734837,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.78,
+      "hit_rate": 0.1533843924653281,
+      "error_rate": 0.004139929621196439,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.82,
+      "hit_rate": 0.09935831090871455,
+      "error_rate": 0.0033119436969571516,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.86,
+      "hit_rate": 0.062305940799006414,
+      "error_rate": 0.0016559718484785758,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.4,
+      "threshold": 0.9,
+      "hit_rate": 0.03539639826122956,
+      "error_rate": 0.0010349824052991099,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.1,
+      "hit_rate": 0.9962740633409232,
+      "error_rate": 0.04947215897329745,
+      "redteam_total_fa_pct": 70.58823529411765,
+      "redteam_entity_swap_fa_pct": 71.7948717948718
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.14,
+      "hit_rate": 0.9948250879735044,
+      "error_rate": 0.048644173049058166,
+      "redteam_total_fa_pct": 65.0326797385621,
+      "redteam_entity_swap_fa_pct": 66.66666666666666
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.18,
+      "hit_rate": 0.9923411302007866,
+      "error_rate": 0.046574208238459945,
+      "redteam_total_fa_pct": 59.150326797385624,
+      "redteam_entity_swap_fa_pct": 56.41025641025641
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.22,
+      "hit_rate": 0.9886151935417098,
+      "error_rate": 0.044297246946801906,
+      "redteam_total_fa_pct": 53.26797385620915,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.26,
+      "hit_rate": 0.9834402815152142,
+      "error_rate": 0.040157317325605464,
+      "redteam_total_fa_pct": 45.09803921568628,
+      "redteam_entity_swap_fa_pct": 48.717948717948715
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.3,
+      "hit_rate": 0.9764024011591803,
+      "error_rate": 0.035189401780169736,
+      "redteam_total_fa_pct": 10.457516339869281,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.34,
+      "hit_rate": 0.9691575243220866,
+      "error_rate": 0.0329124404885117,
+      "redteam_total_fa_pct": 7.516339869281046,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.38,
+      "hit_rate": 0.963982612295591,
+      "error_rate": 0.03042848271579383,
+      "redteam_total_fa_pct": 6.862745098039216,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.42,
+      "hit_rate": 0.958186710825916,
+      "error_rate": 0.028772510867315255,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 23.076923076923077
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.46,
+      "hit_rate": 0.9428689712274891,
+      "error_rate": 0.027944524943075966,
+      "redteam_total_fa_pct": 3.594771241830065,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.5,
+      "hit_rate": 0.9275512316290623,
+      "error_rate": 0.026495549575657213,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.54,
+      "hit_rate": 0.9080935624094391,
+      "error_rate": 0.02587456013247775,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.58,
+      "hit_rate": 0.8780790726557649,
+      "error_rate": 0.02483957772717864,
+      "redteam_total_fa_pct": 2.287581699346405,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.62,
+      "hit_rate": 0.8275719312771683,
+      "error_rate": 0.022355619954460774,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 12.82051282051282
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.66,
+      "hit_rate": 0.7526392051335127,
+      "error_rate": 0.01904367625750362,
+      "redteam_total_fa_pct": 0.9803921568627451,
+      "redteam_entity_swap_fa_pct": 7.6923076923076925
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.7,
+      "hit_rate": 0.605878700062099,
+      "error_rate": 0.013661767749948251,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.74,
+      "hit_rate": 0.3109087145518526,
+      "error_rate": 0.007244876837093769,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.78,
+      "hit_rate": 0.18712481887807908,
+      "error_rate": 0.004760919064375905,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.82,
+      "hit_rate": 0.11550403643138067,
+      "error_rate": 0.0037259366590767957,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.86,
+      "hit_rate": 0.07058580004139929,
+      "error_rate": 0.0018629683295383979,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.45,
+      "threshold": 0.9,
+      "hit_rate": 0.038915338439246536,
+      "error_rate": 0.0010349824052991099,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.1,
+      "hit_rate": 0.9962740633409232,
+      "error_rate": 0.04947215897329745,
+      "redteam_total_fa_pct": 68.95424836601308,
+      "redteam_entity_swap_fa_pct": 71.7948717948718
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.14,
+      "hit_rate": 0.9939971020492652,
+      "error_rate": 0.04781618712481888,
+      "redteam_total_fa_pct": 63.725490196078425,
+      "redteam_entity_swap_fa_pct": 66.66666666666666
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.18,
+      "hit_rate": 0.9908921548333678,
+      "error_rate": 0.045539225833160835,
+      "redteam_total_fa_pct": 56.86274509803921,
+      "redteam_entity_swap_fa_pct": 56.41025641025641
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.22,
+      "hit_rate": 0.9871662181742911,
+      "error_rate": 0.04284827157938315,
+      "redteam_total_fa_pct": 51.307189542483655,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.26,
+      "hit_rate": 0.9801283378182571,
+      "error_rate": 0.0376733595528876,
+      "redteam_total_fa_pct": 16.33986928104575,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.3,
+      "hit_rate": 0.9728834609811633,
+      "error_rate": 0.03394742289381081,
+      "redteam_total_fa_pct": 8.169934640522875,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.34,
+      "hit_rate": 0.9677085489546677,
+      "error_rate": 0.031463465121092944,
+      "redteam_total_fa_pct": 7.18954248366013,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.38,
+      "hit_rate": 0.9637756158145312,
+      "error_rate": 0.03042848271579383,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.42,
+      "hit_rate": 0.9594286897122749,
+      "error_rate": 0.028772510867315255,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.46,
+      "hit_rate": 0.9540467812047195,
+      "error_rate": 0.027737528462016145,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 23.076923076923077
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.5,
+      "hit_rate": 0.9422479817843097,
+      "error_rate": 0.02711653901883668,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.54,
+      "hit_rate": 0.9256882632995239,
+      "error_rate": 0.02628855309459739,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.58,
+      "hit_rate": 0.9039536327882426,
+      "error_rate": 0.02525357068929828,
+      "redteam_total_fa_pct": 2.941176470588235,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.62,
+      "hit_rate": 0.8660732767542951,
+      "error_rate": 0.02421858828399917,
+      "redteam_total_fa_pct": 2.287581699346405,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.66,
+      "hit_rate": 0.8128751811219209,
+      "error_rate": 0.021734630511281307,
+      "redteam_total_fa_pct": 1.6339869281045754,
+      "redteam_entity_swap_fa_pct": 12.82051282051282
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.7,
+      "hit_rate": 0.7122748913268474,
+      "error_rate": 0.016973711446905404,
+      "redteam_total_fa_pct": 0.9803921568627451,
+      "redteam_entity_swap_fa_pct": 7.6923076923076925
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.74,
+      "hit_rate": 0.47505692403229144,
+      "error_rate": 0.00931484164769199,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.78,
+      "hit_rate": 0.23866694266197475,
+      "error_rate": 0.006002897950734837,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.82,
+      "hit_rate": 0.13682467398054232,
+      "error_rate": 0.003932933140136618,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.86,
+      "hit_rate": 0.08259159594286897,
+      "error_rate": 0.002483957772717864,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.5,
+      "threshold": 0.9,
+      "hit_rate": 0.04471123990892155,
+      "error_rate": 0.001241978886358932,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.1,
+      "hit_rate": 0.9960670668598633,
+      "error_rate": 0.049265162492237634,
+      "redteam_total_fa_pct": 67.97385620915033,
+      "redteam_entity_swap_fa_pct": 66.66666666666666
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.14,
+      "hit_rate": 0.9931691161250259,
+      "error_rate": 0.04719519768163941,
+      "redteam_total_fa_pct": 60.45751633986928,
+      "redteam_entity_swap_fa_pct": 61.53846153846154
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.18,
+      "hit_rate": 0.9890291865038294,
+      "error_rate": 0.044297246946801906,
+      "redteam_total_fa_pct": 53.59477124183007,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.22,
+      "hit_rate": 0.983647277996274,
+      "error_rate": 0.03974332436348582,
+      "redteam_total_fa_pct": 44.11764705882353,
+      "redteam_entity_swap_fa_pct": 48.717948717948715
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.26,
+      "hit_rate": 0.9764024011591803,
+      "error_rate": 0.03539639826122956,
+      "redteam_total_fa_pct": 8.169934640522875,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.3,
+      "hit_rate": 0.9703995032084455,
+      "error_rate": 0.0329124404885117,
+      "redteam_total_fa_pct": 7.516339869281046,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.34,
+      "hit_rate": 0.9664665700683088,
+      "error_rate": 0.030635479196853655,
+      "redteam_total_fa_pct": 6.862745098039216,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.38,
+      "hit_rate": 0.9633616228524116,
+      "error_rate": 0.029600496791554545,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.42,
+      "hit_rate": 0.9594286897122749,
+      "error_rate": 0.028772510867315255,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.46,
+      "hit_rate": 0.9561167460153177,
+      "error_rate": 0.027944524943075966,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.5,
+      "hit_rate": 0.951148830469882,
+      "error_rate": 0.027323535499896502,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.54,
+      "hit_rate": 0.9426619747464293,
+      "error_rate": 0.02690954253777686,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.58,
+      "hit_rate": 0.9238252949699856,
+      "error_rate": 0.02587456013247775,
+      "redteam_total_fa_pct": 2.941176470588235,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.62,
+      "hit_rate": 0.8975367418753881,
+      "error_rate": 0.024632581246118817,
+      "redteam_total_fa_pct": 2.287581699346405,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.66,
+      "hit_rate": 0.8565514386255434,
+      "error_rate": 0.023390602359759885,
+      "redteam_total_fa_pct": 2.287581699346405,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.7,
+      "hit_rate": 0.7874146139515629,
+      "error_rate": 0.019457669219623268,
+      "redteam_total_fa_pct": 1.6339869281045754,
+      "redteam_entity_swap_fa_pct": 12.82051282051282
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.74,
+      "hit_rate": 0.6553508590353964,
+      "error_rate": 0.014282757193127717,
+      "redteam_total_fa_pct": 0.6535947712418301,
+      "redteam_entity_swap_fa_pct": 5.128205128205128
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.78,
+      "hit_rate": 0.3208445456427241,
+      "error_rate": 0.007244876837093769,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.82,
+      "hit_rate": 0.17263506520389155,
+      "error_rate": 0.003932933140136618,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.86,
+      "hit_rate": 0.0950113848064583,
+      "error_rate": 0.002897950734837508,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.55,
+      "threshold": 0.9,
+      "hit_rate": 0.049886151935417095,
+      "error_rate": 0.001448975367418754,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.1,
+      "hit_rate": 0.9958600703788035,
+      "error_rate": 0.04905816601117781,
+      "redteam_total_fa_pct": 67.3202614379085,
+      "redteam_entity_swap_fa_pct": 66.66666666666666
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.14,
+      "hit_rate": 0.9927551231629063,
+      "error_rate": 0.04698820120057959,
+      "redteam_total_fa_pct": 58.82352941176471,
+      "redteam_entity_swap_fa_pct": 58.97435897435898
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.18,
+      "hit_rate": 0.9873732146553509,
+      "error_rate": 0.04284827157938315,
+      "redteam_total_fa_pct": 51.307189542483655,
+      "redteam_entity_swap_fa_pct": 53.84615384615385
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.22,
+      "hit_rate": 0.9793003518940178,
+      "error_rate": 0.03663837714758849,
+      "redteam_total_fa_pct": 12.745098039215685,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.26,
+      "hit_rate": 0.9726764645001035,
+      "error_rate": 0.03394742289381081,
+      "redteam_total_fa_pct": 7.516339869281046,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.3,
+      "hit_rate": 0.9687435313599668,
+      "error_rate": 0.03167046160215276,
+      "redteam_total_fa_pct": 6.862745098039216,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.34,
+      "hit_rate": 0.9656385841440696,
+      "error_rate": 0.030635479196853655,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.38,
+      "hit_rate": 0.962740633409232,
+      "error_rate": 0.029600496791554545,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.42,
+      "hit_rate": 0.9592216932312151,
+      "error_rate": 0.028772510867315255,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.46,
+      "hit_rate": 0.9567377354584972,
+      "error_rate": 0.027944524943075966,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.5,
+      "hit_rate": 0.9536327882425999,
+      "error_rate": 0.027737528462016145,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.54,
+      "hit_rate": 0.9490788656592838,
+      "error_rate": 0.02690954253777686,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.58,
+      "hit_rate": 0.9422479817843097,
+      "error_rate": 0.02608155661353757,
+      "redteam_total_fa_pct": 3.594771241830065,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.62,
+      "hit_rate": 0.9203063547919685,
+      "error_rate": 0.02525357068929828,
+      "redteam_total_fa_pct": 2.287581699346405,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.66,
+      "hit_rate": 0.8923618298488926,
+      "error_rate": 0.02421858828399917,
+      "redteam_total_fa_pct": 2.287581699346405,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.7,
+      "hit_rate": 0.8433036638377147,
+      "error_rate": 0.02194162699234113,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.74,
+      "hit_rate": 0.7532601945766922,
+      "error_rate": 0.01800869385220451,
+      "redteam_total_fa_pct": 0.9803921568627451,
+      "redteam_entity_swap_fa_pct": 7.6923076923076925
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.78,
+      "hit_rate": 0.5574415234941006,
+      "error_rate": 0.010763817015110743,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.82,
+      "hit_rate": 0.23266404471123991,
+      "error_rate": 0.005795901469675016,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.86,
+      "hit_rate": 0.11778099772303871,
+      "error_rate": 0.00310494721589733,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.6,
+      "threshold": 0.9,
+      "hit_rate": 0.058993997102049264,
+      "error_rate": 0.0016559718484785758,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.1,
+      "hit_rate": 0.9948250879735044,
+      "error_rate": 0.0480231836058787,
+      "redteam_total_fa_pct": 66.01307189542483,
+      "redteam_entity_swap_fa_pct": 66.66666666666666
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.14,
+      "hit_rate": 0.9908921548333678,
+      "error_rate": 0.04512523287104119,
+      "redteam_total_fa_pct": 54.57516339869281,
+      "redteam_entity_swap_fa_pct": 58.97435897435898
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.18,
+      "hit_rate": 0.9830262885530946,
+      "error_rate": 0.039122334920306354,
+      "redteam_total_fa_pct": 38.23529411764706,
+      "redteam_entity_swap_fa_pct": 38.46153846153847
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.22,
+      "hit_rate": 0.9749534257917616,
+      "error_rate": 0.034775408818050094,
+      "redteam_total_fa_pct": 8.169934640522875,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.26,
+      "hit_rate": 0.9699855102463258,
+      "error_rate": 0.032498447526392055,
+      "redteam_total_fa_pct": 6.862745098039216,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.3,
+      "hit_rate": 0.9672945559925481,
+      "error_rate": 0.03125646864003312,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.34,
+      "hit_rate": 0.9648105982198303,
+      "error_rate": 0.030635479196853655,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.38,
+      "hit_rate": 0.9617056510039329,
+      "error_rate": 0.028979507348375077,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.42,
+      "hit_rate": 0.9594286897122749,
+      "error_rate": 0.028565514386255434,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.46,
+      "hit_rate": 0.9573587249016766,
+      "error_rate": 0.028358517905195613,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.5,
+      "hit_rate": 0.954667770647899,
+      "error_rate": 0.027737528462016145,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.54,
+      "hit_rate": 0.951148830469882,
+      "error_rate": 0.02711653901883668,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.58,
+      "hit_rate": 0.9472158973297454,
+      "error_rate": 0.02628855309459739,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.62,
+      "hit_rate": 0.9399710204926516,
+      "error_rate": 0.025667563651417927,
+      "redteam_total_fa_pct": 3.9215686274509802,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.66,
+      "hit_rate": 0.9180293935003105,
+      "error_rate": 0.02483957772717864,
+      "redteam_total_fa_pct": 2.287581699346405,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.7,
+      "hit_rate": 0.8873939143034568,
+      "error_rate": 0.023597598840819706,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.74,
+      "hit_rate": 0.82550196646657,
+      "error_rate": 0.0206996481059822,
+      "redteam_total_fa_pct": 1.6339869281045754,
+      "redteam_entity_swap_fa_pct": 12.82051282051282
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.78,
+      "hit_rate": 0.7060649968950528,
+      "error_rate": 0.015938729041606294,
+      "redteam_total_fa_pct": 0.9803921568627451,
+      "redteam_entity_swap_fa_pct": 7.6923076923076925
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.82,
+      "hit_rate": 0.3454771268888429,
+      "error_rate": 0.007244876837093769,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.86,
+      "hit_rate": 0.15110743117367004,
+      "error_rate": 0.003518940178016974,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.65,
+      "threshold": 0.9,
+      "hit_rate": 0.07182777892775823,
+      "error_rate": 0.0020699648105982197,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.1,
+      "hit_rate": 0.994204098530325,
+      "error_rate": 0.04740219416269923,
+      "redteam_total_fa_pct": 62.41830065359477,
+      "redteam_entity_swap_fa_pct": 64.1025641025641
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.14,
+      "hit_rate": 0.9886151935417098,
+      "error_rate": 0.043262264541502796,
+      "redteam_total_fa_pct": 51.633986928104584,
+      "redteam_entity_swap_fa_pct": 56.41025641025641
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.18,
+      "hit_rate": 0.977851376526599,
+      "error_rate": 0.03560339474228938,
+      "redteam_total_fa_pct": 9.477124183006536,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.22,
+      "hit_rate": 0.9712274891326848,
+      "error_rate": 0.0329124404885117,
+      "redteam_total_fa_pct": 6.862745098039216,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.26,
+      "hit_rate": 0.9693645208031464,
+      "error_rate": 0.032498447526392055,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.3,
+      "hit_rate": 0.9666735665493686,
+      "error_rate": 0.03125646864003312,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.34,
+      "hit_rate": 0.9631546263713517,
+      "error_rate": 0.029807493272614366,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.38,
+      "hit_rate": 0.9614986545228731,
+      "error_rate": 0.0291865038294349,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.42,
+      "hit_rate": 0.9596356861933347,
+      "error_rate": 0.028565514386255434,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.46,
+      "hit_rate": 0.9573587249016766,
+      "error_rate": 0.028565514386255434,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.5,
+      "hit_rate": 0.9544607741668392,
+      "error_rate": 0.027737528462016145,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.54,
+      "hit_rate": 0.9525978058373008,
+      "error_rate": 0.027323535499896502,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.58,
+      "hit_rate": 0.9494928586214034,
+      "error_rate": 0.026495549575657213,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.62,
+      "hit_rate": 0.9436969571517284,
+      "error_rate": 0.025667563651417927,
+      "redteam_total_fa_pct": 5.228758169934641,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.66,
+      "hit_rate": 0.935003104947216,
+      "error_rate": 0.02525357068929828,
+      "redteam_total_fa_pct": 3.594771241830065,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.7,
+      "hit_rate": 0.9161664251707721,
+      "error_rate": 0.02421858828399917,
+      "redteam_total_fa_pct": 2.287581699346405,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.74,
+      "hit_rate": 0.8793210515421238,
+      "error_rate": 0.022355619954460774,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.78,
+      "hit_rate": 0.8019043676257503,
+      "error_rate": 0.0188366797764438,
+      "redteam_total_fa_pct": 1.6339869281045754,
+      "redteam_entity_swap_fa_pct": 12.82051282051282
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.82,
+      "hit_rate": 0.6267853446491409,
+      "error_rate": 0.011798799420409853,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.86,
+      "hit_rate": 0.22438418546884703,
+      "error_rate": 0.005381908507555371,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.7,
+      "threshold": 0.9,
+      "hit_rate": 0.0894224798178431,
+      "error_rate": 0.0026909542537776857,
+      "redteam_total_fa_pct": 0.0,
+      "redteam_entity_swap_fa_pct": 0.0
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.1,
+      "hit_rate": 0.9923411302007866,
+      "error_rate": 0.0461602152763403,
+      "redteam_total_fa_pct": 58.496732026143796,
+      "redteam_entity_swap_fa_pct": 58.97435897435898
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.14,
+      "hit_rate": 0.9819913061477955,
+      "error_rate": 0.03829434899606707,
+      "redteam_total_fa_pct": 16.013071895424837,
+      "redteam_entity_swap_fa_pct": 30.76923076923077
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.18,
+      "hit_rate": 0.9726764645001035,
+      "error_rate": 0.03374042641275098,
+      "redteam_total_fa_pct": 7.516339869281046,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.22,
+      "hit_rate": 0.9699855102463258,
+      "error_rate": 0.032498447526392055,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.26,
+      "hit_rate": 0.9675015524736079,
+      "error_rate": 0.031463465121092944,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.3,
+      "hit_rate": 0.9654315876630097,
+      "error_rate": 0.030842475677913476,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.34,
+      "hit_rate": 0.9635686193334714,
+      "error_rate": 0.030014489753674187,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.38,
+      "hit_rate": 0.9610846615607535,
+      "error_rate": 0.0291865038294349,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.42,
+      "hit_rate": 0.9600496791554544,
+      "error_rate": 0.028772510867315255,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.46,
+      "hit_rate": 0.9571517284206168,
+      "error_rate": 0.028565514386255434,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.5,
+      "hit_rate": 0.9550817636100186,
+      "error_rate": 0.027944524943075966,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.54,
+      "hit_rate": 0.9532187952804803,
+      "error_rate": 0.027323535499896502,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.58,
+      "hit_rate": 0.9503208445456427,
+      "error_rate": 0.026495549575657213,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.62,
+      "hit_rate": 0.9472158973297454,
+      "error_rate": 0.02628855309459739,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.66,
+      "hit_rate": 0.9410060028979508,
+      "error_rate": 0.02525357068929828,
+      "redteam_total_fa_pct": 4.901960784313726,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.7,
+      "hit_rate": 0.932519147174498,
+      "error_rate": 0.02504657420823846,
+      "redteam_total_fa_pct": 3.594771241830065,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.74,
+      "hit_rate": 0.9122334920306355,
+      "error_rate": 0.023183605878700064,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.78,
+      "hit_rate": 0.8677292486027738,
+      "error_rate": 0.021320637549161664,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.82,
+      "hit_rate": 0.7658869799213414,
+      "error_rate": 0.017180707927965225,
+      "redteam_total_fa_pct": 1.6339869281045754,
+      "redteam_entity_swap_fa_pct": 12.82051282051282
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.86,
+      "hit_rate": 0.4394535292900021,
+      "error_rate": 0.008072862761333057,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.75,
+      "threshold": 0.9,
+      "hit_rate": 0.12378389567377354,
+      "error_rate": 0.002897950734837508,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.1,
+      "hit_rate": 0.9886151935417098,
+      "error_rate": 0.04284827157938315,
+      "redteam_total_fa_pct": 52.614379084967325,
+      "redteam_entity_swap_fa_pct": 56.41025641025641
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.14,
+      "hit_rate": 0.9757814117160009,
+      "error_rate": 0.034775408818050094,
+      "redteam_total_fa_pct": 8.823529411764707,
+      "redteam_entity_swap_fa_pct": 30.76923076923077
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.18,
+      "hit_rate": 0.9708134961705651,
+      "error_rate": 0.0329124404885117,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.22,
+      "hit_rate": 0.9695715172842062,
+      "error_rate": 0.032498447526392055,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.26,
+      "hit_rate": 0.9668805630304285,
+      "error_rate": 0.03125646864003312,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.3,
+      "hit_rate": 0.9648105982198303,
+      "error_rate": 0.03042848271579383,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.34,
+      "hit_rate": 0.9629476298902918,
+      "error_rate": 0.029807493272614366,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.38,
+      "hit_rate": 0.9608776650796936,
+      "error_rate": 0.0291865038294349,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.42,
+      "hit_rate": 0.9600496791554544,
+      "error_rate": 0.028979507348375077,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.46,
+      "hit_rate": 0.9575657213827365,
+      "error_rate": 0.028565514386255434,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.5,
+      "hit_rate": 0.9550817636100186,
+      "error_rate": 0.027944524943075966,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.54,
+      "hit_rate": 0.9534257917615401,
+      "error_rate": 0.027323535499896502,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.58,
+      "hit_rate": 0.9509418339888221,
+      "error_rate": 0.026702546056717034,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.62,
+      "hit_rate": 0.9484578762161043,
+      "error_rate": 0.02628855309459739,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.66,
+      "hit_rate": 0.943075967708549,
+      "error_rate": 0.025460567170358103,
+      "redteam_total_fa_pct": 5.228758169934641,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.7,
+      "hit_rate": 0.9364520803146347,
+      "error_rate": 0.02504657420823846,
+      "redteam_total_fa_pct": 4.57516339869281,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.74,
+      "hit_rate": 0.9296211964396606,
+      "error_rate": 0.02421858828399917,
+      "redteam_total_fa_pct": 3.594771241830065,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.78,
+      "hit_rate": 0.9087145518526185,
+      "error_rate": 0.023183605878700064,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.82,
+      "hit_rate": 0.8540674808528255,
+      "error_rate": 0.01987166218174291,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.86,
+      "hit_rate": 0.7002690954253777,
+      "error_rate": 0.01345477126888843,
+      "redteam_total_fa_pct": 0.9803921568627451,
+      "redteam_entity_swap_fa_pct": 7.6923076923076925
+    },
+    {
+      "w": 0.8,
+      "threshold": 0.9,
+      "hit_rate": 0.21113641068101843,
+      "error_rate": 0.004346926102256262,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.1,
+      "hit_rate": 0.9795073483750776,
+      "error_rate": 0.035810391223349204,
+      "redteam_total_fa_pct": 11.437908496732026,
+      "redteam_entity_swap_fa_pct": 30.76923076923077
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.14,
+      "hit_rate": 0.972055475056924,
+      "error_rate": 0.03374042641275098,
+      "redteam_total_fa_pct": 7.8431372549019605,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.18,
+      "hit_rate": 0.9699855102463258,
+      "error_rate": 0.03270544400745187,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.22,
+      "hit_rate": 0.9677085489546677,
+      "error_rate": 0.031463465121092944,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.26,
+      "hit_rate": 0.9658455806251294,
+      "error_rate": 0.031049472158973298,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.3,
+      "hit_rate": 0.9643966052577106,
+      "error_rate": 0.03042848271579383,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.34,
+      "hit_rate": 0.9629476298902918,
+      "error_rate": 0.030014489753674187,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.38,
+      "hit_rate": 0.9602566756365142,
+      "error_rate": 0.028979507348375077,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.42,
+      "hit_rate": 0.9598426826743945,
+      "error_rate": 0.028979507348375077,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.46,
+      "hit_rate": 0.9577727178637964,
+      "error_rate": 0.028565514386255434,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.5,
+      "hit_rate": 0.9554957565721383,
+      "error_rate": 0.02815152142413579,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.54,
+      "hit_rate": 0.9538397847236597,
+      "error_rate": 0.027530531980956324,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.58,
+      "hit_rate": 0.9513558269509418,
+      "error_rate": 0.02690954253777686,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.62,
+      "hit_rate": 0.9494928586214034,
+      "error_rate": 0.02628855309459739,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.66,
+      "hit_rate": 0.9449389360380873,
+      "error_rate": 0.025667563651417927,
+      "redteam_total_fa_pct": 5.228758169934641,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.7,
+      "hit_rate": 0.9395570275305319,
+      "error_rate": 0.02525357068929828,
+      "redteam_total_fa_pct": 4.901960784313726,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.74,
+      "hit_rate": 0.9335541295797971,
+      "error_rate": 0.024632581246118817,
+      "redteam_total_fa_pct": 4.57516339869281,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.78,
+      "hit_rate": 0.9248602773752846,
+      "error_rate": 0.023804595321879528,
+      "redteam_total_fa_pct": 3.2679738562091507,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.82,
+      "hit_rate": 0.9041606292693024,
+      "error_rate": 0.022148623473400953,
+      "redteam_total_fa_pct": 2.287581699346405,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.86,
+      "hit_rate": 0.8348168081142621,
+      "error_rate": 0.0188366797764438,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.85,
+      "threshold": 0.9,
+      "hit_rate": 0.5754502173463051,
+      "error_rate": 0.008900848685572345,
+      "redteam_total_fa_pct": 0.32679738562091504,
+      "redteam_entity_swap_fa_pct": 2.564102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.1,
+      "hit_rate": 0.9741254398675222,
+      "error_rate": 0.03394742289381081,
+      "redteam_total_fa_pct": 8.823529411764707,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.14,
+      "hit_rate": 0.9712274891326848,
+      "error_rate": 0.03332643345063134,
+      "redteam_total_fa_pct": 7.8431372549019605,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.18,
+      "hit_rate": 0.9693645208031464,
+      "error_rate": 0.03229145104533223,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.22,
+      "hit_rate": 0.9672945559925481,
+      "error_rate": 0.03125646864003312,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.26,
+      "hit_rate": 0.9654315876630097,
+      "error_rate": 0.030635479196853655,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.3,
+      "hit_rate": 0.963982612295591,
+      "error_rate": 0.03022148623473401,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.34,
+      "hit_rate": 0.962740633409232,
+      "error_rate": 0.030014489753674187,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.38,
+      "hit_rate": 0.960463672117574,
+      "error_rate": 0.028979507348375077,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.42,
+      "hit_rate": 0.9594286897122749,
+      "error_rate": 0.028979507348375077,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.46,
+      "hit_rate": 0.9579797143448562,
+      "error_rate": 0.028772510867315255,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.5,
+      "hit_rate": 0.9557027530531981,
+      "error_rate": 0.02815152142413579,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.54,
+      "hit_rate": 0.9538397847236597,
+      "error_rate": 0.027530531980956324,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.58,
+      "hit_rate": 0.9521838128751812,
+      "error_rate": 0.02690954253777686,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.62,
+      "hit_rate": 0.9503208445456427,
+      "error_rate": 0.026495549575657213,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.66,
+      "hit_rate": 0.946594907886566,
+      "error_rate": 0.025667563651417927,
+      "redteam_total_fa_pct": 5.228758169934641,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.7,
+      "hit_rate": 0.9414199958600704,
+      "error_rate": 0.02525357068929828,
+      "redteam_total_fa_pct": 4.901960784313726,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.74,
+      "hit_rate": 0.9366590767956945,
+      "error_rate": 0.02483957772717864,
+      "redteam_total_fa_pct": 4.57516339869281,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.78,
+      "hit_rate": 0.9285862140343614,
+      "error_rate": 0.02401159180293935,
+      "redteam_total_fa_pct": 4.248366013071895,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.82,
+      "hit_rate": 0.91865038294349,
+      "error_rate": 0.023597598840819706,
+      "redteam_total_fa_pct": 3.9215686274509802,
+      "redteam_entity_swap_fa_pct": 23.076923076923077
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.86,
+      "hit_rate": 0.8927758228110122,
+      "error_rate": 0.02090664458704202,
+      "redteam_total_fa_pct": 2.6143790849673203,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.9,
+      "threshold": 0.9,
+      "hit_rate": 0.7963154626371352,
+      "error_rate": 0.014489753674187538,
+      "redteam_total_fa_pct": 1.9607843137254901,
+      "redteam_entity_swap_fa_pct": 15.384615384615385
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.1,
+      "hit_rate": 0.9718484785758642,
+      "error_rate": 0.03394742289381081,
+      "redteam_total_fa_pct": 8.49673202614379,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.14,
+      "hit_rate": 0.9699855102463258,
+      "error_rate": 0.03270544400745187,
+      "redteam_total_fa_pct": 7.8431372549019605,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.18,
+      "hit_rate": 0.9683295383978472,
+      "error_rate": 0.03167046160215276,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.22,
+      "hit_rate": 0.9666735665493686,
+      "error_rate": 0.03125646864003312,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.26,
+      "hit_rate": 0.9652245911819499,
+      "error_rate": 0.030635479196853655,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.3,
+      "hit_rate": 0.9633616228524116,
+      "error_rate": 0.03022148623473401,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.34,
+      "hit_rate": 0.9619126474849927,
+      "error_rate": 0.029807493272614366,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.38,
+      "hit_rate": 0.9606706685986338,
+      "error_rate": 0.0291865038294349,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.42,
+      "hit_rate": 0.9592216932312151,
+      "error_rate": 0.028979507348375077,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.46,
+      "hit_rate": 0.958186710825916,
+      "error_rate": 0.028772510867315255,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.5,
+      "hit_rate": 0.9557027530531981,
+      "error_rate": 0.02815152142413579,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.54,
+      "hit_rate": 0.954667770647899,
+      "error_rate": 0.027737528462016145,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.58,
+      "hit_rate": 0.9528048023183606,
+      "error_rate": 0.02711653901883668,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.62,
+      "hit_rate": 0.9507348375077623,
+      "error_rate": 0.026702546056717034,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.66,
+      "hit_rate": 0.9472158973297454,
+      "error_rate": 0.025667563651417927,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.7,
+      "hit_rate": 0.9439039536327882,
+      "error_rate": 0.025460567170358103,
+      "redteam_total_fa_pct": 5.228758169934641,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.74,
+      "hit_rate": 0.9389360380873525,
+      "error_rate": 0.02483957772717864,
+      "redteam_total_fa_pct": 4.57516339869281,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.78,
+      "hit_rate": 0.9333471330987373,
+      "error_rate": 0.024632581246118817,
+      "redteam_total_fa_pct": 4.57516339869281,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.82,
+      "hit_rate": 0.924446284413165,
+      "error_rate": 0.02401159180293935,
+      "redteam_total_fa_pct": 4.248366013071895,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.86,
+      "hit_rate": 0.9122334920306355,
+      "error_rate": 0.022562616435520596,
+      "redteam_total_fa_pct": 3.9215686274509802,
+      "redteam_entity_swap_fa_pct": 23.076923076923077
+    },
+    {
+      "w": 0.95,
+      "threshold": 0.9,
+      "hit_rate": 0.8780790726557649,
+      "error_rate": 0.019250672738563443,
+      "redteam_total_fa_pct": 2.941176470588235,
+      "redteam_entity_swap_fa_pct": 17.94871794871795
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.1,
+      "hit_rate": 0.9712274891326848,
+      "error_rate": 0.03332643345063134,
+      "redteam_total_fa_pct": 8.169934640522875,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.14,
+      "hit_rate": 0.9695715172842062,
+      "error_rate": 0.032498447526392055,
+      "redteam_total_fa_pct": 7.8431372549019605,
+      "redteam_entity_swap_fa_pct": 28.205128205128204
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.18,
+      "hit_rate": 0.9677085489546677,
+      "error_rate": 0.031463465121092944,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.22,
+      "hit_rate": 0.9658455806251294,
+      "error_rate": 0.030842475677913476,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.26,
+      "hit_rate": 0.9650175947008901,
+      "error_rate": 0.030635479196853655,
+      "redteam_total_fa_pct": 6.535947712418301,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.3,
+      "hit_rate": 0.9631546263713517,
+      "error_rate": 0.03022148623473401,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.34,
+      "hit_rate": 0.9614986545228731,
+      "error_rate": 0.029807493272614366,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.38,
+      "hit_rate": 0.9608776650796936,
+      "error_rate": 0.029393500310494723,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.42,
+      "hit_rate": 0.9592216932312151,
+      "error_rate": 0.028979507348375077,
+      "redteam_total_fa_pct": 6.209150326797386,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.46,
+      "hit_rate": 0.9586007037880356,
+      "error_rate": 0.028979507348375077,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.5,
+      "hit_rate": 0.9561167460153177,
+      "error_rate": 0.02815152142413579,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.54,
+      "hit_rate": 0.9548747671289588,
+      "error_rate": 0.027737528462016145,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.58,
+      "hit_rate": 0.9528048023183606,
+      "error_rate": 0.02711653901883668,
+      "redteam_total_fa_pct": 5.88235294117647,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.62,
+      "hit_rate": 0.9501138480645829,
+      "error_rate": 0.026495549575657213,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.66,
+      "hit_rate": 0.9478368867729249,
+      "error_rate": 0.02608155661353757,
+      "redteam_total_fa_pct": 5.555555555555555,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.7,
+      "hit_rate": 0.9455599254812668,
+      "error_rate": 0.025667563651417927,
+      "redteam_total_fa_pct": 5.228758169934641,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.74,
+      "hit_rate": 0.9399710204926516,
+      "error_rate": 0.02504657420823846,
+      "redteam_total_fa_pct": 4.901960784313726,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.78,
+      "hit_rate": 0.936038087352515,
+      "error_rate": 0.02483957772717864,
+      "redteam_total_fa_pct": 4.57516339869281,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.82,
+      "hit_rate": 0.9287932105154212,
+      "error_rate": 0.02401159180293935,
+      "redteam_total_fa_pct": 4.248366013071895,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.86,
+      "hit_rate": 0.9190643759056096,
+      "error_rate": 0.023597598840819706,
+      "redteam_total_fa_pct": 4.248366013071895,
+      "redteam_entity_swap_fa_pct": 25.64102564102564
+    },
+    {
+      "w": 1.0,
+      "threshold": 0.9,
+      "hit_rate": 0.8989857172428068,
+      "error_rate": 0.021320637549161664,
+      "redteam_total_fa_pct": 3.9215686274509802,
+      "redteam_entity_swap_fa_pct": 23.076923076923077
+    }
+  ]
+}
