@@ -73,6 +73,65 @@ research behind it, not the product. Python client:
 
 Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–28pp** hit rate at matched error rate. A separate reproduction fix for the adaptive-threshold baseline (Group B) raised its hit rate **4.4x–29.1x** across all three datasets (§5.2) — Group B sits at a different hit-rate scale and isn't part of the Go/No-Go comparison above. Full numbers, confidence intervals, and further robustness/ablation sections (noise, cold start, drift monitor, τ_high sensitivity, reranker capacity vs. training distribution, Conformal Risk Control, rewrite-vs-reject, Top-K cascade, CRC closed-loop self-selection, cost-sensitive reanalysis, LLM red-teaming, adversarial training, selective abstention, CRC validity, cached-query input, entity-swap fusion, joint decisions, Adaptive Conformal Inference) are in the paper, §5.9–§5.25.
 
+## Core results (§5.1–5.8)
+
+- **Group A: the static-threshold baseline (§5.1).** At a loose threshold,
+  error rate is already high — 11.4% on LmArena, 34.3% on SearchQueries —
+  confirming that plain similarity-threshold tuning alone cannot separate
+  correct reuse from confusable near-misses (e.g. "pause" vs. "cancel").
+- **Group B: adaptive threshold with a formal guarantee (§5.2).** The
+  faithfully-ported vCache algorithm drives hit rate to near zero
+  (0.02%–0.69%) while keeping error rate far below its target δ — a
+  structural cost of requiring the same cache entry to be hit ≥6 times
+  before it can be exploited. **[2026-08-17]** A porting bug (missing two
+  bootstrap seed observations the official code pre-seeds) meant the
+  official algorithm only needs 4, not 6; after the fix, hit rate rises
+  **4.4x–29.1x** across all three datasets with the guarantee still intact.
+- **Group C: the oracle ceiling (§5.3).** A perfect verifier delivers
+  **+20.6pp** (LmArena) / **+27.9pp** (SearchQueries) hit rate at matched
+  error rate over the static-threshold frontier — proof the mechanism has
+  real headroom, independent of which verifier ends up implementing it.
+- **Group D: an off-the-shelf verifier only cashes in a sliver (§5.4).**
+  Best net lead is +1.9pp on LmArena (less than a tenth of the oracle
+  ceiling, and 11/30 tested points do worse than the static threshold),
+  and the verifier is **net harmful** on SearchQueries under the paper's
+  original grid-searched threshold (23/36 losses). **[2026-08-15]** Under
+  an honestly-calibrated threshold (Youden's J on a held-out calibration
+  half, no peeking at test data), SearchQueries reverses to 6/6 wins
+  (+0.78pp to +3.67pp) — how much of the original "net harmful" verdict
+  was a genuine weakness versus a grid-search artifact is the paper's own
+  least-settled open question.
+- **The latency cost of going synchronous (§5.5).** The paper's original
+  70ms oracle-latency modeling assumption undershot a real measurement by
+  **~24x** (1687.8ms mean, DeepSeek as a stand-in for GPT-4.1-nano) —
+  later found to be mostly international-network overhead rather than
+  generation time. A same-region, connection-reused, no-GPU cross-encoder
+  deployment instead measures **p50 ~33ms / p95 ~44ms** full server-side
+  latency — the two numbers bound the real cost depending on whether the
+  gray zone is judged by an LLM or a scoring model.
+- **Group E: fine-tuning closes the gap (§5.6).** Fine-tuning the same
+  base verifier on a dataset's own gray-zone labels (which the online
+  system already produces for free) turns LmArena's fragile result into
+  one that strictly dominates the static-threshold frontier, and turns
+  SearchQueries from **net harmful** into **53/54 wins, 1 tie, 0 losses**
+  (+4.50pp). Replicated on a third, independently-sourced dataset (Quora
+  Question Pairs): 0 losses, +2.03pp. Holds under honest calibration too —
+  zero losses on all three datasets.
+- **Deployment robustness: noise, cold start, drift (§5.7).** The
+  fine-tuning recipe tolerates up to ~30% label noise before turning
+  harmful (consistent across all three datasets after a data-defect
+  correction), needs up to ~1,000 in-domain examples on the hardest
+  dataset before reliably helping, and shows only mild continued decay
+  over time — not zero, but not alarming either.
+- **A genuine production counter-example (§5.8).** On real, multi-year
+  customer-support Twitter traffic (Kaggle, Axelbrooke 2017), one of two
+  brands (comcastcares) shows fine-tuning turning *harmful* at every noise
+  level, cold-start size, and drift distance tested — traced to a single
+  monitorable cause: the gray-zone positive rate itself drifting 5x
+  between the training and deployment windows, not label quality or data
+  quantity. §5.9's change-point monitor catches this before it does
+  damage.
+
 ## Further ablations (§5.9–§5.25)
 
 - **Drift monitor (§5.9):** two change-point tests on gray-zone labels alone
@@ -155,6 +214,42 @@ Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–
   bound a deployment-scale interpretation — a window-scale ratio computable
   before deployment — and confirms it holds distribution-free; the bound is
   worst-case, though, and doesn't predict the size of real-world advantage.
+
+## Formal guarantees (§5.13, §5.25)
+
+Two results in this paper are exact, distribution-free guarantees, not
+point estimates or empirical trends:
+
+- **Conformal Risk Control (§5.13; Theorem 1, Angelopoulos et al., 2024).**
+  Calibrating the gray-zone reuse threshold via CRC gives a finite-sample
+  guarantee that the deployed error rate does not exceed a target level,
+  at any sample size — no asymptotic approximation, at near-oracle
+  efficiency (η≈1.0) across all three datasets. Requires the accept rule
+  to be strictly right-continuous (`score > λ`, not `≥`) and
+  calibration/deployment data to be exchangeable — the second assumption
+  is later shown to fail under a real chronological split on SearchQueries
+  (§5.21).
+- **ACI's finite-time bound (§5.25, this paper's own proposition).** For
+  any sequence of scores/labels — no i.i.d. or stationarity assumption
+  required, adversarial drift included — the windowed risk deviation of
+  an online adaptive threshold satisfies:
+
+  ```
+  | (1/W) sum(err_s) - alpha | <= min( (theta_max-theta_min)/(W*gamma), max(alpha, 1-alpha) )
+  ```
+
+  This closes the CRC guarantee's real violation observed on
+  SearchQueries (§5.13/§5.21): applying ACI online brings overall risk
+  within 0.0003–0.0005 of target at all four tested α levels, versus a
+  20–25% systematic overshoot for a static threshold. The bound is
+  worst-case — a window-scale diagnostic derived from it (`rho = W/W*`)
+  predicts only whether the bound itself is informative, *not* whether
+  ACI empirically beats a static baseline; a controlled window-length
+  sweep found ACI's real advantage can stay significant even where the
+  bound is vacuous (`rho << 1`).
+
+Full derivations, validity testing, and two corollaries (score-invariance;
+a hit-rate ceiling governed by the ROC curve) are in §5.13 and §5.25.
 
 ## Repository layout
 
