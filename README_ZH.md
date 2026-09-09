@@ -19,7 +19,13 @@
 - 这套微调方案能容忍现实量级的标签噪声(约 30%)和冷启动,也扛住了真实生产客服流量的检验——但发现了**一个真实存在的反例**,并且追溯到了一个具体、可监控的原因,还做出了一个能提前发现这个风险的监控原型。
 - **【2026-08-17 更新】** 发现并修复了自适应阈值基线(Group B)复现里的一个 bug——vCache 官方算法会给每个缓存条目预置两条合成的 bootstrap 观测,本文早期的复刻版本漏掉了这一步。修复后,Group B 的命中率在三个数据集上均提升 **4.4~29.1 倍**,错误率全程仍低于目标上限。
 
-**阅读论文:** [`PAPER.md`](PAPER.md)(中文)· [`PAPER_EN.md`](PAPER_EN.md) · [`PAPER_EN.tex`](PAPER_EN.tex)(LaTeX 源码)
+**阅读论文:** [`PAPER.md`](PAPER.md)(中文)· [`PAPER_EN.md`](PAPER_EN.md) · [`PAPER_EN.tex`](PAPER_EN.tex)(LaTeX 源码)——涵盖全部实验的完整技术报告。
+
+**姊妹论文:** 从同一批实验和基础设施独立提炼、各自聚焦更窄主题的独立成篇论文——
+[第一部分:核心发现与 Go/No-Go 判定](PAPER_CORE_STANDALONE.md)([EN](PAPER_CORE_STANDALONE_EN.md))·
+[有限样本风险控制](PAPER_B_FORMAL_RISK_CONTROL.md)([EN](PAPER_B_FORMAL_RISK_CONTROL_EN.md))——Conformal Risk Control、自选择反馈环与部署经济性·
+[对抗鲁棒性](PAPER_C_ADVERSARIAL_ROBUSTNESS.md)([EN](PAPER_C_ADVERSARIAL_ROBUSTNESS_EN.md))——红队测试暴露的缺口与训练时的部分修复·
+[整合与非平稳性适应](PAPER_D_INTEGRATION_NONSTATIONARY.md)([EN](PAPER_D_INTEGRATION_NONSTATIONARY_EN.md))——不确定性信号、丢弃的相似度信号与在线自适应阈值。
 
 **在线服务:** 本文验证的这套微调 + 漂移监控闭环,作为托管服务运行在 **[cacheverifier.com](https://www.cacheverifier.com)** —— 这个仓库是它背后的研究,不是产品本身。Python 客户端:[`cacheverifier-python`](https://github.com/imxinchengyou/cacheverifier-python) · [PyPI](https://pypi.org/project/cacheverifier/)。
 
