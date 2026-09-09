@@ -53,7 +53,22 @@ the hit-rate/error-rate trade-off?
   the target guarantee throughout.
 
 **Read the paper:** [`PAPER.md`](PAPER.md) (Chinese) · [`PAPER_EN.md`](PAPER_EN.md) ·
-[`PAPER_EN.tex`](PAPER_EN.tex) (LaTeX source)
+[`PAPER_EN.tex`](PAPER_EN.tex) (LaTeX source) — the complete technical report, covering every
+experiment in one document.
+
+**Companion papers:** independent, more tightly scoped spin-offs of the same underlying
+experiments and infrastructure, published separately —
+[Part I: Core Findings and the Go/No-Go Verdict](PAPER_CORE_STANDALONE.md)
+([EN](PAPER_CORE_STANDALONE_EN.md)) ·
+[Finite-Sample Risk Control](PAPER_B_FORMAL_RISK_CONTROL.md)
+([EN](PAPER_B_FORMAL_RISK_CONTROL_EN.md)) — Conformal Risk Control, a self-selection
+feedback loop, and deployment economics ·
+[Adversarial Robustness](PAPER_C_ADVERSARIAL_ROBUSTNESS.md)
+([EN](PAPER_C_ADVERSARIAL_ROBUSTNESS_EN.md)) — red-teaming gaps and a training-time
+partial fix ·
+[Integration & Non-Stationarity](PAPER_D_INTEGRATION_NONSTATIONARY.md)
+([EN](PAPER_D_INTEGRATION_NONSTATIONARY_EN.md)) — uncertainty signals, a discarded
+similarity signal, and online adaptive thresholds.
 
 **Hosted version:** the fine-tuning + drift-monitoring loop this paper validates is run
 as a service at **[cacheverifier.com](https://www.cacheverifier.com)** — this repo is the
