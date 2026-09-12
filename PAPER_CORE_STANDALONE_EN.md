@@ -2,6 +2,8 @@
 
 **Author:** Chengyou Xin
 
+**ORCID:** [0009-0008-2347-5136](https://orcid.org/0009-0008-2347-5136)
+
 **Affiliation:** LoopDot AI Research
 
 **Date:** 2026-07-26

@@ -1,6 +1,7 @@
 # Stress-Testing Semantic Cache Reuse Decisions: Uncertainty Signals, a Discarded Similarity Signal, and Online Adaptive Thresholds
 
 **Author:** Chengyou Xin
+**ORCID:** [0009-0008-2347-5136](https://orcid.org/0009-0008-2347-5136)
 **Affiliation:** LoopDot AI Research
 **Date:** 2026-09-08
 **Note:** This research project was originally released as a single, complete technical report covering all experiments (Zenodo DOI: 10.5281/zenodo.21703364, a concept DOI, always resolving to the latest version); this paper is one of the companion papers distilled from that project into an independent, self-contained unit. This paper is a companion to [Xin, C. (2026). Synchronous Online Verification Gating in Semantic Caches: An Empirical Study — Part I: Core Findings and the Go/No-Go Verdict. Zenodo. https://doi.org/10.5281/zenodo.22660442.](hereafter "the main paper"), reusing the main paper's datasets, gray-zone architecture, and honest-calibration protocol. This paper also builds on [Xin, C. (2026). Finite-Sample Risk Control for Semantic Cache Reuse Decisions: Formal Guarantees, a Self-Selection Feedback Loop, and Economics. Zenodo. https://doi.org/10.5281/zenodo.22663725.](hereafter "Paper B") and [Xin, C. (2026). Adversarial Robustness of Semantic Cache Verifiers: Gaps Exposed by Red-Teaming and Partial Repair via Training. Zenodo. https://doi.org/10.5281/zenodo.22661312.](hereafter "Paper C"). This paper is the only one of the current four papers that depends on all three of the others.
