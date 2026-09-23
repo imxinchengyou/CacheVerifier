@@ -6,6 +6,7 @@ authors:
   - family-names: "Xin"
     given-names: "Chengyou"
     affiliation: "LoopDot AI Research"
+    orcid: "https://orcid.org/0009-0008-2347-5136"
 date-released: 2026-07-26
 url: "https://github.com/imxinchengyou/CacheVerifier"
 repository-code: "https://github.com/imxinchengyou/CacheVerifier"

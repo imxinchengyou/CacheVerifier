@@ -3,7 +3,8 @@
   "creators": [
     {
       "name": "Xin, Chengyou",
-      "affiliation": "LoopDot AI Research"
+      "affiliation": "LoopDot AI Research",
+      "orcid": "0009-0008-2347-5136"
     }
   ],
   "description": "Code and experimental artifacts for \"Synchronous Online Verification Gating in Semantic Caches\" — an empirical study of real-time verifier gating for semantic cache hits, evaluated against static- and adaptive-threshold baselines on ~210k real requests across three datasets.",
