@@ -12,4 +12,4 @@ venv/
 # the public sources cited in PAPER.md 4.1 (HuggingFace vCache/SemBenchmark*,
 # Quora Question Pairs, Twitter Customer Support corpus) -- not redistributed
 # here, both for size (multi-GB) and to respect each source's own license.
-data/
+/data/
