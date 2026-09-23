@@ -6,6 +6,7 @@ English | [简体中文](README_ZH.md)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21703364.svg)](https://doi.org/10.5281/zenodo.21703364)
 [![PyPI](https://img.shields.io/pypi/v/cacheverifier)](https://pypi.org/project/cacheverifier/)
+[![tests](https://github.com/imxinchengyou/CacheVerifier/actions/workflows/tests.yml/badge.svg)](https://github.com/imxinchengyou/CacheVerifier/actions/workflows/tests.yml)
 
 > **[CacheVerifier](https://www.cacheverifier.com)** is a semantic cache verification
 > platform for LLM apps. This repository holds the research behind it.
