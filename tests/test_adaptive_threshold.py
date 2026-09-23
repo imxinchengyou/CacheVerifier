@@ -3,12 +3,18 @@ import random
 import numpy as np
 import pytest
 
-from cacheverifier.cache.adaptive_threshold import _VARIANCE_MAP, AdaptiveThresholdPolicy
+from cacheverifier.cache.adaptive_threshold import _VARIANCE_MAP, AdaptiveThresholdPolicy, _EmbeddingStats
 from cacheverifier.cache.store import CacheEntry, NeighborMatch
 from cacheverifier.data.schema import QueryRecord
 
 QUERY = QueryRecord(query_id="q", query="hello", answer="a", equivalence_id="c1")
 ENTRY_A = CacheEntry(query_id="entry-a", query="hi", answer="a", equivalence_id="c1")
+
+# vCache's official algorithm pre-seeds every cache entry with these two
+# synthetic bootstrap observations (see _EmbeddingStats.observations'
+# default_factory) so it only needs min_observations - 2 real misses before
+# it stops cold-starting.
+_BOOTSTRAP_SEED = _EmbeddingStats().observations
 
 
 def test_rejects_invalid_target_error_rate():
@@ -28,7 +34,7 @@ def test_decide_on_empty_cache_is_a_miss():
 def test_decide_before_min_observations_is_a_cold_start_miss():
     policy = AdaptiveThresholdPolicy(target_error_rate=0.1, min_observations=6)
     match = NeighborMatch(entry=ENTRY_A, similarity=0.95)
-    for _ in range(5):
+    for _ in range(6 - len(_BOOTSTRAP_SEED) - 1):
         policy.observe(QUERY, match, would_be_correct=True, action="miss")
 
     decision = policy.decide(QUERY, np.zeros(1), match)
@@ -41,17 +47,17 @@ def test_observe_only_records_on_miss():
     match = NeighborMatch(entry=ENTRY_A, similarity=0.9)
 
     policy.observe(QUERY, match, would_be_correct=True, action="hit")
-    assert policy._get_stats(ENTRY_A.query_id).observations == []
+    assert policy._get_stats(ENTRY_A.query_id).observations == _BOOTSTRAP_SEED
 
     policy.observe(QUERY, match, would_be_correct=True, action="miss")
-    assert policy._get_stats(ENTRY_A.query_id).observations == [(0.9, 1)]
+    assert policy._get_stats(ENTRY_A.query_id).observations == _BOOTSTRAP_SEED + [(0.9, 1)]
 
 
 def test_observe_ignores_missing_match_or_unknown_correctness():
     policy = AdaptiveThresholdPolicy(target_error_rate=0.1)
     policy.observe(QUERY, None, would_be_correct=None, action="miss")
     policy.observe(QUERY, NeighborMatch(entry=ENTRY_A, similarity=0.9), would_be_correct=None, action="miss")
-    assert policy._get_stats(ENTRY_A.query_id).observations == []
+    assert policy._get_stats(ENTRY_A.query_id).observations == _BOOTSTRAP_SEED
 
 
 def test_estimate_parameters_recovers_a_sensible_threshold_from_separable_data():

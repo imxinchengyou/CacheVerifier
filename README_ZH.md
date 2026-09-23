@@ -6,6 +6,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21703364.svg)](https://doi.org/10.5281/zenodo.21703364)
 [![PyPI](https://img.shields.io/pypi/v/cacheverifier)](https://pypi.org/project/cacheverifier/)
+[![tests](https://github.com/imxinchengyou/CacheVerifier/actions/workflows/tests.yml/badge.svg)](https://github.com/imxinchengyou/CacheVerifier/actions/workflows/tests.yml)
 
 > **[CacheVerifier](https://www.cacheverifier.com)** 是面向大模型应用的语义缓存验证平台。本仓库是它背后的研究。
 
