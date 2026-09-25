@@ -263,6 +263,55 @@ def crc_select_threshold(scores: np.ndarray, labels: np.ndarray, alpha: float, l
     return float(curve.thresholds[feasible[0]])
 
 
+def crc_select_threshold_weighted(
+    scores: np.ndarray,
+    labels: np.ndarray,
+    weights: np.ndarray,
+    alpha: float,
+    loss_bound: float = 1.0,
+    test_weight: float | None = None,
+) -> float | None:
+    """`crc_select_threshold` for a calibration pool whose points were
+    observed with unequal probabilities -- e.g. every rejected gray-zone
+    request (label always observed: it went to the LLM anyway) plus a random
+    audit of approved ones at rate p, each audited point carrying weight
+    1/p (PAPER_B_FORMAL_RISK_CONTROL.md §4.4, source S2).
+
+    Same selector as the unweighted version, with the empirical risk and
+    the finite-sample correction replaced by their weighted-conformal
+    counterparts (Tibshirani et al. 2019, "Conformal prediction under
+    covariate shift"; weighted CRC as in Angelopoulos et al. §4):
+
+        R_w(lambda) = sum_i w_i L_i(lambda) / W,   W = sum_i w_i
+        lambda_hat  = inf{ lambda : (W/(W+w*)) R_w(lambda) + B w*/(W+w*) <= alpha }
+
+    w* is the weight of the not-yet-seen test point; it defaults to
+    max(weights), the conservative choice when the test point's own
+    observation probability is unknown. With all weights equal to 1 this
+    is exactly `crc_select_threshold` (unit-tested).
+    """
+    n = len(labels)
+    if n == 0:
+        return None
+    weights = np.asarray(weights, dtype=float)
+    if weights.shape != (n,) or np.any(weights <= 0):
+        raise ValueError("weights must be positive, one per calibration point")
+    w_star = float(weights.max()) if test_weight is None else float(test_weight)
+
+    order = np.argsort(scores)
+    sorted_scores = np.asarray(scores)[order]
+    w_incorrect = np.where(np.asarray(labels)[order] == 0, weights[order], 0.0)
+    suffix_inclusive = np.concatenate([np.cumsum(w_incorrect[::-1])[::-1], [0.0]])
+    idx_right = np.searchsorted(sorted_scores, sorted_scores, side="right")
+    total = float(weights.sum())
+    risk = suffix_inclusive[idx_right] / total
+    crc_value = (total / (total + w_star)) * risk + loss_bound * w_star / (total + w_star)
+    feasible = np.where(crc_value <= alpha)[0]
+    if len(feasible) == 0:
+        return float(sorted_scores[-1])
+    return float(sorted_scores[feasible[0]])
+
+
 def verifier_fidelity(outcomes: list[RequestOutcome]) -> VerifierFidelity:
     verified = [o for o in outcomes if o.verifier_invoked]
     counts = confusion_counts(verified)

@@ -94,3 +94,54 @@ def test_d_known_monotone_distribution_repeated_trials_respect_risk_bound():
         f"mean realized risk {mean_realized_risk:.4f} exceeds target alpha={alpha} "
         f"by more than Monte Carlo tolerance -- possible selector bug"
     )
+
+
+# --- weighted CRC (PAPER_B_FORMAL_RISK_CONTROL.md §4.4) ------------------
+
+from cacheverifier.metrics.core import crc_select_threshold_weighted  # noqa: E402
+
+
+@pytest.mark.parametrize("seed", range(20))
+def test_weighted_with_unit_weights_equals_unweighted(seed):
+    rng = np.random.default_rng(seed)
+    n = int(rng.integers(5, 400))
+    scores = np.round(rng.normal(size=n), 1)  # rounding creates ties on purpose
+    labels = (rng.random(n) < 0.7).astype(int)
+    for alpha in (0.005, 0.02, 0.1, 0.3):
+        assert crc_select_threshold_weighted(scores, labels, np.ones(n), alpha) == crc_select_threshold(scores, labels, alpha)
+
+
+def test_weighted_matches_unweighted_on_replicated_points():
+    """An integer weight k with test weight 1 is the same as k copies of the point."""
+    rng = np.random.default_rng(1)
+    scores = rng.normal(size=60)
+    labels = (rng.random(60) < 0.8).astype(int)
+    k = rng.integers(1, 4, size=60)
+    rep_scores, rep_labels = np.repeat(scores, k), np.repeat(labels, k)
+    for alpha in (0.02, 0.05, 0.1):
+        assert crc_select_threshold_weighted(scores, labels, k.astype(float), alpha, test_weight=1.0) == crc_select_threshold(
+            rep_scores, rep_labels, alpha
+        )
+
+
+def test_weighted_inverse_probability_recovers_full_pool_risk():
+    """Rejects observed with prob 1, accepts audited with prob p and weighted 1/p:
+    the weighted empirical risk curve is unbiased for the full pool's, so the
+    selected threshold should land close to the full-information one."""
+    rng = np.random.default_rng(7)
+    n = 40000
+    scores = rng.normal(size=n)
+    labels = (rng.random(n) < 1 / (1 + np.exp(-2 * scores))).astype(int)
+    full = crc_select_threshold(scores, labels, 0.05)
+    theta = 0.0
+    p = 0.2
+    observed = (scores <= theta) | (rng.random(n) < p)
+    w = np.where(scores <= theta, 1.0, 1.0 / p)[observed]
+    weighted = crc_select_threshold_weighted(scores[observed], labels[observed], w, 0.05, test_weight=1.0)
+    assert abs(weighted - full) < 0.1
+
+
+def test_weighted_rejects_bad_weights():
+    with pytest.raises(ValueError):
+        crc_select_threshold_weighted(np.array([0.1, 0.2]), np.array([1, 0]), np.array([1.0, 0.0]), 0.1)
+    assert crc_select_threshold_weighted(np.array([]), np.array([]), np.array([]), 0.1) is None
