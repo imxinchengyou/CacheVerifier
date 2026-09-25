@@ -1,0 +1,470 @@
+[
+  {
+    "dataset": "search_queries_corrected",
+    "group": "D",
+    "tau_low": 0.8,
+    "hit_rate": 0.603855511884709,
+    "error_rate": 0.15811341942728804,
+    "delta_same_population": -0.01721879094141865,
+    "ci95": [
+      -0.01916128579449749,
+      -0.015312792438704769
+    ],
+    "verdict": "loss"
+  },
+  {
+    "dataset": "search_queries_corrected",
+    "group": "D",
+    "tau_low": 0.83,
+    "hit_rate": 0.5373769285310405,
+    "error_rate": 0.1303637620154552,
+    "delta_same_population": -0.015230795465764335,
+    "ci95": [
+      -0.016904881573160783,
+      -0.012983871691542687
+    ],
+    "verdict": "loss"
+  },
+  {
+    "dataset": "search_queries_corrected",
+    "group": "D",
+    "tau_low": 0.86,
+    "hit_rate": 0.4760065953029824,
+    "error_rate": 0.10688320675249673,
+    "delta_same_population": -0.01270364706585908,
+    "ci95": [
+      -0.014561993285093097,
+      -0.010832272560293205
+    ],
+    "verdict": "loss"
+  },
+  {
+    "dataset": "search_queries_corrected",
+    "group": "D",
+    "tau_low": 0.89,
+    "hit_rate": 0.4362905049591316,
+    "error_rate": 0.09419926986075663,
+    "delta_same_population": -0.009829418796239497,
+    "ci95": [
+      -0.011699794850256842,
+      -0.008199730236164497
+    ],
+    "verdict": "loss"
+  },
+  {
+    "dataset": "search_queries_corrected",
+    "group": "D",
+    "tau_low": 0.92,
+    "hit_rate": 0.36963488828445223,
+    "error_rate": 0.07089334555675937,
+    "delta_same_population": -0.005394470667565765,
+    "ci95": [
+      -0.007296173107957604,
+      -0.003653958344382405
+    ],
+    "verdict": "loss"
+  },
+  {
+    "dataset": "search_queries_corrected",
+    "group": "D",
+    "tau_low": 0.95,
+    "hit_rate": 0.31104185908780047,
+    "error_rate": 0.05337262837280464,
+    "delta_same_population": -9.870763503555535e-05,
+    "ci95": [
+      -0.0010753844309857583,
+      0.0009498847235833523
+    ],
+    "verdict": "tie"
+  },
+  {
+    "dataset": "search_queries_corrected",
+    "group": "E",
+    "tau_low": 0.8,
+    "hit_rate": 0.588115291034999,
+    "error_rate": 0.12995508141493542,
+    "delta_same_population": 0.023292157963690774,
+    "ci95": [
+      0.021364402021336323,
+      0.02588807785888073
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "search_queries_corrected",
+    "group": "E",
+    "tau_low": 0.83,
+    "hit_rate": 0.5483714626769223,
+    "error_rate": 0.11770882883529739,
+    "delta_same_population": 0.022168570890063632,
+    "ci95": [
+      0.019883727191951014,
+      0.024268751290174917
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "search_queries_corrected",
+    "group": "E",
+    "tau_low": 0.86,
+    "hit_rate": 0.5094444396982564,
+    "error_rate": 0.10689174989107499,
+    "delta_same_population": 0.020717111052258375,
+    "ci95": [
+      0.018530067576226158,
+      0.022783482695872815
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "search_queries_corrected",
+    "group": "E",
+    "tau_low": 0.89,
+    "hit_rate": 0.4451345588472846,
+    "error_rate": 0.08625173650373147,
+    "delta_same_population": 0.017074273899137404,
+    "ci95": [
+      0.015238022162633657,
+      0.01880350854521372
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "search_queries_corrected",
+    "group": "E",
+    "tau_low": 0.92,
+    "hit_rate": 0.37929493056134317,
+    "error_rate": 0.06749907187829104,
+    "delta_same_population": 0.013804389826270802,
+    "ci95": [
+      0.012012357277610686,
+      0.015570094024411533
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "search_queries_corrected",
+    "group": "E",
+    "tau_low": 0.95,
+    "hit_rate": 0.322971381836385,
+    "error_rate": 0.05450071563035401,
+    "delta_same_population": 0.00814337989043451,
+    "ci95": [
+      0.007138500913045633,
+      0.009271819675251865
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "D",
+    "tau_low": 0.8,
+    "hit_rate": 0.9629829255616085,
+    "error_rate": 0.0636970875281526,
+    "delta_same_population": 0.02950971144776604,
+    "ci95": [
+      0.015334270149569737,
+      0.04142620647173195
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "D",
+    "tau_low": 0.83,
+    "hit_rate": 0.943507556435342,
+    "error_rate": 0.06264037458601393,
+    "delta_same_population": 0.03104419658152191,
+    "ci95": [
+      0.01692965091933457,
+      0.03924159655868138
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "D",
+    "tau_low": 0.86,
+    "hit_rate": 0.8951244715829028,
+    "error_rate": 0.06046031000469704,
+    "delta_same_population": 0.027449506810709234,
+    "ci95": [
+      0.016267731329262545,
+      0.03773320807891026
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "D",
+    "tau_low": 0.89,
+    "hit_rate": 0.8828886104826194,
+    "error_rate": 0.05994876493576918,
+    "delta_same_population": 0.025580134258306964,
+    "ci95": [
+      0.015248508760447995,
+      0.034705678864601075
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "D",
+    "tau_low": 0.92,
+    "hit_rate": 0.8639787739349859,
+    "error_rate": 0.059132403146801245,
+    "delta_same_population": 0.02157859581416066,
+    "ci95": [
+      0.014239925040819381,
+      0.028129174706842803
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "D",
+    "tau_low": 0.95,
+    "hit_rate": 0.8128609865470852,
+    "error_rate": 0.056663677130044846,
+    "delta_same_population": 0.008717488789237615,
+    "ci95": [
+      0.004052017937219679,
+      0.015526008968609832
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "E",
+    "tau_low": 0.8,
+    "hit_rate": 0.9823480721476833,
+    "error_rate": 0.0631580973647231,
+    "delta_same_population": 0.06254210860651788,
+    "ci95": [
+      0.04957025159290849,
+      0.07534120002309953
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "E",
+    "tau_low": 0.83,
+    "hit_rate": 0.961304198865583,
+    "error_rate": 0.06210742700521527,
+    "delta_same_population": 0.060489550420647964,
+    "ci95": [
+      0.05083606151737795,
+      0.07072547489436218
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "E",
+    "tau_low": 0.86,
+    "hit_rate": 0.9240958196336309,
+    "error_rate": 0.059971817754814465,
+    "delta_same_population": 0.0691592296852983,
+    "ci95": [
+      0.057726162517613845,
+      0.07643494598403011
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "E",
+    "tau_low": 0.89,
+    "hit_rate": 0.9160979075898951,
+    "error_rate": 0.05961218422184409,
+    "delta_same_population": 0.06645599207165431,
+    "ci95": [
+      0.0567722844481011,
+      0.07407814282241626
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "E",
+    "tau_low": 0.92,
+    "hit_rate": 0.8958364257087724,
+    "error_rate": 0.05868710108356835,
+    "delta_same_population": 0.06262060264212554,
+    "ci95": [
+      0.05647636188214338,
+      0.0682532098857058
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "lmarena",
+    "group": "E",
+    "tau_low": 0.95,
+    "hit_rate": 0.8394080717488789,
+    "error_rate": 0.05648430493273542,
+    "delta_same_population": 0.03974887892376677,
+    "ci95": [
+      0.03313766816143494,
+      0.04581165919282515
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "quora",
+    "group": "D",
+    "tau_low": 0.8,
+    "hit_rate": 0.13016705516705518,
+    "error_rate": 0.06231546231546232,
+    "delta_same_population": -0.004603729603729595,
+    "ci95": [
+      -0.006160644910644915,
+      -0.003057983682983699
+    ],
+    "verdict": "loss"
+  },
+  {
+    "dataset": "quora",
+    "group": "D",
+    "tau_low": 0.83,
+    "hit_rate": 0.1192084213703592,
+    "error_rate": 0.05527467552067612,
+    "delta_same_population": -0.0039050709326893945,
+    "ci95": [
+      -0.0049813235738001855,
+      -0.002668936764262004
+    ],
+    "verdict": "loss"
+  },
+  {
+    "dataset": "quora",
+    "group": "D",
+    "tau_low": 0.86,
+    "hit_rate": 0.10602003008180784,
+    "error_rate": 0.04629663597343996,
+    "delta_same_population": -0.0022928207197622785,
+    "ci95": [
+      -0.0038083752155251478,
+      -0.0010542389669466919
+    ],
+    "verdict": "loss"
+  },
+  {
+    "dataset": "quora",
+    "group": "D",
+    "tau_low": 0.89,
+    "hit_rate": 0.08691928923142796,
+    "error_rate": 0.034664240348248054,
+    "delta_same_population": -0.0006957824876900054,
+    "ci95": [
+      -0.0016957468065367872,
+      0.0007782951544993974
+    ],
+    "verdict": "tie"
+  },
+  {
+    "dataset": "quora",
+    "group": "D",
+    "tau_low": 0.92,
+    "hit_rate": 0.06757741980280517,
+    "error_rate": 0.02452784335508957,
+    "delta_same_population": -0.0007290654075822744,
+    "ci95": [
+      -0.0016581898347451714,
+      0.00018270031940008122
+    ],
+    "verdict": "tie"
+  },
+  {
+    "dataset": "quora",
+    "group": "D",
+    "tau_low": 0.95,
+    "hit_rate": 0.0509383831717182,
+    "error_rate": 0.016432282411873212,
+    "delta_same_population": -0.00021999966153898182,
+    "ci95": [
+      -0.000879998646155931,
+      0.0004996530774568012
+    ],
+    "verdict": "tie"
+  },
+  {
+    "dataset": "quora",
+    "group": "E",
+    "tau_low": 0.8,
+    "hit_rate": 0.12437839937839938,
+    "error_rate": 0.04965034965034965,
+    "delta_same_population": 0.008682983682983689,
+    "ci95": [
+      0.007117812742812743,
+      0.010373931623931628
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "quora",
+    "group": "E",
+    "tau_low": 0.83,
+    "hit_rate": 0.11541654089948687,
+    "error_rate": 0.04508753395713855,
+    "delta_same_population": 0.008262903712647152,
+    "ci95": [
+      0.006743793389677031,
+      0.009773053124056743
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "quora",
+    "group": "E",
+    "tau_low": 0.86,
+    "hit_rate": 0.08754906636340291,
+    "error_rate": 0.029861697054183938,
+    "delta_same_population": 0.007905645841740347,
+    "ci95": [
+      0.006520323562859972,
+      0.009162570160314017
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "quora",
+    "group": "E",
+    "tau_low": 0.89,
+    "hit_rate": 0.07614358096053664,
+    "error_rate": 0.02472703917790623,
+    "delta_same_population": 0.006618853921358733,
+    "ci95": [
+      0.005436915721116115,
+      0.008055466352672513
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "quora",
+    "group": "E",
+    "tau_low": 0.92,
+    "hit_rate": 0.06266490765171503,
+    "error_rate": 0.01952853770309679,
+    "delta_same_population": 0.0045306207471184495,
+    "ci95": [
+      0.0034882308012776017,
+      0.005688880016664352
+    ],
+    "verdict": "win"
+  },
+  {
+    "dataset": "quora",
+    "group": "E",
+    "tau_low": 0.95,
+    "hit_rate": 0.04860300214922746,
+    "error_rate": 0.014452285458022372,
+    "delta_same_population": 0.0021323044118393697,
+    "ci95": [
+      0.0014634208255064228,
+      0.0028866494051547602
+    ],
+    "verdict": "win"
+  }
+]

@@ -29,13 +29,16 @@ the hit-rate/error-rate trade-off?
 - An **off-the-shelf** cross-encoder verifier cashes in only a small,
   fragile slice of that headroom under the paper's original grid-searched
   evaluation — the paper's Go/No-Go verdict is a **weak Go**, not an
-  unqualified win. **[2026-08-15 update]** Retested with an *honest*
-  threshold selection (chronological calibration/test split, no peeking at
-  the test half), SearchQueries' verdict reverses to a clean win at every
-  tested point — how much of the original "net harmful" result reflects a
-  genuine SearchQueries-specific weakness versus how the original
-  evaluation happened to pick its threshold is now the paper's own
-  least-settled open question (§6.1/§5.4).
+  unqualified win. Retested with an *honest* threshold selection
+  (chronological calibration/test split, no peeking at the test half) and
+  compared against the static threshold on the same requests, the
+  off-the-shelf verifier still loses on SearchQueries and Quora and wins
+  only on LmArena. **[2026-09-24 erratum]** An earlier version of this
+  README and of the paper said SearchQueries' verdict "reverses to a clean
+  win at every tested point" under honest calibration; that came from
+  comparing the verifier on half of the gray zone against a static-threshold
+  frontier built on all requests, and is withdrawn (see the erratum at the
+  top of [`PAPER.md`](PAPER.md) / [`PAPER_EN.md`](PAPER_EN.md)).
 - **Fine-tuning that same verifier on a dataset's own gray-zone labels**
   closes most of the gap on all three independent datasets tested,
   including turning SearchQueries from a *net-harmful* verifier (AUC 0.60 —
@@ -43,8 +46,9 @@ the hit-rate/error-rate trade-off?
   [`PAPER_EN.md`](PAPER_EN.md): an earlier release of this paper reported
   AUC 0.49 due to a since-corrected data defect) into one that beats the
   static-threshold frontier at 53 of 54 tested points, 1 tie, zero losses
-  (AUC 0.71) — and the same zero-loss verdict holds under honest
-  calibration too, on all three datasets.
+  (AUC 0.71) — and under honest calibration, compared on the same
+  requests, the fine-tuned verifier beats the static threshold at all 18
+  tested points across the three datasets.
 - The recipe tolerates realistic label noise (~30%) and cold start, and
   holds up on real production customer-support traffic — with **one
   genuine counter-example**, traced to a specific, monitorable cause, and
@@ -84,11 +88,11 @@ research behind it, not the product. Python client:
 
 | Dataset | Off-the-shelf verifier (Group D) | Domain-fine-tuned verifier (Group E) |
 |---|---|---|
-| LmArena (conversational) | AUC 0.72 · best reproducible net gain ≈ **+1.9pp** hit rate (grid search) · **+5.66pp** under honest calibration | AUC **0.88** · beats static-threshold frontier at nearly every tested point (grid search) · **6/6** under honest calibration, **+5.66pp** |
-| SearchQueries (short keyword) | AUC 0.60 · **net harmful** under grid search (23/36 losses to static threshold) · **reverses to 6/6 wins** (+0.78pp to +3.67pp) under honest calibration | AUC **0.71** · wins 53/54 tested points, 1 tie, 0 losses (grid search) · **6/6** under honest calibration, **+7.74pp** |
-| Quora (paraphrase pairs) | — (not in original benchmark) | Smaller-magnitude replication of the same pattern; never worse than the untuned baseline under either grid search or honest calibration (0 losses either way) |
+| LmArena (conversational) | AUC 0.72 · best net gain ≈ **+1.9pp** hit rate (grid search) · **6/6 wins**, up to **+3.10pp**, under honest calibration | AUC **0.88** · beats static-threshold frontier at nearly every tested point (grid search) · **6/6** under honest calibration, up to **+6.92pp** |
+| SearchQueries (short keyword) | AUC 0.60 · **net harmful** under grid search (23/36 losses to static threshold) · **still net harmful** under honest calibration (0 wins, 1 tie, 5 losses) | AUC **0.71** · wins 53/54 tested points, 1 tie, 0 losses (grid search) · **6/6** under honest calibration, up to **+2.33pp** |
+| Quora (paraphrase pairs) | — (not in original benchmark) · under honest calibration 0 wins, 3 ties, 3 losses | Smaller-magnitude replication of the same pattern; 0 losses under grid search, **6/6** under honest calibration, up to **+0.87pp** |
 
-"Grid search" = the paper's original hand-picked threshold grid, best point reported. "Honest calibration" = a threshold chosen via Youden's J on a held-out calibration half only, then measured on the untouched test half (§5.4) — added 2026-08-15/16 specifically to test whether the grid-search numbers above were optimistic; see §5.4/§6.1 for the full account of where the two methods agree and where they don't (Quora is the one dataset where honest calibration is *worse*, traced to the dataset's own score-separability ceiling, not a calibration artifact).
+"Grid search" = the paper's original hand-picked threshold grid, best point reported. "Honest calibration" = a threshold chosen via Youden's J on a held-out calibration half only, then measured on the untouched test half (§5.4) — added 2026-08-15/16 specifically to test whether the grid-search numbers above were optimistic, and compared against the static threshold on exactly the same requests since the 2026-09-24 erratum (the earlier honest-calibration numbers — SearchQueries "6/6 wins, +0.78 to +3.67pp", fine-tuned +7.74pp — compared the verifier on half the gray zone against a frontier built on all requests; see the erratum at the top of [`PAPER.md`](PAPER.md)). See §5.4/§6.1 for the full account.
 
 Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–28pp** hit rate at matched error rate. A separate reproduction fix for the adaptive-threshold baseline (Group B) raised its hit rate **4.4x–29.1x** across all three datasets (§5.2) — Group B sits at a different hit-rate scale and isn't part of the Go/No-Go comparison above. Full numbers, confidence intervals, and further robustness/ablation sections (noise, cold start, drift monitor, τ_high sensitivity, reranker capacity vs. training distribution, Conformal Risk Control, rewrite-vs-reject, Top-K cascade, CRC closed-loop self-selection, cost-sensitive reanalysis, LLM red-teaming, adversarial training, selective abstention, CRC validity, cached-query input, entity-swap fusion, joint decisions, Adaptive Conformal Inference) are in the paper, §5.9–§5.25.
 
@@ -114,12 +118,16 @@ Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–
   Best net lead is +1.9pp on LmArena (less than a tenth of the oracle
   ceiling, and 11/30 tested points do worse than the static threshold),
   and the verifier is **net harmful** on SearchQueries under the paper's
-  original grid-searched threshold (23/36 losses). **[2026-08-15]** Under
-  an honestly-calibrated threshold (Youden's J on a held-out calibration
-  half, no peeking at test data), SearchQueries reverses to 6/6 wins
-  (+0.78pp to +3.67pp) — how much of the original "net harmful" verdict
-  was a genuine weakness versus a grid-search artifact is the paper's own
-  least-settled open question.
+  original grid-searched threshold (23/36 losses). Under an
+  honestly-calibrated threshold (Youden's J on a held-out calibration half,
+  no peeking at test data), compared against the static threshold on the
+  same requests, SearchQueries stays net harmful (0 wins, 1 tie, 5 losses)
+  while LmArena wins 6/6. Inside the default gray zone, raw similarity
+  alone ranks requests better than this off-the-shelf cross-encoder on
+  SearchQueries and Quora. **[corrected 2026-09-24]** An earlier version
+  said SearchQueries "reverses to 6/6 wins (+0.78pp to +3.67pp)" under
+  honest calibration; that came from an evaluation-set mismatch and is
+  withdrawn.
 - **The latency cost of going synchronous (§5.5).** The paper's original
   70ms oracle-latency modeling assumption undershot a real measurement by
   **~24x** (1687.8ms mean, DeepSeek as a stand-in for GPT-4.1-nano) —
@@ -135,7 +143,8 @@ Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–
   SearchQueries from **net harmful** into **53/54 wins, 1 tie, 0 losses**
   (+4.50pp). Replicated on a third, independently-sourced dataset (Quora
   Question Pairs): 0 losses, +2.03pp. Holds under honest calibration too —
-  zero losses on all three datasets.
+  18/18 tested points win across the three datasets (best leads: LmArena
+  +6.92pp, SearchQueries +2.33pp, Quora +0.87pp; corrected 2026-09-24).
 - **Deployment robustness: noise, cold start, drift (§5.7).** The
   fine-tuning recipe tolerates up to ~30% label noise before turning
   harmful (consistent across all three datasets after a data-defect
@@ -182,11 +191,13 @@ Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–
   of three datasets but not the third.
 - **Cost-sensitive reanalysis (§5.17):** reframes the hit-rate/error-rate
   frontier as an explicit cost-ratio sweep (error cost vs. miss cost) —
-  once Group D/E's honest-calibration grid is extended to match Group A's,
-  synchronous verification wins economically almost universally once
-  errors cost more than roughly 1–9x a miss, dataset-dependent; a
-  grid-coverage gap in the first pass had produced a spurious reversal at
-  high cost ratios that fully disappears once closed.
+  once Group D/E's honest-calibration grid is extended to match Group A's
+  and each operating point is compared on the same requests (corrected
+  2026-09-24), synchronous verification wins economically once errors cost
+  more than roughly 1.3–3.6x a miss for the fine-tuned verifier and
+  3.2–12.6x for the off-the-shelf one, dataset-dependent; a grid-coverage
+  gap in the first pass had produced a spurious reversal at high cost
+  ratios that disappears once closed.
 - **LLM automated red-teaming (§5.18):** adversarial samples generated
   across five known failure axes (negation, action-verb swap, direction
   reversal, entity swap, quantity swap) push the off-the-shelf verifier's

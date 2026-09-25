@@ -1,0 +1,122 @@
+{
+  "lmarena_groupD_cross_encoder.json": {
+    "n": 30,
+    "counts": {
+      "published": {
+        "win": 15,
+        "tie": 4,
+        "loss": 11
+      },
+      "dense": {
+        "win": 18,
+        "tie": 4,
+        "loss": 8
+      }
+    },
+    "best": {
+      "published": 0.018661297071129623,
+      "dense": 0.022749999999999937
+    },
+    "flips": 6
+  },
+  "lmarena_groupE_finetuned.json": {
+    "n": 66,
+    "counts": {
+      "published": {
+        "win": 49,
+        "tie": 11,
+        "loss": 6
+      },
+      "dense": {
+        "win": 55,
+        "tie": 11,
+        "loss": 0
+      }
+    },
+    "best": {
+      "published": 0.11047526096033411,
+      "dense": 0.11891666666666667
+    },
+    "flips": 12
+  },
+  "search_queries_corrected_groupD.json": {
+    "n": 36,
+    "counts": {
+      "published": {
+        "win": 1,
+        "tie": 12,
+        "loss": 23
+      },
+      "dense": {
+        "win": 0,
+        "tie": 12,
+        "loss": 24
+      }
+    },
+    "best": {
+      "published": 0.0029953948259515695,
+      "dense": 8.00000000000245e-05
+    },
+    "flips": 2
+  },
+  "search_queries_corrected_groupE_finetuned.json": {
+    "n": 54,
+    "counts": {
+      "published": {
+        "win": 53,
+        "tie": 1,
+        "loss": 0
+      },
+      "dense": {
+        "win": 53,
+        "tie": 1,
+        "loss": 0
+      }
+    },
+    "best": {
+      "published": 0.04502427250608276,
+      "dense": 0.04074666666666665
+    },
+    "flips": 0
+  },
+  "quora_groupD_cross_encoder.json": {
+    "n": 54,
+    "counts": {
+      "published": {
+        "win": 0,
+        "tie": 45,
+        "loss": 9
+      },
+      "dense": {
+        "win": 0,
+        "tie": 43,
+        "loss": 11
+      }
+    },
+    "best": {
+      "published": 0.0010503225806451633,
+      "dense": 0.0008333333333333387
+    },
+    "flips": 2
+  },
+  "quora_groupE_finetuned.json": {
+    "n": 48,
+    "counts": {
+      "published": {
+        "win": 23,
+        "tie": 25,
+        "loss": 0
+      },
+      "dense": {
+        "win": 22,
+        "tie": 26,
+        "loss": 0
+      }
+    },
+    "best": {
+      "published": 0.020292952101661793,
+      "dense": 0.019750000000000018
+    },
+    "flips": 1
+  }
+}
