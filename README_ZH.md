@@ -119,7 +119,7 @@ Group E 的微调验证器托管在 Hugging Face Hub,不在这个仓库里——
 ## 引用
 
 已经在 Zenodo 存档,概念 DOI(始终指向最新版本): [10.5281/zenodo.21703364](https://doi.org/10.5281/zenodo.21703364)
-(当前版本为 v1.8.0,DOI: [10.5281/zenodo.22656222](https://doi.org/10.5281/zenodo.22656222))。arXiv 链接即将发布,届时会更新这里的引用信息。
+(各个版本的 DOI 列在 [Zenodo 记录页](https://doi.org/10.5281/zenodo.21703364) 的 "Versions" 一栏)。arXiv 链接即将发布,届时会更新这里的引用信息。
 
 ```bibtex
 @misc{xin2026synchronous,
