@@ -5,7 +5,7 @@
 **机构：** LoopDot AI Research
 **日期：** 2026-08-20
 **说明：** 本研究项目最初以一份涵盖全部实验的完整技术报告形式发布（Zenodo DOI: 10.5281/zenodo.21703364，概念 DOI，始终指向最新版本）；本文是从该项目中提炼、独立成篇的姊妹论文之一。本文是 [Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660442.](下称"主论文") 的姊妹论文，复用主论文的数据集、灰色地带架构与诚实校准协议，本文不重新推导这些基础设施，只在必要处简要复述，完整细节请见主论文。本文第 4.3 节的一处方法论细节引用了 [Xin, C. (2026). 语义缓存验证器的对抗鲁棒性：红队测试暴露的缺口与训练时的部分修复. Zenodo. https://doi.org/10.5281/zenodo.22661312.](下称"论文 C")。
-**代码与完整实验产物：** 本仓库 `cacheverifier/metrics/core.py`、`scripts/crc_closed_loop_self_selection.py`、`scripts/crc_closed_loop_write_probability_sweep.py`、`scripts/crc_closed_loop_spot_check.py`、`scripts/cost_sensitive_reanalysis.py`、`results/cost_sensitive_reanalysis.json`、`scripts/crc_closed_loop_calibration_sources.py`（4.4 节）。
+**代码与完整实验产物：** 本仓库 `cacheverifier/metrics/core.py`、`scripts/crc_closed_loop_self_selection.py`、`scripts/crc_closed_loop_write_probability_sweep.py`、`scripts/crc_closed_loop_spot_check.py`、`scripts/cost_sensitive_reanalysis.py`、`results/cost_sensitive_reanalysis.json`、`scripts/cost_sensitive_reanalysis_fair.py`、`results/cost_sensitive_reanalysis_fair.json`（4.3 节，2026-09-24 勘误后的主结果）、`scripts/crc_closed_loop_calibration_sources.py`（4.4 节）。
 
 
 > **勘误（2026-09-24 追加）**：本文 4.3 节成本敏感重分析沿用了主论文诚实校准的 hit_rate/error_rate，而 D/E 每个操作点只在"全部非灰区请求 + 该 τ_low 灰区的测试半段"上计算，A 组 9 个网格点却在全部请求上计算——两边不是同一批请求（主论文已于同日加勘误说明同一问题）。现改为每个 D/E 操作点与在它自己那批请求上重算的 A 组 9 个阈值比较（`scripts/cost_sensitive_reanalysis_fair.py`，结果 `results/cost_sensitive_reanalysis_fair.json`；原结果保留在 `results/cost_sensitive_reanalysis.json`）。定性结论（错误代价明显高于 miss 代价时同步验证在经济上胜出）不变，但胜出门槛改变：微调验证器通常 r ≳ 1.3–3.6，未微调验证器 r ≳ 3.2–12.6，视数据集而定（原为 r ≳ 1-9）。本文 4.1、4.2 节（CRC 与自选择反馈环）不涉及与 A 组的比较，不受影响。
