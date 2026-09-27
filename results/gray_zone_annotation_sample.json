@@ -1,0 +1,1352 @@
+[
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 30028,
+  "sim": 0.8308,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g001"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 47445,
+  "sim": 0.9677,
+  "llm_category": "F",
+  "llm_acceptable": "NO",
+  "id": "g002"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 5485,
+  "sim": 0.828,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g003"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 15900,
+  "sim": 0.9391,
+  "llm_category": "F",
+  "llm_acceptable": "PARTIAL",
+  "id": "g004"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 7300,
+  "sim": 0.965,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g005"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 77459,
+  "sim": 0.9558,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g006"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 7579,
+  "sim": 0.9133,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g007"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 113183,
+  "sim": 0.9355,
+  "llm_category": "C",
+  "llm_acceptable": "NO",
+  "id": "g008"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 2939,
+  "sim": 0.8317,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g009"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 108654,
+  "sim": 0.899,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g010"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 25619,
+  "sim": 0.9037,
+  "llm_category": "B",
+  "llm_acceptable": "PARTIAL",
+  "id": "g011"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 40469,
+  "sim": 0.9692,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g012"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 20381,
+  "sim": 0.9462,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g013"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 16051,
+  "sim": 0.8605,
+  "llm_category": "C",
+  "llm_acceptable": "NO",
+  "id": "g014"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 2507,
+  "sim": 0.829,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g015"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 33643,
+  "sim": 0.8095,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g016"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 30310,
+  "sim": 0.8846,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g017"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 22014,
+  "sim": 0.9677,
+  "llm_category": "C",
+  "llm_acceptable": "NO",
+  "id": "g018"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 9390,
+  "sim": 0.9679,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g019"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 2894,
+  "sim": 0.8917,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g020"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 4052,
+  "sim": 0.8278,
+  "llm_category": "D",
+  "llm_acceptable": "NO",
+  "id": "g021"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 74970,
+  "sim": 0.8072,
+  "llm_category": "B",
+  "llm_acceptable": "PARTIAL",
+  "id": "g022"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 37140,
+  "sim": 0.8014,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g023"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 109652,
+  "sim": 0.9557,
+  "llm_category": "C",
+  "llm_acceptable": "NO",
+  "id": "g024"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 11500,
+  "sim": 0.8103,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g025"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 74756,
+  "sim": 0.8263,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g026"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 885,
+  "sim": 0.8123,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g027"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 56104,
+  "sim": 0.9673,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g028"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 26859,
+  "sim": 0.9633,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g029"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 42303,
+  "sim": 0.9668,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g030"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 27444,
+  "sim": 0.9691,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g031"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 122061,
+  "sim": 0.8033,
+  "llm_category": "C",
+  "llm_acceptable": "NO",
+  "id": "g032"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 126874,
+  "sim": 0.8768,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g033"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 20375,
+  "sim": 0.8963,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g034"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 27415,
+  "sim": 0.8882,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g035"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 20704,
+  "sim": 0.9596,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g036"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 34229,
+  "sim": 0.959,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g037"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 30522,
+  "sim": 0.862,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g038"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 7652,
+  "sim": 0.9464,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g039"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 8087,
+  "sim": 0.8604,
+  "llm_category": "D",
+  "llm_acceptable": "NO",
+  "id": "g040"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 7993,
+  "sim": 0.9222,
+  "llm_category": "F",
+  "llm_acceptable": "NO",
+  "id": "g041"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 1992,
+  "sim": 0.8323,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g042"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 36789,
+  "sim": 0.8497,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g043"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 33844,
+  "sim": 0.9529,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g044"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 49821,
+  "sim": 0.8456,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g045"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 4429,
+  "sim": 0.8427,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g046"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 2500,
+  "sim": 0.8518,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g047"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 141791,
+  "sim": 0.8765,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g048"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 29725,
+  "sim": 0.9226,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g049"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 7639,
+  "sim": 0.8545,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g050"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 3812,
+  "sim": 0.827,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g051"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 11055,
+  "sim": 0.965,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g052"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 1586,
+  "sim": 0.8427,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g053"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 31488,
+  "sim": 0.8221,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g054"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 114451,
+  "sim": 0.9027,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g055"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 19790,
+  "sim": 0.9248,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g056"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 25779,
+  "sim": 0.9589,
+  "llm_category": "C",
+  "llm_acceptable": "NO",
+  "id": "g057"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 140194,
+  "sim": 0.9669,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g058"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 650,
+  "sim": 0.8293,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g059"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 15805,
+  "sim": 0.9208,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g060"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 54442,
+  "sim": 0.8047,
+  "llm_category": "D",
+  "llm_acceptable": "NO",
+  "id": "g061"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 20551,
+  "sim": 0.8397,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g062"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 13825,
+  "sim": 0.8435,
+  "llm_category": "C",
+  "llm_acceptable": "NO",
+  "id": "g063"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 37108,
+  "sim": 0.9339,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g064"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 2004,
+  "sim": 0.8273,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g065"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 75018,
+  "sim": 0.9287,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g066"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 144,
+  "sim": 0.8292,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g067"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 6529,
+  "sim": 0.8487,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g068"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 9510,
+  "sim": 0.9052,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g069"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 44727,
+  "sim": 0.9557,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g070"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 19122,
+  "sim": 0.9335,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g071"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 1840,
+  "sim": 0.8343,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g072"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 2208,
+  "sim": 0.8916,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g073"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 4467,
+  "sim": 0.8315,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g074"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 9754,
+  "sim": 0.8185,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g075"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 20770,
+  "sim": 0.8001,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g076"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 18273,
+  "sim": 0.9301,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g077"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 55534,
+  "sim": 0.9208,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g078"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 13902,
+  "sim": 0.8545,
+  "llm_category": "A",
+  "llm_acceptable": "NO",
+  "id": "g079"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 53900,
+  "sim": 0.9436,
+  "llm_category": "F",
+  "llm_acceptable": "PARTIAL",
+  "id": "g080"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 64991,
+  "sim": 0.9409,
+  "llm_category": "F",
+  "llm_acceptable": "PARTIAL",
+  "id": "g081"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 8894,
+  "sim": 0.9664,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g082"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 21274,
+  "sim": 0.9612,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g083"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 44489,
+  "sim": 0.929,
+  "llm_category": "C",
+  "llm_acceptable": "PARTIAL",
+  "id": "g084"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 30624,
+  "sim": 0.9043,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g085"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 44322,
+  "sim": 0.8407,
+  "llm_category": "B",
+  "llm_acceptable": "PARTIAL",
+  "id": "g086"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 53910,
+  "sim": 0.847,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g087"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 90824,
+  "sim": 0.9276,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g088"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 38038,
+  "sim": 0.9416,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g089"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 136584,
+  "sim": 0.9615,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g090"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 52804,
+  "sim": 0.9697,
+  "llm_category": "F",
+  "llm_acceptable": "PARTIAL",
+  "id": "g091"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 7759,
+  "sim": 0.97,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g092"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 2892,
+  "sim": 0.8259,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g093"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 37410,
+  "sim": 0.9476,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g094"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 715,
+  "sim": 0.9107,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g095"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 87595,
+  "sim": 0.9074,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g096"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 144881,
+  "sim": 0.9007,
+  "llm_category": "C",
+  "llm_acceptable": "PARTIAL",
+  "id": "g097"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 209,
+  "sim": 0.8126,
+  "llm_category": "C",
+  "llm_acceptable": "NO",
+  "id": "g098"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 34948,
+  "sim": 0.9024,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g099"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 32913,
+  "sim": 0.8191,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g100"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 58728,
+  "sim": 0.9319,
+  "llm_category": "F",
+  "llm_acceptable": "NO",
+  "id": "g101"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 25203,
+  "sim": 0.9125,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g102"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 34880,
+  "sim": 0.9483,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g103"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 59376,
+  "sim": 0.8058,
+  "llm_category": "F",
+  "llm_acceptable": "PARTIAL",
+  "id": "g104"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 48878,
+  "sim": 0.9416,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g105"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 44561,
+  "sim": 0.9693,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g106"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 56774,
+  "sim": 0.9362,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g107"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 48613,
+  "sim": 0.8651,
+  "llm_category": "D",
+  "llm_acceptable": "NO",
+  "id": "g108"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 141819,
+  "sim": 0.9589,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g109"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 29597,
+  "sim": 0.9639,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g110"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 143010,
+  "sim": 0.9028,
+  "llm_category": "C",
+  "llm_acceptable": "NO",
+  "id": "g111"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 136005,
+  "sim": 0.9165,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g112"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 131983,
+  "sim": 0.937,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g113"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 93207,
+  "sim": 0.88,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g114"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 6117,
+  "sim": 0.9479,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g115"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 16224,
+  "sim": 0.9616,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g116"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 5486,
+  "sim": 0.8376,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g117"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 16015,
+  "sim": 0.8769,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g118"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 9491,
+  "sim": 0.8889,
+  "llm_category": "C",
+  "llm_acceptable": "NO",
+  "id": "g119"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 43686,
+  "sim": 0.8468,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g120"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 4683,
+  "sim": 0.9417,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g121"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 9961,
+  "sim": 0.8606,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g122"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 35882,
+  "sim": 0.8418,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g123"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 60889,
+  "sim": 0.8813,
+  "llm_category": "C",
+  "llm_acceptable": "PARTIAL",
+  "id": "g124"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 86111,
+  "sim": 0.9109,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g125"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 35557,
+  "sim": 0.852,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g126"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 21522,
+  "sim": 0.8891,
+  "llm_category": "B",
+  "llm_acceptable": "YES",
+  "id": "g127"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 22963,
+  "sim": 0.9277,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g128"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "wrong",
+  "pos": 5137,
+  "sim": 0.8937,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g129"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 29187,
+  "sim": 0.8022,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g130"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 56565,
+  "sim": 0.9263,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g131"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 79225,
+  "sim": 0.9242,
+  "llm_category": "B",
+  "llm_acceptable": "NO",
+  "id": "g132"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 11902,
+  "sim": 0.9479,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g133"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 52561,
+  "sim": 0.9334,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g134"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 47845,
+  "sim": 0.891,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g135"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 41959,
+  "sim": 0.8406,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g136"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 7402,
+  "sim": 0.9606,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g137"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 37290,
+  "sim": 0.8195,
+  "llm_category": "E",
+  "llm_acceptable": "NO",
+  "id": "g138"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 25415,
+  "sim": 0.8978,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g139"
+ },
+ {
+  "dataset": "lmarena",
+  "stratum": "correct",
+  "pos": 4895,
+  "sim": 0.9334,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g140"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 42922,
+  "sim": 0.8318,
+  "llm_category": "C",
+  "llm_acceptable": "NO",
+  "id": "g141"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 24361,
+  "sim": 0.8855,
+  "llm_category": "C",
+  "llm_acceptable": "PARTIAL",
+  "id": "g142"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 50622,
+  "sim": 0.9658,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g143"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "correct",
+  "pos": 125561,
+  "sim": 0.9327,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g144"
+ },
+ {
+  "dataset": "search_queries_corrected",
+  "stratum": "wrong",
+  "pos": 83586,
+  "sim": 0.8083,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g145"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 18094,
+  "sim": 0.8456,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g146"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "wrong",
+  "pos": 51917,
+  "sim": 0.8171,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g147"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 18288,
+  "sim": 0.9423,
+  "llm_category": "F",
+  "llm_acceptable": "YES",
+  "id": "g148"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 20450,
+  "sim": 0.9151,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g149"
+ },
+ {
+  "dataset": "quora",
+  "stratum": "correct",
+  "pos": 38370,
+  "sim": 0.9323,
+  "llm_category": "A",
+  "llm_acceptable": "PARTIAL",
+  "id": "g150"
+ }
+]
