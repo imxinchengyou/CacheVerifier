@@ -1,0 +1,77 @@
+{
+  "config": {
+    "alpha": 0.05,
+    "gamma": 0.01,
+    "delta": 0.05,
+    "T": 20000,
+    "n_seeds": 1000,
+    "p_min": 0.02,
+    "budget": 0.1,
+    "theta_1": 0.5,
+    "g": "0.6(1-s)^2",
+    "theta_star": 0.3700394750525634,
+    "cv_variance_ratio_E[g(1-g)]/E[g]": 0.8571267621371834
+  },
+  "rows": {
+    "IPW f=0, uniform p": {
+      "mean_risk": 0.049361199999999994,
+      "sd_risk": 0.004606921918157502,
+      "sd_risk_times_sqrtT": 0.6515171457452213,
+      "p95_risk": 0.05735,
+      "mean_bound": 0.08820811402822203,
+      "violation_rate": 0.0,
+      "mean_V_over_T": 0.44425079999999995,
+      "mean_hit_rate": 0.5491461999999999,
+      "mean_audit_rate_among_accepted": 0.10003386194370913,
+      "mean_served_risk": 0.04441679999999999
+    },
+    "CV f=g (calibrated), uniform p": {
+      "mean_risk": 0.04975605,
+      "sd_risk": 0.004313776871547716,
+      "sd_risk_times_sqrtT": 0.6100601756794161,
+      "p95_risk": 0.056952499999999996,
+      "mean_bound": 0.08638518366052139,
+      "violation_rate": 0.0,
+      "mean_V_over_T": 0.3767439023758874,
+      "mean_hit_rate": 0.5529548,
+      "mean_audit_rate_among_accepted": 0.09999009720707226,
+      "mean_served_risk": 0.04481245
+    },
+    "CV f=g/3 (miscalibrated), uniform p": {
+      "mean_risk": 0.04955175,
+      "sd_risk": 0.004531251972413364,
+      "sd_risk_times_sqrtT": 0.6408157993916818,
+      "p95_risk": 0.057005,
+      "mean_bound": 0.08720723157922528,
+      "violation_rate": 0.0,
+      "mean_V_over_T": 0.40651541261128227,
+      "mean_hit_rate": 0.5508834,
+      "mean_audit_rate_among_accepted": 0.10000428317783616,
+      "mean_served_risk": 0.0446145
+    },
+    "IPW f=0, Neyman p~sqrt(g)": {
+      "mean_risk": 0.0493041,
+      "sd_risk": 0.0038844681991232724,
+      "sd_risk_times_sqrtT": 0.5493467609807124,
+      "p95_risk": 0.0555525,
+      "mean_bound": 0.08463231900911257,
+      "violation_rate": 0.0,
+      "mean_V_over_T": 0.31713379185101404,
+      "mean_hit_rate": 0.5526155,
+      "mean_audit_rate_among_accepted": 0.09964766655588635,
+      "mean_served_risk": 0.04173
+    },
+    "CV f=g, Neyman p~sqrt(g(1-g))": {
+      "mean_risk": 0.04942959999999999,
+      "sd_risk": 0.003698112199487733,
+      "sd_risk_times_sqrtT": 0.5229920427692949,
+      "p95_risk": 0.0555,
+      "mean_bound": 0.08347480889182987,
+      "violation_rate": 0.0,
+      "mean_V_over_T": 0.280677483709493,
+      "mean_hit_rate": 0.5544490499999999,
+      "mean_audit_rate_among_accepted": 0.09915908193265505,
+      "mean_served_risk": 0.042120649999999996
+    }
+  }
+}

@@ -1,0 +1,1184 @@
+{
+ "lmarena": {
+  "n": 50,
+  "n_clear": 37,
+  "human_counts": {
+   "yes": 22,
+   "no": 15,
+   "partial": 12,
+   "unsure": 1
+  },
+  "shares_reweighted": {
+   "info": 0.22796919637312135,
+   "ver": 0.12,
+   "ok": 0.6520308036268787
+  },
+  "ci95": {
+   "info": [
+    0.10796919637312136,
+    0.36661532728853563
+   ],
+   "ver": [
+    0.027969196373121355,
+    0.23067693454229288
+   ],
+   "ok": [
+    0.5013538690845858,
+    0.7933846727114644
+   ]
+  },
+  "ver_over_info_ci95": [
+   0.11010759522011072,
+   1.5069829510158064
+  ],
+  "case": "B",
+  "unweighted_ver_rate_on_clear": 0.16216216216216217,
+  "auc_ots_on_clear": 0.8242424242424242,
+  "best_threshold_error_on_clear_insample": 0.16216216216216217,
+  "ft_test_rows_clear": 7,
+  "auc_ft_on_clear_test_rows": 0.16666666666666666,
+  "rows": [
+   {
+    "id": "g002",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": -6.75658655166626,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": -2.3350167274475098,
+    "ft_test": true
+   },
+   {
+    "id": "g005",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 8.71070671081543,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 4.75119161605835,
+    "ft_test": false
+   },
+   {
+    "id": "g007",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 8.217713356018066,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 6.177825927734375,
+    "ft_test": false
+   },
+   {
+    "id": "g009",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": -7.942320346832275,
+    "accept": 0,
+    "bucket": "info",
+    "v_ft": -1.202898383140564,
+    "ft_test": false
+   },
+   {
+    "id": "g012",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": -10.229957580566406,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": -5.257100582122803,
+    "ft_test": true
+   },
+   {
+    "id": "g013",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 4.1118879318237305,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 3.766422748565674,
+    "ft_test": false
+   },
+   {
+    "id": "g015",
+    "stratum": "wrong",
+    "human": "unsure",
+    "y": null,
+    "v": -7.072244167327881,
+    "accept": 0,
+    "bucket": "info",
+    "v_ft": -6.921783924102783,
+    "ft_test": false
+   },
+   {
+    "id": "g018",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 2.9742655754089355,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 4.693936347961426,
+    "ft_test": false
+   },
+   {
+    "id": "g019",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 7.507113933563232,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 1.6940224170684814,
+    "ft_test": false
+   },
+   {
+    "id": "g020",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 0.9465711116790771,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 2.6099541187286377,
+    "ft_test": false
+   },
+   {
+    "id": "g027",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -9.168195724487305,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -9.643750190734863,
+    "ft_test": false
+   },
+   {
+    "id": "g029",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": -7.618080139160156,
+    "accept": 0,
+    "bucket": "info",
+    "v_ft": -1.9882467985153198,
+    "ft_test": false
+   },
+   {
+    "id": "g030",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 4.945341110229492,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 3.5065248012542725,
+    "ft_test": true
+   },
+   {
+    "id": "g031",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 2.0532002449035645,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 3.3105149269104004,
+    "ft_test": false
+   },
+   {
+    "id": "g036",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": -0.34554141759872437,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 3.845848321914673,
+    "ft_test": false
+   },
+   {
+    "id": "g042",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": -9.930427551269531,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": -5.311435699462891,
+    "ft_test": false
+   },
+   {
+    "id": "g044",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 1.1655137538909912,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 3.8728904724121094,
+    "ft_test": true
+   },
+   {
+    "id": "g046",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": 0.24347563087940216,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": -1.504634976387024,
+    "ft_test": false
+   },
+   {
+    "id": "g047",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": -6.816136837005615,
+    "accept": 0,
+    "bucket": "info",
+    "v_ft": -7.210200309753418,
+    "ft_test": false
+   },
+   {
+    "id": "g050",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -5.592745780944824,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -5.801062107086182,
+    "ft_test": false
+   },
+   {
+    "id": "g051",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -9.734953880310059,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -7.274692535400391,
+    "ft_test": false
+   },
+   {
+    "id": "g052",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 7.780341625213623,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 7.024787902832031,
+    "ft_test": false
+   },
+   {
+    "id": "g053",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -10.570460319519043,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -1.454720139503479,
+    "ft_test": false
+   },
+   {
+    "id": "g056",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 6.590849876403809,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 5.727176189422607,
+    "ft_test": false
+   },
+   {
+    "id": "g059",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -8.32673454284668,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -8.232361793518066,
+    "ft_test": false
+   },
+   {
+    "id": "g065",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -11.017287254333496,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -9.906140327453613,
+    "ft_test": false
+   },
+   {
+    "id": "g067",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -7.159469127655029,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -4.762545585632324,
+    "ft_test": false
+   },
+   {
+    "id": "g068",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -6.721022605895996,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -6.46356201171875,
+    "ft_test": false
+   },
+   {
+    "id": "g069",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": 2.994807004928589,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 0.3660189211368561,
+    "ft_test": false
+   },
+   {
+    "id": "g070",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 2.5564301013946533,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 5.594966888427734,
+    "ft_test": true
+   },
+   {
+    "id": "g072",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -11.302133560180664,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -7.278622627258301,
+    "ft_test": false
+   },
+   {
+    "id": "g073",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -1.8605968952178955,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -1.3184363842010498,
+    "ft_test": false
+   },
+   {
+    "id": "g074",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -9.61133861541748,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -5.400261402130127,
+    "ft_test": false
+   },
+   {
+    "id": "g075",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -10.639793395996094,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -9.668283462524414,
+    "ft_test": false
+   },
+   {
+    "id": "g077",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 6.1739983558654785,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 5.849717617034912,
+    "ft_test": false
+   },
+   {
+    "id": "g082",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 6.10031795501709,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 4.482920169830322,
+    "ft_test": false
+   },
+   {
+    "id": "g091",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": -10.37211799621582,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": -1.2439360618591309,
+    "ft_test": true
+   },
+   {
+    "id": "g092",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 6.453482627868652,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 4.055334091186523,
+    "ft_test": false
+   },
+   {
+    "id": "g093",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -10.87153148651123,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -10.13792610168457,
+    "ft_test": false
+   },
+   {
+    "id": "g095",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": -10.934432983398438,
+    "accept": 0,
+    "bucket": "info",
+    "v_ft": -1.5263911485671997,
+    "ft_test": false
+   },
+   {
+    "id": "g103",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": 3.7006075382232666,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 5.106921672821045,
+    "ft_test": true
+   },
+   {
+    "id": "g106",
+    "stratum": "correct",
+    "human": "no",
+    "y": 0,
+    "v": 8.571490287780762,
+    "accept": 1,
+    "bucket": "ver",
+    "v_ft": 3.528970241546631,
+    "ft_test": true
+   },
+   {
+    "id": "g110",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 5.395199298858643,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 6.949050426483154,
+    "ft_test": false
+   },
+   {
+    "id": "g115",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 2.111476421356201,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 4.594554901123047,
+    "ft_test": false
+   },
+   {
+    "id": "g117",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": -7.425852298736572,
+    "accept": 0,
+    "bucket": "info",
+    "v_ft": -2.395761489868164,
+    "ft_test": false
+   },
+   {
+    "id": "g129",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -2.66158390045166,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -2.5295121669769287,
+    "ft_test": false
+   },
+   {
+    "id": "g133",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 3.033484935760498,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 4.587770462036133,
+    "ft_test": false
+   },
+   {
+    "id": "g134",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 5.327753067016602,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 3.38617205619812,
+    "ft_test": true
+   },
+   {
+    "id": "g137",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": -8.024979591369629,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": -5.654117107391357,
+    "ft_test": false
+   },
+   {
+    "id": "g140",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 7.8857622146606445,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 6.356551647186279,
+    "ft_test": false
+   }
+  ]
+ },
+ "search_queries_corrected": {
+  "n": 50,
+  "n_clear": 35,
+  "human_counts": {
+   "yes": 24,
+   "no": 11,
+   "partial": 15,
+   "unsure": 0
+  },
+  "shares_reweighted": {
+   "info": 0.29936578581363005,
+   "ver": 0.24,
+   "ok": 0.46063421418636996
+  },
+  "ci95": {
+   "info": [
+    0.17809735744089011,
+    0.4349262865090403
+   ],
+   "ver": [
+    0.12126842837273993,
+    0.36126842837274
+   ],
+   "ok": [
+    0.32126842837273994,
+    0.6
+   ]
+  },
+  "ver_over_info_ci95": [
+   0.3495228262082822,
+   1.7268070096859083
+  ],
+  "case": "B",
+  "unweighted_ver_rate_on_clear": 0.34285714285714286,
+  "auc_ots_on_clear": 0.7462121212121212,
+  "best_threshold_error_on_clear_insample": 0.2,
+  "ft_test_rows_clear": 12,
+  "auc_ft_on_clear_test_rows": 0.9714285714285714,
+  "rows": [
+   {
+    "id": "g006",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": 7.108232498168945,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 0.3181999623775482,
+    "ft_test": false
+   },
+   {
+    "id": "g008",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": 6.934813499450684,
+    "accept": 1,
+    "bucket": "ver",
+    "v_ft": -1.2483375072479248,
+    "ft_test": true
+   },
+   {
+    "id": "g010",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 5.621990203857422,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": 0.48818567395210266,
+    "ft_test": true
+   },
+   {
+    "id": "g011",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": 8.845220565795898,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 0.44580426812171936,
+    "ft_test": false
+   },
+   {
+    "id": "g016",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": 5.767816543579102,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": -0.10250981152057648,
+    "ft_test": false
+   },
+   {
+    "id": "g021",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": 9.956653594970703,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 1.8374836444854736,
+    "ft_test": false
+   },
+   {
+    "id": "g022",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": 6.052743434906006,
+    "accept": 0,
+    "bucket": "info",
+    "v_ft": -0.9394071102142334,
+    "ft_test": false
+   },
+   {
+    "id": "g024",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -1.312598705291748,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -0.8026354908943176,
+    "ft_test": true
+   },
+   {
+    "id": "g025",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": -0.3762054443359375,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": 0.5818982124328613,
+    "ft_test": false
+   },
+   {
+    "id": "g026",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": 6.3171706199646,
+    "accept": 0,
+    "bucket": "info",
+    "v_ft": -0.40036171674728394,
+    "ft_test": false
+   },
+   {
+    "id": "g028",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 5.423299312591553,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": 0.8547840118408203,
+    "ft_test": false
+   },
+   {
+    "id": "g032",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": 0.5751287341117859,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -2.792501449584961,
+    "ft_test": true
+   },
+   {
+    "id": "g033",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": 3.4512040615081787,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": -0.16000311076641083,
+    "ft_test": true
+   },
+   {
+    "id": "g037",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 8.240335464477539,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 0.06142767146229744,
+    "ft_test": false
+   },
+   {
+    "id": "g048",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 8.098464965820312,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": -0.49686500430107117,
+    "ft_test": true
+   },
+   {
+    "id": "g049",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": 8.336352348327637,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 0.37185996770858765,
+    "ft_test": false
+   },
+   {
+    "id": "g055",
+    "stratum": "correct",
+    "human": "no",
+    "y": 0,
+    "v": -0.20412585139274597,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -1.1047579050064087,
+    "ft_test": true
+   },
+   {
+    "id": "g058",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 8.15902328491211,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 0.6094129085540771,
+    "ft_test": true
+   },
+   {
+    "id": "g062",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": 3.734642505645752,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -0.07669210433959961,
+    "ft_test": false
+   },
+   {
+    "id": "g063",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": 7.735673427581787,
+    "accept": 1,
+    "bucket": "ver",
+    "v_ft": 0.6399182081222534,
+    "ft_test": false
+   },
+   {
+    "id": "g064",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 6.909750938415527,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 1.2972159385681152,
+    "ft_test": false
+   },
+   {
+    "id": "g066",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": 10.397547721862793,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 1.1229561567306519,
+    "ft_test": false
+   },
+   {
+    "id": "g079",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 6.353977203369141,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": 0.6210265159606934,
+    "ft_test": false
+   },
+   {
+    "id": "g080",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": 7.7678728103637695,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 0.39569589495658875,
+    "ft_test": false
+   },
+   {
+    "id": "g081",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 7.479726791381836,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": -1.1752361059188843,
+    "ft_test": false
+   },
+   {
+    "id": "g083",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 9.210004806518555,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 1.38774836063385,
+    "ft_test": false
+   },
+   {
+    "id": "g084",
+    "stratum": "correct",
+    "human": "no",
+    "y": 0,
+    "v": 3.4761953353881836,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": 0.5337069034576416,
+    "ft_test": false
+   },
+   {
+    "id": "g087",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": 6.089173316955566,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -0.19853141903877258,
+    "ft_test": false
+   },
+   {
+    "id": "g088",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 7.136631011962891,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 0.02686714380979538,
+    "ft_test": false
+   },
+   {
+    "id": "g090",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 9.405035018920898,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 0.7390991449356079,
+    "ft_test": true
+   },
+   {
+    "id": "g096",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 5.257289886474609,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": -0.454150527715683,
+    "ft_test": false
+   },
+   {
+    "id": "g097",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 2.4915828704833984,
+    "accept": 0,
+    "bucket": "info",
+    "v_ft": -1.2481621503829956,
+    "ft_test": true
+   },
+   {
+    "id": "g099",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": 7.966646194458008,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": -0.10942093282938004,
+    "ft_test": false
+   },
+   {
+    "id": "g105",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 9.267435073852539,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 0.1592562198638916,
+    "ft_test": false
+   },
+   {
+    "id": "g109",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 7.072333812713623,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 0.39028647541999817,
+    "ft_test": true
+   },
+   {
+    "id": "g111",
+    "stratum": "correct",
+    "human": "no",
+    "y": 0,
+    "v": 7.476607322692871,
+    "accept": 1,
+    "bucket": "ver",
+    "v_ft": -0.2084210216999054,
+    "ft_test": true
+   },
+   {
+    "id": "g112",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 6.273448944091797,
+    "accept": 0,
+    "bucket": "ver",
+    "v_ft": -0.4551556408405304,
+    "ft_test": true
+   },
+   {
+    "id": "g113",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 9.195150375366211,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 0.6168403625488281,
+    "ft_test": true
+   },
+   {
+    "id": "g114",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 8.912431716918945,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 0.6052244305610657,
+    "ft_test": false
+   },
+   {
+    "id": "g119",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": 8.780311584472656,
+    "accept": 1,
+    "bucket": "ver",
+    "v_ft": 0.5662460327148438,
+    "ft_test": false
+   },
+   {
+    "id": "g124",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": 7.676392078399658,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 0.13521842658519745,
+    "ft_test": false
+   },
+   {
+    "id": "g125",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": 5.791800498962402,
+    "accept": 0,
+    "bucket": "info",
+    "v_ft": -0.6500610709190369,
+    "ft_test": false
+   },
+   {
+    "id": "g126",
+    "stratum": "wrong",
+    "human": "no",
+    "y": 0,
+    "v": -0.2937778830528259,
+    "accept": 0,
+    "bucket": "ok",
+    "v_ft": -1.3728567361831665,
+    "ft_test": false
+   },
+   {
+    "id": "g130",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 0.5430176258087158,
+    "accept": 0,
+    "bucket": "info",
+    "v_ft": -1.5072518587112427,
+    "ft_test": false
+   },
+   {
+    "id": "g132",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": 9.051929473876953,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": -0.09895192086696625,
+    "ft_test": false
+   },
+   {
+    "id": "g135",
+    "stratum": "wrong",
+    "human": "partial",
+    "y": null,
+    "v": 9.531262397766113,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": 0.9856907725334167,
+    "ft_test": false
+   },
+   {
+    "id": "g138",
+    "stratum": "correct",
+    "human": "partial",
+    "y": null,
+    "v": 7.269113063812256,
+    "accept": 1,
+    "bucket": "info",
+    "v_ft": -0.2637147903442383,
+    "ft_test": false
+   },
+   {
+    "id": "g143",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 8.865961074829102,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 1.1019530296325684,
+    "ft_test": false
+   },
+   {
+    "id": "g144",
+    "stratum": "correct",
+    "human": "yes",
+    "y": 1,
+    "v": 8.351709365844727,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": 1.1521068811416626,
+    "ft_test": true
+   },
+   {
+    "id": "g145",
+    "stratum": "wrong",
+    "human": "yes",
+    "y": 1,
+    "v": 7.059469223022461,
+    "accept": 1,
+    "bucket": "ok",
+    "v_ft": -0.19719770550727844,
+    "ft_test": false
+   }
+  ]
+ }
+}

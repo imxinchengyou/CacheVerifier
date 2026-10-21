@@ -1,0 +1,801 @@
+{
+  "config": {
+    "alphas": [
+      0.02,
+      0.05,
+      0.1
+    ],
+    "budget": 0.1,
+    "p_min": 0.01,
+    "g_estimator": "decreasing isotonic fit on chronological first half; evaluated on second half only",
+    "note": "E_finetuned* scores cover the whole gray zone incl. the fine-tune training split (in-sample optimism)"
+  },
+  "results": {
+    "lmarena/D_offshelf": {
+      "n_gray_zone": 16102,
+      "n_eval_half": 8051,
+      "gray_zone_error_rate_fit_half": 0.40876909700658304,
+      "gray_zone_error_rate": 0.05738417587877282,
+      "alphas": {
+        "0.02": {
+          "accept_rate": 0.703515091293007,
+          "const_cv_c_from_fit_half": 0.10463968410661402,
+          "error_rate_among_accepted": 0.02842514124293785,
+          "max_g_on_accept": 0.2222222222222222,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.8801812262970562,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.966253047240516,
+          "frac_accepted_with_g_below_0.01": 0.0014124293785310734,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 0.2558262711864407,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 0.3008322821895842,
+              "var_ratio_vs_uniform_f0": 1.1759241175443786,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.11555944246055845,
+              "audit_savings": -0.15559442460558448
+            },
+            "uniform_cv": {
+              "var_per_accepted": 0.3102303471250233,
+              "var_ratio_vs_uniform_f0": 1.2126602388655154,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.11874087754829932,
+              "audit_savings": -0.18740877548299317
+            },
+            "neyman_f0": {
+              "var_per_accepted": 0.25482162902324323,
+              "var_ratio_vs_uniform_f0": 0.9960729515442717,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.09964661555909195,
+              "audit_savings": 0.0035338444090805554
+            },
+            "neyman_cv": {
+              "var_per_accepted": 0.300738113688549,
+              "var_ratio_vs_uniform_f0": 1.1755560220372268,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1154688494177864,
+              "audit_savings": -0.1546884941778639
+            }
+          }
+        },
+        "0.05": {
+          "accept_rate": 0.979381443298969,
+          "const_cv_c_from_fit_half": 0.3423662522698701,
+          "error_rate_among_accepted": 0.05098287888395688,
+          "max_g_on_accept": 0.8909774436090225,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.5440472087618805,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.8169042282912758,
+          "frac_accepted_with_g_below_0.01": 0.001014584654407102,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 0.4588459099556119,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 1.1995910570737367,
+              "var_ratio_vs_uniform_f0": 2.614365805701054,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.22509759460286335,
+              "audit_savings": -1.2509759460286336
+            },
+            "uniform_cv": {
+              "var_per_accepted": 0.9761371079464356,
+              "var_ratio_vs_uniform_f0": 2.127374542884921,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1911838713333514,
+              "audit_savings": -0.911838713333514
+            },
+            "neyman_f0": {
+              "var_per_accepted": 0.39452068019143083,
+              "var_ratio_vs_uniform_f0": 0.8598108245741936,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.08738425431575232,
+              "audit_savings": 0.1261574568424768
+            },
+            "neyman_cv": {
+              "var_per_accepted": 0.8462639057487721,
+              "var_ratio_vs_uniform_f0": 1.8443313700467296,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1682839543151072,
+              "audit_savings": -0.6828395431510719
+            }
+          }
+        },
+        "0.1": {
+          "accept_rate": 1.0,
+          "const_cv_c_from_fit_half": 0.4083281541330019,
+          "error_rate_among_accepted": 0.05738417587877282,
+          "max_g_on_accept": 1.0,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.5046284949778566,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.8069821430388506,
+          "frac_accepted_with_g_below_0.01": 0.0009936653831822133,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 0.5164575829089554,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 1.5952761729935256,
+              "var_ratio_vs_uniform_f0": 3.0888813056207014,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.25551423887208913,
+              "audit_savings": -1.555142388720891
+            },
+            "uniform_cv": {
+              "var_per_accepted": 1.0616507710016778,
+              "var_ratio_vs_uniform_f0": 2.0556398165787657,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.18593585271258373,
+              "audit_savings": -0.8593585271258373
+            },
+            "neyman_f0": {
+              "var_per_accepted": 0.424116306711427,
+              "var_ratio_vs_uniform_f0": 0.8212025938753486,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.08390983243191895,
+              "audit_savings": 0.1609016756808106
+            },
+            "neyman_cv": {
+              "var_per_accepted": 0.9999832749797131,
+              "var_ratio_vs_uniform_f0": 1.9362350521552838,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.17772881411845837,
+              "audit_savings": -0.7772881411845836
+            }
+          }
+        }
+      }
+    },
+    "lmarena/E_finetuned*": {
+      "n_gray_zone": 16102,
+      "n_eval_half": 8051,
+      "gray_zone_error_rate_fit_half": 0.40876909700658304,
+      "gray_zone_error_rate": 0.05738417587877282,
+      "alphas": {
+        "0.02": {
+          "accept_rate": 0.9092038256117253,
+          "const_cv_c_from_fit_half": 0.05800990916597853,
+          "error_rate_among_accepted": 0.021994535519125682,
+          "max_g_on_accept": 0.2636363636363637,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.853327360540636,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.6617895638624303,
+          "frac_accepted_with_g_below_0.01": 0.2827868852459016,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 0.19795081967213116,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 0.2052709475881142,
+              "var_ratio_vs_uniform_f0": 1.0369795281884029,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.10331589551180144,
+              "audit_savings": -0.033158955118014255
+            },
+            "uniform_cv": {
+              "var_per_accepted": 0.21500703086646553,
+              "var_ratio_vs_uniform_f0": 1.0861638826380453,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.10768850231629967,
+              "audit_savings": -0.07688502316299672
+            },
+            "neyman_f0": {
+              "var_per_accepted": 0.15921899114740143,
+              "var_ratio_vs_uniform_f0": 0.8043361043471211,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.08240155619832576,
+              "audit_savings": 0.17598443801674246
+            },
+            "neyman_cv": {
+              "var_per_accepted": 0.16411882817793713,
+              "var_ratio_vs_uniform_f0": 0.8290889042529329,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.08475919846610877,
+              "audit_savings": 0.15240801533891235
+            }
+          }
+        },
+        "0.05": {
+          "accept_rate": 0.9919264687616445,
+          "const_cv_c_from_fit_half": 0.3043986555604267,
+          "error_rate_among_accepted": 0.05033809166040571,
+          "max_g_on_accept": 1.0,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.48303925455986146,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.5328140655642439,
+          "frac_accepted_with_g_below_0.01": 0.25920360631104433,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 0.4530428249436514,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 1.0111584448583184,
+              "var_ratio_vs_uniform_f0": 2.231926849264381,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.19871273016798172,
+              "audit_savings": -0.987127301679817
+            },
+            "uniform_cv": {
+              "var_per_accepted": 0.4606585836142238,
+              "var_ratio_vs_uniform_f0": 1.0168102401169683,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.10151038262107426,
+              "audit_savings": -0.015103826210742577
+            },
+            "neyman_f0": {
+              "var_per_accepted": 0.24691730780421173,
+              "var_ratio_vs_uniform_f0": 0.5450197955015021,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.05892764010227004,
+              "audit_savings": 0.4107235989772996
+            },
+            "neyman_cv": {
+              "var_per_accepted": 0.33998022374800363,
+              "var_ratio_vs_uniform_f0": 0.7504372766311656,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.07702876511065258,
+              "audit_savings": 0.22971234889347425
+            }
+          }
+        },
+        "0.1": {
+          "accept_rate": 1.0,
+          "const_cv_c_from_fit_half": 0.40335923790423667,
+          "error_rate_among_accepted": 0.05738417587877282,
+          "max_g_on_accept": 1.0,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.4503710536170746,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.5261209313009745,
+          "frac_accepted_with_g_below_0.01": 0.25711091789839774,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 0.5164575829089554,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 1.5641097820290937,
+              "var_ratio_vs_uniform_f0": 3.028534837690292,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.2517791965984636,
+              "audit_savings": -1.5177919659846357
+            },
+            "uniform_cv": {
+              "var_per_accepted": 0.4625288099295978,
+              "var_ratio_vs_uniform_f0": 0.8955794730022106,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.09050298423104891,
+              "audit_savings": 0.09497015768951089
+            },
+            "neyman_f0": {
+              "var_per_accepted": 0.26351293061042896,
+              "var_ratio_vs_uniform_f0": 0.5102315065763742,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.055478430348925266,
+              "audit_savings": 0.4452156965107473
+            },
+            "neyman_cv": {
+              "var_per_accepted": 0.3959844664444105,
+              "var_ratio_vs_uniform_f0": 0.7667318276440473,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.07562302847048864,
+              "audit_savings": 0.2437697152951136
+            }
+          }
+        }
+      }
+    },
+    "search_queries_corrected/D_offshelf": {
+      "n_gray_zone": 86280,
+      "n_eval_half": 43140,
+      "gray_zone_error_rate_fit_half": 0.514673157162726,
+      "gray_zone_error_rate": 0.5170375521557719,
+      "alphas": {
+        "0.02": {
+          "accept_rate": 0.05866944830783496,
+          "const_cv_c_from_fit_half": 0.3068432671081678,
+          "error_rate_among_accepted": 0.3405768470960095,
+          "max_g_on_accept": 0.340561224489796,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.6918923053363187,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.9954060803364246,
+          "frac_accepted_with_g_below_0.01": 0.0019755037534571317,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 3.0651916238640853,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 2.0314999146325223,
+              "var_ratio_vs_uniform_f0": 0.6627644088598755,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.06858952374459022,
+              "audit_savings": 0.3141047625540978
+            },
+            "uniform_cv": {
+              "var_per_accepted": 2.028310372220777,
+              "var_ratio_vs_uniform_f0": 0.6617238401766934,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.06848921073742796,
+              "audit_savings": 0.3151078926257205
+            },
+            "neyman_f0": {
+              "var_per_accepted": 3.058458267083381,
+              "var_ratio_vs_uniform_f0": 0.9978032835766999,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.0998023345784969,
+              "audit_savings": 0.001976654215031126
+            },
+            "neyman_cv": {
+              "var_per_accepted": 2.025234032335013,
+              "var_ratio_vs_uniform_f0": 0.6607202031245061,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.06840196430037238,
+              "audit_savings": 0.31598035699627625
+            }
+          }
+        },
+        "0.05": {
+          "accept_rate": 0.1352341214649977,
+          "const_cv_c_from_fit_half": 0.3311283311283311,
+          "error_rate_among_accepted": 0.36972917380870757,
+          "max_g_on_accept": 0.36394557823129253,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.669151331561617,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.9969728967610253,
+          "frac_accepted_with_g_below_0.01": 0.0008570449091532396,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 3.3275625642783684,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 2.11067583209166,
+              "var_ratio_vs_uniform_f0": 0.6343008707784857,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.06583776854035822,
+              "audit_savings": 0.3416223145964178
+            },
+            "uniform_cv": {
+              "var_per_accepted": 2.1050924820845114,
+              "var_ratio_vs_uniform_f0": 0.6326229609272672,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.06567504650533618,
+              "audit_savings": 0.34324953494663824
+            },
+            "neyman_f0": {
+              "var_per_accepted": 3.319980880847715,
+              "var_ratio_vs_uniform_f0": 0.9977215504489553,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.0997949571150083,
+              "audit_savings": 0.0020504288499170187
+            },
+            "neyman_cv": {
+              "var_per_accepted": 2.103156008581616,
+              "var_ratio_vs_uniform_f0": 0.6320410113874799,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.06562361997034143,
+              "audit_savings": 0.3437638002965858
+            }
+          }
+        },
+        "0.1": {
+          "accept_rate": 0.25078813166434866,
+          "const_cv_c_from_fit_half": 0.3619570644033949,
+          "error_rate_among_accepted": 0.3987429522136981,
+          "max_g_on_accept": 0.4201467268623025,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.6378500646761377,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.9961416341450934,
+          "frac_accepted_with_g_below_0.01": 0.00046214992143451335,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 3.5886865699232833,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 2.169901906340353,
+              "var_ratio_vs_uniform_f0": 0.6046507166511172,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.06295395163125127,
+              "audit_savings": 0.3704604836874874
+            },
+            "uniform_cv": {
+              "var_per_accepted": 2.1602665686376996,
+              "var_ratio_vs_uniform_f0": 0.6019657962728912,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.06269193299007074,
+              "audit_savings": 0.3730806700992927
+            },
+            "neyman_f0": {
+              "var_per_accepted": 3.578724854275983,
+              "var_ratio_vs_uniform_f0": 0.9972241332718246,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.09975018354026349,
+              "audit_savings": 0.0024981645973650712
+            },
+            "neyman_cv": {
+              "var_per_accepted": 2.1589581632309405,
+              "var_ratio_vs_uniform_f0": 0.6016012045535348,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.06265948528544962,
+              "audit_savings": 0.37340514714550377
+            }
+          }
+        }
+      }
+    },
+    "search_queries_corrected/E_finetuned*": {
+      "n_gray_zone": 86280,
+      "n_eval_half": 43140,
+      "gray_zone_error_rate_fit_half": 0.514673157162726,
+      "gray_zone_error_rate": 0.5170375521557719,
+      "alphas": {
+        "0.02": {
+          "accept_rate": 0.11163653222067686,
+          "const_cv_c_from_fit_half": 0.13849325337331334,
+          "error_rate_among_accepted": 0.17898671096345514,
+          "max_g_on_accept": 0.21428571428571427,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.8417918775603824,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.9537549148373594,
+          "frac_accepted_with_g_below_0.01": 0.024916943521594685,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 1.6108803986710964,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 1.3373116953258988,
+              "var_ratio_vs_uniform_f0": 0.8301744166910967,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.08445164668507878,
+              "audit_savings": 0.15548353314921226
+            },
+            "uniform_cv": {
+              "var_per_accepted": 1.318712449797724,
+              "var_ratio_vs_uniform_f0": 0.8186284039992058,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.08337502656336111,
+              "audit_savings": 0.1662497343663889
+            },
+            "neyman_f0": {
+              "var_per_accepted": 1.632680718925293,
+              "var_ratio_vs_uniform_f0": 1.013533171222507,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.10121798541002561,
+              "audit_savings": -0.012179854100256016
+            },
+            "neyman_cv": {
+              "var_per_accepted": 1.3508562172335794,
+              "var_ratio_vs_uniform_f0": 0.8385825653772774,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.08520407482767363,
+              "audit_savings": 0.14795925172326374
+            }
+          }
+        },
+        "0.05": {
+          "accept_rate": 0.2172229949003245,
+          "const_cv_c_from_fit_half": 0.1910922378036737,
+          "error_rate_among_accepted": 0.23017820936933092,
+          "max_g_on_accept": 0.27899159663865547,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.7849394814233643,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.9593785028448323,
+          "frac_accepted_with_g_below_0.01": 0.012805463664496851,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 2.071603884323978,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 1.6085152302668166,
+              "var_ratio_vs_uniform_f0": 0.7764588792474291,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.07942128012174476,
+              "audit_savings": 0.20578719878255236
+            },
+            "uniform_cv": {
+              "var_per_accepted": 1.573067940380016,
+              "var_ratio_vs_uniform_f0": 0.7593478426467384,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.07780723209070524,
+              "audit_savings": 0.22192767909294764
+            },
+            "neyman_f0": {
+              "var_per_accepted": 2.0570019204638843,
+              "var_ratio_vs_uniform_f0": 0.9929513726197425,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.09936562353577685,
+              "audit_savings": 0.00634376464223152
+            },
+            "neyman_cv": {
+              "var_per_accepted": 1.5822838959156011,
+              "var_ratio_vs_uniform_f0": 0.7637965481185339,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.07821748849197008,
+              "audit_savings": 0.21782511508029923
+            }
+          }
+        },
+        "0.1": {
+          "accept_rate": 0.3466852109411219,
+          "const_cv_c_from_fit_half": 0.24039274335132324,
+          "error_rate_among_accepted": 0.2884461085851832,
+          "max_g_on_accept": 0.3877551020408163,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.7204228535007638,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.9573190150562901,
+          "frac_accepted_with_g_below_0.01": 0.008023535704733886,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 2.5960149772666488,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 1.8679866924379196,
+              "var_ratio_vs_uniform_f0": 0.719559289447832,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.07403209014106549,
+              "audit_savings": 0.2596790985893451
+            },
+            "uniform_cv": {
+              "var_per_accepted": 1.7899820023103015,
+              "var_ratio_vs_uniform_f0": 0.6895114311686208,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.07116059835077371,
+              "audit_savings": 0.28839401649226293
+            },
+            "neyman_f0": {
+              "var_per_accepted": 2.5400481682996454,
+              "var_ratio_vs_uniform_f0": 0.9784412611417478,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.0980597135027573,
+              "audit_savings": 0.019402864972427047
+            },
+            "neyman_cv": {
+              "var_per_accepted": 1.7858988198997328,
+              "var_ratio_vs_uniform_f0": 0.6879385656627106,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.0710145044052353,
+              "audit_savings": 0.2898549559476471
+            }
+          }
+        }
+      }
+    },
+    "quora/D_offshelf": {
+      "n_gray_zone": 17040,
+      "n_eval_half": 8520,
+      "gray_zone_error_rate_fit_half": 0.551056338028169,
+      "gray_zone_error_rate": 0.6563380281690141,
+      "alphas": {
+        "0.02": {
+          "accept_rate": 0.038497652582159626,
+          "const_cv_c_from_fit_half": 0.3867924528301887,
+          "error_rate_among_accepted": 0.5182926829268293,
+          "max_g_on_accept": 0.47020725388601037,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.6074301428550708,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.9692550519365258,
+          "frac_accepted_with_g_below_0.01": 0.018292682926829267,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 4.664634146341464,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 2.4026191944012716,
+              "var_ratio_vs_uniform_f0": 0.5150713044206647,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.05413215392104992,
+              "audit_savings": 0.4586784607895008
+            },
+            "uniform_cv": {
+              "var_per_accepted": 2.518016956274294,
+              "var_ratio_vs_uniform_f0": 0.5398101710182799,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.056585001309377256,
+              "audit_savings": 0.4341499869062275
+            },
+            "neyman_f0": {
+              "var_per_accepted": 5.4644893658604135,
+              "var_ratio_vs_uniform_f0": 1.1714722300668075,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.11870518563360744,
+              "audit_savings": -0.18705185633607435
+            },
+            "neyman_cv": {
+              "var_per_accepted": 3.3167044180383414,
+              "var_ratio_vs_uniform_f0": 0.711032058246128,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.06661197097345438,
+              "audit_savings": 0.3338802902654563
+            }
+          }
+        },
+        "0.05": {
+          "accept_rate": 0.09049295774647888,
+          "const_cv_c_from_fit_half": 0.4416445623342175,
+          "error_rate_among_accepted": 0.5525291828793775,
+          "max_g_on_accept": 0.47020725388601037,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.5583103146092531,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.9842824874741936,
+          "frac_accepted_with_g_below_0.01": 0.007782101167315175,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 4.972762645914397,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 2.335824756175221,
+              "var_ratio_vs_uniform_f0": 0.4697237576972079,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.049602688496103775,
+              "audit_savings": 0.5039731150389622
+            },
+            "uniform_cv": {
+              "var_per_accepted": 2.3926066783118465,
+              "var_ratio_vs_uniform_f0": 0.4811423445431491,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.050747296798056146,
+              "audit_savings": 0.4925270320194386
+            },
+            "neyman_f0": {
+              "var_per_accepted": 5.314111578094009,
+              "var_ratio_vs_uniform_f0": 1.0686437211034117,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.10664078831694883,
+              "audit_savings": -0.06640788316948831
+            },
+            "neyman_cv": {
+              "var_per_accepted": 2.73687778695582,
+              "var_ratio_vs_uniform_f0": 0.5503737020717102,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.05393043421468279,
+              "audit_savings": 0.4606956578531721
+            }
+          }
+        },
+        "0.1": {
+          "accept_rate": 0.18708920187793426,
+          "const_cv_c_from_fit_half": 0.46304485154769426,
+          "error_rate_among_accepted": 0.534504391468005,
+          "max_g_on_accept": 0.4757097791798107,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.5410462730991129,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.991920277053057,
+          "frac_accepted_with_g_below_0.01": 0.0037641154328732747,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 4.810539523212046,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 2.2852432153354063,
+              "var_ratio_vs_uniform_f0": 0.47504925472673937,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.050136863878544546,
+              "audit_savings": 0.49863136121455454
+            },
+            "uniform_cv": {
+              "var_per_accepted": 2.3265252552535585,
+              "var_ratio_vs_uniform_f0": 0.4836308368380506,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.05099637946254122,
+              "audit_savings": 0.4900362053745878
+            },
+            "neyman_f0": {
+              "var_per_accepted": 4.9847161241869475,
+              "var_ratio_vs_uniform_f0": 1.0362072902913397,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.10337631381987121,
+              "audit_savings": -0.03376313819871202
+            },
+            "neyman_cv": {
+              "var_per_accepted": 2.4941463394518726,
+              "var_ratio_vs_uniform_f0": 0.5184753866831358,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.05255892633875613,
+              "audit_savings": 0.4744107366124387
+            }
+          }
+        }
+      }
+    },
+    "comcast/D_offshelf": {
+      "n_gray_zone": 3685,
+      "n_eval_half": 1843,
+      "gray_zone_error_rate_fit_half": 0.98914223669924,
+      "gray_zone_error_rate": 0.9652740097666848,
+      "alphas": {
+        "0.02": {
+          "accept_rate": 0.0341833966359197,
+          "const_cv_c_from_fit_half": 1.0,
+          "error_rate_among_accepted": 0.5714285714285714,
+          "max_g_on_accept": 0.9877551020408163,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.012244897959183704,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 1.0000000000000002,
+          "frac_accepted_with_g_below_0.01": 0.0,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 5.142857142857143,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 3.857142857142857,
+              "var_ratio_vs_uniform_f0": 0.75,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.07692307692307693,
+              "audit_savings": 0.23076923076923073
+            },
+            "uniform_cv": {
+              "var_per_accepted": 3.7640316534777183,
+              "var_ratio_vs_uniform_f0": 0.7318950437317785,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.07520580939713124,
+              "audit_savings": 0.2479419060286876
+            },
+            "neyman_f0": {
+              "var_per_accepted": 5.142857142857141,
+              "var_ratio_vs_uniform_f0": 0.9999999999999994,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.09999999999999995,
+              "audit_savings": 5.551115123125783e-16
+            },
+            "neyman_cv": {
+              "var_per_accepted": 3.764031653477715,
+              "var_ratio_vs_uniform_f0": 0.7318950437317779,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.0752058093971312,
+              "audit_savings": 0.24794190602868804
+            }
+          }
+        },
+        "0.05": {
+          "accept_rate": 0.07216494845360824,
+          "const_cv_c_from_fit_half": 1.0,
+          "error_rate_among_accepted": 0.6917293233082706,
+          "max_g_on_accept": 0.9877551020408163,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.012244897959183702,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 1.0,
+          "frac_accepted_with_g_below_0.01": 0.0,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 6.225563909774436,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 2.774436090225564,
+              "var_ratio_vs_uniform_f0": 0.44565217391304346,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.047180667433831994,
+              "audit_savings": 0.5281933256616801
+            },
+            "uniform_cv": {
+              "var_per_accepted": 2.707840154321664,
+              "var_ratio_vs_uniform_f0": 0.43495500063379383,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.04610037892121114,
+              "audit_savings": 0.5389962107878886
+            },
+            "neyman_f0": {
+              "var_per_accepted": 6.2255639097744355,
+              "var_ratio_vs_uniform_f0": 0.9999999999999999,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.09999999999999998,
+              "audit_savings": 2.220446049250313e-16
+            },
+            "neyman_cv": {
+              "var_per_accepted": 2.7078401543216626,
+              "var_ratio_vs_uniform_f0": 0.4349550006337936,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.04610037892121115,
+              "audit_savings": 0.5389962107878885
+            }
+          }
+        },
+        "0.1": {
+          "accept_rate": 0.12479652740097667,
+          "const_cv_c_from_fit_half": 1.0,
+          "error_rate_among_accepted": 0.8,
+          "max_g_on_accept": 0.9877551020408163,
+          "prop1_ceiling_E[g(1-g)]/E[g]": 0.012244897959183704,
+          "prop2_ideal_ratio_(E sqrt g)^2/E g": 0.9999999999999992,
+          "frac_accepted_with_g_below_0.01": 0.0,
+          "schemes": {
+            "uniform_f0": {
+              "var_per_accepted": 7.2,
+              "var_ratio_vs_uniform_f0": 1.0,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "uniform_const": {
+              "var_per_accepted": 1.8,
+              "var_ratio_vs_uniform_f0": 0.25,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.02702702702702703,
+              "audit_savings": 0.7297297297297297
+            },
+            "uniform_cv": {
+              "var_per_accepted": 1.7572678050812156,
+              "var_ratio_vs_uniform_f0": 0.2440649729279466,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.026402342870015767,
+              "audit_savings": 0.7359765712998423
+            },
+            "neyman_f0": {
+              "var_per_accepted": 7.199999999999999,
+              "var_ratio_vs_uniform_f0": 0.9999999999999999,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.1,
+              "audit_savings": 0.0
+            },
+            "neyman_cv": {
+              "var_per_accepted": 1.7572678050812156,
+              "var_ratio_vs_uniform_f0": 0.2440649729279466,
+              "budget_needed_to_match_uniform_f0_at_10pct": 0.02640234287001577,
+              "audit_savings": 0.7359765712998423
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+ "alpha": 0.02,
+ "audit_rate": 0.05,
+ "arms": {
+  "A0": {
+   "policy_risk": 0.015545705659407721,
+   "served_risk": 0.014839082674889188,
+   "reuse_rate_gray": 0.0350099569602364,
+   "hit_rate_all_requests": 0.0459,
+   "n_audits": 41,
+   "extra_llm_call_share": 0.0006833333333333333,
+   "n_gray_zone_policy": 17067,
+   "final_store_size": 57246,
+   "n_fallback_recalibrations": 0,
+   "regression_pass": true
+  },
+  "A1": {
+   "policy_risk": 0.015534728463217358,
+   "served_risk": 0.014828604442162023,
+   "reuse_rate_gray": 0.03787392476569521,
+   "hit_rate_all_requests": 0.046683333333333334,
+   "n_audits": 44,
+   "extra_llm_call_share": 0.0007333333333333333,
+   "n_gray_zone_policy": 17078,
+   "final_store_size": 57199,
+   "n_fallback_recalibrations": 0
+  },
+  "A2": {
+   "policy_risk": 0.0120752777956195,
+   "served_risk": 0.011432975785214208,
+   "reuse_rate_gray": 0.043676536707559895,
+   "hit_rate_all_requests": 0.048233333333333336,
+   "n_audits": 51,
+   "extra_llm_call_share": 0.00085,
+   "n_gray_zone_policy": 17069,
+   "final_store_size": 57106,
+   "n_fallback_recalibrations": 0
+  }
+ },
+ "comparisons": {
+  "A1-A0": {
+   "accept": {
+    "diff": 0.0028639678054588127,
+    "ci95": [
+     -0.0012451249723271132,
+     0.007036669662014437
+    ]
+   },
+   "risk": {
+    "diff": -1.0977196190363123e-05,
+    "ci95": [
+     -0.002774453347794531,
+     0.0027524343169651553
+    ]
+   },
+   "hit_all_diff": 0.0007833333333333303
+  },
+  "A2-A1": {
+   "accept": {
+    "diff": 0.005802611941864683,
+    "ci95": [
+     0.0014358386635645426,
+     0.010043246761703992
+    ]
+   },
+   "risk": {
+    "diff": -0.0034594506675978583,
+    "ci95": [
+     -0.006222105289190069,
+     -0.0008905756722271071
+    ]
+   },
+   "hit_all_diff": 0.0015500000000000028
+  },
+  "A2-A0": {
+   "accept": {
+    "diff": 0.008666579747323495,
+    "ci95": [
+     0.004234381264309061,
+     0.013036118300304078
+    ]
+   },
+   "risk": {
+    "diff": -0.0034704278637882214,
+    "ci95": [
+     -0.00603990141664707,
+     -0.0008368155018688664
+    ]
+   },
+   "hit_all_diff": 0.002333333333333333
+  }
+ }
+}

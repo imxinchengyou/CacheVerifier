@@ -1,0 +1,93 @@
+{
+ "alpha": 0.02,
+ "audit_rate": 0.05,
+ "arms": {
+  "A0": {
+   "policy_risk": 0.01632246827569047,
+   "served_risk": 0.015576013933814381,
+   "reuse_rate_gray": 0.24842000497636227,
+   "hit_rate_all_requests": 0.7178166666666667,
+   "n_audits": 273,
+   "extra_llm_call_share": 0.00455,
+   "n_gray_zone_policy": 21595,
+   "final_store_size": 16931,
+   "n_fallback_recalibrations": 0,
+   "regression_pass": true
+  },
+  "A1": {
+   "policy_risk": 0.012258466652815292,
+   "served_risk": 0.011427384167878661,
+   "reuse_rate_gray": 0.2001350509038022,
+   "hit_rate_all_requests": 0.7139,
+   "n_audits": 212,
+   "extra_llm_call_share": 0.003533333333333333,
+   "n_gray_zone_policy": 20752,
+   "final_store_size": 17166,
+   "n_fallback_recalibrations": 0
+  },
+  "A2": {
+   "policy_risk": 0.013322420770245078,
+   "served_risk": 0.01273132360296458,
+   "reuse_rate_gray": 0.4595553130541536,
+   "hit_rate_all_requests": 0.767,
+   "n_audits": 539,
+   "extra_llm_call_share": 0.008983333333333333,
+   "n_gray_zone_policy": 23493,
+   "final_store_size": 13980,
+   "n_fallback_recalibrations": 0
+  }
+ },
+ "comparisons": {
+  "A1-A0": {
+   "accept": {
+    "diff": -0.04828495407256006,
+    "ci95": [
+     -0.056506193415268725,
+     -0.04019410249114339
+    ]
+   },
+   "risk": {
+    "diff": -0.004064001622875178,
+    "ci95": [
+     -0.006427133630836322,
+     -0.0016927166600658097
+    ]
+   },
+   "hit_all_diff": -0.003916666666666679
+  },
+  "A2-A1": {
+   "accept": {
+    "diff": 0.2594202621503514,
+    "ci95": [
+     0.2507350217556426,
+     0.2683942392201383
+    ]
+   },
+   "risk": {
+    "diff": 0.0010639541174297853,
+    "ci95": [
+     -0.001066009457573571,
+     0.0031680192847753563
+    ]
+   },
+   "hit_all_diff": 0.053100000000000036
+  },
+  "A2-A0": {
+   "accept": {
+    "diff": 0.21113530807779132,
+    "ci95": [
+     0.2021012534162994,
+     0.2199510465945152
+    ]
+   },
+   "risk": {
+    "diff": -0.0030000475054453926,
+    "ci95": [
+     -0.005243114123024985,
+     -0.0007255576026604956
+    ]
+   },
+   "hit_all_diff": 0.04918333333333336
+  }
+ }
+}

@@ -1,0 +1,380 @@
+{
+ "lmarena": {
+  "gray_rows": 16102,
+  "wrong_rate": 0.23307663644267793,
+  "entries": 9900,
+  "entry_size_mean": 1.6264646464646464,
+  "entry_size_p90": 3.0,
+  "rows_in_entries_ge2": 0.5929698174139858,
+  "L0": {
+   "deff_full_entry": 2.8280678317001366,
+   "icc_entry": 1.0871453769403014,
+   "deff_full_class": 4.366248924512401,
+   "win_deff_median": 1.0714350565298656,
+   "win_deff_iqr": [
+    1.0507922313179376,
+    1.120279595628379
+   ]
+  },
+  "ots_a0.01": {
+   "threshold": 6.586051940917969,
+   "approve_rate": 0.21289280834678923,
+   "risk": 0.009998757918271022,
+   "deff_full_entry": 1.2766010788512903,
+   "icc_entry": 0.16449366862400192,
+   "deff_full_class": 2.1431567669241787,
+   "win_deff_median": 1.000705837270921,
+   "win_deff_iqr": [
+    0.9999868472552987,
+    1.153219283141264
+   ],
+   "repeat_loss_share": 0.18012422360248448,
+   "oracle_quarantine_ceiling": 0.10559006211180125,
+   "quarantine_avoided_share": 0.004968944099378881,
+   "quarantine_blocked_correct_per_avoided": 1.375,
+   "quarantine_blocked_correct_share_of_approved": 0.00032088681446907816
+  },
+  "ots_a0.02": {
+   "threshold": 4.6021013259887695,
+   "approve_rate": 0.4060986212892808,
+   "risk": 0.019997515836542044,
+   "deff_full_entry": 1.3069778912476695,
+   "icc_entry": 0.18255864990655837,
+   "deff_full_class": 2.3418384663877476,
+   "win_deff_median": 1.0663926087775115,
+   "win_deff_iqr": [
+    1.0281822772199802,
+    1.0919107589850898
+   ],
+   "repeat_loss_share": 0.2329192546583851,
+   "oracle_quarantine_ceiling": 0.13043478260869565,
+   "quarantine_avoided_share": 0.007298136645962734,
+   "quarantine_blocked_correct_per_avoided": 1.1702127659574468,
+   "quarantine_blocked_correct_share_of_approved": 0.00042055360146811435
+  },
+  "ots_a0.05": {
+   "threshold": -1.78350830078125,
+   "approve_rate": 0.6903490249658427,
+   "risk": 0.049993789591355114,
+   "deff_full_entry": 1.5375481521217058,
+   "icc_entry": 0.3196779563252957,
+   "deff_full_class": 2.6792374453068732,
+   "win_deff_median": 1.0509150350779282,
+   "win_deff_iqr": [
+    1.0396308612956116,
+    1.0968308077209195
+   ],
+   "repeat_loss_share": 0.3130434782608696,
+   "oracle_quarantine_ceiling": 0.19130434782608696,
+   "quarantine_avoided_share": 0.014658385093167702,
+   "quarantine_blocked_correct_per_avoided": 1.2838983050847457,
+   "quarantine_blocked_correct_share_of_approved": 0.0013629003238575029
+  },
+  "ft_a0.01": {
+   "threshold": 2.9040956497192383,
+   "approve_rate": 0.6074400695565768,
+   "risk": 0.009998757918271022,
+   "deff_full_entry": 1.1532557148713083,
+   "icc_entry": 0.09114062346202563,
+   "deff_full_class": 2.038886400382335,
+   "win_deff_median": 0.9997075594639699,
+   "win_deff_iqr": [
+    0.9977660034795763,
+    1.0715212188841778
+   ],
+   "repeat_loss_share": 0.16149068322981366,
+   "oracle_quarantine_ceiling": 0.08074534161490683,
+   "quarantine_avoided_share": 0.004037267080745341,
+   "quarantine_blocked_correct_per_avoided": 3.5384615384615383,
+   "quarantine_blocked_correct_share_of_approved": 0.00023514978018607501
+  },
+  "ft_a0.02": {
+   "threshold": 1.6076806783676147,
+   "approve_rate": 0.7132033287790337,
+   "risk": 0.019997515836542044,
+   "deff_full_entry": 1.1765431086389242,
+   "icc_entry": 0.10498955293632581,
+   "deff_full_class": 2.0359760255277783,
+   "win_deff_median": 1.029443941710269,
+   "win_deff_iqr": [
+    1.0000486359390586,
+    1.0663439284556948
+   ],
+   "repeat_loss_share": 0.18012422360248448,
+   "oracle_quarantine_ceiling": 0.09316770186335403,
+   "quarantine_avoided_share": 0.004347826086956523,
+   "quarantine_blocked_correct_per_avoided": 3.9285714285714284,
+   "quarantine_blocked_correct_share_of_approved": 0.00047892720306513413
+  },
+  "ft_a0.05": {
+   "threshold": -1.0568557977676392,
+   "approve_rate": 0.8064836666252639,
+   "risk": 0.049993789591355114,
+   "deff_full_entry": 1.268832612152604,
+   "icc_entry": 0.15987378936627375,
+   "deff_full_class": 2.2880077274675124,
+   "win_deff_median": 1.0521408235828422,
+   "win_deff_iqr": [
+    1.0293851941264014,
+    1.0722071803219662
+   ],
+   "repeat_loss_share": 0.2546583850931677,
+   "oracle_quarantine_ceiling": 0.14161490683229813,
+   "quarantine_avoided_share": 0.007701863354037266,
+   "quarantine_blocked_correct_per_avoided": 2.4274193548387095,
+   "quarantine_blocked_correct_share_of_approved": 0.0011589403973509935
+  }
+ },
+ "search_queries_corrected": {
+  "gray_rows": 86280,
+  "wrong_rate": 0.5158553546592489,
+  "entries": 48372,
+  "entry_size_mean": 1.7836765070702059,
+  "entry_size_p90": 3.0,
+  "rows_in_entries_ge2": 0.6679068150208624,
+  "L0": {
+   "deff_full_entry": 1.6373434256377402,
+   "icc_entry": 0.3615764364694789,
+   "deff_full_class": 2.8904021797658386,
+   "win_deff_median": 1.023380119742484,
+   "win_deff_iqr": [
+    1.0171304651491901,
+    1.0313794361318454
+   ]
+  },
+  "ots_a0.01": {
+   "threshold": 10.358009338378906,
+   "approve_rate": 0.032429299953639315,
+   "risk": 0.009990727862772369,
+   "deff_full_entry": 1.149243153270487,
+   "icc_entry": 0.08466833634161133,
+   "deff_full_class": 1.2295800133969284,
+   "win_deff_median": 1.0003467741935554,
+   "win_deff_iqr": [
+    0.9994617067458831,
+    1.0005026517067466
+   ],
+   "repeat_loss_share": 0.11020881670533643,
+   "oracle_quarantine_ceiling": 0.06148491879350348,
+   "quarantine_avoided_share": 0.004640371229698377,
+   "quarantine_blocked_correct_per_avoided": 0.5875,
+   "quarantine_blocked_correct_share_of_approved": 0.0008398856325947106
+  },
+  "ots_a0.02": {
+   "threshold": 9.998751640319824,
+   "approve_rate": 0.061219286045433474,
+   "risk": 0.019993045897079276,
+   "deff_full_entry": 1.174991793362699,
+   "icc_entry": 0.09927600491395328,
+   "deff_full_class": 1.2820080277062884,
+   "win_deff_median": 1.0000510725229856,
+   "win_deff_iqr": [
+    0.9993235510675773,
+    1.0012497467071755
+   ],
+   "repeat_loss_share": 0.1327536231884058,
+   "oracle_quarantine_ceiling": 0.07478260869565218,
+   "quarantine_avoided_share": 0.004521739130434782,
+   "quarantine_blocked_correct_per_avoided": 0.5897435897435898,
+   "quarantine_blocked_correct_share_of_approved": 0.0008708822415751608
+  },
+  "ots_a0.05": {
+   "threshold": 9.314726829528809,
+   "approve_rate": 0.14002086230876218,
+   "risk": 0.05,
+   "deff_full_entry": 1.1894224434518041,
+   "icc_entry": 0.10746277334250587,
+   "deff_full_class": 1.3489129639114699,
+   "win_deff_median": 1.0004731861198937,
+   "win_deff_iqr": [
+    0.9986997468013068,
+    1.0185345123900498
+   ],
+   "repeat_loss_share": 0.17315716272600834,
+   "oracle_quarantine_ceiling": 0.09434399629114511,
+   "quarantine_avoided_share": 0.005122855818266112,
+   "quarantine_blocked_correct_per_avoided": 0.6877828054298643,
+   "quarantine_blocked_correct_share_of_approved": 0.001258173992219187
+  },
+  "ft_a0.01": {
+   "threshold": 1.6433459520339966,
+   "approve_rate": 0.0757765414928141,
+   "risk": 0.009990727862772369,
+   "deff_full_entry": 1.1547051969210902,
+   "icc_entry": 0.08776705235495952,
+   "deff_full_class": 1.2498152654090608,
+   "win_deff_median": 1.000227043390516,
+   "win_deff_iqr": [
+    0.9992919298509274,
+    1.0005346142548641
+   ],
+   "repeat_loss_share": 0.12761020881670534,
+   "oracle_quarantine_ceiling": 0.06844547563805105,
+   "quarantine_avoided_share": 0.004234338747099768,
+   "quarantine_blocked_correct_per_avoided": 2.164383561643836,
+   "quarantine_blocked_correct_share_of_approved": 0.0012083205873355768
+  },
+  "ft_a0.02": {
+   "threshold": 1.370084524154663,
+   "approve_rate": 0.12308762169680111,
+   "risk": 0.019993045897079276,
+   "deff_full_entry": 1.1621190812355302,
+   "icc_entry": 0.09197308282923614,
+   "deff_full_class": 1.371921410557186,
+   "win_deff_median": 1.0001092394078621,
+   "win_deff_iqr": [
+    0.9988139777665166,
+    1.0011023590563763
+   ],
+   "repeat_loss_share": 0.13855072463768117,
+   "oracle_quarantine_ceiling": 0.07478260869565218,
+   "quarantine_avoided_share": 0.004405797101449275,
+   "quarantine_blocked_correct_per_avoided": 2.3421052631578947,
+   "quarantine_blocked_correct_share_of_approved": 0.0016760828625235404
+  },
+  "ft_a0.05": {
+   "threshold": 0.9455245137214661,
+   "approve_rate": 0.23435326842837273,
+   "risk": 0.05,
+   "deff_full_entry": 1.2156772320226459,
+   "icc_entry": 0.12235758908835834,
+   "deff_full_class": 1.495119927774422,
+   "win_deff_median": 1.000931937172821,
+   "win_deff_iqr": [
+    0.9987993323827331,
+    1.0212152405607968
+   ],
+   "repeat_loss_share": 0.19935095039406583,
+   "oracle_quarantine_ceiling": 0.10825220213259157,
+   "quarantine_avoided_share": 0.006513676402410756,
+   "quarantine_blocked_correct_per_avoided": 1.9270462633451957,
+   "quarantine_blocked_correct_share_of_approved": 0.002678041543026706
+  }
+ },
+ "quora": {
+  "gray_rows": 17040,
+  "wrong_rate": 0.6036971830985915,
+  "entries": 13055,
+  "entry_size_mean": 1.3052470317885867,
+  "entry_size_p90": 2.0,
+  "rows_in_entries_ge2": 0.3786384976525822,
+  "L0": {
+   "deff_full_entry": 1.231574294879855,
+   "icc_entry": 0.28715077752530405,
+   "deff_full_class": 1.83498332853739,
+   "win_deff_median": 1.073400003968998,
+   "win_deff_iqr": [
+    1.0534694982312818,
+    1.0991067668265724
+   ]
+  },
+  "ots_a0.01": {
+   "threshold": 7.9877753257751465,
+   "approve_rate": 0.023650234741784036,
+   "risk": 0.009976525821596244,
+   "deff_full_entry": 1.044397141124925,
+   "icc_entry": 0.055052196533890534,
+   "deff_full_class": 1.0867097876492544,
+   "win_deff_median": 1.0007041159168177,
+   "win_deff_iqr": [
+    0.998920245516099,
+    1.0218737937324986
+   ],
+   "repeat_loss_share": 0.047058823529411764,
+   "oracle_quarantine_ceiling": 0.023529411764705882,
+   "quarantine_avoided_share": 0.0008823529411764706,
+   "quarantine_blocked_correct_per_avoided": 0.0,
+   "quarantine_blocked_correct_share_of_approved": 0.0
+  },
+  "ots_a0.02": {
+   "threshold": 7.441762447357178,
+   "approve_rate": 0.043544600938967136,
+   "risk": 0.01995305164319249,
+   "deff_full_entry": 1.0865844036861803,
+   "icc_entry": 0.10736415651379069,
+   "deff_full_class": 1.131613244099783,
+   "win_deff_median": 1.045141390043225,
+   "win_deff_iqr": [
+    1.029534238282494,
+    1.0517846797917816
+   ],
+   "repeat_loss_share": 0.07647058823529412,
+   "oracle_quarantine_ceiling": 0.041176470588235294,
+   "quarantine_avoided_share": 0.0016176470588235292,
+   "quarantine_blocked_correct_per_avoided": 0.18181818181818182,
+   "quarantine_blocked_correct_share_of_approved": 0.00013477088948787063
+  },
+  "ots_a0.05": {
+   "threshold": 6.52092170715332,
+   "approve_rate": 0.10041079812206573,
+   "risk": 0.05,
+   "deff_full_entry": 1.1411601186067393,
+   "icc_entry": 0.1750377252989985,
+   "deff_full_class": 1.2470595502845458,
+   "win_deff_median": 1.0439896492843501,
+   "win_deff_iqr": [
+    1.027466626094382,
+    1.0886796796701812
+   ],
+   "repeat_loss_share": 0.12089201877934272,
+   "oracle_quarantine_ceiling": 0.06572769953051644,
+   "quarantine_avoided_share": 0.0031103286384976526,
+   "quarantine_blocked_correct_per_avoided": 0.07547169811320754,
+   "quarantine_blocked_correct_share_of_approved": 0.00011689070718877848
+  },
+  "ft_a0.01": {
+   "threshold": 1.0304197072982788,
+   "approve_rate": 0.04765258215962441,
+   "risk": 0.009976525821596244,
+   "deff_full_entry": 1.120229631797496,
+   "icc_entry": 0.1490840435038082,
+   "deff_full_class": 1.1595156734890362,
+   "win_deff_median": 0.9990328139465507,
+   "win_deff_iqr": [
+    0.9975932858404666,
+    1.024490793534961
+   ],
+   "repeat_loss_share": 0.11176470588235295,
+   "oracle_quarantine_ceiling": 0.058823529411764705,
+   "quarantine_avoided_share": 0.004705882352941176,
+   "quarantine_blocked_correct_per_avoided": 0.25,
+   "quarantine_blocked_correct_share_of_approved": 0.0002463054187192118
+  },
+  "ft_a0.02": {
+   "threshold": 0.8630239963531494,
+   "approve_rate": 0.08697183098591549,
+   "risk": 0.01995305164319249,
+   "deff_full_entry": 1.2040201204878354,
+   "icc_entry": 0.25298376168772485,
+   "deff_full_class": 1.3040894681222004,
+   "win_deff_median": 1.0899474279771562,
+   "win_deff_iqr": [
+    1.037099047594069,
+    1.116382577852025
+   ],
+   "repeat_loss_share": 0.1323529411764706,
+   "oracle_quarantine_ceiling": 0.07941176470588235,
+   "quarantine_avoided_share": 0.005147058823529412,
+   "quarantine_blocked_correct_per_avoided": 0.6285714285714286,
+   "quarantine_blocked_correct_share_of_approved": 0.0007422402159244265
+  },
+  "ft_a0.05": {
+   "threshold": 0.6002718806266785,
+   "approve_rate": 0.18392018779342723,
+   "risk": 0.05,
+   "deff_full_entry": 1.2338213491479064,
+   "icc_entry": 0.28993711173630665,
+   "deff_full_class": 1.36875463306197,
+   "win_deff_median": 1.0843791555002622,
+   "win_deff_iqr": [
+    1.0615269860002816,
+    1.1190174227210434
+   ],
+   "repeat_loss_share": 0.17018779342723006,
+   "oracle_quarantine_ceiling": 0.09624413145539906,
+   "quarantine_avoided_share": 0.005868544600938967,
+   "quarantine_blocked_correct_per_avoided": 0.37,
+   "quarantine_blocked_correct_share_of_approved": 0.0005902999361837907
+  }
+ }
+}
