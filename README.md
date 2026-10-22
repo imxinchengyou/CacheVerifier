@@ -342,8 +342,29 @@ Pairs** (Iyer, Dandekar, & Csernai, 2017) and the Kaggle **"Customer
 Support on Twitter"** dataset (Axelbrooke, 2017). See the paper's own
 Acknowledgments section for the full note.
 
+## Third-party data
+
+The experiments use third-party datasets that remain under their own terms;
+nothing in this repository's `LICENSE` applies to them:
+
+| Dataset | Source | License / terms |
+|---|---|---|
+| SemCacheLmArena, SemCacheSearchQueries | Hugging Face `vCache/SemBenchmarkLmArena`, `vCache/SemBenchmarkSearchQueries` | Apache-2.0 (per the dataset cards) |
+| Quora Question Pairs | Quora's first public dataset release (Iyer, Dandekar, & Csernai, 2017) | Quora's release terms |
+| Customer Support on Twitter | Kaggle `thoughtvector/customer-support-on-twitter` (Axelbrooke, 2017) | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/); the dataset page asks that commercial use be arranged with the author |
+
+Tweet text from the Twitter corpus is not included in this repository. The
+`results/` files for the AmazonHelp and comcastcares experiments contain only
+aggregate numbers; to rerun the experiments that read per-example text
+(e.g. `scripts/aci_real_production_drift_score.py --stash ...`), regenerate
+the data with `scripts/convert_twitter_cs_dataset.py` from your own download
+of the Kaggle dataset under its license, then rerun
+`scripts/finetune_verifier_experiment.py` to write the `.examples.json` stash.
+
 ## License
 
 **All rights reserved** — see [`LICENSE`](LICENSE). This repository is
 public to support reproducibility of the paper's reported results; no
-license is granted for reuse, modification, or redistribution.
+license is granted for reuse, modification, or redistribution. This covers
+the authors' own code and text only; third-party datasets keep their own
+licenses (see "Third-party data" above).

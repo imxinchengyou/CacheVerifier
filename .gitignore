@@ -13,3 +13,8 @@ venv/
 # Quora Question Pairs, Twitter Customer Support corpus) -- not redistributed
 # here, both for size (multi-GB) and to respect each source's own license.
 /data/
+
+# Text stashes derived from the Kaggle "Customer Support on Twitter" corpus
+# (CC BY-NC-SA 4.0) are regenerated locally, never committed -- see the
+# README's "Third-party data" section.
+/results/*twitter*.examples.json

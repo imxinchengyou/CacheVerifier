@@ -136,6 +136,18 @@ Group E 的微调验证器托管在 Hugging Face Hub,不在这个仓库里——
 
 Group A/B 直接建立在 **vCache** 项目(L. G. Schroeder、A. Desai、A. Cuadron、K. Chu、S. Liu、M. Zhao、S. Krusche、A. Kemper、I. Stoica、M. Zaharia、J. E. Gonzalez)公开的 benchmark 和参考代码之上——SemCacheLmArena/SemCacheSearchQueries 数据集、静态阈值网格,以及本文逐行复刻的 `VerifiedDecisionPolicy`。5.6 节和 5.8 节还直接建立在 **Quora Question Pairs**(Iyer, Dandekar, & Csernai, 2017)和 Kaggle **"Customer Support on Twitter"**(Axelbrooke, 2017)数据集之上。完整致谢见论文正文。
 
+## 第三方数据
+
+实验用到的第三方数据集仍适用各自的条款,本仓库的 `LICENSE` 不适用于它们:
+
+| 数据集 | 来源 | 许可 / 条款 |
+|---|---|---|
+| SemCacheLmArena、SemCacheSearchQueries | Hugging Face `vCache/SemBenchmarkLmArena`、`vCache/SemBenchmarkSearchQueries` | Apache-2.0(以数据集卡片为准) |
+| Quora Question Pairs | Quora 首个公开数据集(Iyer, Dandekar, & Csernai, 2017) | Quora 发布时的条款 |
+| Customer Support on Twitter | Kaggle `thoughtvector/customer-support-on-twitter`(Axelbrooke, 2017) | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/);数据集页面要求商业用途需与作者联系 |
+
+本仓库不包含 Twitter 语料中的推文原文。`results/` 中 AmazonHelp 和 comcastcares 实验的文件只有汇总数字;如需重跑读取逐条文本的实验(例如 `scripts/aci_real_production_drift_score.py --stash ...`),请自行按其许可下载 Kaggle 数据集,用 `scripts/convert_twitter_cs_dataset.py` 转换后,再运行 `scripts/finetune_verifier_experiment.py` 生成 `.examples.json` 文件。
+
 ## 许可
 
-**保留所有权利** —— 见 [`LICENSE`](LICENSE)。这个仓库公开是为了支持论文结果的可复现性,不授予任何复制、修改或再分发的权利。
+**保留所有权利** —— 见 [`LICENSE`](LICENSE)。这个仓库公开是为了支持论文结果的可复现性,不授予任何复制、修改或再分发的权利。这只适用于作者自己的代码和文字;第三方数据集仍适用各自的许可(见上文"第三方数据")。
