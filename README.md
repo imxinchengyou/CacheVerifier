@@ -11,6 +11,22 @@ English | [简体中文](README_ZH.md)
 > **[CacheVerifier](https://www.cacheverifier.com)** is a semantic cache verification
 > platform for LLM apps. This repository holds the research behind it.
 
+**From this research to the product.** The findings below are why CacheVerifier is
+built as a loop rather than a one-off check:
+
+| Finding here | What the product does about it |
+|---|---|
+| An off-the-shelf verifier captures little of the oracle's headroom; fine-tuning on a dataset's own gray-zone labels captures most of it | Fine-tunes a verifier on your own feedback; a free Health Check measures stock vs. fine-tuned on your traffic before you commit |
+| Gains depend on the workload; on a real production counter-example, raising the threshold is the better move (§5.8) | The Health Check says so when that's your case, instead of selling you verification |
+| Fine-tuning tolerates realistic label noise, but turns harmful past ~30% (§5.7) | Holds back a fine-tune whose training labels look too noisy, instead of auto-activating it |
+| A calibration-time risk guarantee (CRC) overshoots under real covariate shift (§5.21); online ACI closes it (§5.25) | Randomized audits of approved hits measure the live error rate with an exact upper bound; an optional online (ACI) threshold follows the audits |
+| A fine-tune's gain decays mildly over time after deployment, and real traffic can shift outright | Drift monitoring; on Managed plans, scheduled and drift-triggered recalibration on your feedback |
+
+On top of that, for running a cache after launch: a list of cache entries your feedback
+reports stale or often wrong, and local scoring with your fine-tuned model in your own
+stack. Python client: [`cacheverifier`](https://github.com/imxinchengyou/cacheverifier-python)
+on PyPI. Docs: <https://www.cacheverifier.com/docs>.
+
 Semantic caches replace exact matching with vector similarity to reuse an
 LLM's past answers, but similarity and answer correctness are not the same
 quantity. This repo is the code and full experimental artifacts behind an
