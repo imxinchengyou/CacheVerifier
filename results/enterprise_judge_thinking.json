@@ -1,0 +1,143 @@
+{
+ "n": 99,
+ "settings": {
+  "chat_nonthinking": {
+   "valid": 99,
+   "verdict_counts": {
+    "YES": 39,
+    "PARTIAL": 34,
+    "NO": 26
+   },
+   "agreement_3class": 0.5757575757575758,
+   "kappa_3class": 0.33853006681514475,
+   "binary_accuracy": 0.6767676767676768,
+   "yes_precision": 0.8205128205128205,
+   "human_yes_recall": 0.5614035087719298,
+   "p_human_yes_given_verdict": {
+    "YES": {
+     "n": 39,
+     "p_human_yes": 0.8205128205128205
+    },
+    "PARTIAL": {
+     "n": 34,
+     "p_human_yes": 0.47058823529411764
+    },
+    "NO": {
+     "n": 26,
+     "p_human_yes": 0.34615384615384615
+    }
+   },
+   "mean_latency_s": 2.416843144580571,
+   "mean_completion_tokens": 1.3434343434343434,
+   "mean_prompt_tokens": 187.05050505050505,
+   "resolved_models": [
+    "deepseek-flash"
+   ],
+   "wall_s": 5.4385316371917725
+  },
+  "flash_think_low": {
+   "valid": 99,
+   "verdict_counts": {
+    "YES": 44,
+    "PARTIAL": 25,
+    "NO": 30
+   },
+   "agreement_3class": 0.6464646464646465,
+   "kappa_3class": 0.4373173108151998,
+   "binary_accuracy": 0.7676767676767676,
+   "yes_precision": 0.8863636363636364,
+   "human_yes_recall": 0.6842105263157895,
+   "p_human_yes_given_verdict": {
+    "YES": {
+     "n": 44,
+     "p_human_yes": 0.8863636363636364
+    },
+    "PARTIAL": {
+     "n": 25,
+     "p_human_yes": 0.28
+    },
+    "NO": {
+     "n": 30,
+     "p_human_yes": 0.36666666666666664
+    }
+   },
+   "mean_latency_s": 3.528935740692447,
+   "mean_completion_tokens": 206.34343434343435,
+   "mean_prompt_tokens": 212.05050505050505,
+   "resolved_models": [
+    "deepseek-flash"
+   ],
+   "wall_s": 11.163719177246094
+  },
+  "flash_think_high": {
+   "valid": 99,
+   "verdict_counts": {
+    "YES": 48,
+    "PARTIAL": 24,
+    "NO": 27
+   },
+   "agreement_3class": 0.6262626262626263,
+   "kappa_3class": 0.39010989010989017,
+   "binary_accuracy": 0.7676767676767676,
+   "yes_precision": 0.8541666666666666,
+   "human_yes_recall": 0.7192982456140351,
+   "p_human_yes_given_verdict": {
+    "YES": {
+     "n": 48,
+     "p_human_yes": 0.8541666666666666
+    },
+    "PARTIAL": {
+     "n": 24,
+     "p_human_yes": 0.3333333333333333
+    },
+    "NO": {
+     "n": 27,
+     "p_human_yes": 0.2962962962962963
+    }
+   },
+   "mean_latency_s": 3.861420400214918,
+   "mean_completion_tokens": 278.7171717171717,
+   "mean_prompt_tokens": 212.05050505050505,
+   "resolved_models": [
+    "deepseek-flash"
+   ],
+   "wall_s": 16.47932195663452
+  },
+  "flash_think_max": {
+   "valid": 99,
+   "verdict_counts": {
+    "YES": 51,
+    "PARTIAL": 21,
+    "NO": 27
+   },
+   "agreement_3class": 0.5959595959595959,
+   "kappa_3class": 0.32994923857868014,
+   "binary_accuracy": 0.696969696969697,
+   "yes_precision": 0.7647058823529411,
+   "human_yes_recall": 0.6842105263157895,
+   "p_human_yes_given_verdict": {
+    "YES": {
+     "n": 51,
+     "p_human_yes": 0.7647058823529411
+    },
+    "PARTIAL": {
+     "n": 21,
+     "p_human_yes": 0.3333333333333333
+    },
+    "NO": {
+     "n": 27,
+     "p_human_yes": 0.4074074074074074
+    }
+   },
+   "mean_latency_s": 4.762549402737858,
+   "mean_completion_tokens": 422.1212121212121,
+   "mean_prompt_tokens": 212.05050505050505,
+   "resolved_models": [
+    "deepseek-flash"
+   ],
+   "wall_s": 36.04533886909485
+  }
+ },
+ "chat_nonthinking_same_as_original": 0.8686868686868687,
+ "original_run_kappa": 0.3227807826916958
+}

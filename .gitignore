@@ -18,3 +18,11 @@ venv/
 # (CC BY-NC-SA 4.0) are regenerated locally, never committed -- see the
 # README's "Third-party data" section.
 /results/*twitter*.examples.json
+
+# Enterprise comparison (ENTERPRISE_COMPARISON.md): files holding tweet text, and
+# the per-pair judge/score caches, stay local -- same CC BY-NC-SA 4.0 reason as above.
+/results/enterprise_audit_sample.json
+/results/enterprise_audit_human_labels.jsonl
+/results/enterprise_audit_human_labels.csv
+/results/enterprise_audit_labels_raw/
+/results/.cache/

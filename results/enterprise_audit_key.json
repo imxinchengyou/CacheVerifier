@@ -1,0 +1,702 @@
+{
+ "a001": {
+  "ds": "twitter_comcast",
+  "i": 14755,
+  "nn": 6688,
+  "sim": 0.8075193166732788,
+  "judge": "NO"
+ },
+ "a002": {
+  "ds": "twitter_comcast",
+  "i": 27350,
+  "nn": 2794,
+  "sim": 0.84752357006073,
+  "judge": "NO"
+ },
+ "a003": {
+  "ds": "twitter_comcast",
+  "i": 8082,
+  "nn": 162,
+  "sim": 0.804783821105957,
+  "judge": "PARTIAL"
+ },
+ "a004": {
+  "ds": "twitter_comcast",
+  "i": 16636,
+  "nn": 15947,
+  "sim": 1.0,
+  "judge": "YES"
+ },
+ "a005": {
+  "ds": "twitter_amazon",
+  "i": 26167,
+  "nn": 574,
+  "sim": 0.8332158923149109,
+  "judge": "NO"
+ },
+ "a006": {
+  "ds": "twitter_amazon",
+  "i": 1863,
+  "nn": 1657,
+  "sim": 0.802318811416626,
+  "judge": "PARTIAL"
+ },
+ "a007": {
+  "ds": "twitter_amazon",
+  "i": 53354,
+  "nn": 50984,
+  "sim": 0.8859419822692871,
+  "judge": "YES"
+ },
+ "a008": {
+  "ds": "twitter_comcast",
+  "i": 6911,
+  "nn": 6420,
+  "sim": 0.8837535381317139,
+  "judge": "YES"
+ },
+ "a009": {
+  "ds": "twitter_comcast",
+  "i": 17733,
+  "nn": 14632,
+  "sim": 0.872449517250061,
+  "judge": "PARTIAL"
+ },
+ "a010": {
+  "ds": "twitter_comcast",
+  "i": 25222,
+  "nn": 19604,
+  "sim": 0.9022061824798584,
+  "judge": "YES"
+ },
+ "a011": {
+  "ds": "twitter_amazon",
+  "i": 56185,
+  "nn": 56173,
+  "sim": 0.8446025848388672,
+  "judge": "YES"
+ },
+ "a012": {
+  "ds": "twitter_amazon",
+  "i": 52226,
+  "nn": 14369,
+  "sim": 0.851102352142334,
+  "judge": "NO"
+ },
+ "a013": {
+  "ds": "twitter_comcast",
+  "i": 14979,
+  "nn": 3177,
+  "sim": 0.9297910928726196,
+  "judge": "PARTIAL"
+ },
+ "a014": {
+  "ds": "twitter_comcast",
+  "i": 15885,
+  "nn": 11034,
+  "sim": 0.8516653776168823,
+  "judge": "PARTIAL"
+ },
+ "a015": {
+  "ds": "twitter_amazon",
+  "i": 45612,
+  "nn": 13861,
+  "sim": 0.8212351202964783,
+  "judge": "PARTIAL"
+ },
+ "a016": {
+  "ds": "twitter_comcast",
+  "i": 8847,
+  "nn": 1064,
+  "sim": 0.8469526767730713,
+  "judge": "NO"
+ },
+ "a017": {
+  "ds": "twitter_comcast",
+  "i": 14065,
+  "nn": 7074,
+  "sim": 0.9007378816604614,
+  "judge": "YES"
+ },
+ "a018": {
+  "ds": "twitter_comcast",
+  "i": 9899,
+  "nn": 656,
+  "sim": 0.9175610542297363,
+  "judge": "YES"
+ },
+ "a019": {
+  "ds": "twitter_amazon",
+  "i": 32879,
+  "nn": 23363,
+  "sim": 0.8040066957473755,
+  "judge": "PARTIAL"
+ },
+ "a020": {
+  "ds": "twitter_amazon",
+  "i": 40162,
+  "nn": 37538,
+  "sim": 0.8202437162399292,
+  "judge": "YES"
+ },
+ "a021": {
+  "ds": "twitter_amazon",
+  "i": 35657,
+  "nn": 4578,
+  "sim": 0.8003655076026917,
+  "judge": "PARTIAL"
+ },
+ "a022": {
+  "ds": "twitter_amazon",
+  "i": 36725,
+  "nn": 7845,
+  "sim": 0.8543298244476318,
+  "judge": "YES"
+ },
+ "a023": {
+  "ds": "twitter_amazon",
+  "i": 58700,
+  "nn": 57943,
+  "sim": 0.9999999403953552,
+  "judge": "YES"
+ },
+ "a024": {
+  "ds": "twitter_amazon",
+  "i": 47893,
+  "nn": 320,
+  "sim": 0.9999998807907104,
+  "judge": "YES"
+ },
+ "a025": {
+  "ds": "twitter_amazon",
+  "i": 59879,
+  "nn": 43820,
+  "sim": 0.8414713144302368,
+  "judge": "PARTIAL"
+ },
+ "a026": {
+  "ds": "twitter_comcast",
+  "i": 21231,
+  "nn": 7619,
+  "sim": 0.8155766725540161,
+  "judge": "PARTIAL"
+ },
+ "a027": {
+  "ds": "twitter_comcast",
+  "i": 3859,
+  "nn": 1725,
+  "sim": 0.8629967570304871,
+  "judge": "YES"
+ },
+ "a028": {
+  "ds": "twitter_comcast",
+  "i": 5698,
+  "nn": 5461,
+  "sim": 0.847844123840332,
+  "judge": "NO"
+ },
+ "a029": {
+  "ds": "twitter_amazon",
+  "i": 35009,
+  "nn": 32559,
+  "sim": 0.8262410759925842,
+  "judge": "NO"
+ },
+ "a030": {
+  "ds": "twitter_comcast",
+  "i": 4933,
+  "nn": 416,
+  "sim": 0.8387823104858398,
+  "judge": "PARTIAL"
+ },
+ "a031": {
+  "ds": "twitter_amazon",
+  "i": 24818,
+  "nn": 8385,
+  "sim": 1.0000001192092896,
+  "judge": "YES"
+ },
+ "a032": {
+  "ds": "twitter_amazon",
+  "i": 4554,
+  "nn": 4488,
+  "sim": 0.8673474788665771,
+  "judge": "PARTIAL"
+ },
+ "a033": {
+  "ds": "twitter_amazon",
+  "i": 29405,
+  "nn": 24520,
+  "sim": 0.8077962398529053,
+  "judge": "NO"
+ },
+ "a034": {
+  "ds": "twitter_comcast",
+  "i": 25552,
+  "nn": 19434,
+  "sim": 0.921310544013977,
+  "judge": "YES"
+ },
+ "a035": {
+  "ds": "twitter_comcast",
+  "i": 28513,
+  "nn": 15770,
+  "sim": 0.8286700248718262,
+  "judge": "PARTIAL"
+ },
+ "a036": {
+  "ds": "twitter_comcast",
+  "i": 22637,
+  "nn": 4882,
+  "sim": 0.8908333778381348,
+  "judge": "NO"
+ },
+ "a037": {
+  "ds": "twitter_amazon",
+  "i": 43406,
+  "nn": 38830,
+  "sim": 0.8732234239578247,
+  "judge": "PARTIAL"
+ },
+ "a038": {
+  "ds": "twitter_comcast",
+  "i": 23288,
+  "nn": 1510,
+  "sim": 0.9019304513931274,
+  "judge": "NO"
+ },
+ "a039": {
+  "ds": "twitter_amazon",
+  "i": 42418,
+  "nn": 4789,
+  "sim": 0.8265233039855957,
+  "judge": "YES"
+ },
+ "a040": {
+  "ds": "twitter_comcast",
+  "i": 2854,
+  "nn": 1725,
+  "sim": 0.8362368941307068,
+  "judge": "YES"
+ },
+ "a041": {
+  "ds": "twitter_amazon",
+  "i": 43718,
+  "nn": 10858,
+  "sim": 1.0,
+  "judge": "YES"
+ },
+ "a042": {
+  "ds": "twitter_amazon",
+  "i": 32090,
+  "nn": 4363,
+  "sim": 0.8966468572616577,
+  "judge": "PARTIAL"
+ },
+ "a043": {
+  "ds": "twitter_amazon",
+  "i": 14225,
+  "nn": 13970,
+  "sim": 0.8087450265884399,
+  "judge": "PARTIAL"
+ },
+ "a044": {
+  "ds": "twitter_amazon",
+  "i": 43603,
+  "nn": 34127,
+  "sim": 0.834417462348938,
+  "judge": "YES"
+ },
+ "a045": {
+  "ds": "twitter_amazon",
+  "i": 57130,
+  "nn": 30911,
+  "sim": 0.8696963787078857,
+  "judge": "YES"
+ },
+ "a046": {
+  "ds": "twitter_amazon",
+  "i": 23497,
+  "nn": 19381,
+  "sim": 0.8225276470184326,
+  "judge": "NO"
+ },
+ "a047": {
+  "ds": "twitter_comcast",
+  "i": 27033,
+  "nn": 1178,
+  "sim": 0.85317063331604,
+  "judge": "NO"
+ },
+ "a048": {
+  "ds": "twitter_comcast",
+  "i": 26309,
+  "nn": 11062,
+  "sim": 0.8543175458908081,
+  "judge": "YES"
+ },
+ "a049": {
+  "ds": "twitter_amazon",
+  "i": 50353,
+  "nn": 8357,
+  "sim": 0.8492841720581055,
+  "judge": "PARTIAL"
+ },
+ "a050": {
+  "ds": "twitter_amazon",
+  "i": 2564,
+  "nn": 727,
+  "sim": 0.9205228090286255,
+  "judge": "YES"
+ },
+ "a051": {
+  "ds": "twitter_comcast",
+  "i": 17098,
+  "nn": 15559,
+  "sim": 0.8743613958358765,
+  "judge": "NO"
+ },
+ "a052": {
+  "ds": "twitter_amazon",
+  "i": 44861,
+  "nn": 40035,
+  "sim": 0.8343591094017029,
+  "judge": "PARTIAL"
+ },
+ "a053": {
+  "ds": "twitter_amazon",
+  "i": 22832,
+  "nn": 9940,
+  "sim": 0.8065429925918579,
+  "judge": "YES"
+ },
+ "a054": {
+  "ds": "twitter_comcast",
+  "i": 29182,
+  "nn": 22523,
+  "sim": 0.9279905557632446,
+  "judge": "PARTIAL"
+ },
+ "a055": {
+  "ds": "twitter_comcast",
+  "i": 2617,
+  "nn": 1327,
+  "sim": 0.8590854406356812,
+  "judge": "PARTIAL"
+ },
+ "a056": {
+  "ds": "twitter_amazon",
+  "i": 37113,
+  "nn": 9233,
+  "sim": 1.000000238418579,
+  "judge": "YES"
+ },
+ "a057": {
+  "ds": "twitter_comcast",
+  "i": 25346,
+  "nn": 6803,
+  "sim": 0.8015525937080383,
+  "judge": "YES"
+ },
+ "a058": {
+  "ds": "twitter_comcast",
+  "i": 27603,
+  "nn": 19995,
+  "sim": 0.9942722916603088,
+  "judge": "YES"
+ },
+ "a059": {
+  "ds": "twitter_amazon",
+  "i": 37540,
+  "nn": 26613,
+  "sim": 0.8041937351226807,
+  "judge": "NO"
+ },
+ "a060": {
+  "ds": "twitter_comcast",
+  "i": 21405,
+  "nn": 14018,
+  "sim": 0.817550778388977,
+  "judge": "PARTIAL"
+ },
+ "a061": {
+  "ds": "twitter_amazon",
+  "i": 56663,
+  "nn": 42568,
+  "sim": 0.8421714305877686,
+  "judge": "NO"
+ },
+ "a062": {
+  "ds": "twitter_comcast",
+  "i": 11034,
+  "nn": 4547,
+  "sim": 0.8525755405426025,
+  "judge": "NO"
+ },
+ "a063": {
+  "ds": "twitter_amazon",
+  "i": 36963,
+  "nn": 7821,
+  "sim": 0.849268913269043,
+  "judge": "NO"
+ },
+ "a064": {
+  "ds": "twitter_amazon",
+  "i": 32391,
+  "nn": 10543,
+  "sim": 0.8101978302001953,
+  "judge": "NO"
+ },
+ "a065": {
+  "ds": "twitter_comcast",
+  "i": 27392,
+  "nn": 8206,
+  "sim": 0.8199498653411865,
+  "judge": "YES"
+ },
+ "a066": {
+  "ds": "twitter_comcast",
+  "i": 3500,
+  "nn": 2794,
+  "sim": 0.8140174150466919,
+  "judge": "NO"
+ },
+ "a067": {
+  "ds": "twitter_comcast",
+  "i": 24384,
+  "nn": 23920,
+  "sim": 0.8221961259841919,
+  "judge": "PARTIAL"
+ },
+ "a068": {
+  "ds": "twitter_comcast",
+  "i": 13499,
+  "nn": 9879,
+  "sim": 0.8680122494697571,
+  "judge": "PARTIAL"
+ },
+ "a069": {
+  "ds": "twitter_comcast",
+  "i": 12876,
+  "nn": 7302,
+  "sim": 0.9567579030990601,
+  "judge": "YES"
+ },
+ "a070": {
+  "ds": "twitter_comcast",
+  "i": 4047,
+  "nn": 1561,
+  "sim": 0.8903228640556335,
+  "judge": "YES"
+ },
+ "a071": {
+  "ds": "twitter_amazon",
+  "i": 46129,
+  "nn": 19666,
+  "sim": 0.8047581911087036,
+  "judge": "NO"
+ },
+ "a072": {
+  "ds": "twitter_comcast",
+  "i": 19926,
+  "nn": 16933,
+  "sim": 0.9892270565032959,
+  "judge": "YES"
+ },
+ "a073": {
+  "ds": "twitter_comcast",
+  "i": 23488,
+  "nn": 12519,
+  "sim": 0.8941547870635986,
+  "judge": "YES"
+ },
+ "a074": {
+  "ds": "twitter_comcast",
+  "i": 4924,
+  "nn": 22,
+  "sim": 0.820000410079956,
+  "judge": "NO"
+ },
+ "a075": {
+  "ds": "twitter_amazon",
+  "i": 16955,
+  "nn": 12770,
+  "sim": 0.8347716927528381,
+  "judge": "YES"
+ },
+ "a076": {
+  "ds": "twitter_comcast",
+  "i": 12353,
+  "nn": 603,
+  "sim": 0.9042454957962036,
+  "judge": "YES"
+ },
+ "a077": {
+  "ds": "twitter_amazon",
+  "i": 54426,
+  "nn": 33388,
+  "sim": 0.8474022150039673,
+  "judge": "NO"
+ },
+ "a078": {
+  "ds": "twitter_comcast",
+  "i": 2521,
+  "nn": 625,
+  "sim": 0.8278776407241821,
+  "judge": "PARTIAL"
+ },
+ "a079": {
+  "ds": "twitter_comcast",
+  "i": 22747,
+  "nn": 1291,
+  "sim": 1.000000238418579,
+  "judge": "YES"
+ },
+ "a080": {
+  "ds": "twitter_amazon",
+  "i": 7328,
+  "nn": 871,
+  "sim": 0.8042184114456177,
+  "judge": "NO"
+ },
+ "a081": {
+  "ds": "twitter_amazon",
+  "i": 2444,
+  "nn": 2409,
+  "sim": 0.8046419620513916,
+  "judge": "PARTIAL"
+ },
+ "a082": {
+  "ds": "twitter_amazon",
+  "i": 24498,
+  "nn": 18186,
+  "sim": 0.8414095640182495,
+  "judge": "PARTIAL"
+ },
+ "a083": {
+  "ds": "twitter_amazon",
+  "i": 39529,
+  "nn": 17897,
+  "sim": 0.8591532707214355,
+  "judge": "NO"
+ },
+ "a084": {
+  "ds": "twitter_comcast",
+  "i": 22437,
+  "nn": 21559,
+  "sim": 0.8086382746696472,
+  "judge": "NO"
+ },
+ "a085": {
+  "ds": "twitter_amazon",
+  "i": 34018,
+  "nn": 32390,
+  "sim": 0.8246176242828369,
+  "judge": "PARTIAL"
+ },
+ "a086": {
+  "ds": "twitter_comcast",
+  "i": 18046,
+  "nn": 4534,
+  "sim": 0.8296143412590027,
+  "judge": "PARTIAL"
+ },
+ "a087": {
+  "ds": "twitter_amazon",
+  "i": 38985,
+  "nn": 11915,
+  "sim": 0.8042439818382263,
+  "judge": "PARTIAL"
+ },
+ "a088": {
+  "ds": "twitter_comcast",
+  "i": 21818,
+  "nn": 12903,
+  "sim": 0.8387020230293274,
+  "judge": "NO"
+ },
+ "a089": {
+  "ds": "twitter_amazon",
+  "i": 8527,
+  "nn": 1974,
+  "sim": 0.8426113724708557,
+  "judge": "YES"
+ },
+ "a090": {
+  "ds": "twitter_amazon",
+  "i": 44348,
+  "nn": 40174,
+  "sim": 0.8116626739501953,
+  "judge": "NO"
+ },
+ "a091": {
+  "ds": "twitter_comcast",
+  "i": 16967,
+  "nn": 10187,
+  "sim": 0.8212004899978638,
+  "judge": "PARTIAL"
+ },
+ "a092": {
+  "ds": "twitter_amazon",
+  "i": 30305,
+  "nn": 19129,
+  "sim": 0.866632878780365,
+  "judge": "NO"
+ },
+ "a093": {
+  "ds": "twitter_amazon",
+  "i": 39115,
+  "nn": 9477,
+  "sim": 0.8551510572433472,
+  "judge": "YES"
+ },
+ "a094": {
+  "ds": "twitter_amazon",
+  "i": 4894,
+  "nn": 9,
+  "sim": 0.8105775117874146,
+  "judge": "YES"
+ },
+ "a095": {
+  "ds": "twitter_amazon",
+  "i": 44418,
+  "nn": 6302,
+  "sim": 1.000000238418579,
+  "judge": "YES"
+ },
+ "a096": {
+  "ds": "twitter_comcast",
+  "i": 22748,
+  "nn": 9417,
+  "sim": 1.0000001192092896,
+  "judge": "NO"
+ },
+ "a097": {
+  "ds": "twitter_comcast",
+  "i": 28067,
+  "nn": 10377,
+  "sim": 0.8334847688674927,
+  "judge": "YES"
+ },
+ "a098": {
+  "ds": "twitter_amazon",
+  "i": 51562,
+  "nn": 26997,
+  "sim": 0.8429337739944458,
+  "judge": "YES"
+ },
+ "a099": {
+  "ds": "twitter_comcast",
+  "i": 14747,
+  "nn": 544,
+  "sim": 0.8118799924850464,
+  "judge": "YES"
+ },
+ "a100": {
+  "ds": "twitter_comcast",
+  "i": 7750,
+  "nn": 1840,
+  "sim": 0.9999998807907104,
+  "judge": "NO"
+ }
+}

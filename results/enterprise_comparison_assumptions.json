@@ -1,0 +1,13 @@
+{
+ "vcpu_usd_per_hour": 0.045,
+ "llm_cost_per_call_usd": 4.981476306196841e-05,
+ "deepseek_price_per_input_token": 2.1999999999999948e-07,
+ "deepseek_price_per_output_token": 6.600000000000007e-07,
+ "llm_latency_source": "results/oracle_judge_latency_deepseek.json",
+ "main_alpha": 0.02,
+ "r_values": [
+  1,
+  5,
+  20
+ ]
+}

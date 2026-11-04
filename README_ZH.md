@@ -102,6 +102,10 @@ Oracle 理论上限(机制本身的上界,两个基准数据集均适用):相同
 
 完整推导、有效性检验,以及两条推论(score-invariance;由 ROC 曲线决定的命中率上限)见论文 §5.13 和 §5.25。
 
+## 真实客服流量上的对比
+
+[`ENTERPRISE_COMPARISON_ZH.md`](ENTERPRISE_COMPARISON_ZH.md)([English](ENTERPRISE_COMPARISON.md))在同一批推特客服请求流(AmazonHelp、comcastcares)上比较 CacheVerifier、vCache、Redis 静态阈值和 GPTCache,LLM 判官标签用 100 条人工盲标核对过。在 1%–3% 的同一错误率下,微调后的验证器比静态阈值多命中约 5%–13%,并且在时间漂移下最接近目标错误率;这类流量的绝对命中率只有 5%–9%。
+
 ## 仓库结构
 
 | 路径 | 内容 |
