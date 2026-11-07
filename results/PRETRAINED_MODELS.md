@@ -2,8 +2,10 @@
 
 The three fine-tuned cross-encoder checkpoints referenced in Section 5.6 of
 the paper are hosted on the Hugging Face Hub (large binaries don't belong in
-a git repo), under the same all-rights-reserved terms as this repository's
-`LICENSE`:
+a git repo). They are **not** covered by this repository's Apache-2.0 / CC BY 4.0
+licenses and remain all rights reserved; they are fine-tuned from
+`cross-encoder/ms-marco-MiniLM-L6-v2`, whose training data (MS MARCO) is licensed for
+non-commercial research only:
 
 - LmArena: https://huggingface.co/ChengyouXin/cacheverifier-lmarena
 - SearchQueries: https://huggingface.co/ChengyouXin/cacheverifier-searchqueries

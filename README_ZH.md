@@ -160,7 +160,7 @@ Group A/B 直接建立在 **vCache** 项目(L. G. Schroeder、A. Desai、A. Cuad
 
 ## 第三方数据
 
-实验用到的第三方数据集仍适用各自的条款,本仓库的 `LICENSE` 不适用于它们:
+实验用到的第三方数据集仍适用各自的条款,本仓库的许可不适用于它们:
 
 | 数据集 | 来源 | 许可 / 条款 |
 |---|---|---|
@@ -172,4 +172,8 @@ Group A/B 直接建立在 **vCache** 项目(L. G. Schroeder、A. Desai、A. Cuad
 
 ## 许可
 
-**保留所有权利** —— 见 [`LICENSE`](LICENSE)。这个仓库公开是为了支持论文结果的可复现性,不授予任何复制、修改或再分发的权利。这只适用于作者自己的代码和文字;第三方数据集仍适用各自的许可(见上文"第三方数据")。
+- **代码**(`cacheverifier/`、`scripts/`、`tests/`、`configs/`):[Apache-2.0](LICENSE)。
+- **论文、文档、图表和结果**(`PAPER*`、`ENTERPRISE_COMPARISON*`、`README*`、`results/`):[CC BY 4.0](LICENSE-CC-BY-4.0)。可以自由转载和改编,包括商业用途,注明出处即可;引用时请引用论文(见"引用")。
+- **不在许可范围内:** 第三方数据集以及 `results/` 中引用的第三方文本仍适用各自的条款(见上文"第三方数据");Hugging Face 上的微调模型不在本仓库的许可范围内(见 [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md))。
+
+2026-11-07 之前发布的版本适用"保留所有权利"条款。详见 [`NOTICE`](NOTICE)。

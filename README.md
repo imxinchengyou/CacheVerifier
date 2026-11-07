@@ -322,7 +322,7 @@ Acknowledgments section for the full note.
 ## Third-party data
 
 The experiments use third-party datasets that remain under their own terms;
-nothing in this repository's `LICENSE` applies to them:
+this repository's licenses don't apply to them:
 
 | Dataset | Source | License / terms |
 |---|---|---|
@@ -340,8 +340,14 @@ of the Kaggle dataset under its license, then rerun
 
 ## License
 
-**All rights reserved** — see [`LICENSE`](LICENSE). This repository is
-public to support reproducibility of the paper's reported results; no
-license is granted for reuse, modification, or redistribution. This covers
-the authors' own code and text only; third-party datasets keep their own
-licenses (see "Third-party data" above).
+- **Code** (`cacheverifier/`, `scripts/`, `tests/`, `configs/`): [Apache-2.0](LICENSE).
+- **Papers, documentation, figures and results** (`PAPER*`, `ENTERPRISE_COMPARISON*`,
+  `README*`, `results/`): [CC BY 4.0](LICENSE-CC-BY-4.0). Reuse and adapt them freely,
+  including commercially, with attribution; please cite the paper (see "Citation").
+- **Not covered:** third-party datasets and any third-party text quoted in `results/`
+  keep their own terms (see "Third-party data" above), and the fine-tuned checkpoints on
+  the Hugging Face Hub are not licensed here (see
+  [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md)).
+
+Versions released before 2026-11-07 were published under all-rights-reserved terms.
+See [`NOTICE`](NOTICE).

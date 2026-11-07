@@ -10,7 +10,9 @@ authors:
 date-released: 2026-07-26
 url: "https://github.com/imxinchengyou/CacheVerifier"
 repository-code: "https://github.com/imxinchengyou/CacheVerifier"
-license: "LicenseRef-all-rights-reserved"
+license:
+  - "Apache-2.0"
+  - "CC-BY-4.0"
 keywords:
   - semantic-caching
   - large-language-models
