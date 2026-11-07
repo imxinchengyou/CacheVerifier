@@ -34,7 +34,7 @@
 | 完整技术报告 | 全部实验合在一份文档里 | [10.5281/zenodo.21703364](https://doi.org/10.5281/zenodo.21703364) | [中文](PAPER.md) · [EN](PAPER_EN.md) · [LaTeX](PAPER_EN.tex) |
 
 **复现:** `pip install -r requirements.txt && pytest tests/ -q`,然后按各数据集的配置运行,见[复现步骤](#复现步骤)。
-**勘误**公开发布,不悄悄修改:vCache 基线移植修复(2026-08-17)和诚实校准勘误(2026-09-24),都在 [`PAPER.md`](PAPER.md) 文首。
+**勘误**公开发布,不悄悄修改:[`PAPER.md`](PAPER.md) 文首有三条勘误(2026-08-09、2026-09-24、2026-09-27),vCache 基线移植修复(2026-08-17)见 §5.2。
 
 ## 结果速览
 

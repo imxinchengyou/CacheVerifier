@@ -37,8 +37,8 @@ English | [简体中文](README_ZH.md)
 
 **Reproduce:** `pip install -r requirements.txt && pytest tests/ -q`, then the per-dataset
 configs; see [Reproducing](#reproducing). **Corrections** are published, not silently
-fixed: a vCache-baseline porting fix (2026-08-17) and an honest-calibration erratum
-(2026-09-24), both at the top of [`PAPER_EN.md`](PAPER_EN.md).
+fixed: three errata (2026-08-09, 2026-09-24, 2026-09-27) at the top of
+[`PAPER_EN.md`](PAPER_EN.md), and a vCache-baseline porting fix (2026-08-17, §5.2).
 
 ## Results at a glance
 
