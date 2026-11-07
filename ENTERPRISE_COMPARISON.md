@@ -6,7 +6,7 @@
 
 ## Summary
 
-- Compared at a matched error rate, the fine-tuned CacheVerifier is the best of the four on this Twitter support data. At strict error rates (1%–3%) it serves roughly 5%–13% more hits (relative) than a static threshold. This holds under both judge-label versions, under recalibration against human labels, and for all three verifier input formats tested.
+- Compared at a matched error rate, the fine-tuned CacheVerifier is the best of the four on this Twitter support data. At strict error rates (1%–3%) it serves roughly 6%–15% more hits (relative) than a static threshold. This holds under both judge-label versions, under recalibration against human labels, and for all three verifier input formats tested.
 - The absolute gain on this kind of traffic is small. At a 2% error rate every method serves only about 5%–9% of requests from the cache.
 - The off-the-shelf (not fine-tuned) CacheVerifier is worse than a static threshold, as in §5.4 of the paper.
 - GPTCache's default configuration (cosine ≥ 0.60) hits 79%–83% of requests, most of them wrong. GPTCache's learned evaluator performs about like a static threshold and adds 60–90 ms per request.
@@ -298,7 +298,7 @@ Adding the earlier message brought no visible improvement. The AUCs are slightly
 
 ## 8. Conclusions
 
-1. On real customer-support traffic, compared at a matched error rate, the fine-tuned CacheVerifier is the best of the four approaches. At strict error rates it serves about 5%–13% more hits (relative) than a static threshold, and under time shift it stays closest to its target error rate. This is robust to the label version, to recalibration against human labels, and to the verifier input format.
+1. On real customer-support traffic, compared at a matched error rate, the fine-tuned CacheVerifier is the best of the four approaches. At strict error rates it serves about 6%–15% more hits (relative) than a static threshold, and under time shift it stays closest to its target error rate. This is robust to the label version, to recalibration against human labels, and to the verifier input format.
 2. The off-the-shelf CacheVerifier is worse than a static threshold; in-domain fine-tuning is required.
 3. The absolute gain on this traffic is small. At a 2% error rate every method serves only 5%–9% of requests from the cache, because support replies mostly depend on the specific conversation.
 4. GPTCache's default configuration is unusable on this data, and its learned evaluator matches a static threshold at a higher latency. vCache keeps its error rate at about one fifth of the others' hit rate.
