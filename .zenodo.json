@@ -22,5 +22,6 @@
       "relation": "isSupplementTo",
       "scheme": "url"
     }
-  ]
+  ],
+  "license": "cc-by-4.0"
 }
