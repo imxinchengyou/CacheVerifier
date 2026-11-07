@@ -239,7 +239,7 @@ a hit-rate ceiling governed by the ROC curve) are in §5.13 and §5.25.
 
 ## Comparison on real customer-support traffic
 
-[`ENTERPRISE_COMPARISON.md`](ENTERPRISE_COMPARISON.md) ([中文](ENTERPRISE_COMPARISON_ZH.md)) compares CacheVerifier, vCache, a Redis static threshold and GPTCache on the same Twitter customer-support streams (AmazonHelp, comcastcares), with LLM-judge labels checked against 100 blind human labels. At a matched 1%–3% error rate the fine-tuned verifier serves about 6%–15% more hits than a static threshold and stays closest to its target error rate under time shift; absolute hit rates on this traffic are only 5%–9%.
+[`ENTERPRISE_COMPARISON.md`](ENTERPRISE_COMPARISON.md) ([中文](ENTERPRISE_COMPARISON_ZH.md)) compares CacheVerifier, vCache, a Redis static threshold and GPTCache on the same Twitter customer-support streams (AmazonHelp, comcastcares), with LLM-judge labels checked against 100 blind human labels. At a matched 1%–3% error rate the fine-tuned verifier serves about 6%–15% more hits than a static threshold and stays closest to its target error rate under time shift; absolute hit rates on this traffic are only 5%–9%. Section 8 tests the formal risk guarantees on this stream: CRC holds, but only over the gray zone. Unverified direct hits produce 2–7× more wrong replies per request, and verifying every hit lets one CRC threshold hold a per-request target.
 
 ## From this research to the product
 

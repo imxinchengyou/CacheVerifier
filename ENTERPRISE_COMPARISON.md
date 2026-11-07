@@ -2,7 +2,7 @@
 
 [中文](ENTERPRISE_COMPARISON_ZH.md)
 
-2026-11-02 to 2026-11-03. Four ways of deciding a semantic-cache hit are compared on the same real enterprise customer-support data, with the same embedding, the same request stream and the same labels. The labels themselves are checked with blind human annotation.
+2026-11-02 to 2026-11-03; Section 8 added 2026-11-07. Four ways of deciding a semantic-cache hit are compared on the same real enterprise customer-support data, with the same embedding, the same request stream and the same labels. The labels themselves are checked with blind human annotation.
 
 ## Summary
 
@@ -13,6 +13,7 @@
 - vCache keeps its error rate, but is very conservative: its hit rate is about one fifth of the others'.
 - Calibrated on the first two-plus years and deployed on the following weeks, a static threshold's realised error rate is 1.3–2× the 2% target. The fine-tuned CacheVerifier stays closest to the target.
 - 100 blind human labels show that the non-thinking DeepSeek judge is too strict. With thinking mode (effort low), binary agreement with the human rises from 0.68 to 0.77 (paired test, p = 0.049). However, neither retraining on these more accurate labels nor giving the verifier the cache entry's earlier message brought the verifier closer to human judgement.
+- CRC's risk guarantee holds on this stream, and deployed in time order it overshoots its target in only 1 of 12 settings. But it covers only the gray zone. Unverified direct hits (similarity ≥ 0.97) produce 2–7× more wrong replies per request. Sending every hit through the verifier lets one CRC threshold hold a per-request target on random splits in all 12 settings (Section 8).
 
 ## 1. Data
 
@@ -296,15 +297,82 @@ The judge and the human both saw the earlier customer message; the verifier sees
 
 Adding the earlier message brought no visible improvement. The AUCs are slightly lower but within their intervals, and the frontiers nearly coincide. The same model (message only, old labels) scores AUC 0.657 trained on CPU and 0.687 trained on GPU, so the training environment alone moves AUC by about 0.03. 52 human labels can resolve only AUC differences of roughly 0.1 or more. The remaining gap more likely comes from the whole conversation, which neither single message contains and which this data does not have.
 
-## 8. Conclusions
+## 8. Risk guarantees on this stream
+
+Added 2026-11-07. The benchmarks in Paper B have no real timestamps. This stream does, so it is the first real test of whether CacheVerifier's formal risk guarantees hold in production order. Everything here uses the fine-tuned verifier and the judge labels (wrong = the judge did not say YES), with both label versions. Only pairs after the fine-tuning window are used, so no score was trained on its own label.
+
+### 8.1 Gray-zone guarantees
+
+Risk here is the share of gray-zone pairs that are judged wrong and accepted, the quantity CRC controls (Paper B §4.1).
+
+| Check | Theorem applies? | Result |
+|---|---|---|
+| CRC, uniform random 50/50 splits (M=300) | yes | Mean risk 0.0491–0.0499 at α=5%, 0.0196–0.0203 at 2%, 0.0098–0.0104 at 1%, in all 4 dataset × label combinations. A single run exceeds α with probability 0.41–0.49, as expected for a bound that is met with equality on average. |
+| CRC, calibrated on the calibration half, applied to the test half in time order | no | Realised risk 0.14–1.04× α. Only 1 of 12 combinations is above α (1.035×, comcastcares, thinking-mode judge, α=5%). 8 of the 48 single time windows are above α (max 0.061 at α=5%). |
+| High-probability version (Learn-then-Test, one-sided Clopper-Pearson bound, δ=10%, fixed-sequence testing), random splits | yes | True risk on the pool exceeds α in 1.7%–6.3% of splits, below δ. Costs 12%–26% of gray-zone acceptances at α=2%. |
+| Audited ACI (Paper B §4.5), online over the test half, audit rate 5%/10%/20%, 50 runs | yes (long-run bound) | The bound was never violated, but it is 6%–26% wide against α of 1%–5%. At α=2% with 10% audits the realised risk is 2.9%–5.2% over the whole test half and 2.2%–3.0% over its second half. |
+
+Unlike Quora in Paper B (all four α levels violated, later traced to a label artefact), this support stream drifts little over a few weeks, so a CRC threshold deployed in time order mostly stays within its target. The online bound is valid but too wide to state a number at a few thousand gray-zone requests; getting it near α needs on the order of a few hundred thousand.
+
+### 8.2 What the gray-zone guarantee leaves out
+
+Pairs at similarity ≥ 0.97 are served without verification, so no guarantee covers them:
+
+| Wrong replies per request (test half) | AmazonHelp | comcastcares |
+|---|---|---|
+| Gray zone, under α=2% CRC (time order) | 0.14%–0.19% | 0.20%–0.21% |
+| Direct hits, unverified | 0.41% (thinking-mode judge 0.94%) | 0.36%–0.46% |
+
+The unverified direct hits produce 2–7× more wrong replies per request than the certified gray zone. Typical cases are short follow-ups such as "ok" or "any update?", which match an earlier message almost word for word but need a reply that depends on their own conversation. So a gray-zone guarantee does not bound the overall per-request error rate.
+
+### 8.3 Extending the guarantee to every hit
+
+Risk is now per request (denominator = all requests, loss = a wrong reply was served), with targets α ∈ {1%, 0.5%, 0.25%}. To score direct hits too, the verifier was fine-tuned with the same recipe on all calibration-half candidates with similarity ≥ 0.80 (gray zone and direct hits), then used to score every candidate. On the test half it separates direct hits about as well as gray-zone pairs (AUC 0.75–0.87 vs 0.73–0.79).
+
+Four policies (defined in `scripts/enterprise_allhits_guarantee.py`):
+- **Gray only** (the usual setup): direct hits unverified, CRC on the gray zone with budget α. The guarantee covers only the gray part.
+- **Plug-in**: gray-zone budget = α minus the direct-hit error estimated on calibration data. No guarantee.
+- **Verify all**: every candidate goes through the verifier, with one CRC threshold on the per-request loss. The guarantee covers every hit.
+- **Split budget**: one CRC threshold for direct hits (budget f·α) and one for the gray zone ((1−f)·α), with f fixed in advance at 0.25, 0.5 or 0.75. The total is ≤ α by linearity of expectation.
+
+| Policy | Random splits: risk / α | Exceeds α (single split) | Time order: risk / α | Verifier calls per request |
+|---|---|---|---|---|
+| Gray only | 1.34–4.53× | 0.99–1.00 | 1.45–4.72× (12/12 above) | 13.2% / 14.6% |
+| Plug-in | 0.96–3.53× | 0.41–0.52, or 0.98–1.00 when the direct-hit error alone exceeds α (all 4 at α=0.25%) | 0.83–3.76× (9/12 above) | 13.2% / 14.6% |
+| **Verify all** | **0.96–1.004×** | 0.41–0.49 | 0.96–1.46× (10/12 above) | 15.7% / 17.2% |
+| Split budget | 0.60–1.004× | 0.00–0.51 | 0.48–1.96× | 15.7% / 17.2% |
+
+(Verifier calls are AmazonHelp / comcastcares. Ranges cover 2 datasets × 2 label versions × 3 targets.)
+
+- The gray-only setup gives no per-request guarantee. The direct-hit error by itself (0.36%–0.94% per request) is above the strict targets.
+- Verifying every hit gives a single CRC threshold that holds the per-request target on random splits in all 12 combinations, for about 2.5 more verifier calls per 100 requests. 24%–63% of direct hits are then rejected. At α=0.25% it still serves 1.4%–2.6% of requests from the cache, a target the gray-only and plug-in setups cannot meet.
+- At α=1% the plug-in setup serves about as many hits as verifying everything (AmazonHelp, old judge: 4.4% vs 4.2%), but without a guarantee.
+- In time order, verifying every hit still overshoots by up to 1.46×, mostly on comcastcares and at α=0.25%, where the calibration segment holds only about 9–17 errors. Periodic recalibration with random audits (Paper B §4.4) is still needed, and strict targets need longer calibration windows.
+
+**A verifier trained on the gray zone only** (`scripts/enterprise_grayonly_on_direct.py`, old judge labels). Trained with the Section 3 recipe on gray-zone pairs only and then applied to every candidate, it ranks direct hits worse (AUC 0.64 / 0.68 vs 0.75 / 0.81 on AmazonHelp / comcastcares). Verifying every hit with it still holds the target on random splits (0.96–1.00× α), since CRC does not depend on model quality. It serves fewer hits, though: at α=0.25% on comcastcares, 1.36% vs 2.59%. A deployment that starts verifying every hit should retrain once labels on the former direct hits come in.
+
+### 8.4 What can and cannot be guaranteed
+
+Can be stated, with its conditions:
+- CRC: expected gray-zone (or, when every hit is verified, per-request) risk ≤ α, exact in finite samples, given exchangeability.
+- The high-probability version: risk ≤ α with probability ≥ 1−δ per calibration, at a cost in hits.
+- Audited ACI: a distribution-free long-run bound under partial labels and self-selection, rate Õ(1/√T).
+
+Cannot be stated:
+- An overall error rate, while any hit is served without verification (8.2).
+- A human-judged error rate. All guarantees are relative to the label source; in Section 5 the old judge's YES matched the human 82% of the time, so the human-judged risk can be higher than α. The 63 test-half human labels are too few to quantify this.
+- Per-request conditional guarantees ("this hit is right with probability 98%"), which are impossible distribution-free (Vovk 2012; Foygel Barber et al. 2021), or that every time window stays under α.
+
+## 9. Conclusions
 
 1. On real customer-support traffic, compared at a matched error rate, the fine-tuned CacheVerifier is the best of the four approaches. At strict error rates it serves about 6%–15% more hits (relative) than a static threshold, and under time shift it stays closest to its target error rate. This is robust to the label version, to recalibration against human labels, and to the verifier input format.
 2. The off-the-shelf CacheVerifier is worse than a static threshold; in-domain fine-tuning is required.
 3. The absolute gain on this traffic is small. At a 2% error rate every method serves only 5%–9% of requests from the cache, because support replies mostly depend on the specific conversation.
 4. GPTCache's default configuration is unusable on this data, and its learned evaluator matches a static threshold at a higher latency. vCache keeps its error rate at about one fifth of the others' hit rate.
 5. The LLM judge itself needs human calibration: the non-thinking judge is too strict, and thinking mode (low) is closer to the human. On this data, however, neither more accurate labels nor more input made the verifier better. Going further needs data with whole conversations, or many more human labels.
+6. CRC's guarantee holds on this stream, and deployed in time order it mostly stays within target. Its gap is coverage: hits served without verification are outside it and make most of the wrong replies. Verifying every hit closes that gap, so one CRC threshold bounds the per-request rate, at about 2.5 more verifier calls per 100 requests (Section 8).
 
-## 9. Limitations
+## 10. Limitations
 
 - The main labels come from an LLM judge. The human check is one annotator, 100 items, and covers only similarity ≥ 0.8.
 - Every pair below similarity 0.6 counts as wrong, which undercounts methods that can hit at low similarity.
@@ -314,7 +382,7 @@ Adding the earlier message brought no visible improvement. The AUCs are slightly
 - Cost uses self-hosted compute at an assumed vCPU price; the error cost r = 5 is an assumption.
 - The provider changed the model behind the judge's name (Section 2), so reruns will differ somewhat.
 
-## 10. Reproducing
+## 11. Reproducing
 
 First generate the data from Kaggle (`scripts/convert_twitter_cs_dataset.py`; see the README's Third-party data section). Then run, in order:
 
@@ -329,6 +397,8 @@ First generate the data from Kaggle (`scripts/convert_twitter_cs_dataset.py`; se
 | 7 | `enterprise_compare_audit_sample.py` | regenerates the 100 audit items, with text, locally only |
 | 8 | `enterprise_compare_human_reweight.py`, `enterprise_compare_human_finetune.py`, `enterprise_compare_judge_thinking.py`, `enterprise_compare_thinklow_eval.py` | Sections 5–7 |
 | 9 | `enterprise_compare_qcached_gpu.py`, `enterprise_compare_qcached.py` | Section 7.2 |
+| 10 | `enterprise_guarantee_feasibility.py` | Sections 8.1–8.2 (uses step 4's scores) |
+| 11 | `enterprise_allhits_verifier.py` (`JUDGE_TAG` as above), `enterprise_grayonly_on_direct.py`, then `enterprise_allhits_guarantee.py` (`MODEL=grayonly` for the gray-only model) | Section 8.3 |
 
 Result files:
 - `results/enterprise_comparison_{twitter_amazon,twitter_comcast}[_judge_thinklow].json`
@@ -338,5 +408,7 @@ Result files:
 - `results/enterprise_judge_thinking{,_raw}.json`
 - `results/enterprise_thinklow_eval.json`
 - `results/enterprise_qcached_gpu.json`
+- `results/enterprise_guarantee_feasibility.json`
+- `results/enterprise_allhits_guarantee{,_grayonly}.json`
 - `results/enterprise_audit_key.json`
 - `results/enterprise_audit_human_labels_notext.jsonl`

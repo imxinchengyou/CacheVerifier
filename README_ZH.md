@@ -96,7 +96,7 @@ Oracle 理论上限(机制本身的上界,两个基准数据集均适用):相同
 
 ## 真实客服流量上的对比
 
-[`ENTERPRISE_COMPARISON_ZH.md`](ENTERPRISE_COMPARISON_ZH.md)([English](ENTERPRISE_COMPARISON.md))在同一批推特客服请求流(AmazonHelp、comcastcares)上比较 CacheVerifier、vCache、Redis 静态阈值和 GPTCache,LLM 判官标签用 100 条人工盲标核对过。在 1%–3% 的同一错误率下,微调后的验证器比静态阈值多命中约 6%–15%,并且在时间漂移下最接近目标错误率;这类流量的绝对命中率只有 5%–9%。
+[`ENTERPRISE_COMPARISON_ZH.md`](ENTERPRISE_COMPARISON_ZH.md)([English](ENTERPRISE_COMPARISON.md))在同一批推特客服请求流(AmazonHelp、comcastcares)上比较 CacheVerifier、vCache、Redis 静态阈值和 GPTCache,LLM 判官标签用 100 条人工盲标核对过。在 1%–3% 的同一错误率下,微调后的验证器比静态阈值多命中约 6%–15%,并且在时间漂移下最接近目标错误率;这类流量的绝对命中率只有 5%–9%。第 8 节在这条请求流上检验形式化风险保证:CRC 成立,但只覆盖灰区;不验证的直接命中每请求错误回复是灰区的 2–7 倍,全部命中都过验证器后,一个 CRC 阈值就能守住每请求目标。
 
 ## 从研究到产品
 

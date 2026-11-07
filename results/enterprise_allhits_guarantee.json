@@ -1,0 +1,1350 @@
+{
+ "twitter_amazon/judge": {
+  "n_eval": 36921,
+  "n_cal_temporal": 6921,
+  "n_test_temporal": 30000,
+  "test_unverified_direct_error": 0.004066666666666666,
+  "test_direct_precision": 0.8312586445366528,
+  "test_direct_auc": 0.7530618368293283,
+  "R": {
+   "0.01/gray_only": {
+    "risk": 0.013694816098802883,
+    "risk_direct": 0.0037321921889388442,
+    "risk_gray": 0.009962623909864039,
+    "hit_rate": 0.050665456909159856,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 1.0
+   },
+   "0.01/gray_plugin": {
+    "risk": 0.009878121445208818,
+    "risk_direct": 0.0037321921889388442,
+    "risk_gray": 0.0061459292562699745,
+    "hit_rate": 0.0435835003520936,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 0.435
+   },
+   "0.01/verify_all": {
+    "risk": 0.009969665781918638,
+    "risk_direct": 0.001677861437625264,
+    "risk_gray": 0.008291804344293375,
+    "hit_rate": 0.04207924814473756,
+    "direct_hit_rate": 0.016970099127891228,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.46
+   },
+   "0.01/split_budget_f0.25": {
+    "risk": 0.009852120686853367,
+    "risk_direct": 0.0023828611667840315,
+    "risk_gray": 0.0074692595200693355,
+    "hit_rate": 0.043576458480039,
+    "direct_hit_rate": 0.019955582037809436,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.435
+   },
+   "0.01/split_budget_f0.5": {
+    "risk": 0.008690211797844103,
+    "risk_direct": 0.0037321921889388442,
+    "risk_gray": 0.004958019608905259,
+    "hit_rate": 0.041075510535723954,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.065
+   },
+   "0.01/split_budget_f0.75": {
+    "risk": 0.006218514706678943,
+    "risk_direct": 0.0037321921889388442,
+    "risk_gray": 0.0024863225177401004,
+    "hit_rate": 0.034393315638372786,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.0
+   },
+   "0.005/gray_only": {
+    "risk": 0.008690211797844103,
+    "risk_direct": 0.0037321921889388442,
+    "risk_gray": 0.004958019608905259,
+    "hit_rate": 0.041075510535723954,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 1.0
+   },
+   "0.005/gray_plugin": {
+    "risk": 0.004907913980824441,
+    "risk_direct": 0.0037321921889388442,
+    "risk_gray": 0.0011757217918855966,
+    "hit_rate": 0.02914332918043443,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 0.415
+   },
+   "0.005/verify_all": {
+    "risk": 0.004943123341097449,
+    "risk_direct": 0.001358810465305238,
+    "risk_gray": 0.0035843128757922105,
+    "hit_rate": 0.030023563187259628,
+    "direct_hit_rate": 0.014552841124532798,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.43
+   },
+   "0.005/split_budget_f0.25": {
+    "risk": 0.004926331184659552,
+    "risk_direct": 0.0012315150858566708,
+    "risk_gray": 0.0036948160988028817,
+    "hit_rate": 0.02919939331563837,
+    "direct_hit_rate": 0.013434808515248359,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.445
+   },
+   "0.005/split_budget_f0.5": {
+    "risk": 0.004869183684524132,
+    "risk_direct": 0.0023828611667840315,
+    "risk_gray": 0.0024863225177401004,
+    "hit_rate": 0.0318679919830995,
+    "direct_hit_rate": 0.019955582037809436,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.415
+   },
+   "0.005/split_budget_f0.75": {
+    "risk": 0.004649260603434267,
+    "risk_direct": 0.0034044742971670004,
+    "risk_gray": 0.001244786306267266,
+    "hit_rate": 0.02898001191701425,
+    "direct_hit_rate": 0.022056497481176534,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.35
+   },
+   "0.0025/gray_only": {
+    "risk": 0.006218514706678943,
+    "risk_direct": 0.0037321921889388442,
+    "risk_gray": 0.0024863225177401004,
+    "hit_rate": 0.034393315638372786,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 1.0
+   },
+   "0.0025/gray_plugin": {
+    "risk": 0.0037321921889388442,
+    "risk_direct": 0.0037321921889388442,
+    "risk_gray": 0.0,
+    "hit_rate": 0.02248090569308271,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 1.0
+   },
+   "0.0025/verify_all": {
+    "risk": 0.0024714262499322894,
+    "risk_direct": 0.0008341909972374195,
+    "risk_gray": 0.0016372352526948701,
+    "hit_rate": 0.01957505010562808,
+    "direct_hit_rate": 0.011067385298737879,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.44
+   },
+   "0.0025/split_budget_f0.25": {
+    "risk": 0.002395590704728888,
+    "risk_direct": 0.0005725583662856835,
+    "risk_gray": 0.0018230323384432045,
+    "hit_rate": 0.017639347814311254,
+    "direct_hit_rate": 0.008400140837441093,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.425
+   },
+   "0.0025/split_budget_f0.5": {
+    "risk": 0.0024763013921239372,
+    "risk_direct": 0.0012315150858566708,
+    "risk_gray": 0.001244786306267266,
+    "hit_rate": 0.020358322951086073,
+    "direct_hit_rate": 0.013434808515248359,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.405
+   },
+   "0.0025/split_budget_f0.75": {
+    "risk": 0.0023977574345918425,
+    "risk_direct": 0.0018043442933752235,
+    "risk_gray": 0.0005934131412166188,
+    "hit_rate": 0.021448458913384972,
+    "direct_hit_rate": 0.017305400574183415,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.385
+   }
+  },
+  "T": {
+   "0.01/gray_only": {
+    "risk": 0.015066666666666667,
+    "risk_direct": 0.004066666666666666,
+    "risk_gray": 0.011,
+    "hit_rate": 0.054566666666666666,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 1.5066666666666668
+   },
+   "0.01/gray_plugin": {
+    "risk": 0.010966666666666666,
+    "risk_direct": 0.004066666666666666,
+    "risk_gray": 0.0069,
+    "hit_rate": 0.0471,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 1.0966666666666667
+   },
+   "0.01/verify_all": {
+    "risk": 0.010633333333333333,
+    "risk_direct": 0.0018,
+    "risk_gray": 0.008833333333333334,
+    "hit_rate": 0.04463333333333333,
+    "direct_hit_rate": 0.018266666666666667,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.0633333333333332
+   },
+   "0.01/split_budget_f0.25": {
+    "risk": 0.009766666666666667,
+    "risk_direct": 0.0029,
+    "risk_gray": 0.006866666666666667,
+    "hit_rate": 0.04563333333333333,
+    "direct_hit_rate": 0.02266666666666667,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 0.9766666666666667
+   },
+   "0.01/split_budget_f0.5": {
+    "risk": 0.009366666666666667,
+    "risk_direct": 0.004066666666666666,
+    "risk_gray": 0.0053,
+    "hit_rate": 0.0438,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 0.9366666666666668
+   },
+   "0.01/split_budget_f0.75": {
+    "risk": 0.006,
+    "risk_direct": 0.004066666666666666,
+    "risk_gray": 0.0019333333333333333,
+    "hit_rate": 0.034466666666666666,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 0.6
+   },
+   "0.005/gray_only": {
+    "risk": 0.009366666666666667,
+    "risk_direct": 0.004066666666666666,
+    "risk_gray": 0.0053,
+    "hit_rate": 0.0438,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 1.8733333333333335
+   },
+   "0.005/gray_plugin": {
+    "risk": 0.006,
+    "risk_direct": 0.004066666666666666,
+    "risk_gray": 0.0019333333333333333,
+    "hit_rate": 0.034466666666666666,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 1.2
+   },
+   "0.005/verify_all": {
+    "risk": 0.004966666666666667,
+    "risk_direct": 0.0013666666666666666,
+    "risk_gray": 0.0036,
+    "hit_rate": 0.0312,
+    "direct_hit_rate": 0.015366666666666667,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 0.9933333333333334
+   },
+   "0.005/split_budget_f0.25": {
+    "risk": 0.004833333333333334,
+    "risk_direct": 0.0012666666666666666,
+    "risk_gray": 0.0035666666666666668,
+    "hit_rate": 0.029766666666666667,
+    "direct_hit_rate": 0.014033333333333333,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 0.9666666666666667
+   },
+   "0.005/split_budget_f0.5": {
+    "risk": 0.004833333333333334,
+    "risk_direct": 0.0029,
+    "risk_gray": 0.0019333333333333333,
+    "hit_rate": 0.03303333333333333,
+    "direct_hit_rate": 0.02266666666666667,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 0.9666666666666667
+   },
+   "0.005/split_budget_f0.75": {
+    "risk": 0.004833333333333334,
+    "risk_direct": 0.004066666666666666,
+    "risk_gray": 0.0007666666666666667,
+    "hit_rate": 0.0293,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 0.9666666666666667
+   },
+   "0.0025/gray_only": {
+    "risk": 0.006,
+    "risk_direct": 0.004066666666666666,
+    "risk_gray": 0.0019333333333333333,
+    "hit_rate": 0.034466666666666666,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 2.4
+   },
+   "0.0025/gray_plugin": {
+    "risk": 0.004066666666666666,
+    "risk_direct": 0.004066666666666666,
+    "risk_gray": 0.0,
+    "hit_rate": 0.0241,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 1.6266666666666665
+   },
+   "0.0025/verify_all": {
+    "risk": 0.0024,
+    "risk_direct": 0.0009,
+    "risk_gray": 0.0015,
+    "hit_rate": 0.020566666666666667,
+    "direct_hit_rate": 0.011966666666666667,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 0.9599999999999999
+   },
+   "0.0025/split_budget_f0.25": {
+    "risk": 0.0023333333333333335,
+    "risk_direct": 0.0009666666666666667,
+    "risk_gray": 0.0013666666666666666,
+    "hit_rate": 0.0199,
+    "direct_hit_rate": 0.012133333333333333,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 0.9333333333333333
+   },
+   "0.0025/split_budget_f0.5": {
+    "risk": 0.002033333333333333,
+    "risk_direct": 0.0012666666666666666,
+    "risk_gray": 0.0007666666666666667,
+    "hit_rate": 0.019233333333333335,
+    "direct_hit_rate": 0.014033333333333333,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 0.8133333333333332
+   },
+   "0.0025/split_budget_f0.75": {
+    "risk": 0.0026333333333333334,
+    "risk_direct": 0.0021666666666666666,
+    "risk_gray": 0.00046666666666666666,
+    "hit_rate": 0.0237,
+    "direct_hit_rate": 0.020133333333333333,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.0533333333333335
+   }
+  },
+  "test_gray_auc": 0.7913645935822415
+ },
+ "twitter_amazon/judge_thinklow": {
+  "n_eval": 36921,
+  "n_cal_temporal": 6921,
+  "n_test_temporal": 30000,
+  "test_unverified_direct_error": 0.0094,
+  "test_direct_precision": 0.6099585062240664,
+  "test_direct_auc": 0.7456216529164859,
+  "R": {
+   "0.01/gray_only": {
+    "risk": 0.018834841016196306,
+    "risk_direct": 0.008822653160717188,
+    "risk_gray": 0.010012187855479117,
+    "hit_rate": 0.05176994745680083,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 1.0
+   },
+   "0.01/gray_plugin": {
+    "risk": 0.010017604680136506,
+    "risk_direct": 0.008822653160717188,
+    "risk_gray": 0.0011949515194193165,
+    "hit_rate": 0.02811331997183251,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 0.51
+   },
+   "0.01/verify_all": {
+    "risk": 0.009921456042467906,
+    "risk_direct": 0.002813498727046205,
+    "risk_gray": 0.0071079573154217,
+    "hit_rate": 0.035568224906559774,
+    "direct_hit_rate": 0.012860083419099722,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.43
+   },
+   "0.01/split_budget_f0.25": {
+    "risk": 0.009940956611234494,
+    "risk_direct": 0.002467092790206381,
+    "risk_gray": 0.0074738638210281125,
+    "hit_rate": 0.03538621959807161,
+    "direct_hit_rate": 0.011807052705703916,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.48
+   },
+   "0.01/split_budget_f0.5": {
+    "risk": 0.009880559016304642,
+    "risk_direct": 0.004903580521098532,
+    "risk_gray": 0.0049769784952061105,
+    "hit_rate": 0.03361708466496939,
+    "direct_hit_rate": 0.016151616922160227,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.455
+   },
+   "0.01/split_budget_f0.75": {
+    "risk": 0.009987541303288012,
+    "risk_direct": 0.007477655598288284,
+    "risk_gray": 0.002509885704999729,
+    "hit_rate": 0.03107551053572396,
+    "direct_hit_rate": 0.02046015925464493,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.51
+   },
+   "0.005/gray_only": {
+    "risk": 0.0137996316559233,
+    "risk_direct": 0.008822653160717188,
+    "risk_gray": 0.0049769784952061105,
+    "hit_rate": 0.039946373435891885,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 1.0
+   },
+   "0.005/gray_plugin": {
+    "risk": 0.008822653160717188,
+    "risk_direct": 0.008822653160717188,
+    "risk_gray": 0.0,
+    "hit_rate": 0.02248090569308271,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 1.0
+   },
+   "0.005/verify_all": {
+    "risk": 0.005020313092465197,
+    "risk_direct": 0.0020849358106278097,
+    "risk_gray": 0.002935377281837387,
+    "hit_rate": 0.02213070797898272,
+    "direct_hit_rate": 0.010219923081089866,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.455
+   },
+   "0.005/split_budget_f0.25": {
+    "risk": 0.00493499810411137,
+    "risk_direct": 0.0011838470288716755,
+    "risk_gray": 0.003751151075239695,
+    "hit_rate": 0.021389686365852336,
+    "direct_hit_rate": 0.007285358322951086,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.45
+   },
+   "0.005/split_budget_f0.5": {
+    "risk": 0.0049769784952061105,
+    "risk_direct": 0.002467092790206381,
+    "risk_gray": 0.002509885704999729,
+    "hit_rate": 0.022422403986782947,
+    "direct_hit_rate": 0.011807052705703916,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.475
+   },
+   "0.005/split_budget_f0.75": {
+    "risk": 0.005015437950273549,
+    "risk_direct": 0.003762526407020205,
+    "risk_gray": 0.0012529115432533449,
+    "hit_rate": 0.02041194951519419,
+    "direct_hit_rate": 0.014352960294675261,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.475
+   },
+   "0.0025/gray_only": {
+    "risk": 0.01133253886571692,
+    "risk_direct": 0.008822653160717188,
+    "risk_gray": 0.002509885704999729,
+    "hit_rate": 0.03309625697416175,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 1.0
+   },
+   "0.0025/gray_plugin": {
+    "risk": 0.008822653160717188,
+    "risk_direct": 0.008822653160717188,
+    "risk_gray": 0.0,
+    "hit_rate": 0.02248090569308271,
+    "direct_hit_rate": 0.02248090569308271,
+    "verifier_calls": 0.12657494176913492,
+    "p_exceed": 1.0
+   },
+   "0.0025/verify_all": {
+    "risk": 0.002469801202535074,
+    "risk_direct": 0.0012585992091436,
+    "risk_gray": 0.001211201993391474,
+    "hit_rate": 0.013478955636206056,
+    "direct_hit_rate": 0.007567845728833757,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.415
+   },
+   "0.0025/split_budget_f0.25": {
+    "risk": 0.002449488110069877,
+    "risk_direct": 0.0005609121932723038,
+    "risk_gray": 0.0018885759167975732,
+    "hit_rate": 0.012431341747467633,
+    "direct_hit_rate": 0.004034992687286712,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.455
+   },
+   "0.0025/split_budget_f0.5": {
+    "risk": 0.00243675857212502,
+    "risk_direct": 0.0011838470288716755,
+    "risk_gray": 0.0012529115432533449,
+    "hit_rate": 0.013344347543470018,
+    "direct_hit_rate": 0.007285358322951086,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.42
+   },
+   "0.0025/split_budget_f0.75": {
+    "risk": 0.002441633714316668,
+    "risk_direct": 0.0018379286062510155,
+    "risk_gray": 0.0006037051080656519,
+    "hit_rate": 0.012296462813498728,
+    "direct_hit_rate": 0.009362710579058556,
+    "verifier_calls": 0.14905584746221767,
+    "p_exceed": 0.42
+   }
+  },
+  "T": {
+   "0.01/gray_only": {
+    "risk": 0.020966666666666668,
+    "risk_direct": 0.0094,
+    "risk_gray": 0.011566666666666666,
+    "hit_rate": 0.0565,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 2.0966666666666667
+   },
+   "0.01/gray_plugin": {
+    "risk": 0.0133,
+    "risk_direct": 0.0094,
+    "risk_gray": 0.0039,
+    "hit_rate": 0.03896666666666666,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 1.3299999999999998
+   },
+   "0.01/verify_all": {
+    "risk": 0.011833333333333333,
+    "risk_direct": 0.0034666666666666665,
+    "risk_gray": 0.008366666666666666,
+    "hit_rate": 0.0406,
+    "direct_hit_rate": 0.014833333333333334,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.1833333333333333
+   },
+   "0.01/split_budget_f0.25": {
+    "risk": 0.011166666666666667,
+    "risk_direct": 0.0024,
+    "risk_gray": 0.008766666666666667,
+    "hit_rate": 0.039466666666666664,
+    "direct_hit_rate": 0.012533333333333334,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.1166666666666667
+   },
+   "0.01/split_budget_f0.5": {
+    "risk": 0.0129,
+    "risk_direct": 0.0067666666666666665,
+    "risk_gray": 0.0061333333333333335,
+    "hit_rate": 0.04066666666666666,
+    "direct_hit_rate": 0.02,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.29
+   },
+   "0.01/split_budget_f0.75": {
+    "risk": 0.0118,
+    "risk_direct": 0.0094,
+    "risk_gray": 0.0024,
+    "hit_rate": 0.034466666666666666,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.18
+   },
+   "0.005/gray_only": {
+    "risk": 0.015533333333333333,
+    "risk_direct": 0.0094,
+    "risk_gray": 0.0061333333333333335,
+    "hit_rate": 0.04476666666666667,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 3.1066666666666665
+   },
+   "0.005/gray_plugin": {
+    "risk": 0.0094,
+    "risk_direct": 0.0094,
+    "risk_gray": 0.0,
+    "hit_rate": 0.0241,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 1.8800000000000001
+   },
+   "0.005/verify_all": {
+    "risk": 0.005333333333333333,
+    "risk_direct": 0.0021666666666666666,
+    "risk_gray": 0.0031666666666666666,
+    "hit_rate": 0.023866666666666668,
+    "direct_hit_rate": 0.011166666666666667,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.0666666666666667
+   },
+   "0.005/split_budget_f0.25": {
+    "risk": 0.005533333333333334,
+    "risk_direct": 0.0016333333333333334,
+    "risk_gray": 0.0039,
+    "hit_rate": 0.0241,
+    "direct_hit_rate": 0.009233333333333333,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.1066666666666667
+   },
+   "0.005/split_budget_f0.5": {
+    "risk": 0.0048,
+    "risk_direct": 0.0024,
+    "risk_gray": 0.0024,
+    "hit_rate": 0.0229,
+    "direct_hit_rate": 0.012533333333333334,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 0.9599999999999999
+   },
+   "0.005/split_budget_f0.75": {
+    "risk": 0.005666666666666667,
+    "risk_direct": 0.004366666666666666,
+    "risk_gray": 0.0013,
+    "hit_rate": 0.022466666666666666,
+    "direct_hit_rate": 0.0162,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.1333333333333333
+   },
+   "0.0025/gray_only": {
+    "risk": 0.0118,
+    "risk_direct": 0.0094,
+    "risk_gray": 0.0024,
+    "hit_rate": 0.034466666666666666,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 4.72
+   },
+   "0.0025/gray_plugin": {
+    "risk": 0.0094,
+    "risk_direct": 0.0094,
+    "risk_gray": 0.0,
+    "hit_rate": 0.0241,
+    "direct_hit_rate": 0.0241,
+    "verifier_calls": 0.13246666666666668,
+    "ratio_to_alpha": 3.7600000000000002
+   },
+   "0.0025/verify_all": {
+    "risk": 0.003033333333333333,
+    "risk_direct": 0.0016,
+    "risk_gray": 0.0014333333333333333,
+    "hit_rate": 0.0158,
+    "direct_hit_rate": 0.008933333333333333,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.2133333333333332
+   },
+   "0.0025/split_budget_f0.25": {
+    "risk": 0.0028666666666666667,
+    "risk_direct": 0.0013333333333333333,
+    "risk_gray": 0.0015333333333333334,
+    "hit_rate": 0.0149,
+    "direct_hit_rate": 0.007533333333333334,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.1466666666666667
+   },
+   "0.0025/split_budget_f0.5": {
+    "risk": 0.0029333333333333334,
+    "risk_direct": 0.0016333333333333334,
+    "risk_gray": 0.0013,
+    "hit_rate": 0.0155,
+    "direct_hit_rate": 0.009233333333333333,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.1733333333333333
+   },
+   "0.0025/split_budget_f0.75": {
+    "risk": 0.0028333333333333335,
+    "risk_direct": 0.002033333333333333,
+    "risk_gray": 0.0008,
+    "hit_rate": 0.014166666666666666,
+    "direct_hit_rate": 0.010466666666666668,
+    "verifier_calls": 0.15656666666666666,
+    "ratio_to_alpha": 1.1333333333333333
+   }
+  },
+  "test_gray_auc": 0.7388280446047227
+ },
+ "twitter_comcast/judge": {
+  "n_eval": 18796,
+  "n_cal_temporal": 3706,
+  "n_test_temporal": 15090,
+  "test_unverified_direct_error": 0.003644797879390325,
+  "test_direct_precision": 0.8600508905852418,
+  "test_direct_auc": 0.806266810112964,
+  "R": {
+   "0.01/gray_only": {
+    "risk": 0.013394871249201957,
+    "risk_direct": 0.0035316024686103424,
+    "risk_gray": 0.009863268780591615,
+    "hit_rate": 0.06261864226431156,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 0.995
+   },
+   "0.01/gray_plugin": {
+    "risk": 0.009780804426473716,
+    "risk_direct": 0.0035316024686103424,
+    "risk_gray": 0.006249201957863375,
+    "hit_rate": 0.053110236220472444,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 0.465
+   },
+   "0.01/verify_all": {
+    "risk": 0.009824962758033623,
+    "risk_direct": 0.0006198127261119387,
+    "risk_gray": 0.009205150031921685,
+    "hit_rate": 0.05201106618429454,
+    "direct_hit_rate": 0.01687007874015748,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.45
+   },
+   "0.01/split_budget_f0.25": {
+    "risk": 0.009674930836348159,
+    "risk_direct": 0.002265907639923388,
+    "risk_gray": 0.007409023196424771,
+    "hit_rate": 0.053450202170674616,
+    "direct_hit_rate": 0.02296233241115131,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.45
+   },
+   "0.01/split_budget_f0.5": {
+    "risk": 0.008320387316450309,
+    "risk_direct": 0.0035273462438816772,
+    "risk_gray": 0.004793041072568632,
+    "hit_rate": 0.048790700148967865,
+    "direct_hit_rate": 0.025945945945945948,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.08
+   },
+   "0.01/split_budget_f0.75": {
+    "risk": 0.005949138114492445,
+    "risk_direct": 0.0035316024686103424,
+    "risk_gray": 0.0024175356458821023,
+    "hit_rate": 0.03941530112789955,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.0
+   },
+   "0.005/gray_only": {
+    "risk": 0.008324643541178975,
+    "risk_direct": 0.0035316024686103424,
+    "risk_gray": 0.004793041072568632,
+    "hit_rate": 0.04880080868269845,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 1.0
+   },
+   "0.005/gray_plugin": {
+    "risk": 0.0048207065333049585,
+    "risk_direct": 0.0035316024686103424,
+    "risk_gray": 0.0012891040646946159,
+    "hit_rate": 0.03398542243030432,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 0.45
+   },
+   "0.005/verify_all": {
+    "risk": 0.004782932538838051,
+    "risk_direct": 0.0003761438603958289,
+    "risk_gray": 0.0044067886784422226,
+    "hit_rate": 0.03655032985741647,
+    "direct_hit_rate": 0.015194190253245372,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.43
+   },
+   "0.005/split_budget_f0.25": {
+    "risk": 0.004745158544371142,
+    "risk_direct": 0.001141732283464567,
+    "risk_gray": 0.0036034262609065757,
+    "hit_rate": 0.037149925516067245,
+    "direct_hit_rate": 0.018925835284103,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.4
+   },
+   "0.005/split_budget_f0.5": {
+    "risk": 0.004683443285805491,
+    "risk_direct": 0.002265907639923388,
+    "risk_gray": 0.0024175356458821023,
+    "hit_rate": 0.036421579059374334,
+    "direct_hit_rate": 0.02296233241115131,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.39
+   },
+   "0.005/split_budget_f0.75": {
+    "risk": 0.004425941689721217,
+    "risk_direct": 0.003283677378165567,
+    "risk_gray": 0.00114226431155565,
+    "hit_rate": 0.03276175782081294,
+    "direct_hit_rate": 0.025378271972760165,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.33
+   },
+   "0.0025/gray_only": {
+    "risk": 0.005949138114492445,
+    "risk_direct": 0.0035316024686103424,
+    "risk_gray": 0.0024175356458821023,
+    "hit_rate": 0.03941530112789955,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 1.0
+   },
+   "0.0025/gray_plugin": {
+    "risk": 0.0035316024686103424,
+    "risk_direct": 0.0035316024686103424,
+    "risk_gray": 0.0,
+    "hit_rate": 0.025956054479676527,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 0.98
+   },
+   "0.0025/verify_all": {
+    "risk": 0.002397850606512024,
+    "risk_direct": 0.0002590976803575229,
+    "risk_gray": 0.0021387529261545006,
+    "hit_rate": 0.0259379655245797,
+    "direct_hit_rate": 0.013409768035752287,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.405
+   },
+   "0.0025/split_budget_f0.25": {
+    "risk": 0.0022866567354756333,
+    "risk_direct": 0.0005107469674398808,
+    "risk_gray": 0.0017759097680357522,
+    "hit_rate": 0.026654075335177697,
+    "direct_hit_rate": 0.01573792296233241,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.335
+   },
+   "0.0025/split_budget_f0.5": {
+    "risk": 0.002283996595020217,
+    "risk_direct": 0.001141732283464567,
+    "risk_gray": 0.00114226431155565,
+    "hit_rate": 0.02630932113215578,
+    "direct_hit_rate": 0.018925835284103,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.365
+   },
+   "0.0025/split_budget_f0.75": {
+    "risk": 0.002240902319642477,
+    "risk_direct": 0.0017386678016599278,
+    "risk_gray": 0.0005022345179825495,
+    "hit_rate": 0.024518514577569695,
+    "direct_hit_rate": 0.021118323047456908,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.32
+   }
+  },
+  "T": {
+   "0.01/gray_only": {
+    "risk": 0.015573227302849569,
+    "risk_direct": 0.003644797879390325,
+    "risk_gray": 0.011928429423459244,
+    "hit_rate": 0.06792577866136515,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 1.5573227302849568
+   },
+   "0.01/gray_plugin": {
+    "risk": 0.012127236580516898,
+    "risk_direct": 0.003644797879390325,
+    "risk_gray": 0.008482438701126574,
+    "hit_rate": 0.05917826375082837,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 1.2127236580516898
+   },
+   "0.01/verify_all": {
+    "risk": 0.012060967528164348,
+    "risk_direct": 0.0008614976805831676,
+    "risk_gray": 0.011199469847581179,
+    "hit_rate": 0.05758780649436713,
+    "direct_hit_rate": 0.01749502982107356,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.2060967528164348
+   },
+   "0.01/split_budget_f0.25": {
+    "risk": 0.013121272365805169,
+    "risk_direct": 0.0030483764082173625,
+    "risk_gray": 0.010072895957587806,
+    "hit_rate": 0.06143141153081511,
+    "direct_hit_rate": 0.024585818422796554,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.3121272365805168
+   },
+   "0.01/split_budget_f0.5": {
+    "risk": 0.010139165009940358,
+    "risk_direct": 0.003644797879390325,
+    "risk_gray": 0.0064943671305500335,
+    "hit_rate": 0.0534128561961564,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.0139165009940359
+   },
+   "0.01/split_budget_f0.75": {
+    "risk": 0.006096752816434725,
+    "risk_direct": 0.003644797879390325,
+    "risk_gray": 0.0024519549370444,
+    "hit_rate": 0.040026507620941024,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 0.6096752816434725
+   },
+   "0.005/gray_only": {
+    "risk": 0.010139165009940358,
+    "risk_direct": 0.003644797879390325,
+    "risk_gray": 0.0064943671305500335,
+    "hit_rate": 0.0534128561961564,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 2.0278330019880717
+   },
+   "0.005/gray_plugin": {
+    "risk": 0.004174950298210736,
+    "risk_direct": 0.003644797879390325,
+    "risk_gray": 0.0005301524188204108,
+    "hit_rate": 0.030550033134526176,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 0.8349900596421471
+   },
+   "0.005/verify_all": {
+    "risk": 0.006891981444665341,
+    "risk_direct": 0.0005301524188204108,
+    "risk_gray": 0.006361829025844931,
+    "hit_rate": 0.04194831013916501,
+    "direct_hit_rate": 0.015175612988734261,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.378396288933068
+   },
+   "0.005/split_budget_f0.25": {
+    "risk": 0.0074884029158383035,
+    "risk_direct": 0.0016567263088137839,
+    "risk_gray": 0.005831676607024519,
+    "hit_rate": 0.04546056991385023,
+    "direct_hit_rate": 0.019880715705765408,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.4976805831676607
+   },
+   "0.005/split_budget_f0.5": {
+    "risk": 0.0055003313452617626,
+    "risk_direct": 0.0030483764082173625,
+    "risk_gray": 0.0024519549370444,
+    "hit_rate": 0.03856858846918489,
+    "direct_hit_rate": 0.024585818422796554,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.1000662690523524
+   },
+   "0.005/split_budget_f0.75": {
+    "risk": 0.004042412193505633,
+    "risk_direct": 0.003644797879390325,
+    "risk_gray": 0.00039761431411530816,
+    "hit_rate": 0.029555997349237906,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 0.8084824387011266
+   },
+   "0.0025/gray_only": {
+    "risk": 0.006096752816434725,
+    "risk_direct": 0.003644797879390325,
+    "risk_gray": 0.0024519549370444,
+    "hit_rate": 0.040026507620941024,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 2.43870112657389
+   },
+   "0.0025/gray_plugin": {
+    "risk": 0.003644797879390325,
+    "risk_direct": 0.003644797879390325,
+    "risk_gray": 0.0,
+    "hit_rate": 0.026043737574552684,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 1.4579191517561298
+   },
+   "0.0025/verify_all": {
+    "risk": 0.0028495692511597086,
+    "risk_direct": 0.00039761431411530816,
+    "risk_gray": 0.0024519549370444,
+    "hit_rate": 0.027037773359840953,
+    "direct_hit_rate": 0.013055003313452617,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.1398277004638835
+   },
+   "0.0025/split_budget_f0.25": {
+    "risk": 0.0011928429423459245,
+    "risk_direct": 0.0006626905235255136,
+    "risk_gray": 0.0005301524188204108,
+    "hit_rate": 0.02107355864811133,
+    "direct_hit_rate": 0.01656726308813784,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 0.4771371769383698
+   },
+   "0.0025/split_budget_f0.5": {
+    "risk": 0.002054340622929092,
+    "risk_direct": 0.0016567263088137839,
+    "risk_gray": 0.00039761431411530816,
+    "hit_rate": 0.02339297548045063,
+    "direct_hit_rate": 0.019880715705765408,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 0.8217362491716368
+   },
+   "0.0025/split_budget_f0.75": {
+    "risk": 0.0022531477799867462,
+    "risk_direct": 0.0021206096752816434,
+    "risk_gray": 0.0001325381047051027,
+    "hit_rate": 0.02286282306163022,
+    "direct_hit_rate": 0.022067594433399604,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 0.9012591119946984
+   }
+  },
+  "test_gray_auc": 0.7588759766557127
+ },
+ "twitter_comcast/judge_thinklow": {
+  "n_eval": 18796,
+  "n_cal_temporal": 3706,
+  "n_test_temporal": 15090,
+  "test_unverified_direct_error": 0.0045725646123260435,
+  "test_direct_precision": 0.8244274809160306,
+  "test_direct_auc": 0.8684022186437645,
+  "R": {
+   "0.01/gray_only": {
+    "risk": 0.014470100021281124,
+    "risk_direct": 0.004554692487763354,
+    "risk_gray": 0.00991540753351777,
+    "hit_rate": 0.06770802298361353,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 1.0
+   },
+   "0.01/gray_plugin": {
+    "risk": 0.00988401787614386,
+    "risk_direct": 0.004554692487763354,
+    "risk_gray": 0.005329325388380507,
+    "hit_rate": 0.05279367950627792,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 0.515
+   },
+   "0.01/verify_all": {
+    "risk": 0.009844647797403704,
+    "risk_direct": 0.0005586294956373697,
+    "risk_gray": 0.009286018301766334,
+    "hit_rate": 0.05579006171525856,
+    "direct_hit_rate": 0.01606086401361992,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.49
+   },
+   "0.01/split_budget_f0.25": {
+    "risk": 0.009841987656948287,
+    "risk_direct": 0.00238401787614386,
+    "risk_gray": 0.0074579697808044255,
+    "hit_rate": 0.05735050010640561,
+    "direct_hit_rate": 0.02310172377101511,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.5
+   },
+   "0.01/split_budget_f0.5": {
+    "risk": 0.00937327090870398,
+    "risk_direct": 0.0044530751223664615,
+    "risk_gray": 0.004920195786337519,
+    "hit_rate": 0.05109065758672058,
+    "direct_hit_rate": 0.025854437114279635,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.33
+   },
+   "0.01/split_budget_f0.75": {
+    "risk": 0.00704085975739519,
+    "risk_direct": 0.004554692487763354,
+    "risk_gray": 0.0024861672696318365,
+    "hit_rate": 0.03917269631836561,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.0
+   },
+   "0.005/gray_only": {
+    "risk": 0.009474888274100873,
+    "risk_direct": 0.004554692487763354,
+    "risk_gray": 0.004920195786337519,
+    "hit_rate": 0.05119227495211748,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 1.0
+   },
+   "0.005/gray_plugin": {
+    "risk": 0.004954777612257928,
+    "risk_direct": 0.004554692487763354,
+    "risk_gray": 0.0004000851244945733,
+    "hit_rate": 0.0280671419450947,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 0.475
+   },
+   "0.005/verify_all": {
+    "risk": 0.004897318578420941,
+    "risk_direct": 0.00019791444988295385,
+    "risk_gray": 0.004699404128537987,
+    "hit_rate": 0.03830283038944456,
+    "direct_hit_rate": 0.01395882102575016,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.455
+   },
+   "0.005/split_budget_f0.25": {
+    "risk": 0.004864332836773781,
+    "risk_direct": 0.0010901255586294955,
+    "risk_gray": 0.0037742072781442857,
+    "hit_rate": 0.038453926367312194,
+    "direct_hit_rate": 0.018384230687380293,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.46
+   },
+   "0.005/split_budget_f0.5": {
+    "risk": 0.004870185145775697,
+    "risk_direct": 0.00238401787614386,
+    "risk_gray": 0.0024861672696318365,
+    "hit_rate": 0.036318365609704195,
+    "direct_hit_rate": 0.02310172377101511,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.495
+   },
+   "0.005/split_budget_f0.75": {
+    "risk": 0.004745158544371143,
+    "risk_direct": 0.0035709725473505,
+    "risk_gray": 0.0011741859970206426,
+    "hit_rate": 0.031145988508193233,
+    "direct_hit_rate": 0.024925516067248354,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.425
+   },
+   "0.0025/gray_only": {
+    "risk": 0.00704085975739519,
+    "risk_direct": 0.004554692487763354,
+    "risk_gray": 0.0024861672696318365,
+    "hit_rate": 0.03917269631836561,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 1.0
+   },
+   "0.0025/gray_plugin": {
+    "risk": 0.004554692487763354,
+    "risk_direct": 0.004554692487763354,
+    "risk_gray": 0.0,
+    "hit_rate": 0.025956054479676527,
+    "direct_hit_rate": 0.025956054479676527,
+    "verifier_calls": 0.1406368376250266,
+    "p_exceed": 1.0
+   },
+   "0.0025/verify_all": {
+    "risk": 0.0024478612470738457,
+    "risk_direct": 0.0001494998935943818,
+    "risk_gray": 0.0022983613534794636,
+    "hit_rate": 0.024425941689721217,
+    "direct_hit_rate": 0.012247286656735476,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.455
+   },
+   "0.0025/split_budget_f0.25": {
+    "risk": 0.002244094488188976,
+    "risk_direct": 0.0004085975739519046,
+    "risk_gray": 0.0018354969142370717,
+    "hit_rate": 0.02471004469035965,
+    "direct_hit_rate": 0.015278250691636519,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.355
+   },
+   "0.0025/split_budget_f0.5": {
+    "risk": 0.002264311555650138,
+    "risk_direct": 0.0010901255586294955,
+    "risk_gray": 0.0011741859970206426,
+    "hit_rate": 0.024604703128325175,
+    "direct_hit_rate": 0.018384230687380293,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.34
+   },
+   "0.0025/split_budget_f0.75": {
+    "risk": 0.0022238774207278145,
+    "risk_direct": 0.001682804852096191,
+    "risk_gray": 0.0005410725686316236,
+    "hit_rate": 0.024017876143860396,
+    "direct_hit_rate": 0.02091189614811662,
+    "verifier_calls": 0.16659289210470313,
+    "p_exceed": 0.335
+   }
+  },
+  "T": {
+   "0.01/gray_only": {
+    "risk": 0.014512922465208748,
+    "risk_direct": 0.0045725646123260435,
+    "risk_gray": 0.009940357852882704,
+    "hit_rate": 0.06832339297548046,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 1.4512922465208746
+   },
+   "0.01/gray_plugin": {
+    "risk": 0.00974155069582505,
+    "risk_direct": 0.0045725646123260435,
+    "risk_gray": 0.005168986083499006,
+    "hit_rate": 0.05255135851557323,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 0.974155069582505
+   },
+   "0.01/verify_all": {
+    "risk": 0.01066931742876077,
+    "risk_direct": 0.0007289595758780649,
+    "risk_gray": 0.009940357852882704,
+    "hit_rate": 0.05798542080848244,
+    "direct_hit_rate": 0.01570576540755467,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.066931742876077
+   },
+   "0.01/split_budget_f0.25": {
+    "risk": 0.010603048376408217,
+    "risk_direct": 0.0035785288270377734,
+    "risk_gray": 0.007024519549370444,
+    "hit_rate": 0.057720344599072236,
+    "direct_hit_rate": 0.02491716368455931,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.0603048376408217
+   },
+   "0.01/split_budget_f0.5": {
+    "risk": 0.00934393638170974,
+    "risk_direct": 0.0045725646123260435,
+    "risk_gray": 0.004771371769383698,
+    "hit_rate": 0.05062955599734924,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 0.9343936381709741
+   },
+   "0.01/split_budget_f0.75": {
+    "risk": 0.008018555334658714,
+    "risk_direct": 0.0045725646123260435,
+    "risk_gray": 0.0034459907223326706,
+    "hit_rate": 0.04353876739562624,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 0.8018555334658714
+   },
+   "0.005/gray_only": {
+    "risk": 0.00934393638170974,
+    "risk_direct": 0.0045725646123260435,
+    "risk_gray": 0.004771371769383698,
+    "hit_rate": 0.05062955599734924,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 1.8687872763419482
+   },
+   "0.005/gray_plugin": {
+    "risk": 0.004638833664678595,
+    "risk_direct": 0.0045725646123260435,
+    "risk_gray": 6.626905235255136e-05,
+    "hit_rate": 0.026176275679257788,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 0.9277667329357191
+   },
+   "0.005/verify_all": {
+    "risk": 0.005036447978793903,
+    "risk_direct": 0.0002650762094102054,
+    "risk_gray": 0.004771371769383698,
+    "hit_rate": 0.03790589794565938,
+    "direct_hit_rate": 0.013320079522862823,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.0072895957587806
+   },
+   "0.005/split_budget_f0.25": {
+    "risk": 0.006030483764082174,
+    "risk_direct": 0.0016567263088137839,
+    "risk_gray": 0.00437375745526839,
+    "hit_rate": 0.0415506958250497,
+    "direct_hit_rate": 0.019814446653412855,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.2060967528164348
+   },
+   "0.005/split_budget_f0.5": {
+    "risk": 0.007024519549370444,
+    "risk_direct": 0.0035785288270377734,
+    "risk_gray": 0.0034459907223326706,
+    "hit_rate": 0.04241219350563287,
+    "direct_hit_rate": 0.02491716368455931,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.4049039098740888
+   },
+   "0.005/split_budget_f0.75": {
+    "risk": 0.006958250497017893,
+    "risk_direct": 0.0038436050364479787,
+    "risk_gray": 0.003114645460569914,
+    "hit_rate": 0.04042412193505633,
+    "direct_hit_rate": 0.02531477799867462,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.3916500994035785
+   },
+   "0.0025/gray_only": {
+    "risk": 0.008018555334658714,
+    "risk_direct": 0.0045725646123260435,
+    "risk_gray": 0.0034459907223326706,
+    "hit_rate": 0.04353876739562624,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 3.2074221338634854
+   },
+   "0.0025/gray_plugin": {
+    "risk": 0.0045725646123260435,
+    "risk_direct": 0.0045725646123260435,
+    "risk_gray": 0.0,
+    "hit_rate": 0.026043737574552684,
+    "direct_hit_rate": 0.026043737574552684,
+    "verifier_calls": 0.14592445328031808,
+    "ratio_to_alpha": 1.8290258449304173
+   },
+   "0.0025/verify_all": {
+    "risk": 0.003644797879390325,
+    "risk_direct": 0.00019880715705765408,
+    "risk_gray": 0.0034459907223326706,
+    "hit_rate": 0.029887342611000664,
+    "direct_hit_rate": 0.012392312789927104,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.4579191517561298
+   },
+   "0.0025/split_budget_f0.25": {
+    "risk": 0.0049039098740888,
+    "risk_direct": 0.0015904572564612327,
+    "risk_gray": 0.0033134526176275677,
+    "hit_rate": 0.03558648111332008,
+    "direct_hit_rate": 0.019748177601060304,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.96156394963552
+   },
+   "0.0025/split_budget_f0.5": {
+    "risk": 0.004771371769383698,
+    "risk_direct": 0.0016567263088137839,
+    "risk_gray": 0.003114645460569914,
+    "hit_rate": 0.034923790589794564,
+    "direct_hit_rate": 0.019814446653412855,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.9085487077534793
+   },
+   "0.0025/split_budget_f0.75": {
+    "risk": 0.00390987408880053,
+    "risk_direct": 0.002584493041749503,
+    "risk_gray": 0.0013253810470510272,
+    "hit_rate": 0.029622266401590457,
+    "direct_hit_rate": 0.02345924453280318,
+    "verifier_calls": 0.17196819085487078,
+    "ratio_to_alpha": 1.563949635520212
+   }
+  },
+  "test_gray_auc": 0.7265364802917129
+ }
+}
