@@ -8,41 +8,33 @@
 [![PyPI](https://img.shields.io/pypi/v/cacheverifier)](https://pypi.org/project/cacheverifier/)
 [![tests](https://github.com/imxinchengyou/CacheVerifier/actions/workflows/tests.yml/badge.svg)](https://github.com/imxinchengyou/CacheVerifier/actions/workflows/tests.yml)
 
-> **[CacheVerifier](https://www.cacheverifier.com)** 是面向大模型应用的语义缓存验证平台。本仓库是它背后的研究。
-
-**从研究到产品。** 下面这些发现，就是 CacheVerifier 做成一个持续闭环、而不是一次性检查的原因:
-
-| 本研究的发现 | 产品怎么应对 |
-|---|---|
-| 开箱即用的验证器只拿到 oracle 余量的一小部分;在数据集自己的灰区标签上微调能拿到大部分 | 用你自己的反馈微调验证器;免费的 Health Check 先在你的流量上对比现成模型和微调后的效果,再决定要不要用 |
-| 收益取决于具体负载;在一个真实生产反例上,直接调高阈值反而更好(§5.8) | 你属于这种情况时,Health Check 会直接告诉你,而不是硬推验证 |
-| 微调能容忍现实中的标签噪声,但超过约 30% 会起反作用(§5.7) | 训练标签噪声看起来过高的微调结果会被扣下待审,不会自动上线 |
-| 校准时给出的风险保证(CRC)在真实的协变量偏移下会被突破(§5.21);在线 ACI 能把它拉回来(§5.25) | 对已放行的命中做随机抽检,给出线上错误率的精确上界;可选的在线(ACI)阈值跟随抽检结果调整 |
-| 微调的收益上线后会随时间轻微衰减,真实流量也可能整体偏移 | 漂移监控;Managed 套餐按计划、并在检测到漂移时用你的反馈重新校准 |
-
-在此之上,还有上线后运维缓存需要的东西:列出被反馈报告为过期或经常答错的缓存条目,以及在你自己的系统里用微调模型本地打分。Python 客户端:PyPI 上的 [`cacheverifier`](https://github.com/imxinchengyou/cacheverifier-python)。文档:<https://www.cacheverifier.com/docs>。
-
-语义缓存用向量相似度替代精确匹配来复用大模型的历史回答,但相似度和答案正确性并非同一个量。这个仓库是一项实证研究的完整代码与实验产出,研究的问题很具体:在单层语义缓存架构下,用一个**真实**(非 oracle)、**同步**的验证器对缓存命中做门禁——在约 21 万条真实请求、三个数据集上,和静态阈值、自适应阈值两条基线做正式对比——到底能不能真正改善命中率与错误率之间的权衡?
+> 语义缓存在新问题"看起来足够相似"时复用大模型的历史回答,但相似不等于正确。本研究的问题是:
+> 一个**真实**(非 oracle)的验证器,**同步**地只对边界命中做判断,能不能真正改善命中率与错误率之间的权衡?
+> 代码、配置和全部实验结果都在这里;托管版本是 [CacheVerifier](https://www.cacheverifier.com)。
 
 ![LmArena 上命中率-错误率帕累托前沿:静态阈值、自适应阈值、oracle 验证器、开箱即用验证器、领域微调验证器](results/lmarena_pareto_full_with_finetune.png)
 
-**核心结论速览**
+## 主要发现
 
-- **oracle 验证器**证明了这套机制确实有理论空间:在两个基准数据集上,相同错误率下命中率能提升 **20~28 个百分点**。
-- 但换成一个**开箱即用**的现成 cross-encoder 验证器后,在本文最初的网格搜索评估下,这个空间只兑现了很小、且不稳健的一部分——本文的 Go/No-Go 判定是**弱 Go**,不是无条件成立。换成一种"诚实"的阈值选取方式(按时间顺序切分校准集/测试集,阈值选取时不偷看测试集)、并在同一批请求上与静态阈值比较后,现成验证器在 SearchQueries 和 Quora 上仍然输给静态阈值,只在 LmArena 上胜出。**【2026-09-24 勘误】** 本 README 和论文的早期版本曾说诚实校准下 SearchQueries"反转为在每个测试点都跑赢";那是把验证器在一半灰区上的结果和建立在全部请求上的静态阈值前沿比较造成的,已撤回(见 [`PAPER.md`](PAPER.md) / [`PAPER_EN.md`](PAPER_EN.md) 文首勘误)。
-- **用数据集自己的灰色地带标签微调同一个验证器**,能在三个独立数据集上都补上大部分差距,包括把 SearchQueries 上一个**净损害**的验证器(AUC 0.60;见 [`PAPER.md`](PAPER.md) / [`PAPER_EN.md`](PAPER_EN.md) 文首勘误——早期版本曾报告 AUC 0.49,系一个已修正的数据缺陷所致)变成一个在 54 个测试点中 53 个跑赢静态阈值前沿、1 个打平、零落后的验证器(AUC 0.71)——在"诚实校准"下、并在同一批请求上比较时,微调验证器在三个数据集共 18 个测试点上全部跑赢静态阈值。
-- 这套微调方案能容忍现实量级的标签噪声(约 30%)和冷启动,也扛住了真实生产客服流量的检验——但发现了**一个真实存在的反例**,并且追溯到了一个具体、可监控的原因,还做出了一个能提前发现这个风险的监控原型。
-- **【2026-08-17 更新】** 发现并修复了自适应阈值基线(Group B)复现里的一个 bug——vCache 官方算法会给每个缓存条目预置两条合成的 bootstrap 观测,本文早期的复刻版本漏掉了这一步。修复后,Group B 的命中率在三个数据集上均提升 **4.4~29.1 倍**,错误率全程仍低于目标上限。
+- **理论空间确实存在。** 完美(oracle)验证器在相同错误率下把命中率提升 **20~28 个百分点**(§5.3)。
+- **现成验证器只拿到其中很小一部分。** 最好时约 **+1.9 个百分点**(LmArena),在 SearchQueries 上反而净损害。结论是**弱 Go**,不是无条件成立(§5.4)。
+- **真正起作用的是用数据集自己的灰区标签微调。** 诚实校准下,三个数据集共 18 个测试点全部跑赢静态阈值(最好 +6.92 个百分点,LmArena);最难的数据集需要约 1,000 条标签(§5.6–5.7)。
+- **微调也可能有害。** 在多年的 Comcast 客服流量上,灰区正例比例漂移了 5 倍,微调变成了负收益;变点监控能提前发现(§5.8–5.9)。
+- **风险保证在分布偏移下会被突破。** Conformal Risk Control 证书在真实协变量偏移下超标;由随机抽检驱动的在线 ACI 阈值能把它拉回来(§5.21、§5.25)。
+- **在真实客服流量上,绝对收益很小。** 在同一错误率下,微调验证器比静态阈值、GPTCache、vCache 命中都多,1%–3% 错误率下比静态阈值多命中约 5%–13%(相对值)。但 2% 错误率下,所有方法都只有约 5%–9% 的请求能从缓存返回([对比](ENTERPRISE_COMPARISON_ZH.md))。
 
-**阅读论文:** [`PAPER.md`](PAPER.md)(中文)· [`PAPER_EN.md`](PAPER_EN.md) · [`PAPER_EN.tex`](PAPER_EN.tex)(LaTeX 源码)——涵盖全部实验的完整技术报告。
+## 论文
 
-**姊妹论文:** 从同一批实验和基础设施独立提炼、各自聚焦更窄主题的独立成篇论文——
-[第一部分:核心发现与 Go/No-Go 判定](PAPER_CORE_STANDALONE.md)([EN](PAPER_CORE_STANDALONE_EN.md))·
-[有限样本风险控制](PAPER_B_FORMAL_RISK_CONTROL.md)([EN](PAPER_B_FORMAL_RISK_CONTROL_EN.md))——Conformal Risk Control、自选择反馈环与部署经济性·
-[对抗鲁棒性](PAPER_C_ADVERSARIAL_ROBUSTNESS.md)([EN](PAPER_C_ADVERSARIAL_ROBUSTNESS_EN.md))——红队测试暴露的缺口与训练时的部分修复·
-[整合与非平稳性适应](PAPER_D_INTEGRATION_NONSTATIONARY.md)([EN](PAPER_D_INTEGRATION_NONSTATIONARY_EN.md))——不确定性信号、丢弃的相似度信号与在线自适应阈值。
+| 论文 | 研究问题 | DOI | 阅读 |
+|---|---|---|---|
+| 第一部分:核心发现 | 真实验证器有没有用、什么时候有用? | [10.5281/zenodo.22660442](https://doi.org/10.5281/zenodo.22660442) | [中文](PAPER_CORE_STANDALONE.md) · [EN](PAPER_CORE_STANDALONE_EN.md) |
+| B:有限样本风险控制 | 错误率能不能被认证,代价是什么? | [10.5281/zenodo.22663725](https://doi.org/10.5281/zenodo.22663725) | [中文](PAPER_B_FORMAL_RISK_CONTROL.md) · [EN](PAPER_B_FORMAL_RISK_CONTROL_EN.md) |
+| C:对抗鲁棒性 | 什么能骗过它,训练能补上多少? | [10.5281/zenodo.22661312](https://doi.org/10.5281/zenodo.22661312) | [中文](PAPER_C_ADVERSARIAL_ROBUSTNESS.md) · [EN](PAPER_C_ADVERSARIAL_ROBUSTNESS_EN.md) |
+| D:整合与非平稳性 | 哪些信号在线上有用,如何适应漂移? | [10.5281/zenodo.22665785](https://doi.org/10.5281/zenodo.22665785) | [中文](PAPER_D_INTEGRATION_NONSTATIONARY.md) · [EN](PAPER_D_INTEGRATION_NONSTATIONARY_EN.md) |
+| 完整技术报告 | 全部实验合在一份文档里 | [10.5281/zenodo.21703364](https://doi.org/10.5281/zenodo.21703364) | [中文](PAPER.md) · [EN](PAPER_EN.md) · [LaTeX](PAPER_EN.tex) |
 
-**在线服务:** 本文验证的这套微调 + 漂移监控闭环,作为托管服务运行在 **[cacheverifier.com](https://www.cacheverifier.com)** —— 这个仓库是它背后的研究,不是产品本身。Python 客户端:[`cacheverifier-python`](https://github.com/imxinchengyou/cacheverifier-python) · [PyPI](https://pypi.org/project/cacheverifier/)。
+**复现:** `pip install -r requirements.txt && pytest tests/ -q`,然后按各数据集的配置运行,见[复现步骤](#复现步骤)。
+**勘误**公开发布,不悄悄修改:[`PAPER.md`](PAPER.md) 文首有三条勘误(2026-08-09、2026-09-24、2026-09-27),vCache 基线移植修复(2026-08-17)见 §5.2。
 
 ## 结果速览
 
@@ -105,6 +97,20 @@ Oracle 理论上限(机制本身的上界,两个基准数据集均适用):相同
 ## 真实客服流量上的对比
 
 [`ENTERPRISE_COMPARISON_ZH.md`](ENTERPRISE_COMPARISON_ZH.md)([English](ENTERPRISE_COMPARISON.md))在同一批推特客服请求流(AmazonHelp、comcastcares)上比较 CacheVerifier、vCache、Redis 静态阈值和 GPTCache,LLM 判官标签用 100 条人工盲标核对过。在 1%–3% 的同一错误率下,微调后的验证器比静态阈值多命中约 5%–13%,并且在时间漂移下最接近目标错误率;这类流量的绝对命中率只有 5%–9%。
+
+## 从研究到产品
+
+[CacheVerifier](https://www.cacheverifier.com) 做成持续闭环、而不是一次性检查,原因如下:
+
+| 本研究的发现 | 产品怎么应对 |
+|---|---|
+| 开箱即用的验证器只拿到 oracle 余量的一小部分;在数据集自己的灰区标签上微调能拿到大部分 | 用你自己的反馈微调验证器;免费的 Health Check 先在你的流量上对比现成模型和微调后的效果,再决定要不要用 |
+| 收益取决于具体负载;在一个真实生产反例上,直接调高阈值反而更好(§5.8) | 你属于这种情况时,Health Check 会直接告诉你,而不是硬推验证 |
+| 微调能容忍现实中的标签噪声,但超过约 30% 会起反作用(§5.7) | 训练标签噪声看起来过高的微调结果会被扣下待审,不会自动上线 |
+| 校准时给出的风险保证(CRC)在真实的协变量偏移下会被突破(§5.21);在线 ACI 能把它拉回来(§5.25) | 对已放行的命中做随机抽检,给出线上错误率的精确上界;可选的在线(ACI)阈值跟随抽检结果调整 |
+| 微调的收益上线后会随时间轻微衰减,真实流量也可能整体偏移 | 漂移监控;Managed 套餐按计划、并在检测到漂移时用你的反馈重新校准 |
+
+在此之上,还有上线后运维缓存需要的东西:列出被反馈报告为过期或经常答错的缓存条目,以及在你自己的系统里用微调模型本地打分。Python 客户端:PyPI 上的 [`cacheverifier`](https://github.com/imxinchengyou/cacheverifier-python)。文档:<https://www.cacheverifier.com/docs>。
 
 ## 仓库结构
 

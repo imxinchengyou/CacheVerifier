@@ -8,97 +8,37 @@ English | [简体中文](README_ZH.md)
 [![PyPI](https://img.shields.io/pypi/v/cacheverifier)](https://pypi.org/project/cacheverifier/)
 [![tests](https://github.com/imxinchengyou/CacheVerifier/actions/workflows/tests.yml/badge.svg)](https://github.com/imxinchengyou/CacheVerifier/actions/workflows/tests.yml)
 
-> **[CacheVerifier](https://www.cacheverifier.com)** is a semantic cache verification
-> platform for LLM apps. This repository holds the research behind it.
-
-**From this research to the product.** The findings below are why CacheVerifier is
-built as a loop rather than a one-off check:
-
-| Finding here | What the product does about it |
-|---|---|
-| An off-the-shelf verifier captures little of the oracle's headroom; fine-tuning on a dataset's own gray-zone labels captures most of it | Fine-tunes a verifier on your own feedback; a free Health Check measures stock vs. fine-tuned on your traffic before you commit |
-| Gains depend on the workload; on a real production counter-example, raising the threshold is the better move (§5.8) | The Health Check says so when that's your case, instead of selling you verification |
-| Fine-tuning tolerates realistic label noise, but turns harmful past ~30% (§5.7) | Holds back a fine-tune whose training labels look too noisy, instead of auto-activating it |
-| A calibration-time risk guarantee (CRC) overshoots under real covariate shift (§5.21); online ACI closes it (§5.25) | Randomized audits of approved hits measure the live error rate with an exact upper bound; an optional online (ACI) threshold follows the audits |
-| A fine-tune's gain decays mildly over time after deployment, and real traffic can shift outright | Drift monitoring; on Managed plans, scheduled and drift-triggered recalibration on your feedback |
-
-On top of that, for running a cache after launch: a list of cache entries your feedback
-reports stale or often wrong, and local scoring with your fine-tuned model in your own
-stack. Python client: [`cacheverifier`](https://github.com/imxinchengyou/cacheverifier-python)
-on PyPI. Docs: <https://www.cacheverifier.com/docs>.
-
-Semantic caches replace exact matching with vector similarity to reuse an
-LLM's past answers, but similarity and answer correctness are not the same
-quantity. This repo is the code and full experimental artifacts behind an
-empirical study asking one question: under a single-tier semantic cache,
-does gating cache hits with a **real** (non-oracle), **synchronous**
-verifier — evaluated online against static-threshold and adaptive-threshold
-baselines on ~210k real requests across three datasets — actually improve
-the hit-rate/error-rate trade-off?
+> Semantic caches reuse an LLM's past answer when a new question looks similar enough.
+> Similar isn't the same as correct. This study asks whether a **real** (non-oracle)
+> verifier, run **synchronously** on borderline cache hits, actually improves the
+> hit-rate / error-rate trade-off. Code, configs and every reported result are here;
+> the hosted version is [CacheVerifier](https://www.cacheverifier.com).
 
 ![Hit-rate vs. error-rate Pareto frontier on LmArena: static threshold, adaptive threshold, oracle verifier, off-the-shelf verifier, and domain-fine-tuned verifier](results/lmarena_pareto_full_with_finetune.png)
 
-**TL;DR**
-- An **oracle** verifier proves the mechanism has real headroom: +20–28
-  percentage points of hit rate at matched error rate on both benchmark
-  datasets.
-- An **off-the-shelf** cross-encoder verifier cashes in only a small,
-  fragile slice of that headroom under the paper's original grid-searched
-  evaluation — the paper's Go/No-Go verdict is a **weak Go**, not an
-  unqualified win. Retested with an *honest* threshold selection
-  (chronological calibration/test split, no peeking at the test half) and
-  compared against the static threshold on the same requests, the
-  off-the-shelf verifier still loses on SearchQueries and Quora and wins
-  only on LmArena. **[2026-09-24 erratum]** An earlier version of this
-  README and of the paper said SearchQueries' verdict "reverses to a clean
-  win at every tested point" under honest calibration; that came from
-  comparing the verifier on half of the gray zone against a static-threshold
-  frontier built on all requests, and is withdrawn (see the erratum at the
-  top of [`PAPER.md`](PAPER.md) / [`PAPER_EN.md`](PAPER_EN.md)).
-- **Fine-tuning that same verifier on a dataset's own gray-zone labels**
-  closes most of the gap on all three independent datasets tested,
-  including turning SearchQueries from a *net-harmful* verifier (AUC 0.60 —
-  see the erratum note at the top of [`PAPER.md`](PAPER.md) /
-  [`PAPER_EN.md`](PAPER_EN.md): an earlier release of this paper reported
-  AUC 0.49 due to a since-corrected data defect) into one that beats the
-  static-threshold frontier at 53 of 54 tested points, 1 tie, zero losses
-  (AUC 0.71) — and under honest calibration, compared on the same
-  requests, the fine-tuned verifier beats the static threshold at all 18
-  tested points across the three datasets.
-- The recipe tolerates realistic label noise (~30%) and cold start, and
-  holds up on real production customer-support traffic — with **one
-  genuine counter-example**, traced to a specific, monitorable cause, and
-  a working monitor prototype that catches it before it does damage.
-- **[2026-08-17 update]** A reproduction bug in the adaptive-threshold
-  baseline (Group B) was found and fixed — the official vCache algorithm
-  pre-seeds each cache entry with two synthetic bootstrap observations that
-  this paper's earlier port omitted. After the fix, Group B's hit rate rises
-  **4.4x–29.1x** across all three datasets, with error rate staying below
-  the target guarantee throughout.
+## Findings
 
-**Read the paper:** [`PAPER.md`](PAPER.md) (Chinese) · [`PAPER_EN.md`](PAPER_EN.md) ·
-[`PAPER_EN.tex`](PAPER_EN.tex) (LaTeX source) — the complete technical report, covering every
-experiment in one document.
+- **The headroom is real.** A perfect (oracle) verifier lifts hit rate **+20–28 points** at matched error rate (§5.3).
+- **Off the shelf, a verifier captures little of it.** Best lead about **+1.9 points** (LmArena), and it is net harmful on SearchQueries. Verdict: a **weak Go**, not a blanket yes (§5.4).
+- **Fine-tuning on a dataset's own gray-zone labels is what works.** It beats the static threshold at all 18 honestly calibrated test points across three datasets (best +6.92 points, LmArena), and needs up to ~1,000 labels on the hardest dataset (§5.6–5.7).
+- **It can also hurt.** On multi-year Comcast support traffic, fine-tuning turned harmful because the gray zone's positive rate drifted 5x; a change-point monitor catches it first (§5.8–5.9).
+- **Risk guarantees break under shift.** A Conformal Risk Control certificate overshoots on real covariate shift; an online ACI threshold driven by randomized audits brings it back (§5.21, §5.25).
+- **On real support traffic the absolute gain is small.** At a matched error rate the fine-tuned verifier serves more hits than a static threshold, GPTCache or vCache: roughly 5–13% more than a static threshold at 1–3% error. But at 2% error every method serves only about 5–9% of requests from the cache ([comparison](ENTERPRISE_COMPARISON.md)).
 
-**Companion papers:** independent, more tightly scoped spin-offs of the same underlying
-experiments and infrastructure, published separately —
-[Part I: Core Findings and the Go/No-Go Verdict](PAPER_CORE_STANDALONE.md)
-([EN](PAPER_CORE_STANDALONE_EN.md)) ·
-[Finite-Sample Risk Control](PAPER_B_FORMAL_RISK_CONTROL.md)
-([EN](PAPER_B_FORMAL_RISK_CONTROL_EN.md)) — Conformal Risk Control, a self-selection
-feedback loop, and deployment economics ·
-[Adversarial Robustness](PAPER_C_ADVERSARIAL_ROBUSTNESS.md)
-([EN](PAPER_C_ADVERSARIAL_ROBUSTNESS_EN.md)) — red-teaming gaps and a training-time
-partial fix ·
-[Integration & Non-Stationarity](PAPER_D_INTEGRATION_NONSTATIONARY.md)
-([EN](PAPER_D_INTEGRATION_NONSTATIONARY_EN.md)) — uncertainty signals, a discarded
-similarity signal, and online adaptive thresholds.
+## Papers
 
-**Hosted version:** the fine-tuning + drift-monitoring loop this paper validates is run
-as a service at **[cacheverifier.com](https://www.cacheverifier.com)** — this repo is the
-research behind it, not the product. Python client:
-[`cacheverifier-python`](https://github.com/imxinchengyou/cacheverifier-python) ·
-[PyPI](https://pypi.org/project/cacheverifier/).
+| Paper | Question | DOI | Read |
+|---|---|---|---|
+| Part I: Core findings | Does a real verifier help, and when? | [10.5281/zenodo.22660442](https://doi.org/10.5281/zenodo.22660442) | [EN](PAPER_CORE_STANDALONE_EN.md) · [中文](PAPER_CORE_STANDALONE.md) |
+| B: Finite-sample risk control | Can the error rate be certified, and what does it cost? | [10.5281/zenodo.22663725](https://doi.org/10.5281/zenodo.22663725) | [EN](PAPER_B_FORMAL_RISK_CONTROL_EN.md) · [中文](PAPER_B_FORMAL_RISK_CONTROL.md) |
+| C: Adversarial robustness | What fools it, and how much does training fix? | [10.5281/zenodo.22661312](https://doi.org/10.5281/zenodo.22661312) | [EN](PAPER_C_ADVERSARIAL_ROBUSTNESS_EN.md) · [中文](PAPER_C_ADVERSARIAL_ROBUSTNESS.md) |
+| D: Integration & non-stationarity | Which signals help online, and how to adapt to drift? | [10.5281/zenodo.22665785](https://doi.org/10.5281/zenodo.22665785) | [EN](PAPER_D_INTEGRATION_NONSTATIONARY_EN.md) · [中文](PAPER_D_INTEGRATION_NONSTATIONARY.md) |
+| Full technical report | Every experiment in one document | [10.5281/zenodo.21703364](https://doi.org/10.5281/zenodo.21703364) | [EN](PAPER_EN.md) · [中文](PAPER.md) · [LaTeX](PAPER_EN.tex) |
+
+**Reproduce:** `pip install -r requirements.txt && pytest tests/ -q`, then the per-dataset
+configs; see [Reproducing](#reproducing). **Corrections** are published, not silently
+fixed: three errata (2026-08-09, 2026-09-24, 2026-09-27) at the top of
+[`PAPER_EN.md`](PAPER_EN.md), and a vCache-baseline porting fix (2026-08-17, §5.2).
 
 ## Results at a glance
 
@@ -300,6 +240,23 @@ a hit-rate ceiling governed by the ROC curve) are in §5.13 and §5.25.
 ## Comparison on real customer-support traffic
 
 [`ENTERPRISE_COMPARISON.md`](ENTERPRISE_COMPARISON.md) ([中文](ENTERPRISE_COMPARISON_ZH.md)) compares CacheVerifier, vCache, a Redis static threshold and GPTCache on the same Twitter customer-support streams (AmazonHelp, comcastcares), with LLM-judge labels checked against 100 blind human labels. At a matched 1%–3% error rate the fine-tuned verifier serves about 5%–13% more hits than a static threshold and stays closest to its target error rate under time shift; absolute hit rates on this traffic are only 5%–9%.
+
+## From this research to the product
+
+Why [CacheVerifier](https://www.cacheverifier.com) is built as a loop rather than a one-off check:
+
+| Finding here | What the product does about it |
+|---|---|
+| An off-the-shelf verifier captures little of the oracle's headroom; fine-tuning on a dataset's own gray-zone labels captures most of it | Fine-tunes a verifier on your own feedback; a free Health Check measures stock vs. fine-tuned on your traffic before you commit |
+| Gains depend on the workload; on a real production counter-example, raising the threshold is the better move (§5.8) | The Health Check says so when that's your case, instead of selling you verification |
+| Fine-tuning tolerates realistic label noise, but turns harmful past ~30% (§5.7) | Holds back a fine-tune whose training labels look too noisy, instead of auto-activating it |
+| A calibration-time risk guarantee (CRC) overshoots under real covariate shift (§5.21); online ACI closes it (§5.25) | Randomized audits of approved hits measure the live error rate with an exact upper bound; an optional online (ACI) threshold follows the audits |
+| A fine-tune's gain decays mildly over time after deployment, and real traffic can shift outright | Drift monitoring; on Managed plans, scheduled and drift-triggered recalibration on your feedback |
+
+On top of that, for running a cache after launch: a list of cache entries your feedback
+reports stale or often wrong, and local scoring with your fine-tuned model in your own
+stack. Python client: [`cacheverifier`](https://github.com/imxinchengyou/cacheverifier-python)
+on PyPI. Docs: <https://www.cacheverifier.com/docs>.
 
 ## Repository layout
 
