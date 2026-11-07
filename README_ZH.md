@@ -21,7 +21,7 @@
 - **真正起作用的是用数据集自己的灰区标签微调。** 诚实校准下,三个数据集共 18 个测试点全部跑赢静态阈值(最好 +6.92 个百分点,LmArena);最难的数据集需要约 1,000 条标签(§5.6–5.7)。
 - **微调也可能有害。** 在多年的 Comcast 客服流量上,灰区正例比例漂移了 5 倍,微调变成了负收益;变点监控能提前发现(§5.8–5.9)。
 - **风险保证在分布偏移下会被突破。** Conformal Risk Control 证书在真实协变量偏移下超标;由随机抽检驱动的在线 ACI 阈值能把它拉回来(§5.21、§5.25)。
-- **在真实客服流量上,绝对收益很小。** 在同一错误率下,微调验证器比静态阈值、GPTCache、vCache 命中都多,1%–3% 错误率下比静态阈值多命中约 5%–13%(相对值)。但 2% 错误率下,所有方法都只有约 5%–9% 的请求能从缓存返回([对比](ENTERPRISE_COMPARISON_ZH.md))。
+- **在真实客服流量上,绝对收益很小。** 在同一错误率下,微调验证器比静态阈值、GPTCache、vCache 命中都多,1%–3% 错误率下比静态阈值多命中约 6%–15%(相对值)。但 2% 错误率下,所有方法都只有约 5%–9% 的请求能从缓存返回([对比](ENTERPRISE_COMPARISON_ZH.md))。
 
 ## 论文
 
@@ -96,7 +96,7 @@ Oracle 理论上限(机制本身的上界,两个基准数据集均适用):相同
 
 ## 真实客服流量上的对比
 
-[`ENTERPRISE_COMPARISON_ZH.md`](ENTERPRISE_COMPARISON_ZH.md)([English](ENTERPRISE_COMPARISON.md))在同一批推特客服请求流(AmazonHelp、comcastcares)上比较 CacheVerifier、vCache、Redis 静态阈值和 GPTCache,LLM 判官标签用 100 条人工盲标核对过。在 1%–3% 的同一错误率下,微调后的验证器比静态阈值多命中约 5%–13%,并且在时间漂移下最接近目标错误率;这类流量的绝对命中率只有 5%–9%。
+[`ENTERPRISE_COMPARISON_ZH.md`](ENTERPRISE_COMPARISON_ZH.md)([English](ENTERPRISE_COMPARISON.md))在同一批推特客服请求流(AmazonHelp、comcastcares)上比较 CacheVerifier、vCache、Redis 静态阈值和 GPTCache,LLM 判官标签用 100 条人工盲标核对过。在 1%–3% 的同一错误率下,微调后的验证器比静态阈值多命中约 6%–15%,并且在时间漂移下最接近目标错误率;这类流量的绝对命中率只有 5%–9%。
 
 ## 从研究到产品
 
