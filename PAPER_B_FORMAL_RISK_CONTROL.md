@@ -4,7 +4,7 @@
 **ORCID：** [0009-0008-2347-5136](https://orcid.org/0009-0008-2347-5136)
 **机构：** LoopDot AI Research
 **日期：** 2026-08-20
-**说明：** 本研究项目最初以一份涵盖全部实验的完整技术报告形式发布（Zenodo DOI: 10.5281/zenodo.21703364，概念 DOI，始终指向最新版本）；本文是从该项目中提炼、独立成篇的姊妹论文之一。本文是 [Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660442.](下称"主论文") 的姊妹论文，复用主论文的数据集、灰色地带架构与诚实校准协议，本文不重新推导这些基础设施，只在必要处简要复述，完整细节请见主论文。本文第 4.3 节的一处方法论细节引用了 [Xin, C. (2026). 语义缓存验证器的对抗鲁棒性：红队测试暴露的缺口与训练时的部分修复. Zenodo. https://doi.org/10.5281/zenodo.22661312.](下称"论文 C")。
+**说明：** 本研究项目最初以一份涵盖全部实验的完整技术报告形式发布（Zenodo DOI: 10.5281/zenodo.21703364，概念 DOI，始终指向最新版本）；本文是从该项目中提炼、独立成篇的姊妹论文之一。本文是 [Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660440.](下称"主论文") 的姊妹论文，复用主论文的数据集、灰色地带架构与诚实校准协议，本文不重新推导这些基础设施，只在必要处简要复述，完整细节请见主论文。本文第 4.3 节的一处方法论细节引用了 [Xin, C. (2026). 语义缓存验证器的对抗鲁棒性：红队测试暴露的缺口与训练时的部分修复. Zenodo. https://doi.org/10.5281/zenodo.22661311.](下称"论文 C")。
 **代码与完整实验产物：** 本仓库 `cacheverifier/metrics/core.py`、`scripts/crc_closed_loop_self_selection.py`、`scripts/crc_closed_loop_write_probability_sweep.py`、`scripts/crc_closed_loop_spot_check.py`、`scripts/cost_sensitive_reanalysis.py`、`results/cost_sensitive_reanalysis.json`、`scripts/cost_sensitive_reanalysis_fair.py`、`results/cost_sensitive_reanalysis_fair.json`（4.3 节，2026-09-24 勘误后的主结果）、`scripts/crc_closed_loop_calibration_sources.py`（4.4 节）、`scripts/audited_aci_bound_check.py`、`scripts/audited_aci_real_ceiling.py`、`scripts/iaci_bound_counterexample.py` 及对应的 `results/*.json`（4.5 节；完整证明见 `AUDITED_ACI_PROOF_DRAFT.md`）。
 
 
@@ -420,8 +420,8 @@ S3b 在 Quora、SearchQueries 上与 S3a 完全相同，在 LmArena 上只在小
 
 ## 参考文献
 
-- Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660442（主论文）。
-- Xin, C. (2026). 语义缓存验证器的对抗鲁棒性：红队测试暴露的缺口与训练时的部分修复. Zenodo. https://doi.org/10.5281/zenodo.22661312（姊妹论文，论文 C）。
+- Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660440（主论文）。
+- Xin, C. (2026). 语义缓存验证器的对抗鲁棒性：红队测试暴露的缺口与训练时的部分修复. Zenodo. https://doi.org/10.5281/zenodo.22661311（姊妹论文，论文 C）。
 - Angelopoulos, A. N., Bates, S., Fisch, A., Lei, L., & Schuster, T. (2024). Conformal risk control. *International Conference on Learning Representations (ICLR 2024)*. arXiv:2208.02814.
 - Schroeder, L. G., Desai, A., Cuadron, A., Chu, K., Liu, S., Zhao, M., Krusche, S., Kemper, A., Stoica, I., Zaharia, M., & Gonzalez, J. E. (2025). vCache: Verified semantic prompt caching. *arXiv:2502.03771*.
 - Gibbs, I., & Candès, E. (2021). Adaptive conformal inference under distribution shift. *Advances in Neural Information Processing Systems (NeurIPS 2021)*. arXiv:2106.00170.

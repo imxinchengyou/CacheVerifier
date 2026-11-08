@@ -4,7 +4,7 @@
 **ORCID：** [0009-0008-2347-5136](https://orcid.org/0009-0008-2347-5136)
 **机构：** LoopDot AI Research
 **日期：** 2026-08-12
-**说明：** 本研究项目最初以一份涵盖全部实验的完整技术报告形式发布（Zenodo DOI: 10.5281/zenodo.21703364，概念 DOI，始终指向最新版本）；本文是从该项目中提炼、独立成篇的姊妹论文之一。本文是 [Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660442.](下称"主论文") 的姊妹论文，复用主论文的数据集、灰色地带架构与诚实校准协议，本文不重新推导这些基础设施，只在必要处简要复述，完整细节请见主论文。
+**说明：** 本研究项目最初以一份涵盖全部实验的完整技术报告形式发布（Zenodo DOI: 10.5281/zenodo.21703364，概念 DOI，始终指向最新版本）；本文是从该项目中提炼、独立成篇的姊妹论文之一。本文是 [Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660440.](下称"主论文") 的姊妹论文，复用主论文的数据集、灰色地带架构与诚实校准协议，本文不重新推导这些基础设施，只在必要处简要复述，完整细节请见主论文。
 **代码与完整实验产物：** 本仓库 `scripts/llm_redteam_verifier.py`、`scripts/finetune_verifier_train_eval.py`、`results/llm_redteam_results.json`、`results/llm_redteam_train_pool.json`
 
 ---
@@ -127,5 +127,5 @@
 
 ## 参考文献
 
-- Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660442（主论文）。
+- Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660440（主论文）。
 - Schroeder, L. G., Desai, A., Cuadron, A., Chu, K., Liu, S., Zhao, M., Krusche, S., Kemper, A., Stoica, I., Zaharia, M., & Gonzalez, J. E. (2025). vCache: Verified semantic prompt caching. *arXiv:2502.03771*.

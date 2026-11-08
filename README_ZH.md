@@ -27,10 +27,10 @@
 
 | 论文 | 研究问题 | DOI | 阅读 |
 |---|---|---|---|
-| 第一部分:核心发现 | 真实验证器有没有用、什么时候有用? | [10.5281/zenodo.22660442](https://doi.org/10.5281/zenodo.22660442) | [中文](PAPER_CORE_STANDALONE.md) · [EN](PAPER_CORE_STANDALONE_EN.md) |
-| B:有限样本风险控制 | 错误率能不能被认证,代价是什么? | [10.5281/zenodo.22663725](https://doi.org/10.5281/zenodo.22663725) | [中文](PAPER_B_FORMAL_RISK_CONTROL.md) · [EN](PAPER_B_FORMAL_RISK_CONTROL_EN.md) |
-| C:对抗鲁棒性 | 什么能骗过它,训练能补上多少? | [10.5281/zenodo.22661312](https://doi.org/10.5281/zenodo.22661312) | [中文](PAPER_C_ADVERSARIAL_ROBUSTNESS.md) · [EN](PAPER_C_ADVERSARIAL_ROBUSTNESS_EN.md) |
-| D:整合与非平稳性 | 哪些信号在线上有用,如何适应漂移? | [10.5281/zenodo.22665785](https://doi.org/10.5281/zenodo.22665785) | [中文](PAPER_D_INTEGRATION_NONSTATIONARY.md) · [EN](PAPER_D_INTEGRATION_NONSTATIONARY_EN.md) |
+| 第一部分:核心发现 | 真实验证器有没有用、什么时候有用? | [10.5281/zenodo.22660440](https://doi.org/10.5281/zenodo.22660440) | [中文](PAPER_CORE_STANDALONE.md) · [EN](PAPER_CORE_STANDALONE_EN.md) |
+| B:有限样本风险控制 | 错误率能不能被认证,代价是什么? | [10.5281/zenodo.22663724](https://doi.org/10.5281/zenodo.22663724) | [中文](PAPER_B_FORMAL_RISK_CONTROL.md) · [EN](PAPER_B_FORMAL_RISK_CONTROL_EN.md) |
+| C:对抗鲁棒性 | 什么能骗过它,训练能补上多少? | [10.5281/zenodo.22661311](https://doi.org/10.5281/zenodo.22661311) | [中文](PAPER_C_ADVERSARIAL_ROBUSTNESS.md) · [EN](PAPER_C_ADVERSARIAL_ROBUSTNESS_EN.md) |
+| D:整合与非平稳性 | 哪些信号在线上有用,如何适应漂移? | [10.5281/zenodo.22665784](https://doi.org/10.5281/zenodo.22665784) | [中文](PAPER_D_INTEGRATION_NONSTATIONARY.md) · [EN](PAPER_D_INTEGRATION_NONSTATIONARY_EN.md) |
 | 完整技术报告 | 全部实验合在一份文档里 | [10.5281/zenodo.21703364](https://doi.org/10.5281/zenodo.21703364) | [中文](PAPER.md) · [EN](PAPER_EN.md) · [LaTeX](PAPER_EN.tex) |
 
 **复现:** `pip install -r requirements.txt && pytest tests/ -q`,然后按各数据集的配置运行,见[复现步骤](#复现步骤)。

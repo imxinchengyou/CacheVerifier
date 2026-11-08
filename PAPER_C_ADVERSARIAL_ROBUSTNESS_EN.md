@@ -4,7 +4,7 @@
 **ORCID:** [0009-0008-2347-5136](https://orcid.org/0009-0008-2347-5136)
 **Affiliation:** LoopDot AI Research
 **Date:** 2026-08-12
-**Note:** This research project was originally released as a single, complete technical report covering all experiments (Zenodo DOI: 10.5281/zenodo.21703364, a concept DOI, always resolving to the latest version); this paper is one of the companion papers distilled from that project into an independent, self-contained unit. This paper is a companion to [Xin, C. (2026). Synchronous Online Verification Gating in Semantic Caches: An Empirical Study — Part I: Core Findings and the Go/No-Go Verdict. Zenodo. https://doi.org/10.5281/zenodo.22660442.](hereafter "the main paper"), reusing the main paper's datasets, gray-zone architecture, and honest-calibration protocol; this paper does not re-derive that infrastructure and only briefly restates it where necessary — see the main paper for full details.
+**Note:** This research project was originally released as a single, complete technical report covering all experiments (Zenodo DOI: 10.5281/zenodo.21703364, a concept DOI, always resolving to the latest version); this paper is one of the companion papers distilled from that project into an independent, self-contained unit. This paper is a companion to [Xin, C. (2026). Synchronous Online Verification Gating in Semantic Caches: An Empirical Study — Part I: Core Findings and the Go/No-Go Verdict. Zenodo. https://doi.org/10.5281/zenodo.22660440.](hereafter "the main paper"), reusing the main paper's datasets, gray-zone architecture, and honest-calibration protocol; this paper does not re-derive that infrastructure and only briefly restates it where necessary — see the main paper for full details.
 **Code and full experimental artifacts:** this repository, `scripts/llm_redteam_verifier.py`, `scripts/finetune_verifier_train_eval.py`, `results/llm_redteam_results.json`, `results/llm_redteam_train_pool.json`
 
 ---
@@ -127,5 +127,5 @@ This paper's experimental setup, datasets, and verifier implementation build dir
 
 ## References
 
-- Xin, C. (2026). Synchronous Online Verification Gating in Semantic Caches: An Empirical Study — Part I: Core Findings and the Go/No-Go Verdict. Zenodo. https://doi.org/10.5281/zenodo.22660442 (the main paper).
+- Xin, C. (2026). Synchronous Online Verification Gating in Semantic Caches: An Empirical Study — Part I: Core Findings and the Go/No-Go Verdict. Zenodo. https://doi.org/10.5281/zenodo.22660440 (the main paper).
 - Schroeder, L. G., Desai, A., Cuadron, A., Chu, K., Liu, S., Zhao, M., Krusche, S., Kemper, A., Stoica, I., Zaharia, M., & Gonzalez, J. E. (2025). vCache: Verified semantic prompt caching. *arXiv:2502.03771*.
