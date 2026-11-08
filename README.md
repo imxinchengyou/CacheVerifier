@@ -22,7 +22,7 @@ English | [简体中文](README_ZH.md)
 - **Off the shelf, a verifier captures little of it.** Best lead about **+1.9 points** (LmArena), and it is net harmful on SearchQueries. Verdict: a **weak Go**, not a blanket yes (§5.4).
 - **Fine-tuning on a dataset's own gray-zone labels is what works.** It beats the static threshold at all 18 honestly calibrated test points across three datasets (best +6.92 points, LmArena), and needs up to ~1,000 labels on the hardest dataset (§5.6–5.7).
 - **It can also hurt.** On multi-year Comcast support traffic, fine-tuning turned harmful because the gray zone's positive rate drifted 5x; a change-point monitor catches it first (§5.8–5.9).
-- **Risk guarantees break under shift.** A Conformal Risk Control certificate overshoots on real covariate shift; an online ACI threshold driven by randomized audits brings it back (§5.21, §5.25).
+- **Risk guarantees break under shift.** A Conformal Risk Control certificate overshoots on real covariate shift; an online ACI threshold brings it back on that benchmark (§5.21, §5.25), but on real drifting Comcast support traffic it showed no clear advantage over a static threshold (§5.25).
 - **On real support traffic the absolute gain is small.** At a matched error rate the fine-tuned verifier serves more hits than a static threshold, GPTCache or vCache: roughly 6–15% more than a static threshold at 1–3% error. But at 2% error every method serves only about 5–9% of requests from the cache ([comparison](ENTERPRISE_COMPARISON.md)).
 
 ## Papers
@@ -58,6 +58,10 @@ Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–
   error rate is already high — 11.4% on LmArena, 34.3% on SearchQueries —
   confirming that plain similarity-threshold tuning alone cannot separate
   correct reuse from confusable near-misses (e.g. "pause" vs. "cancel").
+  **[2026-09-27]** Absolute error rates throughout are overstated by label
+  noise in the direct-hit zone (see the erratum at the top of
+  [`PAPER_EN.md`](PAPER_EN.md)); read them as benchmark-label figures for
+  relative comparison. Matched-error-rate comparisons are unaffected.
 - **Group B: adaptive threshold with a formal guarantee (§5.2).** The
   faithfully-ported vCache algorithm drives hit rate to near zero
   (0.02%–0.69%) while keeping error rate far below its target δ — a
@@ -105,7 +109,7 @@ Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–
   fine-tuning recipe tolerates up to ~30% label noise before turning
   harmful (consistent across all three datasets after a data-defect
   correction), needs up to ~1,000 in-domain examples on the hardest
-  dataset before reliably helping, and shows only mild continued decay
+  dataset before it helps, and shows only mild continued decay
   over time — not zero, but not alarming either.
 - **A genuine production counter-example (§5.8).** On real, multi-year
   customer-support Twitter traffic (Kaggle, Axelbrooke 2017), one of two
@@ -123,8 +127,11 @@ Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–
   damage, with no false alarms on the unaffected brand.
 - **Action-verb bucketing pre-filter (§5.10):** tested and refuted on all
   three datasets.
-- **τ_high sensitivity (§5.11):** dataset-dependent — widening it more than
-  triples LmArena's net lead but flips SearchQueries to a net loss.
+- **τ_high sensitivity (§5.11):** **[withdrawn 2026-09-27]** the original
+  finding that raising τ_high to 0.99 more than triples LmArena's net lead was
+  a label-noise artifact. After denoising, no dataset supports raising τ_high
+  to 0.99 (LmArena 0/30 wins there); the best setting is 0.97 (LmArena best
+  lead +1.87pp).
 - **Reranker capacity vs. training distribution (§5.12):** neither a
   larger same-distribution reranker nor a broader-distribution one
   meaningfully closes SearchQueries' gap — in-domain fine-tuning (§5.6)
@@ -149,11 +156,13 @@ Oracle ceiling (upper bound on the mechanism, both benchmark datasets): **+20–
   frontier as an explicit cost-ratio sweep (error cost vs. miss cost) —
   once Group D/E's honest-calibration grid is extended to match Group A's
   and each operating point is compared on the same requests (corrected
-  2026-09-24), synchronous verification wins economically once errors cost
-  more than roughly 1.3–3.6x a miss for the fine-tuned verifier and
-  3.2–12.6x for the off-the-shelf one, dataset-dependent; a grid-coverage
-  gap in the first pass had produced a spurious reversal at high cost
-  ratios that disappears once closed.
+  2026-09-24) and then re-scored with denoised direct-hit labels (corrected
+  2026-09-27). Ranges of r where verification is cheaper: LmArena fine-tuned
+  r ≥ 3.55, untuned 12.6–39.8 and ≥ 89.1; Quora fine-tuned 1.26–2.82 and
+  ≥ 11.2, untuned ≥ 20.0; SearchQueries fine-tuned 1.59–4.47 and ≥ 50.1,
+  untuned only near r ≈ 3.16 and ≥ 70.8. Except for LmArena's fine-tuned
+  verifier, a conservative static threshold is cheaper somewhere in the
+  moderate-to-high range.
 - **LLM automated red-teaming (§5.18):** adversarial samples generated
   across five known failure axes (negation, action-verb swap, direction
   reversal, entity swap, quantity swap) push the off-the-shelf verifier's
@@ -208,7 +217,9 @@ point estimates or empirical trends:
 
 - **Conformal Risk Control (§5.13; Theorem 1, Angelopoulos et al., 2024).**
   Calibrating the gray-zone reuse threshold via CRC gives a finite-sample
-  guarantee that the deployed error rate does not exceed a target level,
+  guarantee that false-reuse risk (wrong reuses as a share of all gray-zone
+  candidates, not the error rate among approved answers) does not exceed a
+  target level, over the requests that go through the verifier only,
   at any sample size — no asymptotic approximation, at near-oracle
   efficiency (η≈1.0) across all three datasets. Requires the accept rule
   to be strictly right-continuous (`score > λ`, not `≥`) and
@@ -250,7 +261,7 @@ Why [CacheVerifier](https://www.cacheverifier.com) is built as a loop rather tha
 | An off-the-shelf verifier captures little of the oracle's headroom; fine-tuning on a dataset's own gray-zone labels captures most of it | Fine-tunes a verifier on your own feedback; a free Health Check measures stock vs. fine-tuned on your traffic before you commit |
 | Gains depend on the workload; on a real production counter-example, raising the threshold is the better move (§5.8) | The Health Check says so when that's your case, instead of selling you verification |
 | Fine-tuning tolerates realistic label noise, but turns harmful past ~30% (§5.7) | Holds back a fine-tune whose training labels look too noisy, instead of auto-activating it |
-| A calibration-time risk guarantee (CRC) overshoots under real covariate shift (§5.21); online ACI closes it (§5.25) | Randomized audits of approved hits measure the live error rate with an exact upper bound; an optional online (ACI) threshold follows the audits |
+| A calibration-time risk guarantee (CRC) overshoots under real covariate shift (§5.21); online ACI closes it on that benchmark, but not on real Comcast drift (§5.25) | Randomized audits of approved hits measure the live error rate with a conservative (Clopper-Pearson) upper bound; an optional online (ACI) threshold follows the audits |
 | A fine-tune's gain decays mildly over time after deployment, and real traffic can shift outright | Drift monitoring; on Managed plans, scheduled and drift-triggered recalibration on your feedback |
 
 On top of that, for running a cache after launch: a list of cache entries your feedback
@@ -310,7 +321,6 @@ repo — see [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md).
 
 Archived on Zenodo with DOI [10.5281/zenodo.21703364](https://doi.org/10.5281/zenodo.21703364)
 (this concept DOI always resolves to the latest version; DOIs for individual versions are listed on the [Zenodo record](https://doi.org/10.5281/zenodo.21703364) under "Versions").
-arXiv listing forthcoming — this will be updated with the arXiv ID once live.
 
 ```bibtex
 @misc{xin2026synchronous,
