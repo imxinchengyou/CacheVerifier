@@ -260,12 +260,28 @@ on PyPI. Docs: <https://www.cacheverifier.com/docs>.
 
 ## Repository layout
 
+Documents at the top level:
+
+| File | What it is |
+|---|---|
+| `PAPER_EN.md` · `PAPER.md` · `PAPER_EN.tex` | Full technical report: every experiment, all errata at the top |
+| `PAPER_CORE_STANDALONE_EN.md` · `PAPER_CORE_STANDALONE.md` | Part I, core findings (the shortest entry point) |
+| `PAPER_B_FORMAL_RISK_CONTROL*.md` | Paper B, finite-sample risk control |
+| `PAPER_C_ADVERSARIAL_ROBUSTNESS*.md` | Paper C, adversarial robustness |
+| `PAPER_D_INTEGRATION_NONSTATIONARY*.md` | Paper D, integration and non-stationarity |
+| `AUDITED_ACI_PROOF_DRAFT.md` | Full proof of Paper B §4.5's audited-ACI theorem (Chinese; draft, not yet human-reviewed) |
+| `ENTERPRISE_COMPARISON.md` · `ENTERPRISE_COMPARISON_ZH.md` | Four caches on real Twitter customer-support traffic, with human labels and risk guarantees |
+| `README_ZH.md` | This page in Chinese |
+| `LICENSE` · `LICENSE-CC-BY-4.0` · `NOTICE` · `CITATION.cff` · `.zenodo.json` · `SECURITY.md` | Licensing, citation and security policy |
+
+File-name suffixes: a `PAPER_*.md` file without a suffix is Chinese and `_EN` is the English version; the README and the enterprise comparison are English without a suffix and `_ZH` is the Chinese version.
+
 | Path | Contents |
 |---|---|
 | `cacheverifier/` | Cache policies (static/adaptive/synchronous-verified), embedders, verifiers, metrics, experiment runners |
 | `scripts/` | Dataset conversion, fine-tuning, drift-monitoring, and plotting scripts referenced throughout the paper |
 | `configs/` | Per-dataset YAML configs (LmArena, SearchQueries, Quora, Twitter Amazon/Comcast) |
-| `results/` | Every reported metric (JSON) and figure (PNG); see [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md) for the two fine-tuned verifier checkpoints, hosted on Hugging Face rather than committed here |
+| `results/` | Every reported metric (JSON) and figure (PNG), indexed by paper section in [`results/INDEX.md`](results/INDEX.md); see [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md) for the two fine-tuned verifier checkpoints, hosted on Hugging Face rather than committed here |
 | `tests/` | Unit tests for `cacheverifier/` |
 
 ## Reproducing

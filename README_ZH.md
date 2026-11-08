@@ -114,12 +114,28 @@ Oracle 理论上限(机制本身的上界,两个基准数据集均适用):相同
 
 ## 仓库结构
 
+根目录下的文档:
+
+| 文件 | 是什么 |
+|---|---|
+| `PAPER.md` · `PAPER_EN.md` · `PAPER_EN.tex` | 完整技术报告:全部实验,所有勘误在文首 |
+| `PAPER_CORE_STANDALONE.md` · `PAPER_CORE_STANDALONE_EN.md` | 第一部分,核心发现(最短的入口) |
+| `PAPER_B_FORMAL_RISK_CONTROL*.md` | 论文 B,有限样本风险控制 |
+| `PAPER_C_ADVERSARIAL_ROBUSTNESS*.md` | 论文 C,对抗鲁棒性 |
+| `PAPER_D_INTEGRATION_NONSTATIONARY*.md` | 论文 D,整合与非平稳性 |
+| `AUDITED_ACI_PROOF_DRAFT.md` | 论文 B §4.5 审计版 ACI 定理的完整证明(草稿,尚未经人类审稿) |
+| `ENTERPRISE_COMPARISON_ZH.md` · `ENTERPRISE_COMPARISON.md` | 四种缓存在真实 Twitter 客服流量上的对比,含人工标签与风险保证 |
+| `README.md` | 本页的英文版 |
+| `LICENSE` · `LICENSE-CC-BY-4.0` · `NOTICE` · `CITATION.cff` · `.zenodo.json` · `SECURITY.md` | 许可、引用与安全策略 |
+
+文件名后缀:`PAPER_*.md` 不带后缀的是中文版,`_EN` 是英文版;README 和企业对比报告不带后缀的是英文版,`_ZH` 是中文版。
+
 | 路径 | 内容 |
 |---|---|
 | `cacheverifier/` | 缓存策略(静态/自适应/同步验证)、embedding 模型、验证器、指标、实验运行器 |
 | `scripts/` | 论文中提到的数据集转换、微调、漂移监控、绘图脚本 |
 | `configs/` | 各数据集的 YAML 配置(LmArena、SearchQueries、Quora、Twitter Amazon/Comcast) |
-| `results/` | 论文里报告的全部指标(JSON)和图表(PNG);两个微调验证器 checkpoint 托管在 Hugging Face,没有直接放进这个仓库,见 [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md) |
+| `results/` | 论文里报告的全部指标(JSON)和图表(PNG),按论文章节索引见 [`results/INDEX.md`](results/INDEX.md);两个微调验证器 checkpoint 托管在 Hugging Face,没有直接放进这个仓库,见 [`results/PRETRAINED_MODELS.md`](results/PRETRAINED_MODELS.md) |
 | `tests/` | `cacheverifier/` 的单元测试 |
 
 ## 复现步骤
