@@ -29,10 +29,10 @@ English | [简体中文](README_ZH.md)
 
 | Paper | Question | DOI | Read |
 |---|---|---|---|
-| Part I: Core findings | Does a real verifier help, and when? | [10.5281/zenodo.22660442](https://doi.org/10.5281/zenodo.22660442) | [EN](PAPER_CORE_STANDALONE_EN.md) · [中文](PAPER_CORE_STANDALONE.md) |
-| B: Finite-sample risk control | Can the error rate be certified, and what does it cost? | [10.5281/zenodo.22663725](https://doi.org/10.5281/zenodo.22663725) | [EN](PAPER_B_FORMAL_RISK_CONTROL_EN.md) · [中文](PAPER_B_FORMAL_RISK_CONTROL.md) |
-| C: Adversarial robustness | What fools it, and how much does training fix? | [10.5281/zenodo.22661312](https://doi.org/10.5281/zenodo.22661312) | [EN](PAPER_C_ADVERSARIAL_ROBUSTNESS_EN.md) · [中文](PAPER_C_ADVERSARIAL_ROBUSTNESS.md) |
-| D: Integration & non-stationarity | Which signals help online, and how to adapt to drift? | [10.5281/zenodo.22665785](https://doi.org/10.5281/zenodo.22665785) | [EN](PAPER_D_INTEGRATION_NONSTATIONARY_EN.md) · [中文](PAPER_D_INTEGRATION_NONSTATIONARY.md) |
+| Part I: Core findings | Does a real verifier help, and when? | [10.5281/zenodo.22660440](https://doi.org/10.5281/zenodo.22660440) | [EN](PAPER_CORE_STANDALONE_EN.md) · [中文](PAPER_CORE_STANDALONE.md) |
+| B: Finite-sample risk control | Can the error rate be certified, and what does it cost? | [10.5281/zenodo.22663724](https://doi.org/10.5281/zenodo.22663724) | [EN](PAPER_B_FORMAL_RISK_CONTROL_EN.md) · [中文](PAPER_B_FORMAL_RISK_CONTROL.md) |
+| C: Adversarial robustness | What fools it, and how much does training fix? | [10.5281/zenodo.22661311](https://doi.org/10.5281/zenodo.22661311) | [EN](PAPER_C_ADVERSARIAL_ROBUSTNESS_EN.md) · [中文](PAPER_C_ADVERSARIAL_ROBUSTNESS.md) |
+| D: Integration & non-stationarity | Which signals help online, and how to adapt to drift? | [10.5281/zenodo.22665784](https://doi.org/10.5281/zenodo.22665784) | [EN](PAPER_D_INTEGRATION_NONSTATIONARY_EN.md) · [中文](PAPER_D_INTEGRATION_NONSTATIONARY.md) |
 | Full technical report | Every experiment in one document | [10.5281/zenodo.21703364](https://doi.org/10.5281/zenodo.21703364) | [EN](PAPER_EN.md) · [中文](PAPER.md) · [LaTeX](PAPER_EN.tex) |
 
 **Reproduce:** `pip install -r requirements.txt && pytest tests/ -q`, then the per-dataset

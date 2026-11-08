@@ -4,7 +4,7 @@
 **ORCID：** [0009-0008-2347-5136](https://orcid.org/0009-0008-2347-5136)
 **机构：** LoopDot AI Research
 **日期：** 2026-09-08
-**说明：** 本研究项目最初以一份涵盖全部实验的完整技术报告形式发布（Zenodo DOI: 10.5281/zenodo.21703364，概念 DOI，始终指向最新版本）；本文是从该项目中提炼、独立成篇的姊妹论文之一。本文是 [Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660442.](下称"主论文") 的姊妹论文，复用主论文的数据集、灰色地带架构与诚实校准协议。本文同时建立在 [Xin, C. (2026). 语义缓存复用决策的有限样本风险控制：形式化保证、自选择反馈环与经济性. Zenodo. https://doi.org/10.5281/zenodo.22663725.](下称"论文 B") 与 [Xin, C. (2026). 语义缓存验证器的对抗鲁棒性：红队测试暴露的缺口与训练时的部分修复. Zenodo. https://doi.org/10.5281/zenodo.22661312.](下称"论文 C") 之上。本文是目前这四篇论文里唯一同时依赖前三篇工作的一篇。
+**说明：** 本研究项目最初以一份涵盖全部实验的完整技术报告形式发布（Zenodo DOI: 10.5281/zenodo.21703364，概念 DOI，始终指向最新版本）；本文是从该项目中提炼、独立成篇的姊妹论文之一。本文是 [Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660440.](下称"主论文") 的姊妹论文，复用主论文的数据集、灰色地带架构与诚实校准协议。本文同时建立在 [Xin, C. (2026). 语义缓存复用决策的有限样本风险控制：形式化保证、自选择反馈环与经济性. Zenodo. https://doi.org/10.5281/zenodo.22663724.](下称"论文 B") 与 [Xin, C. (2026). 语义缓存验证器的对抗鲁棒性：红队测试暴露的缺口与训练时的部分修复. Zenodo. https://doi.org/10.5281/zenodo.22661311.](下称"论文 C") 之上。本文是目前这四篇论文里唯一同时依赖前三篇工作的一篇。
 **代码与完整实验产物：** 本仓库 `scripts/aci_crc_violation_fix.py`、`scripts/aci_real_production_drift_score.py`、`scripts/aci_real_production_drift_analysis.py`、`scripts/aci_theoretical_bound_verification.py`、`scripts/aci_window_sweep_causal_test.py`、`scripts/joint_grayzone_decision_analysis_v2.py`、`scripts/joint_grayzone_doseresponse_causal_test.py`、`scripts/qcached_nli_forgetting_sweep.py`、`scripts/qcached_nli_fusion_eval.py`、`scripts/qcached_nli_fusion_cost_analysis.py`，及对应的全部 `results/*.json` 文件。
 
 ---
@@ -306,9 +306,9 @@ comcast 真实部署的窗口大小几乎正好落在这个临界点附近(`ρ�
 
 ## 参考文献
 
-- Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660442（主论文）。
-- Xin, C. (2026). 语义缓存复用决策的有限样本风险控制：形式化保证、自选择反馈环与经济性. Zenodo. https://doi.org/10.5281/zenodo.22663725（论文 B）。
-- Xin, C. (2026). 语义缓存验证器的对抗鲁棒性：红队测试暴露的缺口与训练时的部分修复. Zenodo. https://doi.org/10.5281/zenodo.22661312（论文 C）。
+- Xin, C. (2026). 语义缓存中的同步在线验证门禁：一项实证研究 —— 第一部分：核心发现与 Go/No-Go 判定. Zenodo. https://doi.org/10.5281/zenodo.22660440（主论文）。
+- Xin, C. (2026). 语义缓存复用决策的有限样本风险控制：形式化保证、自选择反馈环与经济性. Zenodo. https://doi.org/10.5281/zenodo.22663724（论文 B）。
+- Xin, C. (2026). 语义缓存验证器的对抗鲁棒性：红队测试暴露的缺口与训练时的部分修复. Zenodo. https://doi.org/10.5281/zenodo.22661311（论文 C）。
 - Chow, C. K. (1970). On optimum recognition error and reject tradeoff. *IEEE Transactions on Information Theory*, 16(1), 41–46.
 - El-Yaniv, R., & Wiener, Y. (2010). On the foundations of noise-free selective classification. *Journal of Machine Learning Research*, 11, 1605–1641.
 - Cortes, C., DeSalvo, G., & Mohri, M. (2016). Learning with rejection. *Algorithmic Learning Theory (ALT 2016)*, 67–82.
