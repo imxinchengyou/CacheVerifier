@@ -1,0 +1,98 @@
+{
+ "lmarena": {
+  "n": 3000,
+  "holdout_n": 600,
+  "holdout_overlap_share": 0.37333333333333335,
+  "train_reported_auc_tuned": 0.9384793447293447,
+  "train_reported_auc_baseline": 0.8893340455840456,
+  "holdout_all": {
+   "n": 600,
+   "pos_rate": 0.49,
+   "auc_tuned": 0.9388088568760837,
+   "auc_stock": 0.8893001645102485,
+   "gain": 0.049508692365835216
+  },
+  "holdout_seen_entry": {
+   "n": 224,
+   "pos_rate": 0.42857142857142855,
+   "auc_tuned": 0.9390462239583334,
+   "auc_stock": 0.9012044270833334,
+   "gain": 0.037841796875
+  },
+  "holdout_unseen_entry": {
+   "n": 376,
+   "pos_rate": 0.526595744680851,
+   "auc_tuned": 0.9378333900805811,
+   "auc_stock": 0.881511746680286,
+   "gain": 0.05632164340029511
+  },
+  "gain_gap_seen_minus_unseen_ci95": [
+   -0.05288235178595619,
+   0.01594766369465891
+  ]
+ },
+ "search_queries_corrected": {
+  "n": 3000,
+  "holdout_n": 600,
+  "holdout_overlap_share": 0.31333333333333335,
+  "train_reported_auc_tuned": 0.6822203977376391,
+  "train_reported_auc_baseline": 0.6586845466155811,
+  "holdout_all": {
+   "n": 600,
+   "pos_rate": 0.37166666666666665,
+   "auc_tuned": 0.6561596745607879,
+   "auc_stock": 0.6381391918735355,
+   "gain": 0.018020482687252426
+  },
+  "holdout_seen_entry": {
+   "n": 188,
+   "pos_rate": 0.32978723404255317,
+   "auc_tuned": 0.6099590373783922,
+   "auc_stock": 0.651689708141321,
+   "gain": -0.0417306707629288
+  },
+  "holdout_unseen_entry": {
+   "n": 412,
+   "pos_rate": 0.3907766990291262,
+   "auc_tuned": 0.671153893741803,
+   "auc_stock": 0.6289871569622133,
+   "gain": 0.04216673677958971
+  },
+  "gain_gap_seen_minus_unseen_ci95": [
+   -0.16661161393597929,
+   -0.0010359566244750136
+  ]
+ },
+ "quora": {
+  "n": 3000,
+  "holdout_n": 600,
+  "holdout_overlap_share": 0.19833333333333333,
+  "train_reported_auc_tuned": 0.6470059341844991,
+  "train_reported_auc_baseline": 0.583393274590901,
+  "holdout_all": {
+   "n": 600,
+   "pos_rate": 0.455,
+   "auc_tuned": 0.6844439963706018,
+   "auc_stock": 0.6119568504889605,
+   "gain": 0.07248714588164129
+  },
+  "holdout_seen_entry": {
+   "n": 119,
+   "pos_rate": 0.25210084033613445,
+   "auc_tuned": 0.7445692883895131,
+   "auc_stock": 0.5932584269662922,
+   "gain": 0.15131086142322092
+  },
+  "holdout_unseen_entry": {
+   "n": 481,
+   "pos_rate": 0.5051975051975052,
+   "auc_tuned": 0.6731507417781928,
+   "auc_stock": 0.6101082408271951,
+   "gain": 0.06304250095099773
+  },
+  "gain_gap_seen_minus_unseen_ci95": [
+   -0.0403035546967666,
+   0.2167980834571396
+  ]
+ }
+}

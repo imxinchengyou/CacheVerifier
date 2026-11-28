@@ -87,3 +87,4 @@ Kept for reproducibility of negative or preliminary results mentioned in passing
 | `cache_sensitivity_*.json` | How much the closed-loop gray-zone distribution shifts with the threshold, and whether it depends on history |
 | `dc_headroom_pilot.json`, `entry_error_clustering.json` | Headroom between the deployed verifier and the oracle; whether errors cluster on cache entries |
 | `searchqueries_gray_zone_needed_indices.json` | Indices of SearchQueries gray-zone pairs that needed generated answers (data preparation) |
+| `finetune_split_entry_overlap.json` | Whether held-out rows whose cached entry also appears in the fine-tune's training rows inflate held-out AUC (first 3,000 gray-zone rows per dataset, chronological split): no consistent inflation. Written by a script that needs the commercial service's training package, which is not public; the method is in the script's docstring |
